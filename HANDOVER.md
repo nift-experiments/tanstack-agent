@@ -325,3 +325,8 @@ Parity precedes initial profiling, optimization, full revalidation and the final
 Use the complete publisher in README.md; bare nift build composes prepared inputs only. T10 evidence includes mixed production/native update scopes, same-window process/tree RSS, retained initial/rejected results, source restoration and clean-checkout receipts. Keep upstream advantages and remaining costs visible.
 
 An additional performance pass is authorized and required before closeout. Preserve all T10 evidence and INTERMEDIATE-REPORT.md. Profile complete wall time and process memory, tighten verified caches/invalidation, revalidate parity, then rerun the same five-sample campaign. Profiling/guidance candidates are in investigation/FUTURE-WORK.md and MIGRATION-INIT-REVIEW.md. Labs publication, core changes and live production integration are not authorized by this experiment. Keep large evidence/archives/previews outside Labs.
+
+
+## T11 preserved; T12 architecture investigation in progress
+
+See investigation/T11-OPTIMIZATION.md and evidence/t11. Faithful behavioral gates passed; T10 measurements remain the conservative baseline. The authorized architecture investigation now tests alternate bundling and real backend ownership in isolated tanstack-agent scratch. Do not close/publish or characterize retained Start/Vite RSS as Nift RSS. Fresh-clone and new comparative benchmarks remain pending.

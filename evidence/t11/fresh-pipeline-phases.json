@@ -1,0 +1,54 @@
+{
+  "force": true,
+  "runtime_rebuilt": true,
+  "runtime_fingerprint": "a84038af82da30eec175e631d7528eb8ab9d9770373d300b37f550cfeeb2d98f",
+  "bundle_cache": {
+    "hit": false,
+    "force": true,
+    "verification_seconds": 5.69000000041342e-7
+  },
+  "phase_details": {
+    "startup": 0.00002336700000000036,
+    "source_discovery": 0.792445614,
+    "retained_vite_build": 36.482289717,
+    "retained_asset_publication": 0.12542237000000023,
+    "publisher_compilation": 0.40669475599999716,
+    "content_process_startup": 5.431022101000003,
+    "worker_configuration": 0.020911368000000947
+  },
+  "phases": {
+    "bundle_verification": 5.69000000041342e-7,
+    "retained_vite_build": 36.482281861999994,
+    "retained_asset_publication": 0.12539186399999744,
+    "publisher_compilation": 0.4066893720000007,
+    "content_publication": 5.430996800000001,
+    "complete_pipeline": 43.258951107
+  },
+  "content_phases": {
+    "publication_preparation": 3.5874582129999997,
+    "nift_composition": 1.0900031649999997,
+    "output_verification_and_repair": 0.28539303199999994,
+    "complete_content_publication": 5.265148862
+  },
+  "content_details": {
+    "startup": 0.00003368600000000299,
+    "content_discovery": 0.014853164,
+    "projection_assets_and_revision": 3.402205477,
+    "metadata_navigation": 0.05790957900000012,
+    "state_serialization": 0.12756170500000008,
+    "nift_composition": 1.0902049029999998,
+    "composition_verification": 0.28565540299999975,
+    "route_retirement": 0.2472429890000003,
+    "cache_serialization": 0.05438053200000013
+  },
+  "content_counts": {
+    "roots": 25,
+    "composed": 7578,
+    "outputs": 22780
+  },
+  "content_records": {
+    "hits": 0,
+    "misses": 7601,
+    "composition_repairs": 0
+  }
+}

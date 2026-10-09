@@ -1,0 +1,2566 @@
+$ pnpm run content:build
+$ node scripts/build-content-collections.mjs
+$ run-s test:tsc test:lint test:unit test:chat test:desktop
+$ tsc && tsc -p scripts/builder-ai-eval/tsconfig.json && tsc -p scripts/tsconfig.json && tsc -p harness-tests/tsconfig.json && tsc -p harness-tests/tsconfig.runtime.json
+$ pnpm run lint:code
+$ oxlint --type-aware --disable-nested-config
+
+  ! eslint(no-unused-vars): Variable 'setThreadFocus' is declared but never used. Unused variables should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+     ,-[src/chat/components/ConversationView.tsx:152:23]
+ 151 |   const paneFocus = useRef<HTMLButtonElement | null>(null)
+ 152 |   const [threadFocus, setThreadFocus] = useState<{
+     :                       ^^^^^^^|^^^^^^
+     :                              `-- 'setThreadFocus' is declared here
+ 153 |     id: string
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'search.executionHistory'
+     ,-[src/chat/components/ConversationView.tsx:242:6]
+ 219 |           !embedded &&
+ 220 |           search.executionHistory &&
+     :           ^^^|^^
+     :              `-- useEffect uses `search.executionHistory` here
+ 221 |           search.executionHistory.conversationId !== destination.conversationId
+ 222 |         )
+ 223 |           void navigate({
+ 224 |             to: '.',
+ 225 |             search: (previous: Record<string, unknown>) => {
+ 226 |               const current = validateWorkspaceSearch(previous)
+ 227 |               // Do not remove a newer selection made after this render.
+ 228 |               return current.executionHistory?.conversationId ===
+ 229 |                 search.executionHistory?.conversationId &&
+ 230 |                 current.executionHistory?.sessionId ===
+ 231 |                   search.executionHistory?.sessionId
+ 232 |                 ? selectExecutionHistory(
+ 233 |                     current,
+ 234 |                     destination.conversationId,
+ 235 |                     undefined,
+ 236 |                   )
+ 237 |                 : current
+ 238 |             },
+ 239 |             replace: true,
+ 240 |             resetScroll: false,
+ 241 |           })
+ 242 | ,->   }, [
+ 243 | |       embedded,
+ 244 | |       destination.conversationId,
+ 245 | |       search.executionHistory?.conversationId,
+ 246 | |       search.executionHistory?.sessionId,
+ 247 | |       navigate,
+ 248 | `->   ])
+ 249 |       const selectMessage = (message?: string) =>
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Parameter 'args' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+    ,-[harness-tests/core/assistant-kody-run-tools.test.ts:28:51]
+ 27 |   it('returns a filtered page and preserves the cursor for older runs', async () => {
+ 28 |     const call = vi.fn(async (_env, _user, _tool, args) => ({
+    :                                                   ^^|^
+    :                                                     `-- 'args' is declared here
+ 29 |       structuredContent: {
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'recover', 'storageKey', and 'query'
+     ,-[src/chat/components/Schedules.tsx:758:6]
+ 745 |     mounted.current = true
+ 746 |     recover()
+     :     ^^^^^^^
+ 747 |     const changed = (event: StorageEvent) => {
+ 748 |       if (event.key === storageKey || event.key === null) {
+     :                         ^^^^^^^^^^
+ 749 |         recover()
+ 750 |         void query.refetch()
+     :              ^^^^^
+ 751 |       }
+ 752 |     }
+ 753 |     window.addEventListener('storage', changed)
+ 754 |     return () => {
+ 755 |       mounted.current = false
+ 756 |       window.removeEventListener('storage', changed)
+ 757 |     }
+ 758 |   }, [])
+     :      ^^
+ 759 |   async function command(value: ScheduleCommand) {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has a missing dependency: 'scope'
+    ,-[src/chat/components/usePendingSend.ts:30:47]
+ 29 |   const key = sendReceiptKey(scope)
+ 30 |   const owner = useMemo(() => ({ ...scope }), [key])
+    :                                     ^^|^^     ^^^^^
+    :                                       `-- useMemo uses `scope` here
+ 31 |   const [state, setState] = useState({
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: key
+    ,-[src/chat/components/usePendingSend.ts:30:47]
+ 29 |   const key = sendReceiptKey(scope)
+ 30 |   const owner = useMemo(() => ({ ...scope }), [key])
+    :                                               ^^^^^
+ 31 |   const [state, setState] = useState({
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'perform'
+     ,-[src/chat/components/usePendingSend.ts:172:6]
+ 161 |     mounted.current = true
+ 162 |     void perform('check', (coordinator) => coordinator.check())
+     :          ^^^|^^^
+     :             `-- useEffect uses `perform` here
+ 163 |     const changed = (event: StorageEvent) => {
+ 164 |       if (event.key === key || event.key === null)
+ 165 |         void perform('check', (coordinator) => coordinator.check())
+ 166 |     }
+ 167 |     window.addEventListener('storage', changed)
+ 168 |     return () => {
+ 169 |       mounted.current = false
+ 170 |       window.removeEventListener('storage', changed)
+ 171 |     }
+ 172 |   }, [key, enabled])
+     :      ^^^^^^^^^^^^^^
+ 173 |   const submission = useMutation({
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-control-regex): Unexpected control characters
+     ,-[src/chat/core/plugin-archive.ts:114:9]
+ 113 |       name.includes(':') ||
+ 114 |       /[\u0000-\u001f\u007f]/u.test(name)
+     :         ^^^|^^ ^^^|^^
+     :            |      `-- 'U+001F' is a control character.
+     :            `-- 'U+0000' is a control character.
+ 115 |     )
+     `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'recover', 'invalidate', and 'recoveryKey'
+     ,-[src/chat/components/SkillSettings.tsx:173:6]
+ 159 |     mounted.current = true
+ 160 |     recover()
+     :     ^^^^^^^
+ 161 |     const changed = (event: StorageEvent) => {
+ 162 |       if (event.key === recoveryKey || event.key === null) {
+     :                         ^^^^^^^^^^^
+ 163 |         recover()
+ 164 |         void invalidate()
+     :              ^^^^^^^^^^
+ 165 |       }
+ 166 |     }
+ 167 |     window.addEventListener('storage', changed)
+ 168 |     return () => {
+ 169 |       mounted.current = false
+ 170 |       window.removeEventListener('storage', changed)
+ 171 |       if (exportUrl.current) URL.revokeObjectURL(exportUrl.current)
+ 172 |     }
+ 173 |   }, [])
+     :      ^^
+ 174 |   const list = useInfiniteQuery({
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Variable 'debugDetails' is declared but never used. Unused variables should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+     ,-[src/chat/components/ConversationSession.tsx:254:10]
+ 253 |   // The transport and recovery owner must not change underneath an active run.
+ 254 |   const [debugDetails] = useDebugDetails()
+     :          ^^^^^^|^^^^^
+     :                `-- 'debugDetails' is declared here
+ 255 |   const [destination] = useState(resolvedDestination)
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has a missing dependency: 'destination'
+     ,-[src/chat/components/ConversationSession.tsx:511:6]
+ 490 |             reference.kind === 'file' &&
+ 491 |             sameConversationResource(reference, destination)
+     :                                                 ^^^^^|^^^^^
+     :                                                      `-- useMemo uses `destination` here
+ 492 |               ? [reference.fileId]
+ 493 |               : [],
+ 494 |           ),
+ 495 |         )
+ 496 |         await api(`${path}/send`, {
+ 497 |           text,
+ 498 |           messageId: message.id,
+ 499 |           fileIds: readMessageAttachments(message)
+ 500 |             .filter(
+ 501 |               (file) =>
+ 502 |                 sameConversationResource(file, destination) &&
+ 503 |                 !referencedFileIds.has(file.id),
+ 504 |             )
+ 505 |             .map((file) => file.id),
+ 506 |           references: messageReferences.map(referenceInput),
+ 507 |           ...data,
+ 508 |         })
+ 509 |       },
+ 510 |     }
+ 511 |   }, [path, initialHistory.streamOffset, api, apiUrl])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 512 |   const projectQueryClient = useQueryClient()
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/ConversationSession.tsx:553:13]
+ 552 |       queueMicrotask(() => {
+ 553 |         if (emptyThreadVisit.current !== visit || !emptyThreadState.current)
+     :             ^^^^^^^^^^^^^^^^^^^^^^^^
+ 554 |           return
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'thread', and 'threads'
+     ,-[src/chat/components/ConversationSession.tsx:572:6]
+ 547 |   useEffect(() => {
+ 548 |     if (!visible || !thread) return
+     :                      ^^^^^^
+ 549 |     const visit = ++emptyThreadVisit.current
+ 550 |     return () => {
+ 551 |       // Defer past React's effect replay, but use the latest draft and send state.
+ 552 |       queueMicrotask(() => {
+ 553 |         if (emptyThreadVisit.current !== visit || !emptyThreadState.current)
+ 554 |           return
+ 555 |         try {
+ 556 |           if (
+ 557 |             localStorage.getItem(
+ 558 |               `gum.draft:${destination.compatibility.draftScope}`,
+ 559 |             )
+ 560 |           )
+ 561 |             return
+ 562 |         } catch {
+ 563 |           return
+ 564 |         }
+ 565 |         void api(`${destination.apiPath}/thread`, undefined, 'DELETE')
+ 566 |           .then(() => threads.refetch())
+     :                       ^^^^^^^
+ 567 |           .catch(() => {
+ 568 |             /* A failed cleanup keeps the thread available. */
+ 569 |           })
+ 570 |       })
+ 571 |     }
+ 572 |   }, [visible, destination, thread?.conversationId, api])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 573 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'savedFiles'
+     ,-[src/chat/components/ConversationSession.tsx:628:6]
+ 624 |       // service as the UI. Refresh after settling without disturbing queued writes.
+ 625 |       void Promise.allSettled([savedFiles.refetch(), refresh()])
+     :                                ^^^^^|^^^^
+     :                                     `-- useEffect uses `savedFiles` here
+ 626 |     }
+ 627 |     wasRunning.current = busy
+ 628 |   }, [busy, savedFiles.refetch, refresh])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 629 |   const waiting =
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'pendingSend'
+     ,-[src/chat/components/ConversationSession.tsx:660:6]
+ 658 |       )
+ 659 |         pendingSend.forgetSubmitted(envelope.payload.messageId)
+     :         ^^^^^|^^^^^
+     :              `-- useEffect uses `pendingSend` here
+ 660 |   }, [pendingSend.submitted, pendingMessages])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 661 |   const turns = useMemo(() => groupConversation(h.messages), [h.messages])
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Identifier 'IconButton' is imported but never used.
+   ,-[src/chat/components/HomeDashboard.tsx:4:10]
+ 3 | import { LoadingState } from './ui/LoadingState'
+ 4 | import { IconButton } from './IconButton'
+   :          ^^^^^|^^^^
+   :               `-- 'IconButton' is imported here
+ 5 | import { useEffect, useRef, type ReactNode } from 'react'
+   `----
+  help: Consider removing this import.
+
+  ! eslint-plugin-react(no-children-prop): Avoid passing children using a prop.
+    ,-[harness-tests/core/workspace-panels.test.ts:91:11]
+ 90 |           renderPanel: (id) => createElement('span', { 'data-view': id }, id),
+ 91 |           children: 'Conversation',
+    :           ^^^^^^^^
+ 92 |         }),
+    `----
+  help: The canonical way to pass children in React is to use JSX elements
+
+  ! eslint-plugin-react(no-children-prop): Avoid passing children using a prop.
+     ,-[harness-tests/core/workspace-panels.test.ts:473:11]
+ 472 |           workspaceId: 'workspace',
+ 473 |           children: child,
+     :           ^^^^^^^^
+ 474 |         }),
+     `----
+  help: The canonical way to pass children in React is to use JSX elements
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'invalidate', 'recover', and 'recoveryKey'
+     ,-[src/chat/components/PluginSettings.tsx:412:6]
+ 399 |     mounted.current = true
+ 400 |     recover()
+     :     ^^^^^^^
+ 401 |     const changed = (event: StorageEvent) => {
+ 402 |       if (event.key === recoveryKey || event.key === null) {
+     :                         ^^^^^^^^^^^
+ 403 |         recover()
+ 404 |         void invalidate()
+     :              ^^^^^^^^^^
+ 405 |       }
+ 406 |     }
+ 407 |     window.addEventListener('storage', changed)
+ 408 |     return () => {
+ 409 |       mounted.current = false
+ 410 |       window.removeEventListener('storage', changed)
+ 411 |     }
+ 412 |   }, [])
+     :      ^^
+ 413 |   const list = useInfiniteQuery({
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has missing dependencies: 'seed.sections', 'seed', 'seed.activity', 'seed.workspace.id', 'seed.user.id', and 'seed.bots'
+    ,-[src/chat/components/useWorkspaceCollections.ts:34:5]
+ 20 |     () =>
+ 21 |       seed
+    :       ^^^^
+ 22 |         ? createWorkspaceCollections({
+ 23 |             request,
+ 24 |             initial: {
+ 25 |               workspaceId: seed.workspace.id,
+    :                            ^^^^^^^^^^^^^^
+ 26 |               userId: seed.user.id,
+    :                       ^^^^^^^^^
+ 27 |               bots: seed.bots,
+    :                     ^^^^
+ 28 |               sections: seed.sections,
+    :                         ^^^^
+ 29 |             },
+ 30 |             initialActivity: seed.activity,
+    :                              ^^^^
+ 31 |             streamUrl: url('workspace-sync/stream'),
+ 32 |           })
+ 33 |         : undefined,
+ 34 |     [request, url, workspaceId, userId],
+    :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 35 |   )
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: userId
+    ,-[src/chat/components/useWorkspaceCollections.ts:34:5]
+ 33 |         : undefined,
+ 34 |     [request, url, workspaceId, userId],
+    :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 35 |   )
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: workspaceId
+    ,-[src/chat/components/useWorkspaceCollections.ts:34:5]
+ 33 |         : undefined,
+ 34 |     [request, url, workspaceId, userId],
+    :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 35 |   )
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-useless-escape): Unnecessary escape character '['
+   ,-[src/utils/repo-path.ts:3:51]
+ 2 | 
+ 3 | const REPO_PATH_SEGMENT_PATTERN = /^[a-zA-Z0-9._$+\[\]-]+$/
+   :                                                   ^^
+ 4 | 
+   `----
+  help: Replace `\[` with `[`.
+
+  ! eslint(no-useless-escape): Unnecessary escape character '['
+     ,-[src/chat/server/answer-evidence.ts:233:27]
+ 232 |   const escape = (text: string) =>
+ 233 |     text.replace(/[\\`*_{}\[\]()#+.!<>|~-]/g, '\\$&')
+     :                           ^^
+ 234 |   const source = [passage.serverLabel, passage.toolName]
+     `----
+  help: Replace `\[` with `[`.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/core/execution-sessions.ts:83:10]
+ 82 |       value.startsWith('/project/') &&
+ 83 |       !/[\u0000-\u001f\u007f\\]/.test(value) &&
+    :          ^^^|^^ ^^^|^^
+    :             |      `-- 'U+001F' is a control character.
+    :             `-- 'U+0000' is a control character.
+ 84 |       value
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-control-regex): Unexpected control characters
+     ,-[src/chat/core/execution-sessions.ts:120:30]
+ 119 |           .max(512)
+ 120 |           .regex(/^\/(?!\/)[^\u0000-\u001f\u007f\\]*$/)
+     :                              ^^^|^^ ^^^|^^
+     :                                 |      `-- 'U+001F' is a control character.
+     :                                 `-- 'U+0000' is a control character.
+ 121 |           .default('/'),
+     `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint-plugin-react(no-children-prop): Avoid passing children using a prop.
+     ,-[harness-tests/core/composer-references.test.ts:501:9]
+ 500 |         client: new QueryClient(),
+ 501 |         children: createElement(ComposerReferences, {
+     :         ^^^^^^^^
+ 502 |           userId: 'viewer',
+     `----
+  help: The canonical way to pass children in React is to use JSX elements
+
+  ! eslint-plugin-react(no-children-prop): Avoid passing children using a prop.
+     ,-[harness-tests/core/composer-references.test.ts:557:9]
+ 556 |         client: new QueryClient(),
+ 557 |         children: createElement(ComposerReferences, {
+     :         ^^^^^^^^
+ 558 |           userId: 'viewer',
+     `----
+  help: The canonical way to pass children in React is to use JSX elements
+
+  ! eslint(no-unused-vars): Type 'CopyExportProgress' is imported but never used.
+   ,-[src/chat/server/conversation-copies.ts:7:8]
+ 6 |   copyBoundarySchema,
+ 7 |   type CopyExportProgress,
+   :        ^^^^^^^^^|^^^^^^^^
+   :                 `-- 'CopyExportProgress' is imported here
+ 8 |   type CopyExportRequest,
+   `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Type 'CopyExportRequest' is imported but never used.
+   ,-[src/chat/server/conversation-copies.ts:8:8]
+ 7 |   type CopyExportProgress,
+ 8 |   type CopyExportRequest,
+   :        ^^^^^^^^|^^^^^^^^
+   :                `-- 'CopyExportRequest' is imported here
+ 9 |   type CopyIdentity,
+   `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Type 'CopyKind' is imported but never used.
+    ,-[src/chat/server/conversation-copies.ts:10:8]
+  9 |   type CopyIdentity,
+ 10 |   type CopyKind,
+    :        ^^^^|^^^
+    :            `-- 'CopyKind' is imported here
+ 11 |   type CopyManifest,
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Type 'CopyPage' is imported but never used.
+    ,-[src/chat/server/conversation-copies.ts:12:8]
+ 11 |   type CopyManifest,
+ 12 |   type CopyPage,
+    :        ^^^^|^^^
+    :            `-- 'CopyPage' is imported here
+ 13 | } from '../core/conversation-copy'
+    `----
+  help: Consider removing this import.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useLayoutEffect has a missing dependency: 'restoreFocus'
+     ,-[src/chat/components/EarlierMessages.tsx:189:6]
+ 186 |       dialog?.close()
+ 187 |       if (hadFocus) restoreFocus()
+     :                     ^^^^^^|^^^^^
+     :                           `-- useLayoutEffect uses `restoreFocus` here
+ 188 |     }
+ 189 |   }, [])
+     :      ^^
+ 190 |   const [cursors, setCursors] = useState<Array<number | undefined>>([undefined])
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'messageScope', and 'turn'
+     ,-[src/chat/components/EarlierMessages.tsx:225:6]
+ 213 |   useEffect(() => {
+ 214 |     if (!targetMessageId || !turn || before !== undefined) return
+     :                              ^^^^
+ 215 |     const frame = requestAnimationFrame(() => {
+ 216 |       const message = ref.current?.querySelector<HTMLElement>(
+ 217 |         `#${CSS.escape(messageAnchorId(targetMessageId, messageScope))}`,
+     :                                                         ^^^^^^^^^^^^
+ 218 |       )
+ 219 |       if (message && focusIntent?.active()) {
+ 220 |         message.scrollIntoView({ block: 'center' })
+ 221 |         focusIntent.focus(message)
+ 222 |       }
+ 223 |     })
+ 224 |     return () => cancelAnimationFrame(frame)
+ 225 |   }, [targetMessageId, turn?.id, before, focusIntent])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 226 |   const results = new Map<string, ToolResultPart>(
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'finishDraft', and 'attempt'
+     ,-[src/chat/components/DraftBot.tsx:174:6]
+ 159 |     void Promise.resolve()
+ 160 |       .then(() => finishDraft(saved, attempt))
+     :                   ^^^^^^^^^^^        ^^^^^^^
+ 161 |       .catch((error) => {
+ 162 |         if (mounted.current) {
+ 163 |           opened.current = false
+ 164 |           setError(
+ 165 |             error instanceof Error
+ 166 |               ? error.message
+ 167 |               : 'Could not open this conversation.',
+ 168 |           )
+ 169 |         }
+ 170 |       })
+ 171 |       .finally(() => {
+ 172 |         if (mounted.current) setBusy(false)
+ 173 |       })
+ 174 |   }, [receipt.data, attemptReady, clearSubmitted, onCreated])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 175 |   const frozen = receipt.data ?? attempt?.input
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a complex expression in the dependency array.
+     ,-[src/chat/components/DraftBot.tsx:192:5]
+ 191 |     frozen?.text,
+ 192 |     !!frozen,
+     :     ^^^^^^^^
+ 193 |     draftId,
+     `----
+  help: Extract the expression to a separate variable so it can be statically checked.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'frozen'
+     ,-[src/chat/components/DraftBot.tsx:189:6]
+ 177 |         onPending?.(
+ 178 |           frozen && workspaceId
+     :           ^^^|^^
+     :              `-- useEffect uses `frozen` here
+ 179 |             ? {
+ 180 |                 id: draftId,
+ 181 |                 botId: receipt.data?.botId,
+ 182 |                 text: frozen.text || 'New conversation',
+ 183 |                 userId,
+ 184 |                 workspaceId,
+ 185 |               }
+ 186 |             : null,
+ 187 |         )
+ 188 |         return () => onPending?.(null)
+ 189 | ,->   }, [
+ 190 | |       receipt.data?.botId,
+ 191 | |       frozen?.text,
+ 192 | |       !!frozen,
+ 193 | |       draftId,
+ 194 | |       userId,
+ 195 | |       workspaceId,
+ 196 | |       onPending,
+ 197 | `->   ])
+ 198 |       const runModel = useRunModel({
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react(no-children-prop): Avoid passing children using a prop.
+    ,-[src/chat/components/PendingTaskCard.tsx:33:7]
+ 32 |       onDismiss={() => void onDismiss()}
+ 33 |       children={
+    :       ^^^^^^^^
+ 34 |         guide ? (
+    `----
+  help: The canonical way to pass children in React is to use JSX elements
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has an unnecessary dependency: createOwners.
+    ,-[src/chat/components/ExecutionOwners.tsx:51:7]
+ 50 |     }
+ 51 |   }, [createOwners])
+    :       ^^^^^^^^^^^^
+ 52 |   return (
+    `----
+  help: Consider removing it from the dependency array. Outer scope values aren't valid dependencies because mutating them doesn't re-render the component.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React hook useEffect depends on `createOwners`, which changes every render
+    ,-[src/chat/components/ExecutionOwners.tsx:9:10]
+  8 | // This effect dependency binds each owner to one version of its executable code.
+  9 | function createOwners(getContainer: () => HTMLDivElement | null) {
+    :          ^^^^^^|^^^^^
+    :                `-- `createOwners` is declared here
+ 10 |   return new ExecutionOwners({
+    `----
+    ,-[src/chat/components/ExecutionOwners.tsx:51:7]
+ 50 |     }
+ 51 |   }, [createOwners])
+    :       ^^^^^^|^^^^^
+    :             `-- it will always cause this hook to re-evaluate
+ 52 |   return (
+    `----
+  help: Try memoizing this variable with `useRef` or `useCallback`.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'openCopy'
+     ,-[src/chat/components/CopyBotDialog.tsx:252:6]
+ 250 |     opened.current = current.operationId
+ 251 |     void openCopy(current.botId)
+     :          ^^^^|^^^
+     :              `-- useEffect uses `openCopy` here
+ 252 |   }, [current?.operationId, current?.status, current?.botId])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 253 |   async function submit() {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a complex expression in the dependency array.
+     ,-[src/chat/components/ConversationWorkspace.tsx:172:30]
+ 171 |     previousActive.current = state.active
+ 172 |   }, [state.active, visible, state.tabs.join(','), returnFocus, focusActiveTab])
+     :                              ^^^^^^^^^^^^^^^^^^^^
+ 173 |   useEffect(() => {
+     `----
+  help: Extract the expression to a separate variable so it can be statically checked.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useCallback has missing dependencies: 'drag', 'groupDrop', and 'drop'
+     ,-[src/chat/components/BotDrag.tsx:305:5]
+ 300 |     (element: Element | null) => {
+ 301 |       drag.ref(element)
+     :       ^^^^
+ 302 |       drop.ref(element)
+     :       ^^^^
+ 303 |       groupDrop.ref(element)
+     :       ^^^^^^^^^
+ 304 |     },
+ 305 |     [drag.ref, drop.ref, groupDrop.ref],
+     :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 306 |   )
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useCallback has unnecessary dependency: groupDrop.ref
+     ,-[src/chat/components/BotDrag.tsx:305:5]
+ 304 |     },
+ 305 |     [drag.ref, drop.ref, groupDrop.ref],
+     :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 306 |   )
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useCallback has unnecessary dependency: drag.ref
+     ,-[src/chat/components/BotDrag.tsx:305:5]
+ 304 |     },
+ 305 |     [drag.ref, drop.ref, groupDrop.ref],
+     :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 306 |   )
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useCallback has unnecessary dependency: drop.ref
+     ,-[src/chat/components/BotDrag.tsx:305:5]
+ 304 |     },
+ 305 |     [drag.ref, drop.ref, groupDrop.ref],
+     :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 306 |   )
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/core/skills.ts:30:21]
+ 29 |     .refine(
+ 30 |       (value) => !/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/u.test(value),
+    :                     ^^^|^^ ^^^|^^^^^|^^^^^|^^^^^|^^ ^^^|^^
+    :                        |      |     |     |     |      `-- 'U+001F' is a control character.
+    :                        |      |     |     |     `-- 'U+000E' is a control character.
+    :                        |      |     |     `-- 'U+000C' is a control character.
+    :                        |      |     `-- 'U+000B' is a control character.
+    :                        |      `-- 'U+0008' is a control character.
+    :                        `-- 'U+0000' is a control character.
+ 31 |       'Remove unsupported control characters.',
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-unused-vars): Parameter 'name' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+     ,-[src/chat/core/assistant-task.ts:106:3]
+ 105 |   task: AssistantTask,
+ 106 |   name: string,
+     :   ^^|^
+     :     `-- 'name' is declared here
+ 107 |   args: unknown,
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'args' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+     ,-[src/chat/core/assistant-task.ts:107:3]
+ 106 |   name: string,
+ 107 |   args: unknown,
+     :   ^^|^
+     :     `-- 'args' is declared here
+ 108 | ) {
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/core/retry-source.ts:45:38]
+ 44 | const validEvidenceId = (value: unknown): value is string =>
+ 45 |   typeof value === 'string' && /^[^\s\u0000-\u001f\u007f]{1,128}$/u.test(value)
+    :                                      ^^^|^^ ^^^|^^
+    :                                         |      `-- 'U+001F' is a control character.
+    :                                         `-- 'U+0000' is a control character.
+ 46 | 
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'refreshKody'
+     ,-[src/chat/components/ComposerReferences.tsx:742:6]
+ 740 |         )
+ 741 |           void refreshKody()
+     :                ^^^^^|^^^^^
+     :                     `-- useEffect uses `refreshKody` here
+ 742 | ,->   }, [
+ 743 | |       toolPickerOpen,
+ 744 | |       query.data?.kodyStatus,
+ 745 | |       query.data?.kodyObjectsStatus,
+ 746 | |       query.dataUpdatedAt,
+ 747 | |       refreshScope,
+ 748 | `->   ])
+ 749 |       useEffect(() => {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'refreshTools'
+     ,-[src/chat/components/ComposerReferences.tsx:761:6]
+ 759 |         )
+ 760 |         if (next) void refreshTools(next, true)
+     :                        ^^^^^^|^^^^^
+     :                              `-- useEffect uses `refreshTools` here
+ 761 | ,->   }, [
+ 762 | |       toolPickerOpen,
+ 763 | |       kind,
+ 764 | |       query.data?.toolSources,
+ 765 | |       query.dataUpdatedAt,
+ 766 | |       refreshBusy,
+ 767 | |       refreshScope,
+ 768 | `->   ])
+ 769 |       useEffect(() => {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'close', and 'choose'
+     ,-[src/chat/components/ComposerReferences.tsx:910:6]
+ 881 |             event.stopPropagation()
+ 882 |             close()
+     :             ^^^^^
+ 883 |             return
+ 884 |           }
+ 885 |           if (!['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return
+ 886 |           if (event.isComposing) return
+ 887 |           event.preventDefault()
+ 888 |           event.stopPropagation()
+ 889 |           if (!displayedItems.length) return
+ 890 |           if (event.key === 'ArrowDown')
+ 891 |             setActiveIndex((index) => (index + 1) % displayedItems.length)
+ 892 |           else if (event.key === 'ArrowUp')
+ 893 |             setActiveIndex(
+ 894 |               (index) =>
+ 895 |                 (index + displayedItems.length - 1) % displayedItems.length,
+ 896 |             )
+ 897 |           else {
+ 898 |             const item = displayedItems[activeIndex]
+ 899 |             if (
+ 900 |               item &&
+ 901 |               !query.isPlaceholderData &&
+ 902 |               !selected.has(referenceKey(item)) &&
+ 903 |               !composerReferenceLimit(references.items, item)
+ 904 |             )
+ 905 |               void choose(item)
+     :                    ^^^^^^
+ 906 |           }
+ 907 |         }
+ 908 |         document.addEventListener('keydown', onKeyDown, true)
+ 909 |         return () => document.removeEventListener('keydown', onKeyDown, true)
+ 910 | ,->   }, [
+ 911 | |       open,
+ 912 | |       mention,
+ 913 | |       inspectingSkill,
+ 914 | |       inspectingKody,
+ 915 | |       displayedItems,
+ 916 | |       activeIndex,
+ 917 | |       selected,
+ 918 | |       references,
+ 919 | |       query.isPlaceholderData,
+ 920 | |       composerInput,
+ 921 | `->   ])
+ 922 |       const fileCount =
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React hook useEffect depends on `selected`, which changes every render
+     ,-[src/chat/components/ComposerReferences.tsx:917:5]
+ 787 |   }
+ 788 |   const selected = new Set(references.items.map(referenceKey))
+     :         ^^^^|^^^
+     :             `-- `selected` is declared here
+ 789 |   const catalogItems = query.data?.items ?? []
+ 790 |   const rankedItems = queryText.trim()
+ 791 |     ? rankPalette(
+ 792 |         catalogItems.map((item) => ({
+ 793 |           ...item,
+ 794 |           id: referenceKey(item),
+ 795 |           kind:
+ 796 |             item.kind === 'file'
+ 797 |               ? ('file' as const)
+ 798 |               : item.kind === 'conversation'
+ 799 |                 ? ('conversation' as const)
+ 800 |                 : ('action' as const),
+ 801 |           aliases:
+ 802 |             item.kind === 'kody' &&
+ 803 |             item.entity.startsWith('package:') &&
+ 804 |             !item.entity.includes('#') &&
+ 805 |             item.label.includes('/')
+ 806 |               ? [item.label.slice(item.label.lastIndexOf('/') + 1)]
+ 807 |               : undefined,
+ 808 |           keywords: [item.detail ?? '', item.kind],
+ 809 |           recentAt: item.kind === 'file' ? item.recentAt : undefined,
+ 810 |           reference: item,
+ 811 |         })),
+ 812 |         queryText,
+ 813 |         { limit: 50, diversify: false },
+ 814 |       ).map((item) => item.reference)
+ 815 |     : catalogItems
+ 816 |         .filter((item) => item.detail !== 'Archived')
+ 817 |         .sort((a, b) => {
+ 818 |           const priority = (item: MessageReference) =>
+ 819 |             ({
+ 820 |               connection: 0,
+ 821 |               conversation: 1,
+ 822 |               file: 2,
+ 823 |               kody: 3,
+ 824 |               tool: 4,
+ 825 |               skill: 5,
+ 826 |               plugin: 6,
+ 827 |             })[item.kind]
+ 828 |           return priority(a) - priority(b) || a.label.localeCompare(b.label)
+ 829 |         })
+ 830 |   const displayedItems = rankedItems.slice(0, queryText.trim() ? 30 : 12)
+ 831 |   useEffect(() => {
+ 832 |     const input = mention ? composerInput.current : searchInput.current
+ 833 |     if (!input || !open) return
+ 834 |     input.setAttribute('aria-controls', listboxId)
+ 835 |     input.setAttribute('aria-haspopup', 'listbox')
+ 836 |     input.setAttribute('aria-expanded', 'true')
+ 837 |     input.setAttribute('aria-autocomplete', 'list')
+ 838 |     return () => {
+ 839 |       input.removeAttribute('aria-controls')
+ 840 |       input.removeAttribute('aria-haspopup')
+ 841 |       input.removeAttribute('aria-expanded')
+ 842 |       input.removeAttribute('aria-autocomplete')
+ 843 |       input.removeAttribute('aria-activedescendant')
+ 844 |     }
+ 845 |   }, [composerInput, listboxId, mention, open])
+ 846 |   useEffect(() => {
+ 847 |     const input = mention ? composerInput.current : searchInput.current
+ 848 |     if (open && displayedItems[activeIndex])
+ 849 |       input?.setAttribute(
+ 850 |         'aria-activedescendant',
+ 851 |         `${listboxId}-choice-${activeIndex}`,
+ 852 |       )
+ 853 |     else input?.removeAttribute('aria-activedescendant')
+ 854 |   }, [activeIndex, composerInput, displayedItems, listboxId, mention, open])
+ 855 |   useEffect(() => setActiveIndex(0), [queryText, kind])
+ 856 |   useEffect(() => {
+ 857 |     if (activeIndex > 0)
+ 858 |       document
+ 859 |         .getElementById(`${listboxId}-choice-${activeIndex}`)
+ 860 |         ?.scrollIntoView({ block: 'nearest' })
+ 861 |   }, [activeIndex, listboxId])
+ 862 |   const choose = async (item: MessageReference) => {
+ 863 |     const trigger = mention
+ 864 |     if (await references.add(item)) {
+ 865 |       focusComposerAfterClose.current = true
+ 866 |       close()
+ 867 |       onSelected(trigger)
+ 868 |     }
+ 869 |   }
+ 870 |   useEffect(() => {
+ 871 |     if (!open || inspectingSkill || inspectingKody) return
+ 872 |     const onKeyDown = (event: KeyboardEvent) => {
+ 873 |       if (
+ 874 |         mention
+ 875 |           ? document.activeElement !== composerInput.current
+ 876 |           : document.activeElement !== searchInput.current
+ 877 |       )
+ 878 |         return
+ 879 |       if (event.key === 'Escape') {
+ 880 |         event.preventDefault()
+ 881 |         event.stopPropagation()
+ 882 |         close()
+ 883 |         return
+ 884 |       }
+ 885 |       if (!['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return
+ 886 |       if (event.isComposing) return
+ 887 |       event.preventDefault()
+ 888 |       event.stopPropagation()
+ 889 |       if (!displayedItems.length) return
+ 890 |       if (event.key === 'ArrowDown')
+ 891 |         setActiveIndex((index) => (index + 1) % displayedItems.length)
+ 892 |       else if (event.key === 'ArrowUp')
+ 893 |         setActiveIndex(
+ 894 |           (index) =>
+ 895 |             (index + displayedItems.length - 1) % displayedItems.length,
+ 896 |         )
+ 897 |       else {
+ 898 |         const item = displayedItems[activeIndex]
+ 899 |         if (
+ 900 |           item &&
+ 901 |           !query.isPlaceholderData &&
+ 902 |           !selected.has(referenceKey(item)) &&
+ 903 |           !composerReferenceLimit(references.items, item)
+ 904 |         )
+ 905 |           void choose(item)
+ 906 |       }
+ 907 |     }
+ 908 |     document.addEventListener('keydown', onKeyDown, true)
+ 909 |     return () => document.removeEventListener('keydown', onKeyDown, true)
+ 910 |   }, [
+ 911 |     open,
+ 912 |     mention,
+ 913 |     inspectingSkill,
+ 914 |     inspectingKody,
+ 915 |     displayedItems,
+ 916 |     activeIndex,
+ 917 |     selected,
+     :     ^^^^|^^^
+     :         `-- it will always cause this hook to re-evaluate
+ 918 |     references,
+     `----
+  help: Try memoizing this variable with `useRef` or `useCallback`.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/server/kody-actions.ts:14:14]
+ 13 |   .max(200)
+ 14 |   .regex(/^[^\u0000-\u001f\u007f]+$/)
+    :              ^^^|^^ ^^^|^^
+    :                 |      `-- 'U+001F' is a control character.
+    :                 `-- 'U+0000' is a control character.
+ 15 |   .refine((value) => !['constructor', 'prototype', '__proto__'].includes(value))
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-unused-vars): Variable 'h' is declared but never used. Unused variables should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+     ,-[harness-tests/pending-runtime/memory-runtime.test.ts:265:9]
+ 264 | it('rechecks recall after tool construction and excludes delegated tasks', async () => {
+ 265 |   const h = await conversationHarness(),
+     :         |
+     :         `-- 'h' is declared here
+ 266 |     scope = {
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-useless-escape): Unnecessary escape character '['
+    ,-[src/chat/core/answers.ts:49:25]
+ 48 | const escapeMarkdown = (text: string) =>
+ 49 |   text.replace(/[\\`*_{}\[\]<>#!|]/g, '\\$&')
+    :                         ^^
+ 50 | export function formatAnswer(result: AnswerResult) {
+    `----
+  help: Replace `\[` with `[`.
+
+  ! eslint(no-unused-vars): Parameter 'status' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+    ,-[harness-tests/core/kody-run-history.test.ts:56:44]
+ 55 |     }))
+ 56 |     const runList = vi.fn(async ({ cursor, status, error_triage }: any) =>
+    :                                            ^^^|^^
+    :                                               `-- 'status' is declared here
+ 57 |       cursor
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'error_triage' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+    ,-[harness-tests/core/kody-run-history.test.ts:56:52]
+ 55 |     }))
+ 56 |     const runList = vi.fn(async ({ cursor, status, error_triage }: any) =>
+    :                                                    ^^^^^^|^^^^^
+    :                                                          `-- 'error_triage' is declared here
+ 57 |       cursor
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'options' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+     ,-[harness-tests/pending-runtime/execution-project-snapshots.test.ts:356:49]
+ 355 |         h.put.mockImplementationOnce(
+ 356 |           async (key: string, data: Uint8Array, options: any) => {
+     :                                                 ^^^|^^^
+     :                                                    `-- 'options' is declared here
+ 357 |             const copy = new Uint8Array(data)
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/core/bot-activity.ts:47:16]
+ 46 |   return text
+ 47 |     .replace(/[\u0000-\u001f\u007f]/g, ' ')
+    :                ^^^|^^ ^^^|^^
+    :                   |      `-- 'U+001F' is a control character.
+    :                   `-- 'U+0000' is a control character.
+ 48 |     .replace(/\s+/g, ' ')
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-control-regex): Unexpected control characters
+     ,-[src/chat/core/execution-project-snapshot.ts:107:10]
+ 106 |       new TextEncoder().encode(value).byteLength <= 4096 &&
+ 107 |       !/[\u0000-\u001f\u007f\\]/.test(value) &&
+     :          ^^^|^^ ^^^|^^
+     :             |      `-- 'U+001F' is a control character.
+     :             `-- 'U+0000' is a control character.
+ 108 |       value
+     `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-control-regex): Unexpected control characters
+     ,-[src/chat/core/execution-project-snapshot.ts:118:25]
+ 117 |   .max(4096)
+ 118 |   .refine((value) => !/[\u0000-\u001f\u007f\\]/.test(value))
+     :                         ^^^|^^ ^^^|^^
+     :                            |      `-- 'U+001F' is a control character.
+     :                            `-- 'U+0000' is a control character.
+ 119 | const mode = integer.max(0o7777)
+     `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-useless-escape): Unnecessary escape character '-'
+    ,-[src/chat/core/message-attachments.ts:49:32]
+ 48 |     .regex(
+ 49 |       /^[a-z0-9][a-z0-9!#$&^_.+\-]{0,126}\/[a-z0-9][a-z0-9!#$&^_.+\-]{0,126}$/,
+    :                                ^^
+ 50 |     ),
+    `----
+  help: Replace `\-` with `-`.
+
+  ! eslint(no-useless-escape): Unnecessary escape character '-'
+    ,-[src/chat/core/message-attachments.ts:49:67]
+ 48 |     .regex(
+ 49 |       /^[a-z0-9][a-z0-9!#$&^_.+\-]{0,126}\/[a-z0-9][a-z0-9!#$&^_.+\-]{0,126}$/,
+    :                                                                   ^^
+ 50 |     ),
+    `----
+  help: Replace `\-` with `-`.
+
+  ! eslint(no-unused-vars): Identifier 'markConversationRead' is imported but never used.
+     ,-[src/chat/server/conversation.ts:217:10]
+ 216 | } from './conversation-copies'
+ 217 | import { markConversationRead } from './bot-activity'
+     :          ^^^^^^^^^^|^^^^^^^^^
+     :                    `-- 'markConversationRead' is imported here
+ 218 | import {
+     `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'policySchema' is imported but never used.
+     ,-[src/chat/server/conversation.ts:270:10]
+ 269 | } from './model-attachments'
+ 270 | import { policySchema } from '../core/types'
+     :          ^^^^^^|^^^^^
+     :                `-- 'policySchema' is imported here
+ 271 | import {
+     `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'refreshKodyReferences' is imported but never used.
+     ,-[src/chat/server/conversation.ts:376:3]
+ 375 |   listKodyReferences,
+ 376 |   refreshKodyReferences,
+     :   ^^^^^^^^^^|^^^^^^^^^^
+     :             `-- 'refreshKodyReferences' is imported here
+ 377 |   suggestKodyReferences,
+     `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Type 'StreamChunk' is imported but never used.
+     ,-[src/chat/server/conversation.ts:389:8]
+ 388 |   type ToolCallPart,
+ 389 |   type StreamChunk,
+     :        ^^^^^|^^^^^
+     :             `-- 'StreamChunk' is imported here
+ 390 | } from '@tanstack/ai'
+     `----
+  help: Consider removing this import.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'store'
+    ,-[src/chat/components/useRetryPreparation.ts:88:6]
+ 59 |       try {
+ 60 |         const saved = store().read()
+    :                       ^^|^^
+    :                         `-- useEffect uses `store` here
+ 61 |         const changed = selectedKey.current !== (saved?.idempotencyKey ?? null)
+ 62 |         if (changed || saved?.handled) {
+ 63 |           stop()
+ 64 |           setAttempt(undefined)
+ 65 |           setError('')
+ 66 |         }
+ 67 |         selectedKey.current = saved?.idempotencyKey ?? null
+ 68 |         setRecord(saved && !saved.handled ? saved : null)
+ 69 |       } catch (cause) {
+ 70 |         stop()
+ 71 |         setError(
+ 72 |           cause instanceof Error
+ 73 |             ? cause.message
+ 74 |             : 'Retry recovery is unavailable.',
+ 75 |         )
+ 76 |       }
+ 77 |     }
+ 78 |     restore()
+ 79 |     const changed = (event: StorageEvent) => {
+ 80 |       if (event.key === service.current?.key || event.key === null) restore()
+ 81 |     }
+ 82 |     window.addEventListener('storage', changed)
+ 83 |     return () => {
+ 84 |       window.removeEventListener('storage', changed)
+ 85 |       mounted.current = false
+ 86 |       stop()
+ 87 |     }
+ 88 |   }, [destination.sessionKey])
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^
+ 89 |   useEffect(() => {
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-useless-escape): Unnecessary escape character '/'
+     ,-[src/chat/components/useComposerReferences.ts:204:34]
+ 203 |   // Do not turn a path, URL or filename into a skill when the caret is in it.
+ 204 |   if (slash && /^[^\s()[\]{},;]*[\/\\.:?#]/u.test(text.slice(start)))
+     :                                  ^^
+ 205 |     return null
+     `----
+  help: Replace `\/` with `/`.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'editor'
+     ,-[src/chat/components/MemoryPanel.tsx:150:6]
+ 148 |   useEffect(() => {
+ 149 |     if (editor) titleRef.current?.focus()
+     :         ^^^|^^
+     :            `-- useEffect uses `editor` here
+ 150 |   }, [editor?.id])
+     :      ^^^^^^^^^^^^
+ 151 |   useEffect(() => {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'forget'
+     ,-[src/chat/components/MemoryPanel.tsx:153:6]
+ 151 |   useEffect(() => {
+ 152 |     if (forget) forgetRef.current?.focus()
+     :         ^^^|^^
+     :            `-- useEffect uses `forget` here
+ 153 |   }, [forget?.id])
+     :      ^^^^^^^^^^^^
+ 154 |   const path = `conversations/${encodeURIComponent(conversationId)}/memories`
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'identity'
+     ,-[src/chat/components/ExecutionSessionPanel.tsx:179:6]
+ 166 |       void owners
+ 167 |         .inspect(identity)
+     :                  ^^^^|^^^
+     :                      `-- useEffect uses `identity` here
+ 168 |         .catch((error) => {
+ 169 |           if (!cancelled && mounted.current && current())
+ 170 |             setError(errorText(error))
+ 171 |         })
+ 172 |         .finally(() => {
+ 173 |           if (!cancelled && mounted.current && current()) setBusy(null)
+ 174 |         })
+ 175 |     }
+ 176 |     return () => {
+ 177 |       cancelled = true
+ 178 |     }
+ 179 |   }, [owners, key, completions])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 180 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'setMobile'
+     ,-[src/chat/components/App.tsx:343:6]
+ 337 |       if (!media.matches && window.location.search.includes('navigation='))
+ 338 |         setMobile(false)
+     :         ^^^^|^^^^
+     :             `-- useEffect uses `setMobile` here
+ 339 |     }
+ 340 |     update()
+ 341 |     media.addEventListener('change', update)
+ 342 |     return () => media.removeEventListener('change', update)
+ 343 |   }, [])
+     :      ^^
+ 344 |   useEffect(() => {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useLayoutEffect has a missing dependency: 'identity'
+     ,-[src/chat/components/ExecutionPreviewViewport.tsx:242:6]
+ 233 |         if (!owners || !active || !available || !ref.current) return
+ 234 |         const attachment = owners.attachPreviewViewport(identity, previewId)
+     :                                                         ^^^^|^^^
+     :                                                             `-- useLayoutEffect uses `identity` here
+ 235 |         const disconnect = observeExecutionPreviewViewport(ref.current, (bounds) =>
+ 236 |           attachment.update(bounds),
+ 237 |         )
+ 238 |         return () => {
+ 239 |           disconnect()
+ 240 |           attachment.release()
+ 241 |         }
+ 242 | ,->   }, [
+ 243 | |       owners,
+ 244 | |       key,
+ 245 | |       previewId,
+ 246 | |       active,
+ 247 | |       available,
+ 248 | |       session?.id,
+ 249 | |       session?.runtimeId,
+ 250 | |       session?.hostGeneration,
+ 251 | `->   ])
+ 252 |       return (
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'nextFocus'
+      ,-[src/chat/components/ConnectionSettings.tsx:1376:6]
+ 1360 |   useEffect(() => {
+ 1361 |     if (!nextFocus) return
+      :          ^^^^|^^^^
+      :              `-- useEffect uses `nextFocus` here
+ 1362 |     const target = {
+ 1363 |       back: backAction,
+ 1364 |       check: checkAction,
+ 1365 |       use: useAction,
+ 1366 |       return: returnAction,
+ 1367 |     }[nextFocus.target].current
+ 1368 |     if (
+ 1369 |       !target ||
+ 1370 |       target.disabled ||
+ 1371 |       target.getAttribute('aria-disabled') === 'true'
+ 1372 |     )
+ 1373 |       return
+ 1374 |     target.focus()
+ 1375 |     focusedStage.current = nextFocus.stage
+ 1376 |   }, [nextFocus?.stage, nextFocus?.target])
+      :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 1377 |   useEffect(() => {
+      `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'onChanged'
+      ,-[src/chat/components/ConnectionSettings.tsx:1384:6]
+ 1379 |       completed.current = true
+ 1380 |       void onChanged().catch((cause) => {
+      :            ^^^^|^^^^
+      :                `-- useEffect uses `onChanged` here
+ 1381 |         if (mounted.current) setError(connectionError(cause))
+ 1382 |       })
+ 1383 |     }
+ 1384 |   }, [setup?.status])
+      :      ^^^^^^^^^^^^^^^
+ 1385 |   async function start() {
+      `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Identifier 'createRef' is imported but never used.
+   ,-[src/chat/components/deferredPanel.tsx:2:21]
+ 1 | import { LoadingState } from './ui/LoadingState'
+ 2 | import { Component, createRef, lazy, Suspense, type ComponentType } from 'react'
+   :                     ^^^^|^^^^
+   :                         `-- 'createRef' is imported here
+ 3 | 
+   `----
+  help: Consider removing this import.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/components/generated-file-cache.ts:42:7]
+ 41 |     scopeKey.length > maxGeneratedFileScopeLength ||
+ 42 |     /[\x00-\x1f\x7f]/.test(scopeKey) ||
+    :       ^^|^ ^^|^
+    :         |    `-- 'U+001F' is a control character.
+    :         `-- 'U+0000' is a control character.
+ 43 |     typeof fileId !== 'string' ||
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint(no-control-regex): Unexpected control characters
+    ,-[src/chat/components/generated-file-cache.ts:54:8]
+ 53 |     value.name.length <= 255 &&
+ 54 |     !/[\x00-\x1f\x7f/\\]/.test(value.name) &&
+    :        ^^|^ ^^|^
+    :          |    `-- 'U+001F' is a control character.
+    :          `-- 'U+0000' is a control character.
+ 55 |     typeof value.type === 'string' &&
+    `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'userId'
+    ,-[src/chat/components/AppearanceSettings.tsx:34:6]
+ 31 |   useEffect(() => {
+ 32 |     if (query.data && !localOnly(userId))
+    :                                  ^^^|^^
+    :                                     `-- useEffect uses `userId` here
+ 33 |       setAppearanceSettings(query.data.appearance ?? defaultAppearance)
+ 34 |   }, [query.data])
+    :      ^^^^^^^^^^^^
+ 35 |   return null
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+    ,-[src/chat/components/SavedFiles.tsx:98:32]
+ 97 |       mounted.current = false
+ 98 |       for (const controller of controllers.current.values()) controller.abort()
+    :                                ^^^^^^^^^^^^^^^^^^^
+ 99 |     }
+    `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'files'
+     ,-[src/chat/components/SavedFiles.tsx:117:6]
+ 107 |     const ready = new Set(
+ 108 |       files.filter((file) => file.state === 'ready').map((file) => file.id),
+     :       ^^|^^
+     :         `-- useEffect uses `files` here
+ 109 |     )
+ 110 |     if (!ready.size) return
+ 111 |     setAttempts((previous) => {
+ 112 |       if (!Object.keys(previous).some((id) => ready.has(id))) return previous
+ 113 |       return Object.fromEntries(
+ 114 |         Object.entries(previous).filter(([id]) => !ready.has(id)),
+ 115 |       )
+ 116 |     })
+ 117 |   }, [query.data])
+     :      ^^^^^^^^^^^^
+ 118 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/useComposerAttachments.ts:472:32]
+ 471 |       window.removeEventListener('storage', storage)
+ 472 |       for (const controller of operations.current.values()) controller.abort()
+     :                                ^^^^^^^^^^^^^^^^^^
+ 473 |       operations.current.clear()
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/useComposerAttachments.ts:473:7]
+ 472 |       for (const controller of operations.current.values()) controller.abort()
+ 473 |       operations.current.clear()
+     :       ^^^^^^^^^^^^^^^^^^
+ 474 |       originals.current.clear()
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/useComposerAttachments.ts:474:7]
+ 473 |       operations.current.clear()
+ 474 |       originals.current.clear()
+     :       ^^^^^^^^^^^^^^^^^
+ 475 |       current.current = null
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'run'
+     ,-[src/chat/components/useComposerAttachments.ts:477:6]
+ 461 |         if (!existing.some((candidate) => candidate.id === item.id))
+ 462 |           void run(item.id, 'check')
+     :                ^|^
+     :                 `-- useEffect uses `run` here
+ 463 |     }
+ 464 |     restore()
+ 465 |     const storage = (event: StorageEvent) => {
+ 466 |       if (event.key === key || event.key === null) restore()
+ 467 |     }
+ 468 |     window.addEventListener('storage', storage)
+ 469 |     return () => {
+ 470 |       mounted.current = false
+ 471 |       window.removeEventListener('storage', storage)
+ 472 |       for (const controller of operations.current.values()) controller.abort()
+ 473 |       operations.current.clear()
+ 474 |       originals.current.clear()
+ 475 |       current.current = null
+ 476 |     }
+ 477 |   }, [key])
+     :      ^^^^^
+ 478 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has missing dependencies: 'destination.conversationId', 'destination.workspaceId', 'destination.userId', and 'destination.botId'
+    ,-[src/chat/components/useRetryDraft.ts:43:5]
+ 21 |           scope: {
+ 22 |             userId: destination.userId,
+    :                     ^^^^^^^^^^^
+ 23 |             workspaceId: destination.workspaceId,
+    :                          ^^^^^^^^^^^
+ 24 |             botId: destination.botId,
+    :                    ^^^^^^^^^^^
+ 25 |             conversationId: destination.conversationId,
+    :                             ^^^^^^^^^^^
+ 26 |           },
+ 27 |           attemptId: attempt.attemptId,
+ 28 |           storage: {
+ 29 |             getItem: (key) => localStorage.getItem(key),
+ 30 |             setItem: (key, value) => localStorage.setItem(key, value),
+ 31 |           },
+ 32 |           lock: (key, operation) => {
+ 33 |             if (!navigator.locks)
+ 34 |               return Promise.reject(
+ 35 |                 new Error(
+ 36 |                   'Use an up-to-date browser to save this draft safely.',
+ 37 |                 ),
+ 38 |               )
+ 39 |             return navigator.locks.request(key, operation)
+ 40 |           },
+ 41 |         }),
+ 42 |       ),
+ 43 |     [destination.sessionKey, attempt.attemptId],
+    :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 44 |   )
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: destination.sessionKey
+    ,-[src/chat/components/useRetryDraft.ts:43:5]
+ 42 |       ),
+ 43 |     [destination.sessionKey, attempt.attemptId],
+    :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 44 |   )
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'reload'
+    ,-[src/chat/components/useRetryDraft.ts:71:6]
+ 69 |   useEffect(() => {
+ 70 |     void reload()
+    :          ^^^|^^
+    :             `-- useEffect uses `reload` here
+ 71 |   }, [editor, seedJson])
+    :      ^^^^^^^^^^^^^^^^^^
+ 72 |   useEffect(() => {
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/useRetryAttachments.ts:195:31]
+ 194 |       mounted.current = false
+ 195 |       for (const operation of operations.current.values()) operation.abort()
+     :                               ^^^^^^^^^^^^^^^^^^
+ 196 |       operations.current.clear()
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/useRetryAttachments.ts:196:7]
+ 195 |       for (const operation of operations.current.values()) operation.abort()
+ 196 |       operations.current.clear()
+     :       ^^^^^^^^^^^^^^^^^^
+ 197 |     }
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'run'
+     ,-[src/chat/components/useRetryAttachments.ts:210:6]
+ 208 |     for (const file of files)
+ 209 |       if (!checked.current.has(file.id)) void run(file.id)
+     :                                               ^|^
+     :                                                `-- useEffect uses `run` here
+ 210 |   }, [state.ready, state.draft, state.saving, state.dirty, state.error, locked])
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 211 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-control-regex): Unexpected control characters
+     ,-[src/chat/core/conversation-copy.ts:186:11]
+ 185 |   return typeof value === 'string' &&
+ 186 |     /^[^\s\u0000-\u001f\u007f]{1,128}$/u.test(value)
+     :           ^^^|^^ ^^^|^^
+     :              |      `-- 'U+001F' is a control character.
+     :              `-- 'U+0000' is a control character.
+ 187 |     ? value
+     `----
+  help: Avoid matching control characters in regular expressions. If intentional, consider using a Unicode escape instead.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has a missing dependency: 'identity'
+    ,-[src/chat/components/ExecutionSessionHistory.tsx:52:61]
+ 51 |   const key = executionOwnerKey(identity)
+ 52 |   const http = useMemo(() => createExecutionHttp(identity), [key])
+    :                                                  ^^^^|^^^   ^^^^^
+    :                                                      `-- useMemo uses `identity` here
+ 53 |   const views = useExecutionOwnerViews()
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: key
+    ,-[src/chat/components/ExecutionSessionHistory.tsx:52:61]
+ 51 |   const key = executionOwnerKey(identity)
+ 52 |   const http = useMemo(() => createExecutionHttp(identity), [key])
+    :                                                             ^^^^^
+ 53 |   const views = useExecutionOwnerViews()
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React hook useMemo depends on `receipts`, which changes every render
+     ,-[src/chat/components/ExecutionSessionEvidence.tsx:146:6]
+ 129 | }) {
+ 130 |   const receipts = evidence.snapshot?.commands ?? []
+     :         ^^^^|^^^
+     :             `-- `receipts` is declared here
+ 131 |   const session = evidence.snapshot?.session
+ 132 |   const finished = useMemo(
+ 133 |     () =>
+ 134 |       new Set(
+ 135 |         receipts
+ 136 |           .filter(
+ 137 |             (item) =>
+ 138 |               item.operation.type === 'run' &&
+ 139 |               item.state === 'succeeded' &&
+ 140 |               item.result?.type === 'run' &&
+ 141 |               item.eventsThrough !== undefined &&
+ 142 |               item.eventsThrough <= evidence.eventStatus.receivedThrough,
+ 143 |           )
+ 144 |           .map((item) => item.id),
+ 145 |       ),
+ 146 |     [receipts, evidence.eventStatus.receivedThrough],
+     :      ^^^^|^^^
+     :          `-- it will always cause this hook to re-evaluate
+ 147 |   )
+     `----
+  help: Try memoizing this variable with `useRef` or `useCallback`.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): The ref's value `.current` is accessed directly in the effect cleanup function.
+     ,-[src/chat/components/SketchPad.tsx:165:7]
+ 164 |       mounted.current = false
+ 165 |       exportGeneration.current++
+     :       ^^^^^^^^^^^^^^^^^^^^^^^^
+ 166 |     }
+     `----
+  help: The ref value will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by react, copy it to a variable inside the effect and use that variable in the cleanup function.
+
+  ! eslint-plugin-react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'finishEditing'
+     ,-[src/chat/components/RetryComposer.tsx:299:6]
+ 296 |           sent.current = true
+ 297 |           finishEditing()
+     :           ^^^^^^|^^^^^^
+     :                 `-- useEffect uses `finishEditing` here
+ 298 |         }
+ 299 | ,->   }, [
+ 300 | |       unavailable,
+ 301 | |       matching,
+ 302 | |       draft.ready,
+ 303 | |       draft.document,
+ 304 | |       draft.dirty,
+ 305 | |       draft.error,
+ 306 | |       consumed,
+ 307 | |       laterEdits,
+ 308 | |       pending.ready,
+ 309 | |       pending.pending,
+ 310 | |       pending.busy,
+ 311 | |       attempt.submittedMessageId,
+ 312 | |       attempt.submittedDraftRevision,
+ 313 | |       onSent,
+ 314 | |       draft.editor,
+ 315 | `->   ])
+ 316 |       async function send(event?: FormEvent) {
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Parameter 'onCompose' is declared but never used. Unused parameters should match /(^_)|(^__+$)|(^e$)|(^error$)/.
+      ,-[src/chat/components/BotWorkspace.tsx:1418:3]
+ 1417 |   onPrefetch,
+ 1418 |   onCompose,
+      :   ^^^^|^^^^
+      :       `-- 'onCompose' is declared here
+ 1419 |   onCreate,
+      `----
+  help: Consider removing this parameter.
+
+Found 101 warnings and 0 errors.
+Finished in 13.1s on 2113 files with 20 rules using 20 threads.
+$ tsx --test "tests/**/*.test.ts"
+✔ bare URLs in prose become links (2.769319ms)
+✔ balanced parentheses stay part of the URL (0.512974ms)
+✔ a wrapping parenthesis is not part of the URL (0.310185ms)
+✔ non-text inline nodes are left alone (0.372045ms)
+✔ active partner records include the audit contract (2.935344ms)
+✔ partner records have stable ids and explicit lifecycle data (0.591587ms)
+✔ active partner reviews stay fresh (0.373439ms)
+✔ internal partner resources point at matching TanStack content (2.763383ms)
+✔ partner sitemap exposes both directory states and every detail page (1.517388ms)
+✔ custom Railway page derives its partner contract from central data (0.622466ms)
+✔ starter recipes do not silently select former partners (15.152773ms)
+✔ starter recipes do not silently select unsafe monitoring defaults (2.303179ms)
+✔ generic auth and monitoring requests do not infer vendor partners (10.248541ms)
+✔ selected auth partners survive generic auth language (2.62969ms)
+✔ starter presets do not silently select former partners (0.358419ms)
+✔ Prisma and Drizzle no longer pull in Neon (2.087311ms)
+✔ database constraints survive starter defaults and inference (4.473672ms)
+✔ an explicitly selected Prisma integration survives realtime inference (2.054908ms)
+✔ former partner integrations remain available when explicitly requested (1.116482ms)
+✔ OpenRouter guidance prefers the TanStack AI adapter (0.913046ms)
+✔ selected Vercel partner uses the Vercel deployment target (0.829133ms)
+✔ selected Render partner uses the Render deployment target (0.601373ms)
+✔ hosting names infer their matching partner and deployment target (1.275276ms)
+✔ ordinary rendering language does not select Render hosting (1.222964ms)
+✔ Render uses per-placement UTM content for approved surfaces (0.458683ms)
+✔ other partners use their default href regardless of placement (0.290448ms)
+✔ Cloudflare, Vercel, and Render rotate with the gold Start hosting partners (3.492368ms)
+✔ prompt handoffs use build labels (1.351148ms)
+✔ v0 handoff preserves the generated prompt (0.672123ms)
+✔ Netlify handoff preserves the generated prompt (0.600264ms)
+✔ Lovable handoff preserves the generated prompt (0.545984ms)
+✔ application starter preserves optional fields and custom feature options (3.318701ms)
+✔ application starter rejects invalid known fields instead of coercing them (1.540613ms)
+blog-hero-image tests passed
+✔ tests/blog-hero-image.test.ts (790.59539ms)
+✔ published posts emit article metadata and connected BlogPosting JSON-LD (3.769962ms)
+✔ multiple authors are normalized and retain verified maintainer URLs (0.629695ms)
+✔ unknown authors get names without unverified profile URLs (0.423803ms)
+✔ posts without header images omit image metadata instead of inventing one (0.403963ms)
+✔ social images reuse the route image transformation and stay absolute (0.646638ms)
+✔ drafts, future posts, and failed loads do not emit BlogPosting JSON-LD (0.91749ms)
+✔ known modification dates reach frontmatter, JSON-LD, and article metadata (1.003442ms)
+✔ builder activity excludes raw file contents from persisted data (3.259675ms)
+✔ builder activity summarizes a successful automatic repair (1.407271ms)
+✔ builder activity strictly parses sanitized persisted traces (3.734732ms)
+✔ durable activity compaction removes verbose detail without changing local activity (9.403107ms)
+✔ durable activity compaction deterministically retains recent actions and an honest summary (63.473826ms)
+✔ builder activity keeps only capped reasoning summaries (3.094193ms)
+✔ builder activity stops unfinished items with the run (0.824192ms)
+✔ builder activity labels checkpoint rollback outcomes (0.724085ms)
+✔ builder activity summarizes package evidence without persisting source (1.473755ms)
+✔ builder activity settles unfinished items when a run completes (1.415072ms)
+✔ builder BYOK parses canonical AG-UI input and preserves tool history (5.874209ms)
+✔ builder BYOK selects only the requested provider header (61.09751ms)
+✔ builder BYOK ignores server keys and returns the official missing-key response (7.473158ms)
+✔ builder accepts OpenRouter requests without putting credentials in the body (0.995104ms)
+✔ builder BYOK rejects API keys in the request body (1.624869ms)
+✔ builder BYOK rejects extra forwarded properties and untrusted client tools (1.389927ms)
+✔ builder BYOK strictly accepts a validation-tool resume (3.50564ms)
+✔ builder BYOK rejects uncorrelated and malformed validation resumes (3.95808ms)
+✔ builder BYOK strictly preserves typed repair progress (2.347206ms)
+✔ builder BYOK preserves AG-UI events and emits execution only before the final finish (3.469233ms)
+✔ builder BYOK redacts keys from streamed and thrown errors (1.27447ms)
+✔ builder BYOK turns an incomplete provider stream into a terminal error (0.326425ms)
+✔ hydrates legacy keys into official memory storage without a passkey prompt (4.686311ms)
+✔ moves a legacy key only after secure storage succeeds (1.497376ms)
+✔ moves old notebook keys and prefers a newer builder key (1.139814ms)
+✔ preserves the legacy key when secure storage fails (1.613351ms)
+✔ isolates legacy and current keys by credential scope (1.012065ms)
+✔ keeps fallback memory keys across browser remounts and scopes readiness (1.690075ms)
+✔ parses a ChatGPT connection and model catalog (4.888477ms)
+✔ parses only the official OpenAI device login URL (6.499576ms)
+✔ rejects malformed ChatGPT connection responses (0.484622ms)
+✔ builder AI checkpoints deduplicate, roll back, and stay LRU bounded (134.362375ms)
+✔ validates a healthy observed preview (3.474591ms)
+✔ requires repair for structured compile and runtime failures (0.753604ms)
+✔ stops on non-repair failures and runtime mismatches (0.692421ms)
+✔ fails closed without a browser observation or with console errors (0.889321ms)
+✔ preserves a concurrently edited execution instead of rolling it back (0.418971ms)
+✔ uses exact execution equality instead of repair fingerprints (0.229123ms)
+✔ restores a checkpoint only while the exact staged execution is current (0.348189ms)
+✔ formats bounded runtime evidence without workspace source (0.682541ms)
+✔ builder eval matrix has unique declarative cases (2.714561ms)
+✔ workspace grader recognizes subpath imports without library branches (4.989891ms)
+✔ workspace grader rejects a missing required API and forbidden fallback (0.731079ms)
+✔ workspace grader requires executable calls instead of identifier text (13.203133ms)
+✔ workspace grader validates runtime and manifest dependencies generically (0.725489ms)
+✔ builder AI execution detects runtime and WebContainer file changes (1.680918ms)
+✔ builder AI hidden files follow the validated workspace (1.441118ms)
+✔ local Codex validates and repairs inside one open turn (74.613243ms)
+✔ builder model catalog only exposes models supported by each adapter (1.725814ms)
+✔ builder model defaults belong to their provider catalog (0.356557ms)
+✔ builder model catalog rejects unlisted adapter models (0.20178ms)
+✔ resolves exact built-in and installed package versions (5.046423ms)
+✔ inspects exact module exports and declarations (96.115705ms)
+✔ matches the exports shipped by the pinned Charts package (29.343622ms)
+✔ searches bounded docs, declarations, and trusted TanStack skills (8.16448ms)
+✔ reads package resources in chunks and trusts only TanStack skills (3.842577ms)
+✔ reuses one package download across chunked reads (1.648414ms)
+✔ coalesces concurrent reads of one package resource (3.330859ms)
+✔ budgets unique package downloads by UTF-8 bytes (1.752642ms)
+✔ retries transient package fetches without bypassing the resource budget (3.967261ms)
+✔ rejects oversized package responses before reading them (2.867548ms)
+✔ checks package redirects without using the unsupported edge redirect mode (0.970249ms)
+(node:3703219) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ an acknowledged pending prompt enters the model transcript once (3.665163ms)
+✔ builder AI persistence is scoped, UTF-8 measured, and LRU bounded (44.345901ms)
+✔ requires evidence with a new result before a repair mutation (3.020235ms)
+✔ rejects an exact mutation that already failed (1.956171ms)
+✔ ordinary turns record evidence and mutations without gating (1.867174ms)
+✔ strictly parses bounded repair contexts and attempt traces (0.762471ms)
+✔ fingerprints are stable across object key order and change with evidence (0.525454ms)
+✔ tracks new evidence, blocks failed mutations, and detects state cycles (0.80153ms)
+✔ builder AI prompt queue claims one active runner synchronously (5.972839ms)
+✔ builder AI prompt queue prioritizes steering without reordering modes (2.230356ms)
+✔ builder AI prompt queue creates prompt metadata (3.625482ms)
+✔ builder AI prompt queue snapshots and cancels pending prompts (0.450603ms)
+✔ builder AI prompt queue clears pending prompts without releasing its runner (0.937578ms)
+✔ builder AI prompt queue reports prompts discarded before they start (0.584449ms)
+✔ Builder distinguishes successful completion, tool continuation, and incomplete responses (1.580816ms)
+✔ the server never creates a successful project result for an incomplete model response (3.642411ms)
+✔ a provider error cannot be followed by a successful Builder result (2.004706ms)
+✔ builder stream accepts execution immediately followed by the final run event (87.05014ms)
+✔ builder stream sends BYOK headers outside the body without validation (13.326765ms)
+✔ builder stream rejects execution without a final run event (10.473122ms)
+✔ builder stream does not accept a token-limited response as success (9.015089ms)
+✔ missing validation state fails without running a tool or an unhandled rejection (43.545718ms)
+✔ builder stream rejects events between execution and the final run event (2.627509ms)
+✔ builder stream ignores intermediate tool-loop finishes without execution (2.114674ms)
+✔ builder stream rejects execution attached to an intermediate tool finish (1.814897ms)
+✔ builder stream completes tool activity from result events after input ends (4.242064ms)
+✔ builder stream validates and repairs more than twice inside one client-tool flow (261.194112ms)
+✔ a lost continuation does not rerun successful browser validation (45.711326ms)
+✔ cancelling during validation never submits a continuation (41.366329ms)
+✔ builder stream rejects a changed execution that was not validated (7.492541ms)
+✔ builder stream stops after a terminal validation result (36.120932ms)
+✔ expires after a full idle period (2.835083ms)
+✔ activity renews the idle period (0.581188ms)
+✔ completed turns clear the idle timeout (0.432678ms)
+✔ reads activity from notifications and server tool requests (0.345135ms)
+✔ validation broker resolves one correlated result and rejects a duplicate (7.86202ms)
+✔ validation broker rejects unknown and invalid results (2.336519ms)
+✔ validation broker removes an aborted request (1.832449ms)
+✔ validation broker removes a timed out request (23.195603ms)
+✔ validation broker forwards typed repair context (1.746964ms)
+✔ builder AI lists and reads only visible text files (21.821336ms)
+✔ builder AI replaces an existing file without mutating the input (0.790366ms)
+✔ builder AI only reserves root manifests after creating its scaffold (1.977511ms)
+✔ builder AI reports added and removed files as changes (0.804226ms)
+✔ builder AI upgrades a client workspace without changing authored files (1.486374ms)
+✔ builder AI installs and updates package dependencies immutably (1.702011ms)
+✔ builder AI merges authored documents and package manifests (1.283952ms)
+✔ builder AI supports every browser environment profile (1.596053ms)
+✔ builder AI rejects WebContainer scaffold and root descendants (1.636277ms)
+✔ builder AI validates runtime upgrades and package manifests (1.799117ms)
+✔ builder AI collects text and rejects streamed provider errors (0.703364ms)
+✔ builder auto-run policy handles desktop Chrome (3.854592ms)
+✔ builder auto-run policy handles touch Windows (0.352185ms)
+✔ builder auto-run policy handles desktop Safari (0.248738ms)
+✔ builder auto-run policy handles Android (0.186535ms)
+✔ builder auto-run policy handles iPhone (0.366596ms)
+✔ builder auto-run policy handles iPad (0.175502ms)
+✔ builder auto-run policy handles iPod (0.315448ms)
+✔ builder auto-run policy handles iPadOS desktop mode (0.154607ms)
+✔ uses TanStack category colors in the starter sandbox (3.882514ms)
+✔ exposes unified Charts subpaths without duplicate framework runtimes (0.838673ms)
+✔ provides hidden entry modules for every example environment (2.925165ms)
+✔ exposes current Highlight and Markdown modules (0.403303ms)
+✔ OpenRouter callback accepts only the current attempt and a bounded code (1.398693ms)
+✔ OpenRouter callback removes credentials from history and loads no app or external resources (26.334251ms)
+✔ OpenRouter login exchanges a tab callback with S256 and never persists the verifier (41.700366ms)
+✔ OpenRouter credentials use the existing scoped BYOK storage and header (2.725755ms)
+✔ OpenRouter runs server tools through the Builder stream without a partial execution result (79.454932ms)
+✔ Builder bootstrap commits only a snapshot paired with the settled synced revision (3.078355ms)
+✔ Builder bootstrap re-reconciles when a local edit lands during hydration (0.70932ms)
+✔ live revision hydration retains an edit made while its snapshot loads (0.542913ms)
+✔ live revision hydration retains the workspace when an AI transaction starts (0.447409ms)
+✔ builder client helpers parse lists and send fork lineage (52.127191ms)
+✔ builder client helpers surface API errors (1.720386ms)
+✔ round-trips a complete builder draft through storage (17.645538ms)
+✔ gives legacy drafts a stable assistant scope when loading (1.151528ms)
+▶ clears corrupt and invalid builder drafts
+  ✔ corrupt JSON (0.444593ms)
+  ✔ unsupported version (0.211976ms)
+  ✔ invalid draft id (2.133998ms)
+  ✔ invalid project (0.326582ms)
+  ✔ invalid timestamp (0.167018ms)
+✔ clears corrupt and invalid builder drafts (4.915052ms)
+✔ contains storage access failures (1.186403ms)
+✔ constructs blank and example builder projects (1.16108ms)
+✔ parses a strict durable Builder project event (5.069005ms)
+✔ requires an entity reference for typed entity events (0.513519ms)
+✔ rejects non-JSON and oversized event payloads (1.880321ms)
+✔ project deletion produces a terminal cancelled run state (0.425719ms)
+✔ the authoritative queue claims steer runs before older queued runs (18.278505ms)
+✔ project creation replays require the original ID and payload (1.128101ms)
+✔ mutation receipts bind a replay to its canonical command payload (27.170627ms)
+✔ the initial tracked migration contains only Builder schema additions (14.64428ms)
+✔ a submitted Builder prompt survives reload until its start is acknowledged (11.802393ms)
+✔ an active prompt and queued prompts survive reload in order (6.356451ms)
+✔ pending prompt capacity rejects entry 101 without damaging the queue (82.495024ms)
+✔ a recovered pre-run prompt reuses its durable identity and clears exactly once (2.185384ms)
+✔ does not mutate database quarantine state when the R2 tombstone fails (7.17093ms)
+✔ purges cache and advances database quarantine after a partial R2 delete failure (1.080151ms)
+✔ keeps a snapshot unavailable and retryable when database quarantine fails (0.949827ms)
+✔ accepts exact Builder project quotas and rejects the next entity (2.634102ms)
+✔ reserves bounded headroom for terminal lifecycle writes (0.565349ms)
+✔ accepts the exact owner snapshot budget without resetting it (0.716114ms)
+✔ referenced snapshot reservations are filtered before the GC batch limit (22.165653ms)
+✔ referenced snapshots are filtered before the GC batch limit (6.328671ms)
+✔ legacy-referenced snapshots are deferred behind the next GC batch (12.448254ms)
+✔ project-owned Builder records cascade with their referenced component (2.440324ms)
+✔ a fork source remains independently owned (1.425037ms)
+✔ project ID reservations survive owner deletion (0.410325ms)
+✔ owner deletion cannot bypass project tombstoning (0.379328ms)
+✔ mutation receipts are unique per project and follow project retention (1.917356ms)
+✔ independently owned snapshots cannot be deleted while referenced (0.851656ms)
+✔ a message run must belong to the same project and thread (0.821276ms)
+✔ stores one canonical gzip object for equivalent projects (86.920687ms)
+✔ only-if-absent writes never replace an immutable object (1.995832ms)
+✔ quarantine deletes and permanently blocks a project hash (38.184694ms)
+✔ reads legacy Notebook records and snapshots from their original keys (7.07358ms)
+✔ detects legacy snapshot references with a bounded index lookup (1.058072ms)
+✔ fails closed when the legacy snapshot reference lookup fails (0.596938ms)
+✔ accepts a large text dataset within the total snapshot budget (14.220146ms)
+✔ rejects projects over the total snapshot budget (15.920628ms)
+✔ rejects projects over the per-file byte limit (1.507542ms)
+✔ applies the per-file byte limit to decoded binary files (584.149238ms)
+✔ creates, lists, updates, and deletes stable builder projects (5.61755ms)
+✔ rejects a stale builder project update (2.292479ms)
+✔ allows only one simultaneous conditional builder update (2.373597ms)
+✔ does not resurrect a builder updated while it is deleted (1.925863ms)
+✔ quarantines projects by every historical project association (4.159034ms)
+✔ removes a project quarantined during its final update write (2.849423ms)
+✔ keeps builder project mutations owner-only (1.890791ms)
+✔ preserves builder fork lineage (1.813026ms)
+✔ caps builder projects per owner (63.259323ms)
+✔ rejects an over-cap legacy owner set instead of importing it partially (14.062229ms)
+✔ imports a complete legacy owner set source before fork (5.255161ms)
+✔ rejects a legacy fork cycle before marking an owner import complete (1.054259ms)
+✔ Builder project events update entity rows and advance the project cursor (11.461804ms)
+✔ Builder project browser sessions remain stable in session storage (0.918589ms)
+✔ the default browser session generator preserves the Crypto receiver (1.686556ms)
+✔ saved project sync starts with the browser-native session generator (77.805417ms)
+✔ durable project revisions enter the outbox before upload (29.402482ms)
+✔ a thread and its first run enter the ordered outbox before either is sent (17.326655ms)
+✔ offline enqueue remains accepted and replays the same run once after reconnect (22.914583ms)
+✔ retryable enqueue failures replay with backoff without reconnecting (18.224051ms)
+✔ Builder bootstrap assembles bounded pages before replaying concurrent events (11.139504ms)
+✔ a terminal Builder EventSource recovers from an authoritative snapshot (10.8066ms)
+✔ Builder stream recovery backs off repeated snapshot failures (8.594346ms)
+✔ Builder project sync commands are optimistic, durable, and confirmed by replay (21.664228ms)
+✔ Builder project sync rejects stale finishes without retaining a blocking outbox entry (17.448945ms)
+✔ revision conflicts wait for the durable fallback before they surface (10.154021ms)
+✔ Builder heartbeats and run claims bypass the durable outbox (13.449995ms)
+✔ a duplicated tab rotates its claimed session before any recovery (9.066579ms)
+✔ Builder project sync outbox is explicitly unavailable during SSR (2.910406ms)
+✔ Builder project sync outbox is scoped, ordered, idempotent, and bounded (168.507423ms)
+✔ Builder project sync replay removes only authoritative acknowledgements (3.49863ms)
+✔ Builder project sync replay discards terminal rejections and continues in order (5.707622ms)
+✔ Builder project revision conflicts stay queued and block later commands (2.186939ms)
+✔ Builder project sync send persists before invoking the network sender (1.070029ms)
+✔ parses canonical durable project revisions (10.139038ms)
+✔ rejects unsendable project revisions before they enter the outbox (3.227404ms)
+✔ strictly parses Builder project sync commands (8.686066ms)
+✔ rejects invalid terminal runs and transcript references (3.899779ms)
+✔ rejects a transcript message linked to a run in another thread (3.721888ms)
+✔ rejects transcript imports above the conservative request budget (16.475072ms)
+✔ bounds event payload bytes and validates terminal activity (92.151845ms)
+✔ accepts completed no-change runs without a revision (0.760395ms)
+✔ parses an explicit terminal command rejection without treating it as a commit (3.68255ms)
+✔ parses a revision conflict fallback sequence (0.700087ms)
+✔ parses an authoritative project and conversation snapshot (7.134987ms)
+✔ round-trips opaque snapshot continuations and bounds every page (34.985952ms)
+✔ parses replay cursors and recognizes stream requests (37.768347ms)
+✔ serializes replayable events with the sequence as the SSE id (0.411414ms)
+✔ streams gap-free events, heartbeats, and then reconnects (6.106023ms)
+✔ stops a replay before emitting an event across a sequence gap (1.063174ms)
+✔ bounds events buffered by one stream response (1.523145ms)
+✔ draft promotion IDs are stable, distinct UUIDs (5.426036ms)
+✔ draft transcript stays local and queued until the server acknowledges it (49.128628ms)
+✔ large transcripts queue stable bounded chunks before sending and clear after every acknowledgement (937.931749ms)
+✔ legacy terminal activity is compacted before transcript import (33.511479ms)
+✔ forking a synced transcript makes a stable bounded copy with destination IDs (6.923511ms)
+✔ a failed fork import keeps its exact commands queued and its local source intact (7.085108ms)
+✔ a concurrent local append prevents cleanup and gets a new content-derived import ID (7.081343ms)
+✔ Builder project working copies survive a reload and hydrate only on their base revision (8.769729ms)
+✔ an authoritative target revision acknowledges and clears its working copy idempotently (2.654511ms)
+✔ revision conflicts preserve the recoverable working copy (2.999155ms)
+✔ two tabs retain independent working copies across a crash (7.318707ms)
+✔ reconciliation clears only acknowledged copies and retains stale conflicts (3.104865ms)
+✔ reconciliation prefers a valid head candidate over a newer stale candidate (3.409207ms)
+✔ legacy project-keyed working copies migrate without being dropped (0.731728ms)
+✔ parses builder projects and API response envelopes (7.802673ms)
+✔ strictly rejects malformed builder projects and responses (0.770549ms)
+✔ starts with one active preview pane (4.375166ms)
+✔ adds tabs to the focused pane with unique ids and ordinal labels (1.238977ms)
+✔ splits a tab above or below and focuses the new pane (1.088584ms)
+✔ moves tabs between panes and collapses an empty source pane (0.829867ms)
+✔ closing chooses a neighbor and removes an empty pane (0.587711ms)
+✔ resizes two panes within stable bounds (0.415536ms)
+✔ updates and repairs editor tabs in either pane (0.545239ms)
+✔ finds wrapping keyboard targets within the tab pane (0.410029ms)
+✔ npm comparison route preserves binType search validation (2.507403ms)
+✔ npm comparison route defaults invalid binType search values (0.858438ms)
+▶ Charts catalog example workspaces
+  ✔ preserves Git source files and generates a runnable workspace (18.692648ms)
+  ✔ runs the legacy adapter entry during a schema v1 rollout (0.77019ms)
+  ✔ pins framework, dependency, atlas, and dataset imports (0.568293ms)
+  ✔ configures embed height and render revision without compiled assets (0.535543ms)
+  ✔ rejects missing, mismatched, duplicate, or unsafe source paths (0.71815ms)
+✔ Charts catalog example workspaces (23.458447ms)
+✔ only current embed documents bypass the global frame denial (1.834806ms)
+✔ catalog embed source validation is same-origin and parameter bounded (3.71624ms)
+✔ embed path validation uses the producer case-id grammar (0.353006ms)
+✔ chart docs can promote trusted raw iframes to source-aware embeds (2.355481ms)
+✔ chart example comments validate their source reference (0.595889ms)
+✔ chart example comments retain a useful static document (36.245698ms)
+✔ legacy chart iframe markup renders through the inline fallback (3.933606ms)
+✔ catalog index retains only the site-owned contract (3.758111ms)
+✔ catalog index accepts the legacy adapter contract during rollout (1.076409ms)
+✔ catalog index rejects broken case and ordering relationships (1.694819ms)
+✔ catalog index publication resolves main and fetches the index at its exact SHA (44.652263ms)
+✔ raw GitHub content remains byte-for-byte text-equivalent (59.933969ms)
+✔ raw GitHub content rejects unsafe inputs before fetching (3.70121ms)
+✔ sitemap exposes catalog pages but not runtime resources (9.355812ms)
+✔ Charts main pushes invalidate the catalog index pipeline (0.644496ms)
+✔ catalog index responses use the Charts main cache contract (0.238216ms)
+✔ catalog previews map case IDs to immutable source assets (3.110837ms)
+✔ catalog preview requests reject revision main (0.519006ms)
+✔ catalog preview requests reject revision current (0.16684ms)
+✔ catalog preview requests reject revision AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (0.186165ms)
+✔ catalog preview requests reject revision aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (0.16959ms)
+✔ catalog preview requests reject revision aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (0.187418ms)
+✔ catalog preview requests reject case ID ../01-line-gaps (0.464283ms)
+✔ catalog preview requests reject case ID 01-line-gaps.svg (0.167759ms)
+✔ catalog preview requests reject case ID 01_line_gaps (0.188738ms)
+✔ catalog preview requests reject case ID 01-LINE-GAPS (0.26994ms)
+✔ catalog preview requests reject case ID 01%2fline-gaps (0.155681ms)
+✔ catalog preview requests reject case ID 01\line-gaps (1.458585ms)
+✔ catalog preview responses are immutable, sandboxed SVGs (1.604755ms)
+✔ catalog preview route reads the source asset at the exact revision (175.290591ms)
+✔ catalog preview route rejects unsafe params without fetching source (12.714022ms)
+✔ current preview alias redirects to the revision-pinned asset (50.391774ms)
+✔ catalog previews render the source asset without site geometry or palette (20.252141ms)
+✔ landing and catalog cards use the landing publication revision (40.256773ms)
+✔ catalog example follows Git source without a catalog package or build output (59.430737ms)
+✔ catalog example follows a legacy adapter closure during rollout (5.701533ms)
+✔ catalog example rejects an unresolved relative source import (3.574404ms)
+✔ catalog example includes @tanstack/charts-data/ data and its source dependencies (4.990987ms)
+✔ catalog example includes @charts-poc/demo-data/ data and its source dependencies (3.463537ms)
+✔ catalog example rejects an escaping example relative import before fetching it (2.944712ms)
+✔ catalog example rejects an escaping data relative import before fetching it (1.988354ms)
+✔ catalog example rejects an escaping data alias traversal before fetching it (1.539716ms)
+✔ catalog example rejects an escaping legacy data alias traversal before fetching it (1.856893ms)
+✔ the landing server-renders revision-pinned chart preview assets (109.351048ms)
+✔ Charts launch video has a card poster and is published (5.396427ms)
+✔ Charts launch uses the approved V8 video unchanged (26.941134ms)
+charts sidebar navigation tests passed
+✔ tests/charts-sidebar-navigation.test.ts (442.209791ms)
+✔ client example comments parse into the markdown comment component (15.686079ms)
+✔ client example comments reject unsafe or extra attributes (0.589635ms)
+✔ TSRX files use TypeScript JSX highlighting (1.85282ms)
+✔ inline diff notation renders as line decorations (7.593264ms)
+✔ wrapped code lines occupy one visual row each (0.497267ms)
+create worker tests passed
+✔ tests/create-worker.test.ts (683.784129ms)
+✔ Render deployment opens the TanStack partner landing page (1.903549ms)
+✔ docs with an AI client-example get WebContainer isolation headers (2.991654ms)
+✔ docs without a client-example get no isolation headers (1.078425ms)
+✔ docs with a bad client-example comment get no isolation headers (0.304684ms)
+docs manifest concurrency tests passed
+buildDocsManifest per-file fault tolerance tests passed
+✔ mapWithConcurrency preserves result order regardless of completion order (34.020329ms)
+✔ mapWithConcurrency bounds concurrency instead of running everything in parallel (40.587617ms)
+✔ mapWithConcurrency runs in a bounded number of batches, not one call per item (63.057623ms)
+✔ collectRedirectEntriesForFile returns no entries (not a rejection) when the file fetch throws a recoverable GitHub error (8.945736ms)
+✔ collectRedirectEntriesForFile rethrows non-recoverable errors instead of silently swallowing them (4.324269ms)
+✔ a mix of one failing file and several succeeding files still produces every succeeding redirect (32.319945ms)
+docs redirect tests passed
+✔ tests/docs-redirects.test.ts (1167.994342ms)
+﹣ missing Start documents return 404 without redirecting to the framework index (1.215716ms) # Set TANSTACK_DOCS_SMOKE_BASE_URL to run docs route smoke tests
+﹣ docs legacy and canonical routes complete for every public library (0.264867ms) # Set TANSTACK_DOCS_SMOKE_BASE_URL to run docs route smoke tests
+✔ descriptions preserve linked prose without headings, images, or callout markers (26.079542ms)
+✔ descriptions preserve reference links, inline identifiers, and line breaks (2.27217ms)
+✔ authored descriptions take precedence over generated excerpts (1.328561ms)
+✔ entity decoding preserves code type parameters and literal entity examples (2.190939ms)
+✔ generated descriptions end on a word boundary (5.46114ms)
+✔ resolves imported development dependencies without exposing unused ones (3.286499ms)
+✔ prefers dependency versions when a package is listed in both sections (0.70221ms)
+✔ resolves undeclared imported packages to an exact latest version (39.096457ms)
+✔ uses package ranges while mapping only observed root and subpath imports (3.313354ms)
+✔ externalizes peer packages discovered from exact subpath metadata (4.90772ms)
+✔ externalizes package manifest peers omitted from esm.sh metadata (5.973622ms)
+✔ rejects incomplete explicit package version families (2.202199ms)
+✔ requires explicit peer mappings to cover root and subpaths (2.481969ms)
+✔ externalizes complete explicit peers that source code does not import (2.423527ms)
+✔ resolves declared peers that source code does not import (3.225462ms)
+✔ does not resolve type-only devtools peers as browser modules (3.585261ms)
+✔ stops before resolving packages when already aborted (0.657625ms)
+✔ aborts an in-flight package metadata request (1.339844ms)
+✔ preserves special and explicit mappings without resolving them (1.544826ms)
+✔ ignores direct URLs and rejects unsafe package subpaths (0.962605ms)
+✔ offers both external editors alongside the supported playground (9.500313ms)
+✔ preserves legacy sandbox links without selecting unsupported panels (3.054695ms)
+✔ external editors use the same example and encode the selected file (2.917653ms)
+✔ tracks pushes, replacements, and traversal without duplicating reloads (2.907786ms)
+✔ a push after going back discards the forward branch (0.456282ms)
+✔ accepts only locations owned by the active preview (0.377988ms)
+✔ keeps fragment links inside the sandbox document (2.5823ms)
+✔ devtools can read and write storage inside an opaque sandbox (6.384683ms)
+✔ instruments browser navigation in every preview environment (1.706874ms)
+✔ strictly validates browser state and annotation messages by channel (0.553985ms)
+✔ strictly validates browser commands by channel (0.317131ms)
+✔ caps screenshot payloads returned by the sandbox (0.30357ms)
+▶ TanStack Start WebContainer compatibility
+  ✔ aligns the Oxc helper runtime with Rolldown (2.607133ms)
+  ✔ installs the matching wasm32-wasi Rolldown binding (0.596963ms)
+  ✔ points Vite at the WASI binding in WebContainer (1.736617ms)
+  ✔ mounts a hidden wrapper without changing the authored Vite config (0.800255ms)
+  ✔ starts Vite with the hidden config only for the Start profile (2.080303ms)
+  ✔ rejects unsupported Start configs and commands instead of guessing (0.395937ms)
+  ✔ runs after authored plugins and only transforms server modules (6.327093ms)
+  ✔ keeps lowered async generators serializable without changing their behavior (11.791825ms)
+  ✔ ES2016 lowering preserves concurrent continuation context (17.332515ms)
+  ✔ lowered async generators preserve concurrent context after await (4.025293ms)
+✔ TanStack Start WebContainer compatibility (50.3087ms)
+▶ WebContainer example runtime
+  ✔ creates a nested mount tree from canonical workspace paths (22.309664ms)
+  ✔ decodes encoded binary assets into exact mount bytes (0.785763ms)
+  ✔ rejects invalid and conflicting workspace paths (0.560088ms)
+  ✔ reports server rendering as unsupported (0.288616ms)
+  ✔ preserves opt-in runtime compatibility metadata (1.016237ms)
+  ✔ installs the Start compatibility runtime with pnpm (15.986707ms)
+  ✔ connects terminal output, input, and resizing to a process (50.754615ms)
+  ✔ reports a natural shell exit without killing it again (3.88417ms)
+  ✔ drains final terminal output before reporting a natural exit (2.729091ms)
+  ✔ reports unexpected terminal exits and ignores disposal aborts (6.585245ms)
+  ✔ keeps sibling terminals alive together and disposes all with the session (4.016631ms)
+✔ WebContainer example runtime (112.293578ms)
+▶ example workspaces
+  ✔ resolves local import mappings with exact and longest-prefix priority (4.945457ms)
+  ✔ serialize files and imports canonically (21.578848ms)
+  ✔ strictly rejects ambiguous or incomplete persisted workspaces (1.236261ms)
+  ✔ round-trips the complete shared project contract (0.866438ms)
+  ✔ round-trips binary assets through shared projects (2.283002ms)
+  ✔ normalizes, validates, and decodes binary files exactly (2.470566ms)
+  ✔ round-trips a WebContainer runtime without changing the workspace (0.642264ms)
+  ✔ rejects malformed WebContainer commands (1.824138ms)
+  ✔ rejects an initial file outside the shared workspace (0.827032ms)
+  ✔ rejects invalid hidden shared-project files (1.10419ms)
+✔ example workspaces (41.273479ms)
+external blog post tests passed
+✔ tests/external-blog-posts.test.ts (1128.030364ms)
+filter-framework-content tests passed
+✔ tests/filter-framework-content.test.ts (520.293443ms)
+github-api-contents-cache tests passed
+✔ tests/github-api-contents-cache.test.ts (2832.156472ms)
+[GitHub Cache] Serving stale value github:file/tanstack/router/main/docs/outage.md
+[GitHub Cache] Serving stale artifact docs-artifact/tanstack/router/main/docs/docs-manifest/default; refreshing in background
+github-content-cache tests passed
+✔ tests/github-content-cache.test.ts (3615.581434ms)
+github-content-fetch-options tests passed
+✔ tests/github-content-fetch-options.test.ts (2874.283056ms)
+[fetchExampleFiles] Fetching: {
+  repo: 'tanstack/router',
+  branch: 'main',
+  examplePath: 'examples/react/binary'
+}
+[fetchExampleFiles] Fetched 4 files
+✔ preserves repository text and binary file contents (59.233527ms)
+✔ validates cached repository workspace payloads (0.579246ms)
+✔ does not cache transient repository workspace failures (2.984054ms)
+✔ server render keeps the still image without requesting motion media (2.442768ms)
+✔ hero media gates motion downloads, honors preference changes, and retains the still image (2125.975534ms)
+✔ homepage connects one WebSite to one Organization (2.585624ms)
+✔ homepage Organization uses a square logo and verified profiles (0.347261ms)
+✔ homepage does not advertise a site search action (0.361805ms)
+http-response tests passed
+✔ tests/http-response.test.ts (725.470373ms)
+✔ matches package metadata without treating the registry keyword as a match (2.030288ms)
+✔ duplicate scheduled invocation with the same bucket is idempotent (15.199967ms)
+✔ failed package version step does not prevent other versions from processing (17.805666ms)
+✔ process workflow yields near its runtime deadline and resumes the same run (8.588796ms)
+✔ discovery yields near its runtime deadline and resumes completed package steps (6.55027ms)
+✔ failed discovery package does not prevent later packages from running (1005.323369ms)
+libraries utils tests passed
+✔ tests/libraries-utils.test.ts (1025.307188ms)
+local repo path tests passed
+✔ tests/local-repo-path.test.ts (391.079874ms)
+✔ markdown v1 picker uses the current docs branch and retires v0 (5.996197ms)
+✔ highlight v1 picker uses the current docs branch and retires v0 (0.428291ms)
+✔ charts v1 picker uses the current docs branch and retires v0 (0.442558ms)
+﹣ Markdown, Highlight, and Charts v0 and v1 docs aliases preserve paths and query strings (0.156771ms) # Set TANSTACK_DOCS_SMOKE_BASE_URL for route checks
+✔ external HTTPS Markdown links open in a new tab (12.014147ms)
+✔ TanStack HTTPS Markdown links stay in the current tab (1.797967ms)
+✔ lookalike TanStack hostnames still open in a new tab (0.742937ms)
+✔ non-HTTPS Markdown links keep their existing behavior (0.596223ms)
+✔ groups adjacent runnable files into an environment workspace (13.831273ms)
+✔ supports a visible source file before an explicit entry file (0.736554ms)
+✔ builds a realistic multi-file Markdown and Highlight workspace (0.668524ms)
+✔ keeps separate runnable groups and ordinary blocks separate (2.177661ms)
+✔ groups runnable files inside nested block containers (1.68548ms)
+✔ invalid runnable metadata fails open to static code (1.042845ms)
+✔ server rendering retains static source without loading the workbench (16.490079ms)
+✔ OG accents follow the rebrand category palette (1.498614ms)
+✔ dark accents use the category 300 step (0.343456ms)
+✔ an explicit light theme matches the default (1.038989ms)
+✔ no dark accent collides with the text it sits beside (0.383038ms)
+✔ every theme resolves a distinct surface (0.236552ms)
+✔ theme validation accepts only the rendered themes (0.229596ms)
+✔ Responses reasoning survives sequential server tool iterations through previous_response_id (89.615624ms)
+✔ panel supports horizontal disclosure (27.901724ms)
+✔ panel remains vertical by default (1.161691ms)
+✔ current partners use the bare directory canonical (3.091901ms)
+✔ invalid partner status falls back to the bare current directory (0.799306ms)
+✔ previous partners keep a distinct canonical and metadata (0.937858ms)
+✔ status filter uses a keyboard-native radio group (15.136684ms)
+partner page tests passed
+✔ tests/partner-pages.test.ts (574.679276ms)
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+[applyProviderConfig] Start app, applying full provider config
+provider config tests passed
+✔ tests/provider-config.test.ts (643.573537ms)
+✔ replayable collection applies ordered batches and closes its stream (28.742529ms)
+✔ DbClient hydration restores rows and resumes after the dehydrated cursor (8.527727ms)
+✔ optimistic actions remain overlaid until their event is replayed (20.447197ms)
+✔ query collection stream writes use one direct-write batch (1.572939ms)
+✔ query collection event controller deduplicates and confirms cursors (2.917809ms)
+✔ replayable EventSource resumes from a cursor and closes on abort (46.680052ms)
+✔ replayable EventSource recovers only after a terminal native error (3.340148ms)
+repo-path tests passed
+✔ tests/repo-path.test.ts (454.429327ms)
+✔ selects only verified current client examples (4.145355ms)
+✔ carries runtime metadata without changing the workspace contract (0.658398ms)
+✔ selects isolation headers by runtime (0.279405ms)
+✔ creates a repository-backed workspace with canonical paths (0.311429ms)
+✔ keeps repository binary files separate and canonical (3.758636ms)
+✔ falls back to the entry when the requested file is absent (0.360492ms)
+✔ package dependencies resolve repository imports to exact versions (62.495507ms)
+✔ workspace imports remain the final override (0.494815ms)
+✔ rewrites @tanstack/ai workspace:* versions to latest (3.123151ms)
+✔ leaves files unchanged when package.json is missing (0.550391ms)
+✔ leaves files unchanged when package.json is invalid JSON (0.335464ms)
+route-encoding tests passed
+✔ tests/route-encoding.test.ts (444.207834ms)
+✔ retrospective partner posts stay out of RSS while regular posts remain (4.443468ms)
+✔ uses the image media type matching an RSS enclosure URL (0.308249ms)
+✔ renders a fixed preview origin beside an editable path (33.508139ms)
+✔ disables only the preview reload action when requested (12.790107ms)
+✔ uses an icon-only preview commenting control (17.183281ms)
+✔ formats numbered annotation instructions with untrusted preview context (0.314566ms)
+✔ renders accumulated comments as a compact review trigger (19.330486ms)
+✔ offers add and direct send actions for a selected annotation target (9.435804ms)
+✔ renders preview errors with neutral details and a concise announcement (5.715834ms)
+search-records tests passed
+✔ tests/search-records.test.ts (397.77794ms)
+✔ server instrumentation reuses its client after a module reload (56.235485ms)
+✔ Sentry events never include BYOK request headers (2.909782ms)
+✔ public partner pages remain indexable (1.618108ms)
+✔ transparent embed pages are not indexed (0.35795ms)
+✔ library landing pages canonicalize to latest (0.40381ms)
+✔ non-landing library routes retain their own canonical paths (0.285749ms)
+✔ social metadata identifies TanStack and describes its image (0.542187ms)
+shopify-handle tests passed
+✔ tests/shopify-handle.test.ts (435.481848ms)
+shopify-id tests passed
+✔ tests/shopify-id.test.ts (468.066001ms)
+✔ partial selections stay available when any matching variant is in stock (1.566663ms)
+✔ complete selections only match the selected variant (0.329421ms)
+✔ partial selections are unavailable when all matches are sold out (0.199843ms)
+✔ only accepted projects with a public placement can be published (2.435892ms)
+✔ community and private preview links are qualified as user content (0.973024ms)
+﹣ showcase placement, privacy, review controls, and resubmission (0.853442ms) # SKIP
+✔ reloads an unisolated example entry once without creating a reload loop (1.636149ms)
+✔ does not automatically reload when storage cannot prevent a loop (0.357647ms)
+✔ preserves credentialless in the production Redact renderer (1.523901ms)
+✔ preserves credentialless when Redact is disabled (7.550595ms)
+▶ renderDynamicStartHostingGuide
+  ✔ replaces static recommendations and follows dynamic partner order (3.15442ms)
+  ✔ keeps the source unchanged when the expected sections are absent (0.883585ms)
+  ✔ keeps an unmatched official guide without putting it among other targets (0.537455ms)
+  ✔ maps the hosting placeholder to a renderable component node (4.846939ms)
+  ✔ maps partner logo placeholders to renderable component nodes (1.958801ms)
+✔ renderDynamicStartHostingGuide (13.693964ms)
+static data contract tests passed
+✔ tests/static-data-contracts.test.ts (716.789302ms)
+✔ the global pre rule does not override component text colors (2.025469ms)
+ℹ tests 544
+ℹ suites 5
+ℹ pass 540
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 4
+ℹ todo 0
+ℹ duration_ms 15485.492359
+$ vitest run --config vitest.chat.config.ts
+
+ RUN  v4.1.11 /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime
+
+ ✓ harness-tests/core/retry-evidence-copy.test.ts (32 tests) 1805ms
+     ✓ accepts exactly 64 flat records and rejects a 65th current retry before freezing any pages  1328ms
+stdout | harness-tests/core/usage-provider-attempts.test.ts > provider attempts through the installed SDK and real SQLite > never dispatches when the initial durable attempt cannot be written
+{
+  error: { message: [32m'Connection error.'[39m, code: [90mundefined[39m },
+  source: [32m'cloudflare.chatStream'[39m
+}
+
+stderr | harness-tests/core/usage-provider-attempts.test.ts > provider attempts through the installed SDK and real SQLite > never dispatches when the initial durable attempt cannot be written
+❌ [tanstack-ai:errors] ❌ cloudflare.chatStream fatal
+
+ ✓ harness-tests/core/usage-provider-attempts.test.ts (23 tests) 2039ms
+     ✓ records an SDK retry inside one logical pass without claiming the first attempt was free  467ms
+     ✓ never dispatches when the initial durable attempt cannot be written  1420ms
+ ✓ harness-tests/core/browser-execution-owner.test.ts (81 tests) 2364ms
+     ✓ releases confirmed bytes from pending capacity even while their upload response is delayed  541ms
+ ✓ harness-tests/core/browser-workspace-collections.test.ts (16 tests) 2354ms
+     ✓ clears a stream warning when a same-version snapshot reconnects  1067ms
+ ✓ harness-tests/core/browser-execution-http.test.ts (52 tests) 410ms
+ ✓ harness-tests/core/mcp-session.test.ts (7 tests) 148ms
+ ✓ harness-tests/core/assistant-progress.test.ts (11 tests) 172ms
+ ✓ harness-tests/core/auth-worker-startup.test.ts (2 tests) 486ms
+ ✓ harness-tests/core/assistant-tool-failures.test.ts (10 tests) 66ms
+ ✓ harness-tests/core/provider-observation.test.ts (41 tests) 250ms
+stdout | harness-tests/core/provider-observation-adapters.test.ts > provider constructor observation hooks > retains maxRetries zero for compatible endpoints
+{
+  error: { message: [32m'Connection error.'[39m, code: [90mundefined[39m },
+  source: [32m'openai-compatible.chatStream'[39m
+}
+
+stderr | harness-tests/core/provider-observation-adapters.test.ts > provider constructor observation hooks > retains maxRetries zero for compatible endpoints
+❌ [tanstack-ai:errors] ❌ openai-compatible.chatStream fatal
+
+ ✓ harness-tests/core/provider-observation-adapters.test.ts (15 tests) 650ms
+     ✓ retains the default SDK retry for included binding and observes both actual attempts  471ms
+ ✓ harness-tests/core/browser-execution-browser-bridge.test.ts (25 tests) 198ms
+ ✓ harness-tests/core/kody-inventory.test.ts (13 tests) 232ms
+ ✓ harness-tests/core/workspace-index-http.test.ts (5 tests) 36ms
+ ✓ harness-tests/core/schedules.test.ts (16 tests) 140ms
+ ✓ harness-tests/core/chat-entry-search.test.ts (1 test) 225ms
+ ✓ harness-tests/core/local-mcp-egress.test.ts (2 tests) 214ms
+ ✓ harness-tests/core/assistant-project-tools.test.ts (25 tests) 138ms
+ ✓ harness-tests/core/chat-runtime-headers.test.ts (2 tests) 30ms
+ ✓ harness-tests/core/retry-preparation.test.ts (21 tests) 168ms
+ ✓ harness-tests/core/mcp-oauth-discovery.test.ts (36 tests) 156ms
+stdout | harness-tests/core/context-observation-runtime.test.ts > does not publish or dispatch after an async projection outlives its active run
+{
+  error: Error: No longer active
+      at Object.<anonymous> [90m(/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:204:13[90m)[39m
+      at Object.Mock [as assertCurrent] [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@vitest+spy@4.1.11/node_modules/[4m@vitest/spy[24m/dist/index.js:332:34[90m)[39m
+      at Object.onConfig [90m(/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39msrc/chat/server/assistant-context.ts:327:22[90m)[39m
+      at MiddlewareRunner.runOnConfig [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/middleware/compose.js:95:19[90m)[39m
+      at TextEngine.runWhileYielding [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:2189:4[90m)[39m
+      at TextEngine.run [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:322:30[90m)[39m
+      at streamTextChunks [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:2390:20[90m)[39m
+      at [90m/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:208:24
+      at [90m/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:206:3
+      at [90mfile:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.11/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:20,
+  threadId: [32m'thread-1791555990710-2p06wny'[39m
+}
+
+stderr | harness-tests/core/context-observation-runtime.test.ts > does not publish or dispatch after an async projection outlives its active run
+❌ [tanstack-ai:errors] ❌ chat run failed
+
+stdout | harness-tests/core/context-observation-runtime.test.ts > retains a prepared reading but never dispatches when the run ends during its publication
+{
+  error: Error: Stopped
+      at Object.assertCurrent [90m(/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:231:29[90m)[39m
+      at Object.onConfig [90m(/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39msrc/chat/server/assistant-context.ts:408:21[90m)[39m
+      at MiddlewareRunner.runOnConfig [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/middleware/compose.js:95:19[90m)[39m
+      at TextEngine.runWhileYielding [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:2189:4[90m)[39m
+      at TextEngine.run [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:350:36[90m)[39m
+      at streamTextChunks [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:2390:20[90m)[39m
+      at [90m/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:243:24
+      at [90m/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:241:3
+      at [90mfile:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.11/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:20,
+  threadId: [32m'thread-1791555990717-9rg5fjw'[39m
+}
+
+stderr | harness-tests/core/context-observation-runtime.test.ts > retains a prepared reading but never dispatches when the run ends during its publication
+❌ [tanstack-ai:errors] ❌ chat run failed
+
+stdout | harness-tests/core/context-observation-runtime.test.ts > rejects over-budget pinned evidence without publishing a successful reading
+{
+  error: Error: The active tool exchange exceeds the context budget. Narrow the task before continuing.
+      at projectAssistantContext [90m(/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39msrc/chat/server/assistant-context.ts:275:11[90m)[39m
+      at Object.onConfig [90m(/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39msrc/chat/server/assistant-context.ts:318:26[90m)[39m
+      at MiddlewareRunner.runOnConfig [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/middleware/compose.js:95:19[90m)[39m
+      at TextEngine.runWhileYielding [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:2189:4[90m)[39m
+      at TextEngine.run [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:322:30[90m)[39m
+      at streamTextChunks [90m(file:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@tanstack+ai@0.58.0_@opentelemetry+api@1.9.1_zod@4.3.6/node_modules/[4m@tanstack/ai[24m/dist/esm/activities/chat/index.js:2390:20[90m)[39m
+      at [90m/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:265:24
+      at [90m/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mharness-tests/core/context-observation-runtime.test.ts:263:3
+      at [90mfile:///home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.11/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:20,
+  threadId: [32m'thread-1791555990720-w4054fw'[39m
+}
+
+stderr | harness-tests/core/context-observation-runtime.test.ts > rejects over-budget pinned evidence without publishing a successful reading
+❌ [tanstack-ai:errors] ❌ chat run failed
+
+ ✓ harness-tests/core/context-observation-runtime.test.ts (7 tests) 121ms
+ ✓ harness-tests/core/browser-execution-history.test.ts (26 tests) 137ms
+ ✓ harness-tests/core/kody-memory-change.test.ts (4 tests) 61ms
+ ✓ harness-tests/core/schedule-time.test.ts (43 tests) 54ms
+ ✓ harness-tests/core/assistant-context-reference.test.ts (8 tests) 49ms
+ ✓ harness-tests/core/run-models.test.ts (42 tests) 156ms
+ ✓ harness-tests/core/type-contract.test.ts (16 tests) 36ms
+ ✓ harness-tests/core/delegations.test.ts (18 tests) 115ms
+ ✓ harness-tests/core/plugin-format.test.ts (50 tests) 137ms
+ ✓ harness-tests/core/workspace-api.test.ts (2 tests) 29ms
+ ✓ harness-tests/core/conversation-runs.test.ts (12 tests) 79ms
+ ✓ harness-tests/core/workflow-input-store.test.ts (4 tests) 20ms
+ ✓ harness-tests/core/execution-project-snapshot.test.ts (37 tests) 111ms
+stdout | harness-tests/core/conversation-http.test.ts > rejects sends whose ownership check fails before accessing the object
+{"event":"chat_send_timing","timings":{"authentication":0,"access":0},"totalMs":1}
+
+stdout | harness-tests/core/conversation-http.test.ts > denies archived submission before accessing the object
+{"event":"chat_send_timing","timings":{"authentication":0,"access":0,"identity":1,"metadata":1},"totalMs":1}
+
+stdout | harness-tests/core/conversation-http.test.ts > uses server identity and context rather than request-supplied values
+{"event":"chat_send_timing","timings":{"authentication":0,"access":0,"identity":0,"metadata":0,"context":0,"admission":9},"totalMs":9}
+
+stdout | harness-tests/core/conversation-http.test.ts > resolves bot submissions through server-owned main conversation identity
+{"event":"chat_send_timing","timings":{"authentication":0,"access":0,"identity":0,"metadata":0,"context":0,"admission":1},"totalMs":1}
+
+ ✓ harness-tests/core/browser-execution-gate.test.ts (2 tests) 23ms
+ ✓ harness-tests/core/conversation-http.test.ts (36 tests) 89ms
+ ✓ harness-tests/core/workspace-request.test.ts (4 tests) 33ms
+ ✓ harness-tests/core/delegation-admissions.test.ts (12 tests) 81ms
+ ✓ harness-tests/core/retry-files.test.ts (18 tests) 23ms
+ ✓ harness-tests/core/retry-request.test.ts (23 tests) 20ms
+ ✓ harness-tests/core/browser-execution-command-registry.test.ts (21 tests) 85ms
+ ✓ harness-tests/core/assistant-discovery.test.ts (8 tests) 98ms
+ ✓ harness-tests/core/kody-memory-create.test.ts (4 tests) 31ms
+ ✓ harness-tests/core/composer-references.test.ts (43 tests) 118ms
+ ✓ harness-tests/core/assistant-mcp-discovery.test.ts (4 tests) 118ms
+ ✓ harness-tests/core/kody-execution.test.ts (8 tests) 21ms
+ ✓ harness-tests/core/transcript-archive.test.ts (11 tests) 79ms
+ ✓ harness-tests/core/sketch.test.ts (14 tests) 23ms
+ ✓ harness-tests/core/chat-mcp-route.test.ts (4 tests) 28ms
+ ✓ harness-tests/core/mcp-connections-preparation.test.ts (6 tests) 112ms
+ ✓ harness-tests/core/workflow-runs.test.ts (16 tests) 79ms
+ ✓ harness-tests/core/assistant-schedule-tools.test.ts (12 tests) 95ms
+ ✓ harness-tests/core/assistant-delegation-tools.test.ts (4 tests) 18ms
+ ✓ harness-tests/core/reasoning-continuity.test.ts (2 tests) 72ms
+ ✓ harness-tests/core/model-attachments.test.ts (11 tests) 103ms
+ ✓ harness-tests/core/assistant-loop.test.ts (10 tests) 83ms
+ ✓ harness-tests/core/execution-events.test.ts (10 tests) 79ms
+ ✓ harness-tests/core/cloudflare-text.test.ts (5 tests) 81ms
+ ✓ harness-tests/core/project-sharing.test.ts (2 tests) 62ms
+ ✓ harness-tests/core/retry-draft.test.ts (17 tests) 45ms
+ ✓ harness-tests/core/skill-format.test.ts (47 tests) 113ms
+ ✓ harness-tests/core/discovery-integrations.test.ts (15 tests) 73ms
+ ✓ harness-tests/core/usage.test.ts (13 tests) 42ms
+ ✓ harness-tests/core/kody-unlink-http.test.ts (4 tests) 32ms
+ ✓ harness-tests/core/file-http.test.ts (5 tests) 46ms
+ ✓ harness-tests/core/conversation-retry-http.test.ts (4 tests) 39ms
+ ✓ harness-tests/core/mcp-catalog.test.ts (12 tests) 67ms
+ ✓ harness-tests/core/assistant-mcp-lazy.test.ts (1 test) 74ms
+ ✓ harness-tests/core/context-observation-ledger.test.ts (29 tests) 45ms
+ ✓ harness-tests/core/auth-popup.test.ts (2 tests) 29ms
+ ✓ harness-tests/core/core.test.ts (18 tests) 15ms
+ ✓ harness-tests/core/workspace-panels.test.ts (23 tests) 80ms
+ ✓ harness-tests/core/shared-oauth-popup.test.ts (7 tests) 66ms
+ ✓ harness-tests/core/conversation-execution-http.test.ts (5 tests) 32ms
+ ✓ harness-tests/core/bot-draft-http.test.ts (3 tests) 32ms
+ ✓ harness-tests/core/workspace-sync-publisher.test.ts (6 tests) 50ms
+ ✓ harness-tests/core/conversation-reference-cursor.test.ts (87 tests) 60ms
+ ✓ harness-tests/core/delegation-budget.test.ts (11 tests) 49ms
+ ✓ harness-tests/core/kody-package-actions.test.ts (13 tests) 51ms
+ ✓ harness-tests/core/workspace-sync-http.test.ts (4 tests) 34ms
+ ✓ harness-tests/core/file-api.test.ts (7 tests) 37ms
+ ✓ harness-tests/core/database-context.test.ts (6 tests) 33ms
+ ✓ harness-tests/core/builder-project-snapshot-read.test.ts (4 tests) 48ms
+ ✓ harness-tests/core/kody-callback-http.test.ts (4 tests) 27ms
+ ✓ harness-tests/core/kody-actions.test.ts (15 tests) 51ms
+ ✓ harness-tests/core/provider-connection-http.test.ts (5 tests) 38ms
+ ✓ harness-tests/core/conversation-threads-http.test.ts (6 tests) 42ms
+ ✓ harness-tests/core/mcp-discovery.test.ts (14 tests) 44ms
+ ✓ harness-tests/core/workspace-index-response.test.ts (3 tests) 37ms
+ ✓ harness-tests/core/chat-offline-worker.test.ts (1 test) 35ms
+ ✓ harness-tests/core/conversation-events.test.ts (9 tests) 25ms
+ ✓ harness-tests/core/workspace-sections-http.test.ts (3 tests) 42ms
+ ✓ harness-tests/core/workflow-run-http.test.ts (4 tests) 43ms
+ ✓ harness-tests/core/selected-skills.test.ts (4 tests) 30ms
+ ✓ harness-tests/core/send-receipt.test.ts (29 tests) 56ms
+ ✓ harness-tests/core/reference-http.test.ts (4 tests) 41ms
+ ✓ harness-tests/core/chat-model-route.test.ts (6 tests) 40ms
+ ✓ harness-tests/core/workspace-activity-http.test.ts (6 tests) 49ms
+ ✓ harness-tests/core/kody-control-http.test.ts (5 tests) 37ms
+ ✓ harness-tests/core/plugin-archive.test.ts (15 tests) 42ms
+ ✓ harness-tests/core/composer-attachments.test.ts (8 tests) 38ms
+ ✓ harness-tests/core/mcp-read-context.test.ts (3 tests) 42ms
+ ✓ harness-tests/core/chat-file-route.test.ts (7 tests) 35ms
+ ✓ harness-tests/core/kody-connect-http.test.ts (3 tests) 49ms
+ ✓ harness-tests/core/referenced-mcp-tools.test.ts (16 tests) 36ms
+ ✓ harness-tests/core/bot-mutation-http.test.ts (9 tests) 46ms
+ ✓ harness-tests/core/retry-draft-editor.test.ts (12 tests) 34ms
+ ✓ harness-tests/core/chat-access-admin.test.ts (12 tests) 33ms
+ ✓ harness-tests/core/fresh-tool-context.test.ts (7 tests) 32ms
+ ✓ harness-tests/core/onboarding-http.test.ts (4 tests) 34ms
+ ✓ harness-tests/core/schedule-clock.test.ts (35 tests) 41ms
+ ✓ harness-tests/core/workflow-http.test.ts (5 tests) 41ms
+ ✓ harness-tests/core/pwa.test.ts (12 tests) 35ms
+ ✓ harness-tests/core/assistant-file-tools.test.ts (22 tests) 43ms
+ ✓ harness-tests/core/model-options-http.test.ts (4 tests) 31ms
+ ✓ harness-tests/core/conversation-copy-http.test.ts (4 tests) 38ms
+ ✓ harness-tests/core/conversation-run-projection.test.ts (9 tests) 33ms
+ ✓ harness-tests/core/reference-catalog-http.test.ts (6 tests) 39ms
+ ✓ harness-tests/core/memory-expiry.test.ts (4 tests) 24ms
+ ✓ harness-tests/core/workspace-policy-http.test.ts (3 tests) 48ms
+ ✓ harness-tests/core/kody-search-synced-skills.test.ts (6 tests) 34ms
+ ✓ harness-tests/core/composer-draft-http.test.ts (5 tests) 39ms
+ ✓ harness-tests/core/kody-account-http.test.ts (4 tests) 37ms
+ ✓ harness-tests/core/memory-http.test.ts (6 tests) 48ms
+ ✓ harness-tests/core/retry-source.test.ts (17 tests) 42ms
+ ✓ harness-tests/core/catalog-detail-http.test.ts (7 tests) 43ms
+ ✓ harness-tests/core/saved-actions-http.test.ts (3 tests) 35ms
+ ✓ harness-tests/core/device-http.test.ts (3 tests) 50ms
+ ✓ harness-tests/core/value-candidates.test.ts (18 tests) 59ms
+ ✓ harness-tests/core/stored-results.test.ts (10 tests) 44ms
+ ✓ harness-tests/core/kody-contract.test.ts (5 tests) 28ms
+ ✓ harness-tests/core/command-palette.test.ts (12 tests) 23ms
+ ✓ harness-tests/core/mcp-public-fetch.test.ts (10 tests) 32ms
+ ✓ harness-tests/core/action-evidence-context.test.ts (4 tests) 25ms
+ ✓ harness-tests/core/chat-origin-redirect.test.ts (18 tests) 47ms
+ ✓ harness-tests/core/account-preferences-http.test.ts (5 tests) 38ms
+ ✓ harness-tests/core/conversation-read-api.test.ts (2 tests) 28ms
+ ✓ harness-tests/core/system-one-loop.test.ts (22 tests) 19ms
+ ✓ harness-tests/core/conversation-minimap.test.ts (3 tests) 44ms
+ ✓ harness-tests/core/mcp-task-host.test.ts (3 tests) 27ms
+ ✓ harness-tests/core/chat-access.test.ts (9 tests) 43ms
+ ✓ harness-tests/core/chat-plugin-route.test.ts (4 tests) 44ms
+ ✓ harness-tests/core/message-attachments.test.ts (6 tests) 30ms
+ ✓ harness-tests/core/chat-entry-navigation.test.ts (1 test) 40ms
+ ✓ harness-tests/core/kody-community.test.ts (3 tests) 19ms
+ ✓ harness-tests/core/jev-routing.test.ts (17 tests) 19ms
+ ✓ harness-tests/core/chat-skill-route.test.ts (4 tests) 32ms
+ ✓ harness-tests/core/delegation-waits.test.ts (5 tests) 22ms
+ ✓ harness-tests/core/assistant-workspace-tools.test.ts (4 tests) 25ms
+ ✓ harness-tests/core/navigation.test.ts (17 tests) 19ms
+ ✓ harness-tests/core/kody-resources.test.ts (5 tests) 29ms
+ ✓ harness-tests/core/tool-ranking.test.ts (9 tests) 13ms
+ ✓ harness-tests/core/response-copy.test.ts (1 test) 20ms
+ ✓ harness-tests/core/stored-result-progress.test.ts (1 test) 33ms
+ ✓ harness-tests/core/kody-mail.test.ts (3 tests) 14ms
+ ✓ harness-tests/core/jev-task-decisions.test.ts (13 tests) 21ms
+ ✓ harness-tests/core/task-context.test.ts (7 tests) 20ms
+ ✓ harness-tests/core/execution-preview.test.ts (6 tests) 19ms
+ ✓ harness-tests/core/kody-run.test.ts (3 tests) 22ms
+ ✓ harness-tests/core/kody-account.test.ts (7 tests) 20ms
+ ✓ harness-tests/core/research-loop.test.ts (9 tests) 24ms
+ ✓ harness-tests/core/workflows.test.ts (11 tests) 13ms
+ ✓ harness-tests/core/kody-code-run.test.ts (4 tests) 19ms
+ ✓ harness-tests/core/assistant-kody-memory-tools.test.ts (3 tests) 13ms
+ ✓ harness-tests/core/assistant-connection-tools.test.ts (3 tests) 15ms
+ ✓ harness-tests/core/bot-views.test.ts (21 tests) 28ms
+ ✓ harness-tests/core/copy-bot.test.ts (8 tests) 18ms
+ ✓ harness-tests/core/kody-skill-search.test.ts (2 tests) 13ms
+ ✓ harness-tests/core/kody-package-document.test.ts (4 tests) 20ms
+ ✓ harness-tests/core/kody-run-history.test.ts (3 tests) 17ms
+ ✓ harness-tests/core/workflow-driver.test.ts (2 tests) 20ms
+ ✓ harness-tests/core/message-navigation.test.ts (7 tests) 10ms
+ ✓ harness-tests/core/delegation-sources.test.ts (2 tests) 19ms
+ ✓ harness-tests/core/conversation-route-cache.test.ts (2 tests) 12ms
+ ✓ harness-tests/core/markdown-links.test.ts (4 tests) 16ms
+ ✓ harness-tests/core/workflow-inputs.test.ts (3 tests) 16ms
+ ✓ harness-tests/core/file-diff.test.ts (13 tests) 11ms
+ ✓ harness-tests/core/cache-pricing.test.ts (8 tests) 26ms
+ ✓ harness-tests/core/kody-setup-readiness.test.ts (3 tests) 24ms
+ ✓ harness-tests/core/kody-run-triage.test.ts (3 tests) 13ms
+ ✓ harness-tests/core/kody-memory.test.ts (2 tests) 18ms
+ ✓ harness-tests/core/file-deliveries.test.ts (4 tests) 18ms
+ ✓ harness-tests/core/conversation-thread-ui.test.ts (5 tests) 15ms
+ ✓ harness-tests/core/workflow-file-input.test.ts (3 tests) 16ms
+ ✓ harness-tests/core/kody-usage.test.ts (2 tests) 12ms
+ ✓ harness-tests/core/appearance.test.ts (6 tests) 17ms
+ ✓ harness-tests/core/assistant-kody-run-tools.test.ts (2 tests) 21ms
+ ✓ harness-tests/core/mobile-gestures.test.ts (6 tests) 9ms
+ ✓ harness-tests/core/kody-package-recovery.test.ts (4 tests) 11ms
+ ✓ harness-tests/core/conversation-queue-schedule.test.ts (3 tests) 20ms
+ ✓ harness-tests/core/task-history.test.ts (2 tests) 19ms
+ ✓ harness-tests/core/workflow-tool-boundary.test.ts (3 tests) 17ms
+ ✓ harness-tests/core/provider-request-shape.test.ts (5 tests) 9ms
+ ✓ harness-tests/core/kody-connected-sync.test.ts (3 tests) 13ms
+ ✓ harness-tests/core/kody-skill-source.test.ts (3 tests) 16ms
+ ✓ harness-tests/core/conversation-bulk-actions.test.ts (3 tests) 7ms
+ ✓ harness-tests/core/conversation-bulk-service.test.ts (2 tests) 10ms
+ ✓ harness-tests/core/mcp-session-store.test.ts (1 test) 12ms
+ ✓ harness-tests/core/bot-drag.test.ts (8 tests) 11ms
+ ✓ harness-tests/core/conversation-location.test.ts (6 tests) 8ms
+ ✓ harness-tests/core/usage-attempt-summary.test.ts (13 tests) 8ms
+ ✓ harness-tests/core/postgres-cloudflare-socket.test.js (4 tests) 9ms
+ ✓ harness-tests/core/local-services.test.ts (4 tests) 12ms
+ ✓ harness-tests/core/kody-assistant-discovery.test.ts (5 tests) 13ms
+ ✓ harness-tests/core/answer-evidence.test.ts (7 tests) 15ms
+ ✓ harness-tests/core/tool-evidence.test.ts (2 tests) 8ms
+ ✓ harness-tests/core/composer-focus.test.ts (6 tests) 7ms
+ ✓ harness-tests/core/assistant-message-history.test.ts (2 tests) 6ms
+ ✓ harness-tests/core/project-panel.test.ts (5 tests) 10ms
+ ✓ harness-tests/core/chat-scheduled.test.ts (2 tests) 11ms
+ ✓ harness-tests/core/chat-appearance-bootstrap.test.ts (2 tests) 6ms
+ ✓ harness-tests/core/assistant-schedule-policy.test.ts (16 tests) 11ms
+ ✓ harness-tests/core/plugin-reference-instructions.test.ts (5 tests) 5ms
+ ✓ harness-tests/core/provider-connection.test.ts (3 tests) 9ms
+ ✓ harness-tests/core/ordered-history.test.ts (3 tests) 7ms
+ ✓ harness-tests/core/local-task-tools.test.ts (1 test) 10ms
+ ✓ harness-tests/core/kody-internal-read.test.ts (1 test) 10ms
+ ✓ harness-tests/core/mobile-viewport.test.ts (4 tests) 7ms
+ ✓ harness-tests/core/kody-environment.test.ts (3 tests) 5ms
+ ✓ harness-tests/core/provider-token-totals.test.ts (9 tests) 8ms
+ ✓ harness-tests/core/preload-recovery.test.ts (1 test) 8ms
+ ✓ harness-tests/core/batched-values.test.ts (6 tests) 11ms
+ ✓ harness-tests/core/workflow-usage.test.ts (1 test) 4ms
+ ✓ harness-tests/core/setup-evidence.test.ts (4 tests) 8ms
+ ✓ harness-tests/core/public-endpoint.test.ts (1 test) 6ms
+ ✓ harness-tests/core/reasoning-text.test.ts (3 tests) 3ms
+ ✓ harness-tests/core/browser-composer-draft-sync.test.ts (9 tests) 5ms
+ ✓ harness-tests/core/appearance-html.test.ts (2 tests) 6ms
+ ✓ harness-tests/core/browser-desktop-compatibility.test.ts (5 tests) 4ms
+ ✓ harness-tests/core/thread-context.test.ts (2 tests) 5ms
+ ✓ harness-tests/core/app-version.test.ts (1 test) 3ms
+ ✓ harness-tests/core/personal-assistant.test.ts (2 tests) 3ms
+ ✓ harness-tests/core/pending-package-guide.test.ts (1 test) 3ms
+ ✓ harness-tests/core/discovery-model.test.ts (2 tests) 4ms
+
+ Test Files  234 passed (234)
+      Tests  2269 passed (2269)
+   Start at  01:26:24
+   Duration  28.08s (transform 6.70s, setup 0ms, import 55.00s, tests 19.79s, environment 27ms)
+
+$ pnpm --dir desktop test
+$ node build-device-helper.mjs && node --test *.test.mjs
+﹣ macOS sign-in registers without grants, respects revocation, and isolates account changes (0.770574ms) # SKIP
+✔ other platforms do not automatically register devices (36.357766ms)
+✔ folder grants read text, reject escapes and revoked access (37.200018ms)
+✔ Open setup web links open in the system browser without creating an Electron window (11.982681ms)
+✔ named sign-in popup still opens with its isolated options (1.606828ms)
+✔ unsafe protocols, credentials, malformed URLs, and untrusted pages cannot launch apps (1.217725ms)
+✔ browser launch failures show a recovery message (1.202261ms)
+✔ authentication windows receive no native bridge (4.966339ms)
+✔ a fresh feed permits a valid first release (2.030266ms)
+✔ existing feeds only permit increasing semantic versions (0.337482ms)
+✔ malformed existing feeds cannot be treated as fresh (0.180849ms)
+✔ packaged app ignores development origin overrides (1.107906ms)
+✔ development permits the fixture origin (0.276942ms)
+✔ rejects credentials, insecure remote hosts, and non-origin development URLs (0.514945ms)
+✔ launches the consolidated chat path (0.214327ms)
+✔ restart requires a downloaded update and native confirmation (2.146748ms)
+✔ explicit restart bypasses macOS hide-on-close before the updater closes windows (0.35004ms)
+✔ simultaneous checks share one request (0.317581ms)
+✔ a downloaded update survives another check without redownloading (1.217805ms)
+✔ background checks leave prompts to the app UI and stop on quit (4.849534ms)
+✔ desktop windows own their browser and IPC lifecycle while sharing account storage (23.334832ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 119.122543

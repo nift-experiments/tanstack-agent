@@ -1,0 +1,181 @@
+{
+  "scope": "T11 validated faithful pipeline optimizations; diagnostics are not replacement final benchmarks",
+  "workers": [
+    {
+      "round": 2,
+      "workers": 1,
+      "wall_seconds": 4.155944298021495,
+      "tree_peak_rss_kib": 402288,
+      "receipt_sha256": "7eab66d52326182f3681f4ad48731cf10dca7b1a01345c2b6bd0e02b462677c6"
+    },
+    {
+      "round": 2,
+      "workers": 4,
+      "wall_seconds": 2.363002632977441,
+      "tree_peak_rss_kib": 903116,
+      "receipt_sha256": "798a7abc391b34c0debe71378af48b8072206384bf149c4eca421c03c348360e"
+    },
+    {
+      "round": 2,
+      "workers": 8,
+      "wall_seconds": 1.8168800510466099,
+      "tree_peak_rss_kib": 1329772,
+      "receipt_sha256": "25a7e84f6ac1b4c637fd883257e550de4a6f78e49895dbd0471315f6909626bd"
+    },
+    {
+      "round": 3,
+      "workers": 1,
+      "wall_seconds": 3.9368638989981264,
+      "tree_peak_rss_kib": 406920,
+      "receipt_sha256": "e7be61125c43e33f64d7b6ab600693aedf8f699b5bf9bda4b39ee8e6036f82c6"
+    },
+    {
+      "round": 3,
+      "workers": 4,
+      "wall_seconds": 2.0438733890186995,
+      "tree_peak_rss_kib": 880476,
+      "receipt_sha256": "dc72b359f15918fc0859cb52f8ea94b16c38f91ea21250c01c59c64b077936b2"
+    },
+    {
+      "round": 3,
+      "workers": 8,
+      "wall_seconds": 1.6963847340084612,
+      "tree_peak_rss_kib": 1368784,
+      "receipt_sha256": "481a239f5a50ee8de327637ffd84b1c23a10d58baa4b69dcc753ccdc227e153c"
+    },
+    {
+      "round": 4,
+      "workers": 1,
+      "wall_seconds": 3.944807518972084,
+      "tree_peak_rss_kib": 395512,
+      "receipt_sha256": "adc9ff474a5c9d23e7b5bc32841fe8437fad4cdf3d9c73b51b96892614d493be"
+    },
+    {
+      "round": 4,
+      "workers": 4,
+      "wall_seconds": 2.0672786151990294,
+      "tree_peak_rss_kib": 899688,
+      "receipt_sha256": "1bdcc59ef69a560c58aa52ee4b6cdb7deeea61eb01c4439f69ef45d1bad5c924"
+    },
+    {
+      "round": 4,
+      "workers": 8,
+      "wall_seconds": 1.715161123080179,
+      "tree_peak_rss_kib": 1231668,
+      "receipt_sha256": "580eaed916df5ee05672f92867ff3c51e4b7df07e2f9f74fe339d02371423ffe"
+    }
+  ],
+  "vite": [
+    {
+      "case": "bundle-environments",
+      "wall_seconds": 40.63199559110217,
+      "exit_code": 0,
+      "phases": {
+        "startup": {
+          "sampled_seconds": 6.0499999999999865,
+          "tree_peak_rss_kib": 1079560
+        },
+        "client_transform": {
+          "sampled_seconds": 11.350000000000026,
+          "tree_peak_rss_kib": 3288384
+        },
+        "client_emit": {
+          "sampled_seconds": 2.8999999999999977,
+          "tree_peak_rss_kib": 3950244
+        },
+        "client_complete": {
+          "sampled_seconds": 0.15000000000000002,
+          "tree_peak_rss_kib": 3853940
+        },
+        "ssr_transform": {
+          "sampled_seconds": 11.950000000000035,
+          "tree_peak_rss_kib": 4622356
+        },
+        "ssr_emit": {
+          "sampled_seconds": 3.049999999999997,
+          "tree_peak_rss_kib": 5075520
+        },
+        "ssr_complete": {
+          "sampled_seconds": 0.6,
+          "tree_peak_rss_kib": 4434648
+        }
+      },
+      "individual_peak_rss_kib": 4558096,
+      "receipt_sha256": "c06122af1474151c079bb75f0a78f5e89dbbacad7df6de70dfbf07bb8b21eafa"
+    },
+    {
+      "case": "bundle-heap-3072",
+      "wall_seconds": 38.24890395789407,
+      "exit_code": 0,
+      "phases": {
+        "startup": {
+          "sampled_seconds": 4.549999999999992,
+          "tree_peak_rss_kib": 1082948
+        },
+        "client_transform": {
+          "sampled_seconds": 8.299999999999983,
+          "tree_peak_rss_kib": 3258776
+        },
+        "client_emit": {
+          "sampled_seconds": 2.6999999999999984,
+          "tree_peak_rss_kib": 3996680
+        },
+        "client_complete": {
+          "sampled_seconds": 0.15000000000000002,
+          "tree_peak_rss_kib": 3868116
+        },
+        "ssr_transform": {
+          "sampled_seconds": 13.650000000000059,
+          "tree_peak_rss_kib": 4741440
+        },
+        "ssr_emit": {
+          "sampled_seconds": 3.149999999999997,
+          "tree_peak_rss_kib": 5145624
+        },
+        "ssr_complete": {
+          "sampled_seconds": 0.6,
+          "tree_peak_rss_kib": 4768752
+        }
+      },
+      "individual_peak_rss_kib": 4641904,
+      "receipt_sha256": "01577eff4658c7ec98fc1ddfa920123ac65ecff861fab87ff99f73c17c80d7ad"
+    },
+    {
+      "case": "bundle-heap-2048",
+      "wall_seconds": 36.59909213986248,
+      "exit_code": 0,
+      "phases": {
+        "startup": {
+          "sampled_seconds": 4.899999999999991,
+          "tree_peak_rss_kib": 1103444
+        },
+        "client_transform": {
+          "sampled_seconds": 9.750000000000004,
+          "tree_peak_rss_kib": 3291784
+        },
+        "client_emit": {
+          "sampled_seconds": 2.799999999999998,
+          "tree_peak_rss_kib": 3930136
+        },
+        "client_complete": {
+          "sampled_seconds": 0.15000000000000002,
+          "tree_peak_rss_kib": 3680064
+        },
+        "ssr_transform": {
+          "sampled_seconds": 11.300000000000026,
+          "tree_peak_rss_kib": 4555012
+        },
+        "ssr_emit": {
+          "sampled_seconds": 3.049999999999997,
+          "tree_peak_rss_kib": 5022612
+        },
+        "ssr_complete": {
+          "sampled_seconds": 0.49999999999999994,
+          "tree_peak_rss_kib": 4558488
+        }
+      },
+      "individual_peak_rss_kib": 4458000,
+      "receipt_sha256": "7390ab0bc1da6f58a4806095d4beac9cb250c07fa78cebd5da5bc192d69eb9c8"
+    }
+  ]
+}

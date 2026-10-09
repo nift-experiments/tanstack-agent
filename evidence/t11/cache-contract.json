@@ -1,0 +1,12 @@
+{
+  "model": "tanstack-agent",
+  "generated_artifacts_corrupted_and_repaired": 3,
+  "browser_chunk_corruption_rebuild": true,
+  "invalid_compile_cache_repaired": true,
+  "valid_json_metadata_state_corruption_repaired": true,
+  "forced_bypass": true,
+  "incremental_force_byte_equal": true,
+  "publication_files": 24648,
+  "scope": "generated cache/output only; maintained source never edited",
+  "timing": "diagnostic only, excluded from final benchmark"
+}

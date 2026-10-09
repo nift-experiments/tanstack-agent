@@ -52,3 +52,8 @@ Future work is explicitly separated in FUTURE-WORK.md. Do not reopen the complet
 | T10 final campaign | done | 225 samples, component/memory scopes, clean-checkout verification, maintenance judgement and init review recorded. |
 
 This experiment finds the best Nift + TanStack boundary. React, Router, Query, Start and backend services remain where useful. No Nift core changes are authorized.
+
+
+## T11 preserved; T12 architecture investigation in progress
+
+See investigation/T11-OPTIMIZATION.md and evidence/t11. Faithful behavioral gates passed; T10 measurements remain the conservative baseline. The authorized architecture investigation now tests alternate bundling and real backend ownership in isolated tanstack-agent scratch. Do not close/publish or characterize retained Start/Vite RSS as Nift RSS. Fresh-clone and new comparative benchmarks remain pending.

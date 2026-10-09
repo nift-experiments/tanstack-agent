@@ -25,3 +25,9 @@ parity (yes/no).
 - tool-version-derived inputs;
 - search/index inputs;
 - other generated publication inputs.
+
+## T1 actual pinned-source findings
+
+`docs-input-pins.json` records all 24 configured repository/ref pairs and exact public GitHub commits. `library-inputs.json` binds library/version/docs roots to those refs. Docs are read at runtime; a site Git SHA alone does not freeze them. Tree/menu/body capture remains in progress in the separate baseline workspace.
+
+Hosted Algolia responses, public GitHub/npm stats, remote examples/catalogs/media and service configuration can move independently. These require explicit frozen public inputs or deterministic local transport fixtures. No production secrets, database state, OAuth, emails, feedback, AI, analytics or production webhook writes are permitted. Runtime/service contracts are preserved separately from actual live integration claims.

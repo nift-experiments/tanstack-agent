@@ -1,0 +1,46 @@
+{
+  "checkpoint": "T1",
+  "upstream_sha": "862ccc3d191818320c3e6d217542883f80cb907a",
+  "toolchain": {
+    "node": "25.9.0",
+    "pnpm": "11.1.0",
+    "nift": "4.9.0"
+  },
+  "production_command": "pnpm build",
+  "production_files": 1867,
+  "production_bytes": 174724529,
+  "fixed_path_repeat_byte_identical": true,
+  "external_docs_inputs": 24,
+  "captured_docs_files": 7601,
+  "browser_states": 18,
+  "browser_page_errors": 0,
+  "fixture_scope": {
+    "UI": true,
+    "local_transport": true,
+    "live_backend_integration": false,
+    "remote_stats": "synthetic fixture",
+    "external_blog": "captured public feed",
+    "search": "local empty-response fixture; hosted service retained"
+  },
+  "evidence_location": "sibling tanstack-baseline (raw artifacts excluded from migration source)",
+  "receipts": {
+    "docs-body-capture.json": "a49504827b693abb31bfdfd3a767d144e30ca3be31629a5e30a4969a247aad3e",
+    "docs-tree-inventory.json": "fc3b2e4bbac1644f36905aa149ce1c8ca893e3e4432d341997880415074b9b37",
+    "docs-input-pins.json": "b433fa221ad4b51c779b5435a74e1300a99adc40c36c9ed09d012277da817ff8",
+    "library-inputs.json": "bbd087e86dfda048a767b234f42ffa02919a34252b645c18ab98718bce89ec94",
+    "surface-inventory.json": "2b0629556cf8650ec76c35709c1831de5a0b7b7ed83d51c31b06e981e476751f",
+    "production-repeatability.json": "49922bf5f3b374bc8eccce9c8be2f4f354ce6de1d44f31433390483e525a32cd",
+    "http-contract.json": "38fbc16545cf332965ef596d8d50d2ede7ef82e94490e463534d9a6d29733c85",
+    "browser-baseline/results.json": "28917cbce2b0bb53169d8b59d1e793ec10dd49fcca5d31cd7af6819ffe41e3ac",
+    "external-inputs/blog/receipts.json": "94a7bd8298b37f20867512338a0883390816f2df1b6583ce6661a90f782ec3e4",
+    "runtime-server.mjs": "8c062179f0c4a0127da7bdd54013a54cec70ddc7d00e1fdfd8268e2d17b58289",
+    "fixture-provider.mjs": "ea5b277a8c9f204819fbe24d5e5ee8c9418e335875574001cd3cf8f8e1834504",
+    "browser-baseline.mjs": "ed460255656b8c97acfd00b8a01c326153a645852b6bbb4f2eb6f2e05b9086f2",
+    "run-isolated.py": "0c07fdeff2a664832650876e866371f565d33d848c9c9ae0e69cbf51632e4087"
+  },
+  "source_lockfile_sha256": "5654ce909d277d658b5a28022c96fdf7961cc909ceafca45f6df67f858351c34",
+  "machine": {
+    "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.43",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H"
+  }
+}

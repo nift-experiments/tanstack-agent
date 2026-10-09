@@ -1,0 +1,6294 @@
+{
+  "upstream_sha": "862ccc3d191818320c3e6d217542883f80cb907a",
+  "route_pattern_source": "src/routeTree.gen.ts:FileRoutesByFullPath",
+  "route_pattern_count": 314,
+  "route_patterns": [
+    "/",
+    "/admin",
+    "/account",
+    "/ads",
+    "/application-starter",
+    "/blog",
+    "/brand-guide",
+    "/builder",
+    "/chat",
+    "/chat-access",
+    "/community-projects",
+    "/dashboard",
+    "/ds",
+    "/ethos",
+    "/explore",
+    "/feedback-leaderboard",
+    "/learn",
+    "/libraries",
+    "/llms-full.txt",
+    "/llms.txt",
+    "/login",
+    "/maintainers",
+    "/merch",
+    "/paid-support",
+    "/partners",
+    "/partners-embed",
+    "/privacy",
+    "/robots.txt",
+    "/rss.xml",
+    "/shop",
+    "/showcases",
+    "/sitemap.xml",
+    "/sponsors-embed",
+    "/support",
+    "/tenets",
+    "/terms",
+    "/workshops",
+    "/$libraryId",
+    "/.well-known/oauth-authorization-server",
+    "/account/feedback",
+    "/account/integrations",
+    "/account/notes",
+    "/account/submissions",
+    "/admin/audit",
+    "/admin/chat-access",
+    "/admin/docs",
+    "/admin/github-stats",
+    "/admin/intent",
+    "/admin/logins",
+    "/admin/npm-stats",
+    "/admin/users",
+    "/api/uploadthing",
+    "/application-starter/docs",
+    "/auth/cli",
+    "/auth/popup-success",
+    "/auth/signout",
+    "/blog/$",
+    "/builder/$id",
+    "/builder/ai",
+    "/builder/esbuild",
+    "/builder/llms.txt",
+    "/builder/new",
+    "/chat/charts",
+    "/chat/new-project",
+    "/chat/shared",
+    "/ds/avatar",
+    "/ds/badges",
+    "/ds/breadcrumbs",
+    "/ds/buttons",
+    "/ds/cards",
+    "/ds/colors",
+    "/ds/dialog",
+    "/ds/drawer",
+    "/ds/dropdown",
+    "/ds/effects",
+    "/ds/eyebrow",
+    "/ds/iconography",
+    "/ds/inputs",
+    "/ds/logos",
+    "/ds/maintainers",
+    "/ds/navbar",
+    "/ds/overlays",
+    "/ds/page-header",
+    "/ds/palette",
+    "/ds/panel",
+    "/ds/partner-rail",
+    "/ds/semantic",
+    "/ds/shadows",
+    "/ds/spinner",
+    "/ds/stats",
+    "/ds/tabs",
+    "/ds/takeover",
+    "/ds/typography",
+    "/libraries/$framework",
+    "/oauth/authorize",
+    "/oauth/register",
+    "/oauth/token",
+    "/partners/$partner",
+    "/partners/netlify",
+    "/partners/railway",
+    "/partners/render",
+    "/shop/$handle",
+    "/shop/cart",
+    "/shop/search",
+    "/showcase/$id",
+    "/showcase/submit",
+    "/stack/$category",
+    "/account/",
+    "/admin/",
+    "/application-starter/",
+    "/blog/",
+    "/chat/",
+    "/ds/",
+    "/partners/",
+    "/shop/",
+    "/showcase/",
+    "/stats/",
+    "/$libraryId/$version",
+    "/charts/catalog",
+    "/admin/feedback/$id",
+    "/admin/roles/$roleId",
+    "/admin/showcases/$id",
+    "/admin/users/$userId",
+    "/api/application-starter/compile",
+    "/api/application-starter/compile-attributed",
+    "/api/application-starter/download",
+    "/api/application-starter/feature-artifacts",
+    "/api/application-starter/features",
+    "/api/application-starter/load-remote-addon",
+    "/api/application-starter/load-remote-template",
+    "/api/application-starter/load-template",
+    "/api/application-starter/resolve",
+    "/api/application-starter/suggest",
+    "/api/application-starter/validate",
+    "/api/chat/activity",
+    "/api/chat/app-version",
+    "/api/chat/bootstrap",
+    "/api/chat/bots",
+    "/api/chat/connection",
+    "/api/chat/device-transport",
+    "/api/chat/draft",
+    "/api/chat/files",
+    "/api/chat/model-options",
+    "/api/chat/models",
+    "/api/chat/plugins",
+    "/api/chat/policy",
+    "/api/chat/project-snapshots",
+    "/api/chat/projects",
+    "/api/chat/recipes",
+    "/api/chat/references",
+    "/api/chat/sections",
+    "/api/chat/skills",
+    "/api/chat/workspace",
+    "/api/chat/workspace-history",
+    "/api/chat/workspace-index",
+    "/api/data/libraries",
+    "/api/data/partners",
+    "/api/discord/interactions",
+    "/api/example/deploy",
+    "/api/github/webhook",
+    "/api/mcp/$",
+    "/api/og/{$}.png",
+    "/api/readme/{$}.png",
+    "/auth/$provider/start",
+    "/auth/mcp/callback",
+    "/auth/mcp/client-metadata",
+    "/builder/p/$hash",
+    "/charts/catalog/catalog.json",
+    "/chat/b/$botId",
+    "/chat/c/$conversationId",
+    "/chat/p/$hash",
+    "/chat/project/$projectId",
+    "/chat/w/$workspaceId",
+    "/intent/registry/$packageName",
+    "/shop/collections/$handle",
+    "/shop/pages/$handle",
+    "/shop/policies/$handle",
+    "/shop/products/$handle",
+    "/showcase/edit/$id",
+    "/stats/npm/$packages",
+    "/stats/npm/embed",
+    "/$libraryId/",
+    "/admin/feedback/",
+    "/admin/notes/",
+    "/admin/roles/",
+    "/admin/showcases/",
+    "/api/mcp/",
+    "/intent/registry/",
+    "/stats/npm/",
+    "/$libraryId/$version/docs",
+    "/$libraryId/$version/llms.txt",
+    "/charts/catalog/all",
+    "/api/application-starter/deploy/check-name",
+    "/api/application-starter/deploy/github",
+    "/api/auth/callback/$provider",
+    "/api/auth/cli/create-ticket",
+    "/api/chat/account/devices",
+    "/api/chat/account/onboarding",
+    "/api/chat/account/preferences",
+    "/api/chat/bot-drafts/$id",
+    "/api/chat/bots/$id",
+    "/api/chat/bots/bulk",
+    "/api/chat/bots/move",
+    "/api/chat/copies/$id",
+    "/api/chat/kody/account",
+    "/api/chat/kody/callback",
+    "/api/chat/kody/community",
+    "/api/chat/kody/connect",
+    "/api/chat/kody/memories",
+    "/api/chat/kody/runs",
+    "/api/chat/kody/servers",
+    "/api/chat/kody/sync",
+    "/api/chat/kody/unlink",
+    "/api/chat/kody/usage",
+    "/api/chat/mcp/$",
+    "/api/chat/mcp/contract",
+    "/api/chat/openrouter/callback",
+    "/api/chat/plugins/$id",
+    "/api/chat/project-snapshots/$hash",
+    "/api/chat/projects/$id",
+    "/api/chat/recipes/$id",
+    "/api/chat/retries/$id",
+    "/api/chat/sections/$id",
+    "/api/chat/skills/$id",
+    "/api/chat/workspace-index/activity",
+    "/api/chat/workspace-sync/$operation",
+    "/intent/registry/$packageName/$skillName",
+    "/intent/registry/$packageName/{$}.md",
+    "/$libraryId/$version/",
+    "/ai/$version/",
+    "/charts/$version/",
+    "/charts/catalog/",
+    "/cli/$version/",
+    "/config/$version/",
+    "/db/$version/",
+    "/devtools/$version/",
+    "/form/$version/",
+    "/highlight/$version/",
+    "/hotkeys/$version/",
+    "/intent/$version/",
+    "/markdown/$version/",
+    "/pacer/$version/",
+    "/query/$version/",
+    "/ranger/$version/",
+    "/router/$version/",
+    "/start/$version/",
+    "/store/$version/",
+    "/table/$version/",
+    "/virtual/$version/",
+    "/workflow/$version/",
+    "/intent/registry/$packageName/",
+    "/$libraryId/$version/docs/$",
+    "/$libraryId/$version/docs/blog",
+    "/$libraryId/$version/docs/community-resources",
+    "/$libraryId/$version/docs/contributors",
+    "/$libraryId/$version/docs/index.md",
+    "/$libraryId/$version/docs/npm-stats",
+    "/$libraryId/$version/docs/{$}.md",
+    "/charts/catalog/charts/$caseId",
+    "/charts/catalog/collections/$collectionId",
+    "/api/auth/cli/status/$ticketId",
+    "/api/chat/bot-drafts/$id/files",
+    "/api/chat/bots/$id/$operation",
+    "/api/chat/bots/$id/files",
+    "/api/chat/conversations/$id/$operation",
+    "/api/chat/conversations/$id/files",
+    "/api/chat/conversations/$id/memories",
+    "/api/chat/conversations/$id/references",
+    "/api/chat/kody/community/$listingId",
+    "/api/chat/kody/mail/inboxes",
+    "/api/chat/kody/mail/messages",
+    "/api/chat/kody/memories/$memoryId",
+    "/api/chat/kody/resources/$kind",
+    "/api/chat/kody/runs/$runId",
+    "/api/chat/project-snapshots/$hash/quarantine",
+    "/api/chat/projects/$id/sync",
+    "/api/chat/references/kody/inspect",
+    "/api/chat/references/kody/refresh",
+    "/api/chat/references/tools/refresh",
+    "/api/chat/retries/$id/prepare",
+    "/charts/catalog/previews/$revision/{$caseId}.svg",
+    "/chat/c/$conversationId/m/$messageId",
+    "/chat/w/$workspaceId/b/$botId",
+    "/chat/w/$workspaceId/home/$homeSection",
+    "/$libraryId/$version/docs/",
+    "/api/chat/account/composer-drafts/$accountId/$scope",
+    "/api/chat/bot-drafts/$id/files/$fileId",
+    "/api/chat/bots/$id/files/$fileId",
+    "/api/chat/conversations/$id/files/$fileId",
+    "/api/chat/conversations/$id/files/import",
+    "/api/chat/conversations/$id/memories/$memoryId",
+    "/api/chat/conversations/$id/workflow-runs/$runId",
+    "/api/chat/conversations/$id/workflows/$workflowId",
+    "/api/chat/kody/jobs/$jobId/enabled",
+    "/api/chat/kody/mail/messages/$messageId",
+    "/api/chat/kody/memories/$memoryId/apply",
+    "/api/chat/kody/memories/$memoryId/review",
+    "/api/chat/kody/memories/create/apply",
+    "/api/chat/kody/memories/create/review",
+    "/api/chat/kody/packages/$packageId/document",
+    "/api/chat/kody/runs/$runId/triage",
+    "/api/chat/kody/servers/$serverId/check",
+    "/api/chat/kody/servers/$serverId/enabled",
+    "/api/chat/kody/servers/$serverId/reconnect",
+    "/$libraryId/$version/docs/framework/",
+    "/$libraryId/$version/docs/framework/$framework/$",
+    "/$libraryId/$version/docs/framework/$framework/{$}.md",
+    "/api/chat/bot-drafts/$id/files/$fileId/content",
+    "/api/chat/bots/$id/files/$fileId/content",
+    "/api/chat/conversations/$id/execution/snapshots/$snapshotId",
+    "/api/chat/conversations/$id/files/$fileId/content",
+    "/api/chat/conversations/$id/workflow-runs/$runId/cancel",
+    "/$libraryId/$version/docs/framework/$framework/",
+    "/$libraryId/$version/docs/framework/$framework/examples/$"
+  ],
+  "warning": "Route patterns include layout/server/parameterized paths. Concrete docs routes require external manifest inventories; no corpus/parity claim is made.",
+  "route_files": [
+    {
+      "source": "src/routes/-library-landing-route.tsx",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/-library-landing.tsx",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/-shop-browse.tsx",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/[.]well-known/oauth-authorization-server.ts",
+      "router_paths": [
+        "/.well-known/oauth-authorization-server"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "OPTIONS"
+      ]
+    },
+    {
+      "source": "src/routes/__root.tsx",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library.tsx",
+      "router_paths": [
+        "/_library"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.$.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/$"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.blog.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/blog"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.community-resources.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/community-resources"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.contributors.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/contributors"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.framework.$framework.$.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/framework/$framework/$"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.framework.$framework.examples.$.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/framework/$framework/examples/$"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.framework.$framework.index.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/framework/$framework/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.framework.$framework.{$}[.]md.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/framework/$framework/{$}.md"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.framework.index.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/framework/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.index.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.index[.]md.ts",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/index.md"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.npm-stats.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/npm-stats"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.docs.{$}[.]md.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/docs/{$}.md"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.index.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.llms[.]txt.ts",
+      "router_paths": [
+        "/_library/$libraryId/$version/llms.txt"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/_library/$libraryId/$version.tsx",
+      "router_paths": [
+        "/_library/$libraryId/$version"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/index.tsx",
+      "router_paths": [
+        "/_library/$libraryId/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/$libraryId/route.tsx",
+      "router_paths": [
+        "/_library/$libraryId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/ai.$version.index.tsx",
+      "router_paths": [
+        "/_library/ai/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/charts.$version.index.tsx",
+      "router_paths": [
+        "/_library/charts/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/charts.catalog.all.tsx",
+      "router_paths": [
+        "/_library/charts/catalog/all"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/charts.catalog.charts.$caseId.tsx",
+      "router_paths": [
+        "/_library/charts/catalog/charts/$caseId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/charts.catalog.collections.$collectionId.tsx",
+      "router_paths": [
+        "/_library/charts/catalog/collections/$collectionId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/charts.catalog.index.tsx",
+      "router_paths": [
+        "/_library/charts/catalog/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/charts.catalog.tsx",
+      "router_paths": [
+        "/_library/charts/catalog"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/cli.$version.index.tsx",
+      "router_paths": [
+        "/_library/cli/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/config.$version.index.tsx",
+      "router_paths": [
+        "/_library/config/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/db.$version.index.tsx",
+      "router_paths": [
+        "/_library/db/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/devtools.$version.index.tsx",
+      "router_paths": [
+        "/_library/devtools/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/form.$version.index.tsx",
+      "router_paths": [
+        "/_library/form/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/highlight.$version.index.tsx",
+      "router_paths": [
+        "/_library/highlight/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/hotkeys.$version.index.tsx",
+      "router_paths": [
+        "/_library/hotkeys/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/intent.$version.index.tsx",
+      "router_paths": [
+        "/_library/intent/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/markdown.$version.index.tsx",
+      "router_paths": [
+        "/_library/markdown/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/pacer.$version.index.tsx",
+      "router_paths": [
+        "/_library/pacer/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/query.$version.index.tsx",
+      "router_paths": [
+        "/_library/query/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/ranger.$version.index.tsx",
+      "router_paths": [
+        "/_library/ranger/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/router.$version.index.tsx",
+      "router_paths": [
+        "/_library/router/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/start.$version.index.tsx",
+      "router_paths": [
+        "/_library/start/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/store.$version.index.tsx",
+      "router_paths": [
+        "/_library/store/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/table.$version.index.tsx",
+      "router_paths": [
+        "/_library/table/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/virtual.$version.index.tsx",
+      "router_paths": [
+        "/_library/virtual/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/_library/workflow.$version.index.tsx",
+      "router_paths": [
+        "/_library/workflow/$version/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/account.tsx",
+      "router_paths": [
+        "/account"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/account/feedback.tsx",
+      "router_paths": [
+        "/account/feedback"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/account/index.tsx",
+      "router_paths": [
+        "/account/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/account/integrations.tsx",
+      "router_paths": [
+        "/account/integrations"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/account/notes.tsx",
+      "router_paths": [
+        "/account/notes"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/account/submissions.tsx",
+      "router_paths": [
+        "/account/submissions"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/audit.tsx",
+      "router_paths": [
+        "/admin/audit"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/chat-access.tsx",
+      "router_paths": [
+        "/admin/chat-access"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/docs.tsx",
+      "router_paths": [
+        "/admin/docs"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/feedback.index.tsx",
+      "router_paths": [
+        "/admin/feedback/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/feedback_.$id.tsx",
+      "router_paths": [
+        "/admin/feedback_/$id"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/github-stats.tsx",
+      "router_paths": [
+        "/admin/github-stats"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/index.tsx",
+      "router_paths": [
+        "/admin/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/intent.tsx",
+      "router_paths": [
+        "/admin/intent"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/logins.tsx",
+      "router_paths": [
+        "/admin/logins"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/notes.index.tsx",
+      "router_paths": [
+        "/admin/notes/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/npm-stats.tsx",
+      "router_paths": [
+        "/admin/npm-stats"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/roles.$roleId.tsx",
+      "router_paths": [
+        "/admin/roles/$roleId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/roles.index.tsx",
+      "router_paths": [
+        "/admin/roles/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/route.tsx",
+      "router_paths": [
+        "/admin"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/showcases.index.tsx",
+      "router_paths": [
+        "/admin/showcases/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/showcases_.$id.tsx",
+      "router_paths": [
+        "/admin/showcases_/$id"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/users.$userId.tsx",
+      "router_paths": [
+        "/admin/users/$userId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/admin/users.tsx",
+      "router_paths": [
+        "/admin/users"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ads.tsx",
+      "router_paths": [
+        "/ads"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/api/application-starter/compile-attributed.ts",
+      "router_paths": [
+        "/api/application-starter/compile-attributed"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/compile.ts",
+      "router_paths": [
+        "/api/application-starter/compile"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/deploy/check-name.ts",
+      "router_paths": [
+        "/api/application-starter/deploy/check-name"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/deploy/github.ts",
+      "router_paths": [
+        "/api/application-starter/deploy/github"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/download.ts",
+      "router_paths": [
+        "/api/application-starter/download"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/feature-artifacts.ts",
+      "router_paths": [
+        "/api/application-starter/feature-artifacts"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/features.ts",
+      "router_paths": [
+        "/api/application-starter/features"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/load-remote-addon.ts",
+      "router_paths": [
+        "/api/application-starter/load-remote-addon"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/load-remote-template.ts",
+      "router_paths": [
+        "/api/application-starter/load-remote-template"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/load-template.ts",
+      "router_paths": [
+        "/api/application-starter/load-template"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/resolve.ts",
+      "router_paths": [
+        "/api/application-starter/resolve"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/suggest.ts",
+      "router_paths": [
+        "/api/application-starter/suggest"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/application-starter/validate.ts",
+      "router_paths": [
+        "/api/application-starter/validate"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/auth/callback/$provider.tsx",
+      "router_paths": [
+        "/api/auth/callback/$provider"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/auth/cli/create-ticket.ts",
+      "router_paths": [
+        "/api/auth/cli/create-ticket"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/auth/cli/status.$ticketId.ts",
+      "router_paths": [
+        "/api/auth/cli/status/$ticketId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/account/composer-drafts/$accountId.$scope.ts",
+      "router_paths": [
+        "/api/chat/account/composer-drafts/$accountId/$scope"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/account/devices.ts",
+      "router_paths": [
+        "/api/chat/account/devices"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/account/onboarding.ts",
+      "router_paths": [
+        "/api/chat/account/onboarding"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/account/preferences.ts",
+      "router_paths": [
+        "/api/chat/account/preferences"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/activity.ts",
+      "router_paths": [
+        "/api/chat/activity"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/app-version.ts",
+      "router_paths": [
+        "/api/chat/app-version"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bootstrap.ts",
+      "router_paths": [
+        "/api/chat/bootstrap"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bot-drafts/$id.files.$fileId.content.ts",
+      "router_paths": [
+        "/api/chat/bot-drafts/$id/files/$fileId/content"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bot-drafts/$id.files.$fileId.ts",
+      "router_paths": [
+        "/api/chat/bot-drafts/$id/files/$fileId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bot-drafts/$id.files.ts",
+      "router_paths": [
+        "/api/chat/bot-drafts/$id/files"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bot-drafts/$id.ts",
+      "router_paths": [
+        "/api/chat/bot-drafts/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots.ts",
+      "router_paths": [
+        "/api/chat/bots"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/$id.$operation.ts",
+      "router_paths": [
+        "/api/chat/bots/$id/$operation"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "PATCH",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/$id.files.$fileId.content.ts",
+      "router_paths": [
+        "/api/chat/bots/$id/files/$fileId/content"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/$id.files.$fileId.ts",
+      "router_paths": [
+        "/api/chat/bots/$id/files/$fileId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/$id.files.ts",
+      "router_paths": [
+        "/api/chat/bots/$id/files"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/$id.ts",
+      "router_paths": [
+        "/api/chat/bots/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "PATCH"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/bulk.ts",
+      "router_paths": [
+        "/api/chat/bots/bulk"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/bots/move.ts",
+      "router_paths": [
+        "/api/chat/bots/move"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/connection.ts",
+      "router_paths": [
+        "/api/chat/connection"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.$operation.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/$operation"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.execution.snapshots.$snapshotId.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/execution/snapshots/$snapshotId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.files.$fileId.content.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/files/$fileId/content"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.files.$fileId.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/files/$fileId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.files.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/files"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.workflow-runs.$runId.cancel.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/workflow-runs/$runId/cancel"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.workflow-runs.$runId.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/workflow-runs/$runId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id.workflows.$workflowId.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/workflows/$workflowId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id/files/import.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/files/import"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id/memories.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/memories"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id/memories/$memoryId.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/memories/$memoryId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/conversations/$id/references.ts",
+      "router_paths": [
+        "/api/chat/conversations/$id/references"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/copies/$id.ts",
+      "router_paths": [
+        "/api/chat/copies/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/device-transport.ts",
+      "router_paths": [
+        "/api/chat/device-transport"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/draft.ts",
+      "router_paths": [
+        "/api/chat/draft"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/files.ts",
+      "router_paths": [
+        "/api/chat/files"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "PUT"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/account.ts",
+      "router_paths": [
+        "/api/chat/kody/account"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/callback.ts",
+      "router_paths": [
+        "/api/chat/kody/callback"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/community.ts",
+      "router_paths": [
+        "/api/chat/kody/community"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/community/$listingId.ts",
+      "router_paths": [
+        "/api/chat/kody/community/$listingId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/connect.ts",
+      "router_paths": [
+        "/api/chat/kody/connect"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/jobs/$jobId/enabled.ts",
+      "router_paths": [
+        "/api/chat/kody/jobs/$jobId/enabled"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/mail/inboxes.ts",
+      "router_paths": [
+        "/api/chat/kody/mail/inboxes"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/mail/messages.ts",
+      "router_paths": [
+        "/api/chat/kody/mail/messages"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/mail/messages/$messageId.ts",
+      "router_paths": [
+        "/api/chat/kody/mail/messages/$messageId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/memories.ts",
+      "router_paths": [
+        "/api/chat/kody/memories"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/memories/$memoryId.ts",
+      "router_paths": [
+        "/api/chat/kody/memories/$memoryId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/memories/$memoryId/apply.ts",
+      "router_paths": [
+        "/api/chat/kody/memories/$memoryId/apply"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/memories/$memoryId/review.ts",
+      "router_paths": [
+        "/api/chat/kody/memories/$memoryId/review"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/memories/create/apply.ts",
+      "router_paths": [
+        "/api/chat/kody/memories/create/apply"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/memories/create/review.ts",
+      "router_paths": [
+        "/api/chat/kody/memories/create/review"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/packages/$packageId/document.ts",
+      "router_paths": [
+        "/api/chat/kody/packages/$packageId/document"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/resources/$kind.ts",
+      "router_paths": [
+        "/api/chat/kody/resources/$kind"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/runs.ts",
+      "router_paths": [
+        "/api/chat/kody/runs"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/runs/$runId.ts",
+      "router_paths": [
+        "/api/chat/kody/runs/$runId"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/runs/$runId/triage.ts",
+      "router_paths": [
+        "/api/chat/kody/runs/$runId/triage"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/servers.ts",
+      "router_paths": [
+        "/api/chat/kody/servers"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/servers/$serverId/check.ts",
+      "router_paths": [
+        "/api/chat/kody/servers/$serverId/check"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/servers/$serverId/enabled.ts",
+      "router_paths": [
+        "/api/chat/kody/servers/$serverId/enabled"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/servers/$serverId/reconnect.ts",
+      "router_paths": [
+        "/api/chat/kody/servers/$serverId/reconnect"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/sync.ts",
+      "router_paths": [
+        "/api/chat/kody/sync"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/unlink.ts",
+      "router_paths": [
+        "/api/chat/kody/unlink"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/kody/usage.ts",
+      "router_paths": [
+        "/api/chat/kody/usage"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/mcp/$.ts",
+      "router_paths": [
+        "/api/chat/mcp/$"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/mcp/contract.ts",
+      "router_paths": [
+        "/api/chat/mcp/contract"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/model-options.ts",
+      "router_paths": [
+        "/api/chat/model-options"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/models.ts",
+      "router_paths": [
+        "/api/chat/models"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/openrouter/callback.ts",
+      "router_paths": [
+        "/api/chat/openrouter/callback"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/plugins.ts",
+      "router_paths": [
+        "/api/chat/plugins"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/plugins/$id.ts",
+      "router_paths": [
+        "/api/chat/plugins/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/policy.ts",
+      "router_paths": [
+        "/api/chat/policy"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/project-snapshots.$hash.quarantine.ts",
+      "router_paths": [
+        "/api/chat/project-snapshots/$hash/quarantine"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/project-snapshots.$hash.ts",
+      "router_paths": [
+        "/api/chat/project-snapshots/$hash"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/project-snapshots.ts",
+      "router_paths": [
+        "/api/chat/project-snapshots"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/projects.$id.sync.ts",
+      "router_paths": [
+        "/api/chat/projects/$id/sync"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/projects.$id.ts",
+      "router_paths": [
+        "/api/chat/projects/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "PATCH"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/projects.ts",
+      "router_paths": [
+        "/api/chat/projects"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/recipes.ts",
+      "router_paths": [
+        "/api/chat/recipes"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/recipes/$id.ts",
+      "router_paths": [
+        "/api/chat/recipes/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/references.ts",
+      "router_paths": [
+        "/api/chat/references"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/references/kody/inspect.ts",
+      "router_paths": [
+        "/api/chat/references/kody/inspect"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/references/kody/refresh.ts",
+      "router_paths": [
+        "/api/chat/references/kody/refresh"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/references/tools/refresh.ts",
+      "router_paths": [
+        "/api/chat/references/tools/refresh"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/retries/$id.prepare.ts",
+      "router_paths": [
+        "/api/chat/retries/$id/prepare"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/retries/$id.ts",
+      "router_paths": [
+        "/api/chat/retries/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/sections.ts",
+      "router_paths": [
+        "/api/chat/sections"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/sections/$id.ts",
+      "router_paths": [
+        "/api/chat/sections/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "PATCH"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/skills.ts",
+      "router_paths": [
+        "/api/chat/skills"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/skills/$id.ts",
+      "router_paths": [
+        "/api/chat/skills/$id"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/workspace-history.ts",
+      "router_paths": [
+        "/api/chat/workspace-history"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/workspace-index.activity.ts",
+      "router_paths": [
+        "/api/chat/workspace-index/activity"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/workspace-index.ts",
+      "router_paths": [
+        "/api/chat/workspace-index"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/workspace-sync/$operation.ts",
+      "router_paths": [
+        "/api/chat/workspace-sync/$operation"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/chat/workspace.ts",
+      "router_paths": [
+        "/api/chat/workspace"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/data/libraries.ts",
+      "router_paths": [
+        "/api/data/libraries"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/data/partners.ts",
+      "router_paths": [
+        "/api/data/partners"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/discord/interactions.tsx",
+      "router_paths": [
+        "/api/discord/interactions"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/example/deploy.ts",
+      "router_paths": [
+        "/api/example/deploy"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/github/webhook.ts",
+      "router_paths": [
+        "/api/github/webhook"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/mcp/$.ts",
+      "router_paths": [
+        "/api/mcp/$"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/mcp/index.ts",
+      "router_paths": [
+        "/api/mcp/"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "DELETE",
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/api/og/{$}[.]png.ts",
+      "router_paths": [
+        "/api/og/{$}.png"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/readme/{$}[.]png.ts",
+      "router_paths": [
+        "/api/readme/{$}.png"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/api/uploadthing.ts",
+      "router_paths": [
+        "/api/uploadthing"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/application-starter.docs.tsx",
+      "router_paths": [
+        "/application-starter/docs"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/application-starter.index.tsx",
+      "router_paths": [
+        "/application-starter/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/application-starter.tsx",
+      "router_paths": [
+        "/application-starter"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/auth/$provider/start.tsx",
+      "router_paths": [
+        "/auth/$provider/start"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/auth/cli.tsx",
+      "router_paths": [
+        "/auth/cli"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/auth/mcp/callback.ts",
+      "router_paths": [
+        "/auth/mcp/callback"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/auth/mcp/client-metadata.ts",
+      "router_paths": [
+        "/auth/mcp/client-metadata"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/auth/popup-success.tsx",
+      "router_paths": [
+        "/auth/popup-success"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/auth/signout.tsx",
+      "router_paths": [
+        "/auth/signout"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/blog.$.tsx",
+      "router_paths": [
+        "/blog/$"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/blog.index.tsx",
+      "router_paths": [
+        "/blog/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/blog.tsx",
+      "router_paths": [
+        "/blog"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/brand-guide.tsx",
+      "router_paths": [
+        "/brand-guide"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/builder.tsx",
+      "router_paths": [
+        "/builder"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/builder_.$id.tsx",
+      "router_paths": [
+        "/builder_/$id"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/builder_.ai.tsx",
+      "router_paths": [
+        "/builder_/ai"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/builder_.esbuild.tsx",
+      "router_paths": [
+        "/builder_/esbuild"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/builder_.llms[.]txt.ts",
+      "router_paths": [
+        "/builder_/llms.txt"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/builder_.new.tsx",
+      "router_paths": [
+        "/builder_/new"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/builder_.p.$hash.tsx",
+      "router_paths": [
+        "/builder_/p/$hash"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/charts.catalog_.catalog[.]json.ts",
+      "router_paths": [
+        "/charts/catalog_/catalog.json"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts",
+      "router_paths": [
+        "/charts/catalog_/previews/$revision/{$caseId}.svg"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    {
+      "source": "src/routes/chat-access.tsx",
+      "router_paths": [
+        "/chat-access"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.b.$botId.tsx",
+      "router_paths": [
+        "/chat/b/$botId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.c.$conversationId.m.$messageId.tsx",
+      "router_paths": [
+        "/chat/c/$conversationId/m/$messageId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.c.$conversationId.tsx",
+      "router_paths": [
+        "/chat/c/$conversationId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.charts.tsx",
+      "router_paths": [
+        "/chat/charts"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.index.tsx",
+      "router_paths": [
+        "/chat/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.new-project.tsx",
+      "router_paths": [
+        "/chat/new-project"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.p.$hash.tsx",
+      "router_paths": [
+        "/chat/p/$hash"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.project.$projectId.tsx",
+      "router_paths": [
+        "/chat/project/$projectId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.shared.tsx",
+      "router_paths": [
+        "/chat/shared"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.tsx",
+      "router_paths": [
+        "/chat"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.w.$workspaceId.b.$botId.tsx",
+      "router_paths": [
+        "/chat/w/$workspaceId/b/$botId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.w.$workspaceId.home.$homeSection.tsx",
+      "router_paths": [
+        "/chat/w/$workspaceId/home/$homeSection"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/chat.w.$workspaceId.tsx",
+      "router_paths": [
+        "/chat/w/$workspaceId"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/community-projects.tsx",
+      "router_paths": [
+        "/community-projects"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/dashboard.tsx",
+      "router_paths": [
+        "/dashboard"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.avatar.tsx",
+      "router_paths": [
+        "/ds/avatar"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.badges.tsx",
+      "router_paths": [
+        "/ds/badges"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.breadcrumbs.tsx",
+      "router_paths": [
+        "/ds/breadcrumbs"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.buttons.tsx",
+      "router_paths": [
+        "/ds/buttons"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.cards.tsx",
+      "router_paths": [
+        "/ds/cards"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.colors.tsx",
+      "router_paths": [
+        "/ds/colors"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.dialog.tsx",
+      "router_paths": [
+        "/ds/dialog"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.drawer.tsx",
+      "router_paths": [
+        "/ds/drawer"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.dropdown.tsx",
+      "router_paths": [
+        "/ds/dropdown"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.effects.tsx",
+      "router_paths": [
+        "/ds/effects"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.eyebrow.tsx",
+      "router_paths": [
+        "/ds/eyebrow"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.iconography.lazy.tsx",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.iconography.tsx",
+      "router_paths": [
+        "/ds/iconography"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.index.tsx",
+      "router_paths": [
+        "/ds/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.inputs.tsx",
+      "router_paths": [
+        "/ds/inputs"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.logos.tsx",
+      "router_paths": [
+        "/ds/logos"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.maintainers.tsx",
+      "router_paths": [
+        "/ds/maintainers"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.navbar.tsx",
+      "router_paths": [
+        "/ds/navbar"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.overlays.tsx",
+      "router_paths": [
+        "/ds/overlays"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.page-header.tsx",
+      "router_paths": [
+        "/ds/page-header"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.palette.tsx",
+      "router_paths": [
+        "/ds/palette"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.panel.tsx",
+      "router_paths": [
+        "/ds/panel"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.partner-rail.tsx",
+      "router_paths": [
+        "/ds/partner-rail"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.semantic.tsx",
+      "router_paths": [
+        "/ds/semantic"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.shadows.tsx",
+      "router_paths": [
+        "/ds/shadows"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.spinner.tsx",
+      "router_paths": [
+        "/ds/spinner"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.stats.tsx",
+      "router_paths": [
+        "/ds/stats"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.tabs.tsx",
+      "router_paths": [
+        "/ds/tabs"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.takeover.tsx",
+      "router_paths": [
+        "/ds/takeover"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.tsx",
+      "router_paths": [
+        "/ds"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ds.typography.tsx",
+      "router_paths": [
+        "/ds/typography"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/ethos.tsx",
+      "router_paths": [
+        "/ethos"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/explore.tsx",
+      "router_paths": [
+        "/explore"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/feedback-leaderboard.tsx",
+      "router_paths": [
+        "/feedback-leaderboard"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/index.tsx",
+      "router_paths": [
+        "/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/intent/registry/$packageName.$skillName.tsx",
+      "router_paths": [
+        "/intent/registry/$packageName/$skillName"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/intent/registry/$packageName.index.tsx",
+      "router_paths": [
+        "/intent/registry/$packageName/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/intent/registry/$packageName.tsx",
+      "router_paths": [
+        "/intent/registry/$packageName"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/intent/registry/$packageName.{$}[.]md.tsx",
+      "router_paths": [
+        "/intent/registry/$packageName/{$}.md"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": true,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/intent/registry/index.tsx",
+      "router_paths": [
+        "/intent/registry/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/learn.tsx",
+      "router_paths": [
+        "/learn"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/libraries.tsx",
+      "router_paths": [
+        "/libraries"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/libraries_.$framework.tsx",
+      "router_paths": [
+        "/libraries_/$framework"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/llms-full[.]txt.ts",
+      "router_paths": [
+        "/llms-full.txt"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/llms[.]txt.ts",
+      "router_paths": [
+        "/llms.txt"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/login.tsx",
+      "router_paths": [
+        "/login"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/maintainers.tsx",
+      "router_paths": [
+        "/maintainers"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/merch.tsx",
+      "router_paths": [
+        "/merch"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/oauth/authorize.tsx",
+      "router_paths": [
+        "/oauth/authorize"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/oauth/register.ts",
+      "router_paths": [
+        "/oauth/register"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "OPTIONS",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/oauth/token.ts",
+      "router_paths": [
+        "/oauth/token"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "OPTIONS",
+        "POST"
+      ]
+    },
+    {
+      "source": "src/routes/paid-support.tsx",
+      "router_paths": [
+        "/paid-support"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners-embed.tsx",
+      "router_paths": [
+        "/partners-embed"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners.$partner.tsx",
+      "router_paths": [
+        "/partners/$partner"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners.index.tsx",
+      "router_paths": [
+        "/partners/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners.netlify.tsx",
+      "router_paths": [
+        "/partners/netlify"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners.railway.tsx",
+      "router_paths": [
+        "/partners/railway"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners.render.tsx",
+      "router_paths": [
+        "/partners/render"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/partners.tsx",
+      "router_paths": [
+        "/partners"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/privacy.tsx",
+      "router_paths": [
+        "/privacy"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/robots[.]txt.ts",
+      "router_paths": [
+        "/robots.txt"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/rss[.]xml.ts",
+      "router_paths": [
+        "/rss.xml"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/shop.$handle.tsx",
+      "router_paths": [
+        "/shop/$handle"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.cart.tsx",
+      "router_paths": [
+        "/shop/cart"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.collections.$handle.tsx",
+      "router_paths": [
+        "/shop/collections/$handle"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.index.tsx",
+      "router_paths": [
+        "/shop/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.pages.$handle.tsx",
+      "router_paths": [
+        "/shop/pages/$handle"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.policies.$handle.tsx",
+      "router_paths": [
+        "/shop/policies/$handle"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.products.$handle.tsx",
+      "router_paths": [
+        "/shop/products/$handle"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.search.tsx",
+      "router_paths": [
+        "/shop/search"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/shop.tsx",
+      "router_paths": [
+        "/shop"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/showcase/$id.tsx",
+      "router_paths": [
+        "/showcase/$id"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/showcase/edit.$id.tsx",
+      "router_paths": [
+        "/showcase/edit/$id"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/showcase/index.tsx",
+      "router_paths": [
+        "/showcase/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/showcase/submit.tsx",
+      "router_paths": [
+        "/showcase/submit"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/showcases.tsx",
+      "router_paths": [
+        "/showcases"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/sitemap[.]xml.ts",
+      "router_paths": [
+        "/sitemap.xml"
+      ],
+      "server_handler_surface": true,
+      "dynamic_parameters": false,
+      "http_methods": [
+        "GET"
+      ]
+    },
+    {
+      "source": "src/routes/sponsors-embed.tsx",
+      "router_paths": [
+        "/sponsors-embed"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stack.$category.tsx",
+      "router_paths": [
+        "/stack/$category"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stats/index.tsx",
+      "router_paths": [
+        "/stats/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stats/npm/$packages.tsx",
+      "router_paths": [
+        "/stats/npm/$packages"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": true,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stats/npm/-comparisons.ts",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stats/npm/-utils.ts",
+      "router_paths": [],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stats/npm/embed.tsx",
+      "router_paths": [
+        "/stats/npm/embed"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/stats/npm/index.tsx",
+      "router_paths": [
+        "/stats/npm/"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/support.tsx",
+      "router_paths": [
+        "/support"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/tenets.tsx",
+      "router_paths": [
+        "/tenets"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/terms.tsx",
+      "router_paths": [
+        "/terms"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    },
+    {
+      "source": "src/routes/workshops.tsx",
+      "router_paths": [
+        "/workshops"
+      ],
+      "server_handler_surface": false,
+      "dynamic_parameters": false,
+      "http_methods": []
+    }
+  ],
+  "server_function_callsites": [
+    {
+      "source": "src/chat/access-admin.functions.ts",
+      "line": 13
+    },
+    {
+      "source": "src/chat/access-admin.functions.ts",
+      "line": 19
+    },
+    {
+      "source": "src/chat/access-admin.functions.ts",
+      "line": 27
+    },
+    {
+      "source": "src/chat/access-admin.functions.ts",
+      "line": 31
+    },
+    {
+      "source": "src/chat/access-admin.functions.ts",
+      "line": 35
+    },
+    {
+      "source": "src/chat/access.functions.ts",
+      "line": 12
+    },
+    {
+      "source": "src/chat/access.functions.ts",
+      "line": 18
+    },
+    {
+      "source": "src/chat/access.functions.ts",
+      "line": 21
+    },
+    {
+      "source": "src/chat/access.functions.ts",
+      "line": 35
+    },
+    {
+      "source": "src/chat/access.functions.ts",
+      "line": 41
+    },
+    {
+      "source": "src/chat/preferences.functions.ts",
+      "line": 10
+    },
+    {
+      "source": "src/chat/preferences.functions.ts",
+      "line": 16
+    },
+    {
+      "source": "src/chat/workspace.functions.ts",
+      "line": 11
+    },
+    {
+      "source": "src/chat/workspace.functions.ts",
+      "line": 18
+    },
+    {
+      "source": "src/chat/workspace.functions.ts",
+      "line": 28
+    },
+    {
+      "source": "src/chat/workspace.functions.ts",
+      "line": 35
+    },
+    {
+      "source": "src/components/landing/StartLanding.tsx",
+      "line": 63
+    },
+    {
+      "source": "src/components/landing/StartLanding.tsx",
+      "line": 479
+    },
+    {
+      "source": "src/routes/_library/charts.$version.index.tsx",
+      "line": 13
+    },
+    {
+      "source": "src/routes/auth/cli.tsx",
+      "line": 11
+    },
+    {
+      "source": "src/routes/chat.tsx",
+      "line": 9
+    },
+    {
+      "source": "src/routes/workshops.tsx",
+      "line": 23
+    },
+    {
+      "source": "src/server/blog.ts",
+      "line": 14
+    },
+    {
+      "source": "src/server/sponsors.ts",
+      "line": 30
+    },
+    {
+      "source": "src/utils/activity.functions.ts",
+      "line": 14
+    },
+    {
+      "source": "src/utils/activity.functions.ts",
+      "line": 23
+    },
+    {
+      "source": "src/utils/activity.functions.ts",
+      "line": 32
+    },
+    {
+      "source": "src/utils/activity.functions.ts",
+      "line": 54
+    },
+    {
+      "source": "src/utils/audit.functions.ts",
+      "line": 17
+    },
+    {
+      "source": "src/utils/audit.functions.ts",
+      "line": 112
+    },
+    {
+      "source": "src/utils/audit.functions.ts",
+      "line": 233
+    },
+    {
+      "source": "src/utils/audit.functions.ts",
+      "line": 430
+    },
+    {
+      "source": "src/utils/auth.functions.ts",
+      "line": 12
+    },
+    {
+      "source": "src/utils/auth.functions.ts",
+      "line": 21
+    },
+    {
+      "source": "src/utils/auth.functions.ts",
+      "line": 30
+    },
+    {
+      "source": "src/utils/auth.functions.ts",
+      "line": 67
+    },
+    {
+      "source": "src/utils/auth.functions.ts",
+      "line": 89
+    },
+    {
+      "source": "src/utils/blog.functions.ts",
+      "line": 100
+    },
+    {
+      "source": "src/utils/blog.functions.ts",
+      "line": 150
+    },
+    {
+      "source": "src/utils/blog.functions.ts",
+      "line": 157
+    },
+    {
+      "source": "src/utils/blog.functions.ts",
+      "line": 173
+    },
+    {
+      "source": "src/utils/blog.functions.ts",
+      "line": 207
+    },
+    {
+      "source": "src/utils/charts-catalog.functions.ts",
+      "line": 26
+    },
+    {
+      "source": "src/utils/charts-catalog.functions.ts",
+      "line": 37
+    },
+    {
+      "source": "src/utils/charts-catalog.functions.ts",
+      "line": 57
+    },
+    {
+      "source": "src/utils/charts-catalog.functions.ts",
+      "line": 73
+    },
+    {
+      "source": "src/utils/charts-catalog.functions.ts",
+      "line": 99
+    },
+    {
+      "source": "src/utils/config.ts",
+      "line": 89
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 78
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 168
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 225
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 246
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 278
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 358
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 461
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 492
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 580
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 641
+    },
+    {
+      "source": "src/utils/docFeedback.functions.ts",
+      "line": 671
+    },
+    {
+      "source": "src/utils/docs-admin.functions.ts",
+      "line": 8
+    },
+    {
+      "source": "src/utils/docs-admin.functions.ts",
+      "line": 12
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 335
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 360
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 385
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 428
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 479
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 499
+    },
+    {
+      "source": "src/utils/docs.functions.ts",
+      "line": 524
+    },
+    {
+      "source": "src/utils/env.ts",
+      "line": 19
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 19
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 23
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 27
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 31
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 35
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 39
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 43
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 47
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 51
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 59
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 67
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 71
+    },
+    {
+      "source": "src/utils/intent-admin.functions.ts",
+      "line": 79
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 144
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 158
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 464
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 509
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 568
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 602
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 642
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 669
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 752
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 854
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 968
+    },
+    {
+      "source": "src/utils/intent.functions.ts",
+      "line": 1021
+    },
+    {
+      "source": "src/utils/mcpApiKeys.functions.ts",
+      "line": 19
+    },
+    {
+      "source": "src/utils/mcpApiKeys.functions.ts",
+      "line": 51
+    },
+    {
+      "source": "src/utils/mcpApiKeys.functions.ts",
+      "line": 111
+    },
+    {
+      "source": "src/utils/mcpApiKeys.functions.ts",
+      "line": 140
+    },
+    {
+      "source": "src/utils/mcpApiKeys.functions.ts",
+      "line": 168
+    },
+    {
+      "source": "src/utils/oauthClient.functions.ts",
+      "line": 14
+    },
+    {
+      "source": "src/utils/oauthClient.functions.ts",
+      "line": 31
+    },
+    {
+      "source": "src/utils/oauthClient.functions.ts",
+      "line": 48
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 16
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 61
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 84
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 129
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 199
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 236
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 281
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 372
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 384
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 444
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 460
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 489
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 534
+    },
+    {
+      "source": "src/utils/roles.functions.ts",
+      "line": 605
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 92
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 139
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 170
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 189
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 219
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 258
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 277
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 292
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 317
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 386
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 404
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 467
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 492
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 509
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 539
+    },
+    {
+      "source": "src/utils/shop.functions.ts",
+      "line": 555
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 72
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 117
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 159
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 177
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 202
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 238
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 257
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 273
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 381
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 457
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 516
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 532
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 563
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 725
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 761
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 847
+    },
+    {
+      "source": "src/utils/showcase.functions.ts",
+      "line": 886
+    },
+    {
+      "source": "src/utils/sponsors.functions.ts",
+      "line": 38
+    },
+    {
+      "source": "src/utils/stats-admin.functions.ts",
+      "line": 10
+    },
+    {
+      "source": "src/utils/stats-admin.functions.ts",
+      "line": 14
+    },
+    {
+      "source": "src/utils/stats-admin.functions.ts",
+      "line": 22
+    },
+    {
+      "source": "src/utils/stats-admin.functions.ts",
+      "line": 26
+    },
+    {
+      "source": "src/utils/stats-queries.functions.ts",
+      "line": 13
+    },
+    {
+      "source": "src/utils/stats-queries.functions.ts",
+      "line": 17
+    },
+    {
+      "source": "src/utils/stats-queries.functions.ts",
+      "line": 21
+    },
+    {
+      "source": "src/utils/stats-queries.functions.ts",
+      "line": 36
+    },
+    {
+      "source": "src/utils/user-stats.functions.ts",
+      "line": 7
+    },
+    {
+      "source": "src/utils/user-stats.functions.ts",
+      "line": 11
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 41
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 45
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 49
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 53
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 61
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 77
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 86
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 102
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 106
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 110
+    },
+    {
+      "source": "src/utils/users.functions.ts",
+      "line": 114
+    }
+  ],
+  "tanstack_import_sources": [
+    "harness-tests/core/action-evidence-context.test.ts",
+    "harness-tests/core/assistant-context-reference.test.ts",
+    "harness-tests/core/assistant-delegation-tools.test.ts",
+    "harness-tests/core/assistant-discovery.test.ts",
+    "harness-tests/core/assistant-loop.test.ts",
+    "harness-tests/core/assistant-mcp-discovery.test.ts",
+    "harness-tests/core/assistant-mcp-lazy.test.ts",
+    "harness-tests/core/assistant-message-history.test.ts",
+    "harness-tests/core/assistant-schedule-tools.test.ts",
+    "harness-tests/core/assistant-tool-failures.test.ts",
+    "harness-tests/core/assistant-workspace-tools.test.ts",
+    "harness-tests/core/browser-workspace-collections.test.ts",
+    "harness-tests/core/cloudflare-text.test.ts",
+    "harness-tests/core/composer-references.test.ts",
+    "harness-tests/core/context-observation-runtime.test.ts",
+    "harness-tests/core/conversation-events.test.ts",
+    "harness-tests/core/conversation-route-cache.test.ts",
+    "harness-tests/core/delegation-sources.test.ts",
+    "harness-tests/core/fixtures/file-delivery.ts",
+    "harness-tests/core/fresh-tool-context.test.ts",
+    "harness-tests/core/markdown-links.test.ts",
+    "harness-tests/core/mcp-read-context.test.ts",
+    "harness-tests/core/model-attachments.test.ts",
+    "harness-tests/core/navigation.test.ts",
+    "harness-tests/core/provider-observation-adapters.test.ts",
+    "harness-tests/core/provider-observation.test.ts",
+    "harness-tests/core/reasoning-continuity.test.ts",
+    "harness-tests/core/retry-evidence-copy.test.ts",
+    "harness-tests/core/retry-request.test.ts",
+    "harness-tests/core/retry-source.test.ts",
+    "harness-tests/core/run-models.test.ts",
+    "harness-tests/core/task-context.test.ts",
+    "harness-tests/core/transcript-archive.test.ts",
+    "harness-tests/core/usage-provider-attempts.test.ts",
+    "harness-tests/core/workspace-panels.test.ts",
+    "harness-tests/pending-runtime/context-reference-paging-runtime.test.ts",
+    "harness-tests/pending-runtime/reference-cursor-contract.test.ts",
+    "harness-tests/pending-runtime/retry-attempt-runtime.test.ts",
+    "harness-tests/pending-runtime/retry-source-runtime.test.ts",
+    "scripts/builder-ai-app-server.ts",
+    "scripts/charts-landing/activation-chart.ts",
+    "scripts/charts-landing/bundle-size-chart.ts",
+    "scripts/charts-landing/kinetic-area-chart.ts",
+    "scripts/charts-landing/kinetic-bar-chart.ts",
+    "scripts/charts-landing/kinetic-donut-chart.ts",
+    "scripts/charts-landing/kinetic-dumbbell-chart.ts",
+    "scripts/charts-landing/kinetic-heatmap-chart.ts",
+    "scripts/charts-landing/kinetic-layered-chart.ts",
+    "scripts/charts-landing/kinetic-line-chart.ts",
+    "scripts/charts-landing/kinetic-lollipop-chart.ts",
+    "scripts/charts-landing/kinetic-radar-chart.ts",
+    "scripts/charts-landing/kinetic-scatter-chart.ts",
+    "scripts/generate-charts-landing-svg.ts",
+    "src/application-starter/api/create-worker.ts",
+    "src/application-starter/api/features.ts",
+    "src/auth/oauth-popup-attempt.ts",
+    "src/chat/access-admin.functions.ts",
+    "src/chat/access-admin.server.ts",
+    "src/chat/access.functions.ts",
+    "src/chat/client/workspace-collections.ts",
+    "src/chat/components/AccountTimezone.tsx",
+    "src/chat/components/App.tsx",
+    "src/chat/components/AppearanceSettings.tsx",
+    "src/chat/components/AuthPopupForm.tsx",
+    "src/chat/components/BotWorkspace.tsx",
+    "src/chat/components/ChatShell.tsx",
+    "src/chat/components/CommandPalette.tsx",
+    "src/chat/components/ComposerReferences.tsx",
+    "src/chat/components/ConnectionSettings.tsx",
+    "src/chat/components/ConversationActionEvidence.tsx",
+    "src/chat/components/ConversationDetails.tsx",
+    "src/chat/components/ConversationMinimap.tsx",
+    "src/chat/components/ConversationNavigator.tsx",
+    "src/chat/components/ConversationNavigatorScope.tsx",
+    "src/chat/components/ConversationOrigin.tsx",
+    "src/chat/components/ConversationSession.tsx",
+    "src/chat/components/ConversationThreads.tsx",
+    "src/chat/components/ConversationTurn.tsx",
+    "src/chat/components/ConversationView.tsx",
+    "src/chat/components/CopyBotDialog.tsx",
+    "src/chat/components/DelegatedTaskHistory.tsx",
+    "src/chat/components/DelegatedTasks.tsx",
+    "src/chat/components/DeviceSettings.tsx",
+    "src/chat/components/DraftBot.tsx",
+    "src/chat/components/EarlierMessages.tsx",
+    "src/chat/components/ExecutionSessionHistory.tsx",
+    "src/chat/components/HomeAssetDetail.tsx",
+    "src/chat/components/HomeDashboard.tsx",
+    "src/chat/components/KodyAddServer.tsx",
+    "src/chat/components/KodyCommunity.tsx",
+    "src/chat/components/KodyJobControl.tsx",
+    "src/chat/components/KodyMail.tsx",
+    "src/chat/components/KodyMemorySearch.tsx",
+    "src/chat/components/KodyResources.tsx",
+    "src/chat/components/KodyRunDetails.tsx",
+    "src/chat/components/KodyRunHistory.tsx",
+    "src/chat/components/KodySavedPackages.tsx",
+    "src/chat/components/KodyUsage.tsx",
+    "src/chat/components/MemoryPanel.tsx",
+    "src/chat/components/MessageAttachments.tsx",
+    "src/chat/components/MessageMarkdown.tsx",
+    "src/chat/components/MessageReferences.tsx",
+    "src/chat/components/Onboarding.tsx",
+    "src/chat/components/PendingTaskCard.tsx",
+    "src/chat/components/PluginSettings.tsx",
+    "src/chat/components/ProjectsPanel.client.tsx",
+    "src/chat/components/ProjectsPanel.tsx",
+    "src/chat/components/ResponsePreferences.tsx",
+    "src/chat/components/RetryBranch.tsx",
+    "src/chat/components/RetryComposer.tsx",
+    "src/chat/components/RetryReturn.tsx",
+    "src/chat/components/SavedFileDeliveries.tsx",
+    "src/chat/components/SavedFileText.tsx",
+    "src/chat/components/SavedFiles.tsx",
+    "src/chat/components/Schedules.tsx",
+    "src/chat/components/SkillSettings.tsx",
+    "src/chat/components/TaskSources.tsx",
+    "src/chat/components/TaskUsageDetails.tsx",
+    "src/chat/components/ThreadLifecycle.tsx",
+    "src/chat/components/ThreadTitle.tsx",
+    "src/chat/components/ToolCallDetails.tsx",
+    "src/chat/components/VirtualMessages.tsx",
+    "src/chat/components/WorkflowHistory.tsx",
+    "src/chat/components/WorkflowStart.tsx",
+    "src/chat/components/WorkspaceCommands.tsx",
+    "src/chat/components/account-preferences-client.ts",
+    "src/chat/components/appearance-account.ts",
+    "src/chat/components/chatIdentityQuery.ts",
+    "src/chat/components/conversation-thread-state.ts",
+    "src/chat/components/conversationRouteQuery.ts",
+    "src/chat/components/projects/ProjectPage.client.tsx",
+    "src/chat/components/useCloudDraft.ts",
+    "src/chat/components/useComposerAttachments.ts",
+    "src/chat/components/useConversationPalette.ts",
+    "src/chat/components/useConversationRead.ts",
+    "src/chat/components/usePendingSend.ts",
+    "src/chat/components/useRetryDraft.ts",
+    "src/chat/components/useRunModel.ts",
+    "src/chat/components/useSavedFiles.ts",
+    "src/chat/components/useWorkspaceCollections.ts",
+    "src/chat/components/useWorkspaceSearch.ts",
+    "src/chat/core/bot-activity.ts",
+    "src/chat/core/conversation-copy.ts",
+    "src/chat/core/conversation-runs.ts",
+    "src/chat/core/conversation-snapshot.ts",
+    "src/chat/core/markdown-links.ts",
+    "src/chat/core/message-navigation.ts",
+    "src/chat/core/retry-request.ts",
+    "src/chat/core/task-context.ts",
+    "src/chat/core/transcript.ts",
+    "src/chat/preferences.functions.ts",
+    "src/chat/server/answer-evidence.ts",
+    "src/chat/server/assistant-connection-tools.ts",
+    "src/chat/server/assistant-context.ts",
+    "src/chat/server/assistant-conversation-tools.ts",
+    "src/chat/server/assistant-delegation-tools.ts",
+    "src/chat/server/assistant-discovery.ts",
+    "src/chat/server/assistant-file-tools.ts",
+    "src/chat/server/assistant-kody-memory-tools.ts",
+    "src/chat/server/assistant-kody-run-tools.ts",
+    "src/chat/server/assistant-mcp-tools.ts",
+    "src/chat/server/assistant-memory-tools.ts",
+    "src/chat/server/assistant-message-history.ts",
+    "src/chat/server/assistant-plugin-tools.ts",
+    "src/chat/server/assistant-project-tools.ts",
+    "src/chat/server/assistant-schedule-tools.ts",
+    "src/chat/server/assistant-skill-tools.ts",
+    "src/chat/server/assistant-thread-tools.ts",
+    "src/chat/server/assistant-tool-failures.ts",
+    "src/chat/server/assistant-workflow-tools.ts",
+    "src/chat/server/assistant-workspace-tools.ts",
+    "src/chat/server/cloudflare-text.ts",
+    "src/chat/server/connected-devices.ts",
+    "src/chat/server/conversation-copy-storage.ts",
+    "src/chat/server/conversation-events.ts",
+    "src/chat/server/conversation-run-projection.ts",
+    "src/chat/server/conversation-threads.ts",
+    "src/chat/server/conversation.ts",
+    "src/chat/server/discovery-model.ts",
+    "src/chat/server/gateway.ts",
+    "src/chat/server/jev-arguments.ts",
+    "src/chat/server/jev-array.ts",
+    "src/chat/server/jev-batched-arguments.ts",
+    "src/chat/server/jev-call-review.ts",
+    "src/chat/server/jev-router.ts",
+    "src/chat/server/jev-task-decisions.ts",
+    "src/chat/server/jev-verification.ts",
+    "src/chat/server/message-references.ts",
+    "src/chat/server/model-attachments.ts",
+    "src/chat/server/native-file-delivery.ts",
+    "src/chat/server/origin-redirect.ts",
+    "src/chat/server/providers.ts",
+    "src/chat/server/research.ts",
+    "src/chat/server/run-models.ts",
+    "src/chat/server/semantic-history.ts",
+    "src/chat/server/tool-proposals.ts",
+    "src/chat/server/transcript-archive.ts",
+    "src/chat/server/usage-cost.ts",
+    "src/chat/server/usage.ts",
+    "src/chat/server/workflow-file-input.ts",
+    "src/chat/server/workflow-results.ts",
+    "src/chat/workspace.functions.ts",
+    "src/components/AiDock.tsx",
+    "src/components/AppDevtools.tsx",
+    "src/components/ApplicationStarter.tsx",
+    "src/components/ApplicationStarterHotkeys.client.tsx",
+    "src/components/AuthenticatedUserMenu.tsx",
+    "src/components/BackgroundGradient.tsx",
+    "src/components/BlogCard.tsx",
+    "src/components/BottomCTA.tsx",
+    "src/components/BrandContextMenu.tsx",
+    "src/components/Breadcrumbs.tsx",
+    "src/components/ClientAuth.tsx",
+    "src/components/CommunityProjectCard.tsx",
+    "src/components/DefaultCatchBoundary.tsx",
+    "src/components/Doc.tsx",
+    "src/components/DocBreadcrumb.tsx",
+    "src/components/DocFeedbackNote.tsx",
+    "src/components/DocFeedbackProvider.tsx",
+    "src/components/ExampleDeployDialog.tsx",
+    "src/components/FeedbackLeaderboard.tsx",
+    "src/components/FeedbackModerationList.tsx",
+    "src/components/FeedbackModerationPage.tsx",
+    "src/components/FilterComponents.tsx",
+    "src/components/Footer.tsx",
+    "src/components/FrameworkCard.tsx",
+    "src/components/FrameworkSelect.tsx",
+    "src/components/ImageUpload.tsx",
+    "src/components/LandingCommunitySection.tsx",
+    "src/components/LibrariesWidget.tsx",
+    "src/components/LibraryDownloadsMicro.tsx",
+    "src/components/LibraryGridCard.tsx",
+    "src/components/LibraryLayout.tsx",
+    "src/components/LibraryStatsSection.tsx",
+    "src/components/LoginModal.tsx",
+    "src/components/MaintainerCard.tsx",
+    "src/components/MaintainersSection.tsx",
+    "src/components/MegaMenuItem.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/NavbarAuthControls.tsx",
+    "src/components/NavbarCartButton.tsx",
+    "src/components/NewsletterSignup.tsx",
+    "src/components/NotFound.tsx",
+    "src/components/NotesModerationList.tsx",
+    "src/components/NotesModerationPage.tsx",
+    "src/components/OpenSourceStats.tsx",
+    "src/components/OssSponsorsSection.tsx",
+    "src/components/PartnersSection.tsx",
+    "src/components/PartnersSponsorsSection.tsx",
+    "src/components/ProductScarf.tsx",
+    "src/components/RecentPostsWidget.tsx",
+    "src/components/RedirectVersionBanner.tsx",
+    "src/components/Scarf.tsx",
+    "src/components/SearchShared.tsx",
+    "src/components/ShowcaseCard.tsx",
+    "src/components/ShowcaseDetail.tsx",
+    "src/components/ShowcaseGallery.tsx",
+    "src/components/ShowcaseModerationList.tsx",
+    "src/components/ShowcaseModerationPage.tsx",
+    "src/components/ShowcaseSection.tsx",
+    "src/components/ShowcaseSubmitForm.tsx",
+    "src/components/SponsorsSection.tsx",
+    "src/components/ThemeProvider.tsx",
+    "src/components/Toc.tsx",
+    "src/components/TocMobile.tsx",
+    "src/components/UserFeedbackSection.tsx",
+    "src/components/VersionSelect.tsx",
+    "src/components/account/AccountProfilePictureSection.client.tsx",
+    "src/components/admin/AdminAccessDenied.tsx",
+    "src/components/admin/AdminEmptyState.tsx",
+    "src/components/admin/DocsCacheTab.tsx",
+    "src/components/application-starter/ApplicationStarterProvider.tsx",
+    "src/components/application-starter/CustomAddonDialog.tsx",
+    "src/components/application-starter/CustomTemplateDialog.tsx",
+    "src/components/application-starter/DeployDialog.tsx",
+    "src/components/application-starter/useApplicationStarter.tsx",
+    "src/components/application-starter/useApplicationStarterUrl.ts",
+    "src/components/charts/ChartsBuilderPage.client.tsx",
+    "src/components/charts/ChartsCatalogDocExample.tsx",
+    "src/components/charts/ChartsCatalogPages.tsx",
+    "src/components/charts/TimeSeriesChart.tsx",
+    "src/components/ds/ui/BlogPostCard.tsx",
+    "src/components/ds/ui/PartnerRail.tsx",
+    "src/components/ds/ui/index.tsx",
+    "src/components/examples/ClientExampleDocEmbed.tsx",
+    "src/components/game/ui/CompleteOverlay.tsx",
+    "src/components/game/ui/DebugPanel.tsx",
+    "src/components/home/HomeApplicationStarter.tsx",
+    "src/components/home/HomeCommunitySection.tsx",
+    "src/components/home/HomeSocialProofSection.tsx",
+    "src/components/intent/SkillDependencyGraph.tsx",
+    "src/components/intent/SkillDiffViewer.tsx",
+    "src/components/intent/SkillSparkline.tsx",
+    "src/components/landing/AiCampaignHero.tsx",
+    "src/components/landing/AiLanding.tsx",
+    "src/components/landing/ChartsCatalogGallery.tsx",
+    "src/components/landing/ChartsHeroBackground.tsx",
+    "src/components/landing/ChartsKineticCode.tsx",
+    "src/components/landing/ChartsLanding.tsx",
+    "src/components/landing/HighlightLanding.tsx",
+    "src/components/landing/HotkeysShortcut.client.tsx",
+    "src/components/landing/LandingEcosystemProof.tsx",
+    "src/components/landing/LandingPromptBox.tsx",
+    "src/components/landing/LibraryLanding.tsx",
+    "src/components/landing/MarkdownLanding.tsx",
+    "src/components/landing/QueryLanding.tsx",
+    "src/components/landing/TableLanding.tsx",
+    "src/components/landing/codeExamples.ts",
+    "src/components/markdown/CodeBlock.tsx",
+    "src/components/markdown/FrameworkContent.tsx",
+    "src/components/markdown/LiveExample.tsx",
+    "src/components/markdown/Markdown.tsx",
+    "src/components/markdown/MarkdownLink.tsx",
+    "src/components/markdown/PackageManagerTabs.tsx",
+    "src/components/markdown/Tabs.tsx",
+    "src/components/markdown/autolinkBareUrls.ts",
+    "src/components/npm-stats/NPMStatsChart.tsx",
+    "src/components/npm-stats/NPMSummary.tsx",
+    "src/components/npm-stats/PackageSearch.tsx",
+    "src/components/npm-stats/PopularComparisons.tsx",
+    "src/components/npm-stats/npmQueryOptions.ts",
+    "src/components/shop/CartDrawer.tsx",
+    "src/components/shop/ProductCard.tsx",
+    "src/components/shop/ProductDrawer.tsx",
+    "src/components/shop/ShopDropCard.tsx",
+    "src/components/shop/ui/Crumb.tsx",
+    "src/components/stack/CategoryArticle.tsx",
+    "src/contexts/LibrariesOverlayContext.tsx",
+    "src/contexts/LoginModalContext.tsx",
+    "src/hooks/useCart.ts",
+    "src/hooks/useCurrentUser.ts",
+    "src/libraries/libraries.ts",
+    "src/libraries/start.tsx",
+    "src/queries/auth.ts",
+    "src/queries/docFeedback.ts",
+    "src/queries/docsConfig.ts",
+    "src/queries/intent.ts",
+    "src/queries/roles.ts",
+    "src/queries/showcases.ts",
+    "src/queries/stats.ts",
+    "src/queries/users.ts",
+    "src/router.tsx",
+    "src/routes/-library-landing-route.tsx",
+    "src/routes/-library-landing.tsx",
+    "src/routes/-shop-browse.tsx",
+    "src/routes/[.]well-known/oauth-authorization-server.ts",
+    "src/routes/__root.tsx",
+    "src/routes/_library.tsx",
+    "src/routes/_library/$libraryId/$version.docs.$.tsx",
+    "src/routes/_library/$libraryId/$version.docs.blog.tsx",
+    "src/routes/_library/$libraryId/$version.docs.community-resources.tsx",
+    "src/routes/_library/$libraryId/$version.docs.contributors.tsx",
+    "src/routes/_library/$libraryId/$version.docs.framework.$framework.$.tsx",
+    "src/routes/_library/$libraryId/$version.docs.framework.$framework.examples.$.tsx",
+    "src/routes/_library/$libraryId/$version.docs.framework.$framework.index.tsx",
+    "src/routes/_library/$libraryId/$version.docs.framework.$framework.{$}[.]md.tsx",
+    "src/routes/_library/$libraryId/$version.docs.framework.index.tsx",
+    "src/routes/_library/$libraryId/$version.docs.index.tsx",
+    "src/routes/_library/$libraryId/$version.docs.index[.]md.ts",
+    "src/routes/_library/$libraryId/$version.docs.npm-stats.tsx",
+    "src/routes/_library/$libraryId/$version.docs.tsx",
+    "src/routes/_library/$libraryId/$version.docs.{$}[.]md.tsx",
+    "src/routes/_library/$libraryId/$version.index.tsx",
+    "src/routes/_library/$libraryId/$version.llms[.]txt.ts",
+    "src/routes/_library/$libraryId/$version.tsx",
+    "src/routes/_library/$libraryId/index.tsx",
+    "src/routes/_library/$libraryId/route.tsx",
+    "src/routes/_library/ai.$version.index.tsx",
+    "src/routes/_library/charts.$version.index.tsx",
+    "src/routes/_library/charts.catalog.all.tsx",
+    "src/routes/_library/charts.catalog.charts.$caseId.tsx",
+    "src/routes/_library/charts.catalog.collections.$collectionId.tsx",
+    "src/routes/_library/charts.catalog.index.tsx",
+    "src/routes/_library/charts.catalog.tsx",
+    "src/routes/_library/cli.$version.index.tsx",
+    "src/routes/_library/config.$version.index.tsx",
+    "src/routes/_library/db.$version.index.tsx",
+    "src/routes/_library/devtools.$version.index.tsx",
+    "src/routes/_library/form.$version.index.tsx",
+    "src/routes/_library/highlight.$version.index.tsx",
+    "src/routes/_library/hotkeys.$version.index.tsx",
+    "src/routes/_library/intent.$version.index.tsx",
+    "src/routes/_library/markdown.$version.index.tsx",
+    "src/routes/_library/pacer.$version.index.tsx",
+    "src/routes/_library/query.$version.index.tsx",
+    "src/routes/_library/ranger.$version.index.tsx",
+    "src/routes/_library/router.$version.index.tsx",
+    "src/routes/_library/start.$version.index.tsx",
+    "src/routes/_library/store.$version.index.tsx",
+    "src/routes/_library/table.$version.index.tsx",
+    "src/routes/_library/virtual.$version.index.tsx",
+    "src/routes/_library/workflow.$version.index.tsx",
+    "src/routes/account.tsx",
+    "src/routes/account/feedback.tsx",
+    "src/routes/account/index.tsx",
+    "src/routes/account/integrations.tsx",
+    "src/routes/account/notes.tsx",
+    "src/routes/account/submissions.tsx",
+    "src/routes/admin/audit.tsx",
+    "src/routes/admin/chat-access.tsx",
+    "src/routes/admin/docs.tsx",
+    "src/routes/admin/feedback.index.tsx",
+    "src/routes/admin/feedback_.$id.tsx",
+    "src/routes/admin/github-stats.tsx",
+    "src/routes/admin/index.tsx",
+    "src/routes/admin/intent.tsx",
+    "src/routes/admin/logins.tsx",
+    "src/routes/admin/notes.index.tsx",
+    "src/routes/admin/npm-stats.tsx",
+    "src/routes/admin/roles.$roleId.tsx",
+    "src/routes/admin/roles.index.tsx",
+    "src/routes/admin/route.tsx",
+    "src/routes/admin/showcases.index.tsx",
+    "src/routes/admin/showcases_.$id.tsx",
+    "src/routes/admin/users.$userId.tsx",
+    "src/routes/admin/users.tsx",
+    "src/routes/ads.tsx",
+    "src/routes/api/application-starter/compile-attributed.ts",
+    "src/routes/api/application-starter/compile.ts",
+    "src/routes/api/application-starter/deploy/check-name.ts",
+    "src/routes/api/application-starter/deploy/github.ts",
+    "src/routes/api/application-starter/download.ts",
+    "src/routes/api/application-starter/feature-artifacts.ts",
+    "src/routes/api/application-starter/features.ts",
+    "src/routes/api/application-starter/load-remote-addon.ts",
+    "src/routes/api/application-starter/load-remote-template.ts",
+    "src/routes/api/application-starter/load-template.ts",
+    "src/routes/api/application-starter/resolve.ts",
+    "src/routes/api/application-starter/suggest.ts",
+    "src/routes/api/application-starter/validate.ts",
+    "src/routes/api/auth/callback/$provider.tsx",
+    "src/routes/api/auth/cli/create-ticket.ts",
+    "src/routes/api/auth/cli/status.$ticketId.ts",
+    "src/routes/api/chat/account/composer-drafts/$accountId.$scope.ts",
+    "src/routes/api/chat/account/devices.ts",
+    "src/routes/api/chat/account/onboarding.ts",
+    "src/routes/api/chat/account/preferences.ts",
+    "src/routes/api/chat/activity.ts",
+    "src/routes/api/chat/app-version.ts",
+    "src/routes/api/chat/bootstrap.ts",
+    "src/routes/api/chat/bot-drafts/$id.files.$fileId.content.ts",
+    "src/routes/api/chat/bot-drafts/$id.files.$fileId.ts",
+    "src/routes/api/chat/bot-drafts/$id.files.ts",
+    "src/routes/api/chat/bot-drafts/$id.ts",
+    "src/routes/api/chat/bots.ts",
+    "src/routes/api/chat/bots/$id.$operation.ts",
+    "src/routes/api/chat/bots/$id.files.$fileId.content.ts",
+    "src/routes/api/chat/bots/$id.files.$fileId.ts",
+    "src/routes/api/chat/bots/$id.files.ts",
+    "src/routes/api/chat/bots/$id.ts",
+    "src/routes/api/chat/bots/bulk.ts",
+    "src/routes/api/chat/bots/move.ts",
+    "src/routes/api/chat/connection.ts",
+    "src/routes/api/chat/conversations/$id.$operation.ts",
+    "src/routes/api/chat/conversations/$id.execution.snapshots.$snapshotId.ts",
+    "src/routes/api/chat/conversations/$id.files.$fileId.content.ts",
+    "src/routes/api/chat/conversations/$id.files.$fileId.ts",
+    "src/routes/api/chat/conversations/$id.files.ts",
+    "src/routes/api/chat/conversations/$id.workflow-runs.$runId.cancel.ts",
+    "src/routes/api/chat/conversations/$id.workflow-runs.$runId.ts",
+    "src/routes/api/chat/conversations/$id.workflows.$workflowId.ts",
+    "src/routes/api/chat/conversations/$id/files/import.ts",
+    "src/routes/api/chat/conversations/$id/memories.ts",
+    "src/routes/api/chat/conversations/$id/memories/$memoryId.ts",
+    "src/routes/api/chat/conversations/$id/references.ts",
+    "src/routes/api/chat/copies/$id.ts",
+    "src/routes/api/chat/device-transport.ts",
+    "src/routes/api/chat/draft.ts",
+    "src/routes/api/chat/files.ts",
+    "src/routes/api/chat/kody/account.ts",
+    "src/routes/api/chat/kody/callback.ts",
+    "src/routes/api/chat/kody/community.ts",
+    "src/routes/api/chat/kody/community/$listingId.ts",
+    "src/routes/api/chat/kody/connect.ts",
+    "src/routes/api/chat/kody/jobs/$jobId/enabled.ts",
+    "src/routes/api/chat/kody/mail/inboxes.ts",
+    "src/routes/api/chat/kody/mail/messages.ts",
+    "src/routes/api/chat/kody/mail/messages/$messageId.ts",
+    "src/routes/api/chat/kody/memories.ts",
+    "src/routes/api/chat/kody/memories/$memoryId.ts",
+    "src/routes/api/chat/kody/memories/$memoryId/apply.ts",
+    "src/routes/api/chat/kody/memories/$memoryId/review.ts",
+    "src/routes/api/chat/kody/memories/create/apply.ts",
+    "src/routes/api/chat/kody/memories/create/review.ts",
+    "src/routes/api/chat/kody/packages/$packageId/document.ts",
+    "src/routes/api/chat/kody/resources/$kind.ts",
+    "src/routes/api/chat/kody/runs.ts",
+    "src/routes/api/chat/kody/runs/$runId.ts",
+    "src/routes/api/chat/kody/runs/$runId/triage.ts",
+    "src/routes/api/chat/kody/servers.ts",
+    "src/routes/api/chat/kody/servers/$serverId/check.ts",
+    "src/routes/api/chat/kody/servers/$serverId/enabled.ts",
+    "src/routes/api/chat/kody/servers/$serverId/reconnect.ts",
+    "src/routes/api/chat/kody/sync.ts",
+    "src/routes/api/chat/kody/unlink.ts",
+    "src/routes/api/chat/kody/usage.ts",
+    "src/routes/api/chat/mcp/$.ts",
+    "src/routes/api/chat/mcp/contract.ts",
+    "src/routes/api/chat/model-options.ts",
+    "src/routes/api/chat/models.ts",
+    "src/routes/api/chat/openrouter/callback.ts",
+    "src/routes/api/chat/plugins.ts",
+    "src/routes/api/chat/plugins/$id.ts",
+    "src/routes/api/chat/policy.ts",
+    "src/routes/api/chat/project-snapshots.$hash.quarantine.ts",
+    "src/routes/api/chat/project-snapshots.$hash.ts",
+    "src/routes/api/chat/project-snapshots.ts",
+    "src/routes/api/chat/projects.$id.sync.ts",
+    "src/routes/api/chat/projects.$id.ts",
+    "src/routes/api/chat/projects.ts",
+    "src/routes/api/chat/recipes.ts",
+    "src/routes/api/chat/recipes/$id.ts",
+    "src/routes/api/chat/references.ts",
+    "src/routes/api/chat/references/kody/inspect.ts",
+    "src/routes/api/chat/references/kody/refresh.ts",
+    "src/routes/api/chat/references/tools/refresh.ts",
+    "src/routes/api/chat/retries/$id.prepare.ts",
+    "src/routes/api/chat/retries/$id.ts",
+    "src/routes/api/chat/sections.ts",
+    "src/routes/api/chat/sections/$id.ts",
+    "src/routes/api/chat/skills.ts",
+    "src/routes/api/chat/skills/$id.ts",
+    "src/routes/api/chat/workspace-history.ts",
+    "src/routes/api/chat/workspace-index.activity.ts",
+    "src/routes/api/chat/workspace-index.ts",
+    "src/routes/api/chat/workspace-sync/$operation.ts",
+    "src/routes/api/chat/workspace.ts",
+    "src/routes/api/data/libraries.ts",
+    "src/routes/api/data/partners.ts",
+    "src/routes/api/discord/interactions.tsx",
+    "src/routes/api/example/deploy.ts",
+    "src/routes/api/github/webhook.ts",
+    "src/routes/api/mcp/$.ts",
+    "src/routes/api/mcp/index.ts",
+    "src/routes/api/og/{$}[.]png.ts",
+    "src/routes/api/readme/{$}[.]png.ts",
+    "src/routes/api/uploadthing.ts",
+    "src/routes/application-starter.docs.tsx",
+    "src/routes/application-starter.index.tsx",
+    "src/routes/application-starter.tsx",
+    "src/routes/auth/$provider/start.tsx",
+    "src/routes/auth/cli.tsx",
+    "src/routes/auth/mcp/callback.ts",
+    "src/routes/auth/mcp/client-metadata.ts",
+    "src/routes/auth/popup-success.tsx",
+    "src/routes/auth/signout.tsx",
+    "src/routes/blog.$.tsx",
+    "src/routes/blog.index.tsx",
+    "src/routes/blog.tsx",
+    "src/routes/brand-guide.tsx",
+    "src/routes/builder.tsx",
+    "src/routes/builder_.$id.tsx",
+    "src/routes/builder_.ai.tsx",
+    "src/routes/builder_.esbuild.tsx",
+    "src/routes/builder_.llms[.]txt.ts",
+    "src/routes/builder_.new.tsx",
+    "src/routes/builder_.p.$hash.tsx",
+    "src/routes/charts.catalog_.catalog[.]json.ts",
+    "src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts",
+    "src/routes/chat-access.tsx",
+    "src/routes/chat.b.$botId.tsx",
+    "src/routes/chat.c.$conversationId.m.$messageId.tsx",
+    "src/routes/chat.c.$conversationId.tsx",
+    "src/routes/chat.charts.tsx",
+    "src/routes/chat.index.tsx",
+    "src/routes/chat.new-project.tsx",
+    "src/routes/chat.p.$hash.tsx",
+    "src/routes/chat.project.$projectId.tsx",
+    "src/routes/chat.shared.tsx",
+    "src/routes/chat.tsx",
+    "src/routes/chat.w.$workspaceId.b.$botId.tsx",
+    "src/routes/chat.w.$workspaceId.home.$homeSection.tsx",
+    "src/routes/chat.w.$workspaceId.tsx",
+    "src/routes/community-projects.tsx",
+    "src/routes/dashboard.tsx",
+    "src/routes/ds.avatar.tsx",
+    "src/routes/ds.badges.tsx",
+    "src/routes/ds.breadcrumbs.tsx",
+    "src/routes/ds.buttons.tsx",
+    "src/routes/ds.cards.tsx",
+    "src/routes/ds.colors.tsx",
+    "src/routes/ds.dialog.tsx",
+    "src/routes/ds.drawer.tsx",
+    "src/routes/ds.dropdown.tsx",
+    "src/routes/ds.effects.tsx",
+    "src/routes/ds.eyebrow.tsx",
+    "src/routes/ds.iconography.lazy.tsx",
+    "src/routes/ds.iconography.tsx",
+    "src/routes/ds.index.tsx",
+    "src/routes/ds.inputs.tsx",
+    "src/routes/ds.logos.tsx",
+    "src/routes/ds.maintainers.tsx",
+    "src/routes/ds.navbar.tsx",
+    "src/routes/ds.overlays.tsx",
+    "src/routes/ds.page-header.tsx",
+    "src/routes/ds.palette.tsx",
+    "src/routes/ds.panel.tsx",
+    "src/routes/ds.partner-rail.tsx",
+    "src/routes/ds.semantic.tsx",
+    "src/routes/ds.shadows.tsx",
+    "src/routes/ds.spinner.tsx",
+    "src/routes/ds.stats.tsx",
+    "src/routes/ds.tabs.tsx",
+    "src/routes/ds.takeover.tsx",
+    "src/routes/ds.tsx",
+    "src/routes/ds.typography.tsx",
+    "src/routes/ethos.tsx",
+    "src/routes/explore.tsx",
+    "src/routes/feedback-leaderboard.tsx",
+    "src/routes/index.tsx",
+    "src/routes/intent/registry/$packageName.$skillName.tsx",
+    "src/routes/intent/registry/$packageName.index.tsx",
+    "src/routes/intent/registry/$packageName.tsx",
+    "src/routes/intent/registry/$packageName.{$}[.]md.tsx",
+    "src/routes/intent/registry/index.tsx",
+    "src/routes/learn.tsx",
+    "src/routes/libraries.tsx",
+    "src/routes/libraries_.$framework.tsx",
+    "src/routes/llms-full[.]txt.ts",
+    "src/routes/llms[.]txt.ts",
+    "src/routes/login.tsx",
+    "src/routes/maintainers.tsx",
+    "src/routes/merch.tsx",
+    "src/routes/oauth/authorize.tsx",
+    "src/routes/oauth/register.ts",
+    "src/routes/oauth/token.ts",
+    "src/routes/paid-support.tsx",
+    "src/routes/partners-embed.tsx",
+    "src/routes/partners.$partner.tsx",
+    "src/routes/partners.index.tsx",
+    "src/routes/partners.netlify.tsx",
+    "src/routes/partners.railway.tsx",
+    "src/routes/partners.render.tsx",
+    "src/routes/partners.tsx",
+    "src/routes/privacy.tsx",
+    "src/routes/robots[.]txt.ts",
+    "src/routes/rss[.]xml.ts",
+    "src/routes/shop.$handle.tsx",
+    "src/routes/shop.cart.tsx",
+    "src/routes/shop.collections.$handle.tsx",
+    "src/routes/shop.index.tsx",
+    "src/routes/shop.pages.$handle.tsx",
+    "src/routes/shop.policies.$handle.tsx",
+    "src/routes/shop.products.$handle.tsx",
+    "src/routes/shop.search.tsx",
+    "src/routes/shop.tsx",
+    "src/routes/showcase/$id.tsx",
+    "src/routes/showcase/edit.$id.tsx",
+    "src/routes/showcase/index.tsx",
+    "src/routes/showcase/submit.tsx",
+    "src/routes/showcases.tsx",
+    "src/routes/sitemap[.]xml.ts",
+    "src/routes/sponsors-embed.tsx",
+    "src/routes/stack.$category.tsx",
+    "src/routes/stats/index.tsx",
+    "src/routes/stats/npm/$packages.tsx",
+    "src/routes/stats/npm/embed.tsx",
+    "src/routes/stats/npm/index.tsx",
+    "src/routes/support.tsx",
+    "src/routes/tenets.tsx",
+    "src/routes/terms.tsx",
+    "src/routes/workshops.tsx",
+    "src/server.ts",
+    "src/server/blog.ts",
+    "src/server/scheduled.server.ts",
+    "src/server/sponsors.ts",
+    "src/start.ts",
+    "src/types/table.d.ts",
+    "src/utils/activity.functions.ts",
+    "src/utils/audit.functions.ts",
+    "src/utils/auth.functions.ts",
+    "src/utils/auth.server-helpers.ts",
+    "src/utils/auth.server.ts",
+    "src/utils/blog.functions.ts",
+    "src/utils/builder-ai-api-key-storage.client.ts",
+    "src/utils/builder-ai-persistence.client.ts",
+    "src/utils/builder-ai-request.server.ts",
+    "src/utils/builder-ai-run-outcome.ts",
+    "src/utils/builder-ai-stream.client.ts",
+    "src/utils/builder-ai-validation.ts",
+    "src/utils/builder-ai.ts",
+    "src/utils/builder-environment.ts",
+    "src/utils/builder-examples.ts",
+    "src/utils/builder-openrouter-login.client.ts",
+    "src/utils/builder-project-sync.client.ts",
+    "src/utils/builder-workspace-tools.server.ts",
+    "src/utils/charts-catalog-embed.ts",
+    "src/utils/charts-catalog.functions.ts",
+    "src/utils/config.ts",
+    "src/utils/docFeedback.functions.ts",
+    "src/utils/docs-admin.functions.ts",
+    "src/utils/docs.functions.ts",
+    "src/utils/docs.ts",
+    "src/utils/documents.server.ts",
+    "src/utils/handleRedirects.ts",
+    "src/utils/intent-admin.functions.ts",
+    "src/utils/intent-admin.server.ts",
+    "src/utils/intent-workflows.server.ts",
+    "src/utils/intent.functions.ts",
+    "src/utils/llms.ts",
+    "src/utils/markdown/filterFrameworkContent.ts",
+    "src/utils/markdown/findFirstImageSrc.ts",
+    "src/utils/markdown/live-example.ts",
+    "src/utils/markdown/processor.ts",
+    "src/utils/mcpApiKeys.functions.ts",
+    "src/utils/mutations.ts",
+    "src/utils/oauthClient.functions.ts",
+    "src/utils/og.ts",
+    "src/utils/provider-config.server.ts",
+    "src/utils/replayable-collection.client.ts",
+    "src/utils/roles.functions.ts",
+    "src/utils/shop.functions.ts",
+    "src/utils/showcase.functions.ts",
+    "src/utils/showcase.server.ts",
+    "src/utils/sponsors.functions.ts",
+    "src/utils/start-hosting-guide.ts",
+    "src/utils/stats-admin.functions.ts",
+    "src/utils/stats-queries.functions.ts",
+    "src/utils/stats.server.ts",
+    "src/utils/usePartnerPlacementContext.ts",
+    "src/utils/user-stats.functions.ts",
+    "src/utils/users.functions.ts",
+    "src/utils/workflow-runtime.server.ts",
+    "tests/ai-dock-autolink.test.ts",
+    "tests/builder-ai-ag-ui.test.ts",
+    "tests/builder-ai-api-key-storage.test.ts",
+    "tests/builder-ai-eval.test.ts",
+    "tests/builder-ai-local-validation-stream.test.ts",
+    "tests/builder-ai-models.test.ts",
+    "tests/builder-ai-run-outcome.test.ts",
+    "tests/builder-ai-stream.test.ts",
+    "tests/builder-ai-workspace.test.ts",
+    "tests/builder-openrouter.test.ts",
+    "tests/builder-project-snapshot-storage.test.ts",
+    "tests/charts-catalog-source-previews.test.ts",
+    "tests/charts-catalog-source.test.ts",
+    "tests/charts-landing-ssr.test.ts",
+    "tests/client-example-doc-embed.test.ts",
+    "tests/code-highlighting.test.ts",
+    "tests/intent-workflow.test.ts",
+    "tests/markdown-live-example.test.ts",
+    "tests/openai-responses-tool-continuation.test.ts",
+    "tests/partner-directory.test.ts",
+    "tests/provider-config.test.ts",
+    "tests/replayable-collection.test.ts",
+    "tests/stackblitz-embed.test.ts",
+    "vite.config.ts"
+  ],
+  "blog_inputs": [
+    "src/blog/ag-grid-partnership.md",
+    "src/blog/ag-ui-compliance.md",
+    "src/blog/announcing-tanstack-form-v1.md",
+    "src/blog/announcing-tanstack-form-v2-alpha.md",
+    "src/blog/announcing-tanstack-query-v4.md",
+    "src/blog/announcing-tanstack-query-v5.md",
+    "src/blog/announcing-tanstack-start-v1.md",
+    "src/blog/announcing-tanstack-table-v9.md",
+    "src/blog/clerk-partnership.md",
+    "src/blog/cloudflare-partnership.md",
+    "src/blog/coderabbit-partnership.md",
+    "src/blog/debug-logging-for-tanstack-ai.md",
+    "src/blog/directives-and-the-platform-boundary.md",
+    "src/blog/electric-partnership.md",
+    "src/blog/from-docs-to-agents.md",
+    "src/blog/generation-hooks.md",
+    "src/blog/how-we-test-tanstack-ai-across-7-providers.md",
+    "src/blog/incident-followup.md",
+    "src/blog/intent-0.5-skills-you-can-maintain.md",
+    "src/blog/introducing-tanstack-markdown-and-highlight.md",
+    "src/blog/lovable-partnership.md",
+    "src/blog/multi-turn-structured-output.md",
+    "src/blog/netlify-partnership.md",
+    "src/blog/npm-stats-the-right-way.md",
+    "src/blog/npm-supply-chain-compromise-postmortem.md",
+    "src/blog/openrouter-partnership.md",
+    "src/blog/power-in-pragmatism.md",
+    "src/blog/prisma-partnership.md",
+    "src/blog/railway-partnership.md",
+    "src/blog/react-server-components.md",
+    "src/blog/removing-third-party-ads.md",
+    "src/blog/render-partnership.md",
+    "src/blog/run-coding-agents-in-a-sandbox.md",
+    "src/blog/scarf-partnership.md",
+    "src/blog/search-params-are-state.md",
+    "src/blog/sentry-partnership.md",
+    "src/blog/serpapi-partnership.md",
+    "src/blog/start-adds-rsbuild-support.md",
+    "src/blog/streaming-structured-output.md",
+    "src/blog/tanstack-2-years.md",
+    "src/blog/tanstack-ai-alpha-2.md",
+    "src/blog/tanstack-ai-alpha-your-ai-your-way.md",
+    "src/blog/tanstack-ai-audio-generation.md",
+    "src/blog/tanstack-ai-beta.md",
+    "src/blog/tanstack-ai-code-mode.md",
+    "src/blog/tanstack-ai-lazy-tool-discovery.md",
+    "src/blog/tanstack-ai-middleware.md",
+    "src/blog/tanstack-ai-orchestration.md",
+    "src/blog/tanstack-ai-rc.md",
+    "src/blog/tanstack-ai-realtime-voice-chat.md",
+    "src/blog/tanstack-ai-the-ai-function-postmortem.md",
+    "src/blog/tanstack-ai-why-we-split-the-adapters.md",
+    "src/blog/tanstack-charts-1-0.md",
+    "src/blog/tanstack-db-0.1-the-embedded-client-database-for-tanstack-query.md",
+    "src/blog/tanstack-db-0.5-query-driven-sync.md",
+    "src/blog/tanstack-db-0.6-app-ready-with-persistence-and-includes.md",
+    "src/blog/tanstack-has-a-new-look.md",
+    "src/blog/tanstack-open-source-awards-2026.md",
+    "src/blog/tanstack-router-navigation-lanes.md",
+    "src/blog/tanstack-router-route-matching-tree-rewrite.md",
+    "src/blog/tanstack-router-signal-graph.md",
+    "src/blog/tanstack-router-typescript-performance.md",
+    "src/blog/tanstack-start-5x-ssr-throughput.md",
+    "src/blog/tanstack-start-security-update-cve-2026-102989.md",
+    "src/blog/tanstack-start-solid-v2.md",
+    "src/blog/tanstack-table-v9-memory-performance.md",
+    "src/blog/tanstack-table-v9-reactivity.md",
+    "src/blog/tanstack-table-v9-taking-form.md",
+    "src/blog/tanstack-table-v9-typescript-performance.md",
+    "src/blog/tanstack-virtual-chat.md",
+    "src/blog/tanstack-virtual-perf-and-ios.md",
+    "src/blog/type-safe-provider-tools-tanstack-ai.md",
+    "src/blog/unkey-partnership.md",
+    "src/blog/vercel-partnership.md",
+    "src/blog/we-stopped-using-rsc-on-tanstack-com.md",
+    "src/blog/who-owns-the-tree.md",
+    "src/blog/why-tanstack-start-and-router.md",
+    "src/blog/why-tanstack-start-is-ditching-adapters.md",
+    "src/blog/workos-partnership.md",
+    "src/blog/your-mcp-your-way.md"
+  ],
+  "static_assets": [
+    {
+      "path": "public/Algolia-logo-blue.svg",
+      "bytes": 4970,
+      "sha256": "6735b2ac7d7cf069134e509ad70c64f6ad7bcf8f5600f1d703190d2d7404e0bc"
+    },
+    {
+      "path": "public/Algolia-logo-white.svg",
+      "bytes": 4967,
+      "sha256": "16b73d258148617c548119a24da5f18a2e53a6469c29ab25969cef1fee3874b3"
+    },
+    {
+      "path": "public/_headers",
+      "bytes": 407,
+      "sha256": "463bed88a993f4064a8dda947fc70afc252be8e17295681d21a48119c8889d8c"
+    },
+    {
+      "path": "public/android-chrome-192x192.png",
+      "bytes": 8046,
+      "sha256": "da723953289924990c682e05b9273213ce366922d89abfffb67853fb8b78d196"
+    },
+    {
+      "path": "public/android-chrome-512x512.png",
+      "bytes": 24884,
+      "sha256": "9cbbd7256ec0a4cec2765dd825f5f077805c94c09bf9ad6188656d6c7f55d883"
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "bytes": 7539,
+      "sha256": "a2193cf6a35b894ef5eb4d17167cbaf559a313eb742a23baabbb7a132bd82b9b"
+    },
+    {
+      "path": "public/blog-assets/ag-grid-partnership/header-logos.png",
+      "bytes": 30257,
+      "sha256": "21e8c604b55a40cf1dbcc06c37af4daea6608bb2dbffa517807474784feb3af0"
+    },
+    {
+      "path": "public/blog-assets/ag-ui-compliance/header.png",
+      "bytes": 2951440,
+      "sha256": "3cc8d1e4f454495f0f7f06b59c083948ef6115c537ac628b5f679829365eac02"
+    },
+    {
+      "path": "public/blog-assets/announcing-tanstack-form-v1/form_header.png",
+      "bytes": 2030528,
+      "sha256": "72ba21647b93857c04935cd5fc66a85f1caec0616d6b105c74aedf7e24f53beb"
+    },
+    {
+      "path": "public/blog-assets/announcing-tanstack-form-v1/tanstack_form_bluesky_announce.png",
+      "bytes": 277829,
+      "sha256": "c58dd92ad10540a5e6b5194bf891002b7e73d39c49bac997d7d03c27a7911276"
+    },
+    {
+      "path": "public/blog-assets/announcing-tanstack-form-v2-alpha/header.png",
+      "bytes": 3049470,
+      "sha256": "460d7908dce17655fbf5541d7ca4ca91c0f3b8e11103e7cdb0a6d22d8e9a4007"
+    },
+    {
+      "path": "public/blog-assets/announcing-tanstack-start-v1/header.png",
+      "bytes": 133260,
+      "sha256": "cbd6b6c1950cc44f1bd6f143682ca91038af1e5d909b4cf18a0078bd3507497f"
+    },
+    {
+      "path": "public/blog-assets/announcing-tanstack-table-v9/header.png",
+      "bytes": 1637164,
+      "sha256": "643a78cfeba63858cee9a8b21d60c9aa828b3ecd70ea355c1a47f28a4f8974aa"
+    },
+    {
+      "path": "public/blog-assets/clerk-partnership/header.png",
+      "bytes": 33214,
+      "sha256": "3f4cbaf08b35d10841aa3a1f642bed0285ed463dcded3a8d163b21e2f2636b58"
+    },
+    {
+      "path": "public/blog-assets/cloudflare-partnership/header.png",
+      "bytes": 29346,
+      "sha256": "6829224edb798e60b1558adb36972eae3b863ff484f9f93d6ced84c021cd3414"
+    },
+    {
+      "path": "public/blog-assets/coderabbit-partnership/header.png",
+      "bytes": 32583,
+      "sha256": "010284f6731ad9764b585cbff4caa280f4a0a3dee5a8ecb701222403899a6e75"
+    },
+    {
+      "path": "public/blog-assets/debug-logging-for-tanstack-ai/header.png",
+      "bytes": 2892043,
+      "sha256": "35412f4e9d99ab34d9ccc0b6ae92134abfe1ece795210d32156fdbda3ed6a0c2"
+    },
+    {
+      "path": "public/blog-assets/directives-and-the-platform-boundary/header.png",
+      "bytes": 121543,
+      "sha256": "98befe7d37ea47712e89f5b1fcfb7bb3727c09e5306ca5e5d174c44c32455238"
+    },
+    {
+      "path": "public/blog-assets/electric-partnership/header.png",
+      "bytes": 30669,
+      "sha256": "7c248aaff44bab3c77464123ea36dbbbdf0b407e0b65133634f1f27628eeb979"
+    },
+    {
+      "path": "public/blog-assets/from-docs-to-agents/diagram-discovery.svg",
+      "bytes": 5413,
+      "sha256": "00e3b9bdb9eee7316d10220d30e29b4101a044504977f597ad0fce4a196d5fab"
+    },
+    {
+      "path": "public/blog-assets/from-docs-to-agents/diagram-lifecycle.svg",
+      "bytes": 6460,
+      "sha256": "746a2640f673588676d73a7f6b6e60e09445ec1e2e0a95c35b76f50bd4b5b1ef"
+    },
+    {
+      "path": "public/blog-assets/from-docs-to-agents/diagram-split-brain.svg",
+      "bytes": 4070,
+      "sha256": "0d55816a497512c27455faef277f04453f8f95f530e71d5c2320105ab4e6ec81"
+    },
+    {
+      "path": "public/blog-assets/from-docs-to-agents/diagram-status-quo.svg",
+      "bytes": 5141,
+      "sha256": "aa83b447ba12bcbd12e8d4bde1e5562c8fc3f6543149a2b8b56c5b4574cdf245"
+    },
+    {
+      "path": "public/blog-assets/from-docs-to-agents/header.png",
+      "bytes": 8164066,
+      "sha256": "d08a12a7c0e2639bd7a562916e78675d13becb1a2ea4d94dee009b9d7dfe44f5"
+    },
+    {
+      "path": "public/blog-assets/generation-hooks/header.png",
+      "bytes": 2821028,
+      "sha256": "b009817da123bf9bb1cbb0a97d014455209ef52c4bce6debca5b4c9e8682d347"
+    },
+    {
+      "path": "public/blog-assets/how-we-test-tanstack-ai-across-7-providers/cover.png",
+      "bytes": 3128372,
+      "sha256": "a7d3d1aff0f2dbeea714c9adb17db916b51c4363c969210230b4238c427f5fed"
+    },
+    {
+      "path": "public/blog-assets/introducing-tanstack-markdown-and-highlight/header.webp",
+      "bytes": 190498,
+      "sha256": "9cb5c7146f3a2ea5071c6a724f6fc4f9ab0215723cf07574169d488ed9fefc7e"
+    },
+    {
+      "path": "public/blog-assets/lovable-partnership/header.png",
+      "bytes": 42780,
+      "sha256": "ee41d3ed408b75b0a8bf99950407c6f1a5c4354368f6f898b9e261781dba77b9"
+    },
+    {
+      "path": "public/blog-assets/multi-turn-structured-output/header.png",
+      "bytes": 2522149,
+      "sha256": "f4b0a596de34c946011b1298d6f678841b79974275ccb4a85db27619b8c8cfd4"
+    },
+    {
+      "path": "public/blog-assets/netlify-partnership/header-logos.png",
+      "bytes": 29229,
+      "sha256": "628133b0f9cc187e806bb19d35efdc2bdcfd1f069f26ce8a444852e6b8f72564"
+    },
+    {
+      "path": "public/blog-assets/netlify-partnership/header.jpg",
+      "bytes": 233417,
+      "sha256": "2493c81c6ad682952b2fde65ca7226c11aed27f77194b155fcea266b3009fcf7"
+    },
+    {
+      "path": "public/blog-assets/openrouter-partnership/header-logos.png",
+      "bytes": 31652,
+      "sha256": "ecaae132301f31eef1aa3cbbaff26f5640f74fbf0cb09f143b48118c24f169cb"
+    },
+    {
+      "path": "public/blog-assets/openrouter-partnership/header.png",
+      "bytes": 7996499,
+      "sha256": "bba497fec54bad72fd8b0e6cead0bd69b0dc957a5dac92e3051d5283d7c6008a"
+    },
+    {
+      "path": "public/blog-assets/power-in-pragmatism/header.jpg",
+      "bytes": 150631,
+      "sha256": "bf1d7c0d5f12be910ac25f2096a0b70cdc462fe841b7f1b4b5a222f4980e5abd"
+    },
+    {
+      "path": "public/blog-assets/prisma-partnership/header.png",
+      "bytes": 32632,
+      "sha256": "69b49d2252792c158dce851cd3fe2c3a93d5ebf4a6770269d3346c2b747a345f"
+    },
+    {
+      "path": "public/blog-assets/railway-partnership/header.png",
+      "bytes": 31821,
+      "sha256": "95f1f0bfae8de0e3849b4ae720953953df7441f1528cc7c44478940c7728880a"
+    },
+    {
+      "path": "public/blog-assets/react-server-components/header.jpg",
+      "bytes": 367637,
+      "sha256": "50d0e52caa61428208eec6d820ebdf7a9fefa939b83179516423d093842c9c9a"
+    },
+    {
+      "path": "public/blog-assets/removing-third-party-ads/header.jpg",
+      "bytes": 271807,
+      "sha256": "a2afd6289e70a500a0ed7a382b7be5649fef6f9088f626fd9fd393a4e106b86e"
+    },
+    {
+      "path": "public/blog-assets/render-partnership/header.png",
+      "bytes": 30980,
+      "sha256": "61aee54d3390c9c4d76fd26f33a60524164175b2ebb911be59625ad843f178a7"
+    },
+    {
+      "path": "public/blog-assets/run-coding-agents-in-a-sandbox/header.png",
+      "bytes": 2147378,
+      "sha256": "ca400c527210661db1e6b65ae40e8f37ad52995470e25a16048ee2f6bc8eeb29"
+    },
+    {
+      "path": "public/blog-assets/scarf-partnership/header.png",
+      "bytes": 32214,
+      "sha256": "2dce1b1b1edfbdc3a3e40fd897163f29eb7738f9728af2800f3693ace3eeb9f7"
+    },
+    {
+      "path": "public/blog-assets/search-params-are-state/search-params-are-state-header.jpg",
+      "bytes": 87741,
+      "sha256": "31ad2866e353644b6e66f1c5e52a653030c64d7ee24e7822835bb1e0e7688433"
+    },
+    {
+      "path": "public/blog-assets/sentry-partnership/header.png",
+      "bytes": 31982,
+      "sha256": "155bb33b3a880cb964e61cb63b2972c365a110c65068819c70533b4e187b8523"
+    },
+    {
+      "path": "public/blog-assets/serpapi-partnership/header.png",
+      "bytes": 35527,
+      "sha256": "858943dd91da2a3e7a005a00af52340ff948bae0ac70b48443e83b67f1988663"
+    },
+    {
+      "path": "public/blog-assets/start-adds-rsbuild-support/header.jpg",
+      "bytes": 563011,
+      "sha256": "08fce75c6ccb2f1ed806dba2a56b2ff6d4341dee457df647f5d3c42b16af543a"
+    },
+    {
+      "path": "public/blog-assets/streaming-structured-output/header.png",
+      "bytes": 2865365,
+      "sha256": "b22fcc25b2b033f12cce5cc1aafb79afa46e596c1d6f58be0d05fab55a04a235"
+    },
+    {
+      "path": "public/blog-assets/tanstack-2-years/tanstack-2-years-header.jpg",
+      "bytes": 138371,
+      "sha256": "145407704cc8ea0337dd3ddec7643fecced422fddfb0b0fe7206d0f8cc4bcd83"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-alpha-2/header.jpeg",
+      "bytes": 212541,
+      "sha256": "fb10ba08c7f8ccee345cec8079900405369525e5c62bbbf047c02a99b3622b56"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-alpha-your-ai-your-way/header.jpg",
+      "bytes": 654204,
+      "sha256": "99de36c499734d7e58cc4769c024cc3381d6f2d06b262af56cfc8e1efed02c26"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-audio-generation/header.png",
+      "bytes": 2797756,
+      "sha256": "09fe6f1c45096afe405cb02a47d197dcb6283845e913d4529c1cb480a07b4a3d"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-beta/devtools.png",
+      "bytes": 160738,
+      "sha256": "9f6ce9621cceb56f20f24be07f4d0339ff4cd8511655ebf56f45defa5596d58d"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-beta/header.png",
+      "bytes": 1596966,
+      "sha256": "a922b9800c72bbe8f6917373d1935cb66f3ba1772022112b062fea3bf0891d96"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-code-mode/header.jpg",
+      "bytes": 623692,
+      "sha256": "ed89cca936769ee962ddb88fbc9fdf060734302174a37da249fb1feedcc7baea"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-lazy-tool-discovery/header.webp",
+      "bytes": 1722208,
+      "sha256": "8a9ff13fe636cee07ccb230722e8b319c1aa69c7bbb2eaef5e502b01b6c51ae2"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-middleware/header.webp",
+      "bytes": 1895350,
+      "sha256": "38c8f5a249fa3eb8230b2763bbd76cd205e0770432c8038abc3746180aa80be3"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-orchestration/header.png",
+      "bytes": 3264897,
+      "sha256": "28993a3268db77d0bc0d9e558df80052b73650b8e822fd00fe6d27f1d2970c93"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-rc/header.png",
+      "bytes": 1862572,
+      "sha256": "225569c561207f45b623194dee9b96f574aba110c68e26a3410a308b35b30b4a"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-realtime-voice-chat/header.webp",
+      "bytes": 1758246,
+      "sha256": "7cd0cf80e79caa5fc061b8ab7e9ca5f75c32e717f5dae80bb38ed2988a6aef37"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-the-ai-function-postmortem/header.jpg",
+      "bytes": 195511,
+      "sha256": "ec337ed876fa52a6413b81f13195e039ddf1f7ba45f69172dee0fcaa407cebc6"
+    },
+    {
+      "path": "public/blog-assets/tanstack-ai-why-we-split-the-adapters/header.jpeg",
+      "bytes": 203981,
+      "sha256": "829bc78e6ade4c473183161710d9e8aabd2384cd4a2234a171f1c282c76ae1e7"
+    },
+    {
+      "path": "public/blog-assets/tanstack-charts-1-0/captions.vtt",
+      "bytes": 53,
+      "sha256": "dc1624b3519778d14bb1d3f6345e457bfcc2d7f1bf184f45d927faeccdc77abc"
+    },
+    {
+      "path": "public/blog-assets/tanstack-charts-1-0/poster.jpg",
+      "bytes": 137711,
+      "sha256": "0d2277019d75981a2d7bf391d9f021744b6541d9c74adb8a1608f8c32f57c820"
+    },
+    {
+      "path": "public/blog-assets/tanstack-charts-1-0/tanstack-charts-continuing-finale.mp4",
+      "bytes": 6317617,
+      "sha256": "4b5f30e63f6f0ae45ee064910ac8025c9c1f5398ba108c13446c9d6c879afc93"
+    },
+    {
+      "path": "public/blog-assets/tanstack-db-0.1/header.png",
+      "bytes": 238616,
+      "sha256": "43d0558a9fff3db3baa4be3a98708e0a6efd65e065d51232fbeae9956370109e"
+    },
+    {
+      "path": "public/blog-assets/tanstack-db-0.5-query-driven-sync/header.png",
+      "bytes": 2058257,
+      "sha256": "8d5bcacbf19f08f5de4d9e10b15acfe9611e85b7c2eface691d8cc442e98e368"
+    },
+    {
+      "path": "public/blog-assets/tanstack-db-0.6-app-ready-with-persistence-and-includes/header.jpg",
+      "bytes": 272378,
+      "sha256": "8a69dda754fa6f0418d6ad15eae3993ba60f6e8cbf6fb723a0ba6c8a7f3472ca"
+    },
+    {
+      "path": "public/blog-assets/tanstack-has-a-new-look/design-system-snapshot.svg",
+      "bytes": 5953,
+      "sha256": "f1f8725b303ac63f1cb3918f7bc19829699afbd7ed884a9a8d482b8a35cd7623"
+    },
+    {
+      "path": "public/blog-assets/tanstack-has-a-new-look/logo-swatch.svg",
+      "bytes": 40260,
+      "sha256": "ed4c57b1d35cd8de4e431301d17bfd6a3b65c70934fee12a773d7a5d52922877"
+    },
+    {
+      "path": "public/blog-assets/tanstack-open-source-awards-2026/header.jpg",
+      "bytes": 612322,
+      "sha256": "41ac6f88169a3276046462ebf5d6e92ccc93f4bf78d4bdb06e44c0669d31e9b7"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/header.png",
+      "bytes": 2691347,
+      "sha256": "a57cfd60c12ecf1c70df0f241add6454df273925de55a9494ce6903f2e329bf5"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_concurrent-orchestration.svg",
+      "bytes": 26396,
+      "sha256": "2255a06b9c4ae5e43ecb419376668a27515ee1bfa3bd1f12374736d7ee6e6ac2"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_mini-ack-explainer.svg",
+      "bytes": 6568,
+      "sha256": "d4a6c06d92e1eb1478f8dff63a859511b5649a1f264bf52373f5d890b0a1375f"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_mini-lease-explainer.svg",
+      "bytes": 9234,
+      "sha256": "79efd7615bb9a522b27e19a600d28d474ca4baa92c8b60ddc2e1f5b2575b0bf7"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_mini-reduce-explainer.svg",
+      "bytes": 9038,
+      "sha256": "394ddbbcfde72d84ad185f4910515924b3620d3c3cf0d5397d0ac5c658191ea1"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_mini-tx-explainer.svg",
+      "bytes": 9999,
+      "sha256": "db293af0bac2c1043292581d319c3ae9bece51799242741ea91ec10d84683bff"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_simple-scenario.svg",
+      "bytes": 9744,
+      "sha256": "5bac5f5148cce8dfb5fc0e14275460613a8de3a39d16d12939c0e539fbf787c6"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_single-orchestration.svg",
+      "bytes": 21490,
+      "sha256": "c1a7e0680b99fd8f58d35bd66abd204b14ce331de1130421986f26246bccc931"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/nav-orchestra_summary.svg",
+      "bytes": 3528,
+      "sha256": "6c91f3d1c1cd69ccc624a25281ef68bc1d02321884557ea15d6da300c66ac5c0"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-navigation-lanes/tanstack-router-navigation-demo.mp4",
+      "bytes": 276717,
+      "sha256": "07fa5f8f326f3fe856cd8549d0d19f18746dab92b8d3acd50945527bd4543e4b"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-route-matching-tree-rewrite/big-number.png",
+      "bytes": 34332,
+      "sha256": "cb3c40bfc79474b1e01efcb4f729f940aae3b0a8cbcdc1bd62684116fb5235f8"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-route-matching-tree-rewrite/buildlocation-evolution-benchmark.png",
+      "bytes": 86552,
+      "sha256": "495c9c0104ae657d4002dc8576b31dee8189c751ed32fb508ddbd12a7323db9e"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-route-matching-tree-rewrite/header.jpg",
+      "bytes": 297198,
+      "sha256": "afcd5827377d25c90c246468e0549d87d788cd78c7b177952c13e085266f55ad"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-route-matching-tree-rewrite/lru-benchmark.png",
+      "bytes": 203726,
+      "sha256": "a8fac38d79529989a87da8393ab1c49bd0a15f7fc70889c17c650755eb0fd6a5"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-route-matching-tree-rewrite/matching-evolution-benchmark.png",
+      "bytes": 87726,
+      "sha256": "4d32c5908cdc4cf7331b1900c9c2358af57d76ea7d46b078ac3ccff0fa7a48a0"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/after-granular-store-graph-2.mp4",
+      "bytes": 603012,
+      "sha256": "acbbac5c893b2c4b73d4c3060007a8bc08d1b132d4ea8320088de2dfb55ac9e9"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/before-granular-store-graph-2.mp4",
+      "bytes": 1286505,
+      "sha256": "2e27477ba922451c1728a06e952e56ba678f6d1ec03fa506298e319b2c41714f"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/bundle-size-history-react.png",
+      "bytes": 144081,
+      "sha256": "763173b54b7ce483ef6499044f7ee784aa4f7e6f52ce36c773bff75ff2efd8bd"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/bundle-size-history-solid.png",
+      "bytes": 155971,
+      "sha256": "131db9fd1f3bffe61e6d74d20623dd9a8392f92364a79285926feed3d8b1e755"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/bundle-size-history-vue.png",
+      "bytes": 143238,
+      "sha256": "f87461ec5aa028c948db3e9c323b1d9074912164ddabed9d2a4ff41082df3620"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/client-side-nav-react.png",
+      "bytes": 131919,
+      "sha256": "52f9db62a25ebd781796391563a9e99524ac698728540f9d7f4a0f2526e91818"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/client-side-nav-solid.png",
+      "bytes": 154500,
+      "sha256": "6e1a6bf562623afa14867a3eceb47a2ca626b6583e2b657d1f5e4105400fd84b"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/client-side-nav-vue.png",
+      "bytes": 129306,
+      "sha256": "fd5ed6ec701b1346f1c318e436839099106d331a9a19a21b0011ce64c22d663c"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/header.jpg",
+      "bytes": 245163,
+      "sha256": "bac7a7248ebb07ad3e0a5442033047678743479ce6042737d1808cad1a734c8a"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/store-updates-history-react.png",
+      "bytes": 169391,
+      "sha256": "4d408d2b5439e90be71d08e89fa96968d853893aff87654a374035a1eb41f61c"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/store-updates-history-solid.png",
+      "bytes": 229619,
+      "sha256": "2a7f3457f6e42d7e6c3c11fe985d8cc8534a445bd8e0bd036be7ccb91b4931bd"
+    },
+    {
+      "path": "public/blog-assets/tanstack-router-signal-graph/store-updates-history-vue.png",
+      "bytes": 155006,
+      "sha256": "18ad11058aa106b034d372642bfae85d317bb9a03cd148cf4d08113ba82146b2"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/build-location-after.png",
+      "bytes": 163616,
+      "sha256": "6c4c6bb5ac114dfa77cfa444904420cd324bcb166b57f5482e9ac9308bafea74"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/build-location-before.png",
+      "bytes": 175922,
+      "sha256": "1935cf6e340c66925bbefbda218b46c6537d908ebf3a4d10424a7aa3673261ab"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/delete-after.png",
+      "bytes": 175935,
+      "sha256": "e51a736f694abaeb6102b61260cf0d05397c7284f9f7fbfd4adae6a918766af5"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/delete-before.png",
+      "bytes": 161733,
+      "sha256": "93af771f859724b1e2b93e0bc0e4bc1147e6f309cc93ce5953795ff8d0444667"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/elu-empty.png",
+      "bytes": 117571,
+      "sha256": "76225ac53b2fabd3f42a0cb0ee088de3c904a37784b5099ebf686b691144e916"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/elu-links.png",
+      "bytes": 105051,
+      "sha256": "0332d50fcf624fbbc74dccb879c16ce3b1e17a31f8c5935e6eb7341b05f01dd0"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/elu-nested.png",
+      "bytes": 109837,
+      "sha256": "24e04b79de522288d385898f48fe0542e737773f50631bd3d448c37e7110a7c0"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/header.jpg",
+      "bytes": 216717,
+      "sha256": "d7017010a8b7141ed1890bc5e9d98adc2cf506578e361e8a660fb3110d250801"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/interpolate-after.png",
+      "bytes": 58772,
+      "sha256": "d44050115e3858233c0c5c196a9008be8c5794568c8918a4cf92da8990a8af23"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/interpolate-before.png",
+      "bytes": 55363,
+      "sha256": "e963c8027850213b29af2648ffac108a9b773c0841e3cb665646e1a540226531"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/links-after.png",
+      "bytes": 528342,
+      "sha256": "6051fa272dbbe4e5b047ab9697418a90d7d1fe9a8ab8e68cc13cf3eb2a570ae9"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/nested-after.png",
+      "bytes": 790118,
+      "sha256": "cef8c2d5381d4418ab2bad42bdbc8b5b774996777487f986189b95769f1fdf2c"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/nothing-after.png",
+      "bytes": 588164,
+      "sha256": "5a746a0283ba0a2853e9e33bfb8343f5d349509a44169402f1925dba75daf009"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/router-state-after.png",
+      "bytes": 65799,
+      "sha256": "d8ebb3babe8e69801757589f64e454de2528ce6fcd5084ae59726c3530ff1799"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-5x-ssr-throughput/router-state-before.png",
+      "bytes": 124942,
+      "sha256": "3fa316f60089c424e588d51f794a77c06a36977a602e8230537f802afbe3b563"
+    },
+    {
+      "path": "public/blog-assets/tanstack-start-solid-v2/header.png",
+      "bytes": 2526721,
+      "sha256": "e428ecfabfa62f2a81794d14fabd74e42ba442119c249263a76a321d2f84ecc3"
+    },
+    {
+      "path": "public/blog-assets/tanstack-table-v9-memory-performance/charts.png",
+      "bytes": 372856,
+      "sha256": "b21cbda898a9c30c5df0a3ed699525b8c6b6d295f46f9f103b630ed861d53ab0"
+    },
+    {
+      "path": "public/blog-assets/tanstack-table-v9-memory-performance/header.png",
+      "bytes": 111158,
+      "sha256": "bb77ed3d965a628a61e03805af15fd4083342cef72f3407fd97c6781d39392c2"
+    },
+    {
+      "path": "public/blog-assets/tanstack-table-v9-reactivity/header.png",
+      "bytes": 1321213,
+      "sha256": "d3b3b87a4adf40bfc51c2feff65dfe36e235ddc36f9fe52688a423cfa7b62e49"
+    },
+    {
+      "path": "public/blog-assets/tanstack-table-v9-taking-form/header.png",
+      "bytes": 2903936,
+      "sha256": "6653a855e0720889931ad224aaae1949902f53f7856215ccc521aafeaa47781e"
+    },
+    {
+      "path": "public/blog-assets/tanstack-table-v9-taking-form/screenshot-1.png",
+      "bytes": 97872,
+      "sha256": "54dc73fbbf15f87ae00490e44ba68599c527e1a17bb6b98232e4b7c74b4faa86"
+    },
+    {
+      "path": "public/blog-assets/tanstack-table-v9-typescript-performance/header.png",
+      "bytes": 1834972,
+      "sha256": "944cc4c9f70dd78c595c92a90d89d978f517f7acf197ca6444fa4344df7058d2"
+    },
+    {
+      "path": "public/blog-assets/tsr-perf-milestone/language-service-fast.mp4",
+      "bytes": 184491,
+      "sha256": "b0eaea7988835162ee4e68b68f5ecfb4a0fab51dc06168011a85a66ea7d11382"
+    },
+    {
+      "path": "public/blog-assets/tsr-perf-milestone/language-service-slow.mp4",
+      "bytes": 322673,
+      "sha256": "65e376ea614e43d82289a001a7c9ad8f5936c664de7b76d62b77e390d37ed39b"
+    },
+    {
+      "path": "public/blog-assets/tsr-perf-milestone/tracing-declare-route-tree.png",
+      "bytes": 33525,
+      "sha256": "21e6908b77f4ed4d5c3b499d9dfea036c5f525f05c5be8567496b761ca6132a0"
+    },
+    {
+      "path": "public/blog-assets/tsr-perf-milestone/tracing-faster.png",
+      "bytes": 30002,
+      "sha256": "8169f84f04d8ac5234ed6639f9cf9135114793ea198f61c17cf92e0f033a116d"
+    },
+    {
+      "path": "public/blog-assets/tsr-perf-milestone/tracing-slow.png",
+      "bytes": 66062,
+      "sha256": "4fe670075756366529328a5d694747fe362746a80891c7b0203b5547495bb81a"
+    },
+    {
+      "path": "public/blog-assets/type-safe-provider-tools-tanstack-ai/header.png",
+      "bytes": 2835993,
+      "sha256": "343647d7d6c45f6ffb2f158e603340deb529fa29a3b66cd30ffbbeea1030b5c2"
+    },
+    {
+      "path": "public/blog-assets/unkey-partnership/header.png",
+      "bytes": 28004,
+      "sha256": "5294f7bf84149cfaf6ff2377d5d41ff228d992e68e82c01e6dae77dd2f4642d1"
+    },
+    {
+      "path": "public/blog-assets/vercel-partnership/header.png",
+      "bytes": 31599,
+      "sha256": "816903b307733648f17fd7dfe0cc1dc9699c6d106eb4c2ae3efcbe936930570b"
+    },
+    {
+      "path": "public/blog-assets/who-owns-the-tree/header.jpg",
+      "bytes": 252236,
+      "sha256": "43c5cffb5af6e263f138902c5774d27c558fa9e161aee66cda1cd4a4dfabb577"
+    },
+    {
+      "path": "public/blog-assets/why-tanstack-start-and-router/tanstack-start-blog-header.jpg",
+      "bytes": 272319,
+      "sha256": "52d6a60ec9a3b1fd76e25ae566a2bfc98e1789cbda7ee689dee8215c7db2d446"
+    },
+    {
+      "path": "public/blog-assets/why-tanstack-start-is-ditching-adapters/nitro.jpg",
+      "bytes": 122737,
+      "sha256": "e3fa49e155428831ae4c8827bfc9180e39ec830323bd47fe45c91a248dd39b5e"
+    },
+    {
+      "path": "public/blog-assets/workos-partnership/header.png",
+      "bytes": 33203,
+      "sha256": "98296a28f018af933ceda955e43b1d1e12bfedaf14c8427b4392c6e621fe9e0b"
+    },
+    {
+      "path": "public/blog-assets/your-mcp-your-way/header.png",
+      "bytes": 2751293,
+      "sha256": "96a034bb1cf746c22da8729e86fef47437adadce42d2fd35f06340d2ece6c5d8"
+    },
+    {
+      "path": "public/chat/manifest.webmanifest",
+      "bytes": 546,
+      "sha256": "56277d8c55b3f9a464601144aa8508a9f9ee045b8b16e9854fe79543f2c24ecd"
+    },
+    {
+      "path": "public/chat/offline.html",
+      "bytes": 1113,
+      "sha256": "0a3c73f6057be60895fe322551916e9e80c1eb54df0710e447d9ed1dcefe7b63"
+    },
+    {
+      "path": "public/favicon-16x16.png",
+      "bytes": 567,
+      "sha256": "9d8f9b7f97c210d5c3a6b6d57090821a53892cfd3e3625222c690b182c525f2f"
+    },
+    {
+      "path": "public/favicon-32x32.png",
+      "bytes": 1164,
+      "sha256": "f25f744bcf8ae0c13c9094f092aa360ab3aeb51354aa73023ceaeba4caa5b2da"
+    },
+    {
+      "path": "public/favicon-dark.svg",
+      "bytes": 3185,
+      "sha256": "2b301b3958e0013798fbbfe971238b80b351f4c6b34e03c786c56648da1b7737"
+    },
+    {
+      "path": "public/favicon-light.svg",
+      "bytes": 3185,
+      "sha256": "2b301b3958e0013798fbbfe971238b80b351f4c6b34e03c786c56648da1b7737"
+    },
+    {
+      "path": "public/favicon.ico",
+      "bytes": 4414,
+      "sha256": "9aa43500ffd7a805105595f9e3cf9d15f9acd037a8d876a3ae8597aff73da12a"
+    },
+    {
+      "path": "public/favicon.png",
+      "bytes": 1164,
+      "sha256": "f25f744bcf8ae0c13c9094f092aa360ab3aeb51354aa73023ceaeba4caa5b2da"
+    },
+    {
+      "path": "public/fonts/BricolageGrotesque-Bold.ttf",
+      "bytes": 82204,
+      "sha256": "913ee3631949ee1b4fb2601269412fca5775eb994d4f87be2c366c94ac123dc5"
+    },
+    {
+      "path": "public/fonts/Inter-Black.ttf",
+      "bytes": 67904,
+      "sha256": "68be2a10f64af792a4b1feaecb07e0d0363a6252290bc2c4de9f4cde5de13397"
+    },
+    {
+      "path": "public/fonts/Inter-ExtraBold.ttf",
+      "bytes": 327324,
+      "sha256": "eec66af7f2337bd34fe6e801cf92ededcb57a20c0d7bc40a61d4eefcbe3dd40c"
+    },
+    {
+      "path": "public/fonts/Inter-Regular.ttf",
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "path": "public/fonts/Inter-latin-ext.woff2",
+      "bytes": 133336,
+      "sha256": "5e6d4fe9d9f4bff8b2a2469d25ab19576bb85331e22c6ed51398e16f95d56a9c"
+    },
+    {
+      "path": "public/fonts/Inter-latin.woff2",
+      "bytes": 72920,
+      "sha256": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa"
+    },
+    {
+      "path": "public/fonts/OFL-Bricolage-Grotesque.txt",
+      "bytes": 4402,
+      "sha256": "46ba5f18ee20ea529f21d96c0ef8637a8314c1a5cfb2aa84018bc8157cbeff41"
+    },
+    {
+      "path": "public/images/brand/social/mark-dark.svg",
+      "bytes": 2958,
+      "sha256": "d6bb3a1e9974cc06a61d257494247cdc107d33af72316af6e83f61bc0b4892a3"
+    },
+    {
+      "path": "public/images/brand/social/mark-dark@2x.png",
+      "bytes": 17587,
+      "sha256": "0eb56e120f23605ace1fb04f5701ea50af72e56dc7b192a9f9290576834b0756"
+    },
+    {
+      "path": "public/images/brand/social/mark-green.svg",
+      "bytes": 3187,
+      "sha256": "80b93be76636525877634fa76d6b9d43b9d730e1a567633766d9714c6d5cbffe"
+    },
+    {
+      "path": "public/images/brand/social/mark-green@2x.png",
+      "bytes": 490527,
+      "sha256": "f6ee0efea4f44884aabb8fc62228db80029fd027d79d6fbcd85b6b00238d8afd"
+    },
+    {
+      "path": "public/images/brand/social/mark-light.svg",
+      "bytes": 2958,
+      "sha256": "f67aec5f00d2258a0810accbc7773872201a95e1fd895a51d41418c2d8dcdbf1"
+    },
+    {
+      "path": "public/images/brand/social/mark-light@2x.png",
+      "bytes": 17354,
+      "sha256": "b1c6ebc0900baa22dd73028a2daa184600a51d4705ff98adf6425f7262a2a12a"
+    },
+    {
+      "path": "public/images/brand/social/mark-ocean.svg",
+      "bytes": 3187,
+      "sha256": "934cce313ea39f00e0af382d96eadd1aba94021ccc3714fe4a03c9a156e3ef97"
+    },
+    {
+      "path": "public/images/brand/social/mark-ocean@2x.png",
+      "bytes": 495138,
+      "sha256": "09aea41504f99759ad45478d200519bd89950908e6547d9faf4cb788585bdde0"
+    },
+    {
+      "path": "public/images/brand/social/mark-purple.svg",
+      "bytes": 3187,
+      "sha256": "bb9d7e3705a2104d29c508f259107dac0b49bcb78a632f75de4b16119fd7c7dc"
+    },
+    {
+      "path": "public/images/brand/social/mark-purple@2x.png",
+      "bytes": 489881,
+      "sha256": "17a3a547f0df90ddab30be790338b4af9fd76bf250f373770e8dd1af115729ce"
+    },
+    {
+      "path": "public/images/brand/social/mark-yellow.svg",
+      "bytes": 2958,
+      "sha256": "97964569cea09e7b34de9ec30c9a38395e5f2ea4a664be580242b6fae2b48aa5"
+    },
+    {
+      "path": "public/images/brand/social/mark-yellow@2x.png",
+      "bytes": 17321,
+      "sha256": "7296d4794c1d5368d0ae456424f3b37aa01789d6ad2404b647bf9192b6959823"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-dark.svg",
+      "bytes": 2778,
+      "sha256": "7907391420406d7426c1d98c586298935fbc8d18a536f7ce610452477ec3fa5b"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-dark@2x.png",
+      "bytes": 14294,
+      "sha256": "b20e5406f72f3ae1ba2d055dc0fb401865804edf0ae5b4f32346e6623868cd8e"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-green.svg",
+      "bytes": 3007,
+      "sha256": "bcca0389f33dc744acb6bfef1431fdf2d9e159ac1086d0981b444523ca1e6b8c"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-green@2x.png",
+      "bytes": 523294,
+      "sha256": "596e1a6f77a533f931b329d03088abd3446ce7441d1e55719b4c3478d517fb8a"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-light.svg",
+      "bytes": 2810,
+      "sha256": "a98ab3cb0391fa7fd840cfdd732d6993f9d60529d5d599e61d572a692d4e1b04"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-light@2x.png",
+      "bytes": 14040,
+      "sha256": "804f9cfd8dd0f33a2074344cbc72dbc9de0e4cae2c8e2d4c6a2a9fd93ff5811f"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-ocean.svg",
+      "bytes": 3007,
+      "sha256": "efd0b7ce502df996a558d306fcf9283c8caffa991639d7db339de0ac6dcdbb38"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-ocean@2x.png",
+      "bytes": 528185,
+      "sha256": "4e3bf29cabe30c63c863c5ffa8cbc6042dd0669dde09f8f42cb72583cb0df676"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-purple.svg",
+      "bytes": 3007,
+      "sha256": "9e93ff31add4f7e3ae2b1ed4e1384f9caaee3a9451cb3be1f6ea693c2517d624"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-purple@2x.png",
+      "bytes": 522416,
+      "sha256": "f3918b4b0fc6593a467b408eea4a9e420ac749c1b5dabca6dcb91e3d8d52ba75"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-yellow.svg",
+      "bytes": 2778,
+      "sha256": "92454b64bee4da3d6d1840fb5e68fd07448018760514cf75cca85edcc003a04d"
+    },
+    {
+      "path": "public/images/brand/social/naked-mark-yellow@2x.png",
+      "bytes": 13943,
+      "sha256": "64ff9e17ad5cbb197ca9f016d1bac4fa1af8baf35b930490f3be3cf4cc167fbe"
+    },
+    {
+      "path": "public/images/brand/social/stacked-dark.svg",
+      "bytes": 8274,
+      "sha256": "8a86cb9de8c4c9977bbd01b72839b7be0a9f1213e70faf7aa570b0a1c02f5f39"
+    },
+    {
+      "path": "public/images/brand/social/stacked-dark@2x.png",
+      "bytes": 18037,
+      "sha256": "22cea8b5f0db16074e2298ae60a64b842261f249e8560af35b16e6be649cf084"
+    },
+    {
+      "path": "public/images/brand/social/stacked-green.svg",
+      "bytes": 8488,
+      "sha256": "e9f9e64d22a4b36442bf5410b19f41e35cca085017d8daf1e876c27c0958b8d6"
+    },
+    {
+      "path": "public/images/brand/social/stacked-green@2x.png",
+      "bytes": 522108,
+      "sha256": "3b72f7170838cde46bff3fc7020fc5eaba0f484bbaf4e4ad4340e3a1bdaa6c98"
+    },
+    {
+      "path": "public/images/brand/social/stacked-light.svg",
+      "bytes": 8256,
+      "sha256": "98a43f8f7b789d9b32250398716c677b173daac75a700b3b999cf49b3efc5933"
+    },
+    {
+      "path": "public/images/brand/social/stacked-light@2x.png",
+      "bytes": 18109,
+      "sha256": "96abe55cce48b150cd3cb49b5f56b0238af5a56cfd3c396c9dbf9254ebc4a829"
+    },
+    {
+      "path": "public/images/brand/social/stacked-ocean.svg",
+      "bytes": 8488,
+      "sha256": "7b7d680521e5d2ff856d8268c71f6ca30be0ef906a9b453d3e7c68b9e0031544"
+    },
+    {
+      "path": "public/images/brand/social/stacked-ocean@2x.png",
+      "bytes": 529213,
+      "sha256": "4aa2a0404c4d3b267253165dcca8e48a8d8f469c2e5a10c4e0cc739b0758261b"
+    },
+    {
+      "path": "public/images/brand/social/stacked-purple.svg",
+      "bytes": 8488,
+      "sha256": "8d6c0340f9ca3780ba24556978edfdb5ca90ed176f17e4e3584dfc1b74fba9a2"
+    },
+    {
+      "path": "public/images/brand/social/stacked-purple@2x.png",
+      "bytes": 522952,
+      "sha256": "4879be4c6dac955a534b05ba21c0454c8037ee23362899dc09fcd58280eb2bb5"
+    },
+    {
+      "path": "public/images/brand/social/stacked-yellow.svg",
+      "bytes": 8274,
+      "sha256": "644073a241c4f371a0e00c89cec0640bf5be23dd2a9e3fa5c6e5bbb3ef593ea8"
+    },
+    {
+      "path": "public/images/brand/social/stacked-yellow@2x.png",
+      "bytes": 17879,
+      "sha256": "5f036c56d2fbee110e5eba8b7399cd70ee4b3e2e2c683b00bde3c27e8062fa88"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-black.svg",
+      "bytes": 1668,
+      "sha256": "4555364f3a370f52d94100ffe9b83dc5ea48898a7a0c116b2fedc4ec8882fe87"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-black@2x.png",
+      "bytes": 26736,
+      "sha256": "b51cd626c39a7acfd11b2cacdb9902c06e90967166fdb3ffccac5861f0bb63b1"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-charcoal-256.png",
+      "bytes": 8649,
+      "sha256": "0e4a2df639f26879ef08d4dc6b29b295995f46ca7d5ddf6964cc00a11abf31b8"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-charcoal.svg",
+      "bytes": 1668,
+      "sha256": "93beca3ec685723077033827d22fbd618b9ef6fb6d91cb37bd1c0a8aed89f0e0"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-charcoal@2x.png",
+      "bytes": 27705,
+      "sha256": "5b188eb3eb2164a7b9ab5e98826681a4a94471f7bcaed73ef6c45ee156433074"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-cream-256.png",
+      "bytes": 9036,
+      "sha256": "547d134ca985ddc4a7eae824634b1025700d743679de9826a2858e5b66f96266"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-cream.svg",
+      "bytes": 1668,
+      "sha256": "a97cbd7947a3d597fd0bb4c6fdd8ca9cb3ed9ba38b05ddfb5133fda786198791"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-cream@2x.png",
+      "bytes": 29116,
+      "sha256": "cf4267a64851d59d59d3f35224bd954da50a3ad7063d7256e75ec7e6a84dff5f"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-white.svg",
+      "bytes": 1668,
+      "sha256": "0bcb7087301845355ed0e3aa98fc20df3e1296ef8ad2463edd25fc192357d832"
+    },
+    {
+      "path": "public/images/brand/tanstack-emblem-white@2x.png",
+      "bytes": 20691,
+      "sha256": "44fec2b6651875663c3b4d8d01c9aec8f12506091f6cfafc44bc429fec3f0e80"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-black-640.png",
+      "bytes": 9712,
+      "sha256": "0309214607bbdbb890dbf98c291fa9651d8775a04c6fd9515845063f11c8f716"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-black.svg",
+      "bytes": 4796,
+      "sha256": "85159c237b2d955f231a9b0faf47648b7b8cb757c3566c0d00c5ed42507175ea"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-black@2x.png",
+      "bytes": 4470,
+      "sha256": "aaaa867641c0716e6770afab59d0f3f0516b88c41ec2a28046d3a82cfc23f90b"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-charcoal.svg",
+      "bytes": 4796,
+      "sha256": "c07662258ee8bb55eba5ab27459d1fbad31af857c00ad6a086fd471a2ca84380"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-charcoal@2x.png",
+      "bytes": 4494,
+      "sha256": "9193e4914213ebd06ed4782ef54292e65f39097c77107a5cf40589e00062b87e"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-white.svg",
+      "bytes": 4793,
+      "sha256": "a1e07a8b452040cd0a6f601347ebe4db41ce46367aea0e7243ed92cb94deedde"
+    },
+    {
+      "path": "public/images/brand/tanstack-landscape-white@2x.png",
+      "bytes": 4551,
+      "sha256": "8fd94936ef07b070671e5d0e9efefcc17a92f6013e12c44f34671085a329aed1"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-black.svg",
+      "bytes": 4816,
+      "sha256": "1b94b0fafc7e7c6649f1bf3acaab3766f91186213fce56445a0831dba2b8cb2f"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-black@2x.png",
+      "bytes": 4836,
+      "sha256": "81c47424bde3456477e79c782df89faf3189040fca3b7c0478a7d668ef0020db"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-charcoal.svg",
+      "bytes": 4816,
+      "sha256": "d20fe093e56549320cff4b24f48a8af86186639a951b40dedba02d270d5af330"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-charcoal@2x.png",
+      "bytes": 4814,
+      "sha256": "9fa1b51d872d73eb5a4989b58e3d2be218ced7f1f996c37d213fcfa369f5a881"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-cream.svg",
+      "bytes": 4816,
+      "sha256": "52c3cff382f41fcdaa557263734e745822318c732bd5bdb83c957656de96bc1f"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-cream@2x.png",
+      "bytes": 4778,
+      "sha256": "72556395ea9d26021e103c2bace8af78034ed57e7826e789f4d526dfd22b357a"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-white.svg",
+      "bytes": 4813,
+      "sha256": "be1e6ea0467a726ae7795f99314e23b9bcb3d3eea8cb7d75eb789ab9b41277ee"
+    },
+    {
+      "path": "public/images/brand/tanstack-stacked-white@2x.png",
+      "bytes": 4869,
+      "sha256": "a0acefe712142b7845eac7d7fd25592207da355b12b3b123e66184c5176f2391"
+    },
+    {
+      "path": "public/images/hero-palm-gradient-1600.webp",
+      "bytes": 85068,
+      "sha256": "03a1f5f8a1e5f0b00cc298a73a628795f985130245f7249d0b7aca2b29a520a6"
+    },
+    {
+      "path": "public/images/hero-palm-gradient-2400.webp",
+      "bytes": 217484,
+      "sha256": "a414b6791c9080113dbc664b4ae8b08391000010fc8276ca289bb1b22f06b844"
+    },
+    {
+      "path": "public/images/hero-palm-gradient-960.webp",
+      "bytes": 28702,
+      "sha256": "5bc86e7b56ecd86e481284c7a2907f3944b1bbd0cf1d106a08ed6a9792a9a014"
+    },
+    {
+      "path": "public/images/hero-palm-gradient.jpg",
+      "bytes": 484965,
+      "sha256": "fc0d663bc2709968db28a25ade5378dd9ea3d6504fcff2c01b1de35b63f2dc2c"
+    },
+    {
+      "path": "public/images/hero-palm-motion.mp4",
+      "bytes": 1571866,
+      "sha256": "d1d71ee3462a04076fe8bc32ed6a82f2bff943d400e69f6bf88e2b6513e14774"
+    },
+    {
+      "path": "public/images/logos/logo-black.svg",
+      "bytes": 10625,
+      "sha256": "89a0c8094280be004e11684dfdb3df8e8d6902a9cf9ef825d2331567d36c1269"
+    },
+    {
+      "path": "public/images/logos/logo-color-100.png",
+      "bytes": 14533,
+      "sha256": "4c4dd60734efc0b1d1eacd9f18037df1b66e61e2e7d88032e52a54fc2a8c9781"
+    },
+    {
+      "path": "public/images/logos/logo-color-600.png",
+      "bytes": 265387,
+      "sha256": "d898056bb6ecebff475426583f128fe0076b4ae47474565708d011ccb0145cd3"
+    },
+    {
+      "path": "public/images/logos/logo-color-banner-100.png",
+      "bytes": 14643,
+      "sha256": "67b86f47c899662a73db202a5b539553e7fa1dbd45e99c5a13172ce394f4a1de"
+    },
+    {
+      "path": "public/images/logos/logo-color-banner-600.png",
+      "bytes": 311543,
+      "sha256": "c7e05fe386456b00965f6a9b463010e2226b3e6bdc4a7a89f911e732d4c7041f"
+    },
+    {
+      "path": "public/images/logos/logo-white.svg",
+      "bytes": 10637,
+      "sha256": "200814badbf46d1441b4374fad350bb5be45c19f1e3ed04e76ed90cdc0c69880"
+    },
+    {
+      "path": "public/images/logos/logo-word-black.svg",
+      "bytes": 14990,
+      "sha256": "a02b8d4760916e3cc6427b206667a350e276cbdf94f7b9b8e425869212765be9"
+    },
+    {
+      "path": "public/images/logos/logo-word-white.svg",
+      "bytes": 15002,
+      "sha256": "ced0d17654a58aa5d63a671c405c37cc56f2f08bf0e0c9245c23eee0659341f9"
+    },
+    {
+      "path": "public/images/logos/splash-dark.png",
+      "bytes": 223812,
+      "sha256": "5369885b25edf4c8aad486a2e465328f6aa02c1524ce54f555077e5d0b6d390a"
+    },
+    {
+      "path": "public/images/logos/splash-light.png",
+      "bytes": 239759,
+      "sha256": "cb8b8b29af9b936c4e6d9e32eba3c410a934d9a9798300ed3bb7aa7bb4e80061"
+    },
+    {
+      "path": "public/images/logos/toy-palm-chair.png",
+      "bytes": 438675,
+      "sha256": "d3674af87d155d7b170b20525c278c07eda2380fc61dc047e2aa895dfbad34b7"
+    },
+    {
+      "path": "public/images/ship.png",
+      "bytes": 555834,
+      "sha256": "99509705cb70b2dfab0f2c6735ddf3911bef7a69b6a9bb672fb47d5f673a6a9b"
+    },
+    {
+      "path": "public/images/table/component-libraries/chakra-ui.svg",
+      "bytes": 570,
+      "sha256": "b5f57e9941c5f7f593d86d31f1973404a1783ed8e01a82ad877a36cd03b9ba78"
+    },
+    {
+      "path": "public/images/table/component-libraries/hero-ui.svg",
+      "bytes": 682,
+      "sha256": "7c3d26dc8e3e751e4296b500c4db262cb597b4d15937c0408f6c08b2985c7643"
+    },
+    {
+      "path": "public/images/table/component-libraries/mantine.svg",
+      "bytes": 748,
+      "sha256": "f2d5038608520f433985f008f399f556691e91a49e96e0c9ce6e152fbb8a49a8"
+    },
+    {
+      "path": "public/images/table/component-libraries/material-ui.svg",
+      "bytes": 1584,
+      "sha256": "c7acc50a389ea6c0669e22c9a805ebadc3415c437e90dbab1cf807add045a3e5"
+    },
+    {
+      "path": "public/images/table/component-libraries/react-aria.svg",
+      "bytes": 833,
+      "sha256": "6ba5e8f7ec7f6cd5709e7d7ede68111045dc94fa9859b931ec42c1b3a54d5347"
+    },
+    {
+      "path": "public/images/table/component-libraries/shadcn-ui.svg",
+      "bytes": 431,
+      "sha256": "e0b4fbcd5840e566610a22d6d9287da7a413eddeefe880e597833e103c245cbb"
+    },
+    {
+      "path": "public/images/total-support-share.png",
+      "bytes": 129738,
+      "sha256": "af6c3a818a5a600ba3283e96bf4fc63834ab54084c49d370772153f96d51d868"
+    },
+    {
+      "path": "public/models/Textures/colormap.png",
+      "bytes": 9940,
+      "sha256": "ed0a675a6147d1a698db74131b9387b810d56194556414af9b48e364fcbec7e1"
+    },
+    {
+      "path": "public/models/beach-chair.glb",
+      "bytes": 15320,
+      "sha256": "9a338402d0f8751a0794cef7150d82f1b15dab04cd49e54ec11e3757a26c892f"
+    },
+    {
+      "path": "public/models/boat.glb",
+      "bytes": 13720,
+      "sha256": "263e5d46f79e8b37afecd0db9056b22dc33c6456074d260589285d1891192335"
+    },
+    {
+      "path": "public/models/colormap.png",
+      "bytes": 9940,
+      "sha256": "ed0a675a6147d1a698db74131b9387b810d56194556414af9b48e364fcbec7e1"
+    },
+    {
+      "path": "public/models/palm-tree.glb",
+      "bytes": 52032,
+      "sha256": "2dca0b39934d1bc0a0349243978552479a5d2f2631a77ddc780b7a216338d9f9"
+    },
+    {
+      "path": "public/models/palm-trees.glb",
+      "bytes": 1120784,
+      "sha256": "70275b7159f1790e2997113ce1373a6abc93dd609a2fa778e6edd5c0d4ba2904"
+    },
+    {
+      "path": "public/models/rowboat.glb",
+      "bytes": 17632,
+      "sha256": "5f741905b0b6a6346961ad3dfe5dbb19a52c9b84628e1cbff06f8eb86f1dcbc2"
+    },
+    {
+      "path": "public/models/sailboat.glb",
+      "bytes": 58132,
+      "sha256": "dd0d959f66c058e2afcfc01227f80b83347b5105d324690596a0c0eb6e65fb95"
+    },
+    {
+      "path": "public/models/ship.glb",
+      "bytes": 116456,
+      "sha256": "dbe2be9bd4755072e16afa78175d63c646df4e59010b7f50b252457ead67819a"
+    },
+    {
+      "path": "public/robots.txt",
+      "bytes": 66,
+      "sha256": "7dcdae3efac36da3de5a9b1c98be9620d36b238a960e375d2a263301ecc87d83"
+    },
+    {
+      "path": "public/shop/shirt.glb",
+      "bytes": 1048108,
+      "sha256": "4c020995f86593348909fc6da64c390d60ef2a22f8a4d421f70aced70acc3725"
+    },
+    {
+      "path": "public/site.webmanifest",
+      "bytes": 545,
+      "sha256": "f5c83a460a0809eeafaea5f89db8b21837d6af897350cd3f32e3bedb3756c0a2"
+    },
+    {
+      "path": "public/tanchat-sw.js",
+      "bytes": 1317,
+      "sha256": "d2553ef68c58b9670c159d19e3e17c9378cc104d00f7fdb58ba394d1a9c1484e"
+    }
+  ],
+  "static_asset_bytes": 111985406,
+  "input_hashes": {
+    "package.json": "f476c94e8e59dd705b28b168b7b3690e9886aab04bb8b1ceb5c9d7c6680ea64f",
+    "pnpm-lock.yaml": "5654ce909d277d658b5a28022c96fdf7961cc909ceafca45f6df67f858351c34",
+    "pnpm-workspace.yaml": "2d2ee3181e3e8c513acc1c4a2f6c07824ef99ddab1a8df0b07e1fd020de270ca",
+    ".nvmrc": "9b8856ee50cf06a9ce94d984812927448e9be59b03931bc1478b1d1d49a0d7b5",
+    "vite.config.ts": "47745a1db6ed623d79ff8c97ca93f400429350b4909bc2902fb06ecb799dfd92",
+    "wrangler.jsonc": "a594e3ed4eaeda4985b49f853dbd47f73da42da08db44024922c8a99b585bfd5",
+    "content-collections.ts": "671bab3e27c3ecc07d202eea4ffa56e9663cfcfb9ec3bd8d190ba64fbeb99b7a",
+    "src/router.tsx": "38493a79f40b70b73dcb94b9fd73d29510ccea7cd8766d3783ad254a8b788eb1",
+    "src/server.ts": "3c783f559233498ae6f4c48aaf41af00420296f2409e4232ab5f586a66969bbd",
+    "src/routeTree.gen.ts": "604679ac7abe702f444412598427baa9e618c738dac0a66043840d6af5a240f7"
+  }
+}

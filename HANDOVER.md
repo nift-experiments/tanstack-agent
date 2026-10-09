@@ -322,3 +322,7 @@ Prefer documented Nift behaviour and the existing project structure over guessin
 - Next: pin upstream and inspect build/runtime/content/external inputs. Do not translate content before the complete upstream baseline is frozen.
 - Production services must not be called or mutated. Fixtures may validate UI and local transports, never claim live backend parity.
 - Labs and accepted earlier migration repositories remain untouched.
+
+## T1 accepted baseline
+
+Pinned upstream remains clean. Complete build artifacts and external captures live in sibling `tanstack-baseline`, bound by `investigation/baseline-summary.json`. Two identical builds and 18 browser states pass. No migration parity or final performance claim yet. T2 must account for upstream request-time docs refresh (not a Vite rebuild), retain hosted Algolia, and prove content edits survive React hydration before scaling. No production secrets/services used.

@@ -1,0 +1,174 @@
+{
+  "captured_at": "2026-10-09T06:41:28.092409+00:00",
+  "source_site_commit": "862ccc3d191818320c3e6d217542883f80cb907a",
+  "inputs": [
+    {
+      "repo": "tanstack/ai",
+      "ref": "main",
+      "resolved": true,
+      "commit": "96191eafee12040c78f849fe7d47220f64591684",
+      "commit_date": "2026-10-08T15:58:42Z"
+    },
+    {
+      "repo": "tanstack/charts",
+      "ref": "main",
+      "resolved": true,
+      "commit": "57774e14a1a86081eddb3a23523724a40da05640",
+      "commit_date": "2026-10-09T00:49:39Z"
+    },
+    {
+      "repo": "tanstack/cli",
+      "ref": "main",
+      "resolved": true,
+      "commit": "3f2d3d32e0bc745a9b892ce767555a7f7b4dd591",
+      "commit_date": "2026-10-01T18:25:48Z"
+    },
+    {
+      "repo": "tanstack/config",
+      "ref": "main",
+      "resolved": true,
+      "commit": "7bbdf583c2fc1a7f596283cd01e0e44c43f574f2",
+      "commit_date": "2026-09-21T12:30:24Z"
+    },
+    {
+      "repo": "tanstack/db",
+      "ref": "main",
+      "resolved": true,
+      "commit": "fa36267473bf989fd0bafd29ab6d67ab5fc91c60",
+      "commit_date": "2026-10-08T21:10:07Z"
+    },
+    {
+      "repo": "tanstack/devtools",
+      "ref": "main",
+      "resolved": true,
+      "commit": "afa01fec1751308eb5f60e737e408f2fc34e669a",
+      "commit_date": "2026-09-23T11:31:18Z"
+    },
+    {
+      "repo": "tanstack/form",
+      "ref": "alpha",
+      "resolved": true,
+      "commit": "7b5c12cf3c69fe8e61b6654bb3e796c952a4a0f8",
+      "commit_date": "2026-10-08T11:57:53Z"
+    },
+    {
+      "repo": "tanstack/form",
+      "ref": "main",
+      "resolved": true,
+      "commit": "2216fdedf0a5ff17e4ef8567e1321442639b96ca",
+      "commit_date": "2026-10-01T18:13:49Z"
+    },
+    {
+      "repo": "tanstack/highlight",
+      "ref": "main",
+      "resolved": true,
+      "commit": "0541f2fdc7f96fb6245c82c739f0d816afdb670a",
+      "commit_date": "2026-10-08T16:21:06Z"
+    },
+    {
+      "repo": "tanstack/hotkeys",
+      "ref": "main",
+      "resolved": true,
+      "commit": "748379f3ac2df52b7e5f2aae9cceed2ce1bea78f",
+      "commit_date": "2026-10-04T05:03:47Z"
+    },
+    {
+      "repo": "tanstack/intent",
+      "ref": "main",
+      "resolved": true,
+      "commit": "ab9877c50888913e45afea92a0a87169de9c7d84",
+      "commit_date": "2026-10-07T21:06:33Z"
+    },
+    {
+      "repo": "tanstack/markdown",
+      "ref": "main",
+      "resolved": true,
+      "commit": "d9b5ef7133ba514f7269cd8f29b5719cd34f5836",
+      "commit_date": "2026-10-01T02:08:50Z"
+    },
+    {
+      "repo": "tanstack/pacer",
+      "ref": "main",
+      "resolved": true,
+      "commit": "32efe7d5022c4b1ecc3d2fe3529cee2c4aab5fd2",
+      "commit_date": "2026-10-05T13:32:11Z"
+    },
+    {
+      "repo": "tanstack/query",
+      "ref": "main",
+      "resolved": true,
+      "commit": "aab352876a01f76fd0e00b0b500a85907ec7c8b4",
+      "commit_date": "2026-10-08T09:59:06Z"
+    },
+    {
+      "repo": "tanstack/query",
+      "ref": "v3",
+      "resolved": true,
+      "commit": "feb1dc91eace73b39fb6e34fac2ea505a9a57070",
+      "commit_date": "2024-03-13T07:57:57Z"
+    },
+    {
+      "repo": "tanstack/query",
+      "ref": "v4",
+      "resolved": true,
+      "commit": "643c4c4820a74ee8f8452637053577c74e808eb5",
+      "commit_date": "2026-08-17T07:04:55Z"
+    },
+    {
+      "repo": "tanstack/ranger",
+      "ref": "main",
+      "resolved": true,
+      "commit": "fef45175e2f30c1d0e2749649f73f2a460acdf6d",
+      "commit_date": "2025-12-06T12:39:08Z"
+    },
+    {
+      "repo": "tanstack/router",
+      "ref": "main",
+      "resolved": true,
+      "commit": "17a3121ff494a481518d54732cdb939c7f61eb2c",
+      "commit_date": "2026-10-08T18:45:44Z"
+    },
+    {
+      "repo": "tanstack/store",
+      "ref": "main",
+      "resolved": true,
+      "commit": "c1a40d47e2c5e8a1ca30225771870bad8aacc0c2",
+      "commit_date": "2026-10-05T11:38:26Z"
+    },
+    {
+      "repo": "tanstack/table",
+      "ref": "main",
+      "resolved": true,
+      "commit": "d8ae30bcfe8665ef43d7557f4a492e0caa6f9c40",
+      "commit_date": "2026-10-08T21:31:03Z"
+    },
+    {
+      "repo": "tanstack/table",
+      "ref": "v8",
+      "resolved": true,
+      "commit": "50f2133167f9b1f96c0908c4c9dfc9dab89ed7f7",
+      "commit_date": "2026-08-02T12:10:14Z"
+    },
+    {
+      "repo": "tanstack/tanstack.com",
+      "ref": "main",
+      "resolved": true,
+      "commit": "862ccc3d191818320c3e6d217542883f80cb907a",
+      "commit_date": "2026-10-06T23:02:12Z"
+    },
+    {
+      "repo": "tanstack/virtual",
+      "ref": "main",
+      "resolved": true,
+      "commit": "c644f1096c9f4d8221d92862afdc9316b17df62a",
+      "commit_date": "2026-10-09T06:21:21Z"
+    },
+    {
+      "repo": "tanstack/workflow",
+      "ref": "main",
+      "resolved": true,
+      "commit": "b9287174b44424059895a0ed834b18ce50e0484a",
+      "commit_date": "2026-07-21T22:12:20Z"
+    }
+  ]
+}

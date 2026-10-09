@@ -1,0 +1,274 @@
+[
+  {
+    "symbol": "query",
+    "id": "query",
+    "repo": "tanstack/query",
+    "latestVersion": "v5",
+    "latestBranch": "main",
+    "defaultDocs": "framework/react/overview",
+    "availableVersions": [
+      "v5",
+      "v4",
+      "v3"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "router",
+    "id": "router",
+    "repo": "tanstack/router",
+    "latestVersion": "v1",
+    "latestBranch": "main",
+    "docsRoot": "docs/router",
+    "availableVersions": [
+      "v1"
+    ],
+    "visible": true,
+    "docs_root": "docs/router"
+  },
+  {
+    "symbol": "start",
+    "id": "start",
+    "repo": "tanstack/router",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "docsRoot": "docs/start",
+    "defaultDocs": "framework/react/overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs/start"
+  },
+  {
+    "symbol": "table",
+    "id": "table",
+    "repo": "tanstack/table",
+    "latestVersion": "v9",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v9",
+      "v8"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "charts",
+    "id": "charts",
+    "repo": "tanstack/charts",
+    "latestVersion": "v1",
+    "latestBranch": "main",
+    "availableVersions": [
+      "v1"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "form",
+    "id": "form",
+    "repo": "tanstack/form",
+    "latestVersion": "v1",
+    "latestBranch": "main",
+    "availableVersions": [
+      "v1",
+      "alpha"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "virtual",
+    "id": "virtual",
+    "repo": "tanstack/virtual",
+    "latestVersion": "v3",
+    "latestBranch": "main",
+    "defaultDocs": "introduction",
+    "availableVersions": [
+      "v3"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "ranger",
+    "id": "ranger",
+    "repo": "tanstack/ranger",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": false,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "store",
+    "id": "store",
+    "repo": "tanstack/store",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "pacer",
+    "id": "pacer",
+    "repo": "tanstack/pacer",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "hotkeys",
+    "id": "hotkeys",
+    "repo": "tanstack/hotkeys",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "markdown",
+    "id": "markdown",
+    "repo": "tanstack/markdown",
+    "latestVersion": "v1",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v1"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "highlight",
+    "id": "highlight",
+    "repo": "tanstack/highlight",
+    "latestVersion": "v1",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v1"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "db",
+    "id": "db",
+    "repo": "tanstack/db",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "ai",
+    "id": "ai",
+    "repo": "tanstack/ai",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "getting-started/overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "intent",
+    "id": "intent",
+    "repo": "tanstack/intent",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "config",
+    "id": "config",
+    "repo": "tanstack/config",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "devtools",
+    "id": "devtools",
+    "repo": "tanstack/devtools",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "mcp",
+    "id": "mcp",
+    "repo": "tanstack/tanstack.com",
+    "latestVersion": "v1",
+    "latestBranch": "main",
+    "availableVersions": [
+      "v1"
+    ],
+    "visible": false,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "cli",
+    "id": "cli",
+    "repo": "tanstack/cli",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": true,
+    "docs_root": "docs"
+  },
+  {
+    "symbol": "workflow",
+    "id": "workflow",
+    "repo": "tanstack/workflow",
+    "latestVersion": "v0",
+    "latestBranch": "main",
+    "defaultDocs": "overview",
+    "availableVersions": [
+      "v0"
+    ],
+    "visible": false,
+    "docs_root": "docs"
+  }
+]

@@ -49,8 +49,8 @@ after the campaign precedes final benchmarking.
 | Checkpoint | Status | Gate / next action |
 | --- | --- | --- |
 | T0 setup/init | done | Public repository created; generated guidance read; starter full/incremental/status checks pass. |
-| T1 pinned upstream baseline | in progress | Clone immutable upstream, pin SHA, inventory external inputs, reproduce complete production build. No content migration yet. |
-| T2 replace/retain/coexist map | not started | Derive from pinned source. |
+| T1 pinned upstream baseline | done | Production output frozen and repeated byte-identically; external docs verified; HTTP + 18 browser baseline states frozen. See baseline-summary.json. |
+| T2 replace/retain/coexist map | in progress | Resolve publication freshness and retained-runtime ownership before T3. |
 | T3 representative hybrid proof | not started | Only after reproducible upstream baseline. |
 | T4–T10 corpus/runtime/parity/profile/final campaign | not started | Follow generated method and explicit user parity/benchmark contract. |
 

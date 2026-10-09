@@ -3,5 +3,5 @@ const base=process.env.TANSTACK_BASELINE_DIR||path.resolve(path.dirname(fileURLT
 const {build}=await import(pathToFileURL(path.join(upstream,'node_modules/esbuild/lib/main.js')).href);
 let source=fs.readFileSync(new URL('./native-docs-refresh.mts',import.meta.url),'utf8');source=source.replace(/^const load=.*\n/m,'').replace(/^const (\{[^\n]+\})=await load\('src\/([^']+)'\)$/gm,"import $1 from '../src/$2'");
 const entry=path.join(directory,'native-docs-refresh.mts');fs.writeFileSync(entry,source);
-await build({entryPoints:[entry],outfile:path.join(directory,'native-docs-refresh.mjs'),bundle:true,platform:'node',format:'esm',packages:'external',alias:{'~':path.join(upstream,'src')},logLevel:'warning'});
+await build({entryPoints:[entry],outfile:path.join(directory,'native-docs-refresh.mjs'),bundle:true,platform:'node',format:'esm',packages:'external',alias:{'~':path.join(upstream,'src')},plugins:[{name:'benchmark-private-helper-visibility',setup(build){build.onLoad({filter:/docs\.functions\.ts$/},args=>args.path===path.join(upstream,'src/utils/docs.functions.ts')?{contents:fs.readFileSync(args.path,'utf8')+'\nexport { buildDocsManifest, buildDocsPathManifest, isDocsManifest };\n',loader:'ts'}:undefined)}}],logLevel:'warning'});
 console.log(path.join(directory,'native-docs-refresh.mjs'));

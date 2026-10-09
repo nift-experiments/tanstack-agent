@@ -140,7 +140,7 @@ for workload in workloads:
  for name in ['upstream','tanstack','tanstack-agent']:
   cache=out/('native-r2-'+workload)
   if name=='upstream' and workload in native_cases:
-   command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'prime','100']
+   command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'prime','100',workload]
    with (out/(workload+'-prime.log')).open('w') as log:subprocess.run(command,cwd=base,stdout=log,stderr=subprocess.STDOUT,check=True)
   for sample in range(1,6):
    if any(r['workload']==workload and r['implementation']==name and r['sample']==sample for r in rows):continue

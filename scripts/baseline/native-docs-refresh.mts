@@ -9,7 +9,7 @@ const upstream=path.join(baseline,'build-work')
 const load=(file:string)=>import(pathToFileURL(path.join(upstream,file)).href)
 const {runWithHostRuntimeEnv}=await load('src/server/runtime/host.server.ts')
 const {fetchRepoFile,fetchApiContents}=await load('src/utils/documents.server.ts')
-const {collectRedirectEntriesForFile,mapWithConcurrency}=await load('src/utils/docs.functions.ts')
+const {collectRedirectEntriesForFile,buildDocsManifest,buildDocsPathManifest,isDocsManifest}=await load('src/utils/docs.functions.ts')
 const {buildRedirectManifest}=await load('src/utils/redirects.ts')
 const {getCachedDocsArtifact,markGitHubContentStale,markDocsArtifactsStale}=await load('src/utils/github-content-cache.server.ts')
 const {fixtureOutbound,fixtureCalls}=await import(pathToFileURL(path.join(baseline,'fixture-provider.mjs')).href)
@@ -24,16 +24,17 @@ const localBucket={delete:(keys)=>bucket.delete(keys),list:(options)=>bucket.lis
 const inventory=JSON.parse(fs.readFileSync(path.join(baseline,'../tanstack/sources/docs-inputs.json'),'utf8'))
 const selected=inventory.files.filter(e=>e.repo==='tanstack/query'&&e.ref==='main'&&e.file.endsWith('.md')&&!e.file.includes('/reference/')&&fs.existsSync(path.join(baseline,'external-inputs/docs/tanstack--query--main',e.file))&&fs.statSync(path.join(baseline,'external-inputs/docs/tanstack--query--main',e.file)).size>0).slice(0,count)
 await runWithHostRuntimeEnv({GITHUB_CONTENT_CACHE:localBucket},async()=>{
- const options={repo:'tanstack/query',gitRef:'main',docsRoot:'docs',artifactType:'docs-manifest',artifactKey:'default',isValue:(v)=>typeof v==='object'&&v!==null&&Array.isArray(v.paths),build:async()=>{
-  const nodes=await fetchApiContents('tanstack/query','main','docs');const flatten=(nodes)=>nodes.flatMap(n=>[n,...flatten(n.children??[])]);const paths=new Set<string>();const entries=await mapWithConcurrency(flatten(nodes??[]).filter(n=>n.path.endsWith('.md')),12,n=>collectRedirectEntriesForFile(n,{docsRoot:'docs',fetchFile:f=>fetchRepoFile('tanstack/query','main',f),onCanonicalPath:p=>paths.add(p)}));return{paths:Array.from(paths),redirects:buildRedirectManifest(entries.flat(),{label:'native query docs'})}
- }}
+ const redirectResolution=process.argv[5]==='route-rename'||process.argv[5]==='route-delete'
+ const options={repo:'tanstack/query',gitRef:'main',docsRoot:'docs',artifactType:'docs-path-manifest',artifactKey:'default',isValue:isDocsManifest,build:()=>buildDocsPathManifest({repo:'tanstack/query',branch:'main',docsRoot:'docs'})}
+ const redirectOptions={...options,artifactType:'docs-manifest',build:()=>buildDocsManifest({repo:'tanstack/query',branch:'main',docsRoot:'docs'})}
  const started=performance.now()
  if(mode!=='prime'){await markGitHubContentStale({repo:'tanstack/query',gitRef:'main'});await markDocsArtifactsStale({repo:'tanstack/query',gitRef:'main'})}
  for(const entry of selected)assert.ok(await fetchRepoFile(entry.repo,entry.ref,entry.file))
  const config=await fetchRepoFile('tanstack/query','main','docs/config.json');assert.ok(config);JSON.parse(config)
  const manifest=await getCachedDocsArtifact(options);assert.ok(manifest.paths.length>0)
+ if(redirectResolution)await getCachedDocsArtifact(redirectOptions)
  if(process.argv[5]==='route-add'||process.argv[5]==='route-rename')assert.ok(manifest.paths.some(p=>p.includes('benchmark-added')))
  if(process.argv[5]==='route-rename'||process.argv[5]==='route-delete'){let canonical;await collectRedirectEntriesForFile({path:process.argv[6]},{docsRoot:'docs',fetchFile:async()=>null,onCanonicalPath:p=>canonical=p});assert.ok(canonical);assert.ok(!manifest.paths.includes(canonical))}
- console.log(JSON.stringify({mode,requested_documents:selected.length,native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,live_edge_cache_purge:false,production_writes:false,captured_origin_GETs:fixtureCalls.length,raw_document_GETs:fixtureCalls.filter(r=>new URL(r.url).hostname==='raw.githubusercontent.com').length}))
+ console.log(JSON.stringify({mode,requested_documents:selected.length,native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,path_manifest:true,redirect_manifest:redirectResolution,unchanged_private_helper_export_shim:true,live_edge_cache_purge:false,production_writes:false,captured_origin_GETs:fixtureCalls.length,raw_document_GETs:fixtureCalls.filter(r=>new URL(r.url).hostname==='raw.githubusercontent.com').length}))
 })
 }finally{await worker.dispose()}

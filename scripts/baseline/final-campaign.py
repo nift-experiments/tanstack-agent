@@ -72,8 +72,12 @@ def measure(key,command,cwd):
  return {'wall_seconds':command_elapsed,'wrapper_wall_seconds':elapsed,'maximum_individual_process_rss_kib':rss,'sampled_descendant_tree_peak_rss_kib':peak,'tree_sampling_interval_ms':50,'tree_samples':samples,'load_average':os.getloadavg()}
 auth=base.parent/'tanstack';agent=base.parent/'tanstack-agent'
 auth_inventory=json.loads((auth/'sources/docs-inputs.json').read_text())
-selected=[e for e in auth_inventory['files'] if e['repo']=='tanstack/query' and e['ref']=='main' and e['render'] and not e['request_time'] and e['file'].endswith('.md') and 'ref:' not in (auth/e['source']).read_text() and (auth/e['source']).stat().st_size>0][:100]
+candidates=[e for e in auth_inventory['files'] if e['repo']=='tanstack/query' and e['ref']=='main' and e['render'] and not e['request_time'] and e['file'].startswith('docs/framework/react/') and e['file'].endswith('.md') and 'ref:' not in (auth/e['source']).read_text() and (auth/e['source']).stat().st_size>0]
+primary=next(e for e in candidates if e['file']=='docs/framework/react/guides/background-fetching-indicators.md')
+selected=[primary]+[e for e in candidates if e!=primary][:99]
+(out/'selected-doc-inputs.json').write_text(json.dumps([e['file'] for e in selected],indent=2)+'\n')
 assert len(selected)==100
+lifecycle_entry=next(e for e in candidates if e['file']=='docs/framework/react/comparison.md')
 native_cases={'body-1','body-10','body-100','navigation','metadata','docs-sync','route-add','route-rename','route-delete'}
 def edit_document(changes,project,inventory,entry,marker,metadata=False):
  row=next(e for e in inventory['files'] if (e['repo'],e['ref'],e['file'])==(entry['repo'],entry['ref'],entry['file']))
@@ -115,7 +119,7 @@ def mutate(name,workload,sample):
   else:text+='\n\n'+marker+'\n'
   changes.write(p,text)
  elif workload.startswith('route-'):
-  entry=selected[0];newfile='docs/framework/react/benchmark-added.md'
+  entry=lifecycle_entry;newfile='docs/framework/react/benchmark-added.md'
   if name=='upstream':
    root=base/'external-inputs/docs/tanstack--query--main';original=root/entry['file'];new=root/newfile
    pins=json.loads((base/'docs-tree-inventory.json').read_text());pin=next(p for p in pins if p['repo']=='tanstack/query' and p['ref']=='main');treefile=base/pin['tree_file'];tree=json.loads(treefile.read_text())
@@ -129,6 +133,19 @@ def mutate(name,workload,sample):
     new=row.copy();new['file']=newfile;new['source']=row['source'].rsplit('/',1)[0]+'/benchmark-added'+('.document' if name=='tanstack-agent' else '.md');changes.write(project/new['source'],(project/row['source']).read_bytes());inv['files'].append(new)
    if workload in {'route-rename','route-delete'}:changes.remove(project/row['source']);inv['files'].remove(row)
    changes.write(project/'sources/docs-inputs.json',json.dumps(inv,indent=2)+'\n')
+ if workload.startswith('route-'):
+  config_file=base/'external-inputs/docs/tanstack--query--main/docs/config.json' if name=='upstream' else project/'sources/docs/tanstack--query--main/docs/config.json'
+  config=json.loads(config_file.read_text());old_path=lifecycle_entry['file'].removeprefix('docs/').removesuffix('.md');new_path='framework/react/benchmark-added';added=False
+  def update(value):
+   nonlocal added
+   if isinstance(value,list):
+    return [update(v) for v in value if not(workload=='route-delete' and isinstance(v,dict) and v.get('to')==old_path)]
+   if isinstance(value,dict):
+    value={k:update(v) for k,v in value.items()}
+    if workload=='route-rename' and value.get('to')==old_path:value['to']=new_path
+    if workload=='route-add' and not added and value.get('label')=='react' and isinstance(value.get('children'),list):value['children'].append({'label':'Benchmark lifecycle','to':new_path});added=True
+   return value
+  changes.write(config_file,json.dumps(update(config),indent=2)+'\n')
  return changes,count
 if '--dry-mutations' in sys.argv:
  for workload in ['body-1','body-10','body-100','navigation','metadata','shared-shell','island','collection','docs-sync','route-add','route-rename','route-delete']:
@@ -153,7 +170,7 @@ for workload in workloads:
      command=['python3','run-isolated.py','pnpm','build']
      scope='complete retained Vite production build'
      if workload in native_cases:
-      command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'refresh',str(count),workload,selected[0]['file']];scope='native local R2 invalidation, changed-document reads and Query docs manifest refresh, including helper startup; no Vite rebuild or live edge purge'
+      command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'refresh',str(count),workload,lifecycle_entry['file']];scope='native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge'
      if workload=='fresh':
       for rel in ['dist','.content-collections','.tanstack','.wrangler']:
        import shutil;shutil.rmtree(base/'build-work'/rel,ignore_errors=True)
@@ -170,12 +187,6 @@ for workload in workloads:
   if name!='upstream':
    with (out/f'{name}-{workload}-restore.log').open('w') as log:subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/publish.mjs'],cwd=base.parent/name,stdout=log,stderr=subprocess.STDOUT,check=True)
 summary=[]
-if '--dry-mutations' in sys.argv:
- for workload in ['body-1','body-10','body-100','navigation','metadata','shared-shell','island','collection','docs-sync','route-add','route-rename','route-delete']:
-  for name in ['upstream','tanstack','tanstack-agent']:
-   changes,count=mutate(name,workload,1);changes.restore();print(name,workload,'mutation/restoration passed',flush=True)
- sys.exit(0)
-subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/baseline/compile-native-refresh.mjs'],cwd=auth,check=True)
 for workload in workloads:
  for name in ['upstream','tanstack','tanstack-agent']:
   group=[r for r in rows if r['workload']==workload and r['implementation']==name];assert len(group)==5

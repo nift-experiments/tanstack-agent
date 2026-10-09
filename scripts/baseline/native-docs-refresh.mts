@@ -22,19 +22,26 @@ try{
 const bucket=await worker.getR2Bucket('GITHUB_CONTENT_CACHE')
 const localBucket={delete:(keys)=>bucket.delete(keys),list:(options)=>bucket.list(options),put:(key,value,options)=>bucket.put(key,value,options),get:async(key)=>{const object=await bucket.get(key);if(!object)return null;const response=new Response(await object.arrayBuffer());return{key:object.key,etag:object.etag,customMetadata:object.customMetadata,uploaded:object.uploaded,body:response.body,text:()=>response.text(),arrayBuffer:()=>response.arrayBuffer()}}}
 const inventory=JSON.parse(fs.readFileSync(path.join(baseline,'../tanstack/sources/docs-inputs.json'),'utf8'))
-const selected=inventory.files.filter(e=>e.repo==='tanstack/query'&&e.ref==='main'&&e.file.endsWith('.md')&&!e.file.includes('/reference/')&&fs.existsSync(path.join(baseline,'external-inputs/docs/tanstack--query--main',e.file))&&fs.statSync(path.join(baseline,'external-inputs/docs/tanstack--query--main',e.file)).size>0).slice(0,count)
+const planFile=path.join(baseline,'t10-final/selected-doc-inputs.json')
+assert.ok(fs.existsSync(planFile),'Generate the shared controlled-document plan before native refresh')
+const paths:string[]=JSON.parse(fs.readFileSync(planFile,'utf8'))
+const entries=paths.map(file=>inventory.files.find(e=>e.repo==='tanstack/query'&&e.ref==='main'&&e.file===file)).filter(Boolean)
+const lifecycle=inventory.files.find(e=>e.repo==='tanstack/query'&&e.ref==='main'&&e.file===process.argv[6])
+const requested=process.argv[5]?.startsWith('route-')&&process.argv[5]!=='route-delete'?[{...lifecycle,file:'docs/framework/react/benchmark-added.md'}]:entries
+const selected=requested.filter(e=>fs.existsSync(path.join(baseline,'external-inputs/docs/tanstack--query--main',e.file))).slice(0,count)
+
 await runWithHostRuntimeEnv({GITHUB_CONTENT_CACHE:localBucket},async()=>{
  const redirectResolution=process.argv[5]==='route-rename'||process.argv[5]==='route-delete'
  const options={repo:'tanstack/query',gitRef:'main',docsRoot:'docs',artifactType:'docs-path-manifest',artifactKey:'default',isValue:isDocsManifest,build:()=>buildDocsPathManifest({repo:'tanstack/query',branch:'main',docsRoot:'docs'})}
  const redirectOptions={...options,artifactType:'docs-manifest',build:()=>buildDocsManifest({repo:'tanstack/query',branch:'main',docsRoot:'docs'})}
  const started=performance.now()
  if(mode!=='prime'){await markGitHubContentStale({repo:'tanstack/query',gitRef:'main'});await markDocsArtifactsStale({repo:'tanstack/query',gitRef:'main'})}
- for(const entry of selected)assert.ok(await fetchRepoFile(entry.repo,entry.ref,entry.file))
- const config=await fetchRepoFile('tanstack/query','main','docs/config.json');assert.ok(config);JSON.parse(config)
+ for(const entry of selected){const file=await fetchRepoFile(entry.repo,entry.ref,entry.file);assert.ok(file);if(mode!=='prime'&&(process.argv[5]?.startsWith('body-')||['metadata','docs-sync'].includes(process.argv[5])))assert.ok(file.includes('Controlled publication benchmark '+process.argv[5]),'Read must include the changed-input marker: '+entry.file)}
+ const config=await fetchRepoFile('tanstack/query','main','docs/config.json');assert.ok(config);JSON.parse(config);if(mode!=='prime'&&process.argv[5]==='navigation')assert.ok(config.includes('Controlled publication benchmark navigation'))
  const manifest=await getCachedDocsArtifact(options);assert.ok(manifest.paths.length>0)
  if(redirectResolution)await getCachedDocsArtifact(redirectOptions)
  if(process.argv[5]==='route-add'||process.argv[5]==='route-rename')assert.ok(manifest.paths.some(p=>p.includes('benchmark-added')))
  if(process.argv[5]==='route-rename'||process.argv[5]==='route-delete'){let canonical;await collectRedirectEntriesForFile({path:process.argv[6]},{docsRoot:'docs',fetchFile:async()=>null,onCanonicalPath:p=>canonical=p});assert.ok(canonical);assert.ok(!manifest.paths.includes(canonical))}
- console.log(JSON.stringify({mode,requested_documents:selected.length,native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,path_manifest:true,redirect_manifest:redirectResolution,unchanged_private_helper_export_shim:true,live_edge_cache_purge:false,production_writes:false,captured_origin_GETs:fixtureCalls.length,raw_document_GETs:fixtureCalls.filter(r=>new URL(r.url).hostname==='raw.githubusercontent.com').length}))
+ console.log(JSON.stringify({mode,requested_documents:selected.length,requested_paths:selected.map(e=>e.file),native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,path_manifest:true,redirect_manifest:redirectResolution,unchanged_private_helper_export_shim:true,live_edge_cache_purge:false,production_writes:false,captured_origin_GETs:fixtureCalls.length,raw_document_GETs:fixtureCalls.filter(r=>new URL(r.url).hostname==='raw.githubusercontent.com').length}))
 })
 }finally{await worker.dispose()}

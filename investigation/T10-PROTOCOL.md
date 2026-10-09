@@ -13,3 +13,7 @@ Mutations use real pinned content/components, deterministic sample markers and a
 GNU time records maximum individual process/phase RSS across the same complete command window, never summed. A 50ms descendant sampler separately records tree RSS in that window, excluding unrelated user processes; short peaks can be missed. Medians and min/max ranges use five samples, with raw records, phase costs and machine load retained. Results from different scopes are labeled explicitly rather than pooled. No OS-wide cache flush or exclusive-machine claim is made.
 
 Native ordinary-path and missing-path smoke checks pass before starting the final campaign. The former refreshes the path artifact without scanning every doc for redirect aliases. The final report must keep upstream advantages, retained bundler costs, source-model tradeoffs and live-integration limits visible.
+
+Preflight alignment before any native/changed-input samples: both the edit driver and native reader use the same persisted 100-file React authored-input plan, beginning with the non-default background-fetching guide whose source has five framework dependents. Native body/metadata/config reads assert their mutation marker. Completed full/fresh samples are unaffected by this input-plan correction.
+
+Lifecycle mutations use the independent Comparison document, which has no incoming source references, and update its real React navigation entries. Rename tests remove the old canonical path without inventing a redirect alias; missing-path resolution still uses the original redirect lookup.

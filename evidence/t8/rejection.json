@@ -1,0 +1,1 @@
+{"cohort":"t8-initial","rejected_rows":"Nift full rows only","reason":"--full forced retained Vite bundling but failed to pass --all to Nift composition","replacement":"t8-corrected-full","retained_rows":"Upstream full and all three unchanged-command cohorts remain valid","numbers_not_pooled":true}

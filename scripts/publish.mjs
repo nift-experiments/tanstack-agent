@@ -10,5 +10,5 @@ const publicationClient=path.join(project,'publication/client');fs.mkdirSync(pub
 for(const entry of fs.readdirSync(publicationClient))if(entry!=='_nift')fs.rmSync(path.join(publicationClient,entry),{recursive:true,force:true});
 fs.rmSync(path.join(project,'publication/server'),{recursive:true,force:true});
 for(const part of ['client','server'])fs.cpSync(path.join(runtime,'dist',part),path.join(project,'publication',part),{recursive:true});phases.retained_asset_publication=(performance.now()-phase)/1000;
-phase=performance.now();run(['node','--import','tsx','../scripts/publish-corpus.mts']);phases.content_publication=(performance.now()-phase)/1000;phases.complete_pipeline=(performance.now()-started)/1000;
+phase=performance.now();run(['node','--import','tsx','../scripts/publish-corpus.mts',...(force?['--full']:[])]);phases.content_publication=(performance.now()-phase)/1000;phases.complete_pipeline=(performance.now()-started)/1000;
 const content=JSON.parse(fs.readFileSync(path.join(project,'.rendered/publication-phases.json'),'utf8'));fs.writeFileSync(path.join(project,'.rendered/pipeline-phases.json'),JSON.stringify({force,runtime_rebuilt:rebuilt,runtime_fingerprint:fingerprint,phases,content_phases:content.phases},null,2)+'\n');console.log(JSON.stringify(phases));

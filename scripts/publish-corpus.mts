@@ -109,7 +109,7 @@ for(const entry of fs.readdirSync(generatedContent,{recursive:true,withFileTypes
 }
 phases.publication_preparation=(performance.now()-time)/1000
 const nift=path.resolve(project,'../tanstack-baseline/toolchain/nift-v4.9.0')
-const niftTime=performance.now();const built=spawnSync(nift,['build'],{cwd:project,stdio:'inherit'});assert.equal(built.status,0);phases.nift_composition=(performance.now()-niftTime)/1000
+const niftTime=performance.now();const built=spawnSync(nift,['build',...(process.argv.includes('--full')?['--all']:[])],{cwd:project,stdio:'inherit'});assert.equal(built.status,0);phases.nift_composition=(performance.now()-niftTime)/1000
 // Delete stale owned assets after rename/delete; unrelated retained assets are untouched.
 const owned=path.join(destination,'_nift/docs')
 for(const entry of fs.readdirSync(owned,{recursive:true,withFileTypes:true})) {

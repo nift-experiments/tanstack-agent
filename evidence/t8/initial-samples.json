@@ -1,0 +1,422 @@
+[
+  {
+    "implementation": "upstream",
+    "workload": "full",
+    "sample": 1,
+    "wall_seconds": 33.05775234801695,
+    "maximum_process_rss_kib": 4617156,
+    "load_average": [
+      8.03173828125,
+      5.33642578125,
+      5.46826171875
+    ]
+  },
+  {
+    "implementation": "upstream",
+    "workload": "full",
+    "sample": 2,
+    "wall_seconds": 30.4647972851526,
+    "maximum_process_rss_kib": 4608820,
+    "load_average": [
+      7.8115234375,
+      5.5302734375,
+      5.52783203125
+    ]
+  },
+  {
+    "implementation": "upstream",
+    "workload": "full",
+    "sample": 3,
+    "wall_seconds": 30.845735533861443,
+    "maximum_process_rss_kib": 4525424,
+    "load_average": [
+      9.20263671875,
+      6.060546875,
+      5.7041015625
+    ]
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "full",
+    "sample": 1,
+    "wall_seconds": 46.78188014309853,
+    "maximum_process_rss_kib": 4652848,
+    "load_average": [
+      8.158203125,
+      6.365234375,
+      5.83154296875
+    ],
+    "phases": {
+      "force": true,
+      "runtime_rebuilt": true,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 29.443124265,
+        "retained_asset_publication": 0.1669579479999993,
+        "content_publication": 16.789745179,
+        "complete_pipeline": 46.685022702000005
+      },
+      "content_phases": {
+        "compatibility": 5.4359779889999995,
+        "markdown_projection": 3.032863010000001,
+        "publication_preparation": 6.465284037000001,
+        "nift_composition": 0.239546475000001,
+        "complete_content_publication": 15.407927185999998
+      }
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "full",
+    "sample": 2,
+    "wall_seconds": 44.209171255119145,
+    "maximum_process_rss_kib": 4519308,
+    "load_average": [
+      5.875,
+      6.041015625,
+      5.74853515625
+    ],
+    "phases": {
+      "force": true,
+      "runtime_rebuilt": true,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 28.595805451,
+        "retained_asset_publication": 0.15533051999999953,
+        "content_publication": 15.064749633,
+        "complete_pipeline": 44.1202474
+      },
+      "content_phases": {
+        "compatibility": 4.706134734,
+        "markdown_projection": 2.670703374,
+        "publication_preparation": 6.152334556,
+        "nift_composition": 0.18922640499999943,
+        "complete_content_publication": 13.919205463
+      }
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "full",
+    "sample": 3,
+    "wall_seconds": 41.71687578293495,
+    "maximum_process_rss_kib": 4603296,
+    "load_average": [
+      5.7060546875,
+      6.03466796875,
+      5.76123046875
+    ],
+    "phases": {
+      "force": true,
+      "runtime_rebuilt": true,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 27.265597722,
+        "retained_asset_publication": 0.13337572699999872,
+        "content_publication": 14.015173867999998,
+        "complete_pipeline": 41.643662577
+      },
+      "content_phases": {
+        "compatibility": 4.654655624,
+        "markdown_projection": 2.5539406899999992,
+        "publication_preparation": 5.261634067000001,
+        "nift_composition": 0.21417022499999985,
+        "complete_content_publication": 12.909318708999999
+      }
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "full",
+    "sample": 1,
+    "wall_seconds": 35.259630002779886,
+    "maximum_process_rss_kib": 4605080,
+    "load_average": [
+      6.3994140625,
+      6.1474609375,
+      5.8076171875
+    ],
+    "phases": {
+      "force": true,
+      "runtime_rebuilt": true,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 27.997097774999997,
+        "retained_asset_publication": 0.1529441659999975,
+        "content_publication": 6.7837712119999996,
+        "complete_pipeline": 35.177002318
+      },
+      "content_phases": {
+        "publication_preparation": 4.621804099,
+        "nift_composition": 0.25149874,
+        "complete_content_publication": 5.083887961
+      }
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "full",
+    "sample": 2,
+    "wall_seconds": 33.29727499606088,
+    "maximum_process_rss_kib": 4628820,
+    "load_average": [
+      5.5400390625,
+      5.99560546875,
+      5.7705078125
+    ],
+    "phases": {
+      "force": true,
+      "runtime_rebuilt": true,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 26.603251326000002,
+        "retained_asset_publication": 0.1446554810000016,
+        "content_publication": 6.238567664999999,
+        "complete_pipeline": 33.22521645599999
+      },
+      "content_phases": {
+        "publication_preparation": 4.660992263,
+        "nift_composition": 0.2638551289999996,
+        "complete_content_publication": 5.1325504770000006
+      }
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "full",
+    "sample": 3,
+    "wall_seconds": 37.98287977394648,
+    "maximum_process_rss_kib": 4653412,
+    "load_average": [
+      7.5390625,
+      6.416015625,
+      5.91650390625
+    ],
+    "phases": {
+      "force": true,
+      "runtime_rebuilt": true,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 29.973040159,
+        "retained_asset_publication": 0.16010441499999797,
+        "content_publication": 7.538145670999999,
+        "complete_pipeline": 37.904806124000004
+      },
+      "content_phases": {
+        "publication_preparation": 5.732488094000001,
+        "nift_composition": 0.20379506199999922,
+        "complete_content_publication": 6.1523418979999995
+      }
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "unchanged",
+    "sample": 1,
+    "wall_seconds": 29.69834242714569,
+    "maximum_process_rss_kib": 4695736,
+    "load_average": [
+      6.625,
+      6.31005859375,
+      5.89697265625
+    ]
+  },
+  {
+    "implementation": "upstream",
+    "workload": "unchanged",
+    "sample": 2,
+    "wall_seconds": 32.72134824609384,
+    "maximum_process_rss_kib": 4616340,
+    "load_average": [
+      8.34521484375,
+      6.6787109375,
+      6.03173828125
+    ]
+  },
+  {
+    "implementation": "upstream",
+    "workload": "unchanged",
+    "sample": 3,
+    "wall_seconds": 31.30532620404847,
+    "maximum_process_rss_kib": 4603096,
+    "load_average": [
+      8.9453125,
+      6.96923828125,
+      6.1484375
+    ]
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "unchanged",
+    "sample": 1,
+    "wall_seconds": 16.469219765858725,
+    "maximum_process_rss_kib": 596824,
+    "load_average": [
+      8.06396484375,
+      6.8720703125,
+      6.12939453125
+    ],
+    "phases": {
+      "force": false,
+      "runtime_rebuilt": false,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 5.290000000286454e-07,
+        "retained_asset_publication": 0.149611738,
+        "content_publication": 15.972561839,
+        "complete_pipeline": 16.38720327
+      },
+      "content_phases": {
+        "compatibility": 5.111544567,
+        "markdown_projection": 2.831281196999999,
+        "publication_preparation": 6.2901671939999995,
+        "nift_composition": 0.23335251400000015,
+        "complete_content_publication": 14.692702925999999
+      }
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "unchanged",
+    "sample": 2,
+    "wall_seconds": 16.856862067012116,
+    "maximum_process_rss_kib": 595724,
+    "load_average": [
+      7.11474609375,
+      6.734375,
+      6.09912109375
+    ],
+    "phases": {
+      "force": false,
+      "runtime_rebuilt": false,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 1.1420000000157415e-06,
+        "retained_asset_publication": 0.159960114,
+        "content_publication": 16.366902255,
+        "complete_pipeline": 16.780420938
+      },
+      "content_phases": {
+        "compatibility": 5.32097224,
+        "markdown_projection": 2.7748305819999994,
+        "publication_preparation": 6.3325198579999995,
+        "nift_composition": 0.24737003399999957,
+        "complete_content_publication": 14.900539719000001
+      }
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "unchanged",
+    "sample": 3,
+    "wall_seconds": 16.67366655403748,
+    "maximum_process_rss_kib": 597764,
+    "load_average": [
+      6.3994140625,
+      6.5986328125,
+      6.064453125
+    ],
+    "phases": {
+      "force": false,
+      "runtime_rebuilt": false,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 7.08999999972093e-07,
+        "retained_asset_publication": 0.15503361300000001,
+        "content_publication": 16.192682161,
+        "complete_pipeline": 16.601115021000002
+      },
+      "content_phases": {
+        "compatibility": 5.606423002,
+        "markdown_projection": 2.7740666810000003,
+        "publication_preparation": 6.063319209000001,
+        "nift_composition": 0.23219756700000108,
+        "complete_content_publication": 14.887834496
+      }
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "unchanged",
+    "sample": 1,
+    "wall_seconds": 7.552320477087051,
+    "maximum_process_rss_kib": 654224,
+    "load_average": [
+      6.0234375,
+      6.51220703125,
+      6.0419921875
+    ],
+    "phases": {
+      "force": false,
+      "runtime_rebuilt": false,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 8.920000000216532e-07,
+        "retained_asset_publication": 0.16161906900000003,
+        "content_publication": 7.070410183,
+        "complete_pipeline": 7.479458727
+      },
+      "content_phases": {
+        "publication_preparation": 5.236326465,
+        "nift_composition": 0.206034944,
+        "complete_content_publication": 5.66871276
+      }
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "unchanged",
+    "sample": 2,
+    "wall_seconds": 7.544991568895057,
+    "maximum_process_rss_kib": 655892,
+    "load_average": [
+      5.701171875,
+      6.43701171875,
+      6.02001953125
+    ],
+    "phases": {
+      "force": false,
+      "runtime_rebuilt": false,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 4.059999999981301e-07,
+        "retained_asset_publication": 0.160269885,
+        "content_publication": 7.0495653769999995,
+        "complete_pipeline": 7.464954606999999
+      },
+      "content_phases": {
+        "publication_preparation": 5.23750119,
+        "nift_composition": 0.21664213000000018,
+        "complete_content_publication": 5.721002212999999
+      }
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "unchanged",
+    "sample": 3,
+    "wall_seconds": 7.735892976867035,
+    "maximum_process_rss_kib": 658860,
+    "load_average": [
+      5.8017578125,
+      6.4384765625,
+      6.02490234375
+    ],
+    "phases": {
+      "force": false,
+      "runtime_rebuilt": false,
+      "runtime_fingerprint": "e67b31e92f2fbf367efbc8688d09e1d51eb1c42b23917b0796e2b306ddd2afe7",
+      "phases": {
+        "retained_vite_build": 4.989999999907013e-07,
+        "retained_asset_publication": 0.152507667,
+        "content_publication": 7.2588199730000005,
+        "complete_pipeline": 7.6589105040000005
+      },
+      "content_phases": {
+        "publication_preparation": 5.412173918000001,
+        "nift_composition": 0.22658084299999973,
+        "complete_content_publication": 5.8728229810000006
+      }
+    }
+  }
+]

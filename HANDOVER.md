@@ -326,3 +326,7 @@ Prefer documented Nift behaviour and the existing project structure over guessin
 ## T1 accepted baseline
 
 Pinned upstream remains clean. Complete build artifacts and external captures live in sibling `tanstack-baseline`, bound by `investigation/baseline-summary.json`. Two identical builds and 18 browser states pass. No migration parity or final performance claim yet. T2 must account for upstream request-time docs refresh (not a Vite rebuild), retain hosted Algolia, and prove content edits survive React hydration before scaling. No production secrets/services used.
+
+## T2 selected boundary
+
+See RETAINED-TANSTACK.md for all classifications and proof obligations. Nift owns cacheable document composition/assets; Vite and React/TanStack own rendering/bundling/runtime, Cloudflare owns services/security. Rich agent documents may maintain pre-derived TanStack AST alongside ordinary HTML; do not force inert HTML on useful React components. Upstream docs edits are runtime refreshes, not inherently Vite rebuilds: preserve that distinction in the final campaign. T3 remains in progress; no corpus conversion yet.

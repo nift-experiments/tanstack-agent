@@ -50,8 +50,8 @@ after the campaign precedes final benchmarking.
 | --- | --- | --- |
 | T0 setup/init | done | Public repository created; generated guidance read; starter full/incremental/status checks pass. |
 | T1 pinned upstream baseline | done | Production output frozen and repeated byte-identically; external docs verified; HTTP + 18 browser baseline states frozen. See baseline-summary.json. |
-| T2 replace/retain/coexist map | in progress | Resolve publication freshness and retained-runtime ownership before T3. |
-| T3 representative hybrid proof | not started | Only after reproducible upstream baseline. |
+| T2 replace/retain/coexist map | done | Explicit retained-runtime/public-document boundary and fair runtime docs-update treatment recorded. T3 must prove it. |
+| T3 representative hybrid proof | in progress | Prove raw composition, hydration/source edits, routing and service fallback before corpus scaling. |
 | T4–T10 corpus/runtime/parity/profile/final campaign | not started | Follow generated method and explicit user parity/benchmark contract. |
 
 This experiment finds the best Nift + TanStack boundary. React, Router, Query, Start and backend services remain where useful. No Nift core changes are authorized.

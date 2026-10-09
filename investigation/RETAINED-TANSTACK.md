@@ -1,6 +1,6 @@
-# Replacement / retention / coexistence map — T1 draft
+# Replacement / retention / coexistence map — T2 boundary
 
-Pinned upstream: `862ccc3d191818320c3e6d217542883f80cb907a`. This is a source-derived architecture inventory, not an accepted architecture proof or parity claim. Baseline production build and external input capture remain in progress. Nift + retained TanStack is the experiment; no subsystem is removed merely to reduce dependencies.
+Pinned upstream: `862ccc3d191818320c3e6d217542883f80cb907a`. T1 baseline is accepted. This is the source-derived replacement boundary; implementation and parity remain gated by T3/T7. Nift + retained TanStack is the experiment; no subsystem is removed merely to reduce dependencies.
 
 | Subsystem | Classification | Pinned-source evidence | Boundary / benchmark treatment |
 | --- | --- | --- | --- |
@@ -33,8 +33,27 @@ Pinned upstream: `862ccc3d191818320c3e6d217542883f80cb907a`. This is a source-de
 ## Source-model distinction
 
 - **Nift `tanstack` (authored-source)**: Markdown/frontmatter/structured sources remain authoritative; existing React/TanStack implementations retained where useful. Compatibility/collection/rendering and required bundling costs remain in the complete publication pipeline.
-- **Nift `tanstack-agent` (rendered-source)**: maintained HTML and explicit metadata/projections where appropriate, retaining useful runtime components/services. No routine Markdown conversion. Explicit refresh/update work is distinguished from normal publication.
+- **Nift `tanstack-agent` (rendered-source)**: maintained HTML and explicit metadata/projections where appropriate, retaining useful runtime components/services. Ordinary HTML is maintained directly where suitable; pre-derived React/TanStack document projections may be maintained for component-heavy content. Dynamic content transformations remain only where the retained runtime actually needs them. Explicit refresh/update work is distinguished from normal publication.
 
 ## Evidence boundaries
 
 UI parity, local transport parity and actual live backend integration are separate. Neither a compiled Worker nor a deterministic fixture establishes live service integration. A route pattern is not a concrete publication page. The complete documentation corpus and dynamic route contracts must be reconciled before performance claims.
+
+## Publication boundary selected for T3
+
+Nift composes cacheable public documents and publishes maintained assets. Vite remains responsible for the existing React/TanStack browser and Cloudflare Worker bundles. The Worker keeps its original dynamic routes/services and selects published documents only through an explicit public-route manifest. Requests with authentication/session cookies, authorization, non-GET methods, unrecognized query parameters or unsupported negotiation bypass the static document path. Security/content-negotiation headers remain Worker-owned. No static mock replaces a production server function.
+
+Published HTML must retain the original hydration payload, asset graph and router state. A raw Nift dependency/composition test will prove literal syntax survives; content edits must survive initial hydration and client navigation. The rendered model may maintain a TanStack document AST for rich components rather than replacing tabs, framework filtering, live examples or code controls with inert HTML. The authored model derives the same projection from maintained Markdown. Exceptions such as partner-dependent Start hosting content stay explicitly runtime-rendered. This is a bounded migration adapter, not a replacement Router/Query/Start implementation.
+
+## Benchmark comparability rule
+
+Upstream docs are runtime inputs. A docs body edit does **not** inherently require a Vite rebuild. Report upstream production rebuild scenarios separately from docs-cache/ingestion refresh scenarios. Compare complete Nift publication (including all required derivation, SSR, bundling and composition) with the corresponding upstream publication/update workflow, and expose the cost of prepublishing documents that upstream renders on demand. Never force an unnecessary upstream build or remove a required migration step. Backend infrastructure deployment remains outside both workflows.
+
+## Remaining proof obligations
+
+- Public cached documents contain no private/user-specific state; logged-in requests reach retained runtime.
+- Maintained rendered content remains authoritative after hydration and navigation.
+- Published input revisions are used by retained loaders, downloads and generated projections consistently.
+- Static asset requests preserve Cloudflare precedence; API/server functions remain callable.
+- Changed input dependencies invalidate exactly the necessary publication families, and add/rename/delete remove stale output.
+- Search remains hosted Algolia with deterministic transport fixtures; no build-time index is invented.

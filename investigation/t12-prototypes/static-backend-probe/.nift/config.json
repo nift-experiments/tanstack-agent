@@ -1,0 +1,1 @@
+{"config": {"content-dir": "content/", "content-ext": ".html", "output-dir": "publication/", "output-ext": ".html", "default-template": "templates/template.html", "build-threads": 1, "incremental-mode": "modified", "minify-exts": []}}

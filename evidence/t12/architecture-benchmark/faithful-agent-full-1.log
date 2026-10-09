@@ -1,0 +1,40 @@
+NIFT_PHASE source_discovery
+NIFT_PHASE retained_vite_build
+$ vite build --logLevel warn
+Starting content-collections with config content-collections.ts
+Starting content-collections with config content-collections.ts
+Starting content-collections with config content-collections.ts
+Start initial build
+build started ...
+... finished build of 1 collection and 80 documents in 158ms
+[plugin rolldown:vite-resolve] Module "node:path" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:crypto" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:path" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:module" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0msrc/chat/core/skills.ts is dynamically imported by src/chat/components/ComposerReferences.tsx but also statically imported by src/chat/components/HomeAssetDetail.tsx, src/chat/components/HomeDashboard.tsx, src/chat/components/SkillSettings.tsx, src/chat/core/plugins.ts, dynamic import will not move module into another chunk.
+
+Start initial build
+build started ...
+... finished build of 1 collection and 80 documents in 136ms
+NIFT_PHASE retained_asset_publication
+NIFT_PHASE publisher_compilation
+{"publisher_compile":"miss","forced":true,"inputs":12}
+NIFT_PHASE content_process_startup
+NIFT_PHASE content_discovery
+NIFT_PHASE projection_assets_and_revision
+NIFT_PHASE metadata_navigation
+NIFT_PHASE state_serialization
+NIFT_PHASE nift_composition
+📦 7578 files built successfully
+time taken: 0.800348 seconds
+NIFT_PHASE composition_verification
+NIFT_PHASE route_retirement
+NIFT_PHASE cache_serialization
+{"publication_record_hits":0,"publication_record_misses":7601,"composition_repairs":0}
+NIFT_PHASE complete
+{"publication_preparation":2.564745706,"nift_composition":0.817389431,"output_verification_and_repair":0.25471130200000014,"complete_content_publication":3.9121445859999997}
+NIFT_PHASE worker_configuration
+NIFT_PHASE complete
+{"bundle_verification":0.0000012140000000044892,"retained_vite_build":31.917723045,"retained_asset_publication":0.13721406200000275,"publisher_compilation":0.3563008150000023,"content_publication":4.054077295999999,"complete_pipeline":36.74922823}

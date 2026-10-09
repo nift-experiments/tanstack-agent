@@ -1,0 +1,338 @@
+[
+  {
+    "implementation": "tanstack-agent",
+    "workload": "full",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 41.55,
+      "min": 40.1,
+      "max": 43.2
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 3804924,
+      "min": 3700336,
+      "max": 3844960
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 3959988,
+      "min": 3867740,
+      "max": 4010764
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "full",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 32.94,
+      "min": 30.5,
+      "max": 36.83
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4615760,
+      "min": 4578544,
+      "max": 4672084
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5246992,
+      "min": 5199360,
+      "max": 5317212
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "fresh",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 44.53,
+      "min": 42.5,
+      "max": 57.54
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 3969828,
+      "min": 3954280,
+      "max": 4026228
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 4135872,
+      "min": 4115284,
+      "max": 4193236
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "fresh",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 46.3,
+      "min": 39.92,
+      "max": 49.81
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4624716,
+      "min": 4512336,
+      "max": 4669076
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5285552,
+      "min": 5128064,
+      "max": 5321688
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "unchanged",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 2.89,
+      "min": 2.74,
+      "max": 3.18
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 329320,
+      "min": 324164,
+      "max": 333432
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 485392,
+      "min": 481356,
+      "max": 490196
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "unchanged",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 2.61,
+      "min": 2.56,
+      "max": 3.04
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 308284,
+      "min": 306268,
+      "max": 310108
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 467112,
+      "min": 464312,
+      "max": 472456
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "body-1",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 2.74,
+      "min": 2.67,
+      "max": 2.95
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 327008,
+      "min": 324736,
+      "max": 334880
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 489324,
+      "min": 488812,
+      "max": 496096
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "body-1",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 2.54,
+      "min": 2.53,
+      "max": 2.62
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 308372,
+      "min": 305424,
+      "max": 315728
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 465268,
+      "min": 463328,
+      "max": 477616
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "shared-shell",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 35.05,
+      "min": 35.01,
+      "max": 37.14
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 3916512,
+      "min": 3834996,
+      "max": 3939092
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 4074776,
+      "min": 3985644,
+      "max": 4105912
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "shared-shell",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 32.12,
+      "min": 30.35,
+      "max": 32.65
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4620396,
+      "min": 4531436,
+      "max": 4657116
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5238228,
+      "min": 5155360,
+      "max": 5279424
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "island",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 35.1,
+      "min": 34.33,
+      "max": 35.91
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 3799276,
+      "min": 3713064,
+      "max": 3871592
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 3962772,
+      "min": 3879608,
+      "max": 4030844
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "island",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 34.61,
+      "min": 30.52,
+      "max": 37.52
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4633548,
+      "min": 4557612,
+      "max": 4723016
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5258432,
+      "min": 5184540,
+      "max": 5315084
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-rename",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 3.27,
+      "min": 3.21,
+      "max": 3.62
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 328884,
+      "min": 326272,
+      "max": 335684
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 494600,
+      "min": 492884,
+      "max": 497484
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "route-rename",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 3.59,
+      "min": 3.55,
+      "max": 3.73
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 310956,
+      "min": 308684,
+      "max": 318924
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 469828,
+      "min": 466188,
+      "max": 474852
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-delete",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 3.89,
+      "min": 3.54,
+      "max": 5.37
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 326780,
+      "min": 326060,
+      "max": 330348
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 489952,
+      "min": 486948,
+      "max": 496448
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "route-delete",
+    "samples": 5,
+    "scope": "complete agent content/assets/Worker configuration publication, including both required client and server bundling environments; no hidden service build",
+    "wall_seconds": {
+      "median": 3.82,
+      "min": 3.26,
+      "max": 4.46
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 310032,
+      "min": 306992,
+      "max": 311228
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 468900,
+      "min": 464808,
+      "max": 469272
+    }
+  }
+]

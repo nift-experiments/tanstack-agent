@@ -1,0 +1,226 @@
+[
+  {
+    "implementation": "faithful-agent",
+    "workload": "full",
+    "median_seconds": {
+      "bundle_verification": 1.1110000000371655e-06,
+      "retained_asset_publication": 0.13721406200000275,
+      "publisher_compilation": 0.353778664999998,
+      "content_publication": 4.258115166,
+      "publication_preparation": 2.6679366759999996,
+      "nift_composition": 0.8396552219999999,
+      "output_verification_and_repair": 0.2662299770000004,
+      "retained_vite_build": 27.990255669
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "fresh",
+    "median_seconds": {
+      "bundle_verification": 1.0690000000295185e-06,
+      "retained_asset_publication": 0.1334155480000045,
+      "publisher_compilation": 0.46308296299999346,
+      "content_publication": 5.790290699999998,
+      "publication_preparation": 3.7636985650000003,
+      "nift_composition": 1.083829151,
+      "output_verification_and_repair": 0.3575894280000002,
+      "retained_vite_build": 38.93677593
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "unchanged",
+    "median_seconds": {
+      "bundle_verification": 0.18526408700000002,
+      "retained_asset_publication": 0.15026694100000004,
+      "publisher_compilation": 0.07329229799999996,
+      "content_publication": 1.8602580880000001,
+      "publication_preparation": 1.053842539,
+      "nift_composition": 0.27652424300000006,
+      "output_verification_and_repair": 0.2678340760000001,
+      "retained_vite_build": 3.7599999996018594e-07
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "body-1",
+    "median_seconds": {
+      "bundle_verification": 0.173942181,
+      "retained_asset_publication": 0.14275373000000002,
+      "publisher_compilation": 0.06990643999999997,
+      "content_publication": 1.8424083070000001,
+      "publication_preparation": 1.0465278249999999,
+      "nift_composition": 0.329543044,
+      "output_verification_and_repair": 0.2454922180000001,
+      "retained_vite_build": 2.900000000067848e-07
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "shared-shell",
+    "median_seconds": {
+      "bundle_verification": 1.4140000000111287e-06,
+      "retained_asset_publication": 0.1495784789999998,
+      "publisher_compilation": 0.071728449000002,
+      "content_publication": 1.798375251999998,
+      "publication_preparation": 1.08280759,
+      "nift_composition": 0.21290879799999993,
+      "output_verification_and_repair": 0.25840624300000015,
+      "retained_vite_build": 29.844065704000002
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "island",
+    "median_seconds": {
+      "bundle_verification": 1.2370000000032632e-06,
+      "retained_asset_publication": 0.1682627139999968,
+      "publisher_compilation": 0.08365922900000078,
+      "content_publication": 2.044614625999995,
+      "publication_preparation": 1.21568245,
+      "nift_composition": 0.2264548050000001,
+      "output_verification_and_repair": 0.30359988100000007,
+      "retained_vite_build": 32.036087713
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "route-rename",
+    "median_seconds": {
+      "bundle_verification": 0.23824241399999999,
+      "retained_asset_publication": 0.217406838,
+      "publisher_compilation": 0.10513648799999999,
+      "content_publication": 2.546709971,
+      "publication_preparation": 1.496625616,
+      "nift_composition": 0.4371114050000001,
+      "output_verification_and_repair": 0.325868528,
+      "retained_vite_build": 4.4700000000830184e-07
+    }
+  },
+  {
+    "implementation": "faithful-agent",
+    "workload": "route-delete",
+    "median_seconds": {
+      "bundle_verification": 0.243588953,
+      "retained_asset_publication": 0.22791977399999996,
+      "publisher_compilation": 0.10421652900000003,
+      "content_publication": 2.731304488,
+      "publication_preparation": 1.5930197950000002,
+      "nift_composition": 0.4308060679999999,
+      "output_verification_and_repair": 0.3469238700000001,
+      "retained_vite_build": 5.169999999452557e-07
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "full",
+    "median_seconds": {
+      "bundle_verification": 6.3599999998587e-07,
+      "retained_rsbuild_build": 36.14129402,
+      "retained_asset_publication": 0.17228747100000327,
+      "publisher_compilation": 0.4048549179999973,
+      "content_publication": 4.821030689,
+      "publication_preparation": 3.020569347,
+      "nift_composition": 0.9423355669999997,
+      "output_verification_and_repair": 0.31853665000000003
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "fresh",
+    "median_seconds": {
+      "bundle_verification": 8.710000000746732e-07,
+      "retained_rsbuild_build": 37.97061206,
+      "retained_asset_publication": 0.140562543,
+      "publisher_compilation": 0.4258654249999963,
+      "content_publication": 5.222440009000005,
+      "publication_preparation": 3.387241462,
+      "nift_composition": 1.0011633950000005,
+      "output_verification_and_repair": 0.3332994129999997
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "unchanged",
+    "median_seconds": {
+      "bundle_verification": 0.22219231700000006,
+      "retained_rsbuild_build": 2.620000000206346e-07,
+      "retained_asset_publication": 0.16587964,
+      "publisher_compilation": 0.07739824499999998,
+      "content_publication": 2.003004181,
+      "publication_preparation": 1.192400166,
+      "nift_composition": 0.2843914710000001,
+      "output_verification_and_repair": 0.297052819
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "body-1",
+    "median_seconds": {
+      "bundle_verification": 0.196257561,
+      "retained_rsbuild_build": 2.5699999991957156e-07,
+      "retained_asset_publication": 0.15013631299999997,
+      "publisher_compilation": 0.07244153600000004,
+      "content_publication": 1.974467577,
+      "publication_preparation": 1.0883563349999998,
+      "nift_composition": 0.37351099900000007,
+      "output_verification_and_repair": 0.2647546150000001
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "shared-shell",
+    "median_seconds": {
+      "bundle_verification": 9.420000000091023e-07,
+      "retained_rsbuild_build": 32.610943743,
+      "retained_asset_publication": 0.16565134899999975,
+      "publisher_compilation": 0.08058914699999878,
+      "content_publication": 1.9083413299999956,
+      "publication_preparation": 1.130496482,
+      "nift_composition": 0.247915526,
+      "output_verification_and_repair": 0.28552560400000015
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "island",
+    "median_seconds": {
+      "bundle_verification": 1.2560000000121362e-06,
+      "retained_rsbuild_build": 32.595188265,
+      "retained_asset_publication": 0.15816262299999653,
+      "publisher_compilation": 0.07319406299999537,
+      "content_publication": 1.8618397040000054,
+      "publication_preparation": 1.09248745,
+      "nift_composition": 0.273864231,
+      "output_verification_and_repair": 0.2685000229999998
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-rename",
+    "median_seconds": {
+      "bundle_verification": 0.24123843099999995,
+      "retained_rsbuild_build": 3.309999999601132e-07,
+      "retained_asset_publication": 0.18530129499999998,
+      "publisher_compilation": 0.09367962099999999,
+      "content_publication": 2.343123819,
+      "publication_preparation": 1.3492536380000002,
+      "nift_composition": 0.40331454899999997,
+      "output_verification_and_repair": 0.3268210110000002
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-delete",
+    "median_seconds": {
+      "bundle_verification": 0.270464326,
+      "retained_rsbuild_build": 5.09999999962929e-07,
+      "retained_asset_publication": 0.21038731399999994,
+      "publisher_compilation": 0.11398387600000001,
+      "content_publication": 2.735539655,
+      "publication_preparation": 1.510805607,
+      "nift_composition": 0.47970855000000007,
+      "output_verification_and_repair": 0.36656354599999985
+    }
+  }
+]

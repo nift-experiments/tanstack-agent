@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4022/query/latest/docs/framework/react/overview
+Call log:
+[2m  - navigating to "http://localhost:4022/query/latest/docs/framework/react/overview", waiting until "networkidle"[22m
+
+    at /home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/article-boundary-probe/browser.mjs:3:510 {
+  log: [
+    '  - navigating to "http://localhost:4022/query/latest/docs/framework/react/overview", waiting until "networkidle"'
+  ],
+  name: 'Error'
+}
+
+Node.js v25.9.0

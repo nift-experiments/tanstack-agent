@@ -1,0 +1,32 @@
+[
+  {
+    "repo": "tanstack/query",
+    "ref": "main",
+    "file": "docs/framework/react/overview.md",
+    "route": "/query/latest/docs/framework/react/overview",
+    "source": "sources/docs/tanstack--query--main/docs/framework/react/overview.document",
+    "html_bytes": 9343,
+    "html_sha256": "2c030c5c87424e692fe69f6a52ef8120b27980c239512bf4d922f54bcf87aff3",
+    "context": "actual original React route SSR; only the bounded three-page/React prototype is claimed"
+  },
+  {
+    "repo": "tanstack/query",
+    "ref": "main",
+    "file": "docs/framework/react/comparison.md",
+    "route": "/query/latest/docs/framework/react/comparison",
+    "source": "sources/docs/tanstack--query--main/docs/framework/react/comparison.document",
+    "html_bytes": 14767,
+    "html_sha256": "54d95fc355ffdee8b995ea964c08c4d7348251165dfd99a635ecb2cc802dd387",
+    "context": "actual original React route SSR; only the bounded three-page/React prototype is claimed"
+  },
+  {
+    "repo": "tanstack/router",
+    "ref": "main",
+    "file": "docs/start/framework/react/build-from-scratch.md",
+    "route": "/start/latest/docs/framework/react/build-from-scratch",
+    "source": "sources/docs/tanstack--router--main/docs/start/framework/react/build-from-scratch.document",
+    "html_bytes": 41940,
+    "html_sha256": "3111b2582da2564415c984a5bba8f8baaf64b201e06aa61b319913a22d3628db",
+    "context": "actual original React route SSR; only the bounded three-page/React prototype is claimed"
+  }
+]

@@ -1,0 +1,92 @@
+info    build started...
+error   build failed in 12.1s (client)
+ready   built in 12.5s (ssr)
+error   Build errors: 
+File: node:crypto:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:crypto" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  node:crypto ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+File: node:fs:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:fs" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  node:fs ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+File: node:module:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:module" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (12 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js
+  node:module ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+File: node:path:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:path" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  node:path ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rsbuild+core@2.2.12/node_modules/@rsbuild/core/dist/m.js:4316
+                closeErr && logger.error('Failed to close compiler: ', closeErr), err ? reject(err) : context.buildState.hasErrors ? reject(Error(RSPACK_BUILD_ERROR)) : resolve(stats);
+                                                                                                                                            ^
+
+Error: Rspack build failed.
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rsbuild+core@2.2.12/node_modules/@rsbuild/core/dist/m.js:4316:141
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9151:31
+    at callback1 (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9159:78)
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9165:36
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:12686:36
+
+Node.js v25.9.0

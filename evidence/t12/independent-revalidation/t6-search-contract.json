@@ -1,0 +1,308 @@
+{
+  "states": 6,
+  "records": [
+    {
+      "name": "upstream",
+      "width": 1440,
+      "deduped_result_count": 1,
+      "client_navigation": true,
+      "requests": [
+        {
+          "indexName": "tanstack-test",
+          "params": {
+            "indexName": "tanstack-test",
+            "attributesToHighlight": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "content"
+            ],
+            "attributesToRetrieve": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "url",
+              "url_without_anchor",
+              "anchor",
+              "urlWithAnchor",
+              "content",
+              "library",
+              "framework",
+              "version",
+              "routeStyle"
+            ],
+            "attributesToSnippet": [
+              "content:50"
+            ],
+            "distinct": 1,
+            "filters": "(version:latest OR version:all) AND library:query AND (framework:react OR framework:all)",
+            "highlightPostTag": "__/ais-highlight__",
+            "highlightPreTag": "__ais-highlight__",
+            "page": 0,
+            "query": "fixture"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "tanstack",
+      "width": 1440,
+      "deduped_result_count": 1,
+      "client_navigation": true,
+      "requests": [
+        {
+          "indexName": "tanstack-test",
+          "params": {
+            "indexName": "tanstack-test",
+            "attributesToHighlight": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "content"
+            ],
+            "attributesToRetrieve": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "url",
+              "url_without_anchor",
+              "anchor",
+              "urlWithAnchor",
+              "content",
+              "library",
+              "framework",
+              "version",
+              "routeStyle"
+            ],
+            "attributesToSnippet": [
+              "content:50"
+            ],
+            "distinct": 1,
+            "filters": "(version:latest OR version:all) AND library:query AND (framework:react OR framework:all)",
+            "highlightPostTag": "__/ais-highlight__",
+            "highlightPreTag": "__ais-highlight__",
+            "page": 0,
+            "query": "fixture"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "tanstack-agent",
+      "width": 1440,
+      "deduped_result_count": 1,
+      "client_navigation": true,
+      "requests": [
+        {
+          "indexName": "tanstack-test",
+          "params": {
+            "indexName": "tanstack-test",
+            "attributesToHighlight": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "content"
+            ],
+            "attributesToRetrieve": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "url",
+              "url_without_anchor",
+              "anchor",
+              "urlWithAnchor",
+              "content",
+              "library",
+              "framework",
+              "version",
+              "routeStyle"
+            ],
+            "attributesToSnippet": [
+              "content:50"
+            ],
+            "distinct": 1,
+            "filters": "(version:latest OR version:all) AND library:query AND (framework:react OR framework:all)",
+            "highlightPostTag": "__/ais-highlight__",
+            "highlightPreTag": "__ais-highlight__",
+            "page": 0,
+            "query": "fixture"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "upstream",
+      "width": 390,
+      "deduped_result_count": 1,
+      "client_navigation": true,
+      "requests": [
+        {
+          "indexName": "tanstack-test",
+          "params": {
+            "indexName": "tanstack-test",
+            "attributesToHighlight": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "content"
+            ],
+            "attributesToRetrieve": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "url",
+              "url_without_anchor",
+              "anchor",
+              "urlWithAnchor",
+              "content",
+              "library",
+              "framework",
+              "version",
+              "routeStyle"
+            ],
+            "attributesToSnippet": [
+              "content:50"
+            ],
+            "distinct": 1,
+            "filters": "(version:latest OR version:all) AND library:query AND (framework:react OR framework:all)",
+            "highlightPostTag": "__/ais-highlight__",
+            "highlightPreTag": "__ais-highlight__",
+            "page": 0,
+            "query": "fixture"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "tanstack",
+      "width": 390,
+      "deduped_result_count": 1,
+      "client_navigation": true,
+      "requests": [
+        {
+          "indexName": "tanstack-test",
+          "params": {
+            "indexName": "tanstack-test",
+            "attributesToHighlight": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "content"
+            ],
+            "attributesToRetrieve": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "url",
+              "url_without_anchor",
+              "anchor",
+              "urlWithAnchor",
+              "content",
+              "library",
+              "framework",
+              "version",
+              "routeStyle"
+            ],
+            "attributesToSnippet": [
+              "content:50"
+            ],
+            "distinct": 1,
+            "filters": "(version:latest OR version:all) AND library:query AND (framework:react OR framework:all)",
+            "highlightPostTag": "__/ais-highlight__",
+            "highlightPreTag": "__ais-highlight__",
+            "page": 0,
+            "query": "fixture"
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "tanstack-agent",
+      "width": 390,
+      "deduped_result_count": 1,
+      "client_navigation": true,
+      "requests": [
+        {
+          "indexName": "tanstack-test",
+          "params": {
+            "indexName": "tanstack-test",
+            "attributesToHighlight": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "content"
+            ],
+            "attributesToRetrieve": [
+              "hierarchy.lvl1",
+              "hierarchy.lvl2",
+              "hierarchy.lvl3",
+              "hierarchy.lvl4",
+              "hierarchy.lvl5",
+              "hierarchy.lvl6",
+              "url",
+              "url_without_anchor",
+              "anchor",
+              "urlWithAnchor",
+              "content",
+              "library",
+              "framework",
+              "version",
+              "routeStyle"
+            ],
+            "attributesToSnippet": [
+              "content:50"
+            ],
+            "distinct": 1,
+            "filters": "(version:latest OR version:all) AND library:query AND (framework:react OR framework:all)",
+            "highlightPostTag": "__/ais-highlight__",
+            "highlightPreTag": "__ais-highlight__",
+            "page": 0,
+            "query": "fixture"
+          }
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "fixture_results": true,
+  "live_ranking_or_index_freshness": false,
+  "external_writes": false
+}

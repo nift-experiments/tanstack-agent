@@ -1,0 +1,26 @@
+Scope: all 2 workspace projects
+[ERR_SQLITE_ERROR] unable to open database file
+
+pnpm: unable to open database file
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:16072:19
+    at sqliteRetry (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:16002:14)
+    at new StoreIndex (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:16071:9)
+    at createNewStoreController (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:133005:22)
+    at async installDeps (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:164478:17)
+    at async file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:272240:19
+    at async main4 (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:272208:30)
+    at async runPnpm (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:272418:5)
+    at async file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:272411:3
+[ERROR] Command failed with exit code 1: pnpm install
+
+pnpm: Command failed with exit code 1: pnpm install
+    at getFinalError (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:28661:14)
+    at makeError (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:30968:21)
+    at getSyncResult (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:32812:10)
+    at spawnSubprocessSync (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:32772:14)
+    at execaCoreSync (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:32702:23)
+    at callBoundExeca (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:35230:23)
+    at boundExeca (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:35207:49)
+    at sync (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:35362:14)
+    at runPnpmCli (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:211015:5)
+    at runDepsStatusCheck (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/pnpm/node_modules/pnpm/dist/pnpm.mjs:212719:7)

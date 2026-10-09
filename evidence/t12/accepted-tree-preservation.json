@@ -1,0 +1,19 @@
+{
+  "tanstack": {
+    "existing_changes": [
+      "HANDOVER.md",
+      "REPORT.md",
+      "investigation/STATUS.md"
+    ],
+    "accepted_runtime_sources_publisher_templates_unchanged": true
+  },
+  "tanstack-agent": {
+    "existing_changes": [
+      "HANDOVER.md",
+      "REPORT.md",
+      "investigation/STATUS.md"
+    ],
+    "accepted_runtime_sources_publisher_templates_unchanged": true
+  },
+  "upstream_tracked_clean": true
+}

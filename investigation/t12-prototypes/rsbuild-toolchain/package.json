@@ -1,0 +1,1 @@
+{"private":true,"type":"module","name":"tanstack-isolated-architecture-probe","dependencies":{"@rsbuild/core":"2.2.12","@rsbuild/plugin-react":"2.1.1","@tailwindcss/postcss":"4.2.2","jsonc-parser":"3.3.1"}}

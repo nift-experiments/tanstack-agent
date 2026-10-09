@@ -1,0 +1,30 @@
+NIFT_PHASE source_discovery
+NIFT_PHASE retained_asset_publication
+NIFT_PHASE publisher_compilation
+{"publisher_compile":"hit","inputs":12}
+NIFT_PHASE content_process_startup
+NIFT_PHASE content_discovery
+NIFT_PHASE projection_assets_and_revision
+NIFT_PHASE metadata_navigation
+NIFT_PHASE state_serialization
+NIFT_PHASE nift_composition
+built _nift/docs/render/tanstack--query--main/docs/framework/react/benchmark-added.md
+    ↳ generated output is missing
+    ↳ page build metadata is missing
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs/metadata/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/metadata/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 4 files rebuilt successfully
+time taken: 0.391871 seconds
+NIFT_PHASE composition_verification
+NIFT_PHASE route_retirement
+NIFT_PHASE cache_serialization
+{"publication_record_hits":7599,"publication_record_misses":2,"composition_repairs":0}
+NIFT_PHASE complete
+{"publication_preparation":1.4775762060000002,"nift_composition":0.40598131999999987,"output_verification_and_repair":0.3268210110000002,"complete_content_publication":2.307569603}
+NIFT_PHASE worker_configuration
+NIFT_PHASE complete
+{"bundle_verification":0.290719532,"retained_rsbuild_build":6.629999999177017e-7,"retained_asset_publication":0.21162856,"publisher_compilation":0.11956016900000009,"content_publication":2.500543026,"complete_pipeline":3.511320633}

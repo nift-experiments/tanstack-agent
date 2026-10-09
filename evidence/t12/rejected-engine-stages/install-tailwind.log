@@ -1,0 +1,11 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 53, reused 23, downloaded 5, added 0
+Packages: +23
++++++++++++++++++++++++
+Progress: resolved 71, reused 29, downloaded 7, added 21
+Progress: resolved 71, reused 29, downloaded 8, added 22, done
+
+dependencies:
++ @tailwindcss/postcss 4.2.2 (4.3.3 is available)
+
+Done in 2.5s using pnpm v11.1.0

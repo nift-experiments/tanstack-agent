@@ -1,0 +1,1384 @@
+info    build started...
+error   build failed in 16.6s (client)
+ready   built in 18.1s (ssr)
+error   Build errors: 
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/project-snapshots.$hash.quarantine.ts:17:25
+  │   Import: "~/utils/hosting-cache.server"
+  │   Resolved: src/utils/hosting-cache.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:283:76 (import "./routes/api/chat/project-snapshots.$hash.quarantine")
+  │     7. src/routes/api/chat/project-snapshots.$hash.quarantine.ts:17:25 (import "~/utils/hosting-cache.server")
+  │ 
+  │   Code:
+  │     15 |   BuilderProjectSnapshotStorageUnavailableError,
+  │     16 |   quarantineBuilderProjectSnapshot,
+  │   > 17 | } from '~/utils/builder-project-snapshot-storage.server'
+  │        |                         ^
+  │     18 | import {
+  │     19 |   BuilderProjectStorageUnavailableError,
+  │ 
+  │   src/routes/api/chat/project-snapshots.$hash.quarantine.ts:17:25
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/project-snapshots.$hash.quarantine.ts:71:5
+  │   Import: "~/utils/builder-project-snapshot-storage.server"
+  │   Resolved: src/utils/builder-project-snapshot-storage.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:283:76 (import "./routes/api/chat/project-snapshots.$hash.quarantine")
+  │     7. src/routes/api/chat/project-snapshots.$hash.quarantine.ts:71:5 (import "~/utils/builder-project-snapshot-storage.server")
+  │ 
+  │   Code:
+  │     69 |
+  │     70 |   const purge = await operations.purgeCacheTags([
+  │   > 71 |     getBuilderProjectSnapshotCacheTag(hash),
+  │        |     ^
+  │     72 |   ])
+  │     73 |   if (!purge.purged) failures.push(new Error('Cache purge failed'))
+  │ 
+  │   src/routes/api/chat/project-snapshots.$hash.quarantine.ts:71:5
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/project-snapshots.$hash.quarantine.ts:162:30
+  │   Import: "~/utils/builder-project-storage.server"
+  │   Resolved: src/utils/builder-project-storage.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:283:76 (import "./routes/api/chat/project-snapshots.$hash.quarantine")
+  │     7. src/routes/api/chat/project-snapshots.$hash.quarantine.ts:162:30 (import "~/utils/builder-project-storage.server")
+  │ 
+  │   Code:
+  │     160 |           if (
+  │     161 |             error instanceof BuilderProjectSnapshotStorageUnavailableError ||
+  │   > 162 |             error instanceof BuilderProjectStorageUnavailableError
+  │         |                              ^
+  │     163 |           ) {
+  │     164 |             return jsonError('Builder storage is unavailable', 503)
+  │ 
+  │   src/routes/api/chat/project-snapshots.$hash.quarantine.ts:162:30
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/project-snapshots.$hash.quarantine.ts:18:29
+  │   Import: "~/utils/builder-project-events.server"
+  │   Resolved: src/utils/builder-project-events.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:283:76 (import "./routes/api/chat/project-snapshots.$hash.quarantine")
+  │     7. src/routes/api/chat/project-snapshots.$hash.quarantine.ts:18:29 (import "~/utils/builder-project-events.server")
+  │ 
+  │   Code:
+  │     16 |   quarantineBuilderProjectSnapshot,
+  │     17 | } from '~/utils/builder-project-snapshot-storage.server'
+  │   > 18 | import {
+  │        |                             ^
+  │     19 |   BuilderProjectStorageUnavailableError,
+  │     20 |   quarantineStoredBuilderProjectsBySnapshotHash,
+  │ 
+  │   src/routes/api/chat/project-snapshots.$hash.quarantine.ts:18:29
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/plugins.ts:16:12
+  │   Import: "~/chat/access.server"
+  │   Resolved: src/chat/access.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:157:53 (import "./routes/api/chat/plugins")
+  │     7. src/routes/api/chat/plugins.ts:16:12 (import "~/chat/access.server")
+  │ 
+  │   Code:
+  │     14 |  const user=await getAuthService().getCurrentUser(request)
+  │     15 |  if(!user) return jsonError('Sign in to continue.',401)
+  │   > 16 |  if(!await hasChatAccess(user)) return jsonError('Chat access is unavailable.',403)
+  │        |            ^
+  │     17 |  const url=new URL(request.url)
+  │     18 |  const parsed=z.string().min(1).max(1000).safeParse(url.searchParams.get('workspaceId'))
+  │ 
+  │   src/routes/api/chat/plugins.ts:16:12
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/plugins.ts:14:19
+  │   Import: "~/auth/index.server"
+  │   Resolved: src/auth/index.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:157:53 (import "./routes/api/chat/plugins")
+  │     7. src/routes/api/chat/plugins.ts:14:19 (import "~/auth/index.server")
+  │ 
+  │   Code:
+  │     12 |   if(error) return jsonError(error.message,error.status)
+  │     13 |  }
+  │   > 14 |  const user=await getAuthService().getCurrentUser(request)
+  │        |                   ^
+  │     15 |  if(!user) return jsonError('Sign in to continue.',401)
+  │     16 |  if(!await hasChatAccess(user)) return jsonError('Chat access is unavailable.',403)
+  │ 
+  │   src/routes/api/chat/plugins.ts:14:19
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/plugins.ts:11:15
+  │   Import: "~/utils/api-boundary.server"
+  │   Resolved: src/utils/api-boundary.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:157:53 (import "./routes/api/chat/plugins")
+  │     7. src/routes/api/chat/plugins.ts:11:15 (import "~/utils/api-boundary.server")
+  │ 
+  │   Code:
+  │      9 | export async function handlePlugins(request:Request, id?:string) {
+  │     10 |  if(request.method==='POST') {
+  │   > 11 |   const error=validateSameOriginRequest(request)
+  │        |               ^
+  │     12 |   if(error) return jsonError(error.message,error.status)
+  │     13 |  }
+  │ 
+  │   src/routes/api/chat/plugins.ts:11:15
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/plugins.ts:21:9
+  │   Import: "~/chat/workspace-policy.server"
+  │   Resolved: src/chat/workspace-policy.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:157:53 (import "./routes/api/chat/plugins")
+  │     7. src/routes/api/chat/plugins.ts:21:9 (import "~/chat/workspace-policy.server")
+  │ 
+  │   Code:
+  │     19 |  if(url.searchParams.getAll('workspaceId').length!==1||!parsed.success) return jsonError('Choose a workspace.',400)
+  │     20 |  try {
+  │   > 21 |   await readWorkspacePolicy(parsed.data,user.userId)
+  │        |         ^
+  │     22 |   return await pluginApi(request,await getKodyEnvironment(),{workspaceId:parsed.data,userId:user.userId},id??url.searchParams.get('id')??undefined)
+  │     23 |  } catch(error) {
+  │ 
+  │   src/routes/api/chat/plugins.ts:21:9
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/plugins.ts:22:40
+  │   Import: "~/chat/server/kody-environment.server"
+  │   Resolved: src/chat/server/kody-environment.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:157:53 (import "./routes/api/chat/plugins")
+  │     7. src/routes/api/chat/plugins.ts:22:40 (import "~/chat/server/kody-environment.server")
+  │ 
+  │   Code:
+  │     20 |  try {
+  │     21 |   await readWorkspacePolicy(parsed.data,user.userId)
+  │   > 22 |   return await pluginApi(request,await getKodyEnvironment(),{workspaceId:parsed.data,userId:user.userId},id??url.searchParams.get('id')??undefined)
+  │        |                                        ^
+  │     23 |  } catch(error) {
+  │     24 |   if(error instanceof WorkspacePolicyError||error instanceof KodyEnvironmentError) return jsonError(error.message,error.status)
+  │ 
+  │   src/routes/api/chat/plugins.ts:22:40
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/plugins.ts:22:16
+  │   Import: "~/chat/server/plugin-api"
+  │   Resolved: src/chat/server/plugin-api.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:157:53 (import "./routes/api/chat/plugins")
+  │     7. src/routes/api/chat/plugins.ts:22:16 (import "~/chat/server/plugin-api")
+  │ 
+  │   Code:
+  │     20 |  try {
+  │     21 |   await readWorkspacePolicy(parsed.data,user.userId)
+  │   > 22 |   return await pluginApi(request,await getKodyEnvironment(),{workspaceId:parsed.data,userId:user.userId},id??url.searchParams.get('id')??undefined)
+  │        |                ^
+  │     23 |  } catch(error) {
+  │     24 |   if(error instanceof WorkspacePolicyError||error instanceof KodyEnvironmentError) return jsonError(error.message,error.status)
+  │ 
+  │   src/routes/api/chat/plugins.ts:22:16
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/files.ts:43:12
+  │   Import: "~/chat/access.server"
+  │   Resolved: src/chat/access.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:154:51 (import "./routes/api/chat/files")
+  │     7. src/routes/api/chat/files.ts:43:12 (import "~/chat/access.server")
+  │ 
+  │   Code:
+  │     41 |   if (!user) return jsonError('Sign in to continue.', 401)
+  │     42 |   if (
+  │   > 43 |     !await hasChatAccess(user)
+  │        |            ^
+  │     44 |   )
+  │     45 |     return jsonError('Chat access is unavailable.', 403)
+  │ 
+  │   src/routes/api/chat/files.ts:43:12
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/files.ts:40:22
+  │   Import: "~/auth/index.server"
+  │   Resolved: src/auth/index.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:154:51 (import "./routes/api/chat/files")
+  │     7. src/routes/api/chat/files.ts:40:22 (import "~/auth/index.server")
+  │ 
+  │   Code:
+  │     38 |     if (rejection) return jsonError(rejection.message, rejection.status)
+  │     39 |   }
+  │   > 40 |   const user = await getAuthService().getCurrentUser(request)
+  │        |                      ^
+  │     41 |   if (!user) return jsonError('Sign in to continue.', 401)
+  │     42 |   if (
+  │ 
+  │   src/routes/api/chat/files.ts:40:22
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/files.ts:37:23
+  │   Import: "~/utils/api-boundary.server"
+  │   Resolved: src/utils/api-boundary.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:154:51 (import "./routes/api/chat/files")
+  │     7. src/routes/api/chat/files.ts:37:23 (import "~/utils/api-boundary.server")
+  │ 
+  │   Code:
+  │     35 | export async function handleFileRequest(request: Request) {
+  │     36 |   if (request.method === 'PUT') {
+  │   > 37 |     const rejection = validateSameOriginRequest(request)
+  │        |                       ^
+  │     38 |     if (rejection) return jsonError(rejection.message, rejection.status)
+  │     39 |   }
+  │ 
+  │   src/routes/api/chat/files.ts:37:23
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/files.ts:69:18
+  │   Import: "~/chat/server/file-api"
+  │   Resolved: src/chat/server/file-api.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:154:51 (import "./routes/api/chat/files")
+  │     7. src/routes/api/chat/files.ts:69:18 (import "~/chat/server/file-api")
+  │ 
+  │   Code:
+  │     67 |
+  │     68 |   try {
+  │   > 69 |     return await fileApi(
+  │        |                  ^
+  │     70 |       request,
+  │     71 |       await getFileEnvironment(),
+  │ 
+  │   src/routes/api/chat/files.ts:69:18
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/files.ts:71:13
+  │   Import: "~/chat/server/file-environment.server"
+  │   Resolved: src/chat/server/file-environment.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:154:51 (import "./routes/api/chat/files")
+  │     7. src/routes/api/chat/files.ts:71:13 (import "~/chat/server/file-environment.server")
+  │ 
+  │   Code:
+  │     69 |     return await fileApi(
+  │     70 |       request,
+  │   > 71 |       await getFileEnvironment(),
+  │        |             ^
+  │     72 |       scope,
+  │     73 |       value.id,
+  │ 
+  │   src/routes/api/chat/files.ts:71:13
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/files.ts:77:26
+  │   Import: "~/chat/server/saved-file-contract"
+  │   Resolved: src/chat/server/saved-file-contract.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:154:51 (import "./routes/api/chat/files")
+  │     7. src/routes/api/chat/files.ts:77:26 (import "~/chat/server/saved-file-contract")
+  │ 
+  │   Code:
+  │     75 |     )
+  │     76 |   } catch (error) {
+  │   > 77 |     if (error instanceof SavedFileError)
+  │        |                          ^
+  │     78 |       return jsonError(error.message, error.status)
+  │     79 |     if (error instanceof z.ZodError)
+  │ 
+  │   src/routes/api/chat/files.ts:77:26
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/skills.ts:16:12
+  │   Import: "~/chat/access.server"
+  │   Resolved: src/chat/access.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:164:52 (import "./routes/api/chat/skills")
+  │     7. src/routes/api/chat/skills.ts:16:12 (import "~/chat/access.server")
+  │ 
+  │   Code:
+  │     14 |  const user=await getAuthService().getCurrentUser(request)
+  │     15 |  if(!user) return jsonError('Sign in to continue.',401)
+  │   > 16 |  if(!await hasChatAccess(user)) return jsonError('Chat access is unavailable.',403)
+  │        |            ^
+  │     17 |  const url=new URL(request.url)
+  │     18 |  const parsed=z.string().min(1).max(1000).safeParse(url.searchParams.get('workspaceId'))
+  │ 
+  │   src/routes/api/chat/skills.ts:16:12
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/skills.ts:14:19
+  │   Import: "~/auth/index.server"
+  │   Resolved: src/auth/index.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:164:52 (import "./routes/api/chat/skills")
+  │     7. src/routes/api/chat/skills.ts:14:19 (import "~/auth/index.server")
+  │ 
+  │   Code:
+  │     12 |   if(error) return jsonError(error.message,error.status)
+  │     13 |  }
+  │   > 14 |  const user=await getAuthService().getCurrentUser(request)
+  │        |                   ^
+  │     15 |  if(!user) return jsonError('Sign in to continue.',401)
+  │     16 |  if(!await hasChatAccess(user)) return jsonError('Chat access is unavailable.',403)
+  │ 
+  │   src/routes/api/chat/skills.ts:14:19
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/skills.ts:11:15
+  │   Import: "~/utils/api-boundary.server"
+  │   Resolved: src/utils/api-boundary.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:164:52 (import "./routes/api/chat/skills")
+  │     7. src/routes/api/chat/skills.ts:11:15 (import "~/utils/api-boundary.server")
+  │ 
+  │   Code:
+  │      9 | export async function handleSkills(request:Request, id?:string) {
+  │     10 |  if(request.method==='POST') {
+  │   > 11 |   const error=validateSameOriginRequest(request)
+  │        |               ^
+  │     12 |   if(error) return jsonError(error.message,error.status)
+  │     13 |  }
+  │ 
+  │   src/routes/api/chat/skills.ts:11:15
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/skills.ts:21:9
+  │   Import: "~/chat/workspace-policy.server"
+  │   Resolved: src/chat/workspace-policy.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:164:52 (import "./routes/api/chat/skills")
+  │     7. src/routes/api/chat/skills.ts:21:9 (import "~/chat/workspace-policy.server")
+  │ 
+  │   Code:
+  │     19 |  if(url.searchParams.getAll('workspaceId').length!==1||!parsed.success) return jsonError('Choose a workspace.',400)
+  │     20 |  try {
+  │   > 21 |   await readWorkspacePolicy(parsed.data,user.userId)
+  │        |         ^
+  │     22 |   return await skillApi(request,await getKodyEnvironment(),{workspaceId:parsed.data,userId:user.userId},id??url.searchParams.get('id')??undefined)
+  │     23 |  } catch(error) {
+  │ 
+  │   src/routes/api/chat/skills.ts:21:9
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/skills.ts:22:39
+  │   Import: "~/chat/server/kody-environment.server"
+  │   Resolved: src/chat/server/kody-environment.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:164:52 (import "./routes/api/chat/skills")
+  │     7. src/routes/api/chat/skills.ts:22:39 (import "~/chat/server/kody-environment.server")
+  │ 
+  │   Code:
+  │     20 |  try {
+  │     21 |   await readWorkspacePolicy(parsed.data,user.userId)
+  │   > 22 |   return await skillApi(request,await getKodyEnvironment(),{workspaceId:parsed.data,userId:user.userId},id??url.searchParams.get('id')??undefined)
+  │        |                                       ^
+  │     23 |  } catch(error) {
+  │     24 |   if(error instanceof WorkspacePolicyError||error instanceof KodyEnvironmentError) return jsonError(error.message,error.status)
+  │ 
+  │   src/routes/api/chat/skills.ts:22:39
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/skills.ts:22:16
+  │   Import: "~/chat/server/skill-api"
+  │   Resolved: src/chat/server/skill-api.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:164:52 (import "./routes/api/chat/skills")
+  │     7. src/routes/api/chat/skills.ts:22:16 (import "~/chat/server/skill-api")
+  │ 
+  │   Code:
+  │     20 |  try {
+  │     21 |   await readWorkspacePolicy(parsed.data,user.userId)
+  │   > 22 |   return await skillApi(request,await getKodyEnvironment(),{workspaceId:parsed.data,userId:user.userId},id??url.searchParams.get('id')??undefined)
+  │        |                ^
+  │     23 |  } catch(error) {
+  │     24 |   if(error instanceof WorkspacePolicyError||error instanceof KodyEnvironmentError) return jsonError(error.message,error.status)
+  │ 
+  │   src/routes/api/chat/skills.ts:22:16
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/mcp/$.ts:18:12
+  │   Import: "~/chat/access.server"
+  │   Resolved: src/chat/access.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:18:12 (import "~/chat/access.server")
+  │ 
+  │   Code:
+  │     16 |  const user=await getAuthService().getCurrentUser(request)
+  │     17 |  if(!user) return jsonError('Sign in to continue.',401)
+  │   > 18 |  if(!await hasChatAccess(user)) return jsonError('Chat access is unavailable.',403)
+  │        |            ^
+  │     19 |  const url=new URL(request.url)
+  │     20 |  const workspace=z.string().min(1).max(1000).safeParse(url.searchParams.get('workspaceId'))
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:18:12
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/mcp/$.ts:16:19
+  │   Import: "~/auth/index.server"
+  │   Resolved: src/auth/index.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:16:19 (import "~/auth/index.server")
+  │ 
+  │   Code:
+  │     14 |   if(error) return jsonError(error.message,error.status)
+  │     15 |  }
+  │   > 16 |  const user=await getAuthService().getCurrentUser(request)
+  │        |                   ^
+  │     17 |  if(!user) return jsonError('Sign in to continue.',401)
+  │     18 |  if(!await hasChatAccess(user)) return jsonError('Chat access is unavailable.',403)
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:16:19
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/mcp/$.ts:13:15
+  │   Import: "~/utils/api-boundary.server"
+  │   Resolved: src/utils/api-boundary.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:13:15 (import "~/utils/api-boundary.server")
+  │ 
+  │   Code:
+  │     11 | export async function handleMcp(request: Request) {
+  │     12 |  if(request.method==='POST') {
+  │   > 13 |   const error=validateSameOriginRequest(request)
+  │        |               ^
+  │     14 |   if(error) return jsonError(error.message,error.status)
+  │     15 |  }
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:13:15
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/mcp/$.ts:23:9
+  │   Import: "~/chat/workspace-policy.server"
+  │   Resolved: src/chat/workspace-policy.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:23:9 (import "~/chat/workspace-policy.server")
+  │ 
+  │   Code:
+  │     21 |  if(!workspace.success) return jsonError('Choose a workspace.',400)
+  │     22 |  try {
+  │   > 23 |   await readWorkspacePolicy(workspace.data,user.userId)
+  │        |         ^
+  │     24 |   const path=url.pathname.slice('/api/chat/'.length)
+  │     25 |   return await mcpAccountApi(request,await getMcpEnvironment(),{workspaceId:workspace.data,userId:user.userId},path)??jsonError('Not found.',404)
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:23:9
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/mcp/$.ts:25:44
+  │   Import: "~/chat/server/mcp-environment.server"
+  │   Resolved: src/chat/server/mcp-environment.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:25:44 (import "~/chat/server/mcp-environment.server")
+  │ 
+  │   Code:
+  │     23 |   await readWorkspacePolicy(workspace.data,user.userId)
+  │     24 |   const path=url.pathname.slice('/api/chat/'.length)
+  │   > 25 |   return await mcpAccountApi(request,await getMcpEnvironment(),{workspaceId:workspace.data,userId:user.userId},path)??jsonError('Not found.',404)
+  │        |                                            ^
+  │     26 |  } catch(error) {
+  │     27 |   if(error instanceof WorkspacePolicyError||error instanceof McpEnvironmentError||error instanceof McpAccountError||error instanceof McpAuthorizationError) return jsonError(error.message,error.status)
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:25:44
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/mcp/$.ts:25:16
+  │   Import: "~/chat/server/mcp-account-api"
+  │   Resolved: src/chat/server/mcp-account-api.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:25:16 (import "~/chat/server/mcp-account-api")
+  │ 
+  │   Code:
+  │     23 |   await readWorkspacePolicy(workspace.data,user.userId)
+  │     24 |   const path=url.pathname.slice('/api/chat/'.length)
+  │   > 25 |   return await mcpAccountApi(request,await getMcpEnvironment(),{workspaceId:workspace.data,userId:user.userId},path)??jsonError('Not found.',404)
+  │        |                ^
+  │     26 |  } catch(error) {
+  │     27 |   if(error instanceof WorkspacePolicyError||error instanceof McpEnvironmentError||error instanceof McpAccountError||error instanceof McpAuthorizationError) return jsonError(error.message,error.status)
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:25:16
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/mcp/$.ts:27:100
+  │   Import: "~/chat/server/mcp-account-contract"
+  │   Resolved: src/chat/server/mcp-account-contract.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:27:100 (import "~/chat/server/mcp-account-contract")
+  │ 
+  │   Code:
+  │     25 |   return await mcpAccountApi(request,await getMcpEnvironment(),{workspaceId:workspace.data,userId:user.userId},path)??jsonError('Not found.',404)
+  │     26 |  } catch(error) {
+  │   > 27 |   if(error instanceof WorkspacePolicyError||error instanceof McpEnvironmentError||error instanceof McpAccountError||error instanceof McpAuthorizationError) return jsonError(error.message,error.status)
+  │        |                                                                                                    ^
+  │     28 |   if(error instanceof z.ZodError) return jsonError('The connection request is invalid.',400)
+  │     29 |   throw error
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:27:100
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/mcp/$.ts:27:134
+  │   Import: "~/chat/server/mcp-auth-network"
+  │   Resolved: src/chat/server/mcp-auth-network.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:244:54 (import "./routes/api/chat/mcp/$")
+  │     7. src/routes/api/chat/mcp/$.ts:27:134 (import "~/chat/server/mcp-auth-network")
+  │ 
+  │   Code:
+  │     25 |   return await mcpAccountApi(request,await getMcpEnvironment(),{workspaceId:workspace.data,userId:user.userId},path)??jsonError('Not found.',404)
+  │     26 |  } catch(error) {
+  │   > 27 |   if(error instanceof WorkspacePolicyError||error instanceof McpEnvironmentError||error instanceof McpAccountError||error instanceof McpAuthorizationError) return jsonError(error.message,error.status)
+  │        |                                                                                                                                      ^
+  │     28 |   if(error instanceof z.ZodError) return jsonError('The connection request is invalid.',400)
+  │     29 |   throw error
+  │ 
+  │   src/routes/api/chat/mcp/$.ts:27:134
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts:26:87
+  │   Import: "~/utils/documents.server"
+  │   Resolved: src/utils/documents.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:289:94 (import "./routes/charts.catalog_.previews.$revision.{$caseId}[.]svg")
+  │     7. src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts:26:87 (import "~/utils/documents.server")
+  │ 
+  │   Code:
+  │     24 |       HEAD: serveChartsCatalogPreview,
+  │     25 |     },
+  │   > 26 |   },
+  │        |                                                                                       ^
+  │     27 | })
+  │     28 |
+  │ 
+  │   src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts:26:87
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts:49:64
+  │   Import: "~/utils/charts-catalog-index.server"
+  │   Resolved: src/utils/charts-catalog-index.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:289:94 (import "./routes/charts.catalog_.previews.$revision.{$caseId}[.]svg")
+  │     7. src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts:49:64 (import "~/utils/charts-catalog-index.server")
+  │ 
+  │   Code:
+  │     47 |     throw error
+  │     48 |   }
+  │   > 49 |
+  │        |                                                                ^
+  │     50 |   const { fetchRemoteRepoRawFile, isRecoverableGitHubContentError } =
+  │     51 |     await import('~/utils/documents.server')
+  │ 
+  │   src/routes/charts.catalog_.previews.$revision.{$caseId}[.]svg.ts:49:64
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/models.ts:17:12
+  │   Import: "~/chat/access.server"
+  │   Resolved: src/chat/access.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:156:52 (import "./routes/api/chat/models")
+  │     7. src/routes/api/chat/models.ts:17:12 (import "~/chat/access.server")
+  │ 
+  │   Code:
+  │     15 |   if (!user) return jsonError('Sign in to continue.', 401)
+  │     16 |   if (
+  │   > 17 |     !await hasChatAccess(user)
+  │        |            ^
+  │     18 |   )
+  │     19 |     return jsonError('Chat access is unavailable.', 403)
+  │ 
+  │   src/routes/api/chat/models.ts:17:12
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/models.ts:14:22
+  │   Import: "~/auth/index.server"
+  │   Resolved: src/auth/index.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:156:52 (import "./routes/api/chat/models")
+  │     7. src/routes/api/chat/models.ts:14:22 (import "~/auth/index.server")
+  │ 
+  │   Code:
+  │     12 | const workspaceIdSchema = z.string().min(1).max(1000)
+  │     13 | export async function handleModelCatalog(request: Request) {
+  │   > 14 |   const user = await getAuthService().getCurrentUser(request)
+  │        |                      ^
+  │     15 |   if (!user) return jsonError('Sign in to continue.', 401)
+  │     16 |   if (
+  │ 
+  │   src/routes/api/chat/models.ts:14:22
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/models.ts:15:21
+  │   Import: "~/utils/api-boundary.server"
+  │   Resolved: src/utils/api-boundary.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:156:52 (import "./routes/api/chat/models")
+  │     7. src/routes/api/chat/models.ts:15:21 (import "~/utils/api-boundary.server")
+  │ 
+  │   Code:
+  │     13 | export async function handleModelCatalog(request: Request) {
+  │     14 |   const user = await getAuthService().getCurrentUser(request)
+  │   > 15 |   if (!user) return jsonError('Sign in to continue.', 401)
+  │        |                     ^
+  │     16 |   if (
+  │     17 |     !await hasChatAccess(user)
+  │ 
+  │   src/routes/api/chat/models.ts:15:21
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/models.ts:25:26
+  │   Import: "~/chat/workspace-policy.server"
+  │   Resolved: src/chat/workspace-policy.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:156:52 (import "./routes/api/chat/models")
+  │     7. src/routes/api/chat/models.ts:25:26 (import "~/chat/workspace-policy.server")
+  │ 
+  │   Code:
+  │     23 |   if (!parsed.success) return jsonError('Choose a workspace.', 400)
+  │     24 |   try {
+  │   > 25 |     const policy = await readWorkspacePolicy(parsed.data, user.userId)
+  │        |                          ^
+  │     26 |     const env = await getModelEnvironment()
+  │     27 |     const catalog = await getRunModelCatalog(env, {
+  │ 
+  │   src/routes/api/chat/models.ts:25:26
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/*.server.*
+  │   Importer: src/routes/api/chat/models.ts:26:23
+  │   Import: "~/chat/server/model-environment.server"
+  │   Resolved: src/chat/server/model-environment.server.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:156:52 (import "./routes/api/chat/models")
+  │     7. src/routes/api/chat/models.ts:26:23 (import "~/chat/server/model-environment.server")
+  │ 
+  │   Code:
+  │     24 |   try {
+  │     25 |     const policy = await readWorkspacePolicy(parsed.data, user.userId)
+  │   > 26 |     const env = await getModelEnvironment()
+  │        |                       ^
+  │     27 |     const catalog = await getRunModelCatalog(env, {
+  │     28 |       userId: user.userId,
+  │ 
+  │   src/routes/api/chat/models.ts:26:23
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+× 
+  │ [import-protection] Import denied in client environment
+  │ 
+  │   Denied by file pattern: **/server/**
+  │   Importer: src/routes/api/chat/models.ts:27:27
+  │   Import: "~/chat/server/run-models"
+  │   Resolved: src/chat/server/run-models.ts
+  │ 
+  │   Trace:
+  │     1. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx:4:30 (entry) (import "@tanstack/react-start/client")
+  │     2. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js:1:31 (import "./hydrateStart.js")
+  │     3. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start-client@1.168.39_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js:1:31 (import "@tanstack/start-client-core/client")
+  │     4. /home/nick/Repositories/nift/nift-experiments/tanstack-agent/runtime/node_modules/.pnpm/@tanstack+start-client-core@1.170.34/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js:5:28 (import "#tanstack-router-entry")
+  │     5. src/router.tsx:4:28 (import "./routeTree.gen")
+  │     6. src/routeTree.gen.ts:156:52 (import "./routes/api/chat/models")
+  │     7. src/routes/api/chat/models.ts:27:27 (import "~/chat/server/run-models")
+  │ 
+  │   Code:
+  │     25 |     const policy = await readWorkspacePolicy(parsed.data, user.userId)
+  │     26 |     const env = await getModelEnvironment()
+  │   > 27 |     const catalog = await getRunModelCatalog(env, {
+  │        |                           ^
+  │     28 |       userId: user.userId,
+  │     29 |       policy,
+  │ 
+  │   src/routes/api/chat/models.ts:27:27
+  │ 
+  │   Suggestions:
+  │     - Use createServerFn().handler(() => ...) to keep the logic on the server and call it from the client via an RPC bridge
+  │     - Use createServerOnlyFn(() => ...) to mark it as server-only (it will throw if accidentally called from the client)
+  │     - Use createIsomorphicFn().client(() => ...).server(() => ...) to provide separate client and server implementations
+  │     - Move the server-only import out of this file into a separate .server.ts module that is not imported by any client code
+  │
+
+File: node:crypto:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:crypto" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  node:crypto ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+File: node:fs:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:fs" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  node:fs ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+File: node:module:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:module" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (12 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js
+  node:module ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+File: node:path:1:1
+  × Module build failed:
+  ╰─▶   × Reading from "node:path" is not handled by plugins (Unhandled scheme).
+        │ Rspack supports "data:" and "file:" URIs by default.
+        │ You may need an additional plugin to handle "node:" URIs.
+      
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  node:path ×
+
+Error: "node:*" is a built-in Node.js module and cannot be imported in client-side code.
+
+Solution: Check if you need to import Node.js module.
+  - If not needed, remove the import.
+  - If needed, use "@rsbuild/plugin-node-polyfill" to polyfill it. (See https://npmjs.com/package/@rsbuild/plugin-node-polyfill)
+
+file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rsbuild+core@2.2.12/node_modules/@rsbuild/core/dist/m.js:4316
+                closeErr && logger.error('Failed to close compiler: ', closeErr), err ? reject(err) : context.buildState.hasErrors ? reject(Error(RSPACK_BUILD_ERROR)) : resolve(stats);
+                                                                                                                                            ^
+
+Error: Rspack build failed.
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rsbuild+core@2.2.12/node_modules/@rsbuild/core/dist/m.js:4316:141
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9151:31
+    at callback1 (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9159:78)
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9165:36
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:12686:36
+
+Node.js v25.9.0

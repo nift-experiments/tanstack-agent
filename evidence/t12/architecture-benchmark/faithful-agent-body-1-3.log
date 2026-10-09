@@ -1,0 +1,25 @@
+NIFT_PHASE source_discovery
+NIFT_PHASE retained_asset_publication
+NIFT_PHASE publisher_compilation
+{"publisher_compile":"hit","inputs":12}
+NIFT_PHASE content_process_startup
+NIFT_PHASE content_discovery
+NIFT_PHASE projection_assets_and_revision
+NIFT_PHASE metadata_navigation
+NIFT_PHASE state_serialization
+NIFT_PHASE nift_composition
+built _nift/docs/render/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md
+    ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.document
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 2 files rebuilt successfully
+time taken: 0.318332 seconds
+NIFT_PHASE composition_verification
+NIFT_PHASE route_retirement
+NIFT_PHASE cache_serialization
+{"publication_record_hits":7600,"publication_record_misses":1,"composition_repairs":0}
+NIFT_PHASE complete
+{"publication_preparation":1.074266964,"nift_composition":0.3343175370000001,"output_verification_and_repair":0.24201831300000004,"complete_content_publication":1.731949171}
+NIFT_PHASE worker_configuration
+NIFT_PHASE complete
+{"bundle_verification":0.174571752,"retained_vite_build":2.900000000067848e-7,"retained_asset_publication":0.15170099899999998,"publisher_compilation":0.06990643999999997,"content_publication":1.8823933509999997,"complete_pipeline":2.5443007669999997}

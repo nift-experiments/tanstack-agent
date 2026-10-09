@@ -1,0 +1,225 @@
+{
+  "records": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "TanStack | The open-source application stack for the web.",
+      "headings": [
+        "The open source application stack for the web",
+        "Why TanStack?",
+        "Partners",
+        "Blog & Release Notes",
+        "Core Maintainers",
+        "Subscribe to TanStack News",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "route": "/ethos",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "TanStack Ethos",
+      "headings": [
+        "TanStack Ethos",
+        "Independently Owned, Unbiased by Design",
+        "A Sustainable Future",
+        "Technology-Agnostic by Default",
+        "Open Partners",
+        "Product & Library Tenets",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "route": "/blog/announcing-tanstack-query-v5",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "Announcing TanStack Query v5 | TanStack Blog",
+      "headings": [
+        "Announcing TanStack Query v5",
+        "Breaking changes#",
+        "New Features#",
+        "Simplified optimistic updates#",
+        "Sharable mutation state#",
+        "1st class suspense support#",
+        "Improved Infinite Queries#",
+        "New Devtools#",
+        "Fine-grained persistence#",
+        "The queryOptions API#",
+        "THANK YOU#",
+        "On this page",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "route": "/query/latest/docs/framework/react/overview",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "Overview | TanStack Query React Docs",
+      "headings": [
+        "Overview",
+        "Motivation#",
+        "Enough talk, show me some code already!#",
+        "You talked me into it, so what now?#",
+        "On this page",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "scenario": "retained-client-router",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "passed": true
+    },
+    {
+      "scenario": "search-transport",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "passed": true
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "TanStack | The open-source application stack for the web.",
+      "headings": [
+        "The open source application stack for the web",
+        "Why TanStack?",
+        "Partners",
+        "Blog & Release Notes",
+        "Core Maintainers",
+        "Subscribe to TanStack News",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "route": "/ethos",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "TanStack Ethos",
+      "headings": [
+        "TanStack Ethos",
+        "Independently Owned, Unbiased by Design",
+        "A Sustainable Future",
+        "Technology-Agnostic by Default",
+        "Open Partners",
+        "Product & Library Tenets",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "route": "/blog/announcing-tanstack-query-v5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Announcing TanStack Query v5 | TanStack Blog",
+      "headings": [
+        "Announcing TanStack Query v5",
+        "Breaking changes#",
+        "New Features#",
+        "Simplified optimistic updates#",
+        "Sharable mutation state#",
+        "1st class suspense support#",
+        "Improved Infinite Queries#",
+        "New Devtools#",
+        "Fine-grained persistence#",
+        "The queryOptions API#",
+        "THANK YOU#",
+        "On this page",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "route": "/query/latest/docs/framework/react/overview",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Overview | TanStack Query React Docs",
+      "headings": [
+        "Overview",
+        "Motivation#",
+        "Enough talk, show me some code already!#",
+        "You talked me into it, so what now?#",
+        "On this page",
+        "Libraries",
+        "Blog",
+        "Community",
+        "Tools",
+        "Merch",
+        "Support"
+      ]
+    },
+    {
+      "scenario": "retained-client-router",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true
+    },
+    {
+      "scenario": "search-transport",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "source_edit_survives_hydration": false,
+  "local_backend_only": true
+}

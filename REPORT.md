@@ -193,3 +193,8 @@ Hosted Algolia search remains the original external service. Its client bundling
 Complete commands, fixture provisioning and cache definitions are in the [README](README.md), [reproduction](investigation/REPRODUCTION.md) and protocol. Dependencies/input acquisition are outside timing. The campaign spans 9–10 October 2026 in Australia/Melbourne with fixed serialized implementation order and preserved resumable cohorts. It is not randomized or guaranteed contemporaneous across implementations; close full-build gaps and overlapping ranges are not decisive. The machine has unrelated user work; it was neither stopped nor included in descendant memory, and per-sample load/ranges are retained. No exclusive-machine or OS-cold claim is made. Source mutations are reversible and journaled outside the repositories. Final source/publication restoration, fresh-clone build/corpus verification, repository synchronization and local/public evidence-link checks are recorded in [closeout](evidence/t10/closeout.json).
 
 Future candidates belong in [FUTURE-WORK.md](investigation/FUTURE-WORK.md); concrete init-guidance proposals are in [MIGRATION-INIT-REVIEW.md](investigation/MIGRATION-INIT-REVIEW.md). This experiment does not authorize additional core changes or a Labs publication.
+
+
+## T12 architecture investigation
+
+See [architectural ownership, 80-sample comparison and rejected boundaries](investigation/T12-ARCHITECTURE.md). The faithful compiler dominates full-build cost; the Rsbuild replacement trades lower memory for slower warm full publication. No default architecture change or Labs closeout. T10 evidence remains immutable, and the broader T11 replacement campaign remains pending.

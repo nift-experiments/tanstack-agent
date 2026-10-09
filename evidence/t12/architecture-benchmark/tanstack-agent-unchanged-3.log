@@ -1,0 +1,21 @@
+NIFT_PHASE source_discovery
+NIFT_PHASE retained_asset_publication
+NIFT_PHASE publisher_compilation
+{"publisher_compile":"hit","inputs":12}
+NIFT_PHASE content_process_startup
+NIFT_PHASE content_discovery
+NIFT_PHASE projection_assets_and_revision
+NIFT_PHASE metadata_navigation
+NIFT_PHASE state_serialization
+NIFT_PHASE nift_composition
+✓ 7578 tracked files are up to date
+time taken: 0.252221 seconds
+NIFT_PHASE composition_verification
+NIFT_PHASE route_retirement
+NIFT_PHASE cache_serialization
+{"publication_record_hits":7601,"publication_record_misses":0,"composition_repairs":0}
+NIFT_PHASE complete
+{"publication_preparation":1.192400166,"nift_composition":0.26811346,"output_verification_and_repair":0.297052819,"complete_content_publication":1.844337616}
+NIFT_PHASE worker_configuration
+NIFT_PHASE complete
+{"bundle_verification":0.22219231700000006,"retained_rsbuild_build":2.1700000002056185e-7,"retained_asset_publication":0.1756800380000001,"publisher_compilation":0.09524692799999991,"content_publication":2.003004181,"complete_pipeline":2.8081937790000002}

@@ -1,0 +1,393 @@
+{
+  "repo": "tanstack/charts",
+  "commit": "57774e14a1a86081eddb3a23523724a40da05640",
+  "files": [
+    {
+      "path": "package.json",
+      "bytes": 6781,
+      "git_blob": "8d00f8a3add8358a9304f01d6739bf80654dfe2c",
+      "sha256": "b43bcc37d7e95210e79f4642862df2350b09969a37f351d200a33baf328e4830"
+    },
+    {
+      "path": "packages/charts-core/package.json",
+      "bytes": 21763,
+      "git_blob": "ae429406eb7336a35051e2e1184d0b02db8eac12",
+      "sha256": "215ee619887ae1fbc1b670128ea5924900922de98779bf0ea0c30fc0f99b5ab2"
+    },
+    {
+      "path": "packages/charts-demo-data/src/aapl.d.ts",
+      "bytes": 330,
+      "git_blob": "6c57474397eab2dcf6e152969651ae90f4e4fed0",
+      "sha256": "8a101bd9f5a29ae8be022a7e9554014d6c290251952141befe958a1d4a64ce91"
+    },
+    {
+      "path": "packages/charts-demo-data/src/aapl.js",
+      "bytes": 94155,
+      "git_blob": "dab92c9549b954556b678724fe11e2506dda9939",
+      "sha256": "182b64d5d1614f3aebeb464365d242a72c5eb998a4ffeee30366cc2fc8905c88"
+    },
+    {
+      "path": "packages/charts-demo-data/src/alphabet.d.ts",
+      "bytes": 222,
+      "git_blob": "c99ffa15f92e5f44df9fe05fedc1131be1f710b5",
+      "sha256": "5837bbf2791e5031c94813e504191e9b82ed50efa917674b88073d036f026b63"
+    },
+    {
+      "path": "packages/charts-demo-data/src/alphabet.js",
+      "bytes": 1085,
+      "git_blob": "80cf7360728f995c2499d31af9c1074a5675d84c",
+      "sha256": "ceb0f90a5c534ac09ecd63877b85a6653bf00dd7f96cc6311906d7f65d395fa8"
+    },
+    {
+      "path": "packages/charts-demo-data/src/anscombe.d.ts",
+      "bytes": 235,
+      "git_blob": "17e11e785149a0420265d05dea7996eb808f5059",
+      "sha256": "08c150978d930e2f68e62047b84f32a53bb5b633c63fc2779ebe37b5264713f8"
+    },
+    {
+      "path": "packages/charts-demo-data/src/anscombe.js",
+      "bytes": 1461,
+      "git_blob": "7252a651601644b584b9e4b785e19624d01c4326",
+      "sha256": "183f0beb14c2876466f627799ac68674e26d151e0c7e919a1a67f1ef512e1752"
+    },
+    {
+      "path": "packages/charts-demo-data/src/beagle.d.ts",
+      "bytes": 201,
+      "git_blob": "370250a528dfc9de4e23dbb89cb9d0a224579cda",
+      "sha256": "f371dfbd2c55a3a977b7090cb246ac9f8d8c57b4b947344742e8fcb51c1d63b4"
+    },
+    {
+      "path": "packages/charts-demo-data/src/beagle.js",
+      "bytes": 8124,
+      "git_blob": "a90c5b92209f1575a4560105c12684c1fc98bcac",
+      "sha256": "83992af21c362e3a0540faec616691c06fff4d008788c1f1b69f6450684c0f02"
+    },
+    {
+      "path": "packages/charts-demo-data/src/cars.d.ts",
+      "bytes": 419,
+      "git_blob": "19f7255c2eb5f02faa64ca9ff8183b127689b4c1",
+      "sha256": "ee7d0e1398264b5856084b9ce1080e37cde600380df08c02c2bfe831ce1abfd4"
+    },
+    {
+      "path": "packages/charts-demo-data/src/cars.js",
+      "bytes": 66243,
+      "git_blob": "45a12dfd5377d150e17bb70ee1d91f14a0a153fb",
+      "sha256": "5ff1b0297b5510f92eb041483a3f2e85bcd3172976de5ac5eb7cef4469841efb"
+    },
+    {
+      "path": "packages/charts-demo-data/src/citywages.d.ts",
+      "bytes": 478,
+      "git_blob": "0283f5a25940bed0ea6c99648345ba2ad73d5780",
+      "sha256": "87d570acd0b2dec5e12768ed2c7a5fbcc913e578a050fe821fda2443ac399300"
+    },
+    {
+      "path": "packages/charts-demo-data/src/citywages.js",
+      "bytes": 40914,
+      "git_blob": "6e3194bf009ac9cc68616cc05f0f75de0e40025a",
+      "sha256": "bb6068e39040085f71f6eed2f745e62c3207ef451bdc925009dbe124dd89d9ac"
+    },
+    {
+      "path": "packages/charts-demo-data/src/country-atlas.ts",
+      "bytes": 3900,
+      "git_blob": "e11ea9af557cc7159226702363d605169f640647",
+      "sha256": "1e262c26a28f278256133e9858902e4fbe7f0fd87ca2de12ef9f0188a2b0418b"
+    },
+    {
+      "path": "packages/charts-demo-data/src/crimean-war.d.ts",
+      "bytes": 297,
+      "git_blob": "433682f715d6a8e117d3813884a05c2cd914a1b0",
+      "sha256": "8a409695a480beab0ace4b5887aeee2c2b561ad198366265f83e55f53974bae8"
+    },
+    {
+      "path": "packages/charts-demo-data/src/crimean-war.js",
+      "bytes": 2479,
+      "git_blob": "707e68f1e003b04e595350e6ed0522f9026c4f85",
+      "sha256": "c51f0603e6178822b4a72e7eafefb634b757fd287cf300c7e932745a26186e17"
+    },
+    {
+      "path": "packages/charts-demo-data/src/decathlon.d.ts",
+      "bytes": 330,
+      "git_blob": "431f47a84b949a2667aa1426f7fc1e80460a912b",
+      "sha256": "f1ae3ca9a538fcb45bf33e1667ed282384df421248eeffd1b4c333a156db8c18"
+    },
+    {
+      "path": "packages/charts-demo-data/src/decathlon.js",
+      "bytes": 5442,
+      "git_blob": "881f20437cf79fa9a4b94259a9cb6671547ceeb2",
+      "sha256": "4b0a508d458c062049067cdb6386cdea9fe821bc4f5574c801ad70d443440a40"
+    },
+    {
+      "path": "packages/charts-demo-data/src/diamonds.d.ts",
+      "bytes": 405,
+      "git_blob": "6911de6326059b224ab616b7535c8f7ca52ba33b",
+      "sha256": "ce46f6da3f4e5ca6f0b96b4851613a38277d2e2c23efdaaa0a996f001f68a171"
+    },
+    {
+      "path": "packages/charts-demo-data/src/diamonds.js",
+      "bytes": 2503021,
+      "git_blob": "896e68f7af998c67e469c06428bf874e971bf282",
+      "sha256": "34d2c24e413bd7484926b24589866181239276beea591c22294c4d2a16fab1eb"
+    },
+    {
+      "path": "packages/charts-demo-data/src/downloads.d.ts",
+      "bytes": 221,
+      "git_blob": "8f6e02a1ecef9a3c2e1749151012b4bb688f0060",
+      "sha256": "ae40367974a6a87405bd385f3527c020023f672b72f3a2f54ab1ad6456113222"
+    },
+    {
+      "path": "packages/charts-demo-data/src/downloads.js",
+      "bytes": 97303,
+      "git_blob": "80a64cb8c063f229dd0a04bf8deddcea8942f251",
+      "sha256": "7deaad3028a57c6337d03b2c3e4e225b3a73937da0fe53f131299f945e7a7ee6"
+    },
+    {
+      "path": "packages/charts-demo-data/src/driving.d.ts",
+      "bytes": 260,
+      "git_blob": "47ad20607990bc5c8c7c1dc01f11b462ffc6ec9b",
+      "sha256": "cd9eae78d54465ebe6fd12128ce16261e22a0b3ec87e3f05cae6c76517cafe12"
+    },
+    {
+      "path": "packages/charts-demo-data/src/driving.js",
+      "bytes": 3520,
+      "git_blob": "9eaba0eb5d1765ba67af7684b35163466b9e3c4a",
+      "sha256": "cd5d7ce48051b3b0430f7243aaee02421bf59b2ba44519f3b2211dff1dca3efa"
+    },
+    {
+      "path": "packages/charts-demo-data/src/flare.d.ts",
+      "bytes": 213,
+      "git_blob": "f3807d931cd4efd90447b7097ed89918f72a61d6",
+      "sha256": "f938e99ec60d7fabe6672c1793f750a3c6f40b752b1a1ae8ca9151b8b6995ea5"
+    },
+    {
+      "path": "packages/charts-demo-data/src/flare.js",
+      "bytes": 13267,
+      "git_blob": "852d6a6f484e00c962ea8a61796e6f09770eef4e",
+      "sha256": "409971b9f8edb06fcb3d9bccd2e2d2296f157c71fd635556d992d54e72b8aef1"
+    },
+    {
+      "path": "packages/charts-demo-data/src/industries.d.ts",
+      "bytes": 253,
+      "git_blob": "857b17062f3064e6ca2a0fa195e4969cc1c81063",
+      "sha256": "92c55e527266d194cdad4701c390cd932619a23dd42b25853d092c11de5e1198"
+    },
+    {
+      "path": "packages/charts-demo-data/src/industries.js",
+      "bytes": 161628,
+      "git_blob": "b5990c209b9de112152d3143661b4b7ea5817788",
+      "sha256": "048d2615f33b5af99cba78e76c016bd3e69e05f77ef192b99e2fc0918b1142ef"
+    },
+    {
+      "path": "packages/charts-demo-data/src/learning-poverty-geography.ts",
+      "bytes": 3119,
+      "git_blob": "54261752d392a71d59ecd51df033a8c3e3b55ab8",
+      "sha256": "237b6f54bb694d3758234fef4f043e734cdb628d29de8a52e8bbbd162b23229f"
+    },
+    {
+      "path": "packages/charts-demo-data/src/learning-poverty.d.ts",
+      "bytes": 484,
+      "git_blob": "9658bcfd219ab19954e0279e3866cdd45a8106dc",
+      "sha256": "bb284b660f887f5130c629ddaa3ebec66e5f8d990101aa10b4a4553a1119d1a3"
+    },
+    {
+      "path": "packages/charts-demo-data/src/learning-poverty.js",
+      "bytes": 21466,
+      "git_blob": "3938cba259b83194b0007ad822f754bc08c4739b",
+      "sha256": "3a072c1e7f0280b1c8ba61a940d2e912ecce038dd3118c5225d1c397d3bbc33d"
+    },
+    {
+      "path": "packages/charts-demo-data/src/metadata.d.ts",
+      "bytes": 872,
+      "git_blob": "d1a634fe6cf072bb8f4741920db11ed94080fba6",
+      "sha256": "2950076836d8f0e05838706a4e930c2a57117e896ee857654f62fa04c6319360"
+    },
+    {
+      "path": "packages/charts-demo-data/src/metadata.js",
+      "bytes": 28983,
+      "git_blob": "53a21cd843445c0674e0fdd5febd1a85b8ec791a",
+      "sha256": "37a547296b45b2147eec108f944e66063718051b66f721d6305dd953ae26a7c5"
+    },
+    {
+      "path": "packages/charts-demo-data/src/miserables.d.ts",
+      "bytes": 452,
+      "git_blob": "814cee41e6c00e13a173d4d6a5c33b8498513d28",
+      "sha256": "8d4e56e13a3fcf2c906c822f4841a3453abee9132f5509ec053419eabde72ecd"
+    },
+    {
+      "path": "packages/charts-demo-data/src/miserables.js",
+      "bytes": 16464,
+      "git_blob": "08e14efc2a9a21fa1fca55c18a5d8a1de4310ee6",
+      "sha256": "9a7ea7c14fae7db6a605a131a04107624bad8d63ebf2751dc7740b13451b3f73"
+    },
+    {
+      "path": "packages/charts-demo-data/src/morley.d.ts",
+      "bytes": 233,
+      "git_blob": "8620e0782e891b9c48c2d6c7eb5169f8e4dc0709",
+      "sha256": "8283041a321b7c9b2979bb66679eae9c938db796ce488beb234d84f120406bcd"
+    },
+    {
+      "path": "packages/charts-demo-data/src/morley.js",
+      "bytes": 3480,
+      "git_blob": "29f69496d7cbd068f2e4b1e1adae2e9bd5eae631",
+      "sha256": "45918fcd648c77c62b456de6e4a595138c8f94c8adae28f2eb00a9245bd95d1d"
+    },
+    {
+      "path": "packages/charts-demo-data/src/olympians.d.ts",
+      "bytes": 499,
+      "git_blob": "2cb36fea0b529eda07bfbbb4b4c74a41339ed04c",
+      "sha256": "0e183ae761e5a68d09df216d17527de420f3b54118e39b0bc306a50ff222a002"
+    },
+    {
+      "path": "packages/charts-demo-data/src/olympians.js",
+      "bytes": 854345,
+      "git_blob": "ad297e681a451da4acf2a1e04ee9f2726109eb86",
+      "sha256": "ad0ca9ecb128d889d3249c2f87a1750d63baddff8ed59d6da88261898bf2636b"
+    },
+    {
+      "path": "packages/charts-demo-data/src/parse-csv.js",
+      "bytes": 1733,
+      "git_blob": "a5bbaad9f1bf7d26c810248dd7be10c5e2885521",
+      "sha256": "50a79bb660eff0eeff43aa0f51e6154190f190a5f0391ffed257b40942ccb174"
+    },
+    {
+      "path": "packages/charts-demo-data/src/penguins.d.ts",
+      "bytes": 417,
+      "git_blob": "7f59cfd6f56b801bc73cbd81d90a716db8168f0b",
+      "sha256": "e1cdcd4fed9483297f18bfe0620ddbe87bc017917adf8ceed75ef4bf05073efc"
+    },
+    {
+      "path": "packages/charts-demo-data/src/penguins.js",
+      "bytes": 50043,
+      "git_blob": "f374e188910f38e3554d2702a6f7fe566be94982",
+      "sha256": "c103669ac8658dd686aa1cd0708678fd413e5b9d06155fd0b7a1370a2bedc65e"
+    },
+    {
+      "path": "packages/charts-demo-data/src/pizza.d.ts",
+      "bytes": 347,
+      "git_blob": "4d4a8f2b13e7064cf6f662d6ea8da81cbf3ab4b0",
+      "sha256": "4eb36ca5bfc4291d916ac926311cf6702590bcd919f68a2c788d4555e0dfb2d0"
+    },
+    {
+      "path": "packages/charts-demo-data/src/pizza.js",
+      "bytes": 2359648,
+      "git_blob": "e4128974db090cfb8b14256038a4eb7e2697b52a",
+      "sha256": "d1166aab9273f0d95382f907279dd4f8e23e3c102665508d24bc9230a3269230"
+    },
+    {
+      "path": "packages/charts-demo-data/src/sf-temperatures.d.ts",
+      "bytes": 254,
+      "git_blob": "c1f0bc76b30d5c9f1b0ba702030bec88d40c571a",
+      "sha256": "46387414b228fc4f7032b48673077f68012f14963670f002b86ddf764e7ca1a7"
+    },
+    {
+      "path": "packages/charts-demo-data/src/sf-temperatures.js",
+      "bytes": 51830,
+      "git_blob": "b82b9fd95858f18c152e5d0f7b743b28c90e354f",
+      "sha256": "f06a1b83d4db8815b3eaf24e13df0f0d0f32065163c379fa42a636a71061ae00"
+    },
+    {
+      "path": "packages/charts-demo-data/src/shadcn-area-interactive-data.ts",
+      "bytes": 6709,
+      "git_blob": "c60dfcf503cfce55d558e7656541bb7d3f63f958",
+      "sha256": "c20da802709ec0e6da9d378daaf97d7ba171631e20a1f38d0876e360170215d5"
+    },
+    {
+      "path": "packages/charts-demo-data/src/shadcn.ts",
+      "bytes": 7569,
+      "git_blob": "5030c17662a35f81bb8349e024890f5cd92ecf0d",
+      "sha256": "c02c92e85bc9ab9d4ae7a08993a6dc6790c7e05762091dca2a2147bcb11505e1"
+    },
+    {
+      "path": "packages/charts-demo-data/src/simplify-geo.ts",
+      "bytes": 3200,
+      "git_blob": "5486e5be5bfcb5fdc130aae0bcb88c32af575086",
+      "sha256": "5e1a519fda4488b6503dd81e7275bb4726c1b7539705795222c58a37f079a43c"
+    },
+    {
+      "path": "packages/charts-demo-data/src/simpsons.d.ts",
+      "bytes": 610,
+      "git_blob": "4707915a2c054728ebef2904bfee7eb9574b28fd",
+      "sha256": "8b8c64d39c519cd97d6b20cefe9d961de347a7c8a301dd1ab43f0b8a3ec196d5"
+    },
+    {
+      "path": "packages/charts-demo-data/src/simpsons.js",
+      "bytes": 121219,
+      "git_blob": "8f208b2f5642f8d227a1a8d50c2b610091e1e34b",
+      "sha256": "492438f8e6200bb382efd3a867c8eb46e8cc3b32b3bc40ca5c4125f6eeca3b3e"
+    },
+    {
+      "path": "packages/charts-demo-data/src/survey.d.ts",
+      "bytes": 239,
+      "git_blob": "4fbae9ae29e7b866a5c8237bf8a5b097e5ea025a",
+      "sha256": "77355d4f7e83c4cc100cecb972fbcbb1602df3ceba1bb04fbf468ee87718e189"
+    },
+    {
+      "path": "packages/charts-demo-data/src/survey.js",
+      "bytes": 25817,
+      "git_blob": "c873ed2b76336268f35ddbaf2ed168814335b76f",
+      "sha256": "455c63a3ff7863f7af3980d8fb1a668dcdae1b90a297d5ca01eb9152dcff6a2a"
+    },
+    {
+      "path": "packages/charts-demo-data/src/travelers.d.ts",
+      "bytes": 247,
+      "git_blob": "45e0726399e6cbf618acaa9ef94e25959186d4fa",
+      "sha256": "8a0c0f63e0cb83457d1800d3a8b7b2a1bbef0b542bb4ecf984dc354c432815fa"
+    },
+    {
+      "path": "packages/charts-demo-data/src/travelers.js",
+      "bytes": 25341,
+      "git_blob": "bedf40bcf7182d0d99e898cfa608ba518683d7ab",
+      "sha256": "177dfe58f3f18a2cc4715b0dec11e9102f80784355a11ce2129b33db3e0b2072"
+    },
+    {
+      "path": "packages/charts-demo-data/src/us-county-unemployment.d.ts",
+      "bytes": 300,
+      "git_blob": "4d8c211c58b79dd3c6aaf48249aff4de667098e1",
+      "sha256": "e0e0d188124d234993a8501cec0e9be66a2184c1a67349f9e9c1149586c6d81e"
+    },
+    {
+      "path": "packages/charts-demo-data/src/us-county-unemployment.js",
+      "bytes": 113454,
+      "git_blob": "ebbdb72557a22460ab143ff2692933bce06abb83",
+      "sha256": "2998e28e95b5cff5a7cf7f5d5c3da7cc0ea4508b3c0f710710b673df991d6ee6"
+    },
+    {
+      "path": "packages/charts-demo-data/src/weather.d.ts",
+      "bytes": 354,
+      "git_blob": "707c14fb656d3d3ef5a259ae9768fabda5814049",
+      "sha256": "34fefefa2a7de5a4526b6d576d669db6564649c55904e23807440b6ba4625d0d"
+    },
+    {
+      "path": "packages/charts-demo-data/src/weather.js",
+      "bytes": 124856,
+      "git_blob": "c00df8209ee61560767a0cd1cdc05a01c9641ab8",
+      "sha256": "042a2263af24be78653e477ca9384b2b627eecfe2d83f5a35ee6fc116e5b3510"
+    },
+    {
+      "path": "packages/charts-demo-data/src/westport-house.d.ts",
+      "bytes": 646,
+      "git_blob": "9d9bc1fdaa2bbb2d17ee5edbc67a6e3779cad2b4",
+      "sha256": "9ee62c199fa766bf7baece4317323ed9fa93a49125f9f9f6bfdf7fb76beabe65"
+    },
+    {
+      "path": "packages/charts-demo-data/src/westport-house.js",
+      "bytes": 77262,
+      "git_blob": "b5c85f53bac375d92b6e2291640e91c8dff8a218",
+      "sha256": "75c42bf2cfc93510a29f9e7f555819f9bb12595512248f9c1101c8eb4d0e3b3e"
+    },
+    {
+      "path": "packages/charts-demo-data/src/wind.d.ts",
+      "bytes": 254,
+      "git_blob": "7b4dc1bd0a9795e67893320c8f101b85cd888ae5",
+      "sha256": "eefc95e88e87cc6a976b3873f55aec1fb83a19d75ed04886a147b4932fb8f5d3"
+    },
+    {
+      "path": "packages/charts-demo-data/src/wind.js",
+      "bytes": 169148,
+      "git_blob": "a8d4ceb680ad4b5c5ce3029f1143c3a94a2e2b1a",
+      "sha256": "a1a13fa436f03c8f319881a4d63b4c78a0e0694023761fc55a7570f49758ce72"
+    }
+  ],
+  "total_bytes": 7106844,
+  "case_count": 188,
+  "role": "retained runtime catalog fixture; not migrated Markdown input"
+}

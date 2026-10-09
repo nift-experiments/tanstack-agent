@@ -1,0 +1,17 @@
+{
+  "scope": "same independent-install context; not JS filename identity across different bundlers",
+  "receipts": [
+    {
+      "mode": "normal",
+      "files": 24224,
+      "all_bytes_equal_to_independent_fresh": true,
+      "differences": []
+    },
+    {
+      "mode": "forced",
+      "files": 24224,
+      "all_bytes_equal_to_independent_fresh": true,
+      "differences": []
+    }
+  ]
+}

@@ -330,3 +330,8 @@ An additional performance pass is authorized and required before closeout. Prese
 ## T11 preserved; T12 architecture investigation in progress
 
 See investigation/T11-OPTIMIZATION.md and evidence/t11. Faithful behavioral gates passed; T10 measurements remain the conservative baseline. The authorized architecture investigation now tests alternate bundling and real backend ownership in isolated tanstack-agent scratch. Do not close/publish or characterize retained Start/Vite RSS as Nift RSS. Fresh-clone and new comparative benchmarks remain pending.
+
+
+## T12 bounded architecture checkpoint
+
+See investigation/T12-ARCHITECTURE.md. A/B have 80 serialized samples; B replaces Vite with the official Start/Rsbuild adapter but retains Start SSR. C whole-page publication fails fresh-session behavior; the scoped article bridge fails HTML-only authority after hydration. Stop expansion of C; no library reimplementation or core changes. Accepted default publisher/runtime and T10 measurements stay intact. Independent-install parity/equality receipts are in the agent evidence/t12 checkpoint. The T11 three-implementation 225-row replacement campaign is still pending; do not claim experiment completion or publish a Labs result.

@@ -57,3 +57,8 @@ This experiment finds the best Nift + TanStack boundary. React, Router, Query, S
 ## T11 preserved; T12 architecture investigation in progress
 
 See investigation/T11-OPTIMIZATION.md and evidence/t11. Faithful behavioral gates passed; T10 measurements remain the conservative baseline. The authorized architecture investigation now tests alternate bundling and real backend ownership in isolated tanstack-agent scratch. Do not close/publish or characterize retained Start/Vite RSS as Nift RSS. Fresh-clone and new comparative benchmarks remain pending.
+
+
+## T12: architectural boundary investigated, not closed
+
+Ownership report: T12-ARCHITECTURE.md. Eight workloads × two agent variants × five samples = 80 accepted timing rows. Official Start/Rsbuild alternative reduces memory but slows warm full builds. Start retains request-time page/docs SSR. Plain esbuild compilation, static-shell freshness and article HTML authority are rejected explicitly, not scored as successful migrations. No accepted default architecture switch. T10 baseline intact; broader T11 campaign pending. See agent evidence/t12 for independent-install reproduction and preservation receipts.

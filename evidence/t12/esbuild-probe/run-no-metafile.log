@@ -1,0 +1,158 @@
+✘ [ERROR] Could not resolve "node:async_hooks"
+
+    node_modules/.pnpm/@tanstack+start-storage-context@1.167.36/node_modules/@tanstack/start-storage-context/dist/esm/async-local-storage.js:1:34:
+      1 │ import { AsyncLocalStorage } from "node:async_hooks";
+        ╵                                   ~~~~~~~~~~~~~~~~~~
+
+  The package "node:async_hooks" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "/images/brand/tanstack-emblem-black.svg"
+
+    src/styles/shop.css?url:48:20:
+      48 │ ...-mask: url('/images/brand/tanstack-emblem-black.svg') center / ...
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+✘ [ERROR] Could not resolve "node:async_hooks"
+
+    src/db/client.ts:3:34:
+      3 │ import { AsyncLocalStorage } from 'node:async_hooks'
+        ╵                                   ~~~~~~~~~~~~~~~~~~
+
+  The package "node:async_hooks" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "os"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/index.js:1:15:
+      1 │ import os from 'os'
+        ╵                ~~~~
+
+  The package "os" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "fs"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/index.js:2:15:
+      2 │ import fs from 'fs'
+        ╵                ~~~~
+
+  The package "fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "/images/brand/tanstack-emblem-black.svg"
+
+    src/chat/styles.css?url:1974:14:
+      1974 │ ...mask: url('/images/brand/tanstack-emblem-black.svg') center /...
+           ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+✘ [ERROR] Could not resolve "node:async_hooks"
+
+    src/server/runtime/host.server.ts:1:34:
+      1 │ import { AsyncLocalStorage } from 'node:async_hooks'
+        ╵                                   ~~~~~~~~~~~~~~~~~~
+
+  The package "node:async_hooks" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "stream"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/large.js:1:19:
+      1 │ import Stream from 'stream'
+        ╵                    ~~~~~~~~
+
+  The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "net"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js:1:16:
+      1 │ import net from 'net'
+        ╵                 ~~~~~
+
+  The package "net" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:crypto"
+
+    src/chat/server/execution-project-snapshots.ts:3:27:
+      3 │ import { createHash } from 'node:crypto'
+        ╵                            ~~~~~~~~~~~~~
+
+  The package "node:crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "tls"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js:2:16:
+      2 │ import tls from 'tls'
+        ╵                 ~~~~~
+
+  The package "tls" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:crypto"
+
+    src/routes/api/github/webhook.ts:60:55:
+      60 │ ...nst { createHmac, timingSafeEqual } = await import("node:crypto");
+         ╵                                                       ~~~~~~~~~~~~~
+
+  The package "node:crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:crypto"
+
+    src/chat/server/execution-sessions.ts:2:44:
+      2 │ import { createHash, timingSafeEqual } from 'node:crypto'
+        ╵                                             ~~~~~~~~~~~~~
+
+  The package "node:crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "crypto"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js:3:19:
+      3 │ import crypto from 'crypto'
+        ╵                    ~~~~~~~~
+
+  The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:fs"
+
+    src/utils/documents.server.ts:6:15:
+      6 │ import fs from 'node:fs'
+        ╵                ~~~~~~~~~
+
+  The package "node:fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "stream"
+
+    node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js:4:19:
+      4 │ import Stream from 'stream'
+        ╵                    ~~~~~~~~
+
+  The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:zlib"
+
+    src/utils/intent.server.ts:1:29:
+      1 │ import { createGunzip } from 'node:zlib'
+        ╵                              ~~~~~~~~~~~
+
+  The package "node:zlib" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:fs"
+
+    src/server/og/assets.server.ts:1:29:
+      1 │ import { readFileSync } from 'node:fs'
+        ╵                              ~~~~~~~~~
+
+  The package "node:fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:path"
+
+    src/server/og/assets.server.ts:2:24:
+      2 │ import { resolve } from 'node:path'
+        ╵                         ~~~~~~~~~~~
+
+  The package "node:path" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+✘ [ERROR] Could not resolve "node:fs/promises"
+
+    src/utils/documents.server.ts:7:16:
+      7 │ import fsp from 'node:fs/promises'
+        ╵                 ~~~~~~~~~~~~~~~~~~
+
+  The package "node:fs/promises" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+0 of 1 warning and 20 of 204 errors shown (disable the message limit with --log-limit=0)
+Probe rejected; diagnostic errors recorded without stubbing server behavior.

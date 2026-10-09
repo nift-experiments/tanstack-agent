@@ -1,0 +1,13 @@
+faithful 1440 /query/latest/docs/framework/react/overview passed
+faithful 1440 /query/latest/docs/framework/react/comparison passed
+faithful 1440 /start/latest/docs/framework/react/build-from-scratch passed
+article 1440 /query/latest/docs/framework/react/overview passed
+article 1440 /query/latest/docs/framework/react/comparison passed
+article 1440 /start/latest/docs/framework/react/build-from-scratch passed
+faithful 390 /query/latest/docs/framework/react/overview passed
+faithful 390 /query/latest/docs/framework/react/comparison passed
+faithful 390 /start/latest/docs/framework/react/build-from-scratch passed
+article 390 /query/latest/docs/framework/react/overview passed
+article 390 /query/latest/docs/framework/react/comparison passed
+article 390 /start/latest/docs/framework/react/build-from-scratch passed
+Bounded article-body interaction/semantic parity passed

@@ -1,0 +1,3343 @@
+{
+  "status": "rejected-build-not-benchmark",
+  "seconds": 1.6749509839999999,
+  "errors": [
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 28,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/core/credentials.mjs",
+        "length": 9,
+        "line": 68,
+        "lineText": "    const fs = await import('node:fs');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 30,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/core/credentials.mjs",
+        "length": 11,
+        "line": 69,
+        "lineText": "    const path = await import('node:path');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 32,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/lib/credentials/credential-chain.mjs",
+        "length": 9,
+        "line": 161,
+        "lineText": "        const fs = await import('node:fs');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 32,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/lib/credentials/identity-token.mjs",
+        "length": 9,
+        "line": 11,
+        "lineText": "        const fs = await import('node:fs');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 28,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/lib/credentials/types.mjs",
+        "length": 9,
+        "line": 113,
+        "lineText": "    const fs = await import('node:fs');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 30,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/lib/credentials/types.mjs",
+        "length": 11,
+        "line": 144,
+        "lineText": "    const path = await import('node:path');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 32,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/lib/credentials/user-oauth.mjs",
+        "length": 9,
+        "line": 16,
+        "lineText": "        const fs = await import('node:fs');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs/promises\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/fs-util.mjs",
+        "length": 18,
+        "line": 7,
+        "lineText": "import * as fs from 'node:fs/promises';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs/promises\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/fs-util.mjs",
+        "length": 11,
+        "line": 8,
+        "lineText": "import * as path from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 27,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/fs-util.mjs",
+        "length": 13,
+        "line": 9,
+        "lineText": "import { randomUUID } from 'node:crypto';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs/promises\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/node.mjs",
+        "length": 18,
+        "line": 33,
+        "lineText": "import * as fs from 'node:fs/promises';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs/promises\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 24,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/node.mjs",
+        "length": 9,
+        "line": 34,
+        "lineText": "import * as fssync from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/node.mjs",
+        "length": 11,
+        "line": 35,
+        "lineText": "import * as path from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:child_process\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/node.mjs",
+        "length": 20,
+        "line": 36,
+        "lineText": "import * as cp from 'node:child_process';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:child_process\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 24,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/node.mjs",
+        "length": 13,
+        "line": 37,
+        "lineText": "import * as crypto from 'node:crypto';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:readline\"",
+      "location": {
+        "column": 26,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/node.mjs",
+        "length": 15,
+        "line": 38,
+        "lineText": "import * as readline from 'node:readline';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:readline\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs/promises\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 18,
+        "line": 7,
+        "lineText": "import * as fs from 'node:fs/promises';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs/promises\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 24,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 9,
+        "line": 8,
+        "lineText": "import * as fssync from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 11,
+        "line": 9,
+        "lineText": "import * as path from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:child_process\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 20,
+        "line": 10,
+        "lineText": "import { execFile } from 'node:child_process';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:child_process\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:util\"",
+      "location": {
+        "column": 26,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 11,
+        "line": 11,
+        "lineText": "import { promisify } from 'node:util';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:stream\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 13,
+        "line": 12,
+        "lineText": "import { Readable } from 'node:stream';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:stream/promises\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@anthropic-ai+sdk@0.97.1_zod@4.3.6/node_modules/@anthropic-ai/sdk/tools/agent-toolset/skills.mjs",
+        "length": 22,
+        "line": 13,
+        "lineText": "import { pipeline } from 'node:stream/promises';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:stream/promises\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"cloudflare:workers\"",
+      "location": {
+        "column": 30,
+        "file": "node_modules/.pnpm/@durable-streams+server-cloudflare@0.1.1/node_modules/@durable-streams/server-cloudflare/dist/index.js",
+        "length": 20,
+        "line": 1,
+        "lineText": "import { DurableObject } from \"cloudflare:workers\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "You can mark the path \"cloudflare:workers\" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:diagnostics_channel\"",
+      "location": {
+        "column": 19,
+        "file": "node_modules/.pnpm/@fastify+otel@0.18.0_@opentelemetry+api@1.9.1/node_modules/@fastify/otel/index.js",
+        "length": 26,
+        "line": 2,
+        "lineText": "const dc = require('node:diagnostics_channel')",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"events\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@opentelemetry+context-async-hooks@2.6.1_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/context-async-hooks/build/src/AbstractAsyncHooksContextManager.js",
+        "length": 8,
+        "line": 8,
+        "lineText": "const events_1 = require(\"events\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"events\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"async_hooks\"",
+      "location": {
+        "column": 27,
+        "file": "node_modules/.pnpm/@opentelemetry+context-async-hooks@2.6.1_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/context-async-hooks/build/src/AsyncHooksContextManager.js",
+        "length": 13,
+        "line": 9,
+        "lineText": "const asyncHooks = require(\"async_hooks\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"async_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"async_hooks\"",
+      "location": {
+        "column": 30,
+        "file": "node_modules/.pnpm/@opentelemetry+context-async-hooks@2.6.1_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/context-async-hooks/build/src/AsyncLocalStorageContextManager.js",
+        "length": 13,
+        "line": 9,
+        "lineText": "const async_hooks_1 = require(\"async_hooks\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"async_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"util\"",
+      "location": {
+        "column": 23,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-fs@0.33.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-fs/build/src/instrumentation.js",
+        "length": 6,
+        "line": 25,
+        "lineText": "const util_1 = require(\"util\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"url\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-http@0.214.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-http/build/src/http.js",
+        "length": 5,
+        "line": 10,
+        "lineText": "const url = require(\"url\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"url\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"events\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-http@0.214.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-http/build/src/http.js",
+        "length": 8,
+        "line": 13,
+        "lineText": "const events_1 = require(\"events\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"events\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"url\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-http@0.214.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-http/build/src/utils.js",
+        "length": 5,
+        "line": 9,
+        "lineText": "const url = require(\"url\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"url\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"events\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-tedious@0.33.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-tedious/build/src/instrumentation.js",
+        "length": 8,
+        "line": 20,
+        "lineText": "const events_1 = require(\"events\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"events\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"diagnostics_channel\"",
+      "location": {
+        "column": 23,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-undici@0.24.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-undici/build/src/undici.js",
+        "length": 21,
+        "line": 19,
+        "lineText": "const diagch = require(\"diagnostics_channel\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"url\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@opentelemetry+instrumentation-undici@0.24.0_@opentelemetry+api@1.9.1/node_modules/@opentelemetry/instrumentation-undici/build/src/undici.js",
+        "length": 5,
+        "line": 20,
+        "lineText": "const url_1 = require(\"url\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"url\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:util\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/anr/index.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import { types } from 'node:util';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:worker_threads\"",
+      "location": {
+        "column": 23,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/anr/index.js",
+        "length": 21,
+        "line": 2,
+        "lineText": "import { Worker } from 'node:worker_threads';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:worker_threads\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:inspector\"",
+      "location": {
+        "column": 35,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/anr/index.js",
+        "length": 16,
+        "line": 190,
+        "lineText": "    const inspector = await import('node:inspector');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:inspector\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:diagnostics_channel\"",
+      "location": {
+        "column": 36,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/childProcess.js",
+        "length": 26,
+        "line": 1,
+        "lineText": "import * as diagnosticsChannel from 'node:diagnostics_channel';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:child_process\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/context.js",
+        "length": 20,
+        "line": 1,
+        "lineText": "import { execFile } from 'node:child_process';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:child_process\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 34,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/context.js",
+        "length": 9,
+        "line": 2,
+        "lineText": "import { readFile, readdir } from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:os\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/context.js",
+        "length": 9,
+        "line": 3,
+        "lineText": "import * as os from 'node:os';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:os\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 21,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/context.js",
+        "length": 11,
+        "line": 4,
+        "lineText": "import { join } from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:util\"",
+      "location": {
+        "column": 26,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/context.js",
+        "length": 11,
+        "line": 5,
+        "lineText": "import { promisify } from 'node:util';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 33,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/contextlines.js",
+        "length": 9,
+        "line": 1,
+        "lineText": "import { createReadStream } from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:readline\"",
+      "location": {
+        "column": 32,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/contextlines.js",
+        "length": 15,
+        "line": 2,
+        "lineText": "import { createInterface } from 'node:readline';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:readline\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:diagnostics_channel\"",
+      "location": {
+        "column": 39,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/http/SentryHttpInstrumentation.js",
+        "length": 26,
+        "line": 1,
+        "lineText": "import { subscribe, unsubscribe } from 'node:diagnostics_channel';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:events\"",
+      "location": {
+        "column": 29,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/http/SentryHttpInstrumentation.js",
+        "length": 13,
+        "line": 2,
+        "lineText": "import { errorMonitor } from 'node:events';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:events\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:diagnostics_channel\"",
+      "location": {
+        "column": 26,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/http/httpServerIntegration.js",
+        "length": 26,
+        "line": 1,
+        "lineText": "import { subscribe } from 'node:diagnostics_channel';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:events\"",
+      "location": {
+        "column": 29,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/http/httpServerSpansIntegration.js",
+        "length": 13,
+        "line": 1,
+        "lineText": "import { errorMonitor } from 'node:events';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:events\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:worker_threads\"",
+      "location": {
+        "column": 23,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/local-variables/local-variables-async.js",
+        "length": 21,
+        "line": 1,
+        "lineText": "import { Worker } from 'node:worker_threads';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:worker_threads\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:inspector\"",
+      "location": {
+        "column": 35,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/local-variables/local-variables-async.js",
+        "length": 16,
+        "line": 70,
+        "lineText": "    const inspector = await import('node:inspector');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:inspector\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:inspector\"",
+      "location": {
+        "column": 35,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/local-variables/local-variables-sync.js",
+        "length": 16,
+        "line": 84,
+        "lineText": "    const inspector = await import('node:inspector');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:inspector\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 41,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/modules.js",
+        "length": 9,
+        "line": 1,
+        "lineText": "import { existsSync, readFileSync } from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 30,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/modules.js",
+        "length": 11,
+        "line": 2,
+        "lineText": "import { dirname, join } from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"diagnostics_channel\"",
+      "location": {
+        "column": 24,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/node-fetch/SentryNodeFetchInstrumentation.js",
+        "length": 21,
+        "line": 5,
+        "lineText": "import * as diagch from 'diagnostics_channel';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"perf_hooks\"",
+      "location": {
+        "column": 51,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/nodeRuntimeMetrics.js",
+        "length": 12,
+        "line": 1,
+        "lineText": "import { monitorEventLoopDelay, performance } from 'perf_hooks';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"perf_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"worker_threads\"",
+      "location": {
+        "column": 29,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/onuncaughtexception.js",
+        "length": 16,
+        "line": 2,
+        "lineText": "import { isMainThread } from 'worker_threads';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"worker_threads\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:diagnostics_channel\"",
+      "location": {
+        "column": 36,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/pino.js",
+        "length": 26,
+        "line": 1,
+        "lineText": "import * as diagnosticsChannel from 'node:diagnostics_channel';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:http\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/spotlight.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import * as http from 'node:http';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:http\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:util\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/integrations/systemError.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import * as util from 'node:util';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:util\"",
+      "location": {
+        "column": 23,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/logs/capture.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import { format } from 'node:util';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:http\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/proxy/base.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import * as http from 'node:http';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:http\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:https\"",
+      "location": {
+        "column": 7,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/proxy/base.js",
+        "length": 12,
+        "line": 2,
+        "lineText": "import 'node:https';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:https\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:net\"",
+      "location": {
+        "column": 21,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/proxy/index.js",
+        "length": 10,
+        "line": 1,
+        "lineText": "import * as net from 'node:net';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:net\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:tls\"",
+      "location": {
+        "column": 21,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/proxy/index.js",
+        "length": 10,
+        "line": 2,
+        "lineText": "import * as tls from 'node:tls';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:tls\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:os\"",
+      "location": {
+        "column": 20,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/sdk/client.js",
+        "length": 9,
+        "line": 1,
+        "lineText": "import * as os from 'node:os';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:os\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"worker_threads\"",
+      "location": {
+        "column": 39,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/sdk/client.js",
+        "length": 16,
+        "line": 6,
+        "lineText": "import { threadId, isMainThread } from 'worker_threads';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"worker_threads\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"module\"",
+      "location": {
+        "column": 30,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/sdk/esmLoader.js",
+        "length": 8,
+        "line": 3,
+        "lineText": "import * as moduleModule from 'module';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"module\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:http\"",
+      "location": {
+        "column": 22,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/transports/http.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import * as http from 'node:http';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:http\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:https\"",
+      "location": {
+        "column": 23,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/transports/http.js",
+        "length": 12,
+        "line": 2,
+        "lineText": "import * as https from 'node:https';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:https\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:stream\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/transports/http.js",
+        "length": 13,
+        "line": 3,
+        "lineText": "import { Readable } from 'node:stream';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:zlib\"",
+      "location": {
+        "column": 27,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/transports/http.js",
+        "length": 11,
+        "line": 4,
+        "lineText": "import { createGzip } from 'node:zlib';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:zlib\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 27,
+        "file": "node_modules/.pnpm/@sentry+node-core@10.47.0_@opentelemetry+api@1.9.1_@opentelemetry+context-async-hooks@2_6bb9c158a6d788145ea4af24b1f9730a/node_modules/@sentry/node-core/build/esm/utils/module.js",
+        "length": 11,
+        "line": 1,
+        "lineText": "import { posix, sep } from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:diagnostics_channel\"",
+      "location": {
+        "column": 36,
+        "file": "node_modules/.pnpm/@sentry+node@10.47.0/node_modules/@sentry/node/build/esm/integrations/tracing/fastify/index.js",
+        "length": 26,
+        "line": 1,
+        "lineText": "import * as diagnosticsChannel from 'node:diagnostics_channel';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:diagnostics_channel\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:net\"",
+      "location": {
+        "column": 21,
+        "file": "node_modules/.pnpm/@sentry+node@10.47.0/node_modules/@sentry/node/build/esm/integrations/tracing/firebase/otel/patches/firestore.js",
+        "length": 10,
+        "line": 1,
+        "lineText": "import * as net from 'node:net';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:net\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "No loader is configured for \".wasm\" files: node_modules/.pnpm/@takumi-rs+wasm@2.5.4_csstype@3.2.3_preact@10.29.0_react@19.2.3/node_modules/@takumi-rs/wasm/pkg/takumi_wasm_bg.wasm?url",
+      "location": {
+        "column": 16,
+        "file": "node_modules/.pnpm/@takumi-rs+wasm@2.5.4_csstype@3.2.3_preact@10.29.0_react@19.2.3/node_modules/@takumi-rs/wasm/bundlers/vite.mjs",
+        "length": 32,
+        "line": 1,
+        "lineText": "import url from \"../pkg/takumi_wasm_bg.wasm?url\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"node:fs/promises\"",
+      "location": {
+        "column": 38,
+        "file": "node_modules/.pnpm/@takumi-rs+wasm@2.5.4_csstype@3.2.3_preact@10.29.0_react@19.2.3/node_modules/@takumi-rs/wasm/bundlers/vite.mjs",
+        "length": 18,
+        "line": 7,
+        "lineText": "    const { readFile } = await import(\"node:fs/promises\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs/promises\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:stream\"",
+      "location": {
+        "column": 38,
+        "file": "node_modules/.pnpm/@tanstack+react-router@1.170.41_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-router/dist/esm/ssr/renderRouterToStream.js",
+        "length": 13,
+        "line": 3,
+        "lineText": "import { PassThrough, Readable } from \"node:stream\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:stream\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/@tanstack+router-core@1.171.34/node_modules/@tanstack/router-core/dist/esm/ssr/transformStreamWithRouter.js",
+        "length": 13,
+        "line": 3,
+        "lineText": "import { Readable } from \"node:stream\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"#tanstack-router-entry\"",
+      "location": {
+        "column": 9,
+        "file": "node_modules/.pnpm/@tanstack+start-server-core@1.169.39/node_modules/@tanstack/start-server-core/dist/esm/createStartHandler.js",
+        "length": 24,
+        "line": 28,
+        "lineText": "\t\timport(\"#tanstack-router-entry\"),",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 13,
+            "file": "node_modules/.pnpm/@tanstack+start-server-core@1.169.39/node_modules/@tanstack/start-server-core/package.json",
+            "length": 1,
+            "line": 67,
+            "lineText": "  \"imports\": {",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The package import \"#tanstack-router-entry\" is not defined in this \"imports\" map:"
+        },
+        {
+          "location": null,
+          "text": "You can mark the path \"#tanstack-router-entry\" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also add \".catch()\" here to handle this failure at run-time instead of bundle-time."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"#tanstack-start-entry\"",
+      "location": {
+        "column": 9,
+        "file": "node_modules/.pnpm/@tanstack+start-server-core@1.169.39/node_modules/@tanstack/start-server-core/dist/esm/createStartHandler.js",
+        "length": 23,
+        "line": 29,
+        "lineText": "\t\timport(\"#tanstack-start-entry\"),",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 13,
+            "file": "node_modules/.pnpm/@tanstack+start-server-core@1.169.39/node_modules/@tanstack/start-server-core/package.json",
+            "length": 1,
+            "line": 67,
+            "lineText": "  \"imports\": {",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The package import \"#tanstack-start-entry\" is not defined in this \"imports\" map:"
+        },
+        {
+          "location": null,
+          "text": "You can mark the path \"#tanstack-start-entry\" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also add \".catch()\" here to handle this failure at run-time instead of bundle-time."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:async_hooks\"",
+      "location": {
+        "column": 34,
+        "file": "node_modules/.pnpm/@tanstack+start-server-core@1.169.39/node_modules/@tanstack/start-server-core/dist/esm/request-response.js",
+        "length": 18,
+        "line": 1,
+        "lineText": "import { AsyncLocalStorage } from \"node:async_hooks\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:async_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"tanstack-start-manifest:v\"",
+      "location": {
+        "column": 43,
+        "file": "node_modules/.pnpm/@tanstack+start-server-core@1.169.39/node_modules/@tanstack/start-server-core/dist/esm/router-manifest.js",
+        "length": 27,
+        "line": 14,
+        "lineText": "\tconst { tsrStartManifest } = await import(\"tanstack-start-manifest:v\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "You can mark the path \"tanstack-start-manifest:v\" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also add \".catch()\" here to handle this failure at run-time instead of bundle-time."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:async_hooks\"",
+      "location": {
+        "column": 34,
+        "file": "node_modules/.pnpm/@tanstack+start-storage-context@1.167.36/node_modules/@tanstack/start-storage-context/dist/esm/async-local-storage.js",
+        "length": 18,
+        "line": 1,
+        "lineText": "import { AsyncLocalStorage } from \"node:async_hooks\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:async_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"events\"",
+      "location": {
+        "column": 25,
+        "file": "node_modules/.pnpm/events-universal@1.0.1/node_modules/events-universal/default.js",
+        "length": 8,
+        "line": 1,
+        "lineText": "module.exports = require('events')",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"events\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"util\"",
+      "location": {
+        "column": 19,
+        "file": "node_modules/.pnpm/forwarded-parse@2.1.2/node_modules/forwarded-parse/index.js",
+        "length": 6,
+        "line": 3,
+        "lineText": "var util = require('util');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"util\"",
+      "location": {
+        "column": 19,
+        "file": "node_modules/.pnpm/forwarded-parse@2.1.2/node_modules/forwarded-parse/lib/error.js",
+        "length": 6,
+        "line": 3,
+        "lineText": "var util = require('util');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"util\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"path\"",
+      "location": {
+        "column": 21,
+        "file": "node_modules/.pnpm/import-in-the-middle@3.0.0/node_modules/import-in-the-middle/index.js",
+        "length": 6,
+        "line": 5,
+        "lineText": "const path = require('path')",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"url\"",
+      "location": {
+        "column": 34,
+        "file": "node_modules/.pnpm/import-in-the-middle@3.0.0/node_modules/import-in-the-middle/index.js",
+        "length": 5,
+        "line": 7,
+        "lineText": "const { fileURLToPath } = require('url')",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"url\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"worker_threads\"",
+      "location": {
+        "column": 35,
+        "file": "node_modules/.pnpm/import-in-the-middle@3.0.0/node_modules/import-in-the-middle/index.js",
+        "length": 16,
+        "line": 8,
+        "lineText": "const { MessageChannel } = require('worker_threads')",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"worker_threads\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"module\"",
+      "location": {
+        "column": 28,
+        "file": "node_modules/.pnpm/import-in-the-middle@3.0.0/node_modules/import-in-the-middle/index.js",
+        "length": 8,
+        "line": 10,
+        "lineText": "let { isBuiltin } = require('module')",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"module\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"path\"",
+      "location": {
+        "column": 18,
+        "file": "node_modules/.pnpm/module-details-from-path@1.0.4/node_modules/module-details-from-path/index.js",
+        "length": 6,
+        "line": 3,
+        "lineText": "var sep = require('path').sep",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 24,
+        "file": "node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js",
+        "length": 9,
+        "line": 13,
+        "lineText": "import * as nodeFs from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:module\"",
+      "location": {
+        "column": 28,
+        "file": "node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js",
+        "length": 13,
+        "line": 14,
+        "lineText": "import * as nodeModule from 'node:module';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:module\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 26,
+        "file": "node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js",
+        "length": 11,
+        "line": 15,
+        "lineText": "import * as nodePath from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 28,
+        "file": "node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js",
+        "length": 13,
+        "line": 16,
+        "lineText": "import * as nodeCrypto from 'node:crypto';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 24,
+        "file": "node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js",
+        "length": 9,
+        "line": 17,
+        "lineText": "import * as nodeFs from 'node:fs';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 26,
+        "file": "node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js",
+        "length": 11,
+        "line": 18,
+        "lineText": "import * as nodePath from 'node:path';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"net\"",
+      "location": {
+        "column": 16,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js",
+        "length": 5,
+        "line": 1,
+        "lineText": "import net from 'net'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"net\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"tls\"",
+      "location": {
+        "column": 16,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js",
+        "length": 5,
+        "line": 2,
+        "lineText": "import tls from 'tls'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"tls\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"crypto\"",
+      "location": {
+        "column": 19,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js",
+        "length": 8,
+        "line": 3,
+        "lineText": "import crypto from 'crypto'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"stream\"",
+      "location": {
+        "column": 19,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js",
+        "length": 8,
+        "line": 4,
+        "lineText": "import Stream from 'stream'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"perf_hooks\"",
+      "location": {
+        "column": 28,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/connection.js",
+        "length": 12,
+        "line": 5,
+        "lineText": "import { performance } from 'perf_hooks'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"perf_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"os\"",
+      "location": {
+        "column": 15,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/index.js",
+        "length": 4,
+        "line": 1,
+        "lineText": "import os from 'os'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"os\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"fs\"",
+      "location": {
+        "column": 15,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/index.js",
+        "length": 4,
+        "line": 2,
+        "lineText": "import fs from 'fs'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"stream\"",
+      "location": {
+        "column": 19,
+        "file": "node_modules/.pnpm/postgres@3.4.8_patch_hash=3dffa5c1d54f190ed733b23ed8c2fadd0e61c1939e5a8ba8affad5d96e13f033/node_modules/postgres/src/large.js",
+        "length": 8,
+        "line": 1,
+        "lineText": "import Stream from 'stream'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Cannot import \"src/chat/components/account-timezone.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/AccountTimezone.tsx",
+        "length": 24,
+        "line": 15,
+        "lineText": "import './account-timezone.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/app-updates.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/AppUpdates.tsx",
+        "length": 19,
+        "line": 5,
+        "lineText": "import './app-updates.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/appearance-settings.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/AppearanceSettings.tsx",
+        "length": 27,
+        "line": 27,
+        "lineText": "import './appearance-settings.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/bot-workspace.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/BotWorkspace.tsx",
+        "length": 21,
+        "line": 90,
+        "lineText": "import './bot-workspace.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/command-palette.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/CommandPalette.tsx",
+        "length": 23,
+        "line": 50,
+        "lineText": "import './command-palette.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/composer-attachments.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ComposerAttachments.tsx",
+        "length": 28,
+        "line": 10,
+        "lineText": "import './composer-attachments.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/message-references.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ComposerReferences.tsx",
+        "length": 26,
+        "line": 49,
+        "lineText": "import './message-references.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/connection-settings.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConnectionSettings.tsx",
+        "length": 27,
+        "line": 39,
+        "lineText": "import './connection-settings.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/context-indicator.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ContextIndicator.tsx",
+        "length": 25,
+        "line": 8,
+        "lineText": "import './context-indicator.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/retry.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationActionEvidence.tsx",
+        "length": 13,
+        "line": 12,
+        "lineText": "import './retry.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-details.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationDetails.tsx",
+        "length": 28,
+        "line": 36,
+        "lineText": "import './conversation-details.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-card.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationDetailsCard.tsx",
+        "length": 25,
+        "line": 13,
+        "lineText": "import './conversation-card.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-details-card.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationDetailsCard.tsx",
+        "length": 33,
+        "line": 14,
+        "lineText": "import './conversation-details-card.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-card.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationNavigator.tsx",
+        "length": 25,
+        "line": 32,
+        "lineText": "import './conversation-card.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-navigator.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationNavigator.tsx",
+        "length": 30,
+        "line": 33,
+        "lineText": "import './conversation-navigator.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-origin.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationOrigin.tsx",
+        "length": 27,
+        "line": 5,
+        "lineText": "import './conversation-origin.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/assistant-chat.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationSession.tsx",
+        "length": 22,
+        "line": 7,
+        "lineText": "import './assistant-chat.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-threads.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationThreads.tsx",
+        "length": 28,
+        "line": 21,
+        "lineText": "import './conversation-threads.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/scheduled-origin.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationTurn.tsx",
+        "length": 24,
+        "line": 28,
+        "lineText": "import './scheduled-origin.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/conversation-workspace.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ConversationWorkspace.tsx",
+        "length": 30,
+        "line": 28,
+        "lineText": "import './conversation-workspace.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/copy-bot-dialog.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/CopyBotDialog.tsx",
+        "length": 23,
+        "line": 16,
+        "lineText": "import './copy-bot-dialog.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/message-interactions.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/CopyButton.tsx",
+        "length": 28,
+        "line": 4,
+        "lineText": "import './message-interactions.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/delegated-tasks.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/DelegatedTaskHistory.tsx",
+        "length": 23,
+        "line": 17,
+        "lineText": "import './delegated-tasks.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/delegated-tasks.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/DelegatedTasks.tsx",
+        "length": 23,
+        "line": 15,
+        "lineText": "import './delegated-tasks.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/desktop-browser-panel.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/DesktopBrowserPanel.tsx",
+        "length": 29,
+        "line": 22,
+        "lineText": "import './desktop-browser-panel.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/draft-bot.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/DraftBot.tsx",
+        "length": 17,
+        "line": 31,
+        "lineText": "import './draft-bot.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/execution-preview-viewport.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ExecutionPreviewViewport.tsx",
+        "length": 34,
+        "line": 7,
+        "lineText": "import './execution-preview-viewport.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/execution-session-panel.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ExecutionSessionPanel.tsx",
+        "length": 31,
+        "line": 29,
+        "lineText": "import './execution-session-panel.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/home-dashboard.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/HomeDashboard.tsx",
+        "length": 22,
+        "line": 22,
+        "lineText": "import './home-dashboard.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/icon-button.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/IconButton.tsx",
+        "length": 19,
+        "line": 4,
+        "lineText": "import './icon-button.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/kody-mail.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/KodyMail.tsx",
+        "length": 17,
+        "line": 13,
+        "lineText": "import './kody-mail.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/kody-memory-create-review.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/KodyMemoryCreateReview.tsx",
+        "length": 33,
+        "line": 2,
+        "lineText": "import './kody-memory-create-review.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/memory.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/MemoryPanel.tsx",
+        "length": 14,
+        "line": 22,
+        "lineText": "import './memory.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/composer-attachments.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/MessageAttachments.tsx",
+        "length": 28,
+        "line": 7,
+        "lineText": "import './composer-attachments.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/message-references.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/MessageReferences.tsx",
+        "length": 26,
+        "line": 8,
+        "lineText": "import './message-references.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/onboarding.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/Onboarding.tsx",
+        "length": 18,
+        "line": 14,
+        "lineText": "import './onboarding.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/package-browser.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/PackageIdentity.tsx",
+        "length": 23,
+        "line": 3,
+        "lineText": "import './package-browser.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/personal-assistant.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/PersonalAssistant.tsx",
+        "length": 26,
+        "line": 9,
+        "lineText": "import './personal-assistant.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/plugin-settings.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/PluginSettings.tsx",
+        "length": 23,
+        "line": 32,
+        "lineText": "import './plugin-settings.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/projects-panel.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ProjectsPanel.client.tsx",
+        "length": 22,
+        "line": 14,
+        "lineText": "import './projects-panel.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/queued-messages.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/QueuedMessages.tsx",
+        "length": 23,
+        "line": 9,
+        "lineText": "import './queued-messages.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/response-preferences.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ResponsePreferences.tsx",
+        "length": 28,
+        "line": 20,
+        "lineText": "import './response-preferences.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/retry.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/RetryBranch.tsx",
+        "length": 13,
+        "line": 10,
+        "lineText": "import './retry.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/retry-composer.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/RetryComposer.tsx",
+        "length": 22,
+        "line": 51,
+        "lineText": "import './retry-composer.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/retry.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/RetryPreparation.tsx",
+        "length": 13,
+        "line": 4,
+        "lineText": "import './retry.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/run-model-picker.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/RunModelPicker.tsx",
+        "length": 24,
+        "line": 9,
+        "lineText": "import './run-model-picker.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/saved-file-deliveries.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SavedFileDeliveries.tsx",
+        "length": 29,
+        "line": 13,
+        "lineText": "import './saved-file-deliveries.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/saved-files.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SavedFiles.tsx",
+        "length": 19,
+        "line": 36,
+        "lineText": "import './saved-files.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/schedule-review.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ScheduleReview.tsx",
+        "length": 23,
+        "line": 3,
+        "lineText": "import './schedule-review.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/schedules.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/Schedules.tsx",
+        "length": 17,
+        "line": 38,
+        "lineText": "import './schedules.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/select-field.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SelectField.tsx",
+        "length": 20,
+        "line": 9,
+        "lineText": "import './select-field.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/sketch-pad.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SketchPad.tsx",
+        "length": 18,
+        "line": 38,
+        "lineText": "import './sketch-pad.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/skills.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SkillPreview.tsx",
+        "length": 14,
+        "line": 2,
+        "lineText": "import './skills.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/skills.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SkillSettings.tsx",
+        "length": 14,
+        "line": 26,
+        "lineText": "import './skills.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/message-references.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/SkillSettings.tsx",
+        "length": 26,
+        "line": 27,
+        "lineText": "import './message-references.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/task-usage.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/TaskUsageDetails.tsx",
+        "length": 18,
+        "line": 9,
+        "lineText": "import './task-usage.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/message-interactions.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/VirtualMessages.tsx",
+        "length": 28,
+        "line": 20,
+        "lineText": "import './message-interactions.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/workflow-history.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/WorkflowHistory.tsx",
+        "length": 24,
+        "line": 21,
+        "lineText": "import './workflow-history.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/workspace-review.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/WorkspaceReview.tsx",
+        "length": 24,
+        "line": 3,
+        "lineText": "import './workspace-review.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/action-card.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/ActionCard.tsx",
+        "length": 19,
+        "line": 4,
+        "lineText": "import './action-card.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/button.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/Button.tsx",
+        "length": 14,
+        "line": 3,
+        "lineText": "import './button.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/checkbox.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/Checkbox.tsx",
+        "length": 16,
+        "line": 3,
+        "lineText": "import './checkbox.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/loading-state.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/LoadingState.tsx",
+        "length": 21,
+        "line": 3,
+        "lineText": "import './loading-state.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/modal.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/Modal.tsx",
+        "length": 13,
+        "line": 14,
+        "lineText": "import './modal.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/segmented-control.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/SegmentedControl.tsx",
+        "length": 25,
+        "line": 4,
+        "lineText": "import './segmented-control.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/chat/components/ui/tab-panels.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/chat/components/ui/TabPanels.tsx",
+        "length": 18,
+        "line": 3,
+        "lineText": "import './tab-panels.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 27,
+        "file": "src/chat/server/execution-project-snapshots.ts",
+        "length": 13,
+        "line": 3,
+        "lineText": "import { createHash } from 'node:crypto'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 44,
+        "file": "src/chat/server/execution-sessions.ts",
+        "length": 13,
+        "line": 2,
+        "lineText": "import { createHash, timingSafeEqual } from 'node:crypto'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"/images/brand/tanstack-emblem-black.svg\"",
+      "location": {
+        "column": 14,
+        "file": "src/chat/styles.css?url",
+        "length": 41,
+        "line": 1974,
+        "lineText": "    mask: url('/images/brand/tanstack-emblem-black.svg') center / contain",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "No loader is configured for \".wasm\" files: node_modules/.pnpm/esbuild-wasm@0.27.4/node_modules/esbuild-wasm/esbuild.wasm?url",
+      "location": {
+        "column": 27,
+        "file": "src/components/charts/ChartsBuilderPage.client.tsx",
+        "length": 31,
+        "line": 15,
+        "lineText": "import esbuildWasmUrl from 'esbuild-wasm/esbuild.wasm?url'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"node_modules/.pnpm/@xterm+xterm@5.5.0/node_modules/@xterm/xterm/css/xterm.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/components/examples/WebContainerTerminal.client.tsx",
+        "length": 28,
+        "line": 4,
+        "lineText": "import '@xterm/xterm/css/xterm.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/components/landing/AiCampaignHero.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/components/landing/AiCampaignHero.tsx",
+        "length": 22,
+        "line": 13,
+        "lineText": "import './AiCampaignHero.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"node:async_hooks\"",
+      "location": {
+        "column": 34,
+        "file": "src/db/client.ts",
+        "length": 18,
+        "line": 3,
+        "lineText": "import { AsyncLocalStorage } from 'node:async_hooks'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:async_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Cannot import \"src/styles/app.css\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 7,
+        "file": "src/routes/__root.tsx",
+        "length": 18,
+        "line": 16,
+        "lineText": "import '~/styles/app.css'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 55,
+        "file": "src/routes/api/github/webhook.ts",
+        "length": 13,
+        "line": 60,
+        "lineText": "  const { createHmac, timingSafeEqual } = await import(\"node:crypto\");",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Cannot import \"src/chat/styles.css?url\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 23,
+        "file": "src/routes/chat.tsx",
+        "length": 23,
+        "line": 6,
+        "lineText": "import chatStyles from '~/chat/styles.css?url'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/styles/shop.css?url\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 20,
+        "file": "src/routes/ds.overlays.tsx",
+        "length": 23,
+        "line": 4,
+        "lineText": "import shopCss from '~/styles/shop.css?url'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Cannot import \"src/styles/shop.css?url\" into a JavaScript file without an output path configured",
+      "location": {
+        "column": 20,
+        "file": "src/routes/shop.tsx",
+        "length": 23,
+        "line": 2,
+        "lineText": "import shopCss from '~/styles/shop.css?url'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 29,
+        "file": "src/server/og/assets.server.ts",
+        "length": 9,
+        "line": 1,
+        "lineText": "import { readFileSync } from 'node:fs'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 24,
+        "file": "src/server/og/assets.server.ts",
+        "length": 11,
+        "line": 2,
+        "lineText": "import { resolve } from 'node:path'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:async_hooks\"",
+      "location": {
+        "column": 34,
+        "file": "src/server/runtime/host.server.ts",
+        "length": 18,
+        "line": 1,
+        "lineText": "import { AsyncLocalStorage } from 'node:async_hooks'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:async_hooks\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"tailwindcss\"",
+      "location": {
+        "column": 8,
+        "file": "src/styles/app.css",
+        "length": 13,
+        "line": 1,
+        "lineText": "@import 'tailwindcss';",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": {
+            "column": 13,
+            "file": "node_modules/tailwindcss/package.json",
+            "length": 1,
+            "line": 13,
+            "lineText": "  \"exports\": {",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "The path \".\" is not currently exported by package \"tailwindcss\":"
+        },
+        {
+          "location": {
+            "column": 9,
+            "file": "node_modules/tailwindcss/package.json",
+            "length": 1,
+            "line": 14,
+            "lineText": "    \".\": {",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "None of the conditions in the package definition (\"types\", \"style\", \"require\", \"import\") match any of the currently active conditions (\"browser\", \"default\", \"module\"):"
+        },
+        {
+          "location": {
+            "column": 6,
+            "file": "node_modules/tailwindcss/package.json",
+            "length": 7,
+            "line": 16,
+            "lineText": "      \"style\": \"./index.css\",",
+            "namespace": "",
+            "suggestion": ""
+          },
+          "text": "Consider enabling the \"style\" condition if this package expects it to be enabled. You can use \"conditions: ['style']\" to do that:"
+        },
+        {
+          "location": null,
+          "text": "You can mark the path \"tailwindcss\" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"/fonts/Inter-latin-ext.woff2\"",
+      "location": {
+        "column": 11,
+        "file": "src/styles/app.css",
+        "length": 30,
+        "line": 2404,
+        "lineText": "  src: url('/fonts/Inter-latin-ext.woff2') format('woff2');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"/fonts/Inter-latin.woff2\"",
+      "location": {
+        "column": 11,
+        "file": "src/styles/app.css",
+        "length": 26,
+        "line": 2416,
+        "lineText": "  src: url('/fonts/Inter-latin.woff2') format('woff2');",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"/images/brand/tanstack-emblem-black.svg\"",
+      "location": {
+        "column": 20,
+        "file": "src/styles/app.css",
+        "length": 41,
+        "line": 2498,
+        "lineText": "  -webkit-mask: url('/images/brand/tanstack-emblem-black.svg') center / contain",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"/images/brand/tanstack-emblem-black.svg\"",
+      "location": {
+        "column": 20,
+        "file": "src/styles/shop.css?url",
+        "length": 41,
+        "line": 48,
+        "lineText": "  -webkit-mask: url('/images/brand/tanstack-emblem-black.svg') center / contain",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": []
+    },
+    {
+      "text": "Could not resolve \"crypto\"",
+      "location": {
+        "column": 7,
+        "file": "src/utils/crypto.server.ts",
+        "length": 8,
+        "line": 11,
+        "lineText": "} from 'crypto'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs\"",
+      "location": {
+        "column": 15,
+        "file": "src/utils/documents.server.ts",
+        "length": 9,
+        "line": 6,
+        "lineText": "import fs from 'node:fs'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:fs/promises\"",
+      "location": {
+        "column": 16,
+        "file": "src/utils/documents.server.ts",
+        "length": 18,
+        "line": 7,
+        "lineText": "import fsp from 'node:fs/promises'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:fs/promises\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:os\"",
+      "location": {
+        "column": 15,
+        "file": "src/utils/documents.server.ts",
+        "length": 9,
+        "line": 8,
+        "lineText": "import os from 'node:os'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:os\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 17,
+        "file": "src/utils/documents.server.ts",
+        "length": 11,
+        "line": 9,
+        "lineText": "import path from 'node:path'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 27,
+        "file": "src/utils/intent-admin.server.ts",
+        "length": 13,
+        "line": 6,
+        "lineText": "import { randomUUID } from 'node:crypto'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:zlib\"",
+      "location": {
+        "column": 29,
+        "file": "src/utils/intent.server.ts",
+        "length": 11,
+        "line": 1,
+        "lineText": "import { createGunzip } from 'node:zlib'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:zlib\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:crypto\"",
+      "location": {
+        "column": 27,
+        "file": "src/utils/intent.server.ts",
+        "length": 13,
+        "line": 2,
+        "lineText": "import { createHash } from 'node:crypto'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:crypto\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:stream\"",
+      "location": {
+        "column": 36,
+        "file": "src/utils/intent.server.ts",
+        "length": 13,
+        "line": 3,
+        "lineText": "import { Readable, Transform } from 'node:stream'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:stream\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:path\"",
+      "location": {
+        "column": 17,
+        "file": "src/utils/local-repo-path.server.ts",
+        "length": 11,
+        "line": 1,
+        "lineText": "import path from 'node:path'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:path\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    },
+    {
+      "text": "Could not resolve \"node:url\"",
+      "location": {
+        "column": 30,
+        "file": "src/utils/local-repo-path.server.ts",
+        "length": 10,
+        "line": 2,
+        "lineText": "import { fileURLToPath } from 'node:url'",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [
+        {
+          "location": null,
+          "text": "The package \"node:url\" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use \"platform: 'node'\" to do that, which will remove this error."
+        }
+      ]
+    }
+  ]
+}

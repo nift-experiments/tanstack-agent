@@ -1,0 +1,47 @@
+{
+  "accepted_main_before_t12": {
+    "tanstack": "fb3ee8b",
+    "tanstack-agent": "4f846aa"
+  },
+  "runtime_install": "independent frozen offline install; no runtime node_modules symlink",
+  "runtime_install_flags": [
+    "--offline",
+    "--frozen-lockfile",
+    "--ignore-scripts"
+  ],
+  "sidecar_install": "separate independently installed locked dependencies",
+  "portable_recipe_changes": "Only absolute sidecar directory relocation; original measured publisher preserved verbatim",
+  "no_default_publisher_change": true,
+  "no_nift_core_changes": true,
+  "required_suites": "passed type/lint/unit/chat/desktop; one existing desktop skip",
+  "expanded_browser": {
+    "states": 333,
+    "matching_semantics": true,
+    "page_errors": 0
+  },
+  "measured_recipe_exactly_preserved": true,
+  "corpus": {
+    "documents": 7527,
+    "roots": 25,
+    "ast_semantic_equal": true
+  },
+  "static_assets": {
+    "files": 244,
+    "bytes": 111985406,
+    "byte_equal": true
+  },
+  "runtime_gates": [
+    "API 27 states",
+    "generated output 30 states",
+    "byte-identical dynamic OG",
+    "per-request session freshness",
+    "Markdown negotiation",
+    "mobile/menu/theme/client routing",
+    "search hit/filter/navigation",
+    "real catalog renderer"
+  ],
+  "equality": {
+    "normal_and_forced_equal_to_independent_fresh": true,
+    "publication_files": 24224
+  }
+}

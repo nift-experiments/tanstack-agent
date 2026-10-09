@@ -1,0 +1,14 @@
+{
+  "scope": "number of source files with literal imports; not route/function counts; Redact applies through aliases",
+  "counts": {
+    "React": 512,
+    "Router": 443,
+    "Query": 143,
+    "Table": 12,
+    "AI": 80,
+    "Start": 64,
+    "Redact": 0,
+    "Sentry": 7,
+    "Content Collections": 2
+  }
+}

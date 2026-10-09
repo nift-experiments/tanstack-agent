@@ -1,0 +1,30 @@
+import {createRsbuild} from '@rsbuild/core'
+import {pluginReact} from '@rsbuild/plugin-react'
+import tailwindPostcss from '@tailwindcss/postcss'
+import {parse as parseJsonc} from 'jsonc-parser'
+import {createHash} from 'node:crypto'
+import {createRequire,registerHooks,builtinModules} from 'node:module'
+import {resolve} from 'node:path'
+import {readFileSync,copyFileSync,writeFileSync,readdirSync} from 'node:fs'
+import {fileURLToPath} from 'node:url'
+import {execFileSync} from 'node:child_process'
+const probeDir=fileURLToPath(new URL('..',import.meta.url))
+const root=resolve(process.argv[2]??resolve(probeDir,'rsbuild-app'))
+execFileSync(process.execPath,['scripts/build-content-collections.mjs'],{cwd:root,stdio:'inherit'})
+const require=createRequire(root+'/package.json')
+const ownRequire=createRequire(import.meta.url)
+const coreURL=new URL(ownRequire.resolve('@rsbuild/core'), 'file://').href
+registerHooks({resolve(specifier,context,nextResolve){if(specifier==='@rsbuild/core')return {url:coreURL,shortCircuit:true};return nextResolve(specifier,context)}})
+const {tanstackStart}=await import(root+'/node_modules/@tanstack/react-start/dist/esm/plugin/rsbuild.js')
+const aliases={'~':root+'/src','content-collections':root+'/.content-collections/generated','ejs':root+'/src/server/runtime/ejs-compat.server.ts','unicorn-magic':'unicorn-magic/node'}
+const redactSource=readFileSync(root+'/node_modules/@tanstack/redact/src/vite/index.ts','utf8')
+const map=redactSource.match(/const ALIASES: Record<string, string> = \{([\s\S]*?)\n\}/)?.[1]
+if(!map)throw Error('Could not read original Redact alias map')
+for(const m of map.matchAll(/(?:'([^']+)'|\b(react|scheduler)):\s*'([^']+)'/g)) {const key=m[1]??m[2];if(key!==m[3])aliases[key+'$']=require.resolve(m[3])}
+for(const key of ['react-dom/static','react-dom/static.node','react-dom/server.edge'])aliases[key+'$']=require.resolve('@tanstack/redact/server')
+function runtimeBuildId(){const digest=createHash('sha256');function walk(dir){for(const entry of readdirSync(dir,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))){const file=resolve(dir,entry.name);if(entry.isDirectory())walk(file);else if(entry.isFile()){digest.update(file.slice(root.length+1));digest.update('\0');digest.update(readFileSync(file));digest.update('\0')}}}for(const dir of ['src','public','scripts'])walk(resolve(root,dir));for(const file of ['package.json','pnpm-lock.yaml','vite.config.ts','wrangler.jsonc']){digest.update(file);digest.update('\0');digest.update(readFileSync(resolve(root,file)));digest.update('\0')}for(const file of ['probe.mjs','api-browser-loader.cjs','browser-unavailable-node.cjs','pnpm-lock.yaml'])digest.update(readFileSync(resolve(probeDir,'rsbuild-toolchain',file)));return digest.digest('hex')}
+const rsbuild=await createRsbuild({cwd:root,rsbuildConfig:{plugins:[{name:'bounded-api-browser-boundary',setup(api){api.onBeforeEnvironmentCompile(({environment})=>console.log('RSBUILD_PHASE '+environment.name+'_compile'));api.onAfterEnvironmentCompile(({environment})=>console.log('RSBUILD_PHASE '+environment.name+'_complete'));api.modifyRspackConfig((config,{environment,rspack})=>{if(environment.name==='ssr'){config.target='webworker';config.resolve.alias['@takumi-rs/wasm/auto$']=resolve(createRequire(require.resolve('takumi-js')).resolve('@takumi-rs/wasm'),'../../bundlers/workerd.js');config.externalsPresets={node:false,web:false,webAsync:false};config.externalsType='module';config.externals=[...config.externals??[],({request,context},callback)=>request?.endsWith('takumi_wasm_bg.wasm')&&context.includes('/@takumi-rs/wasm/')?callback(null,'module ./takumi_wasm_bg.wasm'):callback(),({request},callback)=>builtinModules.includes(request)||request?.startsWith('node:')?callback(null,'module '+(request.startsWith('node:')?request:'node:'+request)):callback()];return;}if(environment.name!=='client')return;config.plugins.push(new rspack.NormalModuleReplacementPlugin(/^node:(crypto|fs|module|path)$/,resource=>{if(!resource.context.includes('/octane/'))throw Error('Refuse to hide non-Octane server import: '+resource.context);resource.request=resolve(probeDir,'rsbuild-toolchain/browser-unavailable-node.cjs')}));config.module.rules.unshift({test:/src[\/]routes[\/](?:api[\/]chat[\/](?:files|models|plugins|skills|project-snapshots\.\$hash\.quarantine|mcp[\/]\$)\.ts|charts\.catalog_\.previews\.\$revision\.\{\$caseId\}\[\.\]svg\.ts)$/,enforce:'pre',use:[resolve(probeDir,'rsbuild-toolchain/api-browser-loader.cjs')]})})}},pluginReact(),tanstackStart({server:{build:{inlineCss:false}},importProtection:{behavior:'error',client:{files:['**/*.server.*','**/server/**']}},router:{codeSplittingOptions:{defaultBehavior:[['component','pendingComponent','errorComponent','notFoundComponent','loader']]}}})],source:{alias:aliases,define:{__GUM_LOCAL_DEVELOPMENT__:'false',__GUM_BUILD_ID__:JSON.stringify(runtimeBuildId()),__TANSTACK_ENABLE_SERVER_BUILDER_GENERATION__:'true',__TANSTACK_ENABLE_IMAGE_TRANSFORMATIONS__:'true',__TANSTACK_LOCAL_DOCS_TOKEN__:'""',__TANSTACK_SITE_URL__:'"https://tanstack.com"'}},output:{sourceMap:false},tools:{postcss:{postcssOptions:{plugins:[tailwindPostcss({base:root})]}},cssLoader:{url:{filter:(url)=>!url.startsWith('/')}},rspack:{module:{rules:[{test:/\.wasm$/,resourceQuery:/url/,type:'asset/resource'}]},externals:[({request},callback)=>request?.startsWith('cloudflare:')?callback(null,'module '+request):callback()]}}}})
+await rsbuild.build()
+copyFileSync(createRequire(require.resolve('takumi-js')).resolve('@takumi-rs/wasm/takumi_wasm_bg.wasm'),resolve(root,'dist/server/takumi_wasm_bg.wasm'))
+
+const configErrors=[];const workerConfiguration=parseJsonc(readFileSync(resolve(root,"wrangler.jsonc"),"utf8"),configErrors,{allowTrailingComma:true});if(configErrors.length)throw Error("Invalid maintained Worker configuration");workerConfiguration.main="index.js";workerConfiguration.assets={...workerConfiguration.assets,directory:"../client",binding:"ASSETS"};workerConfiguration.no_bundle=true;delete workerConfiguration.$schema;writeFileSync(resolve(root,"dist/server/wrangler.json"),JSON.stringify(workerConfiguration,null,2)+"\n");

@@ -1,0 +1,55 @@
+{
+  "states": 6,
+  "records": [
+    {
+      "name": "upstream",
+      "width": 1440,
+      "rendering_surface": true,
+      "keyboard_readout_changes": true,
+      "shapes": 25,
+      "errors": []
+    },
+    {
+      "name": "tanstack",
+      "width": 1440,
+      "rendering_surface": true,
+      "keyboard_readout_changes": true,
+      "shapes": 25,
+      "errors": []
+    },
+    {
+      "name": "tanstack-agent",
+      "width": 1440,
+      "rendering_surface": true,
+      "keyboard_readout_changes": true,
+      "shapes": 25,
+      "errors": []
+    },
+    {
+      "name": "upstream",
+      "width": 390,
+      "rendering_surface": true,
+      "keyboard_readout_changes": true,
+      "shapes": 25,
+      "errors": []
+    },
+    {
+      "name": "tanstack",
+      "width": 390,
+      "rendering_surface": true,
+      "keyboard_readout_changes": true,
+      "shapes": 25,
+      "errors": []
+    },
+    {
+      "name": "tanstack-agent",
+      "width": 390,
+      "rendering_surface": true,
+      "keyboard_readout_changes": true,
+      "shapes": 25,
+      "errors": []
+    }
+  ],
+  "public_CDN_bytes_frozen": true,
+  "live_private_services": false
+}

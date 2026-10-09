@@ -1,0 +1,917 @@
+info    build started...
+error   build failed in 12.4s (client)
+ready   built in 12.5s (ssr)
+error   Build errors: 
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:80:23-40
+  × ESModulesLinkingError: export 'relative' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+    ╭─[80:25]
+ 78 │ 
+ 79 │ function isPathInside(root, file) {
+ 80 │     const relativeFile = nodePath.relative(root, file);
+    ·                          ─────────────────
+ 81 │     return (
+ 82 │         relativeFile !== '..' &&
+    ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:83:35-47
+  × ESModulesLinkingError: export 'sep' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+    ╭─[83:40]
+ 81 │     return (
+ 82 │         relativeFile !== '..' &&
+ 83 │         !relativeFile.startsWith('..' + nodePath.sep) &&
+    ·                                         ────────────
+ 84 │         !nodePath.isAbsolute(relativeFile)
+ 85 │     );
+    ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:84:4-23
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+    ╭─[84:9]
+ 82 │         relativeFile !== '..' &&
+ 83 │         !relativeFile.startsWith('..' + nodePath.sep) &&
+ 84 │         !nodePath.isAbsolute(relativeFile)
+    ·          ───────────────────
+ 85 │     );
+ 86 │ }
+    ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:100:23-42
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[100:25]
+  98 │ export function canonicalModuleId(id, projectRoot) {
+  99 │     const file = cleanModuleId(id);
+ 100 │     if (!projectRoot || !nodePath.isAbsolute(file)) return normalizeModulePath(file);
+     ·                          ───────────────────
+ 101 │     const root = nodePath.resolve(projectRoot);
+ 102 │     const relativeFile = nodePath.relative(root, file);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:101:15-31
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[101:17]
+  99 │     const file = cleanModuleId(id);
+ 100 │     if (!projectRoot || !nodePath.isAbsolute(file)) return normalizeModulePath(file);
+ 101 │     const root = nodePath.resolve(projectRoot);
+     ·                  ────────────────
+ 102 │     const relativeFile = nodePath.relative(root, file);
+ 103 │     if (!isPathInside(root, file)) return normalizeModulePath(file);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:102:23-40
+  × ESModulesLinkingError: export 'relative' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[102:25]
+ 100 │     if (!projectRoot || !nodePath.isAbsolute(file)) return normalizeModulePath(file);
+ 101 │     const root = nodePath.resolve(projectRoot);
+ 102 │     const relativeFile = nodePath.relative(root, file);
+     ·                          ─────────────────
+ 103 │     if (!isPathInside(root, file)) return normalizeModulePath(file);
+ 104 │     return '/' + normalizeModulePath(relativeFile);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:305:15-31
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[305:20]
+ 303 │ class OctaneBundlerCompiler {
+ 304 │     constructor(options) {
+ 305 │         this.root = nodePath.resolve(options.root ?? process.cwd());
+     ·                     ────────────────
+ 306 │         try {
+ 307 │             this.realRoot = nodeFs.realpathSync(this.root);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:307:20-39
+  × ESModulesLinkingError: export 'realpathSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[307:28]
+ 305 │         this.root = nodePath.resolve(options.root ?? process.cwd());
+ 306 │         try {
+ 307 │             this.realRoot = nodeFs.realpathSync(this.root);
+     ·                             ───────────────────
+ 308 │         } catch {
+ 309 │             this.realRoot = this.root;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:358:19-35
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[358:24]
+ 356 │             return;
+ 357 │         }
+ 358 │         const changed = nodePath.resolve(cleanModuleId(path));
+     ·                         ────────────────
+ 359 │         for (const [directory, entry] of this.manifestRuleCache) {
+ 360 │             if (entry.dependencies.includes(changed) || entry.missingDependencies.includes(changed)) {
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:373:15-31
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[373:20]
+ 371 │ 
+ 372 │     _nearestOctanePackageRule(fileDir) {
+ 373 │         const dir = nodePath.resolve(fileDir);
+     ·                     ────────────────
+ 374 │         const cached = this.manifestRuleCache.get(dir);
+ 375 │         if (cached !== undefined) return cached;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:377:20-33
+  × ESModulesLinkingError: export 'join' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[377:25]
+ 375 │         if (cached !== undefined) return cached;
+ 376 │ 
+ 377 │         const manifest = nodePath.join(dir, 'package.json');
+     ·                          ─────────────
+ 378 │         let pkg = null;
+ 379 │         try {
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:380:21-40
+  × ESModulesLinkingError: export 'readFileSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[380:29]
+ 378 │         let pkg = null;
+ 379 │         try {
+ 380 │             pkg = JSON.parse(nodeFs.readFileSync(manifest, 'utf8'));
+     ·                              ───────────────────
+ 381 │         } catch {
+ 382 │             // An absent/unreadable/invalid manifest does not own the file. Continue
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:404:19-35
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[404:27]
+ 402 │             };
+ 403 │         } else {
+ 404 │             const parent = nodePath.dirname(dir);
+     ·                            ────────────────
+ 405 │             const inherited =
+ 406 │                 parent === dir ? { rule: null, ...metadata() } : this._nearestOctanePackageRule(parent);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:409:19-36
+  × ESModulesLinkingError: export 'existsSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[409:30]
+ 407 │             result = {
+ 408 │                 rule: inherited.rule,
+ 409 │                 dependencies: nodeFs.existsSync(manifest)
+     ·                               ─────────────────
+ 410 │                     ? [manifest, ...inherited.dependencies]
+ 411 │                     : inherited.dependencies,
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:412:26-43
+  × ESModulesLinkingError: export 'existsSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[412:37]
+ 410 │                     ? [manifest, ...inherited.dependencies]
+ 411 │                     : inherited.dependencies,
+ 412 │                 missingDependencies: nodeFs.existsSync(manifest)
+     ·                                      ─────────────────
+ 413 │                     ? inherited.missingDependencies
+ 414 │                     : [manifest, ...inherited.missingDependencies],
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:423:49-65
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[423:54]
+ 421 │ 
+ 422 │     _hasManualHookSlots(file, collected) {
+ 423 │         const lookup = this._nearestOctanePackageRule(nodePath.dirname(file));
+     ·                                                       ────────────────
+ 424 │         addMetadata(collected, lookup);
+ 425 │         if (lookup.rule === null) return false;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:426:24-41
+  × ESModulesLinkingError: export 'relative' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[426:29]
+ 424 │         addMetadata(collected, lookup);
+ 425 │         if (lookup.rule === null) return false;
+ 426 │         const relativeFile = nodePath.relative(lookup.rule.root, file);
+     ·                              ─────────────────
+ 427 │         return lookup.rule.dirs.some((directory) => {
+ 428 │             const relativeDirectory = directory
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:431:11-23
+  × ESModulesLinkingError: export 'sep' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[431:22]
+ 429 │                 .replace(/[\\/]+$/, '')
+ 430 │                 .split(/[\\/]/)
+ 431 │                 .join(nodePath.sep);
+     ·                       ────────────
+ 432 │             return (
+ 433 │                 relativeDirectory !== '' &&
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:435:50-62
+  × ESModulesLinkingError: export 'sep' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[435:64]
+ 433 │                 relativeDirectory !== '' &&
+ 434 │                 (relativeFile === relativeDirectory ||
+ 435 │                     relativeFile.startsWith(relativeDirectory + nodePath.sep))
+     ·                                                                 ────────────
+ 436 │             );
+ 437 │         });
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:441:24-43
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[441:29]
+ 439 │ 
+ 440 │     _isProjectOwnedSource(file) {
+ 441 │         const absoluteFile = nodePath.isAbsolute(file)
+     ·                              ───────────────────
+ 442 │             ? nodePath.resolve(file)
+ 443 │             : nodePath.resolve(this.root, file);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:442:6-22
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[442:14]
+ 440 │     _isProjectOwnedSource(file) {
+ 441 │         const absoluteFile = nodePath.isAbsolute(file)
+ 442 │             ? nodePath.resolve(file)
+     ·               ────────────────
+ 443 │             : nodePath.resolve(this.root, file);
+ 444 │         if (/(?:^|[\\/])node_modules(?:[\\/]|$)/.test(absoluteFile)) return false;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:443:6-22
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[443:14]
+ 441 │         const absoluteFile = nodePath.isAbsolute(file)
+ 442 │             ? nodePath.resolve(file)
+ 443 │             : nodePath.resolve(this.root, file);
+     ·               ────────────────
+ 444 │         if (/(?:^|[\\/])node_modules(?:[\\/]|$)/.test(absoluteFile)) return false;
+ 445 │         return isPathInside(this.root, absoluteFile) || isPathInside(this.realRoot, absoluteFile);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:454:24-43
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[454:29]
+ 452 │         // installed package instead of being mistaken for application source.
+ 453 │         if (this._isProjectOwnedSource(file)) return true;
+ 454 │         const absoluteFile = nodePath.isAbsolute(file)
+     ·                              ───────────────────
+ 455 │             ? nodePath.resolve(file)
+ 456 │             : nodePath.resolve(this.root, file);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:455:6-22
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[455:14]
+ 453 │         if (this._isProjectOwnedSource(file)) return true;
+ 454 │         const absoluteFile = nodePath.isAbsolute(file)
+ 455 │             ? nodePath.resolve(file)
+     ·               ────────────────
+ 456 │             : nodePath.resolve(this.root, file);
+ 457 │         const lookup = this._nearestOctanePackageRule(nodePath.dirname(absoluteFile));
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:456:6-22
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[456:14]
+ 454 │         const absoluteFile = nodePath.isAbsolute(file)
+ 455 │             ? nodePath.resolve(file)
+ 456 │             : nodePath.resolve(this.root, file);
+     ·               ────────────────
+ 457 │         const lookup = this._nearestOctanePackageRule(nodePath.dirname(absoluteFile));
+ 458 │         addMetadata(collected, lookup);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:457:49-65
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[457:54]
+ 455 │             ? nodePath.resolve(file)
+ 456 │             : nodePath.resolve(this.root, file);
+ 457 │         const lookup = this._nearestOctanePackageRule(nodePath.dirname(absoluteFile));
+     ·                                                       ────────────────
+ 458 │         addMetadata(collected, lookup);
+ 459 │         return lookup.rule?.usesOctane === true;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:562:24-43
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[562:29]
+ 560 │ 
+ 561 │     _profileModuleId(file, collected) {
+ 562 │         const absoluteFile = nodePath.isAbsolute(file)
+     ·                              ───────────────────
+ 563 │             ? nodePath.resolve(file)
+ 564 │             : nodePath.resolve(this.root, file);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:563:6-22
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[563:14]
+ 561 │     _profileModuleId(file, collected) {
+ 562 │         const absoluteFile = nodePath.isAbsolute(file)
+ 563 │             ? nodePath.resolve(file)
+     ·               ────────────────
+ 564 │             : nodePath.resolve(this.root, file);
+ 565 │         const isInstalledPath = /(?:^|[\\/])node_modules(?:[\\/]|$)/.test(absoluteFile);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:564:6-22
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[564:14]
+ 562 │         const absoluteFile = nodePath.isAbsolute(file)
+ 563 │             ? nodePath.resolve(file)
+ 564 │             : nodePath.resolve(this.root, file);
+     ·               ────────────────
+ 565 │         const isInstalledPath = /(?:^|[\\/])node_modules(?:[\\/]|$)/.test(absoluteFile);
+ 566 │         let containingRoot = null;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:576:49-65
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[576:54]
+ 574 │         // managers and machines. Their nearest package manifest supplies both the
+ 575 │         // public package name and the package-relative source path.
+ 576 │         const lookup = this._nearestOctanePackageRule(nodePath.dirname(absoluteFile));
+     ·                                                       ────────────────
+ 577 │         addMetadata(collected, lookup);
+ 578 │         if (lookup.rule?.name) {
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:579:44-61
+  × ESModulesLinkingError: export 'relative' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[579:52]
+ 577 │         addMetadata(collected, lookup);
+ 578 │         if (lookup.rule?.name) {
+ 579 │             const packagePath = normalizeModulePath(nodePath.relative(lookup.rule.root, absoluteFile));
+     ·                                                     ─────────────────
+ 580 │             return `/@package/${encodeURIComponent(lookup.rule.name)}/${packagePath}`;
+ 581 │         }
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:586:24-41
+  × ESModulesLinkingError: export 'basename' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[586:29]
+ 584 │         // basename fallback may collide, but remains useful and deliberately makes
+ 585 │         // that limitation visible through the reserved external namespace.
+ 586 │         return `/@external/${nodePath.basename(absoluteFile)}`;
+     ·                              ─────────────────
+ 587 │     }
+ 588 │ 
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:628:22-35
+  × ESModulesLinkingError: export 'join' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[628:30]
+ 626 │         let candidateRoot = this.root;
+ 627 │         for (;;) {
+ 628 │             const candidate = nodePath.join(candidateRoot, 'package.json');
+     ·                               ─────────────
+ 629 │             if (nodeFs.existsSync(candidate)) {
+ 630 │                 collected.dependencies.add(candidate);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:629:8-25
+  × ESModulesLinkingError: export 'existsSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[629:16]
+ 627 │         for (;;) {
+ 628 │             const candidate = nodePath.join(candidateRoot, 'package.json');
+ 629 │             if (nodeFs.existsSync(candidate)) {
+     ·                 ─────────────────
+ 630 │                 collected.dependencies.add(candidate);
+ 631 │                 projectManifestPath = candidate;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:634:35-54
+  × ESModulesLinkingError: export 'readFileSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[634:49]
+ 632 │                 projectManifestRoot = candidateRoot;
+ 633 │                 try {
+ 634 │                     projectManifest = JSON.parse(nodeFs.readFileSync(candidate, 'utf8'));
+     ·                                                  ───────────────────
+ 635 │                 } catch {
+ 636 │                     // The nearest manifest owns this root even when it is temporarily
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:642:19-35
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[642:27]
+ 640 │             }
+ 641 │             collected.missingDependencies.add(candidate);
+ 642 │             const parent = nodePath.dirname(candidateRoot);
+     ·                            ────────────────
+ 643 │             if (parent === candidateRoot) break;
+ 644 │             candidateRoot = parent;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:664:27-51
+  × ESModulesLinkingError: export 'createRequire' (imported as 'nodeModule') was not found in 'node:module' (possible exports: default)
+     ╭─[664:35]
+ 662 │         const visitedPackageRoots = new Set();
+ 663 │         const visit = (name, issuerRoot) => {
+ 664 │             const packageRequire = nodeModule.createRequire(nodePath.join(issuerRoot, 'package.json'));
+     ·                                    ────────────────────────
+ 665 │             try {
+ 666 │                 const entry = packageRequire.resolve(name);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:664:52-65
+  × ESModulesLinkingError: export 'join' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[664:60]
+ 662 │         const visitedPackageRoots = new Set();
+ 663 │         const visit = (name, issuerRoot) => {
+ 664 │             const packageRequire = nodeModule.createRequire(nodePath.join(issuerRoot, 'package.json'));
+     ·                                                             ─────────────
+ 665 │             try {
+ 666 │                 const entry = packageRequire.resolve(name);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:667:51-67
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[667:62]
+ 665 │             try {
+ 666 │                 const entry = packageRequire.resolve(name);
+ 667 │                 const lookup = this._nearestOctanePackageRule(nodePath.dirname(entry));
+     ·                                                               ────────────────
+ 668 │                 addMetadata(collected, lookup);
+ 669 │                 if (!lookup.rule?.usesOctane) return;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:679:20-39
+  × ESModulesLinkingError: export 'realpathSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[679:34]
+ 677 │                 let packageRoot = lookup.rule.root;
+ 678 │                 try {
+ 679 │                     packageRoot = nodeFs.realpathSync(packageRoot);
+     ·                                   ───────────────────
+ 680 │                 } catch {
+ 681 │                     // Keep the resolved/symlink path as the cycle key.
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:693:25-41
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[693:36]
+ 691 │                 // root. Any candidate's creation can therefore make this request
+ 692 │                 // resolvable and must invalidate a cached miss.
+ 693 │                 let candidateRoot = nodePath.resolve(issuerRoot);
+     ·                                     ────────────────
+ 694 │                 for (;;) {
+ 695 │                     collected.missingDependencies.add(
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:696:7-20
+  × ESModulesLinkingError: export 'join' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[696:24]
+ 694 │                 for (;;) {
+ 695 │                     collected.missingDependencies.add(
+ 696 │                         nodePath.join(candidateRoot, 'node_modules', name, 'package.json'),
+     ·                         ─────────────
+ 697 │                     );
+ 698 │                     const parent = nodePath.dirname(candidateRoot);
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:698:21-37
+  × ESModulesLinkingError: export 'dirname' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[698:35]
+ 696 │                         nodePath.join(candidateRoot, 'node_modules', name, 'package.json'),
+ 697 │                     );
+ 698 │                     const parent = nodePath.dirname(candidateRoot);
+     ·                                    ────────────────
+ 699 │                     if (parent === candidateRoot) break;
+ 700 │                     candidateRoot = parent;
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:725:4-23
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[725:12]
+ 723 │         const file = cleanModuleId(id);
+ 724 │         if (
+ 725 │             nodePath.isAbsolute(file) &&
+     ·             ───────────────────
+ 726 │             !isPathInside(this.root, file) &&
+ 727 │             isPathInside(this.realRoot, file)
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:755:11-30
+  × ESModulesLinkingError: export 'readFileSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+     ╭─[755:19]
+ 753 │         let code;
+ 754 │         try {
+ 755 │             code = nodeFs.readFileSync(
+     ·                    ───────────────────
+ 756 │                 nodePath.isAbsolute(file) ? nodePath.resolve(file) : nodePath.resolve(this.root, file),
+ 757 │                 'utf8',
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:756:5-24
+  × ESModulesLinkingError: export 'isAbsolute' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[756:16]
+ 754 │         try {
+ 755 │             code = nodeFs.readFileSync(
+ 756 │                 nodePath.isAbsolute(file) ? nodePath.resolve(file) : nodePath.resolve(this.root, file),
+     ·                 ───────────────────
+ 757 │                 'utf8',
+ 758 │             );
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:756:33-49
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[756:44]
+ 754 │         try {
+ 755 │             code = nodeFs.readFileSync(
+ 756 │                 nodePath.isAbsolute(file) ? nodePath.resolve(file) : nodePath.resolve(this.root, file),
+     ·                                             ────────────────
+ 757 │                 'utf8',
+ 758 │             );
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js:756:58-74
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[756:69]
+ 754 │         try {
+ 755 │             code = nodeFs.readFileSync(
+ 756 │                 nodePath.isAbsolute(file) ? nodePath.resolve(file) : nodePath.resolve(this.root, file),
+     ·                                                                      ────────────────
+ 757 │                 'utf8',
+ 758 │             );
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (11 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js:36:10-29
+  × ESModulesLinkingError: export 'realpathSync' (imported as 'nodeFs') was not found in 'node:fs' (possible exports: default)
+    ╭─[36:15]
+ 34 │ function realRoot(path) {
+ 35 │     try {
+ 36 │         return nodeFs.realpathSync(path);
+    ·                ───────────────────
+ 37 │     } catch {
+ 38 │         return path;
+    ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (10 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/index.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js:65:9-30
+  × ESModulesLinkingError: export 'createHash' (imported as 'nodeCrypto') was not found in 'node:crypto' (possible exports: default)
+    ╭─[65:11]
+ 63 │ 
+ 64 │ function compiledCodeFingerprint(code) {
+ 65 │     return nodeCrypto.createHash('sha256').update(code).digest('base64url');
+    ·            ─────────────────────
+ 66 │ }
+ 67 │ 
+    ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (10 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/index.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js:167:20-36
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[167:22]
+ 165 │     // adapter's explicit server-only override, where client profiling must stay off.
+ 166 │     const profileEnabled = options.profile === true && options.ssr !== true;
+ 167 │     let projectRoot = nodePath.resolve(process.cwd());
+     ·                       ────────────────
+ 168 │     // The mixed-toolchain ownership gate: with `requireDirective: true`, a
+ 169 │     // project `.tsrx` is Octane's by extension, and Octane compiles a project
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (10 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/index.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js:189:17-33
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[189:22]
+ 187 │ 
+ 188 │     const resetCompiler = (root) => {
+ 189 │         projectRoot = nodePath.resolve(root);
+     ·                       ────────────────
+ 190 │         compiler = createOctaneCompiler({
+ 191 │             root: projectRoot,
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (10 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/index.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js ×
+
+File: ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js:241:17-33
+  × ESModulesLinkingError: export 'resolve' (imported as 'nodePath') was not found in 'node:path' (possible exports: default)
+     ╭─[241:25]
+ 239 │             // reserved definition and desynchronize compiler metadata from the runtime.
+ 240 │             assertProfilingDefineAvailable(config.define, profileEnabled);
+ 241 │             if (realRoot(nodePath.resolve(config.root)) !== realRoot(projectRoot))
+     ·                          ────────────────
+ 242 │                 resetCompiler(config.root);
+ 243 │             if (hmrEnabled === undefined) hmrEnabled = config.command === 'serve';
+     ╰────
+Import traces (entry → error):
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/plugin/default-entry/client.tsx
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/@tanstack+react-start@1.168.60_esbuild@0.27.4_react-dom@19.2.3_react@19.2.3__react@19.2_b22d3cffd4a0ac63d50c71211c37abf6/node_modules/@tanstack/react-start/dist/esm/client.js
+  ... (10 hidden)
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/index.js
+  ../../../tanstack-agent/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js ×
+
+file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rsbuild+core@2.2.12/node_modules/@rsbuild/core/dist/m.js:4316
+                closeErr && logger.error('Failed to close compiler: ', closeErr), err ? reject(err) : context.buildState.hasErrors ? reject(Error(RSPACK_BUILD_ERROR)) : resolve(stats);
+                                                                                                                                            ^
+
+Error: Rspack build failed.
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rsbuild+core@2.2.12/node_modules/@rsbuild/core/dist/m.js:4316:141
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9151:31
+    at callback1 (file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9159:78)
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:9165:36
+    at file:///home/nick/Repositories/nift/nift-experiments/tanstack-baseline/t12-architecture/rsbuild-toolchain/node_modules/.pnpm/@rspack+core@2.2.8_@swc+helpers@0.5.23/node_modules/@rspack/core/dist/index.js:12686:36
+
+Node.js v25.9.0

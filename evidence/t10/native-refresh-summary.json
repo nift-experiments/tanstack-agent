@@ -1,0 +1,92 @@
+[
+  {
+    "implementation": "upstream",
+    "workload": "body-1",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 0.37348491300000003,
+    "min_seconds": 0.350433094,
+    "max_seconds": 0.408686348,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "body-10",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 0.7002968310000001,
+    "min_seconds": 0.6529972930000001,
+    "max_seconds": 0.7308185850000002,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "body-100",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 2.649815094,
+    "min_seconds": 2.4927218389999997,
+    "max_seconds": 2.755993736,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "navigation",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 0.40570438799999986,
+    "min_seconds": 0.3739700089999999,
+    "max_seconds": 0.46471316,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "metadata",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 0.2989392250000001,
+    "min_seconds": 0.278003555,
+    "max_seconds": 0.31622020199999995,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "docs-sync",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 0.2158325450000001,
+    "min_seconds": 0.20400151700000016,
+    "max_seconds": 0.23769722799999998,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "route-add",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 0.22491859899999997,
+    "min_seconds": 0.21757886800000006,
+    "max_seconds": 0.25729732100000013,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "route-rename",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 7.600006283,
+    "min_seconds": 7.299955804,
+    "max_seconds": 7.892335494000001,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  },
+  {
+    "implementation": "upstream",
+    "workload": "route-delete",
+    "component": "native_local_refresh_inside_helper",
+    "median_seconds": 7.476330328,
+    "min_seconds": 7.401006958,
+    "max_seconds": 7.79976499,
+    "inclusive": true,
+    "scope": "internal invalidation/read/artifact refresh only; complete startup/disposal command measured separately"
+  }
+]

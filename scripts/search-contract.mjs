@@ -1,5 +1,5 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
-const baseline=process.env.TANSTACK_BASELINE_DIR||path.resolve('../..','tanstack-baseline');const {chromium}=await import(path.join(baseline,'toolchain/browser/node_modules/playwright/index.mjs'));const records=[];const browser=await chromium.launch({headless:true,executablePath:'/home/nick/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'});
+const baseline=process.env.TANSTACK_BASELINE_DIR||path.resolve('../..','tanstack-baseline');const {chromium}=await import(path.join(baseline,'toolchain/browser/node_modules/playwright/index.mjs'));const records=[];const browser=await chromium.launch({headless:true,executablePath:process.env.TANSTACK_CHROMIUM||path.join(baseline,'toolchain/chromium-1234/chrome-linux64/chrome')});
 try{for(const width of [1440,390])for(const [name,port] of [['upstream',4021],['tanstack',4022],['tanstack-agent',4023]]){
  const origin='http://localhost:'+port;const requests=[];const errors=[];let documents=0;const context=await browser.newContext({viewport:{width,height:width===390?844:1000},reducedMotion:'reduce'});
  await context.route('**/*',async(route)=>{const request=route.request();const url=new URL(request.url());if(request.resourceType()==='document')documents++;

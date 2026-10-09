@@ -1,0 +1,33 @@
+{
+  "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.43",
+  "machine": "x86_64",
+  "logical_cpus": 20,
+  "memory": {
+    "MemTotal": "       64088128 kB",
+    "SwapTotal": "       8388604 kB"
+  },
+  "load_average": [
+    10.07958984375,
+    8.0400390625,
+    7.63037109375
+  ],
+  "unrelated_user_work": "present; neither stopped nor included in descendant RSS",
+  "publication_network": "offline installed dependencies and maintained pinned inputs",
+  "native_refresh_transport": "captured public GET fixtures and real owned local R2, no live network/edge purge",
+  "tree_RSS": "50ms sampled descendants within the same command window; excludes unrelated processes; sampled maximum may miss brief peaks",
+  "individual_RSS": "GNU time maximum individual process/phase, not a sum",
+  "tools": {
+    "nift": {
+      "path": "/home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/nift-v4.9.0",
+      "sha256": "790bbce6325b0eadce6d98fbb27527ccd4c43fa082b23d1ca3667e54022bc862"
+    },
+    "node": {
+      "path": "/home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/node-v25.9.0-linux-x64/bin/node",
+      "sha256": "7fd113446e9171a28885227b3c275ff965b2fd1f45ccf1fb3a1c20308f34e627"
+    },
+    "chromium": {
+      "path": "/home/nick/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+      "sha256": "0b20b130e7edd9dd51873be867761295fe0cfad490c2b9a64f95bd3cfc08fa71"
+    }
+  }
+}

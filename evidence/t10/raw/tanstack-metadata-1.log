@@ -1,0 +1,18 @@
+{"resolved":5,"reused":7596,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":5,"reused":7523,"forced":false}
+built _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md.document
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 6 files rebuilt successfully
+time taken: 0.354009 seconds
+{"compatibility":1.376131268,"markdown_projection":0.44943439400000035,"publication_preparation":1.4128947900000002,"nift_composition":0.37055277600000047,"complete_content_publication":3.855594458}
+{"retained_vite_build":6.619999999770698e-7,"retained_asset_publication":0.16326711,"content_publication":5.3752903540000005,"complete_pipeline":5.842845445}

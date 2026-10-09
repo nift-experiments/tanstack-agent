@@ -1,0 +1,8 @@
+{
+  "application_checkpoints": {
+    "tanstack": "177e13c7868a513ca276e8ee278e785f0eb78dee",
+    "tanstack-agent": "b8e622a9b0db427b554bf0b3ea8190a58d7df539"
+  },
+  "benchmark_script_sha256": "76996090ccd8dc93c882fc2eb3a12abb55ed2374dab0259499529b252eff1601",
+  "upstream_site_commit": "862ccc3d191818320c3e6d217542883f80cb907a"
+}

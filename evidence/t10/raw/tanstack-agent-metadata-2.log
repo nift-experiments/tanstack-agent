@@ -1,0 +1,8 @@
+built _nift/docs/render/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md
+    ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.document
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 2 files rebuilt successfully
+time taken: 0.476974 seconds
+{"publication_preparation":4.221224705999999,"nift_composition":0.4980794690000002,"complete_content_publication":5.048395662}
+{"retained_vite_build":6.060000000047694e-7,"retained_asset_publication":0.19745176500000003,"content_publication":7.589650668,"complete_pipeline":8.138668661}

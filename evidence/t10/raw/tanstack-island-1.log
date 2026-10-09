@@ -1,0 +1,24 @@
+$ vite build --logLevel warn
+Starting content-collections with config content-collections.ts
+Starting content-collections with config content-collections.ts
+Starting content-collections with config content-collections.ts
+Start initial build
+build started ...
+... finished build of 1 collection and 80 documents in 149ms
+[plugin rolldown:vite-resolve] Module "node:path" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:crypto" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:path" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:module" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0msrc/chat/core/skills.ts is dynamically imported by src/chat/components/ComposerReferences.tsx but also statically imported by src/chat/components/HomeAssetDetail.tsx, src/chat/components/HomeDashboard.tsx, src/chat/components/SkillSettings.tsx, src/chat/core/plugins.ts, dynamic import will not move module into another chunk.
+
+Start initial build
+build started ...
+... finished build of 1 collection and 80 documents in 135ms
+{"resolved":0,"reused":7601,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":0,"reused":7528,"forced":false}
+✓ 7578 tracked files are up to date
+time taken: 0.219251 seconds
+{"compatibility":1.3092892059999999,"markdown_projection":0.4016015209999996,"publication_preparation":1.3964116629999999,"nift_composition":0.23460958399999982,"complete_content_publication":3.5779577259999997}
+{"retained_vite_build":33.737723208,"retained_asset_publication":0.16799901399999362,"content_publication":5.219046270999999,"complete_pipeline":39.441452596000005}

@@ -1,0 +1,17 @@
+rebuild causes:
+  ↳ dependency changed: .rendered/docs-manifest.json → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/comparison.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/devtools.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/graphql.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/advanced-ssr.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/caching.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/default-query-function.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/dependent-queries.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/disabling-queries.document → 1 file
+  ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/guides/does-this-replace-client-state.document → 1 file
+affected files: _nift/docs/render/tanstack--query--main/docs/framework/react/comparison.md, _nift/docs/render/tanstack--query--main/docs/framework/react/devtools.md, _nift/docs/render/tanstack--query--main/docs/framework/react/graphql.md, _nift/docs/render/tanstack--query--main/docs/framework/react/guides/advanced-ssr.md, _nift/docs/render/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md  +6 more
+📦 11 files rebuilt successfully
+time taken: 0.43528 seconds
+{"publication_preparation":2.7463148210000004,"nift_composition":0.45291924800000016,"complete_content_publication":3.576813332}
+{"retained_vite_build":0.000001079000000004271,"retained_asset_publication":0.17607222699999994,"content_publication":5.3135434109999995,"complete_pipeline":5.891521784}

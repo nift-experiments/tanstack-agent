@@ -1,0 +1,20 @@
+{"resolved":5,"reused":7596,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":5,"reused":7523,"forced":false}
+built _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md.document
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 7 files rebuilt successfully
+time taken: 0.288335 seconds
+{"compatibility":0.9493109969999999,"markdown_projection":0.28763276499999985,"publication_preparation":1.0590226790000001,"nift_composition":0.30124018999999996,"complete_content_publication":2.793766945}
+{"retained_vite_build":9.029999999938809e-7,"retained_asset_publication":0.12595262200000001,"content_publication":3.8463186539999996,"complete_pipeline":4.214872891}

@@ -1,0 +1,305 @@
+{
+  "states": 30,
+  "records": [
+    {
+      "name": "upstream",
+      "route": "/robots.txt",
+      "status": 200,
+      "bytes": 66,
+      "sha256": "7dcdae3efac36da3de5a9b1c98be9620d36b238a960e375d2a263301ecc87d83",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": null
+    },
+    {
+      "name": "upstream",
+      "route": "/llms.txt",
+      "status": 200,
+      "bytes": 13775,
+      "sha256": "37b73f6209d31af1ff5c9483ee46fdcc1dbb1feab3fb2091d50b979008040764",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "upstream",
+      "route": "/llms-full.txt",
+      "status": 200,
+      "bytes": 13775,
+      "sha256": "37b73f6209d31af1ff5c9483ee46fdcc1dbb1feab3fb2091d50b979008040764",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "upstream",
+      "route": "/builder/llms.txt",
+      "status": 200,
+      "bytes": 10589,
+      "sha256": "148f2d4fcec189974ba4c4be8d0473d25f05db4e037a4a7168c75e5ff93ccfcd",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "upstream",
+      "route": "/query/latest/llms.txt",
+      "status": 200,
+      "bytes": 232158,
+      "sha256": "eea987bf6b5fa66b2348d376060afd7e739ac34e9c7f4c8f07f7bfb123d3e333",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "upstream",
+      "route": "/query/v4/llms.txt",
+      "status": 200,
+      "bytes": 17114,
+      "sha256": "4e0072f11feeee6851d25499faea7160125245cb6d61c4dc6186da5fc82b309b",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "upstream",
+      "route": "/router/latest/llms.txt",
+      "status": 200,
+      "bytes": 11715,
+      "sha256": "a92e9176b2ffeb63b2a36219afc35ffd77fb6757084d284f064a8bc127c6ce34",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "upstream",
+      "route": "/start/latest/llms.txt",
+      "status": 200,
+      "bytes": 12265,
+      "sha256": "5218ce722c80347e266018d7e0e652a728c52502d7d9201dd9e2025cdaada54a",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "upstream",
+      "route": "/ai/latest/llms.txt",
+      "status": 200,
+      "bytes": 41584,
+      "sha256": "0d010c7ea5029fcdff55e012ffb9aa5966571c6da27c8698f650345f64a473dd",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "upstream",
+      "route": "/sitemap.xml",
+      "status": 200,
+      "bytes": 785939,
+      "sha256": "cfdbc505b9ff67739763602e86049528992b89a32b50a3f4c6d530d5a15d1f99",
+      "content_type": "application/xml; charset=utf-8",
+      "cache_control": "public, max-age=300, must-revalidate",
+      "cdn_cache_control": "public, max-age=3600, stale-while-revalidate=3600"
+    },
+    {
+      "name": "tanstack",
+      "route": "/robots.txt",
+      "status": 200,
+      "bytes": 66,
+      "sha256": "7dcdae3efac36da3de5a9b1c98be9620d36b238a960e375d2a263301ecc87d83",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": null
+    },
+    {
+      "name": "tanstack",
+      "route": "/llms.txt",
+      "status": 200,
+      "bytes": 13775,
+      "sha256": "37b73f6209d31af1ff5c9483ee46fdcc1dbb1feab3fb2091d50b979008040764",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "tanstack",
+      "route": "/llms-full.txt",
+      "status": 200,
+      "bytes": 13775,
+      "sha256": "37b73f6209d31af1ff5c9483ee46fdcc1dbb1feab3fb2091d50b979008040764",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "tanstack",
+      "route": "/builder/llms.txt",
+      "status": 200,
+      "bytes": 10589,
+      "sha256": "148f2d4fcec189974ba4c4be8d0473d25f05db4e037a4a7168c75e5ff93ccfcd",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "tanstack",
+      "route": "/query/latest/llms.txt",
+      "status": 200,
+      "bytes": 232158,
+      "sha256": "eea987bf6b5fa66b2348d376060afd7e739ac34e9c7f4c8f07f7bfb123d3e333",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack",
+      "route": "/query/v4/llms.txt",
+      "status": 200,
+      "bytes": 17114,
+      "sha256": "4e0072f11feeee6851d25499faea7160125245cb6d61c4dc6186da5fc82b309b",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack",
+      "route": "/router/latest/llms.txt",
+      "status": 200,
+      "bytes": 11715,
+      "sha256": "a92e9176b2ffeb63b2a36219afc35ffd77fb6757084d284f064a8bc127c6ce34",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack",
+      "route": "/start/latest/llms.txt",
+      "status": 200,
+      "bytes": 12265,
+      "sha256": "5218ce722c80347e266018d7e0e652a728c52502d7d9201dd9e2025cdaada54a",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack",
+      "route": "/ai/latest/llms.txt",
+      "status": 200,
+      "bytes": 41584,
+      "sha256": "0d010c7ea5029fcdff55e012ffb9aa5966571c6da27c8698f650345f64a473dd",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack",
+      "route": "/sitemap.xml",
+      "status": 200,
+      "bytes": 785939,
+      "sha256": "cfdbc505b9ff67739763602e86049528992b89a32b50a3f4c6d530d5a15d1f99",
+      "content_type": "application/xml; charset=utf-8",
+      "cache_control": "public, max-age=300, must-revalidate",
+      "cdn_cache_control": "public, max-age=3600, stale-while-revalidate=3600"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/robots.txt",
+      "status": 200,
+      "bytes": 66,
+      "sha256": "7dcdae3efac36da3de5a9b1c98be9620d36b238a960e375d2a263301ecc87d83",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": null
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/llms.txt",
+      "status": 200,
+      "bytes": 13775,
+      "sha256": "37b73f6209d31af1ff5c9483ee46fdcc1dbb1feab3fb2091d50b979008040764",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/llms-full.txt",
+      "status": 200,
+      "bytes": 13775,
+      "sha256": "37b73f6209d31af1ff5c9483ee46fdcc1dbb1feab3fb2091d50b979008040764",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/builder/llms.txt",
+      "status": 200,
+      "bytes": 10589,
+      "sha256": "148f2d4fcec189974ba4c4be8d0473d25f05db4e037a4a7168c75e5ff93ccfcd",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=86400, stale-while-revalidate=86400"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/query/latest/llms.txt",
+      "status": 200,
+      "bytes": 232158,
+      "sha256": "eea987bf6b5fa66b2348d376060afd7e739ac34e9c7f4c8f07f7bfb123d3e333",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/query/v4/llms.txt",
+      "status": 200,
+      "bytes": 17114,
+      "sha256": "4e0072f11feeee6851d25499faea7160125245cb6d61c4dc6186da5fc82b309b",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/router/latest/llms.txt",
+      "status": 200,
+      "bytes": 11715,
+      "sha256": "a92e9176b2ffeb63b2a36219afc35ffd77fb6757084d284f064a8bc127c6ce34",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/start/latest/llms.txt",
+      "status": 200,
+      "bytes": 12265,
+      "sha256": "5218ce722c80347e266018d7e0e652a728c52502d7d9201dd9e2025cdaada54a",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/ai/latest/llms.txt",
+      "status": 200,
+      "bytes": 41584,
+      "sha256": "0d010c7ea5029fcdff55e012ffb9aa5966571c6da27c8698f650345f64a473dd",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn_cache_control": "public, max-age=300, stale-while-revalidate=300"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/sitemap.xml",
+      "status": 200,
+      "bytes": 785939,
+      "sha256": "cfdbc505b9ff67739763602e86049528992b89a32b50a3f4c6d530d5a15d1f99",
+      "content_type": "application/xml; charset=utf-8",
+      "cache_control": "public, max-age=300, must-revalidate",
+      "cdn_cache_control": "public, max-age=3600, stale-while-revalidate=3600"
+    }
+  ]
+}

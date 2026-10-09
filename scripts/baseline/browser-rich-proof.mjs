@@ -1,7 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
 const baselineRoot=process.env.TANSTACK_BASELINE_DIR||new URL('../../../tanstack-baseline/',import.meta.url).pathname;
 const {chromium}=await import(baselineRoot+'/toolchain/browser/node_modules/playwright/index.mjs');
-const base=baselineRoot;const browser=await chromium.launch({headless:true,executablePath:'/home/nick/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'});let results=[];
+const base=baselineRoot;const browser=await chromium.launch({headless:true,executablePath:process.env.TANSTACK_CHROMIUM||baselineRoot+'/toolchain/chromium-1234/chrome-linux64/chrome'});let results=[];
 try{for(const [name,port] of [['upstream',4021],['tanstack',4022],['tanstack-agent',4023]]){
 const origin='http://localhost:'+port;const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce',permissions:['clipboard-read','clipboard-write']});await context.route('**/*',async route=>{const u=new URL(route.request().url());if(u.origin===origin&&!u.pathname.startsWith('/_a/'))return route.continue();return route.fulfill({status:503,body:'External transport blocked'})});const page=await context.newPage();let errors=[];page.on('pageerror',e=>errors.push(e.message));
 for(const route of ['/start/latest/docs/framework/react/build-from-scratch','/stats/npm','/chat']){

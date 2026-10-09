@@ -1,0 +1,12 @@
+{"resolved":1,"reused":7599,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":0,"reused":7527,"forced":false}
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs/metadata/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/metadata/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 3 files rebuilt successfully
+time taken: 0.332859 seconds
+{"compatibility":0.9728109460000001,"markdown_projection":0.2996527030000002,"publication_preparation":1.1306068740000002,"nift_composition":0.3473335940000002,"complete_content_publication":2.95678867}
+{"retained_vite_build":9.589999999661814e-7,"retained_asset_publication":0.132139384,"content_publication":4.110296787999999,"complete_pipeline":4.496938661}

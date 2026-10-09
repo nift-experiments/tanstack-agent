@@ -314,43 +314,14 @@ Then read feature documentation only when the task requires it, for example:
 
 Prefer documented Nift behaviour and the existing project structure over guessing based on another website generator or framework.
 
-## TanStack experiment current state — T0
+## TanStack experiment current state — T10 faithful intermediate
 
-- Repository: `nift-experiments/tanstack-agent`; maintained-source model: rendered.
-- Init and starter full/incremental/status checks pass. Starter output is excluded from migration/parity/benchmark counts.
-- Upstream clone: sibling `tanstack-upstream`, currently being acquired; immutable reference after exact SHA pin. Build/install work will use a separate baseline checkout.
-- Next: pin upstream and inspect build/runtime/content/external inputs. Do not translate content before the complete upstream baseline is frozen.
-- Production services must not be called or mutated. Fixtures may validate UI and local transports, never claim live backend parity.
-- Labs and accepted earlier migration repositories remain untouched.
+Repository: nift-experiments/tanstack-agent. Source model: rendered-source hybrid: maintained document AST plus original/download projections. T0–T10 evidence is preserved as an intermediate checkpoint; REPORT.md and investigation/STATUS.md are the current entry points. The generated guidance above remains preserved.
 
-## T1 accepted baseline
+Nift publishes documentation inputs/projections and assets. TanStack Start retains request-time shell/page SSR, session state, Router/Query/React, all API/backend code and useful Vite bundling. A whole-page snapshot was rejected for freezing partner-session behavior. No Nift core changes were made.
 
-Pinned upstream remains clean. Complete build artifacts and external captures live in sibling `tanstack-baseline`, bound by `investigation/baseline-summary.json`. Two identical builds and 18 browser states pass. No migration parity or final performance claim yet. T2 must account for upstream request-time docs refresh (not a Vite rebuild), retain hosted Algolia, and prove content edits survive React hydration before scaling. No production secrets/services used.
+Parity precedes initial profiling, optimization, full revalidation and the final five-sample campaign. T9 validation binds all 7,527 documents, 25 roots, 333 browser states, real charts, search, generated outputs, local API/R2 contracts, required suites and 24,648-file fresh publication equivalence. UI/local transport do not certify live private service integration.
 
-## T2 selected boundary
+Use the complete publisher in README.md; bare nift build composes prepared inputs only. T10 evidence includes mixed production/native update scopes, same-window process/tree RSS, retained initial/rejected results, source restoration and clean-checkout receipts. Keep upstream advantages and remaining costs visible.
 
-See RETAINED-TANSTACK.md for all classifications and proof obligations. Nift owns cacheable document composition/assets; Vite and React/TanStack own rendering/bundling/runtime, Cloudflare owns services/security. Rich agent documents may maintain pre-derived TanStack AST alongside ordinary HTML; do not force inert HTML on useful React components. Upstream docs edits are runtime refreshes, not inherently Vite rebuilds: preserve that distinction in the final campaign. T3 remains in progress; no corpus conversion yet.
-
-## T3 accepted; T4 next
-
-Nift publishes two representative document projections consumed by the unchanged TanStack request-time shell. Authored Markdown derives projections normally; agent source maintains projections directly, with explicit Markdown download text. Whole-page HTML caching was rejected for freezing partner session rotation. Source-edit/hydration/navigation, raw dependencies/literal syntax, Start tabs/code copy, stats Query view switch, search, theme/mobile controls, SEO and Markdown response parity pass. Both full retained-runtime suites pass (544 unit, 2,269 chat, 20 desktop pass / 1 skip; TypeScript and lint pass with 101 warnings). No live service integration claimed.
-
-Do not scale a whole-page cache. T4 must publish the complete external docs corpus/config/tree inputs, enforce owned-root deletion boundaries, and retain raw Markdown only for actual runtime-dependent content such as Start hosting partner generation. Runtime/source input and complete publication costs remain explicit; upstream docs refresh is not inherently a Vite build.
-
-## T4 accepted
-
-The complete corpus publisher, raw/resolved/render contracts, bounded ownership and lifecycle checks are documented in `investigation/T4-CORPUS.md`. Both full retained test suites pass, original input SHA256s match, 7,527 AST projections match, and 84 desktop/mobile browser states match with only the known hosting-partner rotation normalized. Initial whole-corpus compatibility/preparation costs remain visible for T8 profiling. Next: T5 retained services, T6 generated/search, T7 expanded parity, then initial/profile/optimization/final campaigns. No Nift core or Labs changes.
-
-## T5 accepted
-
-See `investigation/t5-runtime-summary.json` and the confirmed retention map. Every original API/backend/Worker implementation remains byte-identical; five bounded content/asset adapters are enumerated. Local R2 cache hits/invalidation/artifact refresh and 27 unauthenticated HTTP states pass. Source preservation, UI/local transport and unverified live integration remain separate. Next: T6 generated outputs/search, T7 expanded parity.
-
-## T6 accepted
-
-Generated robot/sitemap/LLM responses match bytes and cache headers across 30 states. All 244 maintained public assets match upstream. Search fixture hits preserve filters, deduplication and client Router navigation in six states. The retained dynamic OG endpoint produces byte-identical PNGs after the local harness registers the emitted Wasm module. Real catalog data (188 cases) is supplied from the pinned public archive. No live index/provider integration is claimed. Next: expanded T7 parity before the initial performance/profile campaign.
-
-T7 accepted: 333 browser states across 37 real routes, three viewports and all three implementations match semantic output with no page errors. Six additional real Charts catalog states render matching plots and respond to keyboard navigation. Public ESM inputs are frozen and hashed outside the website repositories; private transports remain blocked. This proves retained browser behavior, not live private backend integration. See investigation/t7-parity-summary.json. Next: T8 initial profiling before optimization.
-
-T8 accepted: preliminary medians full upstream 30.85s, authored 44.17s, rendered 36.88s; unchanged 31.31s / 16.67s / 7.55s. Nift full uses forced Vite plus nift build --all; earlier incorrectly forced rows retained as rejected evidence. Profiles expose redundant excerpt parsing, repeated dynamic metadata module loading and full corpus work on unchanged inputs. Compiled pinned-upstream local R2 refresh proof passes without Vite, private services or live edge purge. See evidence/t8. Final five-sample campaign remains pending.
-
-T9 accepted: remove unused publication-only Markdown excerpts and repeated dynamic metadata imports; normal resolution/derivation reuse explicit source/dependency hashes, while --full bypasses caches and forces composition. Runtime manifest caching requires a verified immutable publication revision, propagated into generated Worker vars; absent revision is uncached. Source-reference mutation updates five framework projections with an unrelated Router projection byte-identical. All corpus/lifecycle/required-test/333-state browser/real-chart/search/generated/OG/local-API/session/control gates pass. Fresh clears owned application caches and reproduces all 24,648 publication files byte-identically in both projects. Unit 540 pass/4 skip, chat 2269 pass, desktop 20 pass/1 skip, TypeScript and lint pass per project. Final campaign remains pending; no Nift core changes. See evidence/t9.
+An additional performance pass is authorized and required before closeout. Preserve all T10 evidence and INTERMEDIATE-REPORT.md. Profile complete wall time and process memory, tighten verified caches/invalidation, revalidate parity, then rerun the same five-sample campaign. Profiling/guidance candidates are in investigation/FUTURE-WORK.md and MIGRATION-INIT-REVIEW.md. Labs publication, core changes and live production integration are not authorized by this experiment. Keep large evidence/archives/previews outside Labs.

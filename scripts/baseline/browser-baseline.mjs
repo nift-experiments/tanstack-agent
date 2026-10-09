@@ -2,7 +2,7 @@ const baselineRoot=process.env.TANSTACK_BASELINE_DIR||new URL('../../../tanstack
 const {chromium}=await import(baselineRoot+'/toolchain/browser/node_modules/playwright/index.mjs');
 import fs from 'node:fs';import assert from 'node:assert/strict';
 const base=new URL('file://'+baselineRoot+'/browser-baseline/');fs.mkdirSync(base,{recursive:true});
-const browser=await chromium.launch({headless:true,executablePath:'/home/nick/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'});
+const browser=await chromium.launch({headless:true,executablePath:process.env.TANSTACK_CHROMIUM||baselineRoot+'/toolchain/chromium-1234/chrome-linux64/chrome'});
 let records=[],blocked=[],searchRequests=0;
 try{for(const viewport of [{width:1440,height:1000},{width:390,height:844}]){
 const context=await browser.newContext({viewport,reducedMotion:'reduce'});

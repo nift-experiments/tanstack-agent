@@ -1,0 +1,44 @@
+{"resolved":35,"reused":7566,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":35,"reused":7493,"forced":false}
+rebuild causes:
+  ↳ dependency changed: .rendered/docs-manifest.json → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/default-query-function.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/dependent-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/disabling-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/does-this-replace-client-state.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/graphql.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/caching.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/default-query-function.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/dependent-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/disabling-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/does-this-replace-client-state.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/comparison.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/devtools.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/graphql.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/advanced-ssr.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/caching.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/default-query-function.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/dependent-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/disabling-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/does-this-replace-client-state.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/caching.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/default-query-function.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/dependent-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/disabling-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/does-this-replace-client-state.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/graphql.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/caching.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/default-query-function.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/dependent-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/disabling-queries.md.document → 1 file
+  ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/does-this-replace-client-state.md.document → 1 file
+affected files: _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md, _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/default-query-function.md, _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/dependent-queries.md, _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/disabling-queries.md, _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/does-this-replace-client-state.md  +31 more
+📦 36 files rebuilt successfully
+time taken: 0.427574 seconds
+{"compatibility":1.5817357450000002,"markdown_projection":0.4909515999999999,"publication_preparation":1.481176098,"nift_composition":0.44880471000000033,"complete_content_publication":4.2830014190000005}
+{"retained_vite_build":0.0000011220000000093932,"retained_asset_publication":0.19198374799999993,"content_publication":6.282932268000001,"complete_pipeline":6.844423975000001}

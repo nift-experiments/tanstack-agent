@@ -1,0 +1,28 @@
+$ vite build --logLevel warn
+Starting content-collections with config content-collections.ts
+Starting content-collections with config content-collections.ts
+Starting content-collections with config content-collections.ts
+Start initial build
+build started ...
+... finished build of 1 collection and 80 documents in 121ms
+[plugin rolldown:vite-resolve] Module "node:path" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:crypto" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/vite.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:path" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:module" has been externalized for browser compatibility, imported by "/home/nick/Repositories/nift/nift-experiments/tanstack/runtime/node_modules/.pnpm/octane@0.1.13_react-dom@19.2.3_react@19.2.3__react@19.2.3_vite@8.0.16_@types+node@25.5._f159feb5097f78063473133d08cd1c02/node_modules/octane/dist/compiler/bundler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0msrc/chat/core/skills.ts is dynamically imported by src/chat/components/ComposerReferences.tsx but also statically imported by src/chat/components/HomeAssetDetail.tsx, src/chat/components/HomeDashboard.tsx, src/chat/components/SkillSettings.tsx, src/chat/core/plugins.ts, dynamic import will not move module into another chunk.
+
+Start initial build
+build started ...
+... finished build of 1 collection and 80 documents in 105ms
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+{"resolved":7601,"reused":0,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":7528,"reused":0,"forced":true}
+📦 7578 files built successfully
+time taken: 0.697773 seconds
+{"compatibility":1.5951530420000002,"markdown_projection":2.486200757,"publication_preparation":1.0640959389999998,"nift_composition":0.7141856000000008,"complete_content_publication":6.060987921}
+{"retained_vite_build":24.562109718,"retained_asset_publication":0.13362920700000178,"content_publication":7.098627272999998,"complete_pipeline":32.055140759000004}

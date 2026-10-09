@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "name": "upstream",
+      "status": 200,
+      "bytes": 22207,
+      "sha256": "4051c948c9de6567f6c245c5dac8d6028fb0a03598c3854ff20d5e3c143269d9",
+      "content_type": "image/png"
+    },
+    {
+      "name": "tanstack",
+      "status": 200,
+      "bytes": 22207,
+      "sha256": "4051c948c9de6567f6c245c5dac8d6028fb0a03598c3854ff20d5e3c143269d9",
+      "content_type": "image/png"
+    },
+    {
+      "name": "tanstack-agent",
+      "status": 200,
+      "bytes": 22207,
+      "sha256": "4051c948c9de6567f6c245c5dac8d6028fb0a03598c3854ff20d5e3c143269d9",
+      "content_type": "image/png"
+    }
+  ],
+  "scope": "Request-time generation remains retained; not part of routine publication"
+}

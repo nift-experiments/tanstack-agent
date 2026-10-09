@@ -1,0 +1,10 @@
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs/metadata/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/metadata/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 3 files rebuilt successfully
+time taken: 0.28272 seconds
+{"publication_preparation":2.073770687,"nift_composition":0.29560910299999976,"complete_content_publication":2.5703354}
+{"retained_vite_build":5.819999999516768e-7,"retained_asset_publication":0.130531506,"content_publication":3.7488416569999994,"complete_pipeline":4.130751594}

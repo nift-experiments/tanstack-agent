@@ -1,0 +1,20 @@
+{"resolved":5,"reused":7596,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":5,"reused":7523,"forced":false}
+built _nift/docs/render/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/angular/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/preact/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/react/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/solid/guides/background-fetching-indicators.md.document
+built _nift/docs/render/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md
+    ↳ dependency changed: .rendered/projections/tanstack--query--main/docs/framework/vue/guides/background-fetching-indicators.md.document
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 7 files rebuilt successfully
+time taken: 0.299975 seconds
+{"compatibility":0.9393083400000001,"markdown_projection":0.2910414220000002,"publication_preparation":1.062278636,"nift_composition":0.3139323199999999,"complete_content_publication":2.799142289}
+{"retained_vite_build":0.000001245000000011487,"retained_asset_publication":0.125411106,"content_publication":3.824908566,"complete_pipeline":4.184954328}

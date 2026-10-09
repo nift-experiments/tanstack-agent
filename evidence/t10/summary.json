@@ -1,0 +1,947 @@
+[
+  {
+    "implementation": "upstream",
+    "workload": "full",
+    "samples": 5,
+    "scope": "complete retained Vite production build",
+    "wall_seconds": {
+      "median": 31.22,
+      "min": 28.73,
+      "max": 36.26
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4648552,
+      "min": 4561932,
+      "max": 4713448
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5129512,
+      "min": 5027896,
+      "max": 5201568
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "full",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 32.42,
+      "min": 32.12,
+      "max": 36.31
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4664400,
+      "min": 4630940,
+      "max": 4703936
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5294172,
+      "min": 5278928,
+      "max": 5336704
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "full",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 28.95,
+      "min": 28.72,
+      "max": 30.42
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4644480,
+      "min": 4559176,
+      "max": 4715748
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5254068,
+      "min": 5232220,
+      "max": 5321592
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "fresh",
+    "samples": 5,
+    "scope": "complete retained Vite production build",
+    "wall_seconds": {
+      "median": 24.31,
+      "min": 24.16,
+      "max": 24.5
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4664756,
+      "min": 4616256,
+      "max": 4698192
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5151776,
+      "min": 5035476,
+      "max": 5193604
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "fresh",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 33.09,
+      "min": 32.72,
+      "max": 34.87
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4603296,
+      "min": 4554072,
+      "max": 4693116
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5259308,
+      "min": 5179788,
+      "max": 5328020
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "fresh",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 32.45,
+      "min": 29.14,
+      "max": 32.58
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4575804,
+      "min": 4503660,
+      "max": 4626564
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5179796,
+      "min": 5109952,
+      "max": 5255920
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "unchanged",
+    "samples": 5,
+    "scope": "complete retained Vite production build",
+    "wall_seconds": {
+      "median": 32.11,
+      "min": 31.0,
+      "max": 33.93
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4593900,
+      "min": 4540060,
+      "max": 4642276
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 4998452,
+      "min": 4959264,
+      "max": 5127956
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "unchanged",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 7.04,
+      "min": 6.76,
+      "max": 7.85
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 504208,
+      "min": 500644,
+      "max": 506084
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 697716,
+      "min": 687972,
+      "max": 706396
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "unchanged",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 6.21,
+      "min": 5.66,
+      "max": 6.57
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 657116,
+      "min": 655152,
+      "max": 658108
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 831540,
+      "min": 817956,
+      "max": 833480
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "body-1",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 2.1,
+      "min": 1.98,
+      "max": 2.18
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 434312,
+      "min": 430116,
+      "max": 444952
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 531444,
+      "min": 528200,
+      "max": 533460
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "body-1",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 6.48,
+      "min": 6.11,
+      "max": 9.24
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 504648,
+      "min": 499560,
+      "max": 507660
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 697780,
+      "min": 688468,
+      "max": 700092
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "body-1",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 5.69,
+      "min": 5.43,
+      "max": 5.96
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 656828,
+      "min": 654936,
+      "max": 660984
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 851528,
+      "min": 847424,
+      "max": 852056
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "body-10",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 2.41,
+      "min": 2.34,
+      "max": 2.84
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 444264,
+      "min": 430308,
+      "max": 445460
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 527000,
+      "min": 526624,
+      "max": 528772
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "body-10",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 7.68,
+      "min": 6.9,
+      "max": 7.7
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 502192,
+      "min": 500080,
+      "max": 504320
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 703104,
+      "min": 699008,
+      "max": 706772
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "body-10",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 6.51,
+      "min": 6.03,
+      "max": 7.21
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 657072,
+      "min": 655744,
+      "max": 658240
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 853824,
+      "min": 852804,
+      "max": 855260
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "body-100",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 4.29,
+      "min": 4.08,
+      "max": 4.49
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 444748,
+      "min": 438008,
+      "max": 445512
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 553592,
+      "min": 548636,
+      "max": 555056
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "body-100",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 7.36,
+      "min": 6.74,
+      "max": 7.77
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 503424,
+      "min": 498592,
+      "max": 507028
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 714612,
+      "min": 704216,
+      "max": 718692
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "body-100",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 6.41,
+      "min": 6.23,
+      "max": 6.73
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 658640,
+      "min": 652376,
+      "max": 659328
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 862956,
+      "min": 851612,
+      "max": 864392
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "navigation",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 2.11,
+      "min": 2.03,
+      "max": 2.15
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 444244,
+      "min": 437784,
+      "max": 445256
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 531416,
+      "min": 528812,
+      "max": 533572
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "navigation",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 6.98,
+      "min": 5.16,
+      "max": 7.65
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 501780,
+      "min": 500580,
+      "max": 505296
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 699524,
+      "min": 691552,
+      "max": 706364
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "navigation",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 5.2,
+      "min": 4.75,
+      "max": 5.38
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 656408,
+      "min": 655656,
+      "max": 659772
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 852072,
+      "min": 839412,
+      "max": 856404
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "metadata",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 1.7,
+      "min": 1.63,
+      "max": 1.78
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 438120,
+      "min": 430420,
+      "max": 445176
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 531100,
+      "min": 526908,
+      "max": 533140
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "metadata",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 6.01,
+      "min": 5.9,
+      "max": 7.73
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 506616,
+      "min": 503124,
+      "max": 507656
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 699192,
+      "min": 690864,
+      "max": 711808
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "metadata",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 7.4,
+      "min": 7.02,
+      "max": 8.26
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 657476,
+      "min": 653468,
+      "max": 658984
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 849920,
+      "min": 846752,
+      "max": 855516
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "shared-shell",
+    "samples": 5,
+    "scope": "complete retained Vite production build",
+    "wall_seconds": {
+      "median": 36.48,
+      "min": 30.76,
+      "max": 40.51
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4645396,
+      "min": 4571148,
+      "max": 4680456
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5114232,
+      "min": 5067036,
+      "max": 5194344
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "shared-shell",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 39.72,
+      "min": 34.44,
+      "max": 43.77
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4589948,
+      "min": 4550300,
+      "max": 4613220
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5200968,
+      "min": 5082740,
+      "max": 5262800
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "shared-shell",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 41.52,
+      "min": 34.05,
+      "max": 52.76
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4654928,
+      "min": 4552028,
+      "max": 4700732
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5276472,
+      "min": 5192932,
+      "max": 5364548
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "island",
+    "samples": 5,
+    "scope": "complete retained Vite production build",
+    "wall_seconds": {
+      "median": 32.63,
+      "min": 29.8,
+      "max": 33.68
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4599844,
+      "min": 4585716,
+      "max": 4647908
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5095080,
+      "min": 5005636,
+      "max": 5125676
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "island",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 38.09,
+      "min": 32.66,
+      "max": 40.57
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4630280,
+      "min": 4585236,
+      "max": 4655408
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5263420,
+      "min": 5201836,
+      "max": 5296736
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "island",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 27.91,
+      "min": 27.68,
+      "max": 28.15
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4643252,
+      "min": 4540624,
+      "max": 4650912
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5261516,
+      "min": 5124548,
+      "max": 5288352
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "collection",
+    "samples": 5,
+    "scope": "complete retained Vite production build",
+    "wall_seconds": {
+      "median": 24.03,
+      "min": 23.88,
+      "max": 24.91
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4677200,
+      "min": 4598592,
+      "max": 4683516
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5147880,
+      "min": 5044052,
+      "max": 5180444
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "collection",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 28.2,
+      "min": 28.01,
+      "max": 28.71
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4609164,
+      "min": 4550380,
+      "max": 4634084
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5233628,
+      "min": 5184652,
+      "max": 5284032
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "collection",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 27.96,
+      "min": 27.85,
+      "max": 28.24
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 4673400,
+      "min": 4618216,
+      "max": 4766248
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 5319096,
+      "min": 5282420,
+      "max": 5417564
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "docs-sync",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 1.28,
+      "min": 1.24,
+      "max": 1.29
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 444648,
+      "min": 430424,
+      "max": 499188
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 533000,
+      "min": 520864,
+      "max": 604976
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "docs-sync",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.24,
+      "min": 4.21,
+      "max": 4.28
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 500596,
+      "min": 499288,
+      "max": 503160
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 698528,
+      "min": 693828,
+      "max": 756932
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "docs-sync",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.01,
+      "min": 3.96,
+      "max": 4.01
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 656740,
+      "min": 654736,
+      "max": 657152
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 853080,
+      "min": 842460,
+      "max": 854520
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "route-add",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 1.29,
+      "min": 1.24,
+      "max": 1.29
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 444424,
+      "min": 438044,
+      "max": 498876
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 529608,
+      "min": 526224,
+      "max": 603520
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "route-add",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.24,
+      "min": 4.15,
+      "max": 4.33
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 501972,
+      "min": 498228,
+      "max": 506100
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 696204,
+      "min": 691096,
+      "max": 703060
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-add",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.01,
+      "min": 3.94,
+      "max": 4.2
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 657236,
+      "min": 656500,
+      "max": 661844
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 854732,
+      "min": 847928,
+      "max": 858528
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "route-rename",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 8.72,
+      "min": 8.42,
+      "max": 9.0
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 472428,
+      "min": 463272,
+      "max": 565360
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 872328,
+      "min": 868128,
+      "max": 952888
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "route-rename",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.22,
+      "min": 4.15,
+      "max": 4.26
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 505828,
+      "min": 501792,
+      "max": 506012
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 696596,
+      "min": 687496,
+      "max": 757336
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-rename",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.03,
+      "min": 3.99,
+      "max": 4.07
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 656760,
+      "min": 655800,
+      "max": 658488
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 849992,
+      "min": 848688,
+      "max": 856204
+    }
+  },
+  {
+    "implementation": "upstream",
+    "workload": "route-delete",
+    "samples": 5,
+    "scope": "native local R2 invalidation, selected changed-document reads and Query path manifest refresh (plus redirects for missing paths), including helper startup; no Vite rebuild or live edge purge",
+    "wall_seconds": {
+      "median": 8.6,
+      "min": 8.56,
+      "max": 8.9
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 470328,
+      "min": 465676,
+      "max": 563060
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 872648,
+      "min": 859916,
+      "max": 966568
+    }
+  },
+  {
+    "implementation": "tanstack",
+    "workload": "route-delete",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.23,
+      "min": 4.21,
+      "max": 4.57
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 503056,
+      "min": 499772,
+      "max": 505968
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 699300,
+      "min": 692528,
+      "max": 703740
+    }
+  },
+  {
+    "implementation": "tanstack-agent",
+    "workload": "route-delete",
+    "samples": 5,
+    "scope": "complete Nift documents/assets publication and required retained Vite build",
+    "wall_seconds": {
+      "median": 4.43,
+      "min": 4.2,
+      "max": 4.64
+    },
+    "maximum_individual_process_rss_kib": {
+      "median": 656264,
+      "min": 655592,
+      "max": 657632
+    },
+    "sampled_descendant_tree_peak_rss_kib": {
+      "median": 853100,
+      "min": 841568,
+      "max": 856248
+    }
+  }
+]

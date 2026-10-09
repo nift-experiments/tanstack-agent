@@ -1,0 +1,15 @@
+{"resolved":2,"reused":7600,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":1,"reused":7528,"forced":false}
+built _nift/docs/render/tanstack--query--main/docs/framework/react/benchmark-added.md
+    ↳ generated output is missing
+    ↳ dependency changed: content/_nift/docs/render/tanstack--query--main/docs/framework/react/benchmark-added.md.html
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs/metadata/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/metadata/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 4 files rebuilt successfully
+time taken: 0.268816 seconds
+{"compatibility":0.9279232070000001,"markdown_projection":0.28233687800000007,"publication_preparation":1.060127168,"nift_composition":0.2811282019999999,"complete_content_publication":2.738072032}
+{"retained_vite_build":4.1499999997540724e-7,"retained_asset_publication":0.125666987,"content_publication":3.8007932529999997,"complete_pipeline":4.170878599}

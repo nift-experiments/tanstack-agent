@@ -1,0 +1,187 @@
+{
+  "states": 27,
+  "records": [
+    {
+      "name": "upstream",
+      "route": "/api/auth/cli/status/unknown-fixture-ticket",
+      "status": 400,
+      "content_type": "application/json",
+      "body_sha256": "7ed291dd92ee7f46751ec8046bf113682081ee95c07b91b26da5d5dea0b31f75"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/chat/projects",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "4c9f9643d38f4f2c6dc4dbaba7f8b1a012fa042b680ede1f57af066a4af16f1e"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/chat/models",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/chat/plugins",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/chat/conversations",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/chat/skills",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/chat/references",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/github/webhook",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "upstream",
+      "route": "/api/example/deploy",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/auth/cli/status/unknown-fixture-ticket",
+      "status": 400,
+      "content_type": "application/json",
+      "body_sha256": "7ed291dd92ee7f46751ec8046bf113682081ee95c07b91b26da5d5dea0b31f75"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/chat/projects",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "4c9f9643d38f4f2c6dc4dbaba7f8b1a012fa042b680ede1f57af066a4af16f1e"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/chat/models",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/chat/plugins",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/chat/conversations",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/chat/skills",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/chat/references",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/github/webhook",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "tanstack",
+      "route": "/api/example/deploy",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/auth/cli/status/unknown-fixture-ticket",
+      "status": 400,
+      "content_type": "application/json",
+      "body_sha256": "7ed291dd92ee7f46751ec8046bf113682081ee95c07b91b26da5d5dea0b31f75"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/chat/projects",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "4c9f9643d38f4f2c6dc4dbaba7f8b1a012fa042b680ede1f57af066a4af16f1e"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/chat/models",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/chat/plugins",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/chat/conversations",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/chat/skills",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/chat/references",
+      "status": 401,
+      "content_type": "application/json",
+      "body_sha256": "f49c9ec553f5bfed31a628d9cff7ea7475ce2b74969eaae86127e0fbd9575688"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/github/webhook",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "tanstack-agent",
+      "route": "/api/example/deploy",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "scope": "Unauthenticated GET and method boundaries only; live authenticated services unverified",
+  "external_writes": false
+}

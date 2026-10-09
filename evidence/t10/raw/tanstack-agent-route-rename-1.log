@@ -1,0 +1,14 @@
+built _nift/docs/render/tanstack--query--main/docs/framework/react/benchmark-added.md
+    ↳ generated output is missing
+    ↳ dependency changed: content/_nift/docs/render/tanstack--query--main/docs/framework/react/benchmark-added.md.html
+    ↳ dependency changed: sources/docs/tanstack--query--main/docs/framework/react/benchmark-added.document
+built _nift/docs/trees/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/trees/tanstack--query--main/docs.json
+built _nift/docs/metadata/tanstack--query--main/docs
+    ↳ dependency changed: .rendered/metadata/tanstack--query--main/docs.json
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 4 files rebuilt successfully
+time taken: 0.295174 seconds
+{"publication_preparation":2.022788949,"nift_composition":0.30828711999999997,"complete_content_publication":2.5212780240000003}
+{"retained_vite_build":4.299999999943793e-7,"retained_asset_publication":0.137591831,"content_publication":3.5838617239999997,"complete_pipeline":3.9676214400000003}

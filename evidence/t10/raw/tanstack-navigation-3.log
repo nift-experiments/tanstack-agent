@@ -1,0 +1,8 @@
+{"resolved":1,"reused":7600,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":0,"reused":7528,"forced":false}
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 1 file rebuilt successfully
+time taken: 0.399495 seconds
+{"compatibility":1.7769036710000001,"markdown_projection":0.4820555939999999,"publication_preparation":1.8088305979999995,"nift_composition":0.4180925419999994,"complete_content_publication":4.764854332}
+{"retained_vite_build":6.240000000161672e-7,"retained_asset_publication":0.23512801700000005,"content_publication":6.940073310000001,"complete_pipeline":7.546731309}

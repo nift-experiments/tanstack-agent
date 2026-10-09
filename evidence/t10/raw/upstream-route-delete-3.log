@@ -1,0 +1,5 @@
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+Target section 'Example2' does not have matching closing token (found 'Materials'). Please make sure that each section has corresponding closing token and that sections are not nested.
+{"mode":"refresh","requested_documents":1,"requested_paths":["docs/framework/react/guides/background-fetching-indicators.md"],"native_refresh_seconds":7.401006958,"canonical_paths":1658,"real_local_R2":true,"path_manifest":true,"redirect_manifest":true,"unchanged_private_helper_export_shim":true,"live_edge_cache_purge":false,"production_writes":false,"captured_origin_GETs":1794,"raw_document_GETs":1793}

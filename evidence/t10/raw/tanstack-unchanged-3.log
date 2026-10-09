@@ -1,0 +1,6 @@
+{"resolved":0,"reused":7601,"dependency_model":"actual upstream resolver reads, including missing references"}
+{"derived":0,"reused":7528,"forced":false}
+✓ 7578 tracked files are up to date
+time taken: 0.266569 seconds
+{"compatibility":1.7161378600000003,"markdown_projection":0.5054236180000002,"publication_preparation":2.1703547709999995,"nift_composition":0.2862244010000004,"complete_content_publication":4.947313436}
+{"retained_vite_build":0.0000018760000000384025,"retained_asset_publication":0.17494957000000005,"content_publication":7.1881456109999995,"complete_pipeline":7.73431499}

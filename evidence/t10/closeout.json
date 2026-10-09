@@ -1,0 +1,55 @@
+{
+  "status": "faithful intermediate; additional performance pass authorized; not closed or published",
+  "owned_browser_contract": {
+    "browser_states": 333,
+    "chart_states": 6,
+    "search_states": 6,
+    "results": {
+      "t7-browser-parity.json": {
+        "sha256": "bf3e65c7625d62c0435b7c85f67d7c1b9b4001e754ea960355b477172d147c36",
+        "bytes": 255014
+      },
+      "t7-catalog-runtime.json": {
+        "sha256": "0b3c624b92dbedfbb4b60d43397e8f289a722ace17fd1fd00ddd30405fa892c1",
+        "bytes": 1147
+      },
+      "t6-search-contract.json": {
+        "sha256": "075b3d7e7222eca1721a6efadffd1e14d4012360345811224f27bf5a5c21b021",
+        "bytes": 8827
+      }
+    }
+  },
+  "clean_clones": {
+    "tanstack": {
+      "corpus": {
+        "documents": 7527,
+        "roots": 25,
+        "ast_semantic_equal": true,
+        "owned_deletion_correct": true,
+        "raw_render_contracts_distinct": true
+      },
+      "publication_files": 24648,
+      "logs": {
+        "install": "3d6bf68e0676f87d602782517607904028f55e90fae598fc54297dab3de27d0c",
+        "publication": "20ddd784ab3f38cc60107ece528625e129779a9d4bb6c69da147e479d3b72fb2",
+        "corpus": "ba4ede3ecab162eda63faf9eb685fb3eb4c6e45c10b800940bab53777597d9a8"
+      }
+    },
+    "tanstack-agent": {
+      "corpus": {
+        "documents": 7527,
+        "roots": 25,
+        "ast_semantic_equal": true,
+        "owned_deletion_correct": true,
+        "raw_render_contracts_distinct": true
+      },
+      "publication_files": 24648,
+      "logs": {
+        "install": "95a03691cee0e32918090e06587040ae673348c51256f3e5e4dc2c4bab96d06c",
+        "publication": "c2391d6f70191bb39d6e58b4a6f2beefe04054ea4baca925c8c0ce55fc7936d8",
+        "corpus": "ba4ede3ecab162eda63faf9eb685fb3eb4c6e45c10b800940bab53777597d9a8"
+      }
+    }
+  },
+  "limitations": "Offline frozen-lock install used the existing pnpm package store; installed dependencies and owned toolchain are not fresh OS state."
+}

@@ -1,6 +1,6 @@
-# Replacement / retention / coexistence map — T5 confirmed boundary
+# Replacement / retention / coexistence map — T10 confirmed boundary
 
-Pinned upstream: `862ccc3d191818320c3e6d217542883f80cb907a`. T0–T4 are accepted. This map incorporates the source-driven T3 correction and T4 corpus contracts; broader publication parity remains gated by T7. Nift + retained TanStack is the experiment; no subsystem is removed merely to reduce dependencies.
+Pinned upstream: `862ccc3d191818320c3e6d217542883f80cb907a`. T0–T10 are accepted. This map records the selected experimental ownership; REPORT.md separately evaluates whether that ownership is preferable to the incumbent. The source-driven T3 correction and complete T4/T7/T9 parity gates are retained. Nift + retained TanStack is the experiment; no subsystem is removed merely to reduce dependencies.
 
 | Subsystem | Classification | Pinned-source evidence | Boundary / benchmark treatment |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ Pinned upstream: `862ccc3d191818320c3e6d217542883f80cb907a`. T0–T4 are accepte
 ## Source-model distinction
 
 - **Nift `tanstack` (authored-source)**: Markdown/frontmatter/structured sources remain authoritative; existing React/TanStack implementations retained where useful. Compatibility/collection/rendering and required bundling costs remain in the complete publication pipeline.
-- **Nift `tanstack-agent` (rendered-source)**: maintained HTML and explicit metadata/projections where appropriate, retaining useful runtime components/services. Ordinary HTML is maintained directly where suitable; pre-derived React/TanStack document projections may be maintained for component-heavy content. Dynamic content transformations remain only where the retained runtime actually needs them. Explicit refresh/update work is distinguished from normal publication.
+- **Nift `tanstack-agent` (rendered-source)**: maintained TanStack document AST envelopes with explicit original/download text and metadata, retaining useful runtime components/services. This chosen rich-document representation is not maintained whole-page HTML. Necessary blog Markdown, partner-dependent hosting inputs and original MDX selection remain explicit hybrid exceptions. Normal corpus publication bypasses document Markdown derivation; explicit conversion is maintenance work.
 
 ## Evidence boundaries
 
@@ -50,7 +50,7 @@ Published HTML must retain the original hydration payload, asset graph and route
 
 Upstream docs are runtime inputs. A docs body edit does **not** inherently require a Vite rebuild. Report upstream production rebuild scenarios separately from docs-cache/ingestion refresh scenarios. Compare complete Nift publication (including all required derivation, SSR, bundling and composition) with the corresponding upstream publication/update workflow, and expose the cost of prepublishing documents that upstream renders on demand. Never force an unnecessary upstream build or remove a required migration step. Backend infrastructure deployment remains outside both workflows.
 
-## Remaining proof obligations
+## Original representative proof obligations (fulfilled within the local contract)
 
 - Published document inputs contain no private/user-specific state; request-time page/session rendering remains in the retained runtime.
 - Maintained rendered content remains authoritative after hydration and navigation.
@@ -80,3 +80,9 @@ These checks establish source preservation, selected UI and local transport cont
 All 244 maintained public files (111,985,406 bytes) match the pinned upstream bytes in both publications. Brand/icon/chart-SVG generators remain explicit maintenance commands; the normal build does not run them. The dynamic OG service produces the same successful PNG in all three local Workers after the test harness registers the emitted CompiledWasm module. OG generation stays request-time rather than becoming a publication loop.
 
 Thirty robot/root-and-library-LLM/sitemap response states match bytes and cache headers, with 188 real Charts catalog cases supplied from the already pinned public archive. The catalog is a retained runtime dependency, not additional migrated Markdown. Root `llms-full.txt` intentionally remains the upstream routing index rather than an invented full-corpus concatenation. Six hosted-search fixture states match filters, deduplicate same-page hits and use client Router navigation. Live ranking/index freshness remains unverified.
+
+## Final obligation resolution
+
+T7/T9 prove the expanded route/viewports, real catalog rendering/keyboard input, hosted search fixture transport and request-time session behavior. T9 proves revision caching/failure recovery, transitive source invalidation, owned lifecycle deletion and all 24,648 fresh publication files equal to each source model's own optimized warm output. Unit 540 pass/four skip, chat 2,269 pass, desktop 20 pass/one skip; TypeScript/lint pass. T10 records five same-window timing/RSS samples across all workloads, plus initial/rejected evidence and clean-checkout verification. No blanket accessibility, other-engine or live private backend certification is made.
+
+Nift owns docs input/projection/metadata publication and retained-asset orchestration in the tested alternative; it does not replace any Start server protocol, Router, Query, shared-shell renderer or backend. The final report retains the upstream ordinary-update advantages and evaluates the additional publication boundary accordingly.

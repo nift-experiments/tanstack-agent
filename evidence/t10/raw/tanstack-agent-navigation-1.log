@@ -1,0 +1,6 @@
+built _nift/docs-manifest
+    ↳ dependency changed: .rendered/docs-manifest.json
+📦 1 file rebuilt successfully
+time taken: 0.330222 seconds
+{"publication_preparation":2.4402296880000005,"nift_composition":0.34458359199999994,"complete_content_publication":3.0217219940000004}
+{"retained_vite_build":9.819999999649554e-7,"retained_asset_publication":0.149086274,"content_publication":4.313891567999999,"complete_pipeline":4.744713021}

@@ -1,0 +1,10 @@
+{
+  "version": "151.0.7922.34",
+  "playwright": "1.63.0",
+  "revision": "1234",
+  "original_path": "/home/nick/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+  "owned_path": "/home/nick/Repositories/nift/nift-experiments/tanstack-baseline/toolchain/chromium-1234/chrome-linux64/chrome",
+  "sha256": "0b20b130e7edd9dd51873be867761295fe0cfad490c2b9a64f95bd3cfc08fa71",
+  "official_archive_url": "https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.34/linux64/chrome-linux64.zip",
+  "purpose": "identical engine bytes for final reproduction proof; no measurement engine change"
+}

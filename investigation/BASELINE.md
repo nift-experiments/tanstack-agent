@@ -1,6 +1,6 @@
 # BASELINE.md
 
-The frozen upstream reference. Complete this before migrating content.
+The frozen upstream reference and accepted final measurement scope. Historical T1 smoke numbers below are not final campaign results.
 
 ## Upstream reference
 
@@ -9,15 +9,11 @@ The frozen upstream reference. Complete this before migrating content.
 - Upstream source directory: sibling `tanstack-upstream` (clean detached immutable reference); separate `tanstack-baseline/build-work` for acquisition/build.
 - Production build command: `pnpm build` (`vite build --logLevel warn`); never execute deployment/database migration scripts.
 - Toolchain / runtime versions: Node 25.9.0 (`.nvmrc`), pnpm 11.1.0 (`packageManager`), frozen pnpm lockfile; Nift 4.9.0 initialized projects.
-- Tool/binary hashes (where relevant):
+- Tool/binary hashes: see `evidence/t10/environment.json` and `REPRODUCTION.md`; the pinned lockfile is retained at `runtime/pnpm-lock.yaml`.
 
 ## Source model
 
-Choose exactly one and describe it:
-
-- [ ] authored (human + agent; Markdown/MDX/frontmatter preserved)
-- [x] rendered (agent-primary; rendered HTML/CSS/JS + explicit metadata/nav)
-- [ ] hybrid (describe):
+Rendered-source hybrid: migrated rich docs maintain TanStack AST envelopes and explicit original/download text. Blog Markdown, two dynamic hosting guides, original MDX selection and useful React/service sources remain where required. This is not an all-HTML or universally Markdown-free project.
 
 Publication/behaviour parity does not require different source models to
 preserve identical source semantics.
@@ -38,22 +34,22 @@ transforms, registry-generated data, client-island/bundle preparation, multi-sta
 REFERENCE OUTPUT (immutable, upstream):
     /home/nick/Repositories/nift/nift-experiments/tanstack-baseline/reference-production-build1
 MIGRATION OUTPUT (Nift, changes over time):
-/home/nick/Repositories/nift/nift-experiments/tanstack-agent/public
+/home/nick/Repositories/nift/nift-experiments/tanstack-agent/publication
 
 Never point parity comparison at MIGRATION OUTPUT on both sides.
 
 ## Upstream nondeterminism classification
 
-- [ ] byte deterministic
+- [x] byte deterministic (fixed-path build artifacts)
 - [ ] semantic deterministic
-- [ ] nondeterministic but bounded/understood (describe)
+- [x] nondeterministic but bounded/understood (request timestamps/session partner placement; preserve fresh session behavior)
 - [ ] unresolved
 
 ## Baseline measurements
 
-- Upstream build time (method, median/range):
-- Upstream peak RSS:
-- Environment / hardware:
+- Final five-sample upstream build time (median/range): see `../REPORT.md` and `../evidence/t10/summary.json`.
+- Final same-window individual process/phase and sampled descendant RSS: see `../REPORT.md`; these are separate metrics.
+- Environment / hardware: `baseline-summary.json` and `../evidence/t10/environment.json`; unrelated user work was present and per-sample load is retained.
 
 ## T1 source inventory (not parity / concrete-page counts)
 
@@ -69,6 +65,10 @@ Never point parity comparison at MIGRATION OUTPUT on both sides.
 
 `baseline-summary.json` binds the raw receipts outside this source repository. Exact source, lockfile, external docs, assets and route inventories are retained. HTTP fixtures preserve the 307 docs redirect, Markdown negotiation, 404 and logged-out API responses. Browser fixtures cover marketing, blog, docs, themes, mobile navigation and a local empty Algolia response. Cloudflare asset precedence was corrected in the test harness; upstream code was untouched.
 
-Public external blog feed is captured separately. Remote repository/npm statistics are synthetic test fixtures; auth/database/AI services remain unconfigured. This establishes UI and local-transport baselines, not live backend integration. Full transport/schema and richer interactive cases continue in T3/T7. Browser runner currently uses Playwright 1.63.0 and installed Chromium revision 1234; the final reproducible harness must provision its own pinned browser dependency.
+Public external blog feed is captured separately. Remote repository/npm statistics are synthetic test fixtures; auth/database/AI services remain unconfigured. This establishes UI and local-transport baselines, not live backend integration. Full transport/schema and richer interactive cases continue in T3/T7. Browser proof uses Playwright 1.63.0 with explicit Chromium revision 1234; final closeout provisions the identical browser bytes into the owned toolchain. See REPRODUCTION.md.
 
 Exploratory builds took 36.48s and 32.50s, with GNU time maximum individual-process/child-phase RSS of 4,550,324 and 4,689,336 KiB. These two smoke measurements are not final benchmark results. Runtime HTML carries hydration/cache timestamps, so production-artifact byte determinism does not imply request-response byte determinism.
+
+## Final production boundary
+
+Nift normal/full/fresh commands are in the README. They include retained Vite bundling when required, asset synchronization, authored resolution/derivation or maintained AST preparation, metadata, Nift raw composition and Worker revision configuration. Upstream full/fresh/unchanged production rows use its original pnpm build command. Upstream docs body/config/meta/sync/lifecycle rows instead use native local R2 ingestion and the appropriate original valid/missing-path manifest branch, as detailed in T10-PROTOCOL.md. Infrastructure deploy, database migration, hosted indexing and live edge purge are outside publication timing.

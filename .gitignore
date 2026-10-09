@@ -1,0 +1,8 @@
+.nift/.lock
+
+# Generated starter page/state; maintained assets stay visible.
+/.nift/public/
+/public/index.html
+node_modules/
+.cache/
+__pycache__/

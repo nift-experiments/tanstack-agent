@@ -1,0 +1,36 @@
+{
+  "checkpoint": "T5",
+  "accepted": true,
+  "retained_source": {
+    "pinned_site_commit": "862ccc3d191818320c3e6d217542883f80cb907a",
+    "tracked_upstream_files": 2799,
+    "byte_identical_files": 2794,
+    "changed_files": [
+      "src/server/runtime/host.server.ts",
+      "src/utils/docs.functions.ts",
+      "src/utils/documents.server.ts",
+      "src/utils/markdown/filterFrameworkContent.ts",
+      "src/utils/markdown/processor.ts"
+    ],
+    "all_API_routes_byte_identical": true,
+    "Worker_entry_byte_identical": true,
+    "storage_database_auth_AI_workflow_implementations_byte_identical": true,
+    "production_replacement_stubs": false
+  },
+  "local_storage": {
+    "sourceModel": "rendered",
+    "real_local_R2": true,
+    "node_rpc_body_bridge": true,
+    "cache_hit": true,
+    "explicit_invalidation": true,
+    "artifact_refresh": true,
+    "local_objects": 2,
+    "production_mutations": false
+  },
+  "unauthenticated_HTTP_states": 27,
+  "evidence_sha256": {
+    "storage": "2531fc2e848031570ba62f9f1a9411e577c8035ab2b53475c013783779fa909a",
+    "HTTP": "ff8c30e23d0e059b97677e4d1d367c1ffdef337e749db210bd15bf87b806b7e6"
+  },
+  "live_backend_integration": false
+}

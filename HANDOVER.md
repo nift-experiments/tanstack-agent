@@ -340,3 +340,7 @@ Do not scale a whole-page cache. T4 must publish the complete external docs corp
 ## T4 accepted
 
 The complete corpus publisher, raw/resolved/render contracts, bounded ownership and lifecycle checks are documented in `investigation/T4-CORPUS.md`. Both full retained test suites pass, original input SHA256s match, 7,527 AST projections match, and 84 desktop/mobile browser states match with only the known hosting-partner rotation normalized. Initial whole-corpus compatibility/preparation costs remain visible for T8 profiling. Next: T5 retained services, T6 generated/search, T7 expanded parity, then initial/profile/optimization/final campaigns. No Nift core or Labs changes.
+
+## T5 accepted
+
+See `investigation/t5-runtime-summary.json` and the confirmed retention map. Every original API/backend/Worker implementation remains byte-identical; five bounded content/asset adapters are enumerated. Local R2 cache hits/invalidation/artifact refresh and 27 unauthenticated HTTP states pass. Source preservation, UI/local transport and unverified live integration remain separate. Next: T6 generated outputs/search, T7 expanded parity.

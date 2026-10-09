@@ -27,7 +27,7 @@ assert.ok(fs.existsSync(planFile),'Generate the shared controlled-document plan 
 const paths:string[]=JSON.parse(fs.readFileSync(planFile,'utf8'))
 const entries=paths.map(file=>inventory.files.find(e=>e.repo==='tanstack/query'&&e.ref==='main'&&e.file===file)).filter(Boolean)
 const lifecycle=inventory.files.find(e=>e.repo==='tanstack/query'&&e.ref==='main'&&e.file===process.argv[6])
-const requested=process.argv[5]?.startsWith('route-')&&process.argv[5]!=='route-delete'?[{...lifecycle,file:'docs/framework/react/benchmark-added.md'}]:entries
+const requested=mode!=='prime'&&process.argv[5]?.startsWith('route-')&&process.argv[5]!=='route-delete'?[{...lifecycle,file:'docs/framework/react/benchmark-added.md'}]:entries
 const selected=requested.filter(e=>fs.existsSync(path.join(baseline,'external-inputs/docs/tanstack--query--main',e.file))).slice(0,count)
 
 await runWithHostRuntimeEnv({GITHUB_CONTENT_CACHE:localBucket},async()=>{
@@ -40,8 +40,9 @@ await runWithHostRuntimeEnv({GITHUB_CONTENT_CACHE:localBucket},async()=>{
  const config=await fetchRepoFile('tanstack/query','main','docs/config.json');assert.ok(config);JSON.parse(config);if(mode!=='prime'&&process.argv[5]==='navigation')assert.ok(config.includes('Controlled publication benchmark navigation'))
  const manifest=await getCachedDocsArtifact(options);assert.ok(manifest.paths.length>0)
  if(redirectResolution)await getCachedDocsArtifact(redirectOptions)
- if(process.argv[5]==='route-add'||process.argv[5]==='route-rename')assert.ok(manifest.paths.some(p=>p.includes('benchmark-added')))
- if(process.argv[5]==='route-rename'||process.argv[5]==='route-delete'){let canonical;await collectRedirectEntriesForFile({path:process.argv[6]},{docsRoot:'docs',fetchFile:async()=>null,onCanonicalPath:p=>canonical=p});assert.ok(canonical);assert.ok(!manifest.paths.includes(canonical))}
+ if(mode!=='prime'&&(process.argv[5]==='route-add'||process.argv[5]==='route-rename'))assert.ok(manifest.paths.some(p=>p.includes('benchmark-added')))
+ if(mode!=='prime'&&(process.argv[5]==='route-rename'||process.argv[5]==='route-delete')){let canonical;await collectRedirectEntriesForFile({path:process.argv[6]},{docsRoot:'docs',fetchFile:async()=>null,onCanonicalPath:p=>canonical=p});assert.ok(canonical);assert.ok(!manifest.paths.includes(canonical))}
+ if(mode==='prime'&&process.argv[5]?.startsWith('route-')){let canonical;await collectRedirectEntriesForFile({path:process.argv[6]},{docsRoot:'docs',fetchFile:async()=>null,onCanonicalPath:p=>canonical=p});assert.ok(manifest.paths.includes(canonical));assert.ok(!manifest.paths.some(p=>p.includes('benchmark-added')))}
  console.log(JSON.stringify({mode,requested_documents:selected.length,requested_paths:selected.map(e=>e.file),native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,path_manifest:true,redirect_manifest:redirectResolution,unchanged_private_helper_export_shim:true,live_edge_cache_purge:false,production_writes:false,captured_origin_GETs:fixtureCalls.length,raw_document_GETs:fixtureCalls.filter(r=>new URL(r.url).hostname==='raw.githubusercontent.com').length}))
 })
 }finally{await worker.dispose()}

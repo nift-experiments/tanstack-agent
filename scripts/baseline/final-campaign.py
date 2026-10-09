@@ -156,12 +156,20 @@ subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/baseline/c
 for workload in workloads:
  for name in ['upstream','tanstack','tanstack-agent']:
   cache=out/('native-r2-'+workload)
-  if name=='upstream' and workload in native_cases:
+  if name=='upstream' and workload in native_cases and not workload.startswith('route-'):
    command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'prime','100',workload]
    with (out/(workload+'-prime.log')).open('w') as log:subprocess.run(command,cwd=base,stdout=log,stderr=subprocess.STDOUT,check=True)
   for sample in range(1,6):
    if any(r['workload']==workload and r['implementation']==name and r['sample']==sample for r in rows):continue
+   if name=='upstream' and workload.startswith('route-'):
+    import shutil;shutil.rmtree(cache,ignore_errors=True)
+    command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'prime','100',workload,lifecycle_entry['file']]
+    with (out/f'{workload}-{sample}-prime.log').open('w') as log:subprocess.run(command,cwd=base,stdout=log,stderr=subprocess.STDOUT,check=True)
    publication_root=base/'build-work/dist' if name=='upstream' else base.parent/name/'publication'
+   if name!='upstream' and workload.startswith('route-'):
+    start_manifest=json.loads((publication_root/'client/_nift/docs-manifest.txt').read_text())
+    old_key=f"tanstack/query@main:{lifecycle_entry['file']}";new_key='tanstack/query@main:docs/framework/react/benchmark-added.md'
+    assert old_key in start_manifest['projections'] and new_key not in start_manifest['projections'],'Each lifecycle sample must begin at the original publication state'
    before=tree_hash(publication_root) if not(name=='upstream' and workload in native_cases) else None
    changes,count=mutate(name,workload,sample)
    try:
@@ -179,10 +187,17 @@ for workload in workloads:
     key=f'{name}-{workload}-{sample}';row=measure(key,command,cwd)
     if before is not None:
      after=tree_hash(publication_root);row['publication_byte_fanout']={'added':len(after.keys()-before.keys()),'deleted':len(before.keys()-after.keys()),'changed':sum(before[k]!=after[k] for k in before.keys()&after.keys())}
+    if name!='upstream' and workload.startswith('route-'):
+     fanout=row['publication_byte_fanout']
+     if workload in ['route-add','route-rename']:assert fanout['added']>=3,'Each add/rename must create raw/original/projection outputs'
+     if workload in ['route-rename','route-delete']:assert fanout['deleted']>=3,'Each rename/delete must remove old raw/original/projection outputs'
     row.update(implementation=name,workload=workload,sample=sample,scope=scope)
     if name!='upstream':row['phases']=json.loads((cwd/'.rendered/pipeline-phases.json').read_text())
     rows.append(row);(out/'samples.json').write_text(json.dumps(rows,indent=2)+'\n');print(key,round(row['wall_seconds'],3),flush=True)
-   finally:changes.restore()
+   finally:
+    changes.restore()
+    if name!='upstream' and workload.startswith('route-'):
+     with (out/f'{name}-{workload}-{sample}-restore.log').open('w') as log:subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/publish.mjs'],cwd=base.parent/name,stdout=log,stderr=subprocess.STDOUT,check=True)
   # Restore derived output/cache state before moving to a different workload.
   if name!='upstream':
    with (out/f'{name}-{workload}-restore.log').open('w') as log:subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/publish.mjs'],cwd=base.parent/name,stdout=log,stderr=subprocess.STDOUT,check=True)

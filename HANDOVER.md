@@ -344,3 +344,7 @@ The complete corpus publisher, raw/resolved/render contracts, bounded ownership 
 ## T5 accepted
 
 See `investigation/t5-runtime-summary.json` and the confirmed retention map. Every original API/backend/Worker implementation remains byte-identical; five bounded content/asset adapters are enumerated. Local R2 cache hits/invalidation/artifact refresh and 27 unauthenticated HTTP states pass. Source preservation, UI/local transport and unverified live integration remain separate. Next: T6 generated outputs/search, T7 expanded parity.
+
+## T6 accepted
+
+Generated robot/sitemap/LLM responses match bytes and cache headers across 30 states. All 244 maintained public assets match upstream. Search fixture hits preserve filters, deduplication and client Router navigation in six states. The retained dynamic OG endpoint produces byte-identical PNGs after the local harness registers the emitted Wasm module. Real catalog data (188 cases) is supplied from the pinned public archive. No live index/provider integration is claimed. Next: expanded T7 parity before the initial performance/profile campaign.

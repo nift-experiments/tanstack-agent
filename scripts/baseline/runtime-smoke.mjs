@@ -3,7 +3,7 @@ const {Miniflare,convertV4MiniflareOptions}=await import(baselineRoot+'/build-wo
 import {fixtureOutbound,fixtureCalls} from './fixture-provider.mjs';
 import fs from 'node:fs';import path from 'node:path';
 const base=process.env.TANSTACK_BASELINE_DIR||path.resolve(path.dirname(new URL(import.meta.url).pathname),'../../../tanstack-baseline'), dist=path.join(base,'reference-production-build1');let blocked=[];
-const server=path.join(dist,'server');const modules=fs.readdirSync(server,{recursive:true}).filter(p=>p.endsWith('.js')||p.endsWith('.mjs')).sort((a,b)=>(a==='index.js'?-1:b==='index.js'?1:a.localeCompare(b))).map(p=>({type:'ESModule',path:path.join(server,p)}));
+const server=path.join(dist,'server');const modules=fs.readdirSync(server,{recursive:true}).filter(p=>p.endsWith('.js')||p.endsWith('.mjs')||p.endsWith('.wasm')).sort((a,b)=>(a==='index.js'?-1:b==='index.js'?1:a.localeCompare(b))).map(p=>({type:p.endsWith('.wasm')?'CompiledWasm':'ESModule',path:path.join(server,p)}));
 const mf=new Miniflare(convertV4MiniflareOptions({
  name:'tanstack-baseline-local',port:4021,modules,modulesRoot:server,compatibilityDate:'2026-06-19',compatibilityFlags:['nodejs_compat'],
  assets:{directory:path.join(dist,'client'),binding:'ASSETS',run_worker_first:false,routerConfig:{has_user_worker:true}},

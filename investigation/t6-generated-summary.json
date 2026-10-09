@@ -1,0 +1,30 @@
+{
+  "checkpoint": "T6",
+  "accepted": true,
+  "generated_HTTP_states": 30,
+  "hosted_search_fixture_states": 6,
+  "dynamic_OG_successful_byte_equal": true,
+  "dynamic_OG_bytes": 22207,
+  "assets": {
+    "maintained_public_assets": 244,
+    "bytes": 111985406,
+    "byte_equal_to_pinned_upstream": true,
+    "routine_brand_icon_chart_asset_regeneration": false,
+    "dynamic_OG_retained": true,
+    "hosted_search_retained": true
+  },
+  "retained_catalog_fixture": {
+    "repo": "tanstack/charts",
+    "commit": "57774e14a1a86081eddb3a23523724a40da05640",
+    "cases": 188,
+    "files": 1376,
+    "bytes": 9724530
+  },
+  "evidence_sha256": {
+    "t6-generated-http.json": "53c573d6d2b18e43df62bf0d7b362bd2f46959d9313a7643362f99a658685832",
+    "t6-search-contract.json": "075b3d7e7222eca1721a6efadffd1e14d4012360345811224f27bf5a5c21b021",
+    "t6-dynamic-og.json": "d098c2fc6e7d8ced93ec363bf0540cd485757628c9a00d886b5576f234c6535d",
+    "catalog-input-capture.json": "409f1eb061d896fc6185335c551b99bef6285dc172114f83560062b9beacc824"
+  },
+  "live_hosted_index_or_backend_integration": false
+}

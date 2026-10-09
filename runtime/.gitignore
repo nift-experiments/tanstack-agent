@@ -1,0 +1,42 @@
+node_modules
+.pnpm-store/
+package-lock.json
+yarn.lock
+.tanstack
+.DS_Store
+.cache
+.env
+.env.*
+.vercel
+.output
+.vinxi
+.tanstack-start/build
+.nitro/*
+.netlify/*
+.wrangler/*
+
+/build/
+/api/
+/server/build
+/public/build
+
+# Sentry Config File
+.env.sentry-build-plugin
+dist
+.vscode/
+.env.local
+
+# Content Collections generated files
+.content-collections
+
+test-results
+.claude/CLAUDE.md
+.claude/worktrees
+.eslintcache
+.tsbuildinfo
+src/routeTree.gen.ts
+.og-preview/
+.readme-preview/
+
+# Generated native desktop helper
+/desktop/native/folder-access

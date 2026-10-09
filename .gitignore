@@ -6,3 +6,17 @@
 node_modules/
 .cache/
 __pycache__/
+
+# Retained runtime build/cache products.
+/runtime/dist/
+/runtime/.content-collections/
+/runtime/.tanstack/
+/runtime/.wrangler/
+/runtime/.output/
+/runtime/.env*
+/.rendered/
+/public/
+
+/publication/
+
+/.nift/publication/

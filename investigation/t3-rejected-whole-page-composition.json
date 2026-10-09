@@ -1,0 +1,34 @@
+{
+  "sourceModel": "pre-derived TanStack document + retained React",
+  "routes": [
+    {
+      "route": "/",
+      "bytes": 266289,
+      "raw": ".rendered/proof/0.html"
+    },
+    {
+      "route": "/ethos",
+      "bytes": 131291,
+      "raw": ".rendered/proof/1.html"
+    },
+    {
+      "route": "/blog/announcing-tanstack-query-v5",
+      "bytes": 206318,
+      "raw": ".rendered/proof/2.html"
+    },
+    {
+      "route": "/query/latest/docs/framework/react/overview",
+      "bytes": 419684,
+      "raw": ".rendered/proof/3.html"
+    },
+    {
+      "route": "/start/latest/docs/framework/react/build-from-scratch",
+      "bytes": 289426,
+      "raw": ".rendered/proof/4.html"
+    }
+  ],
+  "raw_composition_byte_equal": true,
+  "accepted_production_architecture": false,
+  "rejection_reason": "Whole-page cache freezes per-session partner placement; shared shell remains request-time TanStack SSR",
+  "core_changes": false
+}

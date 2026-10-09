@@ -10,10 +10,10 @@ Mark each: not started / in progress / blocked / done.
 
 | Phase | Status | Acceptance criteria | Required evidence | Commands | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 1 Baseline frozen | | | | | |
-| 2 Parity contract + fixtures | | | | | |
-| 3 Initial Nift structure + compatibility proof | | | | | |
-| 4 Shared shells/templates | | | | | |
+| 1 Baseline frozen | done | Fixed-path repeated production build | baseline-summary.json | pnpm build | T1 |
+| 2 Parity contract + fixtures | done | Representative UI/local transport contract | t3-proof-summary.json | baseline fixture scripts | T3 |
+| 3 Initial Nift structure + compatibility proof | done | Authored derivation / agent projection / raw dependency composition | t3-content-composition.json, t3-incremental-proof.json | proof-compose.mjs | T3 |
+| 4 Shared shells/templates | done | Request-dependent shell retained unchanged; Nift input template proved | RETAINED-TANSTACK.md | dynamic-shell-contract.py | T3 |
 | 5 Authored content | | | | | |
 | 6 Source compatibility | | | | | |
 | 7 Route/content/render/browser/behaviour parity | | | | | |
@@ -51,7 +51,8 @@ after the campaign precedes final benchmarking.
 | T0 setup/init | done | Public repository created; generated guidance read; starter full/incremental/status checks pass. |
 | T1 pinned upstream baseline | done | Production output frozen and repeated byte-identically; external docs verified; HTTP + 18 browser baseline states frozen. See baseline-summary.json. |
 | T2 replace/retain/coexist map | done | Explicit retained-runtime/public-document boundary and fair runtime docs-update treatment recorded. T3 must prove it. |
-| T3 representative hybrid proof | in progress | Prove raw composition, hydration/source edits, routing and service fallback before corpus scaling. |
-| T4–T10 corpus/runtime/parity/profile/final campaign | not started | Follow generated method and explicit user parity/benchmark contract. |
+| T3 representative hybrid proof | done | Nift document projections + unchanged dynamic TanStack shell pass representative checks; frozen whole-page cache rejected. |
+| T4 main static/content corpus | in progress | Expand maintained docs/projections with explicit tree/config ownership, retained dynamic exceptions, route lifecycle correctness. |
+| T5–T10 runtime/parity/profile/final campaign | not started | Follow generated method and explicit user parity/benchmark contract. |
 
 This experiment finds the best Nift + TanStack boundary. React, Router, Query, Start and backend services remain where useful. No Nift core changes are authorized.

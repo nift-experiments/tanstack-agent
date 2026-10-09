@@ -57,3 +57,11 @@ Upstream docs are runtime inputs. A docs body edit does **not** inherently requi
 - Static asset requests preserve Cloudflare precedence; API/server functions remain callable.
 - Changed input dependencies invalidate exactly the necessary publication families, and add/rename/delete remove stale output.
 - Search remains hosted Algolia with deterministic transport fixtures; no build-time index is invented.
+
+## T3 source-driven boundary correction
+
+The whole-page snapshot prototype preserves bytes, hydration and interactions, but freezes `__root__`'s newly generated `partnerPlacementSessionSeed`. The session-seeded partner order is actual functionality, not merely an ignorable generated ID. Therefore whole-page static caching is rejected. Evidence is retained in `t3-rejected-whole-page-composition.json` and the external baseline prototype directory.
+
+TanStack keeps request-time shell/page SSR, root/session loader state, partner rotation, Router, Query, interactive Markdown components and every backend route. Nift becomes the publication owner for frozen docs inputs, derived document projections, metadata/input manifests and assets, while Vite continues building the retained runtime. Both source models publish the same TanStack document contract through Nift's raw dependency/composition path. Authored Markdown is parsed during publication; agent-maintained document projections bypass that derivation. The retained React renderer consumes the published projections without reparsing their Markdown body. Markdown downloads remain an explicit projection, and runtime filtering stays where the original API needs it.
+
+This is a deliberately partial-stack migration. Do not describe it as replacing request-time SSR or as a static HTML replacement for TanStack Start. Ordinary marketing React components remain their maintained representation because the global shell is request-dependent. The agent model is pre-derived/hybrid rather than framework-free HTML. Dynamic partner-dependent document generation remains runtime-owned where appropriate.

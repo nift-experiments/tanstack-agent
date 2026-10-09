@@ -1,0 +1,3460 @@
+import type { SkillDocument, SkillVersion } from '~/chat/core/skills'
+import {
+  pgTable,
+  uuid,
+  varchar,
+  text,
+  timestamp,
+  boolean,
+  jsonb,
+  pgEnum,
+  integer,
+  bigint,
+  real,
+  index,
+  uniqueIndex,
+  unique,
+  date,
+  check,
+  foreignKey,
+  primaryKey,
+} from 'drizzle-orm/pg-core'
+import { relations, sql } from 'drizzle-orm'
+import type { InferSelectModel, InferInsertModel } from 'drizzle-orm'
+import type { BuilderJsonObject, SignupSource } from './types'
+import type { ChatPolicy } from '~/chat/policy'
+import type { ThreadSource } from '~/chat/thread-context'
+import type { RunModelSelection } from '~/chat/core/run-model'
+import type { ReferenceInput } from '~/chat/core/message-references'
+import type { AccountPreferences } from '~/chat/core/account-preferences'
+
+// Re-export client-safe types and constants
+export type {
+  Capability,
+  OAuthProvider,
+  DocFeedbackType,
+  DocFeedbackStatus,
+  ShowcaseStatus,
+  ShowcaseUseCase,
+  AuditAction,
+  ReleaseLevel,
+  SignupSource,
+  BuilderMessageRole,
+  BuilderRunStatus,
+  BuilderProjectEventType,
+  BuilderJsonValue,
+  BuilderJsonObject,
+} from './types'
+
+import {
+  CAPABILITIES,
+  OAUTH_PROVIDERS,
+  DOC_FEEDBACK_TYPES,
+  DOC_FEEDBACK_STATUSES,
+  SHOWCASE_STATUSES,
+  SHOWCASE_PLACEMENTS,
+  SHOWCASE_USE_CASES,
+  AUDIT_ACTIONS,
+  BUILDER_MESSAGE_ROLES,
+  BUILDER_RUN_STATUSES,
+  BUILDER_PROJECT_EVENT_TYPES,
+} from './types'
+
+export {
+  CAPABILITIES,
+  VALID_CAPABILITIES,
+  OAUTH_PROVIDERS,
+  DOC_FEEDBACK_TYPES,
+  DOC_FEEDBACK_STATUSES,
+  SHOWCASE_STATUSES,
+  SHOWCASE_PLACEMENTS,
+  SHOWCASE_USE_CASES,
+  AUDIT_ACTIONS,
+  RELEASE_LEVELS,
+  SIGNUP_SOURCES,
+  BUILDER_MESSAGE_ROLES,
+  BUILDER_RUN_STATUSES,
+  BUILDER_PROJECT_EVENT_TYPES,
+} from './types'
+
+// Enums - using imported constants as single source of truth
+export const capabilityEnum = pgEnum('capability', CAPABILITIES)
+// Note: feed_category enum was dropped in migration 0011
+export const oauthProviderEnum = pgEnum('oauth_provider', OAUTH_PROVIDERS)
+export const docFeedbackTypeEnum = pgEnum(
+  'doc_feedback_type',
+  DOC_FEEDBACK_TYPES,
+)
+export const docFeedbackStatusEnum = pgEnum(
+  'doc_feedback_status',
+  DOC_FEEDBACK_STATUSES,
+)
+export const showcasePlacementEnum = pgEnum(
+  'showcase_placement',
+  SHOWCASE_PLACEMENTS,
+)
+export const showcaseStatusEnum = pgEnum('showcase_status', SHOWCASE_STATUSES)
+export const showcaseUseCaseEnum = pgEnum(
+  'showcase_use_case',
+  SHOWCASE_USE_CASES,
+)
+export const auditActionEnum = pgEnum('audit_action', AUDIT_ACTIONS)
+export const builderMessageRoleEnum = pgEnum(
+  'builder_message_role',
+  BUILDER_MESSAGE_ROLES,
+)
+export const builderRunStatusEnum = pgEnum(
+  'builder_run_status',
+  BUILDER_RUN_STATUSES,
+)
+export const builderProjectEventTypeEnum = pgEnum(
+  'builder_project_event_type',
+  BUILDER_PROJECT_EVENT_TYPES,
+)
+
+// Note: Types and constants are defined in ./types.ts and re-exported above
+// This keeps client-safe exports separate from server-only drizzle schema
+
+// Users table
+export const users = pgTable(
+  'users',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    email: varchar('email', { length: 255 }).notNull().unique(),
+    name: varchar('name', { length: 255 }),
+    displayUsername: varchar('display_username', { length: 255 }),
+    image: text('image'),
+    oauthImage: text('oauth_image'),
+    capabilities: capabilityEnum('capabilities').array().notNull().default([]),
+    adsDisabled: boolean('ads_disabled').default(false),
+    interestedInHidingAds: boolean('interested_in_hiding_ads').default(false),
+    lastUsedFramework: varchar('last_used_framework', { length: 50 }),
+    signupSources: jsonb('signup_sources')
+      .$type<SignupSource[]>()
+      .notNull()
+      .default([]),
+    sessionVersion: integer('session_version').notNull().default(0),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    emailIdx: index('users_email_idx').on(table.email),
+    createdAtIdx: index('users_created_at_idx').on(table.createdAt),
+  }),
+)
+
+export type User = InferSelectModel<typeof users>
+export type NewUser = InferInsertModel<typeof users>
+
+// Roles table
+export const roles = pgTable(
+  'roles',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    name: varchar('name', { length: 255 }).notNull().unique(),
+    description: text('description'),
+    capabilities: capabilityEnum('capabilities').array().notNull().default([]),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    nameIdx: index('roles_name_idx').on(table.name),
+  }),
+)
+
+export type Role = InferSelectModel<typeof roles>
+export type NewRole = InferInsertModel<typeof roles>
+
+// Role assignments table
+export const roleAssignments = pgTable(
+  'role_assignments',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    roleId: uuid('role_id')
+      .notNull()
+      .references(() => roles.id, { onDelete: 'cascade' }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: index('role_assignments_user_id_idx').on(table.userId),
+    roleIdIdx: index('role_assignments_role_id_idx').on(table.roleId),
+    userRoleUnique: uniqueIndex('role_assignments_user_role_unique').on(
+      table.userId,
+      table.roleId,
+    ),
+  }),
+)
+
+export type RoleAssignment = InferSelectModel<typeof roleAssignments>
+export type NewRoleAssignment = InferInsertModel<typeof roleAssignments>
+
+// Sessions table
+export const sessions = pgTable(
+  'sessions',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    token: varchar('token', { length: 255 }).notNull().unique(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    expiresAt: timestamp('expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    ipAddress: varchar('ip_address', { length: 45 }), // IPv6 max length
+    userAgent: text('user_agent'),
+  },
+  (table) => ({
+    tokenIdx: index('sessions_token_idx').on(table.token),
+    userIdIdx: index('sessions_user_id_idx').on(table.userId),
+    expiresAtIdx: index('sessions_expires_at_idx').on(table.expiresAt),
+  }),
+)
+
+export type Session = InferSelectModel<typeof sessions>
+export type NewSession = InferInsertModel<typeof sessions>
+
+// OAuth accounts table
+export const oauthAccounts = pgTable(
+  'oauth_accounts',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    provider: oauthProviderEnum('provider').notNull(),
+    providerAccountId: varchar('provider_account_id', {
+      length: 255,
+    }).notNull(),
+    email: varchar('email', { length: 255 }).notNull(),
+    accessToken: text('access_token'),
+    tokenScope: text('token_scope'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: index('oauth_accounts_user_id_idx').on(table.userId),
+    providerAccountUnique: uniqueIndex(
+      'oauth_accounts_provider_account_unique',
+    ).on(table.provider, table.providerAccountId),
+    providerAccountIdx: index('oauth_accounts_provider_account_idx').on(
+      table.provider,
+      table.providerAccountId,
+    ),
+  }),
+)
+
+export type OAuthAccount = InferSelectModel<typeof oauthAccounts>
+export type NewOAuthAccount = InferInsertModel<typeof oauthAccounts>
+
+// GitHub Stats cache table (for caching expensive GitHub API calls)
+export const githubStatsCache = pgTable(
+  'github_stats_cache',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    // Cache key: repo name (e.g., "tanstack/query") or "org:tanstack" for org aggregate
+    cacheKey: varchar('cache_key', { length: 255 }).notNull().unique(),
+    // Cached GitHub stats data (JSON)
+    stats: jsonb('stats').notNull(),
+    // Previous stats data (JSON) - for calculating deltas and animation trajectory
+    previousStats: jsonb('previous_stats'),
+    // When this cache entry expires (should refresh after this)
+    expiresAt: timestamp('expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    cacheKeyIdx: index('github_stats_cache_key_idx').on(table.cacheKey),
+    expiresAtIdx: index('github_stats_cache_expires_at_idx').on(
+      table.expiresAt,
+    ),
+  }),
+)
+
+export type GithubStatsCache = InferSelectModel<typeof githubStatsCache>
+
+export const githubContentCache = pgTable(
+  'github_content_cache',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    repo: varchar('repo', { length: 255 }).notNull(),
+    gitRef: varchar('git_ref', { length: 255 }).notNull(),
+    contentKind: varchar('content_kind', { length: 20 }).notNull(),
+    path: varchar('path', { length: 1024 }).notNull(),
+    isPresent: boolean('is_present').notNull().default(true),
+    textContent: text('text_content'),
+    jsonContent: jsonb('json_content'),
+    staleAt: timestamp('stale_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    repoRefIdx: index('github_content_cache_repo_ref_idx').on(
+      table.repo,
+      table.gitRef,
+    ),
+    staleAtIdx: index('github_content_cache_stale_at_idx').on(table.staleAt),
+    uniqueContent: uniqueIndex('github_content_cache_unique').on(
+      table.repo,
+      table.gitRef,
+      table.contentKind,
+      table.path,
+    ),
+  }),
+)
+
+export type GithubContentCache = InferSelectModel<typeof githubContentCache>
+
+export const docsArtifactCache = pgTable(
+  'docs_artifact_cache',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    repo: varchar('repo', { length: 255 }).notNull(),
+    gitRef: varchar('git_ref', { length: 255 }).notNull(),
+    docsRoot: varchar('docs_root', { length: 255 }).notNull(),
+    artifactType: varchar('artifact_type', { length: 50 }).notNull(),
+    artifactKey: varchar('artifact_key', { length: 255 }).notNull(),
+    payload: jsonb('payload').notNull(),
+    staleAt: timestamp('stale_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    repoRefDocsRootIdx: index('docs_artifact_cache_repo_ref_docs_root_idx').on(
+      table.repo,
+      table.gitRef,
+      table.docsRoot,
+    ),
+    staleAtIdx: index('docs_artifact_cache_stale_at_idx').on(table.staleAt),
+    uniqueArtifact: uniqueIndex('docs_artifact_cache_unique').on(
+      table.repo,
+      table.gitRef,
+      table.docsRoot,
+      table.artifactType,
+      table.artifactKey,
+    ),
+  }),
+)
+
+export const ossStatsCache = pgTable(
+  'oss_stats_cache',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    scopeType: varchar('scope_type', { length: 20 }).notNull(),
+    scopeKey: varchar('scope_key', { length: 255 }).notNull(),
+
+    githubStarCount: integer('github_star_count').notNull().default(0),
+    githubContributorCount: integer('github_contributor_count')
+      .notNull()
+      .default(0),
+    githubDependentCount: integer('github_dependent_count'),
+    githubForkCount: integer('github_fork_count'),
+    githubRepositoryCount: integer('github_repository_count'),
+
+    githubDeltaStarCount: integer('github_delta_star_count'),
+    githubDeltaContributorCount: integer('github_delta_contributor_count'),
+    githubDeltaDependentCount: integer('github_delta_dependent_count'),
+    githubDeltaForkCount: integer('github_delta_fork_count'),
+    githubUpdatedAt: timestamp('github_updated_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+
+    npmTotalDownloads: bigint('npm_total_downloads', { mode: 'number' })
+      .notNull()
+      .default(0),
+    npmRatePerDay: real('npm_rate_per_day'),
+    npmPackageCount: integer('npm_package_count').notNull().default(0),
+    npmUpdatedAt: timestamp('npm_updated_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+
+    timeDeltaMs: bigint('time_delta_ms', { mode: 'number' }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    scopeUnique: uniqueIndex('oss_stats_cache_scope_unique').on(
+      table.scopeType,
+      table.scopeKey,
+    ),
+    scopeTypeIdx: index('oss_stats_cache_scope_type_idx').on(table.scopeType),
+    scopeKeyIdx: index('oss_stats_cache_scope_key_idx').on(table.scopeKey),
+  }),
+)
+
+export type OssStatsCache = InferSelectModel<typeof ossStatsCache>
+export type NewOssStatsCache = InferInsertModel<typeof ossStatsCache>
+
+// NPM Download Chunks cache table (for caching historical date range downloads)
+// This table stores immutable historical chunks and cacheable recent chunks
+// to avoid repeated API calls and rate limiting
+export const npmDownloadChunks = pgTable(
+  'npm_download_chunks',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    // Package identifier
+    packageName: varchar('package_name', { length: 255 }).notNull(),
+    // Date range for this chunk (inclusive, YYYY-MM-DD format)
+    dateFrom: varchar('date_from', { length: 10 }).notNull(),
+    dateTo: varchar('date_to', { length: 10 }).notNull(),
+    // Bin size for aggregation (future-proofing for stats visualizer)
+    // 'daily' = raw daily data, 'weekly'/'monthly' for future aggregations
+    binSize: varchar('bin_size', { length: 20 }).notNull().default('daily'),
+    // Aggregate total downloads for this chunk (sum of dailyData)
+    totalDownloads: bigint('total_downloads', { mode: 'number' }).notNull(),
+    // Detailed daily breakdown (array of { day: string, downloads: number })
+    // Stores the actual npm API response data for this date range
+    dailyData: jsonb('daily_data').notNull(),
+    // Cache control
+    // isImmutable: true for chunks completely in the past (won't change)
+    // isImmutable: false for chunks touching today (may need refresh)
+    isImmutable: boolean('is_immutable').notNull().default(false),
+    // expiresAt: null if immutable, timestamp if needs periodic refresh
+    expiresAt: timestamp('expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    // Composite unique index: one chunk per package/dateRange/binSize combo
+    packageDateBinUnique: uniqueIndex(
+      'npm_download_chunks_package_date_bin_unique',
+    ).on(table.packageName, table.dateFrom, table.dateTo, table.binSize),
+    // Individual indexes for efficient lookups
+    packageNameIdx: index('npm_download_chunks_package_name_idx').on(
+      table.packageName,
+    ),
+    dateFromIdx: index('npm_download_chunks_date_from_idx').on(table.dateFrom),
+    dateToIdx: index('npm_download_chunks_date_to_idx').on(table.dateTo),
+    expiresAtIdx: index('npm_download_chunks_expires_at_idx').on(
+      table.expiresAt,
+    ),
+    isImmutableIdx: index('npm_download_chunks_is_immutable_idx').on(
+      table.isImmutable,
+    ),
+  }),
+)
+
+export type NpmDownloadChunk = InferSelectModel<typeof npmDownloadChunks>
+export type NewNpmDownloadChunk = InferInsertModel<typeof npmDownloadChunks>
+
+// Doc feedback table (for user notes and improvement suggestions on documentation)
+export const docFeedback = pgTable(
+  'doc_feedback',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+
+    // Content
+    type: docFeedbackTypeEnum('type').notNull(),
+    content: text('content').notNull(),
+    characterCount: integer('character_count').notNull(), // Store raw character count, points derived from this
+
+    // Location
+    pagePath: varchar('page_path', { length: 500 }).notNull(), // e.g., "/query/v5/docs/overview"
+    libraryId: varchar('library_id', { length: 255 }).notNull(), // e.g., "query"
+    libraryVersion: varchar('library_version', { length: 50 }).notNull(), // e.g., "v5.0.0"
+    blockSelector: text('block_selector').notNull(), // hierarchical selector for resilience
+    blockContentHash: varchar('block_content_hash', { length: 64 }), // SHA-256 hash for drift detection
+    blockMarkdown: text('block_markdown'), // Captured content at time of feedback (guards against doc drift)
+
+    // State
+    status: docFeedbackStatusEnum('status').notNull().default('pending'),
+    isDetached: boolean('is_detached').notNull().default(false), // true if block moved/deleted
+    isCollapsed: boolean('is_collapsed').notNull().default(false), // UI state: collapsed or expanded
+
+    // Moderation
+    moderatedBy: uuid('moderated_by').references(() => users.id, {
+      onDelete: 'set null',
+    }),
+    moderatedAt: timestamp('moderated_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    moderationNote: text('moderation_note'), // Internal note from moderator
+
+    // Timestamps
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: index('doc_feedback_user_id_idx').on(table.userId),
+    statusIdx: index('doc_feedback_status_idx').on(table.status),
+    libraryIdx: index('doc_feedback_library_idx').on(table.libraryId),
+    pagePathIdx: index('doc_feedback_page_path_idx').on(table.pagePath),
+    createdAtIdx: index('doc_feedback_created_at_idx').on(table.createdAt),
+    isDetachedIdx: index('doc_feedback_is_detached_idx').on(table.isDetached),
+    moderatedByIdx: index('doc_feedback_moderated_by_idx').on(
+      table.moderatedBy,
+    ),
+  }),
+)
+
+export type DocFeedback = InferSelectModel<typeof docFeedback>
+export type NewDocFeedback = InferInsertModel<typeof docFeedback>
+
+// Login history table (tracks user logins for analytics and security)
+export const loginHistory = pgTable(
+  'login_history',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    provider: oauthProviderEnum('provider').notNull(),
+    ipAddress: varchar('ip_address', { length: 45 }), // IPv6 max length
+    userAgent: text('user_agent'),
+    isNewUser: boolean('is_new_user').notNull().default(false),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: index('login_history_user_id_idx').on(table.userId),
+    createdAtIdx: index('login_history_created_at_idx').on(table.createdAt),
+    providerIdx: index('login_history_provider_idx').on(table.provider),
+  }),
+)
+
+export type LoginHistory = InferSelectModel<typeof loginHistory>
+export type NewLoginHistory = InferInsertModel<typeof loginHistory>
+
+// Audit logs table (tracks admin actions for security and compliance)
+export const auditLogs = pgTable(
+  'audit_logs',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    // Who performed the action
+    actorId: uuid('actor_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    // What action was performed
+    action: auditActionEnum('action').notNull(),
+    // Target of the action (user, role, banner, etc.)
+    targetType: varchar('target_type', { length: 50 }).notNull(), // 'user', 'role', 'banner', 'feed_entry', 'feedback'
+    targetId: varchar('target_id', { length: 255 }).notNull(), // UUID or other identifier
+    // Details of the change
+    details: jsonb('details'), // { before: {...}, after: {...} } or other relevant data
+    // Request metadata
+    ipAddress: varchar('ip_address', { length: 45 }),
+    userAgent: text('user_agent'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    actorIdIdx: index('audit_logs_actor_id_idx').on(table.actorId),
+    actionIdx: index('audit_logs_action_idx').on(table.action),
+    targetTypeIdx: index('audit_logs_target_type_idx').on(table.targetType),
+    targetIdIdx: index('audit_logs_target_id_idx').on(table.targetId),
+    createdAtIdx: index('audit_logs_created_at_idx').on(table.createdAt),
+  }),
+)
+
+export type AuditLog = InferSelectModel<typeof auditLogs>
+export type NewAuditLog = InferInsertModel<typeof auditLogs>
+
+// Daily user activity table (one row per user per day for DAU/streak tracking)
+export const userActivity = pgTable(
+  'user_activity',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    date: date('date', { mode: 'string' }).notNull(), // YYYY-MM-DD format
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userDateUnique: uniqueIndex('user_activity_user_date_unique').on(
+      table.userId,
+      table.date,
+    ),
+    userIdIdx: index('user_activity_user_id_idx').on(table.userId),
+    dateIdx: index('user_activity_date_idx').on(table.date),
+  }),
+)
+
+export type UserActivity = InferSelectModel<typeof userActivity>
+export type NewUserActivity = InferInsertModel<typeof userActivity>
+
+// Showcases table (user-submitted projects using TanStack libraries)
+export const showcases = pgTable(
+  'showcases',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+
+    // Project info
+    name: varchar('name', { length: 255 }).notNull(),
+    tagline: varchar('tagline', { length: 500 }).notNull(),
+    description: text('description'),
+    url: text('url').notNull(),
+    logoUrl: text('logo_url'),
+    screenshotUrl: text('screenshot_url').notNull(),
+    sourceUrl: text('source_url'),
+
+    // Libraries (stored as array of library IDs)
+    libraries: text('libraries').array().notNull(),
+
+    // Use cases (multi-select)
+    useCases: showcaseUseCaseEnum('use_cases').array().notNull().default([]),
+
+    // Featured flag (admin-set for homepage prominence)
+    isFeatured: boolean('is_featured').notNull().default(false),
+
+    // Moderation
+    status: showcaseStatusEnum('status').notNull().default('pending'),
+    placement: showcasePlacementEnum('placement').notNull().default('private'),
+    reviewReason: text('review_reason'),
+    moderatedBy: uuid('moderated_by').references(() => users.id, {
+      onDelete: 'set null',
+    }),
+    moderatedAt: timestamp('moderated_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    moderationNote: text('moderation_note'),
+
+    // Popularity ranking (from Tranco list, lower = more popular, null = unranked)
+    trancoRank: integer('tranco_rank'),
+    trancoRankUpdatedAt: timestamp('tranco_rank_updated_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+
+    // Vote score (cached sum of upvotes - downvotes)
+    voteScore: integer('vote_score').notNull().default(0),
+
+    // Timestamps
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: index('showcases_user_id_idx').on(table.userId),
+    statusIdx: index('showcases_status_idx').on(table.status),
+    placementIdx: index('showcases_status_placement_idx').on(
+      table.status,
+      table.placement,
+    ),
+    isFeaturedIdx: index('showcases_is_featured_idx').on(table.isFeatured),
+    createdAtIdx: index('showcases_created_at_idx').on(table.createdAt),
+    moderatedByIdx: index('showcases_moderated_by_idx').on(table.moderatedBy),
+    trancoRankIdx: index('showcases_tranco_rank_idx').on(table.trancoRank),
+    voteScoreIdx: index('showcases_vote_score_idx').on(table.voteScore),
+    // Note: GIN indexes for libraries and useCases arrays created via SQL migration
+  }),
+)
+
+export type Showcase = InferSelectModel<typeof showcases>
+export type NewShowcase = InferInsertModel<typeof showcases>
+
+// Showcase votes table (user votes on showcases)
+export const showcaseVotes = pgTable(
+  'showcase_votes',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    showcaseId: uuid('showcase_id')
+      .notNull()
+      .references(() => showcases.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    value: integer('value').notNull(), // 1 for upvote, -1 for downvote
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    showcaseUserUnique: unique().on(table.showcaseId, table.userId),
+    showcaseIdIdx: index('showcase_votes_showcase_id_idx').on(table.showcaseId),
+    userIdIdx: index('showcase_votes_user_id_idx').on(table.userId),
+  }),
+)
+
+export type ShowcaseVote = InferSelectModel<typeof showcaseVotes>
+export type NewShowcaseVote = InferInsertModel<typeof showcaseVotes>
+
+// Relations
+export const usersRelations = relations(users, ({ many }) => ({
+  sessions: many(sessions),
+  oauthAccounts: many(oauthAccounts),
+  roleAssignments: many(roleAssignments),
+  docFeedback: many(docFeedback),
+  loginHistory: many(loginHistory),
+  auditLogs: many(auditLogs),
+  userActivity: many(userActivity),
+  showcases: many(showcases),
+  showcaseVotes: many(showcaseVotes),
+}))
+
+export const rolesRelations = relations(roles, ({ many }) => ({
+  roleAssignments: many(roleAssignments),
+}))
+
+export const roleAssignmentsRelations = relations(
+  roleAssignments,
+  ({ one }) => ({
+    user: one(users, {
+      fields: [roleAssignments.userId],
+      references: [users.id],
+    }),
+    role: one(roles, {
+      fields: [roleAssignments.roleId],
+      references: [roles.id],
+    }),
+  }),
+)
+
+export const sessionsRelations = relations(sessions, ({ one }) => ({
+  user: one(users, {
+    fields: [sessions.userId],
+    references: [users.id],
+  }),
+}))
+
+export const oauthAccountsRelations = relations(oauthAccounts, ({ one }) => ({
+  user: one(users, {
+    fields: [oauthAccounts.userId],
+    references: [users.id],
+  }),
+}))
+
+export const docFeedbackRelations = relations(docFeedback, ({ one }) => ({
+  user: one(users, {
+    fields: [docFeedback.userId],
+    references: [users.id],
+  }),
+  moderator: one(users, {
+    fields: [docFeedback.moderatedBy],
+    references: [users.id],
+  }),
+}))
+
+export const loginHistoryRelations = relations(loginHistory, ({ one }) => ({
+  user: one(users, {
+    fields: [loginHistory.userId],
+    references: [users.id],
+  }),
+}))
+
+export const auditLogsRelations = relations(auditLogs, ({ one }) => ({
+  actor: one(users, {
+    fields: [auditLogs.actorId],
+    references: [users.id],
+  }),
+}))
+
+export const userActivityRelations = relations(userActivity, ({ one }) => ({
+  user: one(users, {
+    fields: [userActivity.userId],
+    references: [users.id],
+  }),
+}))
+
+export const showcasesRelations = relations(showcases, ({ one, many }) => ({
+  user: one(users, {
+    fields: [showcases.userId],
+    references: [users.id],
+  }),
+  moderator: one(users, {
+    fields: [showcases.moderatedBy],
+    references: [users.id],
+  }),
+  votes: many(showcaseVotes),
+}))
+
+export const showcaseVotesRelations = relations(showcaseVotes, ({ one }) => ({
+  showcase: one(showcases, {
+    fields: [showcaseVotes.showcaseId],
+    references: [showcases.id],
+  }),
+  user: one(users, {
+    fields: [showcaseVotes.userId],
+    references: [users.id],
+  }),
+}))
+
+// MCP API Keys table (for authenticating MCP server requests)
+export const mcpApiKeys = pgTable(
+  'mcp_api_keys',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    // The hashed API key (SHA-256)
+    keyHash: varchar('key_hash', { length: 64 }).notNull().unique(),
+    // First 8 chars of key for identification (e.g., "mcp_abc1...")
+    keyPrefix: varchar('key_prefix', { length: 12 }).notNull(),
+    // Human-readable name for the key
+    name: varchar('name', { length: 255 }).notNull(),
+    // Optional user association
+    userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
+    // Rate limit tier (requests per minute)
+    rateLimitPerMinute: integer('rate_limit_per_minute').notNull().default(200),
+    // Key state
+    isActive: boolean('is_active').notNull().default(true),
+    lastUsedAt: timestamp('last_used_at', { withTimezone: true, mode: 'date' }),
+    expiresAt: timestamp('expires_at', { withTimezone: true, mode: 'date' }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    keyHashIdx: index('mcp_api_keys_key_hash_idx').on(table.keyHash),
+    userIdIdx: index('mcp_api_keys_user_id_idx').on(table.userId),
+    isActiveIdx: index('mcp_api_keys_is_active_idx').on(table.isActive),
+  }),
+)
+
+export type McpApiKey = InferSelectModel<typeof mcpApiKeys>
+export type NewMcpApiKey = InferInsertModel<typeof mcpApiKeys>
+
+// MCP Rate Limits table (sliding window rate limiting)
+export const mcpRateLimits = pgTable(
+  'mcp_rate_limits',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    // Identifier for rate limiting (API key ID or IP address)
+    identifier: varchar('identifier', { length: 255 }).notNull(),
+    // Type of identifier
+    identifierType: varchar('identifier_type', { length: 20 }).notNull(), // 'api_key' or 'ip'
+    // Window start (minute granularity)
+    windowStart: timestamp('window_start', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    // Request count in this window
+    requestCount: integer('request_count').notNull().default(1),
+  },
+  (table) => ({
+    identifierWindowUnique: uniqueIndex(
+      'mcp_rate_limits_identifier_window_unique',
+    ).on(table.identifier, table.windowStart),
+    identifierIdx: index('mcp_rate_limits_identifier_idx').on(table.identifier),
+    windowStartIdx: index('mcp_rate_limits_window_start_idx').on(
+      table.windowStart,
+    ),
+  }),
+)
+
+export type McpRateLimit = InferSelectModel<typeof mcpRateLimits>
+export type NewMcpRateLimit = InferInsertModel<typeof mcpRateLimits>
+
+// MCP relations
+export const mcpApiKeysRelations = relations(mcpApiKeys, ({ one }) => ({
+  user: one(users, {
+    fields: [mcpApiKeys.userId],
+    references: [users.id],
+  }),
+}))
+
+// ============================================================================
+// OAuth Client Authorization Tables
+// ============================================================================
+
+// OAuth Authorization Codes (short-lived, 10 min)
+// Note: Uses existing oauth_mcp_* tables for backwards compatibility
+export const oauthAuthorizationCodes = pgTable(
+  'oauth_mcp_authorization_codes',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    codeHash: varchar('code_hash', { length: 64 }).notNull().unique(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    clientId: varchar('client_id', { length: 255 }).notNull(),
+    redirectUri: text('redirect_uri').notNull(),
+    codeChallenge: varchar('code_challenge', { length: 128 }).notNull(),
+    codeChallengeMethod: varchar('code_challenge_method', { length: 8 })
+      .notNull()
+      .default('S256'),
+    scope: text('scope').notNull().default('api'),
+    expiresAt: timestamp('expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    codeHashIdx: index('oauth_mcp_auth_codes_hash_idx').on(table.codeHash),
+    expiresAtIdx: index('oauth_mcp_auth_codes_expires_idx').on(table.expiresAt),
+  }),
+)
+
+export type OAuthAuthorizationCode = InferSelectModel<
+  typeof oauthAuthorizationCodes
+>
+export type NewOAuthAuthorizationCode = InferInsertModel<
+  typeof oauthAuthorizationCodes
+>
+
+// Backwards compatibility aliases
+/** @deprecated Use oauthAuthorizationCodes instead */
+export const oauthMcpAuthorizationCodes = oauthAuthorizationCodes
+/** @deprecated Use OAuthAuthorizationCode instead */
+export type OAuthMcpAuthorizationCode = OAuthAuthorizationCode
+/** @deprecated Use NewOAuthAuthorizationCode instead */
+export type NewOAuthMcpAuthorizationCode = NewOAuthAuthorizationCode
+
+// OAuth Access Tokens (1 hour TTL)
+export const oauthAccessTokens = pgTable(
+  'oauth_mcp_access_tokens',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    tokenHash: varchar('token_hash', { length: 64 }).notNull().unique(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    clientId: varchar('client_id', { length: 255 }).notNull(),
+    scope: text('scope').notNull().default('api'),
+    expiresAt: timestamp('expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    lastUsedAt: timestamp('last_used_at', { withTimezone: true, mode: 'date' }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    tokenHashIdx: index('oauth_mcp_access_tokens_hash_idx').on(table.tokenHash),
+    userIdIdx: index('oauth_mcp_access_tokens_user_idx').on(table.userId),
+    expiresAtIdx: index('oauth_mcp_access_tokens_expires_idx').on(
+      table.expiresAt,
+    ),
+  }),
+)
+
+export type OAuthAccessToken = InferSelectModel<typeof oauthAccessTokens>
+export type NewOAuthAccessToken = InferInsertModel<typeof oauthAccessTokens>
+
+// Backwards compatibility aliases
+/** @deprecated Use oauthAccessTokens instead */
+export const oauthMcpAccessTokens = oauthAccessTokens
+/** @deprecated Use OAuthAccessToken instead */
+export type OAuthMcpAccessToken = OAuthAccessToken
+/** @deprecated Use NewOAuthAccessToken instead */
+export type NewOAuthMcpAccessToken = NewOAuthAccessToken
+
+// OAuth Refresh Tokens (30 day TTL)
+export const oauthRefreshTokens = pgTable(
+  'oauth_mcp_refresh_tokens',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    tokenHash: varchar('token_hash', { length: 64 }).notNull().unique(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    clientId: varchar('client_id', { length: 255 }).notNull(),
+    accessTokenId: uuid('access_token_id').references(
+      () => oauthAccessTokens.id,
+      { onDelete: 'set null' },
+    ),
+    expiresAt: timestamp('expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    tokenHashIdx: index('oauth_mcp_refresh_tokens_hash_idx').on(
+      table.tokenHash,
+    ),
+    userIdIdx: index('oauth_mcp_refresh_tokens_user_idx').on(table.userId),
+  }),
+)
+
+export type OAuthRefreshToken = InferSelectModel<typeof oauthRefreshTokens>
+export type NewOAuthRefreshToken = InferInsertModel<typeof oauthRefreshTokens>
+
+// =============================================================================
+// Builder durable project state
+// =============================================================================
+
+export const builderProjectLegacyImports = pgTable(
+  'builder_project_legacy_imports',
+  {
+    ownerId: uuid('owner_id')
+      .primaryKey()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    completedAt: timestamp('completed_at', {
+      withTimezone: true,
+      mode: 'date',
+    })
+      .notNull()
+      .defaultNow(),
+  },
+)
+
+export const builderProjectSnapshots = pgTable(
+  'builder_project_snapshots',
+  {
+    hash: varchar('hash', { length: 64 }).primaryKey(),
+    sourceBytes: integer('source_bytes'),
+    storedAt: timestamp('stored_at', { withTimezone: true, mode: 'date' }),
+    deletingAt: timestamp('deleting_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    quarantinedAt: timestamp('quarantined_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    storedAtIdx: index('builder_project_snapshots_stored_at_idx').on(
+      table.storedAt,
+    ),
+    hashCheck: check(
+      'builder_project_snapshots_hash_check',
+      sql`${table.hash} ~ '^[a-f0-9]{64}$'`,
+    ),
+    sourceBytesCheck: check(
+      'builder_project_snapshots_source_bytes_check',
+      sql`${table.sourceBytes} IS NULL OR ${table.sourceBytes} BETWEEN 1 AND 1048576`,
+    ),
+  }),
+)
+
+export const builderProjectSnapshotReservations = pgTable(
+  'builder_project_snapshot_reservations',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    ownerId: uuid('owner_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    snapshotHash: varchar('snapshot_hash', { length: 64 })
+      .notNull()
+      .references(() => builderProjectSnapshots.hash, {
+        onDelete: 'cascade',
+      }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    ownerSnapshotUnique: unique(
+      'builder_project_snapshot_reservations_owner_snapshot_unique',
+    ).on(table.ownerId, table.snapshotHash),
+    ownerCreatedAtIdx: index(
+      'builder_project_snapshot_reservations_owner_created_at_idx',
+    ).on(table.ownerId, table.createdAt),
+    snapshotHashIdx: index(
+      'builder_project_snapshot_reservations_snapshot_hash_idx',
+    ).on(table.snapshotHash),
+  }),
+)
+
+export type BuilderProjectSnapshotRow = InferSelectModel<
+  typeof builderProjectSnapshots
+>
+export type NewBuilderProjectSnapshotRow = InferInsertModel<
+  typeof builderProjectSnapshots
+>
+export type BuilderProjectSnapshotReservation = InferSelectModel<
+  typeof builderProjectSnapshotReservations
+>
+
+export const builderProjects = pgTable(
+  'builder_projects',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    ownerId: uuid('owner_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'restrict' }),
+    clientMutationId: uuid('client_mutation_id').notNull(),
+    forkedFromId: uuid('forked_from_id'),
+    title: varchar('title', { length: 160 }).notNull(),
+    description: varchar('description', { length: 1_000 })
+      .notNull()
+      .default(''),
+    snapshotHash: varchar('snapshot_hash', { length: 64 }).notNull(),
+    currentRevisionNumber: integer('current_revision_number')
+      .notNull()
+      .default(1),
+    lastEventSequence: bigint('last_event_sequence', { mode: 'number' })
+      .notNull()
+      .default(0),
+    lastLeaseFencingToken: bigint('last_lease_fencing_token', {
+      mode: 'number',
+    })
+      .notNull()
+      .default(0),
+    deletedAt: timestamp('deleted_at', { withTimezone: true, mode: 'date' }),
+    deletedById: uuid('deleted_by_id').references(() => users.id, {
+      onDelete: 'set null',
+    }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    ownerIdIdx: index('builder_projects_owner_id_idx').on(table.ownerId),
+    ownerUpdatedAtIdx: index('builder_projects_owner_updated_at_idx').on(
+      table.ownerId,
+      table.updatedAt,
+    ),
+    deletedAtIdx: index('builder_projects_deleted_at_idx').on(table.deletedAt),
+    idOwnerUnique: unique('builder_projects_id_owner_unique').on(
+      table.id,
+      table.ownerId,
+    ),
+    ownerMutationUnique: unique('builder_projects_owner_mutation_unique').on(
+      table.ownerId,
+      table.clientMutationId,
+    ),
+    forkedFromFk: foreignKey({
+      columns: [table.forkedFromId],
+      foreignColumns: [table.id],
+      name: 'builder_projects_forked_from_fk',
+    }).onDelete('set null'),
+    snapshotHashFk: foreignKey({
+      columns: [table.snapshotHash],
+      foreignColumns: [builderProjectSnapshots.hash],
+      name: 'builder_projects_snapshot_hash_fk',
+    }).onDelete('restrict'),
+    snapshotHashCheck: check(
+      'builder_projects_snapshot_hash_check',
+      sql`${table.snapshotHash} ~ '^[a-f0-9]{64}$'`,
+    ),
+    revisionNumberCheck: check(
+      'builder_projects_revision_number_check',
+      sql`${table.currentRevisionNumber} > 0`,
+    ),
+    eventSequenceCheck: check(
+      'builder_projects_event_sequence_check',
+      sql`${table.lastEventSequence} BETWEEN 0 AND 9007199254740991`,
+    ),
+    leaseFencingTokenCheck: check(
+      'builder_projects_lease_fencing_token_check',
+      sql`${table.lastLeaseFencingToken} BETWEEN 0 AND 9007199254740991`,
+    ),
+  }),
+)
+
+export type BuilderProjectRow = InferSelectModel<typeof builderProjects>
+export type NewBuilderProjectRow = InferInsertModel<typeof builderProjects>
+
+export const builderProjectUsage = pgTable(
+  'builder_project_usage',
+  {
+    projectId: uuid('project_id')
+      .primaryKey()
+      .references(() => builderProjects.id, { onDelete: 'cascade' }),
+    threads: integer('threads').notNull().default(0),
+    messages: integer('messages').notNull().default(0),
+    runs: integer('runs').notNull().default(0),
+    revisions: integer('revisions').notNull().default(0),
+    events: integer('events').notNull().default(0),
+    payloadBytes: bigint('payload_bytes', { mode: 'number' })
+      .notNull()
+      .default(0),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    nonnegativeCheck: check(
+      'builder_project_usage_nonnegative_check',
+      sql`${table.threads} >= 0 AND ${table.messages} >= 0 AND ${table.runs} >= 0 AND ${table.revisions} >= 0 AND ${table.events} >= 0 AND ${table.payloadBytes} >= 0`,
+    ),
+  }),
+)
+
+export type BuilderProjectUsage = InferSelectModel<typeof builderProjectUsage>
+
+export const builderProjectTombstones = pgTable(
+  'builder_project_tombstones',
+  {
+    projectId: uuid('project_id').primaryKey(),
+    ownerId: uuid('owner_id').references(() => users.id, {
+      onDelete: 'set null',
+    }),
+    deletedAt: timestamp('deleted_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+  },
+  (table) => ({
+    ownerDeletedAtIdx: index(
+      'builder_project_tombstones_owner_deleted_at_idx',
+    ).on(table.ownerId, table.deletedAt),
+  }),
+)
+
+export const builderProjectMutationReceipts = pgTable(
+  'builder_project_mutation_receipts',
+  {
+    projectId: uuid('project_id').notNull(),
+    clientMutationId: uuid('client_mutation_id').notNull(),
+    commandType: varchar('command_type', { length: 40 }).notNull(),
+    requestHash: varchar('request_hash', { length: 64 }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    primaryKey: primaryKey({
+      columns: [table.projectId, table.clientMutationId],
+      name: 'builder_project_mutation_receipts_pk',
+    }),
+    projectFk: foreignKey({
+      columns: [table.projectId],
+      foreignColumns: [builderProjects.id],
+      name: 'builder_project_mutation_receipts_project_fk',
+    }).onDelete('cascade'),
+    commandTypeCheck: check(
+      'builder_project_mutation_receipts_command_type_check',
+      sql`${table.commandType} IN ('project.create', 'project.revise', 'project.delete', 'thread.create', 'run.enqueue', 'run.claim', 'run.cancel', 'run.finish', 'run.finish.fallback', 'transcript.import')`,
+    ),
+    requestHashCheck: check(
+      'builder_project_mutation_receipts_request_hash_check',
+      sql`${table.requestHash} ~ '^[a-f0-9]{64}$'`,
+    ),
+  }),
+)
+
+export type BuilderProjectMutationReceipt = InferSelectModel<
+  typeof builderProjectMutationReceipts
+>
+
+export const builderProjectRevisions = pgTable(
+  'builder_project_revisions',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    projectId: uuid('project_id').notNull(),
+    ownerId: uuid('owner_id').notNull(),
+    clientMutationId: uuid('client_mutation_id').notNull(),
+    parentRevisionId: uuid('parent_revision_id'),
+    revisionNumber: integer('revision_number').notNull(),
+    snapshotHash: varchar('snapshot_hash', { length: 64 }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    projectOwnerFk: foreignKey({
+      columns: [table.projectId, table.ownerId],
+      foreignColumns: [builderProjects.id, builderProjects.ownerId],
+      name: 'builder_project_revisions_project_owner_fk',
+    }).onDelete('cascade'),
+    parentRevisionFk: foreignKey({
+      columns: [table.projectId, table.parentRevisionId],
+      foreignColumns: [table.projectId, table.id],
+      name: 'builder_project_revisions_parent_fk',
+    }).onDelete('cascade'),
+    snapshotHashFk: foreignKey({
+      columns: [table.snapshotHash],
+      foreignColumns: [builderProjectSnapshots.hash],
+      name: 'builder_project_revisions_snapshot_hash_fk',
+    }).onDelete('restrict'),
+    projectRevisionUnique: unique(
+      'builder_project_revisions_project_revision_unique',
+    ).on(table.projectId, table.revisionNumber),
+    projectIdUnique: unique('builder_project_revisions_project_id_unique').on(
+      table.projectId,
+      table.id,
+    ),
+    projectMutationUnique: unique(
+      'builder_project_revisions_project_mutation_unique',
+    ).on(table.projectId, table.clientMutationId),
+    projectCreatedAtIdx: index(
+      'builder_project_revisions_project_created_at_idx',
+    ).on(table.projectId, table.createdAt),
+    snapshotHashIdx: index('builder_project_revisions_snapshot_hash_idx').on(
+      table.snapshotHash,
+    ),
+    snapshotHashCheck: check(
+      'builder_project_revisions_snapshot_hash_check',
+      sql`${table.snapshotHash} ~ '^[a-f0-9]{64}$'`,
+    ),
+    revisionNumberCheck: check(
+      'builder_project_revisions_revision_number_check',
+      sql`${table.revisionNumber} > 0`,
+    ),
+  }),
+)
+
+export type BuilderProjectRevision = InferSelectModel<
+  typeof builderProjectRevisions
+>
+export type NewBuilderProjectRevision = InferInsertModel<
+  typeof builderProjectRevisions
+>
+
+export const builderProjectThreads = pgTable(
+  'builder_project_threads',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    projectId: uuid('project_id').notNull(),
+    ownerId: uuid('owner_id').notNull(),
+    clientMutationId: uuid('client_mutation_id').notNull(),
+    title: varchar('title', { length: 160 }).notNull(),
+    lastMessagePosition: bigint('last_message_position', { mode: 'number' })
+      .notNull()
+      .default(0),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    archivedAt: timestamp('archived_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+  },
+  (table) => ({
+    projectOwnerFk: foreignKey({
+      columns: [table.projectId, table.ownerId],
+      foreignColumns: [builderProjects.id, builderProjects.ownerId],
+      name: 'builder_project_threads_project_owner_fk',
+    }).onDelete('cascade'),
+    projectIdUnique: unique('builder_project_threads_project_id_unique').on(
+      table.projectId,
+      table.id,
+    ),
+    projectMutationUnique: unique(
+      'builder_project_threads_project_mutation_unique',
+    ).on(table.projectId, table.clientMutationId),
+    projectUpdatedAtIdx: index(
+      'builder_project_threads_project_updated_at_idx',
+    ).on(table.projectId, table.updatedAt),
+    messagePositionCheck: check(
+      'builder_project_threads_message_position_check',
+      sql`${table.lastMessagePosition} BETWEEN 0 AND 9007199254740991`,
+    ),
+  }),
+)
+
+export type BuilderProjectThread = InferSelectModel<
+  typeof builderProjectThreads
+>
+export type NewBuilderProjectThread = InferInsertModel<
+  typeof builderProjectThreads
+>
+
+export const builderProjectRuns = pgTable(
+  'builder_project_runs',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    projectId: uuid('project_id').notNull(),
+    ownerId: uuid('owner_id').notNull(),
+    threadId: uuid('thread_id').notNull(),
+    clientMutationId: uuid('client_mutation_id').notNull(),
+    status: builderRunStatusEnum('status').notNull().default('pending'),
+    queueKind: varchar('queue_kind', { length: 10 }).notNull().default('queue'),
+    provider: varchar('provider', { length: 50 }).notNull(),
+    model: varchar('model', { length: 100 }).notNull(),
+    baseRevisionId: uuid('base_revision_id'),
+    resultRevisionId: uuid('result_revision_id'),
+    leaseOwnerId: uuid('lease_owner_id'),
+    leaseFencingToken: bigint('lease_fencing_token', { mode: 'number' })
+      .notNull()
+      .default(0),
+    leaseExpiresAt: timestamp('lease_expires_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    lastHeartbeatAt: timestamp('last_heartbeat_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    error: jsonb('error').$type<BuilderJsonObject>(),
+    activity: jsonb('activity').$type<BuilderJsonObject>(),
+    startedAt: timestamp('started_at', { withTimezone: true, mode: 'date' }),
+    completedAt: timestamp('completed_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    projectOwnerFk: foreignKey({
+      columns: [table.projectId, table.ownerId],
+      foreignColumns: [builderProjects.id, builderProjects.ownerId],
+      name: 'builder_project_runs_project_owner_fk',
+    }).onDelete('cascade'),
+    threadFk: foreignKey({
+      columns: [table.projectId, table.threadId],
+      foreignColumns: [
+        builderProjectThreads.projectId,
+        builderProjectThreads.id,
+      ],
+      name: 'builder_project_runs_thread_fk',
+    }).onDelete('cascade'),
+    baseRevisionFk: foreignKey({
+      columns: [table.projectId, table.baseRevisionId],
+      foreignColumns: [
+        builderProjectRevisions.projectId,
+        builderProjectRevisions.id,
+      ],
+      name: 'builder_project_runs_base_revision_fk',
+    }).onDelete('cascade'),
+    resultRevisionFk: foreignKey({
+      columns: [table.projectId, table.resultRevisionId],
+      foreignColumns: [
+        builderProjectRevisions.projectId,
+        builderProjectRevisions.id,
+      ],
+      name: 'builder_project_runs_result_revision_fk',
+    }).onDelete('cascade'),
+    projectIdUnique: unique('builder_project_runs_project_id_unique').on(
+      table.projectId,
+      table.id,
+    ),
+    projectThreadIdUnique: unique(
+      'builder_project_runs_project_thread_id_unique',
+    ).on(table.projectId, table.threadId, table.id),
+    projectMutationUnique: unique(
+      'builder_project_runs_project_mutation_unique',
+    ).on(table.projectId, table.clientMutationId),
+    projectThreadCreatedAtIdx: index(
+      'builder_project_runs_project_thread_created_at_idx',
+    ).on(table.projectId, table.threadId, table.createdAt),
+    activeLeaseIdx: index('builder_project_runs_active_lease_idx').on(
+      table.status,
+      table.leaseExpiresAt,
+    ),
+    activeProjectUnique: uniqueIndex(
+      'builder_project_runs_active_project_unique',
+    )
+      .on(table.projectId)
+      .where(sql`${table.status} = 'running'`),
+    queueKindCheck: check(
+      'builder_project_runs_queue_kind_check',
+      sql`${table.queueKind} IN ('queue', 'steer')`,
+    ),
+    fencingTokenCheck: check(
+      'builder_project_runs_fencing_token_check',
+      sql`${table.leaseFencingToken} BETWEEN 0 AND 9007199254740991`,
+    ),
+    leasePairCheck: check(
+      'builder_project_runs_lease_pair_check',
+      sql`(${table.leaseOwnerId} IS NULL) = (${table.leaseExpiresAt} IS NULL)`,
+    ),
+    runningLeaseCheck: check(
+      'builder_project_runs_running_lease_check',
+      sql`(${table.status} = 'running') = (${table.leaseOwnerId} IS NOT NULL)`,
+    ),
+    terminalStateCheck: check(
+      'builder_project_runs_terminal_state_check',
+      sql`(${table.status} IN ('interrupted', 'completed', 'failed', 'cancelled')) = (${table.completedAt} IS NOT NULL)`,
+    ),
+    timestampOrderCheck: check(
+      'builder_project_runs_timestamp_order_check',
+      sql`${table.completedAt} IS NULL OR ${table.startedAt} IS NULL OR ${table.completedAt} >= ${table.startedAt}`,
+    ),
+    activitySizeCheck: check(
+      'builder_project_runs_activity_size_check',
+      sql`${table.activity} IS NULL OR (jsonb_typeof(${table.activity}) = 'object' AND pg_column_size(${table.activity}) <= 262144)`,
+    ),
+    errorSizeCheck: check(
+      'builder_project_runs_error_size_check',
+      sql`${table.error} IS NULL OR (jsonb_typeof(${table.error}) = 'object' AND pg_column_size(${table.error}) <= 262144)`,
+    ),
+    resultRevisionCheck: check(
+      'builder_project_runs_result_revision_check',
+      sql`${table.resultRevisionId} IS NULL OR ${table.status} = 'completed'`,
+    ),
+  }),
+)
+
+export type BuilderProjectRun = InferSelectModel<typeof builderProjectRuns>
+export type NewBuilderProjectRun = InferInsertModel<typeof builderProjectRuns>
+
+export const builderProjectMessages = pgTable(
+  'builder_project_messages',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    projectId: uuid('project_id').notNull(),
+    ownerId: uuid('owner_id').notNull(),
+    threadId: uuid('thread_id').notNull(),
+    runId: uuid('run_id'),
+    clientMutationId: uuid('client_mutation_id').notNull(),
+    position: bigint('position', { mode: 'number' }).notNull(),
+    role: builderMessageRoleEnum('role').notNull(),
+    content: text('content').notNull(),
+    parts: jsonb('parts').$type<Array<BuilderJsonObject>>().notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    projectOwnerFk: foreignKey({
+      columns: [table.projectId, table.ownerId],
+      foreignColumns: [builderProjects.id, builderProjects.ownerId],
+      name: 'builder_project_messages_project_owner_fk',
+    }).onDelete('cascade'),
+    threadFk: foreignKey({
+      columns: [table.projectId, table.threadId],
+      foreignColumns: [
+        builderProjectThreads.projectId,
+        builderProjectThreads.id,
+      ],
+      name: 'builder_project_messages_thread_fk',
+    }).onDelete('cascade'),
+    runFk: foreignKey({
+      columns: [table.projectId, table.threadId, table.runId],
+      foreignColumns: [
+        builderProjectRuns.projectId,
+        builderProjectRuns.threadId,
+        builderProjectRuns.id,
+      ],
+      name: 'builder_project_messages_run_fk',
+    }).onDelete('cascade'),
+    projectIdUnique: unique('builder_project_messages_project_id_unique').on(
+      table.projectId,
+      table.id,
+    ),
+    projectMutationUnique: unique(
+      'builder_project_messages_project_mutation_unique',
+    ).on(table.projectId, table.clientMutationId),
+    threadPositionUnique: unique(
+      'builder_project_messages_thread_position_unique',
+    ).on(table.projectId, table.threadId, table.position),
+    projectThreadCreatedAtIdx: index(
+      'builder_project_messages_project_thread_created_at_idx',
+    ).on(table.projectId, table.threadId, table.createdAt),
+    runIdIdx: index('builder_project_messages_run_id_idx').on(table.runId),
+    partsCheck: check(
+      'builder_project_messages_parts_check',
+      sql`jsonb_typeof(${table.parts}) = 'array' AND pg_column_size(${table.parts}) <= 1048576`,
+    ),
+    contentSizeCheck: check(
+      'builder_project_messages_content_size_check',
+      sql`octet_length(${table.content}) <= 1048576`,
+    ),
+    positionCheck: check(
+      'builder_project_messages_position_check',
+      sql`${table.position} BETWEEN 1 AND 9007199254740991`,
+    ),
+  }),
+)
+
+export type BuilderProjectMessage = InferSelectModel<
+  typeof builderProjectMessages
+>
+export type NewBuilderProjectMessage = InferInsertModel<
+  typeof builderProjectMessages
+>
+
+export const builderProjectEvents = pgTable(
+  'builder_project_events',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    projectId: uuid('project_id').notNull(),
+    ownerId: uuid('owner_id').notNull(),
+    threadId: uuid('thread_id'),
+    revisionId: uuid('revision_id'),
+    messageId: uuid('message_id'),
+    runId: uuid('run_id'),
+    sequence: bigint('sequence', { mode: 'number' }).notNull(),
+    clientEventId: uuid('client_event_id').notNull(),
+    clientMutationId: uuid('client_mutation_id'),
+    browserSessionId: uuid('browser_session_id'),
+    type: builderProjectEventTypeEnum('type').notNull(),
+    payload: jsonb('payload').$type<BuilderJsonObject>().notNull(),
+    occurredAt: timestamp('occurred_at', {
+      withTimezone: true,
+      mode: 'date',
+    }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    projectOwnerFk: foreignKey({
+      columns: [table.projectId, table.ownerId],
+      foreignColumns: [builderProjects.id, builderProjects.ownerId],
+      name: 'builder_project_events_project_owner_fk',
+    }).onDelete('cascade'),
+    threadFk: foreignKey({
+      columns: [table.projectId, table.threadId],
+      foreignColumns: [
+        builderProjectThreads.projectId,
+        builderProjectThreads.id,
+      ],
+      name: 'builder_project_events_thread_fk',
+    }).onDelete('cascade'),
+    revisionFk: foreignKey({
+      columns: [table.projectId, table.revisionId],
+      foreignColumns: [
+        builderProjectRevisions.projectId,
+        builderProjectRevisions.id,
+      ],
+      name: 'builder_project_events_revision_fk',
+    }).onDelete('cascade'),
+    messageFk: foreignKey({
+      columns: [table.projectId, table.messageId],
+      foreignColumns: [
+        builderProjectMessages.projectId,
+        builderProjectMessages.id,
+      ],
+      name: 'builder_project_events_message_fk',
+    }).onDelete('cascade'),
+    runFk: foreignKey({
+      columns: [table.projectId, table.runId],
+      foreignColumns: [builderProjectRuns.projectId, builderProjectRuns.id],
+      name: 'builder_project_events_run_fk',
+    }).onDelete('cascade'),
+    projectSequenceUnique: unique(
+      'builder_project_events_project_sequence_unique',
+    ).on(table.projectId, table.sequence),
+    projectClientEventUnique: unique(
+      'builder_project_events_project_client_event_unique',
+    ).on(table.projectId, table.clientEventId),
+    projectCreatedAtIdx: index(
+      'builder_project_events_project_created_at_idx',
+    ).on(table.projectId, table.createdAt),
+    runSequenceIdx: index('builder_project_events_run_sequence_idx').on(
+      table.runId,
+      table.sequence,
+    ),
+    clientMutationIdx: index('builder_project_events_client_mutation_idx').on(
+      table.projectId,
+      table.clientMutationId,
+    ),
+    sequenceCheck: check(
+      'builder_project_events_sequence_check',
+      sql`${table.sequence} BETWEEN 1 AND 9007199254740991`,
+    ),
+    payloadCheck: check(
+      'builder_project_events_payload_check',
+      sql`jsonb_typeof(${table.payload}) = 'object' AND pg_column_size(${table.payload}) <= 262144`,
+    ),
+    entityReferenceCheck: check(
+      'builder_project_events_entity_reference_check',
+      sql`((${table.type}::text NOT LIKE 'revision.%') OR ${table.revisionId} IS NOT NULL)
+        AND ((${table.type}::text NOT LIKE 'thread.%') OR ${table.threadId} IS NOT NULL)
+        AND ((${table.type}::text NOT LIKE 'message.%') OR ${table.messageId} IS NOT NULL)
+        AND ((${table.type}::text NOT LIKE 'run.%') OR ${table.runId} IS NOT NULL)`,
+    ),
+  }),
+)
+
+export type BuilderProjectEventRow = InferSelectModel<
+  typeof builderProjectEvents
+>
+export type NewBuilderProjectEventRow = InferInsertModel<
+  typeof builderProjectEvents
+>
+
+export const builderProjectsRelations = relations(
+  builderProjects,
+  ({ one, many }) => ({
+    owner: one(users, {
+      fields: [builderProjects.ownerId],
+      references: [users.id],
+    }),
+    revisions: many(builderProjectRevisions),
+    threads: many(builderProjectThreads),
+    runs: many(builderProjectRuns),
+    messages: many(builderProjectMessages),
+    events: many(builderProjectEvents),
+  }),
+)
+
+export const builderProjectRevisionsRelations = relations(
+  builderProjectRevisions,
+  ({ one, many }) => ({
+    project: one(builderProjects, {
+      fields: [builderProjectRevisions.projectId],
+      references: [builderProjects.id],
+    }),
+    runsFromRevision: many(builderProjectRuns, {
+      relationName: 'builderRunBaseRevision',
+    }),
+    runsToRevision: many(builderProjectRuns, {
+      relationName: 'builderRunResultRevision',
+    }),
+    events: many(builderProjectEvents),
+  }),
+)
+
+export const builderProjectThreadsRelations = relations(
+  builderProjectThreads,
+  ({ one, many }) => ({
+    project: one(builderProjects, {
+      fields: [builderProjectThreads.projectId],
+      references: [builderProjects.id],
+    }),
+    runs: many(builderProjectRuns),
+    messages: many(builderProjectMessages),
+    events: many(builderProjectEvents),
+  }),
+)
+
+export const builderProjectRunsRelations = relations(
+  builderProjectRuns,
+  ({ one, many }) => ({
+    project: one(builderProjects, {
+      fields: [builderProjectRuns.projectId],
+      references: [builderProjects.id],
+    }),
+    thread: one(builderProjectThreads, {
+      fields: [builderProjectRuns.threadId],
+      references: [builderProjectThreads.id],
+    }),
+    baseRevision: one(builderProjectRevisions, {
+      fields: [builderProjectRuns.baseRevisionId],
+      references: [builderProjectRevisions.id],
+      relationName: 'builderRunBaseRevision',
+    }),
+    resultRevision: one(builderProjectRevisions, {
+      fields: [builderProjectRuns.resultRevisionId],
+      references: [builderProjectRevisions.id],
+      relationName: 'builderRunResultRevision',
+    }),
+    messages: many(builderProjectMessages),
+    events: many(builderProjectEvents),
+  }),
+)
+
+export const builderProjectMessagesRelations = relations(
+  builderProjectMessages,
+  ({ one, many }) => ({
+    project: one(builderProjects, {
+      fields: [builderProjectMessages.projectId],
+      references: [builderProjects.id],
+    }),
+    thread: one(builderProjectThreads, {
+      fields: [builderProjectMessages.threadId],
+      references: [builderProjectThreads.id],
+    }),
+    run: one(builderProjectRuns, {
+      fields: [builderProjectMessages.runId],
+      references: [builderProjectRuns.id],
+    }),
+    events: many(builderProjectEvents),
+  }),
+)
+
+export const builderProjectEventsRelations = relations(
+  builderProjectEvents,
+  ({ one }) => ({
+    project: one(builderProjects, {
+      fields: [builderProjectEvents.projectId],
+      references: [builderProjects.id],
+    }),
+    thread: one(builderProjectThreads, {
+      fields: [builderProjectEvents.threadId],
+      references: [builderProjectThreads.id],
+    }),
+    revision: one(builderProjectRevisions, {
+      fields: [builderProjectEvents.revisionId],
+      references: [builderProjectRevisions.id],
+    }),
+    message: one(builderProjectMessages, {
+      fields: [builderProjectEvents.messageId],
+      references: [builderProjectMessages.id],
+    }),
+    run: one(builderProjectRuns, {
+      fields: [builderProjectEvents.runId],
+      references: [builderProjectRuns.id],
+    }),
+  }),
+)
+
+// =============================================================================
+// Intent Registry Tables
+// =============================================================================
+// These tables power the /intent/registry skill browser. The design is
+// intentionally lean: we only persist what NPM cannot give us efficiently
+// (the verified list of intent-compatible packages, per-version skill
+// frontmatter for fast listing/filtering/diffing). Full SKILL.md bodies are
+// stored deduplicated by content hash so unchanged skills across versions cost
+// one row, not N.
+// =============================================================================
+
+// Verified intent-compatible packages discovered via NPM keyword search
+export const intentPackages = pgTable('intent_packages', {
+  name: varchar('name', { length: 255 }).primaryKey(),
+  verified: boolean('verified').notNull().default(false),
+  firstSeenAt: timestamp('first_seen_at', { withTimezone: true, mode: 'date' })
+    .notNull()
+    .defaultNow(),
+  lastSyncedAt: timestamp('last_synced_at', {
+    withTimezone: true,
+    mode: 'date',
+  })
+    .notNull()
+    .defaultNow(),
+})
+
+export type IntentPackage = InferSelectModel<typeof intentPackages>
+export type NewIntentPackage = InferInsertModel<typeof intentPackages>
+
+// Per-version snapshot of a package's skills (latest + last 5 versions)
+//
+// syncStatus tracks domain progress for each discovered package version:
+//   'pending'  -- version discovered, tarball not yet downloaded/extracted
+//   'synced'   -- skills extracted and indexed successfully
+//   'failed'   -- tarball processing failed (will be retried next cycle)
+// Workflow run/step replay lives in the Workflow Postgres store, not here.
+export const intentPackageVersions = pgTable(
+  'intent_package_versions',
+  {
+    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    packageName: varchar('package_name', { length: 255 })
+      .notNull()
+      .references(() => intentPackages.name, { onDelete: 'cascade' }),
+    version: varchar('version', { length: 100 }).notNull(),
+    skillCount: integer('skill_count').notNull().default(0),
+    publishedAt: timestamp('published_at', {
+      withTimezone: true,
+      mode: 'date',
+    }),
+    // Tarball URL stored at discovery time so the processing phase doesn't
+    // need to re-fetch the full packument
+    tarballUrl: varchar('tarball_url', { length: 1024 }),
+    syncStatus: varchar('sync_status', { length: 20 })
+      .notNull()
+      .default('pending'),
+    syncedAt: timestamp('synced_at', { withTimezone: true, mode: 'date' }),
+    failureReason: text('failure_reason'),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    packageNameIdx: index('intent_package_versions_package_name_idx').on(
+      table.packageName,
+    ),
+    syncStatusIdx: index('intent_package_versions_sync_status_idx').on(
+      table.syncStatus,
+    ),
+    packageVersionUnique: uniqueIndex(
+      'intent_package_versions_package_version_unique',
+    ).on(table.packageName, table.version),
+  }),
+)
+
+export type IntentPackageVersion = InferSelectModel<
+  typeof intentPackageVersions
+>
+export type NewIntentPackageVersion = InferInsertModel<
+  typeof intentPackageVersions
+>
+
+// Deduplicated SKILL.md bodies -- one row per unique content hash
+// Unchanged skills across versions share a single row here
+export const intentSkillContent = pgTable('intent_skill_content', {
+  contentHash: varchar('content_hash', { length: 64 }).primaryKey(),
+  content: text('content').notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true, mode: 'date' })
+    .notNull()
+    .defaultNow(),
+})
+
+export type IntentSkillContent = InferSelectModel<typeof intentSkillContent>
+export type NewIntentSkillContent = InferInsertModel<typeof intentSkillContent>
+
+// Per-skill frontmatter metadata (name, description, type, framework, etc.)
+export const intentSkills = pgTable(
+  'intent_skills',
+  {
+    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    packageVersionId: integer('package_version_id')
+      .notNull()
+      .references(() => intentPackageVersions.id, { onDelete: 'cascade' }),
+    // Skill path relative to skills/ dir, e.g. "db-core/live-queries"
+    name: varchar('name', { length: 255 }).notNull(),
+    description: text('description'),
+    // Skill type: core | sub-skill | framework | lifecycle | composition | security
+    type: varchar('type', { length: 50 }),
+    // Framework: react | vue | solid | svelte | angular (nullable = framework-agnostic)
+    framework: varchar('framework', { length: 50 }),
+    // Other skills that must be loaded before this one
+    requires: text('requires').array(),
+    // File path within the package's skills/ directory, e.g. "db-core/live-queries"
+    skillPath: varchar('skill_path', { length: 500 }),
+    // SHA-256 of the SKILL.md body (for change detection between versions)
+    contentHash: varchar('content_hash', { length: 64 })
+      .notNull()
+      .references(() => intentSkillContent.contentHash),
+    lineCount: integer('line_count').notNull().default(0),
+  },
+  (table) => ({
+    packageVersionIdIdx: index('intent_skills_package_version_id_idx').on(
+      table.packageVersionId,
+    ),
+    nameIdx: index('intent_skills_name_idx').on(table.name),
+    frameworkIdx: index('intent_skills_framework_idx').on(table.framework),
+    typeIdx: index('intent_skills_type_idx').on(table.type),
+    packageVersionSkillUnique: uniqueIndex(
+      'intent_skills_package_version_skill_unique',
+    ).on(table.packageVersionId, table.name),
+  }),
+)
+
+export type IntentSkill = InferSelectModel<typeof intentSkills>
+export type NewIntentSkill = InferInsertModel<typeof intentSkills>
+
+// Relations
+export const intentPackagesRelations = relations(
+  intentPackages,
+  ({ many }) => ({
+    versions: many(intentPackageVersions),
+  }),
+)
+
+export const intentPackageVersionsRelations = relations(
+  intentPackageVersions,
+  ({ one, many }) => ({
+    package: one(intentPackages, {
+      fields: [intentPackageVersions.packageName],
+      references: [intentPackages.name],
+    }),
+    skills: many(intentSkills),
+  }),
+)
+
+export const intentSkillsRelations = relations(intentSkills, ({ one }) => ({
+  packageVersion: one(intentPackageVersions, {
+    fields: [intentSkills.packageVersionId],
+    references: [intentPackageVersions.id],
+  }),
+  content: one(intentSkillContent, {
+    fields: [intentSkills.contentHash],
+    references: [intentSkillContent.contentHash],
+  }),
+}))
+
+// Backwards compatibility aliases
+/** @deprecated Use oauthRefreshTokens instead */
+export const oauthMcpRefreshTokens = oauthRefreshTokens
+/** @deprecated Use OAuthRefreshToken instead */
+export type OAuthMcpRefreshToken = OAuthRefreshToken
+/** @deprecated Use NewOAuthRefreshToken instead */
+export type NewOAuthMcpRefreshToken = NewOAuthRefreshToken
+
+// OAuth relations
+export const oauthAuthorizationCodesRelations = relations(
+  oauthAuthorizationCodes,
+  ({ one }) => ({
+    user: one(users, {
+      fields: [oauthAuthorizationCodes.userId],
+      references: [users.id],
+    }),
+  }),
+)
+
+export const oauthAccessTokensRelations = relations(
+  oauthAccessTokens,
+  ({ one, many }) => ({
+    user: one(users, {
+      fields: [oauthAccessTokens.userId],
+      references: [users.id],
+    }),
+    refreshTokens: many(oauthRefreshTokens),
+  }),
+)
+
+export const oauthRefreshTokensRelations = relations(
+  oauthRefreshTokens,
+  ({ one }) => ({
+    user: one(users, {
+      fields: [oauthRefreshTokens.userId],
+      references: [users.id],
+    }),
+    accessToken: one(oauthAccessTokens, {
+      fields: [oauthRefreshTokens.accessTokenId],
+      references: [oauthAccessTokens.id],
+    }),
+  }),
+)
+
+// Backwards compatibility relation aliases
+/** @deprecated Use oauthAuthorizationCodesRelations instead */
+export const oauthMcpAuthorizationCodesRelations =
+  oauthAuthorizationCodesRelations
+/** @deprecated Use oauthAccessTokensRelations instead */
+export const oauthMcpAccessTokensRelations = oauthAccessTokensRelations
+/** @deprecated Use oauthRefreshTokensRelations instead */
+export const oauthMcpRefreshTokensRelations = oauthRefreshTokensRelations
+
+// TanChat uses TanStack identity and account storage. Conversation execution
+// and resumable streams remain in Cloudflare Durable Objects.
+export const chatWorkspaces = pgTable(
+  'chat_workspaces',
+  {
+    id: text('id').primaryKey(),
+    ownerId: uuid('owner_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    name: text('name').notNull(),
+    policy: jsonb('policy').$type<ChatPolicy>().notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => [index('chat_workspaces_owner_idx').on(table.ownerId)],
+)
+
+export const chatMemberships = pgTable(
+  'chat_memberships',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    role: text('role', { enum: ['owner', 'admin', 'member'] }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.workspaceId, table.userId] }),
+    check(
+      'chat_memberships_role_check',
+      sql`${table.role} IN ('owner', 'admin', 'member')`,
+    ),
+    index('chat_memberships_user_idx').on(table.userId),
+  ],
+)
+
+export const chatBots = pgTable(
+  'chat_bots',
+  {
+    id: text('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+    parentId: text('parent_id'),
+    name: text('name').notNull(),
+    purpose: text('purpose').notNull().default(''),
+    version: bigint('version', { mode: 'number' }).notNull().default(0),
+    avatar: text('avatar'),
+    deletionBatch: text('deletion_batch'),
+    updatedAt: timestamp('updated_at', { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+    archivedAt: timestamp('archived_at', { withTimezone: true }),
+    deletedAt: timestamp('deleted_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => [
+    unique('chat_bots_workspace_id_unique').on(table.workspaceId, table.id),
+    foreignKey({
+      columns: [table.workspaceId, table.parentId],
+      foreignColumns: [table.workspaceId, table.id],
+    }),
+    index('chat_bots_workspace_idx').on(table.workspaceId),
+    check(
+      'chat_personal_assistant_active_check',
+      sql`${table.id} NOT LIKE 'assistant:%' OR (${table.archivedAt} IS NULL AND ${table.deletedAt} IS NULL)`,
+    ),
+  ],
+)
+
+export const chatConversations = pgTable(
+  'chat_conversations',
+  {
+    id: text('id').primaryKey(),
+    botId: text('bot_id')
+      .notNull()
+      .references(() => chatBots.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    createdAt: timestamp('created_at', { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => [
+    unique('chat_conversation_identity').on(
+      table.id,
+      table.botId,
+      table.userId,
+    ),
+  ],
+)
+
+export const chatConversationMains = pgTable(
+  'chat_conversation_mains',
+  {
+    botId: text('bot_id').notNull(),
+    userId: uuid('user_id').notNull(),
+    conversationId: text('conversation_id').notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.botId, table.userId] }),
+    foreignKey({
+      columns: [table.conversationId, table.botId, table.userId],
+      foreignColumns: [
+        chatConversations.id,
+        chatConversations.botId,
+        chatConversations.userId,
+      ],
+    }).onDelete('cascade'),
+  ],
+)
+
+export const chatConversationThreads = pgTable(
+  'chat_conversation_threads',
+  {
+    conversationId: text('conversation_id').primaryKey(),
+    parentConversationId: text('parent_conversation_id').notNull(),
+    botId: text('bot_id').notNull(),
+    userId: uuid('user_id').notNull(),
+    sourceMessageId: text('source_message_id').notNull(),
+    source: jsonb('source').$type<ThreadSource>().notNull(),
+    title: text('title').notNull(),
+    version: integer('version').notNull().default(0),
+    archivedAt: timestamp('archived_at', { withTimezone: true }),
+  },
+  (table) => [
+    foreignKey({
+      name: 'chat_thread_child_identity_fk',
+      columns: [table.conversationId, table.botId, table.userId],
+      foreignColumns: [
+        chatConversations.id,
+        chatConversations.botId,
+        chatConversations.userId,
+      ],
+    }).onDelete('cascade'),
+    foreignKey({
+      name: 'chat_thread_parent_identity_fk',
+      columns: [table.parentConversationId, table.botId, table.userId],
+      foreignColumns: [
+        chatConversations.id,
+        chatConversations.botId,
+        chatConversations.userId,
+      ],
+    }).onDelete('cascade'),
+    check(
+      'chat_thread_not_self',
+      sql`${table.conversationId} <> ${table.parentConversationId}`,
+    ),
+    check('chat_thread_version_nonnegative', sql`${table.version} >= 0`),
+    index('chat_thread_parent_idx').on(table.parentConversationId),
+  ],
+)
+
+export const chatThreadRequests = pgTable(
+  'chat_thread_requests',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    idempotencyKey: uuid('idempotency_key').notNull(),
+    requestDigest: text('request_digest'),
+    parentConversationId: text('parent_conversation_id').notNull(),
+    sourceMessageId: text('source_message_id').notNull(),
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+  },
+  (table) => [
+    primaryKey({
+      columns: [table.workspaceId, table.userId, table.idempotencyKey],
+    }),
+  ],
+)
+
+export const chatCredentials = pgTable('chat_credentials', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  ciphertext: text('ciphertext').notNull(),
+})
+
+export const chatAccountPreferences = pgTable(
+  'chat_account_preferences',
+  {
+    userId: uuid('user_id')
+      .primaryKey()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    timezone: text('timezone'),
+    revision: bigint('revision', { mode: 'number' }).notNull().default(0),
+    timezoneConfirmedAt: bigint('timezone_confirmed_at', { mode: 'number' }),
+    response: jsonb('response').$type<AccountPreferences['response']>(),
+    appearance: jsonb('appearance').$type<AccountPreferences['appearance']>(),
+  },
+  (table) => [
+    check(
+      'chat_preferences_revision_safe',
+      sql`${table.revision} >= 0 AND ${table.revision} <= 9007199254740991`,
+    ),
+  ],
+)
+
+export const chatMemories = pgTable(
+  'chat_memories',
+  {
+    id: uuid('id').primaryKey(),
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    title: text('title').notNull(),
+    body: text('body').notNull(),
+    sourceMessageId: text('source_message_id'),
+    sourceRunId: text('source_run_id'),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+    expiresAt: bigint('expires_at', { mode: 'number' }),
+  },
+  (table) => [
+    index('chat_memory_scope_idx').on(table.conversationId, table.id),
+  ],
+)
+export const chatMemoryCommands = pgTable(
+  'chat_memory_commands',
+  {
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+    commandId: uuid('command_id').notNull(),
+    requestHash: text('request_hash').notNull(),
+    memoryId: uuid('memory_id').notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    operation: text('operation', {
+      enum: ['create', 'update', 'delete'],
+    }).notNull(),
+    completedAt: bigint('completed_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.conversationId, table.commandId] }),
+    index('chat_memory_command_identity_idx').on(
+      table.conversationId,
+      table.memoryId,
+    ),
+  ],
+)
+export const chatMemoryPreferences = pgTable('chat_memory_preferences', {
+  conversationId: text('conversation_id')
+    .primaryKey()
+    .references(() => chatConversations.id, { onDelete: 'cascade' }),
+  enabled: boolean('enabled').notNull(),
+  revision: bigint('revision', { mode: 'number' }).notNull(),
+  updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+})
+
+export const chatComposerDrafts = pgTable(
+  'chat_composer_drafts',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    scope: text('scope').notNull(),
+    value: text('value').notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.userId, table.scope] }),
+    check(
+      'chat_draft_revision_safe',
+      sql`${table.revision}>0 AND ${table.revision}<=9007199254740991`,
+    ),
+  ],
+)
+
+export const chatFileDrafts = pgTable(
+  'chat_file_drafts',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    id: uuid('id').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.workspaceId, table.userId, table.id] }),
+  ],
+)
+
+export const chatBotDrafts = pgTable(
+  'chat_bot_drafts',
+  {
+    workspaceId: text('workspace_id').notNull(),
+    userId: uuid('user_id').notNull(),
+    id: uuid('id').notNull(),
+    botId: text('bot_id').notNull(),
+    conversationId: text('conversation_id').notNull(),
+    parentId: text('parent_id'),
+    text: text('text').notNull().default(''),
+    startedAt: bigint('started_at', { mode: 'number' }),
+    runModel: jsonb('run_model').$type<RunModelSelection>(),
+    referenceInputs: jsonb('reference_inputs')
+      .$type<ReferenceInput[]>()
+      .notNull()
+      .default([]),
+    fileIds: jsonb('file_ids').$type<string[]>().notNull().default([]),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.workspaceId, table.userId, table.id] }),
+    uniqueIndex('chat_bot_draft_bot_idx').on(table.botId),
+    foreignKey({
+      name: 'chat_bot_draft_scope_fk',
+      columns: [table.workspaceId, table.userId, table.id],
+      foreignColumns: [
+        chatFileDrafts.workspaceId,
+        chatFileDrafts.userId,
+        chatFileDrafts.id,
+      ],
+    }),
+    foreignKey({
+      name: 'chat_bot_draft_conversation_fk',
+      columns: [table.conversationId, table.botId, table.userId],
+      foreignColumns: [
+        chatConversations.id,
+        chatConversations.botId,
+        chatConversations.userId,
+      ],
+    }),
+    foreignKey({
+      name: 'chat_bot_draft_workspace_fk',
+      columns: [table.workspaceId, table.botId],
+      foreignColumns: [chatBots.workspaceId, chatBots.id],
+    }),
+    check(
+      'chat_bot_draft_attachments',
+      sql`jsonb_typeof(${table.fileIds})='array' AND jsonb_array_length(${table.fileIds})<=5`,
+    ),
+  ],
+)
+
+export const chatSavedFiles = pgTable(
+  'chat_saved_files',
+  {
+    id: uuid('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    botId: text('bot_id'),
+    conversationId: text('conversation_id'),
+    draftId: uuid('draft_id'),
+    name: text('name').notNull(),
+    mediaType: text('media_type').notNull(),
+    size: integer('size').notNull(),
+    sha256: text('sha256').notNull(),
+    source: text('source', { enum: ['upload', 'assistant'] }).notNull(),
+    state: text('state', { enum: ['pending', 'ready'] }).notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    foreignKey({
+      name: 'chat_file_draft_fk',
+      columns: [table.workspaceId, table.userId, table.draftId],
+      foreignColumns: [
+        chatFileDrafts.workspaceId,
+        chatFileDrafts.userId,
+        chatFileDrafts.id,
+      ],
+    }),
+    foreignKey({
+      name: 'chat_file_conversation_fk',
+      columns: [table.conversationId, table.botId, table.userId],
+      foreignColumns: [
+        chatConversations.id,
+        chatConversations.botId,
+        chatConversations.userId,
+      ],
+    }),
+    foreignKey({
+      name: 'chat_file_workspace_fk',
+      columns: [table.workspaceId, table.botId],
+      foreignColumns: [chatBots.workspaceId, chatBots.id],
+    }),
+    check(
+      'chat_file_scope',
+      sql`(${table.draftId} IS NOT NULL AND ${table.botId} IS NULL AND ${table.conversationId} IS NULL) OR (${table.draftId} IS NULL AND ${table.botId} IS NOT NULL AND ${table.conversationId} IS NOT NULL)`,
+    ),
+    check('chat_file_size', sql`${table.size}>=0 AND ${table.size}<=2097152`),
+    check('chat_file_name', sql`length(${table.name}) BETWEEN 1 AND 180`),
+    check('chat_file_digest', sql`${table.sha256} ~ '^[0-9a-f]{64}$'`),
+    check('chat_file_source', sql`${table.source} IN ('upload','assistant')`),
+    check('chat_file_state', sql`${table.state} IN ('pending','ready')`),
+    index('chat_file_conversation_idx').on(
+      table.workspaceId,
+      table.userId,
+      table.conversationId,
+      table.createdAt,
+      table.id,
+    ),
+    index('chat_file_draft_idx').on(
+      table.workspaceId,
+      table.userId,
+      table.draftId,
+      table.createdAt,
+      table.id,
+    ),
+  ],
+)
+
+export const chatSavedFileImports = pgTable(
+  'chat_saved_file_imports',
+  {
+    targetFileId: uuid('target_file_id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    targetConversationId: text('target_conversation_id')
+      .notNull()
+      .references(() => chatConversations.id),
+    sourceConversationId: text('source_conversation_id').notNull(),
+    sourceFileId: uuid('source_file_id').notNull(),
+    sha256: text('sha256').notNull(),
+    name: text('name').notNull(),
+    mediaType: text('media_type').notNull(),
+    size: integer('size').notNull(),
+    source: text('source', { enum: ['upload', 'assistant'] }).notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    check(
+      'chat_file_import_size',
+      sql`${table.size}>=0 AND ${table.size}<=2097152`,
+    ),
+    check('chat_file_import_digest', sql`${table.sha256} ~ '^[0-9a-f]{64}$'`),
+    check(
+      'chat_file_import_source',
+      sql`${table.source} IN ('upload','assistant')`,
+    ),
+    index('chat_file_import_target_idx').on(
+      table.workspaceId,
+      table.userId,
+      table.targetConversationId,
+    ),
+  ],
+)
+export const chatSkills = pgTable(
+  'chat_skills',
+  {
+    id: uuid('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    enabled: boolean('enabled').notNull(),
+    archived: boolean('archived').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    check(
+      'chat_skill_version',
+      sql`${table.version}>0 AND ${table.version}<=9007199254740991`,
+    ),
+    check(
+      'chat_skill_revision',
+      sql`${table.revision}>0 AND ${table.revision}<=9007199254740991`,
+    ),
+    index('chat_skill_owner_list').on(
+      table.workspaceId,
+      table.userId,
+      table.archived,
+      table.updatedAt,
+      table.id,
+    ),
+  ],
+)
+export const chatSkillVersions = pgTable(
+  'chat_skill_versions',
+  {
+    skillId: uuid('skill_id')
+      .notNull()
+      .references(() => chatSkills.id),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    document: jsonb('document').$type<SkillDocument>().notNull(),
+    contentHash: text('content_hash').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.skillId, table.version] }),
+    check(
+      'chat_skill_saved_version',
+      sql`${table.version}>0 AND ${table.version}<=9007199254740991`,
+    ),
+  ],
+)
+export const chatSkillCommands = pgTable(
+  'chat_skill_commands',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    commandId: uuid('command_id').notNull(),
+    requestHash: text('request_hash').notNull(),
+    receipt: jsonb('receipt').$type<SkillVersion>().notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.workspaceId, table.userId, table.commandId] }),
+  ],
+)
+
+export const chatKodyRefreshClaims = pgTable(
+  'chat_kody_refresh_claims',
+  {
+    userId: uuid('user_id')
+      .primaryKey()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    tokenFingerprint: text('token_fingerprint').notNull(),
+    claimId: uuid('claim_id').notNull(),
+    status: text('status', {
+      enum: ['refreshing', 'completed', 'needs_auth'],
+    }).notNull(),
+    leaseUntil: bigint('lease_until', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    check(
+      'chat_kody_refresh_status',
+      sql`${table.status} IN ('refreshing','completed','needs_auth')`,
+    ),
+  ],
+)
+
+export const chatKodyLinks = pgTable('chat_kody_links', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  subject: text('subject').notNull().unique(),
+  username: text('username').notNull(),
+})
+
+export const chatKodySkillSync = pgTable('chat_kody_skill_sync', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  accountFingerprint: text('account_fingerprint').notNull(),
+  fetchedAt: bigint('fetched_at', { mode: 'number' }).notNull(),
+  revision: bigint('revision', { mode: 'number' }).notNull().default(0),
+  leaseUntil: bigint('lease_until', { mode: 'number' }).notNull().default(0),
+})
+export const chatKodySkillVersions = pgTable(
+  'chat_kody_skill_versions',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    id: text('id').notNull(),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    packageId: uuid('package_id').notNull(),
+    sourceSkillId: text('source_skill_id').notNull(),
+    name: text('name').notNull(),
+    description: text('description').notNull(),
+    document: jsonb('document').$type<SkillDocument>().notNull(),
+    files: jsonb('files')
+      .$type<Array<{ path: string; content: string }>>()
+      .notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+    current: boolean('current').notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.userId, table.id, table.version] }),
+    index('chat_kody_skill_current_idx').on(
+      table.userId,
+      table.current,
+      table.name,
+    ),
+  ],
+)
+export const chatKodySkillSyncStage = pgTable(
+  'chat_kody_skill_sync_stage',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    id: text('id').notNull(),
+    payload: jsonb('payload').notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.userId, table.revision, table.id] }),
+  ],
+)
+
+export const chatPluginInstallations = pgTable(
+  'chat_plugin_installations',
+  {
+    id: uuid('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    currentVersion: bigint('current_version', { mode: 'number' }).notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    enabled: boolean('enabled').notNull(),
+    removed: boolean('removed').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [
+    check('chat_plugin_version_positive', sql`${t.currentVersion}>0`),
+    check('chat_plugin_revision_positive', sql`${t.revision}>0`),
+    index('chat_plugin_owner_list').on(
+      t.workspaceId,
+      t.userId,
+      t.removed,
+      t.updatedAt,
+      t.id,
+    ),
+  ],
+)
+export const chatPluginVersions = pgTable(
+  'chat_plugin_versions',
+  {
+    installationId: uuid('installation_id')
+      .notNull()
+      .references(() => chatPluginInstallations.id),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    digest: text('digest').notNull(),
+    preview: jsonb('preview').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.installationId, t.version] }),
+    check('chat_plugin_saved_version_positive', sql`${t.version}>0`),
+  ],
+)
+export const chatPluginFiles = pgTable(
+  'chat_plugin_files',
+  {
+    installationId: uuid('installation_id').notNull(),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    path: text('path').notNull(),
+    content: text('content').notNull(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.installationId, t.version, t.path] }),
+    foreignKey({
+      columns: [t.installationId, t.version],
+      foreignColumns: [
+        chatPluginVersions.installationId,
+        chatPluginVersions.version,
+      ],
+    }),
+  ],
+)
+export const chatPluginSkillIdentities = pgTable(
+  'chat_plugin_skill_identities',
+  {
+    id: uuid('id').primaryKey(),
+    installationId: uuid('installation_id')
+      .notNull()
+      .references(() => chatPluginInstallations.id),
+    path: text('path').notNull(),
+  },
+  (t) => [unique('chat_plugin_skill_path').on(t.installationId, t.path)],
+)
+export const chatPluginSkillVersions = pgTable(
+  'chat_plugin_skill_versions',
+  {
+    skillId: uuid('skill_id')
+      .notNull()
+      .references(() => chatPluginSkillIdentities.id),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    document: jsonb('document').$type<SkillDocument>().notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.skillId, t.version] })],
+)
+export const chatPluginBindings = pgTable(
+  'chat_plugin_bindings',
+  {
+    installationId: uuid('installation_id').notNull(),
+    version: bigint('version', { mode: 'number' }).notNull(),
+    requirementKey: text('requirement_key').notNull(),
+    serverId: text('server_id').notNull(),
+    endpoint: text('endpoint').notNull(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.installationId, t.version, t.requirementKey] }),
+    foreignKey({
+      columns: [t.installationId, t.version],
+      foreignColumns: [
+        chatPluginVersions.installationId,
+        chatPluginVersions.version,
+      ],
+    }),
+  ],
+)
+export const chatPluginCommands = pgTable(
+  'chat_plugin_commands',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    commandId: uuid('command_id').notNull(),
+    requestHash: text('request_hash').notNull(),
+    receipt: jsonb('receipt').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.workspaceId, t.userId, t.commandId] })],
+)
+
+export const chatMcpAccounts = pgTable(
+  'chat_mcp_accounts',
+  {
+    id: uuid('id').primaryKey(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    label: text('label').notNull(),
+    url: text('url').notNull(),
+    authMode: text('auth_mode', { enum: ['none', 'token', 'oauth'] }).notNull(),
+    enabled: boolean('enabled').notNull(),
+    removed: boolean('removed').notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    grantId: uuid('grant_id').notNull(),
+    tokenRevision: bigint('token_revision', { mode: 'number' }).notNull(),
+    ciphertext: text('ciphertext'),
+    status: text('status', {
+      enum: ['configured', 'checked', 'needs_auth', 'error'],
+    }).notNull(),
+    checkedAt: bigint('checked_at', { mode: 'number' }),
+    error: text('error'),
+    refreshClaim: uuid('refresh_claim'),
+    refreshUntil: bigint('refresh_until', { mode: 'number' }),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [
+    check('chat_mcp_auth_mode', sql`${t.authMode} IN ('none','token','oauth')`),
+    check(
+      'chat_mcp_status',
+      sql`${t.status} IN ('configured','checked','needs_auth','error')`,
+    ),
+    check('chat_mcp_revision', sql`${t.revision}>0`),
+    check('chat_mcp_token_revision', sql`${t.tokenRevision}>=0`),
+    index('chat_mcp_owner').on(t.userId, t.removed, t.id),
+  ],
+)
+export const chatMcpAccountCommands = pgTable(
+  'chat_mcp_account_commands',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    commandId: uuid('command_id').notNull(),
+    requestHash: text('request_hash').notNull(),
+    receipt: jsonb('receipt').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.commandId] })],
+)
+
+export const chatMcpSetupAttempts = pgTable(
+  'chat_mcp_setup_attempts',
+  {
+    id: uuid('id').primaryKey(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    requestHash: text('request_hash').notNull(),
+    status: text('status', {
+      enum: ['review', 'starting', 'authorize', 'complete', 'failed'],
+    }).notNull(),
+    summary: jsonb('summary').notNull(),
+    ciphertext: text('ciphertext').notNull(),
+    stateHash: text('state_hash').unique(),
+    browserHash: text('browser_hash'),
+    expiresAt: bigint('expires_at', { mode: 'number' }).notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [
+    check(
+      'chat_mcp_setup_status',
+      sql`${t.status} IN ('review','starting','authorize','complete','failed')`,
+    ),
+    index('chat_mcp_setup_owner').on(t.userId, t.workspaceId, t.createdAt),
+  ],
+)
+
+export const chatWorkflowRevisions = pgTable(
+  'chat_workflow_revisions',
+  {
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+    workflowId: uuid('workflow_id').notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    commandId: uuid('command_id').notNull(),
+    requestHash: text('request_hash').notNull(),
+    definitionJson: jsonb('definition_json').notNull(),
+    archived: boolean('archived').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({
+      columns: [table.conversationId, table.workflowId, table.revision],
+    }),
+    unique().on(table.conversationId, table.commandId),
+    check('chat_workflow_revision_positive', sql`${table.revision}>0`),
+  ],
+)
+
+export const chatWorkflowChildren = pgTable(
+  'chat_workflow_children',
+  {
+    conversationId: text('conversation_id')
+      .primaryKey()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+    ownerConversationId: text('owner_conversation_id')
+      .notNull()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+    workflowRunId: uuid('workflow_run_id').notNull(),
+    stepId: text('step_id').notNull(),
+    admissionJson: text('admission_json').notNull(),
+  },
+  (table) => [
+    unique().on(table.ownerConversationId, table.workflowRunId, table.stepId),
+    check(
+      'chat_workflow_child_admission_json',
+      sql`jsonb_typeof(${table.admissionJson}::jsonb)='object'`,
+    ),
+  ],
+)
+
+export const chatConversationActivity = pgTable(
+  'chat_conversation_activity',
+  {
+    conversationId: text('conversation_id')
+      .primaryKey()
+      .references(() => chatConversations.id, { onDelete: 'cascade' }),
+    botId: text('bot_id')
+      .notNull()
+      .references(() => chatBots.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    status: text('status').notNull(),
+    activityAt: bigint('activity_at', { mode: 'number' }).notNull(),
+    eventVersion: bigint('event_version', { mode: 'number' }).notNull(),
+    readVersion: bigint('read_version', { mode: 'number' })
+      .notNull()
+      .default(0),
+    preview: text('preview').notNull().default(''),
+    messageCount: bigint('message_count', { mode: 'number' })
+      .notNull()
+      .default(0),
+    queuedCount: bigint('queued_count', { mode: 'number' })
+      .notNull()
+      .default(0),
+    queuePaused: boolean('queue_paused').notNull().default(false),
+  },
+  (table) => [
+    index('chat_activity_user_time').on(table.userId, table.activityAt),
+    check(
+      'chat_activity_status',
+      sql`${table.status} IN ('idle','running','approval','setup','error','completed')`,
+    ),
+  ],
+)
+
+export const chatBotScheduleSuspensions = pgTable(
+  'chat_bot_schedule_suspensions',
+  {
+    botId: text('bot_id')
+      .primaryKey()
+      .references(() => chatBots.id, { onDelete: 'cascade' }),
+    generation: bigint('generation', { mode: 'number' }).notNull().default(0),
+  },
+  (table) => [
+    check(
+      'chat_bot_generation_safe',
+      sql`${table.generation} BETWEEN 0 AND 9007199254740991`,
+    ),
+  ],
+)
+export const chatThreadScheduleSuspensions = pgTable(
+  'chat_thread_schedule_suspensions',
+  {
+    conversationId: text('conversation_id')
+      .primaryKey()
+      .references(() => chatConversationThreads.conversationId, {
+        onDelete: 'cascade',
+      }),
+    generation: bigint('generation', { mode: 'number' }).notNull().default(0),
+  },
+  (table) => [
+    check(
+      'chat_thread_generation_safe',
+      sql`${table.generation} BETWEEN 0 AND 9007199254740991`,
+    ),
+  ],
+)
+export const chatExecutionMembershipGenerations = pgTable(
+  'chat_execution_membership_generations',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    generation: bigint('generation', { mode: 'number' }).notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.workspaceId, table.userId] }),
+    check(
+      'chat_membership_generation_safe',
+      sql`${table.generation} BETWEEN 0 AND 9007199254740991`,
+    ),
+  ],
+)
+
+export const chatConversationCopies = pgTable(
+  'chat_conversation_copies',
+  {
+    id: uuid('id').primaryKey(),
+    retryId: uuid('retry_id')
+      .unique()
+      .references(() => chatConversationRetries.id),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    sourceBotId: text('source_bot_id').notNull(),
+    sourceConversationId: text('source_conversation_id').notNull(),
+    targetBotId: text('target_bot_id').notNull().unique(),
+    targetConversationId: text('target_conversation_id').notNull().unique(),
+    idempotencyKey: text('idempotency_key').notNull(),
+    requestDigest: text('request_digest').notNull(),
+    kind: text('kind').notNull(),
+    boundaryJson: jsonb('boundary_json').notNull(),
+    name: text('name').notNull(),
+    purpose: text('purpose').notNull(),
+    parentId: text('parent_id'),
+    status: text('status').notNull().default('copying'),
+    phase: text('phase').notNull().default('export'),
+    manifestJson: jsonb('manifest_json'),
+    nextPage: bigint('next_page', { mode: 'number' }).notNull().default(0),
+    workVersion: bigint('work_version', { mode: 'number' })
+      .notNull()
+      .default(0),
+    errorCode: text('error_code'),
+    errorMessage: text('error_message'),
+    attempts: bigint('attempts', { mode: 'number' }).notNull().default(0),
+    retryAt: bigint('retry_at', { mode: 'number' }).notNull().default(0),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+    completedAt: bigint('completed_at', { mode: 'number' }),
+  },
+  (table) => [
+    unique().on(table.workspaceId, table.userId, table.idempotencyKey),
+    index('chat_copies_pending').on(
+      table.sourceConversationId,
+      table.phase,
+      table.retryAt,
+    ),
+    index('chat_copies_viewer').on(
+      table.workspaceId,
+      table.userId,
+      table.createdAt,
+    ),
+    check('chat_copy_kind', sql`${table.kind} IN ('duplicate','fork')`),
+    check(
+      'chat_copy_status',
+      sql`${table.status} IN ('copying','ready','failed')`,
+    ),
+    check(
+      'chat_copy_phase',
+      sql`${table.phase} IN ('export','transfer','import','publish','cleanup','done')`,
+    ),
+  ],
+)
+
+export const chatConnectedDevices = pgTable(
+  'chat_connected_devices',
+  {
+    id: uuid('id').primaryKey(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    name: text('name').notNull(),
+    tokenHash: text('token_hash').notNull().unique(),
+    grants: text('grants').notNull().default('[]'),
+    lastSeen: bigint('last_seen', { mode: 'number' }).notNull().default(0),
+    revokedAt: bigint('revoked_at', { mode: 'number' }),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [index('chat_devices_owner').on(t.userId)],
+)
+export const chatDeviceOperations = pgTable(
+  'chat_device_operations',
+  {
+    id: uuid('id').primaryKey(),
+    deviceId: uuid('device_id')
+      .notNull()
+      .references(() => chatConnectedDevices.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id),
+    request: text('request').notNull(),
+    status: text('status').notNull().default('pending'),
+    result: text('result'),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    expiresAt: bigint('expires_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [
+    index('chat_device_operations_pending').on(
+      t.deviceId,
+      t.status,
+      t.expiresAt,
+    ),
+  ],
+)
+
+export const chatDailyUsage = pgTable(
+  'chat_daily_usage',
+  {
+    userId: text('user_id').notNull(),
+    day: text('day').notNull(),
+    turns: bigint('turns', { mode: 'number' }).notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.day] })],
+)
+export const chatScheduledDailyUsage = pgTable(
+  'chat_scheduled_daily_usage',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    day: text('day').notNull(),
+    turns: bigint('turns', { mode: 'number' }).notNull().default(0),
+  },
+  (t) => [
+    primaryKey({ columns: [t.userId, t.day] }),
+    check('chat_scheduled_turns_nonnegative', sql`${t.turns}>=0`),
+  ],
+)
+export const chatRunUsageReceipts = pgTable(
+  'chat_run_usage_receipts',
+  {
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id),
+    runId: text('run_id').notNull(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    botId: text('bot_id')
+      .notNull()
+      .references(() => chatBots.id),
+    scheduled: boolean('scheduled').notNull(),
+    day: text('day').notNull(),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    attemptId: uuid('attempt_id').notNull().unique(),
+  },
+  (t) => [primaryKey({ columns: [t.conversationId, t.runId] })],
+)
+export const chatFundedSpend = pgTable(
+  'chat_funded_spend',
+  {
+    conversationId: text('conversation_id')
+      .notNull()
+      .references(() => chatConversations.id),
+    runId: text('run_id').notNull(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    day: text('day').notNull(),
+    reservedMicros: bigint('reserved_micros', { mode: 'number' }).notNull(),
+    billedMicros: bigint('billed_micros', { mode: 'number' }).notNull(),
+    observedMicros: bigint('observed_micros', { mode: 'number' })
+      .notNull()
+      .default(0),
+    unknown: boolean('unknown').notNull().default(false),
+  },
+  (t) => [
+    primaryKey({ columns: [t.conversationId, t.runId] }),
+    index('chat_funded_spend_day_user').on(t.day, t.userId),
+  ],
+)
+
+export const chatConversationRetries = pgTable(
+  'chat_conversation_retries',
+  {
+    id: uuid('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    sourceBotId: text('source_bot_id').notNull(),
+    sourceConversationId: text('source_conversation_id').notNull(),
+    messageId: text('message_id').notNull(),
+    idempotencyKey: text('idempotency_key').notNull(),
+    sourceJson: jsonb('source_json').notNull(),
+    filePlanJson: jsonb('file_plan_json').notNull(),
+    status: text('status').notNull().default('preparing'),
+    errorCode: text('error_code'),
+    errorMessage: text('error_message'),
+    createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+    updatedAt: bigint('updated_at', { mode: 'number' }).notNull(),
+  },
+  (t) => [
+    unique().on(t.workspaceId, t.userId, t.idempotencyKey),
+    index('chat_retries_viewer').on(t.workspaceId, t.userId, t.createdAt),
+    check(
+      'chat_retry_status',
+      sql`${t.status} IN ('preparing','ready','failed')`,
+    ),
+  ],
+)
+
+export const chatKodyAccountReferenceCatalog = pgTable(
+  'chat_kody_account_reference_catalog',
+  {
+    userId: uuid('user_id')
+      .primaryKey()
+      .references(() => users.id),
+    accountFingerprint: text('account_fingerprint').notNull(),
+    metadata: text('metadata').notNull(),
+    fetchedAt: bigint('fetched_at', { mode: 'number' }).notNull(),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+  },
+)
+
+export const chatMcpReferenceCatalog = pgTable(
+  'chat_mcp_reference_catalog',
+  {
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    serverId: text('server_id').notNull(),
+    fingerprint: text('fingerprint').notNull(),
+    metadata: text('metadata').notNull(),
+    fetchedAt: bigint('fetched_at', { mode: 'number' }).notNull(),
+    refreshStartedAt: bigint('refresh_started_at', {
+      mode: 'number',
+    }).notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.workspaceId, t.userId, t.serverId] })],
+)
+
+export const chatKodyReferenceCatalog = pgTable('chat_kody_reference_catalog', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id),
+  accountFingerprint: text('account_fingerprint').notNull(),
+  metadata: text('metadata').notNull(),
+  fetchedAt: bigint('fetched_at', { mode: 'number' }).notNull(),
+  complete: boolean('complete').notNull().default(false),
+  dataRevision: bigint('data_revision', { mode: 'number' })
+    .notNull()
+    .default(0),
+  refreshStartedAt: bigint('refresh_started_at', { mode: 'number' }).notNull(),
+  revision: bigint('revision', { mode: 'number' }).notNull(),
+})
+export const chatKodyReferenceItems = pgTable(
+  'chat_kody_reference_items',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    revision: bigint('revision', { mode: 'number' }).notNull(),
+    ordinal: bigint('ordinal', { mode: 'number' }).notNull(),
+    payload: jsonb('payload').notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.revision, t.ordinal] })],
+)
+
+export const chatKodyAccountProbe = pgTable('chat_kody_account_probe', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id),
+  accountFingerprint: text('account_fingerprint').notNull(),
+  sourceFingerprint: text('source_fingerprint').notNull().default(''),
+  checkedAt: bigint('checked_at', { mode: 'number' }).notNull(),
+  revision: bigint('revision', { mode: 'number' }).notNull(),
+})
+
+export const chatBotSections = pgTable(
+  'chat_bot_sections',
+  {
+    id: text('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => chatWorkspaces.id),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    name: text('name').notNull(),
+    position: real('position').notNull().default(0),
+    version: bigint('version', { mode: 'number' }).notNull().default(0),
+    sortOverride: text('sort_override'),
+  },
+  (t) => [index('chat_bot_sections_viewer').on(t.workspaceId, t.userId)],
+)
+export const chatBotViewerState = pgTable(
+  'chat_bot_viewer_state',
+  {
+    botId: text('bot_id')
+      .notNull()
+      .references(() => chatBots.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id),
+    pinned: boolean('pinned').notNull().default(false),
+    sectionId: text('section_id').references(() => chatBotSections.id, {
+      onDelete: 'set null',
+    }),
+    position: real('position').notNull().default(0),
+    tags: jsonb('tags').$type<string[]>().notNull().default([]),
+  },
+  (t) => [primaryKey({ columns: [t.botId, t.userId] })],
+)
+export const chatWorkspaceSyncClock = pgTable('chat_workspace_sync_clock', {
+  workspaceId: text('workspace_id')
+    .primaryKey()
+    .references(() => chatWorkspaces.id, { onDelete: 'cascade' }),
+  revision: bigint('revision', { mode: 'number' }).notNull().default(1),
+  publishedRevision: bigint('published_revision', { mode: 'number' })
+    .notNull()
+    .default(0),
+})
+export const chatWorkspaceSyncMembers = pgTable(
+  'chat_workspace_sync_members',
+  {
+    workspaceId: text('workspace_id').notNull(),
+    userId: uuid('user_id').notNull(),
+    generation: uuid('generation').notNull().defaultRandom(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.workspaceId, t.userId] }),
+    foreignKey({
+      columns: [t.workspaceId, t.userId],
+      foreignColumns: [chatMemberships.workspaceId, chatMemberships.userId],
+    }).onDelete('cascade'),
+  ],
+)
+
+export const chatRecipes = pgTable('chat_recipes', {
+  id: text('id').primaryKey(),
+  workspaceId: text('workspace_id')
+    .notNull()
+    .references(() => chatWorkspaces.id),
+  title: text('title').notNull(),
+  description: text('description').notNull(),
+  code: text('code').notNull(),
+  createdAt: bigint('created_at', { mode: 'number' }).notNull(),
+})
+
+export const chatAccountOnboarding = pgTable('chat_account_onboarding', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  revision: bigint('revision', { mode: 'number' }).notNull().default(0),
+  status: text('status').notNull().default('pending'),
+  useCase: text('use_case'),
+  completedAt: bigint('completed_at', { mode: 'number' }),
+})
+export const chatAccountOnboardingCommands = pgTable(
+  'chat_account_onboarding_commands',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => chatAccountOnboarding.userId, { onDelete: 'cascade' }),
+    commandId: uuid('command_id').notNull(),
+    requestDigest: text('request_digest').notNull(),
+    mutationId: uuid('mutation_id').notNull(),
+    resultJson: text('result_json').notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.commandId] })],
+)
+
+export const chatKodyOauthClients = pgTable('chat_kody_oauth_clients', {
+  origin: text('origin').primaryKey(),
+  clientId: text('client_id').notNull(),
+})
+export const chatKodyOauthPending = pgTable(
+  'chat_kody_oauth_pending',
+  {
+    stateHash: text('state_hash').primaryKey(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    payload: text('payload').notNull(),
+    expiresAt: bigint('expires_at', { mode: 'number' }).notNull(),
+  },
+  (table) => [index('chat_kody_oauth_pending_expiry').on(table.expiresAt)],
+)
+
+export const chatAccess = pgTable('chat_access', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  invitedBy: uuid('invited_by').references(() => users.id, {
+    onDelete: 'set null',
+  }),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+})
+export const chatInvites = pgTable(
+  'chat_invites',
+  {
+    tokenHash: text('token_hash').primaryKey(),
+    createdBy: uuid('created_by')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+    redeemedBy: uuid('redeemed_by').references(() => users.id, {
+      onDelete: 'set null',
+    }),
+    redeemedAt: timestamp('redeemed_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    creatorIdx: index('chat_invites_creator_idx').on(table.createdBy),
+  }),
+)
+
+export const chatWaitlist = pgTable('chat_waitlist', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+})

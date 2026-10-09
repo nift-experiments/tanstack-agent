@@ -1,0 +1,71 @@
+import { redirect, createFileRoute } from '@tanstack/react-router'
+import * as v from 'valibot'
+import { seo } from '~/utils/seo'
+import { ShowcaseModerationPage } from '~/components/ShowcaseModerationPage'
+import { listShowcasesForModerationQueryOptions } from '~/queries/showcases'
+import { requireCapability } from '~/utils/auth.functions'
+import {
+  libraryIdSchema,
+  pageNumberSchema,
+  pageSizeSchema,
+  showcaseStatusSchema,
+  showcasePlacementSchema,
+} from '~/utils/schemas'
+
+const searchSchema = v.object({
+  page: v.optional(pageNumberSchema, 1),
+  pageSize: v.optional(pageSizeSchema, 50),
+  placement: v.optional(showcasePlacementSchema),
+  status: v.optional(v.pipe(v.array(showcaseStatusSchema), v.maxLength(3))),
+  libraryId: v.optional(v.pipe(v.array(libraryIdSchema), v.maxLength(16))),
+  isFeatured: v.optional(v.boolean()),
+})
+
+export const Route = createFileRoute('/admin/showcases/')({
+  staleTime: 1000 * 60 * 5, // 5 minutes
+  beforeLoad: async () => {
+    try {
+      const user = await requireCapability({
+        data: { capability: 'moderate-showcases' },
+      })
+      return { user }
+    } catch {
+      throw redirect({ to: '/login' })
+    }
+  },
+  validateSearch: searchSchema,
+  loaderDeps: ({ search }) => ({
+    page: search.page,
+    pageSize: search.pageSize,
+    status: search.status,
+    placement: search.placement,
+    libraryId: search.libraryId,
+    isFeatured: search.isFeatured,
+  }),
+  loader: async ({ deps, context: { queryClient } }) => {
+    await queryClient.ensureQueryData(
+      listShowcasesForModerationQueryOptions({
+        pagination: {
+          page: deps.page,
+          pageSize: deps.pageSize,
+        },
+        filters: {
+          status: deps.status,
+          placement: deps.placement,
+          libraryId: deps.libraryId,
+          isFeatured: deps.isFeatured,
+        },
+      }),
+    )
+  },
+  headers: () => ({
+    'cache-control': 'private, max-age=0, must-revalidate',
+  }),
+  component: ShowcaseModerationPage,
+  head: () => ({
+    meta: seo({
+      title: 'Moderate Showcases | Admin | TanStack',
+      description: 'Moderate product showcase submissions',
+    }),
+  }),
+})

@@ -1,0 +1,26 @@
+{
+  "checkpoint": "T3",
+  "scope": "representative proof, not corpus parity or final benchmark",
+  "request_time_shell_retained": true,
+  "service_entry_byte_equal_to_upstream": true,
+  "evidence": {
+    "dynamic-shell-contract.json": "4f0870f8200239325195d6eb74653e44036c6c6427d103633b0f3aeba59a00cf",
+    "rich-proof/results.json": "ed81946b2856e4e6a6ed317ec766f76932080ee3eb50979854d8cea80c50592a",
+    "query-interaction-proof.json": "81721e9f11a113b8b74fa1b57167a81048196ecd4220414cfdab403973a07a76",
+    "proof-browser-tanstack-agent-edit.json": "e2bba14b571e32688ebadaef450fbc9273268c55dd7e5c9c9fec8cf2ea00bd8a",
+    "seo-proof.json": "4e84ec32fc2f5e1ceaf76bca26b0d079ba2c2d55944645f184897f0cf3b4f153",
+    "final-test-suite": "5567fd66fcc777cc46cb3639b77bd0b44332cc777f1b7eb8fdf8b135f0e79a82"
+  },
+  "live_backend_integration": false,
+  "accepted": true,
+  "full_tests": {
+    "unit": 544,
+    "chat": 2269,
+    "desktop_pass": 20,
+    "desktop_skip": 1,
+    "typescript": "pass",
+    "lint_errors": 0,
+    "lint_warnings": 101
+  },
+  "full_test_command_exit": 0
+}

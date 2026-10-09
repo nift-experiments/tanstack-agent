@@ -1,0 +1,445 @@
+import { Link, redirect, createFileRoute } from '@tanstack/react-router'
+import { useState, useMemo, useCallback } from 'react'
+import { useRemoveUsersFromRole } from '~/utils/mutations'
+import { useQuery } from '@tanstack/react-query'
+import { getRole, getUsersWithRole } from '~/utils/roles.functions'
+import { useCurrentUserQuery } from '~/hooks/useCurrentUser'
+import { flexRender } from '@tanstack/react-table'
+import {
+  getCoreRowModel,
+  useLegacyTable as useReactTable,
+} from '@tanstack/react-table/legacy'
+import type { LegacyColumnDef as ColumnDef } from '@tanstack/react-table/legacy'
+import {
+  ArrowLeftIcon,
+  LockIcon,
+  TrashIcon,
+  UserIcon,
+  UsersIcon,
+} from '@phosphor-icons/react'
+import { requireCapability } from '~/utils/auth.functions'
+import { hasCapability } from '~/db/types'
+import { Badge, Button } from '~/ui'
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+} from '~/components/ds/ui'
+
+export const Route = createFileRoute('/admin/roles/$roleId')({
+  beforeLoad: async () => {
+    try {
+      const user = await requireCapability({ data: { capability: 'admin' } })
+      return { user }
+    } catch {
+      throw redirect({ to: '/login' })
+    }
+  },
+  component: RoleDetailPage,
+})
+
+function RoleDetailPage() {
+  const { roleId } = Route.useParams()
+  const [selectedUserIds, setSelectedUserIds] = useState<Set<string>>(new Set())
+  const [confirmRemove, setConfirmRemove] = useState<{
+    userId: string
+    name: string
+  } | null>(null)
+
+  const userQuery = useCurrentUserQuery()
+  const user = userQuery.data
+  const roleQuery = useQuery({
+    queryKey: ['admin', 'role', roleId],
+    queryFn: async () => {
+      return getRole({ data: { roleId } })
+    },
+  })
+  const role = roleQuery.data
+  const usersWithRoleQuery = useQuery({
+    queryKey: ['admin', 'usersWithRole', roleId],
+    queryFn: async () => {
+      return getUsersWithRole({ data: { roleId } })
+    },
+  })
+  const usersWithRole = usersWithRoleQuery.data
+  const removeUsersFromRole = useRemoveUsersFromRole()
+
+  const handleRemoveUsers = useCallback(async () => {
+    if (selectedUserIds.size === 0) return
+
+    try {
+      await removeUsersFromRole.mutateAsync({
+        roleId: roleId,
+        userIds: Array.from(selectedUserIds),
+      })
+      setSelectedUserIds(new Set())
+    } catch (error) {
+      console.error(
+        'Failed to remove users from role:',
+        error instanceof Error ? error.message : 'Unknown error',
+      )
+      alert(
+        error instanceof Error
+          ? error.message
+          : 'Failed to remove users from role',
+      )
+    }
+  }, [selectedUserIds, roleId, removeUsersFromRole])
+
+  const toggleUserSelection = useCallback(
+    (userId: string) => {
+      const newSelection = new Set(selectedUserIds)
+      if (newSelection.has(userId)) {
+        newSelection.delete(userId)
+      } else {
+        newSelection.add(userId)
+      }
+      setSelectedUserIds(newSelection)
+    },
+    [selectedUserIds],
+  )
+
+  const toggleAllSelection = useCallback(() => {
+    if (!usersWithRole) return
+    if (selectedUserIds.size === usersWithRole.length) {
+      setSelectedUserIds(new Set())
+    } else {
+      setSelectedUserIds(new Set(usersWithRole.map((u) => u._id)))
+    }
+  }, [selectedUserIds, usersWithRole])
+
+  const columns = useMemo<ColumnDef<any, any>[]>(
+    () => [
+      {
+        id: 'select',
+        header: () => (
+          <input
+            type="checkbox"
+            checked={
+              usersWithRole
+                ? selectedUserIds.size === usersWithRole.length &&
+                  usersWithRole.length > 0
+                : false
+            }
+            onChange={toggleAllSelection}
+            className="h-4 w-4 accent-blue-600"
+          />
+        ),
+        cell: ({ row }) => (
+          <input
+            type="checkbox"
+            checked={selectedUserIds.has(row.original._id)}
+            onChange={() => toggleUserSelection(row.original._id)}
+            className="h-4 w-4 accent-blue-600"
+          />
+        ),
+      },
+      {
+        id: 'user',
+        header: 'User',
+        cell: ({ row }) => {
+          const user = row.original
+          const displayName = user.name || user.displayUsername || ''
+          return (
+            <div className="flex items-center gap-3">
+              <div className="shrink-0 h-10 w-10">
+                {user.image ? (
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src={user.image}
+                    alt=""
+                  />
+                ) : (
+                  <div className="h-10 w-10 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
+                    <UserIcon className="text-gray-500 dark:text-gray-400" />
+                  </div>
+                )}
+              </div>
+              {displayName && (
+                <div className="text-sm font-medium text-gray-900 dark:text-white">
+                  {displayName}
+                </div>
+              )}
+            </div>
+          )
+        },
+      },
+      {
+        accessorKey: 'email',
+        header: 'Email',
+        cell: ({ getValue }) => (
+          <div className="text-sm text-gray-900 dark:text-white">
+            {getValue() as string}
+          </div>
+        ),
+      },
+      {
+        id: 'capabilities',
+        header: 'Direct Capabilities',
+        cell: ({ row }) => {
+          const user = row.original
+          return (
+            <div className="flex flex-wrap gap-1">
+              {(user.capabilities || []).map((capability: string) => (
+                <Badge key={capability} variant="info">
+                  {capability}
+                </Badge>
+              ))}
+              {(!user.capabilities || user.capabilities.length === 0) && (
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  None
+                </span>
+              )}
+            </div>
+          )
+        },
+      },
+      {
+        id: 'actions',
+        header: 'Actions',
+        cell: ({ row }) => {
+          const user = row.original
+          return (
+            <button
+              onClick={() => {
+                setConfirmRemove({
+                  userId: user._id,
+                  name: user.name || user.email,
+                })
+              }}
+              className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
+            >
+              <TrashIcon className="w-4 h-4" />
+            </button>
+          )
+        },
+      },
+    ],
+    [selectedUserIds, usersWithRole, toggleAllSelection, toggleUserSelection],
+  )
+
+  const tableData = useMemo(() => usersWithRole ?? [], [usersWithRole])
+
+  // eslint-disable-next-line react-hooks/incompatible-library
+  const table = useReactTable({
+    data: tableData,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  })
+
+  if (user === undefined) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div>Loading...</div>
+      </div>
+    )
+  }
+
+  const capabilities = user?.capabilities || []
+  const canAdmin = hasCapability(capabilities, 'admin')
+  if (user && !canAdmin) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <LockIcon className="text-4xl text-red-500 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold mb-2">Access Denied</h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            You don't have permission to access the admin area.
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!role) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-2">Role Not Found</h1>
+          <Link
+            to="/admin/roles"
+            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+          >
+            Back to Roles
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="w-full p-4">
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-4">
+            <Link
+              to="/admin/roles"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+            >
+              <ArrowLeftIcon className="w-5 h-5" />
+            </Link>
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+                {role.name}
+              </h1>
+              {role.description && (
+                <p className="text-gray-600 dark:text-gray-400 mt-1">
+                  {role.description}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-4 flex items-center gap-4">
+          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            <UsersIcon className="w-5 h-5" />
+            <span className="text-sm">
+              {usersWithRole?.length || 0} user(s) with this role
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-1">
+            {role.capabilities.map((capability) => (
+              <Badge key={capability} variant="info">
+                {capability}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        {selectedUserIds.size > 0 && (
+          <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-between">
+            <span className="text-sm font-medium text-gray-900 dark:text-white">
+              {selectedUserIds.size} user(s) selected
+            </span>
+            <Button
+              onClick={() => {
+                if (
+                  window.confirm(
+                    `Remove ${selectedUserIds.size} user(s) from this role?`,
+                  )
+                ) {
+                  handleRemoveUsers()
+                }
+              }}
+              color="red"
+            >
+              Remove from Role
+            </Button>
+          </div>
+        )}
+
+        <Dialog
+          open={confirmRemove !== null}
+          onOpenChange={(open) => {
+            if (!open) setConfirmRemove(null)
+          }}
+        >
+          <DialogContent size="sm">
+            <DialogHeader
+              title="Confirm Removal"
+              description={
+                confirmRemove
+                  ? `Remove ${confirmRemove.name} from role "${role?.name}"?`
+                  : undefined
+              }
+            />
+            <DialogFooter>
+              <Button
+                onClick={() => setConfirmRemove(null)}
+                variant="secondary"
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={async () => {
+                  if (!confirmRemove) return
+                  try {
+                    await removeUsersFromRole.mutateAsync({
+                      roleId: roleId,
+                      userIds: [confirmRemove.userId],
+                    })
+                    setConfirmRemove(null)
+                  } catch (error) {
+                    console.error(
+                      'Failed to remove user from role:',
+                      error instanceof Error ? error.message : 'Unknown error',
+                    )
+                    alert(
+                      error instanceof Error
+                        ? error.message
+                        : 'Failed to remove user',
+                    )
+                  }
+                }}
+                color="red"
+              >
+                Remove
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50 dark:bg-gray-700">
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <tr key={headerGroup.id}>
+                    {headerGroup.headers.map((header) => (
+                      <th
+                        key={header.id}
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                      >
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(
+                              header.column.columnDef.header,
+                              header.getContext(),
+                            )}
+                      </th>
+                    ))}
+                  </tr>
+                ))}
+              </thead>
+              <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-600">
+                {table.getRowModel().rows.map((row) => (
+                  <tr
+                    key={row.id}
+                    className={`hover:bg-gray-50 dark:hover:bg-gray-700 ${
+                      selectedUserIds.has(row.original._id)
+                        ? 'bg-blue-50 dark:bg-blue-900/20'
+                        : ''
+                    }`}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <td key={cell.id} className="px-6 py-4 whitespace-nowrap">
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext(),
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {(!usersWithRole || usersWithRole.length === 0) && (
+            <div className="text-center py-12">
+              <UsersIcon className="mx-auto h-12 w-12 text-gray-400" />
+              <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-white">
+                No users with this role
+              </h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                Users assigned to this role will appear here.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}

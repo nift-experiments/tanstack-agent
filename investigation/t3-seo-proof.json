@@ -1,0 +1,758 @@
+[
+  {
+    "name": "upstream",
+    "route": "/ethos",
+    "title": "TanStack Ethos",
+    "meta": [
+      {
+        "key": "description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "og:image",
+        "content": "https://tanstack.com/assets/og-DYZgk_Yd.png"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "TanStack | High Quality Open-Source Software for Web Developers"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "TanStack Ethos"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/ethos"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "twitter:image",
+        "content": "https://tanstack.com/assets/og-DYZgk_Yd.png"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "TanStack | High Quality Open-Source Software for Web Developers"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "TanStack Ethos"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/ethos"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/ethos"
+  },
+  {
+    "name": "upstream",
+    "route": "/query/latest/docs/framework/react/overview",
+    "title": "Overview | TanStack Query React Docs",
+    "meta": [
+      {
+        "key": "description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "og:image",
+        "content": "$ORIGIN/api/og/query.png?v=2&title=Overview&description=TanStack+Query+%28formerly+known+as+React+Query%29+is+often+described+as+the+missing+data-fetching+library+for+web+applications%2C+but+in+more+technical+terms%2C+it+ma%E2%80%A6"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/query/latest/docs/framework/react/overview"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "twitter:image",
+        "content": "$ORIGIN/api/og/query.png?v=2&title=Overview&description=TanStack+Query+%28formerly+known+as+React+Query%29+is+often+described+as+the+missing+data-fetching+library+for+web+applications%2C+but+in+more+technical+terms%2C+it+ma%E2%80%A6"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/query/latest/docs/framework/react/overview"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/query/latest/docs/framework/react/overview"
+  },
+  {
+    "name": "upstream",
+    "route": "/start/latest/docs/framework/react/build-from-scratch",
+    "title": "Build a Project from Scratch | TanStack Start React Docs",
+    "meta": [
+      {
+        "key": "description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "og:image",
+        "content": "$ORIGIN/api/og/start.png?v=2&title=Build+a+Project+from+Scratch&description=If+you+already+created+a+project+with+the+CLI+or+by+cloning+an+example+from+the+Getting+Started+guide%2C+you+can+skip+this+guide+and+move+on+to+the+Routing+guide%E2%80%A6"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "twitter:image",
+        "content": "$ORIGIN/api/og/start.png?v=2&title=Build+a+Project+from+Scratch&description=If+you+already+created+a+project+with+the+CLI+or+by+cloning+an+example+from+the+Getting+Started+guide%2C+you+can+skip+this+guide+and+move+on+to+the+Routing+guide%E2%80%A6"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+  },
+  {
+    "name": "tanstack",
+    "route": "/ethos",
+    "title": "TanStack Ethos",
+    "meta": [
+      {
+        "key": "description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "og:image",
+        "content": "https://tanstack.com/assets/og-DYZgk_Yd.png"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "TanStack | High Quality Open-Source Software for Web Developers"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "TanStack Ethos"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/ethos"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "twitter:image",
+        "content": "https://tanstack.com/assets/og-DYZgk_Yd.png"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "TanStack | High Quality Open-Source Software for Web Developers"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "TanStack Ethos"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/ethos"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/ethos"
+  },
+  {
+    "name": "tanstack",
+    "route": "/query/latest/docs/framework/react/overview",
+    "title": "Overview | TanStack Query React Docs",
+    "meta": [
+      {
+        "key": "description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "og:image",
+        "content": "$ORIGIN/api/og/query.png?v=2&title=Overview&description=TanStack+Query+%28formerly+known+as+React+Query%29+is+often+described+as+the+missing+data-fetching+library+for+web+applications%2C+but+in+more+technical+terms%2C+it+ma%E2%80%A6"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/query/latest/docs/framework/react/overview"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "twitter:image",
+        "content": "$ORIGIN/api/og/query.png?v=2&title=Overview&description=TanStack+Query+%28formerly+known+as+React+Query%29+is+often+described+as+the+missing+data-fetching+library+for+web+applications%2C+but+in+more+technical+terms%2C+it+ma%E2%80%A6"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/query/latest/docs/framework/react/overview"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/query/latest/docs/framework/react/overview"
+  },
+  {
+    "name": "tanstack",
+    "route": "/start/latest/docs/framework/react/build-from-scratch",
+    "title": "Build a Project from Scratch | TanStack Start React Docs",
+    "meta": [
+      {
+        "key": "description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "og:image",
+        "content": "$ORIGIN/api/og/start.png?v=2&title=Build+a+Project+from+Scratch&description=If+you+already+created+a+project+with+the+CLI+or+by+cloning+an+example+from+the+Getting+Started+guide%2C+you+can+skip+this+guide+and+move+on+to+the+Routing+guide%E2%80%A6"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "twitter:image",
+        "content": "$ORIGIN/api/og/start.png?v=2&title=Build+a+Project+from+Scratch&description=If+you+already+created+a+project+with+the+CLI+or+by+cloning+an+example+from+the+Getting+Started+guide%2C+you+can+skip+this+guide+and+move+on+to+the+Routing+guide%E2%80%A6"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+  },
+  {
+    "name": "tanstack-agent",
+    "route": "/ethos",
+    "title": "TanStack Ethos",
+    "meta": [
+      {
+        "key": "description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "og:image",
+        "content": "https://tanstack.com/assets/og-DYZgk_Yd.png"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "TanStack | High Quality Open-Source Software for Web Developers"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "TanStack Ethos"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/ethos"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "Our philosophy and commitment to building for the open web."
+      },
+      {
+        "key": "twitter:image",
+        "content": "https://tanstack.com/assets/og-DYZgk_Yd.png"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "TanStack | High Quality Open-Source Software for Web Developers"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "TanStack Ethos"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/ethos"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/ethos"
+  },
+  {
+    "name": "tanstack-agent",
+    "route": "/query/latest/docs/framework/react/overview",
+    "title": "Overview | TanStack Query React Docs",
+    "meta": [
+      {
+        "key": "description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "og:image",
+        "content": "$ORIGIN/api/og/query.png?v=2&title=Overview&description=TanStack+Query+%28formerly+known+as+React+Query%29+is+often+described+as+the+missing+data-fetching+library+for+web+applications%2C+but+in+more+technical+terms%2C+it+ma%E2%80%A6"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/query/latest/docs/framework/react/overview"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "TanStack Query (formerly known as React Query) is often described as the missing data-fetching library for web applications, but in more technical terms, it makes fetching, caching, synchronizing and..."
+      },
+      {
+        "key": "twitter:image",
+        "content": "$ORIGIN/api/og/query.png?v=2&title=Overview&description=TanStack+Query+%28formerly+known+as+React+Query%29+is+often+described+as+the+missing+data-fetching+library+for+web+applications%2C+but+in+more+technical+terms%2C+it+ma%E2%80%A6"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "Overview | TanStack Query React Docs"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/query/latest/docs/framework/react/overview"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/query/latest/docs/framework/react/overview"
+  },
+  {
+    "name": "tanstack-agent",
+    "route": "/start/latest/docs/framework/react/build-from-scratch",
+    "title": "Build a Project from Scratch | TanStack Start React Docs",
+    "meta": [
+      {
+        "key": "description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "keywords",
+        "content": null
+      },
+      {
+        "key": "og:description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "og:image",
+        "content": "$ORIGIN/api/og/start.png?v=2&title=Build+a+Project+from+Scratch&description=If+you+already+created+a+project+with+the+CLI+or+by+cloning+an+example+from+the+Getting+Started+guide%2C+you+can+skip+this+guide+and+move+on+to+the+Routing+guide%E2%80%A6"
+      },
+      {
+        "key": "og:image:alt",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "og:site_name",
+        "content": "TanStack"
+      },
+      {
+        "key": "og:title",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "key": "og:url",
+        "content": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+      },
+      {
+        "key": "theme-color",
+        "content": "#eeebd4"
+      },
+      {
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "key": "twitter:creator",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:description",
+        "content": "If you already created a project with the CLI or by cloning an example from the Getting Started guide, you can skip this guide and move on to the Routing guide. So you want to build a TanStack Start..."
+      },
+      {
+        "key": "twitter:image",
+        "content": "$ORIGIN/api/og/start.png?v=2&title=Build+a+Project+from+Scratch&description=If+you+already+created+a+project+with+the+CLI+or+by+cloning+an+example+from+the+Getting+Started+guide%2C+you+can+skip+this+guide+and+move+on+to+the+Routing+guide%E2%80%A6"
+      },
+      {
+        "key": "twitter:image:alt",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "twitter:site",
+        "content": "@tan_stack"
+      },
+      {
+        "key": "twitter:title",
+        "content": "Build a Project from Scratch | TanStack Start React Docs"
+      },
+      {
+        "key": "twitter:url",
+        "content": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+      },
+      {
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "canonical": "https://tanstack.com/start/latest/docs/framework/react/build-from-scratch"
+  }
+]

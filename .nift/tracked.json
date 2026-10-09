@@ -1,8 +1,18 @@
 {
   "tracked": [
     {
-      "name": "/",
-      "title": "index",
+      "name": "_nift/docs/0",
+      "title": "docs/framework/react/overview.md",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "_nift/docs/1",
+      "title": "docs/start/framework/react/build-from-scratch.md",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "_nift/docs-manifest",
+      "title": "Published document manifest",
       "template": "templates/template.html"
     }
   ]

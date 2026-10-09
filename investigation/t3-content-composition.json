@@ -1,0 +1,28 @@
+{
+  "source_model": "maintained TanStack document projections",
+  "published_documents": [
+    {
+      "repo": "tanstack/query",
+      "ref": "main",
+      "file": "docs/framework/react/overview.md",
+      "source": "tanstack--query--main/docs/framework/react/overview",
+      "maintained": "sources/docs/tanstack--query--main/docs/framework/react/overview.document",
+      "projection": "sources/docs/tanstack--query--main/docs/framework/react/overview.document",
+      "name": "_nift/docs/0"
+    },
+    {
+      "repo": "tanstack/router",
+      "ref": "main",
+      "file": "docs/start/framework/react/build-from-scratch.md",
+      "source": "tanstack--router--main/docs/start/framework/react/build-from-scratch",
+      "maintained": "sources/docs/tanstack--router--main/docs/start/framework/react/build-from-scratch.document",
+      "projection": "sources/docs/tanstack--router--main/docs/start/framework/react/build-from-scratch.document",
+      "name": "_nift/docs/1"
+    }
+  ],
+  "projection_semantic_equal": true,
+  "terminal_whitespace_normalized": true,
+  "request_time_TanStack_shell": true,
+  "partner_session_rotation_retained": true,
+  "core_changes": false
+}

@@ -1,0 +1,100 @@
+import { createRouter } from '@tanstack/react-router'
+import { setupRouterSsrQueryIntegration } from '@tanstack/react-router-ssr-query'
+import { routeTree } from './routeTree.gen'
+import { DefaultCatchBoundary } from './components/DefaultCatchBoundary'
+import { NotFound } from './components/NotFound'
+import { QueryClient } from '@tanstack/react-query'
+import * as Sentry from '@sentry/tanstackstart-react'
+import { installStaleAppReloadHandlers } from './utils/stale-app-reload'
+import { redactByokRequestHeaders } from './utils/sentry-redaction'
+
+if (typeof document !== 'undefined') {
+  installStaleAppReloadHandlers()
+
+  Sentry.init({
+    dsn: 'https://ac4bfc43ff4a892f8dc7053c4a50d92f@o4507236158537728.ingest.us.sentry.io/4507236163649536',
+    enabled: import.meta.env.PROD,
+    sendDefaultPii: true,
+    // Performance Monitoring
+    tracesSampleRate: 1.0, //  Capture 100% of the transactions
+    // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+    tracePropagationTargets: ['localhost', /^https:\/\/tanstack\.com\//],
+    beforeSend(event) {
+      redactByokRequestHeaders(event)
+      // Filter out errors from third-party ad tech scripts (e.g. Publift's
+      // Fuse Platform ftUtils.js) that are not actionable by us.
+      const frames = event.exception?.values?.flatMap(
+        (v) => v.stacktrace?.frames ?? [],
+      )
+      if (
+        frames &&
+        frames.length > 0 &&
+        frames.every((frame) => {
+          const filename = frame.filename ?? ''
+          return (
+            filename.includes('ftUtils.js') ||
+            filename.includes('fuseplatform.net')
+          )
+        })
+      ) {
+        return null
+      }
+      return event
+    },
+  })
+}
+
+export function getRouter() {
+  const queryClient: QueryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5, // 5 minutes
+      },
+    },
+  })
+
+  const router = createRouter({
+    routeTree,
+    defaultPreload: 'intent',
+    defaultErrorComponent: DefaultCatchBoundary,
+    scrollRestoration: true,
+    defaultStaleTime: 1,
+    defaultNotFoundComponent: () => {
+      return <NotFound />
+    },
+    context: {
+      queryClient,
+    },
+    scrollToTopSelectors: ['.scroll-to-top'],
+  })
+
+  if (!router.isServer) {
+    Sentry.addIntegration(
+      Sentry.tanstackRouterBrowserTracingIntegration(router),
+    )
+  }
+
+  setupRouterSsrQueryIntegration({
+    router,
+    queryClient,
+    wrapQueryClient: false,
+  })
+
+  return router
+}
+
+declare module '@tanstack/react-router' {
+  interface StaticDataRouteOption {
+    baseParent?: boolean
+    showNavbar?: boolean
+    includeSearchInCanonical?: boolean
+    ownsCanonicalLink?: boolean
+  }
+}
+
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

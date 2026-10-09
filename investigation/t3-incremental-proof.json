@@ -1,0 +1,10 @@
+{
+  "literal_preserved": true,
+  "explicit_dependency_correct": true,
+  "changed_outputs": [
+    "_nift/docs/0.txt"
+  ],
+  "unchanged_files": 916,
+  "composition_only": true,
+  "stdout": "built _nift/docs/0\n    \u21b3 dependency changed: sources/docs/tanstack--query--main/docs/framework/react/overview.document\n\ud83d\udce6 1 file rebuilt successfully\ntime taken: 0.004369 seconds\n"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "upstream",
+    "query_backed_view_switch": true,
+    "errors": []
+  },
+  {
+    "name": "tanstack",
+    "query_backed_view_switch": true,
+    "errors": []
+  },
+  {
+    "name": "tanstack-agent",
+    "query_backed_view_switch": true,
+    "errors": []
+  }
+]

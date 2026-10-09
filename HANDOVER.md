@@ -330,3 +330,9 @@ Pinned upstream remains clean. Complete build artifacts and external captures li
 ## T2 selected boundary
 
 See RETAINED-TANSTACK.md for all classifications and proof obligations. Nift owns cacheable document composition/assets; Vite and React/TanStack own rendering/bundling/runtime, Cloudflare owns services/security. Rich agent documents may maintain pre-derived TanStack AST alongside ordinary HTML; do not force inert HTML on useful React components. Upstream docs edits are runtime refreshes, not inherently Vite rebuilds: preserve that distinction in the final campaign. T3 remains in progress; no corpus conversion yet.
+
+## T3 accepted; T4 next
+
+Nift publishes two representative document projections consumed by the unchanged TanStack request-time shell. Authored Markdown derives projections normally; agent source maintains projections directly, with explicit Markdown download text. Whole-page HTML caching was rejected for freezing partner session rotation. Source-edit/hydration/navigation, raw dependencies/literal syntax, Start tabs/code copy, stats Query view switch, search, theme/mobile controls, SEO and Markdown response parity pass. Both full retained-runtime suites pass (544 unit, 2,269 chat, 20 desktop pass / 1 skip; TypeScript and lint pass with 101 warnings). No live service integration claimed.
+
+Do not scale a whole-page cache. T4 must publish the complete external docs corpus/config/tree inputs, enforce owned-root deletion boundaries, and retain raw Markdown only for actual runtime-dependent content such as Start hosting partner generation. Runtime/source input and complete publication costs remain explicit; upstream docs refresh is not inherently a Vite build.

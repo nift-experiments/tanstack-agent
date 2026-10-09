@@ -1,0 +1,6 @@
+---
+id: SubagentRouterPick
+title: SubagentRouterPick
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type SubagentRouterPick = \n  | \"main\"\n  | string\n  | ReadonlyArray<string>\n  | SubagentRouterPlan\n  | SubagentStepsPlan;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/agents/spawn.ts#L55","children":[{"type":"text","value":"packages/ai/src/activities/chat/agents/spawn.ts:55"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype SubagentRouterPick = \n  | \"main\"\n  | string\n  | ReadonlyArray<string>\n  | SubagentRouterPlan\n  | SubagentStepsPlan;\n```\n\nDefined in: [packages/ai/src/activities/chat/agents/spawn.ts:55](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/agents/spawn.ts#L55)\n","originalRawMarkdown":"---\nid: SubagentRouterPick\ntitle: SubagentRouterPick\n---\n\n```ts\ntype SubagentRouterPick = \n  | \"main\"\n  | string\n  | ReadonlyArray<string>\n  | SubagentRouterPlan\n  | SubagentStepsPlan;\n```\n\nDefined in: [packages/ai/src/activities/chat/agents/spawn.ts:55](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/agents/spawn.ts#L55)\n"}

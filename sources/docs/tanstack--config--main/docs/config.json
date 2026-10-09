@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "apiKey": "",
+    "indexName": "tanstack-config"
+  },
+  "sections": [
+    {
+      "label": "Getting Started",
+      "children": [
+        {
+          "label": "Overview",
+          "to": "overview"
+        }
+      ]
+    },
+    {
+      "label": "Utilities",
+      "children": [
+        {
+          "label": "ESLint",
+          "to": "eslint"
+        },
+        {
+          "label": "Publish",
+          "to": "publish"
+        },
+        {
+          "label": "Vite",
+          "to": "vite"
+        }
+      ]
+    },
+    {
+      "label": "Conventions",
+      "children": [
+        {
+          "label": "CI/CD",
+          "to": "ci-cd"
+        },
+        {
+          "label": "Package Structure",
+          "to": "package-structure"
+        }
+      ]
+    }
+  ]
+}

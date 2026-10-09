@@ -1,0 +1,6 @@
+---
+id: "@tanstack/react-table"
+title: "@tanstack/react-table"
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"tanstack-react-table","children":[{"type":"text","value":"@tanstack/react-table"}]},{"type":"heading","depth":2,"id":"modules","children":[{"type":"text","value":"Modules"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"index/index.md","children":[{"type":"text","value":"index"}]}]}]},{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"legacy/index.md","children":[{"type":"text","value":"legacy"}]}]}]}]}],"headings":[{"id":"tanstack-react-table","text":"@tanstack/react-table","level":1},{"id":"modules","text":"Modules","level":2}]},"frameworks":[],"downloadMarkdown":"\n# @tanstack/react-table\n\n## Modules\n\n- [index](index/index.md)\n- [legacy](legacy/index.md)\n","originalRawMarkdown":"---\nid: \"@tanstack/react-table\"\ntitle: \"@tanstack/react-table\"\n---\n\n# @tanstack/react-table\n\n## Modules\n\n- [index](index/index.md)\n- [legacy](legacy/index.md)\n"}

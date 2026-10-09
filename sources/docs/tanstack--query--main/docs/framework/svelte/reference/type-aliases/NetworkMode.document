@@ -1,0 +1,6 @@
+---
+id: NetworkMode
+title: NetworkMode
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type NetworkMode = \"online\" | \"always\" | \"offlineFirst\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L337","children":[{"type":"text","value":"packages/query-core/src/types.ts:337"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype NetworkMode = \"online\" | \"always\" | \"offlineFirst\";\n```\n\nDefined in: [packages/query-core/src/types.ts:337](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L337)\n","originalRawMarkdown":"---\nid: NetworkMode\ntitle: NetworkMode\n---\n\n```ts\ntype NetworkMode = \"online\" | \"always\" | \"offlineFirst\";\n```\n\nDefined in: [packages/query-core/src/types.ts:337](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L337)\n"}

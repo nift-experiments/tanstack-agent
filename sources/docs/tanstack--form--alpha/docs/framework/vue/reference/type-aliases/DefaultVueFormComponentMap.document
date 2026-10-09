@@ -1,0 +1,6 @@
+---
+id: DefaultVueFormComponentMap
+title: DefaultVueFormComponentMap
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DefaultVueFormComponentMap = VueFormComponentMap<Record<never, never>, Record<never, never>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/vue-form/src/AppForm/componentMap.public.ts#L16","children":[{"type":"text","value":"packages/vue-form/src/AppForm/componentMap.public.ts:16"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DefaultVueFormComponentMap = VueFormComponentMap<Record<never, never>, Record<never, never>>;\n```\n\nDefined in: [packages/vue-form/src/AppForm/componentMap.public.ts:16](https://github.com/TanStack/form/blob/main/packages/vue-form/src/AppForm/componentMap.public.ts#L16)\n","originalRawMarkdown":"---\nid: DefaultVueFormComponentMap\ntitle: DefaultVueFormComponentMap\n---\n\n```ts\ntype DefaultVueFormComponentMap = VueFormComponentMap<Record<never, never>, Record<never, never>>;\n```\n\nDefined in: [packages/vue-form/src/AppForm/componentMap.public.ts:16](https://github.com/TanStack/form/blob/main/packages/vue-form/src/AppForm/componentMap.public.ts#L16)\n"}

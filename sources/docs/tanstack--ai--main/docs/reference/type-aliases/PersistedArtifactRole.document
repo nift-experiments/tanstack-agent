@@ -1,0 +1,6 @@
+---
+id: PersistedArtifactRole
+title: PersistedArtifactRole
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type PersistedArtifactRole = \"input\" | \"output\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2201","children":[{"type":"text","value":"packages/ai/src/types.ts:2201"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype PersistedArtifactRole = \"input\" | \"output\";\n```\n\nDefined in: [packages/ai/src/types.ts:2201](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2201)\n","originalRawMarkdown":"---\nid: PersistedArtifactRole\ntitle: PersistedArtifactRole\n---\n\n```ts\ntype PersistedArtifactRole = \"input\" | \"output\";\n```\n\nDefined in: [packages/ai/src/types.ts:2201](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2201)\n"}

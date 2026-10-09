@@ -1,0 +1,6 @@
+---
+id: InitialQueryBuilder
+title: InitialQueryBuilder
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type InitialQueryBuilder = Pick<BaseQueryBuilder<Context>, \"from\" | \"unionAll\">;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/index.ts#L1620","children":[{"type":"text","value":"packages/db/src/query/builder/index.ts:1620"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype InitialQueryBuilder = Pick<BaseQueryBuilder<Context>, \"from\" | \"unionAll\">;\n```\n\nDefined in: [packages/db/src/query/builder/index.ts:1620](https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/index.ts#L1620)\n","originalRawMarkdown":"---\nid: InitialQueryBuilder\ntitle: InitialQueryBuilder\n---\n\n```ts\ntype InitialQueryBuilder = Pick<BaseQueryBuilder<Context>, \"from\" | \"unionAll\">;\n```\n\nDefined in: [packages/db/src/query/builder/index.ts:1620](https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/index.ts#L1620)\n"}

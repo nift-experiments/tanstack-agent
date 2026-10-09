@@ -1,0 +1,6 @@
+---
+id: UseLiveQueryStatus
+title: UseLiveQueryStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type UseLiveQueryStatus = CollectionStatus | \"disabled\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/react-db/src/useLiveQuery.ts#L128","children":[{"type":"text","value":"useLiveQuery.ts:128"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype UseLiveQueryStatus = CollectionStatus | \"disabled\";\n```\n\nDefined in: [useLiveQuery.ts:128](https://github.com/TanStack/db/blob/main/packages/react-db/src/useLiveQuery.ts#L128)\n","originalRawMarkdown":"---\nid: UseLiveQueryStatus\ntitle: UseLiveQueryStatus\n---\n\n```ts\ntype UseLiveQueryStatus = CollectionStatus | \"disabled\";\n```\n\nDefined in: [useLiveQuery.ts:128](https://github.com/TanStack/db/blob/main/packages/react-db/src/useLiveQuery.ts#L128)\n"}

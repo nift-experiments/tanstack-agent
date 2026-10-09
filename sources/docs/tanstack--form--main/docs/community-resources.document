@@ -1,0 +1,18 @@
+---
+title: Community Resources
+media:
+  [
+    {
+      title: "Balastrong's TanStack Form Video Series",
+      url: 'https://www.youtube.com/playlist?list=PLOQjd5dsGSxInTKUWTxyqSKwZCjDIUs0Y',
+      description: 'Series by Balastrong, a maintainer of TanStack Form, covering setup, validation, array fields, reactivity, schema libraries, side effects, and composable fields.',
+    },
+    {
+      title: 'TanStack Form Tutorial - Best Form Library for React?',
+      url: 'https://youtu.be/5oFQd-uAAHo',
+      description: 'A tutorial from Atharva Deosthale using TanStack Form in a Next.js project. Made for those just getting started with TanStack Form, covering client-side and server-side form validation.',
+    },
+  ]
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[],"headings":[]},"frameworks":[],"downloadMarkdown":"","originalRawMarkdown":"---\ntitle: Community Resources\nmedia:\n  [\n    {\n      title: \"Balastrong's TanStack Form Video Series\",\n      url: 'https://www.youtube.com/playlist?list=PLOQjd5dsGSxInTKUWTxyqSKwZCjDIUs0Y',\n      description: 'Series by Balastrong, a maintainer of TanStack Form, covering setup, validation, array fields, reactivity, schema libraries, side effects, and composable fields.',\n    },\n    {\n      title: 'TanStack Form Tutorial - Best Form Library for React?',\n      url: 'https://youtu.be/5oFQd-uAAHo',\n      description: 'A tutorial from Atharva Deosthale using TanStack Form in a Next.js project. Made for those just getting started with TanStack Form, covering client-side and server-side form validation.',\n    },\n  ]\n---\n"}

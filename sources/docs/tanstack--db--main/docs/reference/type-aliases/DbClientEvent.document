@@ -1,0 +1,6 @@
+---
+id: DbClientEvent
+title: DbClientEvent
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DbClientEvent = \n  | {\n  query: DbClientLiveQuery;\n  type: \"liveQueryAdded\" | \"liveQueryUpdated\";\n}\n  | {\n  error: unknown;\n  type: \"liveQueryStreamError\";\n};","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L146","children":[{"type":"text","value":"packages/db/src/client.ts:146"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DbClientEvent = \n  | {\n  query: DbClientLiveQuery;\n  type: \"liveQueryAdded\" | \"liveQueryUpdated\";\n}\n  | {\n  error: unknown;\n  type: \"liveQueryStreamError\";\n};\n```\n\nDefined in: [packages/db/src/client.ts:146](https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L146)\n","originalRawMarkdown":"---\nid: DbClientEvent\ntitle: DbClientEvent\n---\n\n```ts\ntype DbClientEvent = \n  | {\n  query: DbClientLiveQuery;\n  type: \"liveQueryAdded\" | \"liveQueryUpdated\";\n}\n  | {\n  error: unknown;\n  type: \"liveQueryStreamError\";\n};\n```\n\nDefined in: [packages/db/src/client.ts:146](https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L146)\n"}

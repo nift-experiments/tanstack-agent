@@ -1,0 +1,6 @@
+---
+id: StorageApi
+title: StorageApi
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type StorageApi = Pick<Storage, \"getItem\" | \"setItem\" | \"removeItem\">;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/local-storage.ts#L25","children":[{"type":"text","value":"packages/db/src/local-storage.ts:25"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Storage API interface - subset of DOM Storage that we need"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype StorageApi = Pick<Storage, \"getItem\" | \"setItem\" | \"removeItem\">;\n```\n\nDefined in: [packages/db/src/local-storage.ts:25](https://github.com/TanStack/db/blob/main/packages/db/src/local-storage.ts#L25)\n\nStorage API interface - subset of DOM Storage that we need\n","originalRawMarkdown":"---\nid: StorageApi\ntitle: StorageApi\n---\n\n```ts\ntype StorageApi = Pick<Storage, \"getItem\" | \"setItem\" | \"removeItem\">;\n```\n\nDefined in: [packages/db/src/local-storage.ts:25](https://github.com/TanStack/db/blob/main/packages/db/src/local-storage.ts#L25)\n\nStorage API interface - subset of DOM Storage that we need\n"}

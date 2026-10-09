@@ -1,0 +1,6 @@
+---
+id: DeferredLiveQueryCollections
+title: DeferredLiveQueryCollections
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DeferredLiveQueryCollections = Set<CollectionImpl<any, string | number, any, any, any>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/live-query-options.ts#L29","children":[{"type":"text","value":"packages/db/src/live-query-options.ts:29"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DeferredLiveQueryCollections = Set<CollectionImpl<any, string | number, any, any, any>>;\n```\n\nDefined in: [packages/db/src/live-query-options.ts:29](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-options.ts#L29)\n","originalRawMarkdown":"---\nid: DeferredLiveQueryCollections\ntitle: DeferredLiveQueryCollections\n---\n\n```ts\ntype DeferredLiveQueryCollections = Set<CollectionImpl<any, string | number, any, any, any>>;\n```\n\nDefined in: [packages/db/src/live-query-options.ts:29](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-options.ts#L29)\n"}

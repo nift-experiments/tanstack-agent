@@ -1,0 +1,6 @@
+---
+id: ConfigWithSQLiteTypes
+title: ConfigWithSQLiteTypes
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ConfigWithSQLiteTypes = object;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/powersync-db-collection/src/definitions.ts#L104","children":[{"type":"text","value":"definitions.ts:104"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Config for when TInput and TOutput are both the SQLite types."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ConfigWithSQLiteTypes = object;\n```\n\nDefined in: [definitions.ts:104](https://github.com/TanStack/db/blob/main/packages/powersync-db-collection/src/definitions.ts#L104)\n\nConfig for when TInput and TOutput are both the SQLite types.\n","originalRawMarkdown":"---\nid: ConfigWithSQLiteTypes\ntitle: ConfigWithSQLiteTypes\n---\n\n```ts\ntype ConfigWithSQLiteTypes = object;\n```\n\nDefined in: [definitions.ts:104](https://github.com/TanStack/db/blob/main/packages/powersync-db-collection/src/definitions.ts#L104)\n\nConfig for when TInput and TOutput are both the SQLite types.\n"}

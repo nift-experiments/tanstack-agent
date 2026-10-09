@@ -1,0 +1,6 @@
+---
+id: initialServerFormState
+title: initialServerFormState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const initialServerFormState: ServerFormState<any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/ssr.public.ts#L9","children":[{"type":"text","value":"ssr.public.ts:9"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst initialServerFormState: ServerFormState<any, any>;\n```\n\nDefined in: [ssr.public.ts:9](https://github.com/TanStack/form/blob/main/packages/form-core/src/ssr.public.ts#L9)\n","originalRawMarkdown":"---\nid: initialServerFormState\ntitle: initialServerFormState\n---\n\n```ts\nconst initialServerFormState: ServerFormState<any, any>;\n```\n\nDefined in: [ssr.public.ts:9](https://github.com/TanStack/form/blob/main/packages/form-core/src/ssr.public.ts#L9)\n"}

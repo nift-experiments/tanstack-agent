@@ -1,0 +1,6 @@
+---
+id: defineFieldGroup
+title: defineFieldGroup
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const defineFieldGroup: DefineFieldGroupFn;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/lit-form/src/with-fields.ts#L196","children":[{"type":"text","value":"with-fields.ts:196"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst defineFieldGroup: DefineFieldGroupFn;\n```\n\nDefined in: [with-fields.ts:196](https://github.com/TanStack/form/blob/main/packages/lit-form/src/with-fields.ts#L196)\n","originalRawMarkdown":"---\nid: defineFieldGroup\ntitle: defineFieldGroup\n---\n\n```ts\nconst defineFieldGroup: DefineFieldGroupFn;\n```\n\nDefined in: [with-fields.ts:196](https://github.com/TanStack/form/blob/main/packages/lit-form/src/with-fields.ts#L196)\n"}

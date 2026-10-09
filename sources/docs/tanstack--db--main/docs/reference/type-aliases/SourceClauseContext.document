@@ -1,0 +1,6 @@
+---
+id: SourceClauseContext
+title: SourceClauseContext
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type SourceClauseContext = \"from clause\" | \"unionAll clause\" | \"join clause\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/errors.ts#L459","children":[{"type":"text","value":"packages/db/src/errors.ts:459"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype SourceClauseContext = \"from clause\" | \"unionAll clause\" | \"join clause\";\n```\n\nDefined in: [packages/db/src/errors.ts:459](https://github.com/TanStack/db/blob/main/packages/db/src/errors.ts#L459)\n","originalRawMarkdown":"---\nid: SourceClauseContext\ntitle: SourceClauseContext\n---\n\n```ts\ntype SourceClauseContext = \"from clause\" | \"unionAll clause\" | \"join clause\";\n```\n\nDefined in: [packages/db/src/errors.ts:459](https://github.com/TanStack/db/blob/main/packages/db/src/errors.ts#L459)\n"}

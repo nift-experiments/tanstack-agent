@@ -1,0 +1,6 @@
+---
+id: RawHotkey
+title: RawHotkey
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type RawHotkey = \n  | object & RawModifiers\n  | object & RawModifiers;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/hotkey.types.ts#L199","children":[{"type":"text","value":"hotkey.types.ts:199"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype RawHotkey = \n  | object & RawModifiers\n  | object & RawModifiers;\n```\n\nDefined in: [hotkey.types.ts:199](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/hotkey.types.ts#L199)\n","originalRawMarkdown":"---\nid: RawHotkey\ntitle: RawHotkey\n---\n\n```ts\ntype RawHotkey = \n  | object & RawModifiers\n  | object & RawModifiers;\n```\n\nDefined in: [hotkey.types.ts:199](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/hotkey.types.ts#L199)\n"}

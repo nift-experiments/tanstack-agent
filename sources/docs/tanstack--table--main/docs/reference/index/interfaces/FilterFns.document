@@ -1,0 +1,6 @@
+---
+id: FilterFns
+title: FilterFns
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"interface-filterfns","children":[{"type":"text","value":"Interface: FilterFns"}]},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/columnFilteringFeature.types.ts#L31","children":[{"type":"text","value":"features/column-filtering/columnFilteringFeature.types.ts:31"}]}]}],"headings":[{"id":"interface-filterfns","text":"Interface: FilterFns","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Interface: FilterFns\n\nDefined in: [features/column-filtering/columnFilteringFeature.types.ts:31](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/columnFilteringFeature.types.ts#L31)\n","originalRawMarkdown":"---\nid: FilterFns\ntitle: FilterFns\n---\n\n# Interface: FilterFns\n\nDefined in: [features/column-filtering/columnFilteringFeature.types.ts:31](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/columnFilteringFeature.types.ts#L31)\n"}

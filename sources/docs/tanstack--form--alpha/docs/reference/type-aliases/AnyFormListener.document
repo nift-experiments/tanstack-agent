@@ -1,0 +1,6 @@
+---
+id: AnyFormListener
+title: AnyFormListener
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyFormListener = FormListener<any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/listeners.public.ts#L244","children":[{"type":"text","value":"listeners.public.ts:244"}]}]},{"type":"paragraph","children":[{"type":"text","value":"A form listener with type-erased form data and error types."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyFormListener = FormListener<any, any>;\n```\n\nDefined in: [listeners.public.ts:244](https://github.com/TanStack/form/blob/main/packages/form-core/src/listeners.public.ts#L244)\n\nA form listener with type-erased form data and error types.\n","originalRawMarkdown":"---\nid: AnyFormListener\ntitle: AnyFormListener\n---\n\n```ts\ntype AnyFormListener = FormListener<any, any>;\n```\n\nDefined in: [listeners.public.ts:244](https://github.com/TanStack/form/blob/main/packages/form-core/src/listeners.public.ts#L244)\n\nA form listener with type-erased form data and error types.\n"}

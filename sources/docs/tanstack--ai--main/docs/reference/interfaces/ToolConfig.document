@@ -1,0 +1,6 @@
+---
+id: ToolConfig
+title: ToolConfig
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L975","children":[{"type":"text","value":"packages/ai/src/types.ts:975"}]}]},{"type":"heading","depth":2,"id":"indexable","children":[{"type":"text","value":"Indexable"}]},{"type":"code","value":"[key: string]: Tool<SchemaInput, SchemaInput, string, unknown>","lang":"ts"}],"headings":[{"id":"indexable","text":"Indexable","level":2}]},"frameworks":[],"downloadMarkdown":"\nDefined in: [packages/ai/src/types.ts:975](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L975)\n\n## Indexable\n\n```ts\n[key: string]: Tool<SchemaInput, SchemaInput, string, unknown>\n```\n","originalRawMarkdown":"---\nid: ToolConfig\ntitle: ToolConfig\n---\n\nDefined in: [packages/ai/src/types.ts:975](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L975)\n\n## Indexable\n\n```ts\n[key: string]: Tool<SchemaInput, SchemaInput, string, unknown>\n```\n"}

@@ -1,0 +1,6 @@
+---
+id: FieldGroupFormState
+title: FieldGroupFormState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type FieldGroupFormState = FormState<unknown, FormErrorTypes>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts#L148","children":[{"type":"text","value":"packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts:148"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype FieldGroupFormState = FormState<unknown, FormErrorTypes>;\n```\n\nDefined in: [packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts:148](https://github.com/TanStack/form/blob/main/packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts#L148)\n","originalRawMarkdown":"---\nid: FieldGroupFormState\ntitle: FieldGroupFormState\n---\n\n```ts\ntype FieldGroupFormState = FormState<unknown, FormErrorTypes>;\n```\n\nDefined in: [packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts:148](https://github.com/TanStack/form/blob/main/packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts#L148)\n"}

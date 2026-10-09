@@ -1,0 +1,6 @@
+---
+id: TransactionState
+title: TransactionState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type TransactionState = \"pending\" | \"persisting\" | \"completed\" | \"failed\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L70","children":[{"type":"text","value":"packages/db/src/types.ts:70"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype TransactionState = \"pending\" | \"persisting\" | \"completed\" | \"failed\";\n```\n\nDefined in: [packages/db/src/types.ts:70](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L70)\n","originalRawMarkdown":"---\nid: TransactionState\ntitle: TransactionState\n---\n\n```ts\ntype TransactionState = \"pending\" | \"persisting\" | \"completed\" | \"failed\";\n```\n\nDefined in: [packages/db/src/types.ts:70](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L70)\n"}

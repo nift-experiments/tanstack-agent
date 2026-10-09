@@ -1,0 +1,6 @@
+---
+id: OperationType
+title: OperationType
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type OperationType = \"insert\" | \"update\" | \"delete\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L226","children":[{"type":"text","value":"packages/db/src/types.ts:226"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype OperationType = \"insert\" | \"update\" | \"delete\";\n```\n\nDefined in: [packages/db/src/types.ts:226](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L226)\n","originalRawMarkdown":"---\nid: OperationType\ntitle: OperationType\n---\n\n```ts\ntype OperationType = \"insert\" | \"update\" | \"delete\";\n```\n\nDefined in: [packages/db/src/types.ts:226](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L226)\n"}

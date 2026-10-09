@@ -1,0 +1,6 @@
+---
+id: formEventClient
+title: formEventClient
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const formEventClient: FormEventClient;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L70","children":[{"type":"text","value":"packages/form-core/src/EventClient.ts:70"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst formEventClient: FormEventClient;\n```\n\nDefined in: [packages/form-core/src/EventClient.ts:70](https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L70)\n","originalRawMarkdown":"---\nid: formEventClient\ntitle: formEventClient\n---\n\n```ts\nconst formEventClient: FormEventClient;\n```\n\nDefined in: [packages/form-core/src/EventClient.ts:70](https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L70)\n"}

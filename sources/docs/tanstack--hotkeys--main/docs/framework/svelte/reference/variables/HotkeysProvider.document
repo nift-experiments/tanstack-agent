@@ -1,0 +1,6 @@
+---
+id: HotkeysProvider
+title: HotkeysProvider
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const HotkeysProvider: LegacyComponentType;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: node_modules/.pnpm/svelte@5.57.1_@typescript-eslint+types@8.59.0/node_modules/svelte/types/index.d.ts:3324"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst HotkeysProvider: LegacyComponentType;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.57.1\\_@typescript-eslint+types@8.59.0/node\\_modules/svelte/types/index.d.ts:3324\n","originalRawMarkdown":"---\nid: HotkeysProvider\ntitle: HotkeysProvider\n---\n\n```ts\nconst HotkeysProvider: LegacyComponentType;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.57.1\\_@typescript-eslint+types@8.59.0/node\\_modules/svelte/types/index.d.ts:3324\n"}

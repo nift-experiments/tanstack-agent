@@ -1,0 +1,6 @@
+---
+id: ValidatorScope
+title: ValidatorScope
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ValidatorScope = \"form\" | \"group\" | \"field\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L185","children":[{"type":"text","value":"validation.public.ts:185"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ValidatorScope = \"form\" | \"group\" | \"field\";\n```\n\nDefined in: [validation.public.ts:185](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L185)\n","originalRawMarkdown":"---\nid: ValidatorScope\ntitle: ValidatorScope\n---\n\n```ts\ntype ValidatorScope = \"form\" | \"group\" | \"field\";\n```\n\nDefined in: [validation.public.ts:185](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L185)\n"}

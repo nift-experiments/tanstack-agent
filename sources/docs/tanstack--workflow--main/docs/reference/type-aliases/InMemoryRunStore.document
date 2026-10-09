@@ -1,0 +1,6 @@
+---
+id: InMemoryRunStore
+title: InMemoryRunStore
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-inmemoryrunstore","children":[{"type":"text","value":"Type Alias: InMemoryRunStore"}]},{"type":"code","value":"type InMemoryRunStore = RunStore;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/run-store/in-memory.ts#L10","children":[{"type":"text","value":"packages/workflow-core/src/run-store/in-memory.ts:10"}]}]}],"headings":[{"id":"type-alias-inmemoryrunstore","text":"Type Alias: InMemoryRunStore","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: InMemoryRunStore\n\n```ts\ntype InMemoryRunStore = RunStore;\n```\n\nDefined in: [packages/workflow-core/src/run-store/in-memory.ts:10](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/run-store/in-memory.ts#L10)\n","originalRawMarkdown":"---\nid: InMemoryRunStore\ntitle: InMemoryRunStore\n---\n\n# Type Alias: InMemoryRunStore\n\n```ts\ntype InMemoryRunStore = RunStore;\n```\n\nDefined in: [packages/workflow-core/src/run-store/in-memory.ts:10](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/run-store/in-memory.ts#L10)\n"}

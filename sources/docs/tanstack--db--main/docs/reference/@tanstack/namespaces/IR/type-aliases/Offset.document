@@ -1,0 +1,6 @@
+---
+id: Offset
+title: Offset
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Offset = number;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L69","children":[{"type":"text","value":"packages/db/src/query/ir.ts:69"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Offset = number;\n```\n\nDefined in: [packages/db/src/query/ir.ts:69](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L69)\n","originalRawMarkdown":"---\nid: Offset\ntitle: Offset\n---\n\n```ts\ntype Offset = number;\n```\n\nDefined in: [packages/db/src/query/ir.ts:69](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L69)\n"}

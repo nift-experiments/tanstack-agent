@@ -1,0 +1,6 @@
+---
+id: RowData
+title: RowData
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-rowdata","children":[{"type":"text","value":"Type Alias: RowData"}]},{"type":"code","value":"type RowData = Record<string, any> | any[];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/types/type-utils.ts#L5","children":[{"type":"text","value":"types/type-utils.ts:5"}]}]}],"headings":[{"id":"type-alias-rowdata","text":"Type Alias: RowData","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: RowData\n\n```ts\ntype RowData = Record<string, any> | any[];\n```\n\nDefined in: [types/type-utils.ts:5](https://github.com/TanStack/table/blob/main/packages/table-core/src/types/type-utils.ts#L5)\n","originalRawMarkdown":"---\nid: RowData\ntitle: RowData\n---\n\n# Type Alias: RowData\n\n```ts\ntype RowData = Record<string, any> | any[];\n```\n\nDefined in: [types/type-utils.ts:5](https://github.com/TanStack/table/blob/main/packages/table-core/src/types/type-utils.ts#L5)\n"}

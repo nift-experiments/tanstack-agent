@@ -1,0 +1,6 @@
+---
+id: Strategy
+title: Strategy
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Strategy = \n  | DebounceStrategy\n  | QueueStrategy\n  | ThrottleStrategy\n  | BatchStrategy;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/strategies/types.ts#L117","children":[{"type":"text","value":"packages/db/src/strategies/types.ts:117"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Union type of all available strategies"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Strategy = \n  | DebounceStrategy\n  | QueueStrategy\n  | ThrottleStrategy\n  | BatchStrategy;\n```\n\nDefined in: [packages/db/src/strategies/types.ts:117](https://github.com/TanStack/db/blob/main/packages/db/src/strategies/types.ts#L117)\n\nUnion type of all available strategies\n","originalRawMarkdown":"---\nid: Strategy\ntitle: Strategy\n---\n\n```ts\ntype Strategy = \n  | DebounceStrategy\n  | QueueStrategy\n  | ThrottleStrategy\n  | BatchStrategy;\n```\n\nDefined in: [packages/db/src/strategies/types.ts:117](https://github.com/TanStack/db/blob/main/packages/db/src/strategies/types.ts#L117)\n\nUnion type of all available strategies\n"}

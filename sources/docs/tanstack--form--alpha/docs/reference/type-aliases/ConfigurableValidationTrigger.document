@@ -1,0 +1,6 @@
+---
+id: ConfigurableValidationTrigger
+title: ConfigurableValidationTrigger
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ConfigurableValidationTrigger = Exclude<ValidationTrigger, \"submit\">;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L183","children":[{"type":"text","value":"validation.public.ts:183"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ConfigurableValidationTrigger = Exclude<ValidationTrigger, \"submit\">;\n```\n\nDefined in: [validation.public.ts:183](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L183)\n","originalRawMarkdown":"---\nid: ConfigurableValidationTrigger\ntitle: ConfigurableValidationTrigger\n---\n\n```ts\ntype ConfigurableValidationTrigger = Exclude<ValidationTrigger, \"submit\">;\n```\n\nDefined in: [validation.public.ts:183](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L183)\n"}

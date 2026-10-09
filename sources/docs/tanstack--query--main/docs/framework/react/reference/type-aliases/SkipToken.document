@@ -1,0 +1,6 @@
+---
+id: SkipToken
+title: SkipToken
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type SkipToken = typeof skipToken;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/query/blob/main/packages/query-core/src/utils.ts#L632","children":[{"type":"text","value":"packages/query-core/src/utils.ts:632"}]}]},{"type":"paragraph","children":[{"type":"text","value":"The type of the "},{"type":"link","href":"../variables/skipToken.md","children":[{"type":"text","value":"skipToken"}]},{"type":"text","value":" sentinel value."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype SkipToken = typeof skipToken;\n```\n\nDefined in: [packages/query-core/src/utils.ts:632](https://github.com/TanStack/query/blob/main/packages/query-core/src/utils.ts#L632)\n\nThe type of the [skipToken](../variables/skipToken.md) sentinel value.\n","originalRawMarkdown":"---\nid: SkipToken\ntitle: SkipToken\n---\n\n```ts\ntype SkipToken = typeof skipToken;\n```\n\nDefined in: [packages/query-core/src/utils.ts:632](https://github.com/TanStack/query/blob/main/packages/query-core/src/utils.ts#L632)\n\nThe type of the [skipToken](../variables/skipToken.md) sentinel value.\n"}

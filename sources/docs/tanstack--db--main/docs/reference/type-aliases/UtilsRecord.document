@@ -1,0 +1,6 @@
+---
+id: UtilsRecord
+title: UtilsRecord
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type UtilsRecord = Record<string, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L80","children":[{"type":"text","value":"packages/db/src/types.ts:80"}]}]},{"type":"paragraph","children":[{"type":"text","value":"A record of utilities (functions or getters) that can be attached to a collection"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype UtilsRecord = Record<string, any>;\n```\n\nDefined in: [packages/db/src/types.ts:80](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L80)\n\nA record of utilities (functions or getters) that can be attached to a collection\n","originalRawMarkdown":"---\nid: UtilsRecord\ntitle: UtilsRecord\n---\n\n```ts\ntype UtilsRecord = Record<string, any>;\n```\n\nDefined in: [packages/db/src/types.ts:80](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L80)\n\nA record of utilities (functions or getters) that can be attached to a collection\n"}

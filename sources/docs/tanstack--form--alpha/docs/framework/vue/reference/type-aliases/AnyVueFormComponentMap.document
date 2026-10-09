@@ -1,0 +1,6 @@
+---
+id: AnyVueFormComponentMap
+title: AnyVueFormComponentMap
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyVueFormComponentMap = VueFormComponentMap<Record<string, Component>, Record<string, Component>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/vue-form/src/AppForm/componentMap.public.ts#L11","children":[{"type":"text","value":"packages/vue-form/src/AppForm/componentMap.public.ts:11"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyVueFormComponentMap = VueFormComponentMap<Record<string, Component>, Record<string, Component>>;\n```\n\nDefined in: [packages/vue-form/src/AppForm/componentMap.public.ts:11](https://github.com/TanStack/form/blob/main/packages/vue-form/src/AppForm/componentMap.public.ts#L11)\n","originalRawMarkdown":"---\nid: AnyVueFormComponentMap\ntitle: AnyVueFormComponentMap\n---\n\n```ts\ntype AnyVueFormComponentMap = VueFormComponentMap<Record<string, Component>, Record<string, Component>>;\n```\n\nDefined in: [packages/vue-form/src/AppForm/componentMap.public.ts:11](https://github.com/TanStack/form/blob/main/packages/vue-form/src/AppForm/componentMap.public.ts#L11)\n"}

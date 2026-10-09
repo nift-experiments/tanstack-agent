@@ -1,0 +1,6 @@
+---
+id: OPEN_RXDB_SUBSCRIPTIONS
+title: OPEN_RXDB_SUBSCRIPTIONS
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const OPEN_RXDB_SUBSCRIPTIONS: WeakMap<RxCollection, Set<Subscription>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/rxdb-db-collection/src/rxdb.ts#L32","children":[{"type":"text","value":"rxdb.ts:32"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Used in tests to ensure proper cleanup"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst OPEN_RXDB_SUBSCRIPTIONS: WeakMap<RxCollection, Set<Subscription>>;\n```\n\nDefined in: [rxdb.ts:32](https://github.com/TanStack/db/blob/main/packages/rxdb-db-collection/src/rxdb.ts#L32)\n\nUsed in tests to ensure proper cleanup\n","originalRawMarkdown":"---\nid: OPEN_RXDB_SUBSCRIPTIONS\ntitle: OPEN_RXDB_SUBSCRIPTIONS\n---\n\n```ts\nconst OPEN_RXDB_SUBSCRIPTIONS: WeakMap<RxCollection, Set<Subscription>>;\n```\n\nDefined in: [rxdb.ts:32](https://github.com/TanStack/db/blob/main/packages/rxdb-db-collection/src/rxdb.ts#L32)\n\nUsed in tests to ensure proper cleanup\n"}

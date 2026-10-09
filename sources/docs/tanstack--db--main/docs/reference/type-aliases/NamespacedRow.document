@@ -1,0 +1,6 @@
+---
+id: NamespacedRow
+title: NamespacedRow
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type NamespacedRow = Record<string, Record<string, unknown>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L1049","children":[{"type":"text","value":"packages/db/src/types.ts:1049"}]}]},{"type":"paragraph","children":[{"type":"text","value":"A namespaced row is a row withing a pipeline that had each table wrapped in its alias"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype NamespacedRow = Record<string, Record<string, unknown>>;\n```\n\nDefined in: [packages/db/src/types.ts:1049](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L1049)\n\nA namespaced row is a row withing a pipeline that had each table wrapped in its alias\n","originalRawMarkdown":"---\nid: NamespacedRow\ntitle: NamespacedRow\n---\n\n```ts\ntype NamespacedRow = Record<string, Record<string, unknown>>;\n```\n\nDefined in: [packages/db/src/types.ts:1049](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L1049)\n\nA namespaced row is a row withing a pipeline that had each table wrapped in its alias\n"}

@@ -1,0 +1,6 @@
+---
+id: IndexOperation
+title: IndexOperation
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type IndexOperation = typeof comparisonFunctions[number];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/indexes/base-index.ts#L35","children":[{"type":"text","value":"packages/db/src/indexes/base-index.ts:35"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Type for index operation values"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype IndexOperation = typeof comparisonFunctions[number];\n```\n\nDefined in: [packages/db/src/indexes/base-index.ts:35](https://github.com/TanStack/db/blob/main/packages/db/src/indexes/base-index.ts#L35)\n\nType for index operation values\n","originalRawMarkdown":"---\nid: IndexOperation\ntitle: IndexOperation\n---\n\n```ts\ntype IndexOperation = typeof comparisonFunctions[number];\n```\n\nDefined in: [packages/db/src/indexes/base-index.ts:35](https://github.com/TanStack/db/blob/main/packages/db/src/indexes/base-index.ts#L35)\n\nType for index operation values\n"}

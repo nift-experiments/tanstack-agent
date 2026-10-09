@@ -1,0 +1,6 @@
+---
+id: getMetadata
+title: getMetadata
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"getMetadata: CapabilityGetter<MetadataStore>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/middleware/metadata.ts#L20","children":[{"type":"text","value":"packages/ai/src/activities/chat/middleware/metadata.ts:20"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ngetMetadata: CapabilityGetter<MetadataStore>;\n```\n\nDefined in: [packages/ai/src/activities/chat/middleware/metadata.ts:20](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/middleware/metadata.ts#L20)\n","originalRawMarkdown":"---\nid: getMetadata\ntitle: getMetadata\n---\n\n```ts\ngetMetadata: CapabilityGetter<MetadataStore>;\n```\n\nDefined in: [packages/ai/src/activities/chat/middleware/metadata.ts:20](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/middleware/metadata.ts#L20)\n"}

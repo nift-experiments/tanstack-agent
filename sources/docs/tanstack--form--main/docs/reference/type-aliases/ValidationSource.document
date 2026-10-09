@@ -1,0 +1,6 @@
+---
+id: ValidationSource
+title: ValidationSource
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ValidationSource = \"form\" | \"field\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/types.ts#L37","children":[{"type":"text","value":"packages/form-core/src/types.ts:37"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ValidationSource = \"form\" | \"field\";\n```\n\nDefined in: [packages/form-core/src/types.ts:37](https://github.com/TanStack/form/blob/main/packages/form-core/src/types.ts#L37)\n","originalRawMarkdown":"---\nid: ValidationSource\ntitle: ValidationSource\n---\n\n```ts\ntype ValidationSource = \"form\" | \"field\";\n```\n\nDefined in: [packages/form-core/src/types.ts:37](https://github.com/TanStack/form/blob/main/packages/form-core/src/types.ts#L37)\n"}

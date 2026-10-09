@@ -1,0 +1,6 @@
+---
+id: GroupBy
+title: GroupBy
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type GroupBy = BasicExpression[];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L54","children":[{"type":"text","value":"packages/db/src/query/ir.ts:54"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype GroupBy = BasicExpression[];\n```\n\nDefined in: [packages/db/src/query/ir.ts:54](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L54)\n","originalRawMarkdown":"---\nid: GroupBy\ntitle: GroupBy\n---\n\n```ts\ntype GroupBy = BasicExpression[];\n```\n\nDefined in: [packages/db/src/query/ir.ts:54](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L54)\n"}

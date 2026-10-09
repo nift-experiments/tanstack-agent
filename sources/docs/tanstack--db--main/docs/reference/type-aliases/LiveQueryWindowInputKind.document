@@ -1,0 +1,6 @@
+---
+id: LiveQueryWindowInputKind
+title: LiveQueryWindowInputKind
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type LiveQueryWindowInputKind = \"collection\" | \"query\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/live-query-window-controller.ts#L27","children":[{"type":"text","value":"packages/db/src/live-query-window-controller.ts:27"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype LiveQueryWindowInputKind = \"collection\" | \"query\";\n```\n\nDefined in: [packages/db/src/live-query-window-controller.ts:27](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-window-controller.ts#L27)\n","originalRawMarkdown":"---\nid: LiveQueryWindowInputKind\ntitle: LiveQueryWindowInputKind\n---\n\n```ts\ntype LiveQueryWindowInputKind = \"collection\" | \"query\";\n```\n\nDefined in: [packages/db/src/live-query-window-controller.ts:27](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-window-controller.ts#L27)\n"}

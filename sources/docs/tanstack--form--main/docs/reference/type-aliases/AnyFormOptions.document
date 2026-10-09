@@ -1,0 +1,6 @@
+---
+id: AnyFormOptions
+title: AnyFormOptions
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyFormOptions = FormOptions<any, any, any, any, any, any, any, any, any, any, any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L585","children":[{"type":"text","value":"packages/form-core/src/FormApi.ts:585"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyFormOptions = FormOptions<any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n\nDefined in: [packages/form-core/src/FormApi.ts:585](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L585)\n","originalRawMarkdown":"---\nid: AnyFormOptions\ntitle: AnyFormOptions\n---\n\n```ts\ntype AnyFormOptions = FormOptions<any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n\nDefined in: [packages/form-core/src/FormApi.ts:585](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L585)\n"}

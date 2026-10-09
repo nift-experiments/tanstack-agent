@@ -1,0 +1,6 @@
+---
+id: advanced-ssr
+title: Advanced Server Rendering
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Solid Query's hydration model doesn't separate basic and advanced server rendering: "},{"type":"inlineCode","value":"useQuery"},{"type":"text","value":" hydrates automatically wherever it's used, so there's no additional API surface beyond what the "},{"type":"link","href":"./ssr.md","children":[{"type":"text","value":"SSR guide"}]},{"type":"text","value":" covers."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\nSolid Query's hydration model doesn't separate basic and advanced server rendering: `useQuery` hydrates automatically wherever it's used, so there's no additional API surface beyond what the [SSR guide](./ssr.md) covers.\n","originalRawMarkdown":"---\nid: advanced-ssr\ntitle: Advanced Server Rendering\n---\n\nSolid Query's hydration model doesn't separate basic and advanced server rendering: `useQuery` hydrates automatically wherever it's used, so there's no additional API surface beyond what the [SSR guide](./ssr.md) covers.\n"}

@@ -1,0 +1,6 @@
+---
+id: AnyFieldGroupApi
+title: AnyFieldGroupApi
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyFieldGroupApi = FieldGroupApi<any, Record<string, Component<any>>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/svelte-form/src/FieldGroup/FieldGroupApi.public.ts#L96","children":[{"type":"text","value":"packages/svelte-form/src/FieldGroup/FieldGroupApi.public.ts:96"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, Record<string, Component<any>>>;\n```\n\nDefined in: [packages/svelte-form/src/FieldGroup/FieldGroupApi.public.ts:96](https://github.com/TanStack/form/blob/main/packages/svelte-form/src/FieldGroup/FieldGroupApi.public.ts#L96)\n","originalRawMarkdown":"---\nid: AnyFieldGroupApi\ntitle: AnyFieldGroupApi\n---\n\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, Record<string, Component<any>>>;\n```\n\nDefined in: [packages/svelte-form/src/FieldGroup/FieldGroupApi.public.ts:96](https://github.com/TanStack/form/blob/main/packages/svelte-form/src/FieldGroup/FieldGroupApi.public.ts#L96)\n"}

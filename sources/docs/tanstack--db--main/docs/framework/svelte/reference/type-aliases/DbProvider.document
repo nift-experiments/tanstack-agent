@@ -1,0 +1,6 @@
+---
+id: DbProvider
+title: DbProvider
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DbProvider = SvelteComponent;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: node_modules/.pnpm/svelte@5.55.7_@typescript-eslint+types@8.55.0/node_modules/svelte/types/index.d.ts:3204"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DbProvider = SvelteComponent;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.55.7\\_@typescript-eslint+types@8.55.0/node\\_modules/svelte/types/index.d.ts:3204\n","originalRawMarkdown":"---\nid: DbProvider\ntitle: DbProvider\n---\n\n```ts\ntype DbProvider = SvelteComponent;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.55.7\\_@typescript-eslint+types@8.55.0/node\\_modules/svelte/types/index.d.ts:3204\n"}

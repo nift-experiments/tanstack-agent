@@ -1,0 +1,6 @@
+---
+id: PacerProvider
+title: PacerProvider
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type PacerProvider = SvelteComponent;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: node_modules/.pnpm/svelte@5.57.1_@typescript-eslint+types@8.66.0/node_modules/svelte/types/index.d.ts:3324"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype PacerProvider = SvelteComponent;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.57.1\\_@typescript-eslint+types@8.66.0/node\\_modules/svelte/types/index.d.ts:3324\n","originalRawMarkdown":"---\nid: PacerProvider\ntitle: PacerProvider\n---\n\n```ts\ntype PacerProvider = SvelteComponent;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.57.1\\_@typescript-eslint+types@8.66.0/node\\_modules/svelte/types/index.d.ts:3324\n"}

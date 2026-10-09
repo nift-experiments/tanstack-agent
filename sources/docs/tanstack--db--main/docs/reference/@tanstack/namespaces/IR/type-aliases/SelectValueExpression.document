@@ -1,0 +1,6 @@
+---
+id: SelectValueExpression
+title: SelectValueExpression
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type SelectValueExpression = \n  | BasicExpression\n  | Aggregate\n  | Select\n  | IncludesSubquery\n  | ConditionalSelect;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L218","children":[{"type":"text","value":"packages/db/src/query/ir.ts:218"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype SelectValueExpression = \n  | BasicExpression\n  | Aggregate\n  | Select\n  | IncludesSubquery\n  | ConditionalSelect;\n```\n\nDefined in: [packages/db/src/query/ir.ts:218](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L218)\n","originalRawMarkdown":"---\nid: SelectValueExpression\ntitle: SelectValueExpression\n---\n\n```ts\ntype SelectValueExpression = \n  | BasicExpression\n  | Aggregate\n  | Select\n  | IncludesSubquery\n  | ConditionalSelect;\n```\n\nDefined in: [packages/db/src/query/ir.ts:218](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L218)\n"}

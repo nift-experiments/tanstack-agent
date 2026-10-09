@@ -1,0 +1,6 @@
+---
+id: AppFormComponent
+title: AppFormComponent
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AppFormComponent = Component<{\n  children: Snippet;\n}>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/svelte-form/src/AppForm/SvelteAppFormApi.public.ts#L6","children":[{"type":"text","value":"packages/svelte-form/src/AppForm/SvelteAppFormApi.public.ts:6"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AppFormComponent = Component<{\n  children: Snippet;\n}>;\n```\n\nDefined in: [packages/svelte-form/src/AppForm/SvelteAppFormApi.public.ts:6](https://github.com/TanStack/form/blob/main/packages/svelte-form/src/AppForm/SvelteAppFormApi.public.ts#L6)\n","originalRawMarkdown":"---\nid: AppFormComponent\ntitle: AppFormComponent\n---\n\n```ts\ntype AppFormComponent = Component<{\n  children: Snippet;\n}>;\n```\n\nDefined in: [packages/svelte-form/src/AppForm/SvelteAppFormApi.public.ts:6](https://github.com/TanStack/form/blob/main/packages/svelte-form/src/AppForm/SvelteAppFormApi.public.ts#L6)\n"}

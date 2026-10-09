@@ -1,0 +1,6 @@
+---
+id: PacerEventName
+title: PacerEventName
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type PacerEventName = keyof PacerEventMap;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/pacer/blob/main/packages/pacer/src/event-client.ts#L91","children":[{"type":"text","value":"event-client.ts:91"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype PacerEventName = keyof PacerEventMap;\n```\n\nDefined in: [event-client.ts:91](https://github.com/TanStack/pacer/blob/main/packages/pacer/src/event-client.ts#L91)\n","originalRawMarkdown":"---\nid: PacerEventName\ntitle: PacerEventName\n---\n\n```ts\ntype PacerEventName = keyof PacerEventMap;\n```\n\nDefined in: [event-client.ts:91](https://github.com/TanStack/pacer/blob/main/packages/pacer/src/event-client.ts#L91)\n"}

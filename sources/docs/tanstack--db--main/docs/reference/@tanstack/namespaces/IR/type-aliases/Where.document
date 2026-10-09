@@ -1,0 +1,6 @@
+---
+id: Where
+title: Where
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Where = \n  | BasicExpression<boolean>\n  | {\n  expression: BasicExpression<boolean>;\n  residual?: boolean;\n};","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L50","children":[{"type":"text","value":"packages/db/src/query/ir.ts:50"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Where = \n  | BasicExpression<boolean>\n  | {\n  expression: BasicExpression<boolean>;\n  residual?: boolean;\n};\n```\n\nDefined in: [packages/db/src/query/ir.ts:50](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L50)\n","originalRawMarkdown":"---\nid: Where\ntitle: Where\n---\n\n```ts\ntype Where = \n  | BasicExpression<boolean>\n  | {\n  expression: BasicExpression<boolean>;\n  residual?: boolean;\n};\n```\n\nDefined in: [packages/db/src/query/ir.ts:50](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L50)\n"}

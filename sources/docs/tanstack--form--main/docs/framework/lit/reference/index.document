@@ -1,0 +1,6 @@
+---
+id: "@tanstack/lit-form"
+title: "@tanstack/lit-form"
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":2,"id":"classes","children":[{"type":"text","value":"Classes"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"classes/TanStackFormController.md","children":[{"type":"text","value":"TanStackFormController"}]}]}]}]},{"type":"heading","depth":2,"id":"functions","children":[{"type":"text","value":"Functions"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"functions/getFormType.md","children":[{"type":"text","value":"getFormType"}]}]}]}]}],"headings":[{"id":"classes","text":"Classes","level":2},{"id":"functions","text":"Functions","level":2}]},"frameworks":[],"downloadMarkdown":"\n## Classes\n\n- [TanStackFormController](classes/TanStackFormController.md)\n\n## Functions\n\n- [getFormType](functions/getFormType.md)\n","originalRawMarkdown":"---\nid: \"@tanstack/lit-form\"\ntitle: \"@tanstack/lit-form\"\n---\n\n## Classes\n\n- [TanStackFormController](classes/TanStackFormController.md)\n\n## Functions\n\n- [getFormType](functions/getFormType.md)\n"}

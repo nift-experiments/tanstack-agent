@@ -1,0 +1,6 @@
+---
+id: WorkflowMetadata
+title: WorkflowMetadata
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-workflowmetadata","children":[{"type":"text","value":"Type Alias: WorkflowMetadata"}]},{"type":"code","value":"type WorkflowMetadata = Record<string, unknown>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L22","children":[{"type":"text","value":"packages/workflow-core/src/types.ts:22"}]}]}],"headings":[{"id":"type-alias-workflowmetadata","text":"Type Alias: WorkflowMetadata","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: WorkflowMetadata\n\n```ts\ntype WorkflowMetadata = Record<string, unknown>;\n```\n\nDefined in: [packages/workflow-core/src/types.ts:22](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L22)\n","originalRawMarkdown":"---\nid: WorkflowMetadata\ntitle: WorkflowMetadata\n---\n\n# Type Alias: WorkflowMetadata\n\n```ts\ntype WorkflowMetadata = Record<string, unknown>;\n```\n\nDefined in: [packages/workflow-core/src/types.ts:22](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L22)\n"}

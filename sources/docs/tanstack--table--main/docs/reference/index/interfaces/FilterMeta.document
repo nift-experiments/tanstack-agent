@@ -1,0 +1,6 @@
+---
+id: FilterMeta
+title: FilterMeta
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"interface-filtermeta","children":[{"type":"text","value":"Interface: FilterMeta"}]},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/columnFilteringFeature.types.ts#L14","children":[{"type":"text","value":"features/column-filtering/columnFilteringFeature.types.ts:14"}]}]}],"headings":[{"id":"interface-filtermeta","text":"Interface: FilterMeta","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Interface: FilterMeta\n\nDefined in: [features/column-filtering/columnFilteringFeature.types.ts:14](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/columnFilteringFeature.types.ts#L14)\n","originalRawMarkdown":"---\nid: FilterMeta\ntitle: FilterMeta\n---\n\n# Interface: FilterMeta\n\nDefined in: [features/column-filtering/columnFilteringFeature.types.ts:14](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/columnFilteringFeature.types.ts#L14)\n"}

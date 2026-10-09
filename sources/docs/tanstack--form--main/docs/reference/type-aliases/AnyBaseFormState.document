@@ -1,0 +1,6 @@
+---
+id: AnyBaseFormState
+title: AnyBaseFormState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyBaseFormState = BaseFormState<any, any, any, any, any, any, any, any, any, any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L699","children":[{"type":"text","value":"packages/form-core/src/FormApi.ts:699"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyBaseFormState = BaseFormState<any, any, any, any, any, any, any, any, any, any, any>;\n```\n\nDefined in: [packages/form-core/src/FormApi.ts:699](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L699)\n","originalRawMarkdown":"---\nid: AnyBaseFormState\ntitle: AnyBaseFormState\n---\n\n```ts\ntype AnyBaseFormState = BaseFormState<any, any, any, any, any, any, any, any, any, any, any>;\n```\n\nDefined in: [packages/form-core/src/FormApi.ts:699](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L699)\n"}

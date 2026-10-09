@@ -1,0 +1,6 @@
+---
+id: isServer
+title: isServer
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const isServer: boolean;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/query/blob/main/packages/query-core/src/utils.ts#L116","children":[{"type":"text","value":"packages/query-core/src/utils.ts:116"}]}]},{"type":"heading","depth":2,"id":"deprecated","children":[{"type":"text","value":"Deprecated"}]},{"type":"paragraph","children":[{"type":"text","value":"use "},{"type":"inlineCode","value":"environmentManager.isServer()"},{"type":"text","value":" instead."}]}],"headings":[{"id":"deprecated","text":"Deprecated","level":2}]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst isServer: boolean;\n```\n\nDefined in: [packages/query-core/src/utils.ts:116](https://github.com/TanStack/query/blob/main/packages/query-core/src/utils.ts#L116)\n\n## Deprecated\n\nuse `environmentManager.isServer()` instead.\n","originalRawMarkdown":"---\nid: isServer\ntitle: isServer\n---\n\n```ts\nconst isServer: boolean;\n```\n\nDefined in: [packages/query-core/src/utils.ts:116](https://github.com/TanStack/query/blob/main/packages/query-core/src/utils.ts#L116)\n\n## Deprecated\n\nuse `environmentManager.isServer()` instead.\n"}

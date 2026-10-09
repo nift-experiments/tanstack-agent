@@ -1,0 +1,6 @@
+---
+id: AppFormComponent
+title: AppFormComponent
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AppFormComponent = ParentComponent;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/solid-form/src/AppForm/SolidAppFormApi.public.ts#L6","children":[{"type":"text","value":"packages/solid-form/src/AppForm/SolidAppFormApi.public.ts:6"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AppFormComponent = ParentComponent;\n```\n\nDefined in: [packages/solid-form/src/AppForm/SolidAppFormApi.public.ts:6](https://github.com/TanStack/form/blob/main/packages/solid-form/src/AppForm/SolidAppFormApi.public.ts#L6)\n","originalRawMarkdown":"---\nid: AppFormComponent\ntitle: AppFormComponent\n---\n\n```ts\ntype AppFormComponent = ParentComponent;\n```\n\nDefined in: [packages/solid-form/src/AppForm/SolidAppFormApi.public.ts:6](https://github.com/TanStack/form/blob/main/packages/solid-form/src/AppForm/SolidAppFormApi.public.ts#L6)\n"}

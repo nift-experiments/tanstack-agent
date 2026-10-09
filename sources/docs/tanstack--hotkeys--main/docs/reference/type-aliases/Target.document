@@ -1,0 +1,6 @@
+---
+id: Target
+title: Target
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Target = HTMLElement | Document | Window;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/sequence-manager.ts#L25","children":[{"type":"text","value":"sequence-manager.ts:25"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Target = HTMLElement | Document | Window;\n```\n\nDefined in: [sequence-manager.ts:25](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/sequence-manager.ts#L25)\n","originalRawMarkdown":"---\nid: Target\ntitle: Target\n---\n\n```ts\ntype Target = HTMLElement | Document | Window;\n```\n\nDefined in: [sequence-manager.ts:25](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/sequence-manager.ts#L25)\n"}

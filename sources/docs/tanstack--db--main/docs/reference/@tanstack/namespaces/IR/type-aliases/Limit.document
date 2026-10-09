@@ -1,0 +1,6 @@
+---
+id: Limit
+title: Limit
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Limit = number;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L67","children":[{"type":"text","value":"packages/db/src/query/ir.ts:67"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Limit = number;\n```\n\nDefined in: [packages/db/src/query/ir.ts:67](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L67)\n","originalRawMarkdown":"---\nid: Limit\ntitle: Limit\n---\n\n```ts\ntype Limit = number;\n```\n\nDefined in: [packages/db/src/query/ir.ts:67](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L67)\n"}

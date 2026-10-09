@@ -1,3 +1,7 @@
+import {
+  fetchPublishedDocumentSource,
+  fetchPublishedDocsMetadata,
+} from './published-documents.server'
 import { notFound } from '@tanstack/react-router'
 import { createServerFn, createServerOnlyFn } from '@tanstack/react-start'
 import { setResponseHeader } from '@tanstack/react-start/server'
@@ -336,6 +340,12 @@ export const fetchDocsManifest = createServerFn({ method: 'GET' })
   .validator(docsManifestInput)
   .handler(async ({ data }) => {
     const { repo, branch, docsRoot } = data
+    const published = await fetchPublishedDocsMetadata(repo, branch, docsRoot)
+    if (published !== undefined) {
+      if (!isDocsManifest(published))
+        throw new Error('Invalid owned docs metadata')
+      return published
+    }
     const [{ shouldUseLocalDocsFiles }, { getCachedDocsArtifact }] =
       await Promise.all([
         loadDocumentsServerModule(),
@@ -361,6 +371,12 @@ export const fetchDocsPathManifest = createServerFn({ method: 'GET' })
   .validator(docsManifestInput)
   .handler(async ({ data }) => {
     const { repo, branch, docsRoot } = data
+    const published = await fetchPublishedDocsMetadata(repo, branch, docsRoot)
+    if (published !== undefined) {
+      if (!isDocsManifest(published))
+        throw new Error('Invalid owned docs metadata')
+      return { paths: published.paths, redirects: {} }
+    }
     const [{ shouldUseLocalDocsFiles }, { getCachedDocsArtifact }] =
       await Promise.all([
         loadDocumentsServerModule(),
@@ -429,7 +445,11 @@ export const fetchDocs = createServerFn({ method: 'GET' })
   .validator(repoFileInput)
   .handler(async ({ data }: { data: RepoFileRequest }) => {
     const { repo, branch, filePath } = data
-    const result = await readRepoFileOrFallback(repo, branch, filePath)
+    const published = await fetchPublishedDocumentSource(repo, branch, filePath)
+    const result =
+      published === undefined
+        ? await readRepoFileOrFallback(repo, branch, filePath)
+        : { file: published, isFallback: false }
 
     if (!result.file) {
       throw notFound()
@@ -585,7 +605,7 @@ function flattenDocsNodes(nodes: Array<DocsTreeNode>): Array<DocsTreeNode> {
   ])
 }
 
-function getCanonicalDocsPath(filePath: string, docsRoot: string) {
+export function getCanonicalDocsPath(filePath: string, docsRoot: string) {
   const normalizedFilePath = removeLeadingSlash(filePath)
   const normalizedDocsRoot = removeLeadingSlash(docsRoot)
   const docsRootPrefix = `${normalizedDocsRoot}/`
@@ -600,7 +620,7 @@ function getCanonicalDocsPath(filePath: string, docsRoot: string) {
     .replace(/\/index$/, '')
 }
 
-function normalizeDocsRedirectPath(path: string, docsRoot?: string) {
+export function normalizeDocsRedirectPath(path: string, docsRoot?: string) {
   const normalizedPath = removeLeadingSlash(path.trim()).replace(/\/+$/g, '')
 
   if (!normalizedPath || !isValidRepoPath(normalizedPath)) {

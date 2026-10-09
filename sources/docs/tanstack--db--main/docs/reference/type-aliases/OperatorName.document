@@ -1,0 +1,6 @@
+---
+id: OperatorName
+title: OperatorName
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type OperatorName = typeof operators[number];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/functions.ts#L748","children":[{"type":"text","value":"packages/db/src/query/builder/functions.ts:748"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype OperatorName = typeof operators[number];\n```\n\nDefined in: [packages/db/src/query/builder/functions.ts:748](https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/functions.ts#L748)\n","originalRawMarkdown":"---\nid: OperatorName\ntitle: OperatorName\n---\n\n```ts\ntype OperatorName = typeof operators[number];\n```\n\nDefined in: [packages/db/src/query/builder/functions.ts:748](https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/functions.ts#L748)\n"}

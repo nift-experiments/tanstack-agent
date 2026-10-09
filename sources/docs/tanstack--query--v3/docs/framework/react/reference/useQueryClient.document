@@ -1,0 +1,6 @@
+---
+id: useQueryClient
+title: useQueryClient
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"The "},{"type":"inlineCode","value":"useQueryClient"},{"type":"text","value":" hook returns the current "},{"type":"inlineCode","value":"QueryClient"},{"type":"text","value":" instance."}]},{"type":"code","value":"import { useQueryClient } from 'react-query'\n\nconst queryClient = useQueryClient()","lang":"js"}],"headings":[]},"frameworks":[],"downloadMarkdown":"\nThe `useQueryClient` hook returns the current `QueryClient` instance.\n\n```js\nimport { useQueryClient } from 'react-query'\n\nconst queryClient = useQueryClient()\n```\n","originalRawMarkdown":"---\nid: useQueryClient\ntitle: useQueryClient\n---\n\nThe `useQueryClient` hook returns the current `QueryClient` instance.\n\n```js\nimport { useQueryClient } from 'react-query'\n\nconst queryClient = useQueryClient()\n```\n"}

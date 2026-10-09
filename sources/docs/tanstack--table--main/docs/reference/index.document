@@ -1,0 +1,6 @@
+---
+id: "@tanstack/table-core"
+title: "@tanstack/table-core"
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"tanstack-table-core","children":[{"type":"text","value":"@tanstack/table-core"}]},{"type":"heading","depth":2,"id":"modules","children":[{"type":"text","value":"Modules"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"index/index.md","children":[{"type":"text","value":"index"}]}]}]},{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"static-functions/index.md","children":[{"type":"text","value":"static-functions"}]}]}]}]}],"headings":[{"id":"tanstack-table-core","text":"@tanstack/table-core","level":1},{"id":"modules","text":"Modules","level":2}]},"frameworks":[],"downloadMarkdown":"\n# @tanstack/table-core\n\n## Modules\n\n- [index](index/index.md)\n- [static-functions](static-functions/index.md)\n","originalRawMarkdown":"---\nid: \"@tanstack/table-core\"\ntitle: \"@tanstack/table-core\"\n---\n\n# @tanstack/table-core\n\n## Modules\n\n- [index](index/index.md)\n- [static-functions](static-functions/index.md)\n"}

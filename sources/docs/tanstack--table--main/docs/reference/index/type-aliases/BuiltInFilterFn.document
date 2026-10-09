@@ -1,0 +1,6 @@
+---
+id: BuiltInFilterFn
+title: BuiltInFilterFn
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-builtinfilterfn","children":[{"type":"text","value":"Type Alias: BuiltInFilterFn"}]},{"type":"code","value":"type BuiltInFilterFn = keyof typeof filterFns;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/filterFns.ts#L463","children":[{"type":"text","value":"features/column-filtering/filterFns.ts:463"}]}]}],"headings":[{"id":"type-alias-builtinfilterfn","text":"Type Alias: BuiltInFilterFn","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: BuiltInFilterFn\n\n```ts\ntype BuiltInFilterFn = keyof typeof filterFns;\n```\n\nDefined in: [features/column-filtering/filterFns.ts:463](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/filterFns.ts#L463)\n","originalRawMarkdown":"---\nid: BuiltInFilterFn\ntitle: BuiltInFilterFn\n---\n\n# Type Alias: BuiltInFilterFn\n\n```ts\ntype BuiltInFilterFn = keyof typeof filterFns;\n```\n\nDefined in: [features/column-filtering/filterFns.ts:463](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/column-filtering/filterFns.ts#L463)\n"}

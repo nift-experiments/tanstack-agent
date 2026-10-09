@@ -1,0 +1,2395 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "apiKey": "",
+    "indexName": "tanstack-hotkeys"
+  },
+  "sections": [
+    {
+      "label": "Getting Started",
+      "children": [
+        {
+          "label": "Overview",
+          "to": "overview"
+        },
+        {
+          "label": "Installation",
+          "to": "installation"
+        },
+        {
+          "label": "Devtools",
+          "to": "devtools"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/react/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Preact Hooks",
+              "to": "framework/preact/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Primitives",
+              "to": "framework/solid/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/angular/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/vue/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/lit/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/svelte/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/alpine/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/ember/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/octane/quick-start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Guides",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/react/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/react/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/react/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/react/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/react/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/react/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/preact/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/preact/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/preact/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/preact/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/preact/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/preact/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/solid/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/solid/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/solid/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/solid/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/solid/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/solid/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/angular/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/angular/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/angular/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/angular/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/angular/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/angular/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/vue/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/vue/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/vue/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/vue/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/vue/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/vue/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/lit/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/lit/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/lit/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/lit/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/lit/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/lit/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/svelte/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/svelte/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/svelte/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/svelte/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/svelte/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/svelte/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/alpine/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/alpine/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/alpine/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/alpine/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/alpine/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/alpine/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/ember/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/ember/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/ember/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/ember/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/ember/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/ember/guides/formatting-display"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "Hotkeys",
+              "to": "framework/octane/guides/hotkeys"
+            },
+            {
+              "label": "Sequences",
+              "to": "framework/octane/guides/sequences"
+            },
+            {
+              "label": "Hotkey Recording",
+              "to": "framework/octane/guides/hotkey-recording"
+            },
+            {
+              "label": "Hotkey Sequence Recording",
+              "to": "framework/octane/guides/sequence-recording"
+            },
+            {
+              "label": "Key State Tracking",
+              "to": "framework/octane/guides/key-state-tracking"
+            },
+            {
+              "label": "Formatting & Display",
+              "to": "framework/octane/guides/formatting-display"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "API Reference",
+      "children": [
+        {
+          "label": "Core API",
+          "to": "reference/index"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "React Hooks",
+              "to": "framework/react/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Preact Hooks",
+              "to": "framework/preact/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Primitives",
+              "to": "framework/solid/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Angular Inject APIs",
+              "to": "framework/angular/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Vue Composables",
+              "to": "framework/vue/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Lit Controllers & Decorators",
+              "to": "framework/lit/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Svelte APIs",
+              "to": "framework/svelte/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "Alpine API",
+              "to": "framework/alpine/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "Ember API",
+              "to": "framework/ember/reference/index"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "Octane API",
+              "to": "framework/octane/reference/index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "label": "Hotkeys API Reference",
+      "children": [
+        {
+          "label": "HotkeyManager",
+          "to": "reference/classes/HotkeyManager"
+        },
+        {
+          "label": "getHotkeyManager",
+          "to": "reference/functions/getHotkeyManager"
+        },
+        {
+          "label": "HotkeyOptions",
+          "to": "reference/interfaces/HotkeyOptions"
+        },
+        {
+          "label": "HotkeyRegistration",
+          "to": "reference/interfaces/HotkeyRegistration"
+        },
+        {
+          "label": "HotkeyRegistrationHandle",
+          "to": "reference/interfaces/HotkeyRegistrationHandle"
+        },
+        {
+          "label": "HotkeyCallback",
+          "to": "reference/type-aliases/HotkeyCallback"
+        },
+        {
+          "label": "HotkeyCallbackContext",
+          "to": "reference/interfaces/HotkeyCallbackContext"
+        },
+        {
+          "label": "HotkeyMeta",
+          "to": "reference/interfaces/HotkeyMeta"
+        },
+        {
+          "label": "HotkeyRegistrationView",
+          "to": "reference/interfaces/HotkeyRegistrationView"
+        },
+        {
+          "label": "toHotkeyRegistrationView",
+          "to": "reference/functions/toHotkeyRegistrationView"
+        },
+        {
+          "label": "ConflictBehavior",
+          "to": "reference/type-aliases/ConflictBehavior"
+        },
+        {
+          "label": "HotkeyDefinition",
+          "to": "reference/adapter/interfaces/HotkeyDefinition"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useHotkey",
+              "to": "framework/react/reference/functions/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/react/reference/functions/useHotkeys"
+            },
+            {
+              "label": "useHotkeysContext",
+              "to": "framework/react/reference/functions/useHotkeysContext"
+            },
+            {
+              "label": "UseHotkeyOptions",
+              "to": "framework/react/reference/interfaces/UseHotkeyOptions"
+            },
+            {
+              "label": "UseHotkeyDefinition",
+              "to": "framework/react/reference/interfaces/UseHotkeyDefinition"
+            },
+            {
+              "label": "HotkeysProvider",
+              "to": "framework/react/reference/functions/HotkeysProvider"
+            },
+            {
+              "label": "HotkeysProviderProps",
+              "to": "framework/react/reference/interfaces/HotkeysProviderProps"
+            },
+            {
+              "label": "HotkeysProviderOptions",
+              "to": "framework/react/reference/interfaces/HotkeysProviderOptions"
+            },
+            {
+              "label": "useDefaultHotkeysOptions",
+              "to": "framework/react/reference/functions/useDefaultHotkeysOptions"
+            },
+            {
+              "label": "useHotkeyRegistrations",
+              "to": "framework/react/reference/functions/useHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/react/reference/interfaces/HotkeyRegistrationsResult"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "useHotkey",
+              "to": "framework/preact/reference/functions/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/preact/reference/functions/useHotkeys"
+            },
+            {
+              "label": "useHotkeysContext",
+              "to": "framework/preact/reference/functions/useHotkeysContext"
+            },
+            {
+              "label": "UseHotkeyOptions",
+              "to": "framework/preact/reference/interfaces/UseHotkeyOptions"
+            },
+            {
+              "label": "UseHotkeyDefinition",
+              "to": "framework/preact/reference/interfaces/UseHotkeyDefinition"
+            },
+            {
+              "label": "HotkeysProvider",
+              "to": "framework/preact/reference/functions/HotkeysProvider"
+            },
+            {
+              "label": "HotkeysProviderProps",
+              "to": "framework/preact/reference/interfaces/HotkeysProviderProps"
+            },
+            {
+              "label": "HotkeysProviderOptions",
+              "to": "framework/preact/reference/interfaces/HotkeysProviderOptions"
+            },
+            {
+              "label": "useDefaultHotkeysOptions",
+              "to": "framework/preact/reference/functions/useDefaultHotkeysOptions"
+            },
+            {
+              "label": "useHotkeyRegistrations",
+              "to": "framework/preact/reference/functions/useHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/preact/reference/interfaces/HotkeyRegistrationsResult"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "createHotkey",
+              "to": "framework/solid/reference/functions/createHotkey"
+            },
+            {
+              "label": "createHotkeys",
+              "to": "framework/solid/reference/functions/createHotkeys"
+            },
+            {
+              "label": "useHotkeysContext",
+              "to": "framework/solid/reference/functions/useHotkeysContext"
+            },
+            {
+              "label": "CreateHotkeyOptions",
+              "to": "framework/solid/reference/interfaces/CreateHotkeyOptions"
+            },
+            {
+              "label": "CreateHotkeyDefinition",
+              "to": "framework/solid/reference/interfaces/CreateHotkeyDefinition"
+            },
+            {
+              "label": "useDefaultHotkeysOptions",
+              "to": "framework/solid/reference/functions/useDefaultHotkeysOptions"
+            },
+            {
+              "label": "createHotkeyRegistrations",
+              "to": "framework/solid/reference/functions/createHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/solid/reference/interfaces/HotkeyRegistrationsResult"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "injectHotkey",
+              "to": "framework/angular/reference/functions/injectHotkey"
+            },
+            {
+              "label": "injectHotkeys",
+              "to": "framework/angular/reference/functions/injectHotkeys"
+            },
+            {
+              "label": "injectHotkeysContext",
+              "to": "framework/angular/reference/functions/injectHotkeysContext"
+            },
+            {
+              "label": "InjectHotkeyOptions",
+              "to": "framework/angular/reference/interfaces/InjectHotkeyOptions"
+            },
+            {
+              "label": "InjectHotkeyDefinition",
+              "to": "framework/angular/reference/interfaces/InjectHotkeyDefinition"
+            },
+            {
+              "label": "provideHotkeys",
+              "to": "framework/angular/reference/functions/provideHotkeys"
+            },
+            {
+              "label": "HotkeysProviderOptions",
+              "to": "framework/angular/reference/interfaces/HotkeysProviderOptions"
+            },
+            {
+              "label": "injectDefaultHotkeysOptions",
+              "to": "framework/angular/reference/functions/injectDefaultHotkeysOptions"
+            },
+            {
+              "label": "injectHotkeyRegistrations",
+              "to": "framework/angular/reference/functions/injectHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/angular/reference/interfaces/HotkeyRegistrationsResult"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "useHotkey",
+              "to": "framework/vue/reference/functions/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/vue/reference/functions/useHotkeys"
+            },
+            {
+              "label": "useHotkeysContext",
+              "to": "framework/vue/reference/functions/useHotkeysContext"
+            },
+            {
+              "label": "UseHotkeyOptions",
+              "to": "framework/vue/reference/interfaces/UseHotkeyOptions"
+            },
+            {
+              "label": "UseHotkeyDefinition",
+              "to": "framework/vue/reference/interfaces/UseHotkeyDefinition"
+            },
+            {
+              "label": "provideHotkeysContext",
+              "to": "framework/vue/reference/functions/provideHotkeysContext"
+            },
+            {
+              "label": "HotkeysProviderOptions",
+              "to": "framework/vue/reference/interfaces/HotkeysProviderOptions"
+            },
+            {
+              "label": "useDefaultHotkeysOptions",
+              "to": "framework/vue/reference/functions/useDefaultHotkeysOptions"
+            },
+            {
+              "label": "useHotkeyRegistrations",
+              "to": "framework/vue/reference/functions/useHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/vue/reference/interfaces/HotkeyRegistrationsResult"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "hotkey",
+              "to": "framework/lit/reference/functions/hotkey"
+            },
+            {
+              "label": "HotkeyController",
+              "to": "framework/lit/reference/classes/HotkeyController"
+            },
+            {
+              "label": "HotkeyRegistrationsController",
+              "to": "framework/lit/reference/classes/HotkeyRegistrationsController"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "createHotkey",
+              "to": "framework/svelte/reference/functions/createHotkey"
+            },
+            {
+              "label": "createHotkeys",
+              "to": "framework/svelte/reference/functions/createHotkeys"
+            },
+            {
+              "label": "createHotkeyAttachment",
+              "to": "framework/svelte/reference/functions/createHotkeyAttachment"
+            },
+            {
+              "label": "createHotkeysAttachment",
+              "to": "framework/svelte/reference/functions/createHotkeysAttachment"
+            },
+            {
+              "label": "CreateHotkeyOptions",
+              "to": "framework/svelte/reference/interfaces/CreateHotkeyOptions"
+            },
+            {
+              "label": "CreateHotkeyDefinition",
+              "to": "framework/svelte/reference/interfaces/CreateHotkeyDefinition"
+            },
+            {
+              "label": "HotkeysProvider",
+              "to": "framework/svelte/reference/variables/HotkeysProvider"
+            },
+            {
+              "label": "HotkeysProviderOptions",
+              "to": "framework/svelte/reference/interfaces/HotkeysProviderOptions"
+            },
+            {
+              "label": "HotkeysProviderProps",
+              "to": "framework/svelte/reference/interfaces/HotkeysProviderProps"
+            },
+            {
+              "label": "DEFAULT_OPTIONS",
+              "to": "framework/svelte/reference/variables/DEFAULT_OPTIONS"
+            },
+            {
+              "label": "getDefaultHotkeysOptions",
+              "to": "framework/svelte/reference/functions/getDefaultHotkeysOptions"
+            },
+            {
+              "label": "getHotkeysContext",
+              "to": "framework/svelte/reference/functions/getHotkeysContext"
+            },
+            {
+              "label": "setHotkeysContext",
+              "to": "framework/svelte/reference/functions/setHotkeysContext"
+            },
+            {
+              "label": "getHotkeyRegistrations",
+              "to": "framework/svelte/reference/functions/getHotkeyRegistrations"
+            },
+            {
+              "label": "SvelteHotkeyRegistrations",
+              "to": "framework/svelte/reference/interfaces/SvelteHotkeyRegistrations"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "createHotkeysScope",
+              "to": "framework/alpine/reference/functions/createHotkeysScope"
+            },
+            {
+              "label": "hotkeysPlugin",
+              "to": "framework/alpine/reference/functions/hotkeysPlugin"
+            },
+            {
+              "label": "AlpineHotkeys",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys"
+            },
+            {
+              "label": "createHotkey",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkey"
+            },
+            {
+              "label": "createHotkeys",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeys"
+            },
+            {
+              "label": "createHotkeyRegistrations",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeyregistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/alpine/reference/interfaces/HotkeyRegistrationsResult"
+            },
+            {
+              "label": "DefaultHotkeysOptions",
+              "to": "framework/alpine/reference/interfaces/DefaultHotkeysOptions"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "onHotkey",
+              "to": "framework/ember/reference/classes/onHotkey"
+            },
+            {
+              "label": "onHotkeys",
+              "to": "framework/ember/reference/classes/onHotkeys"
+            },
+            {
+              "label": "ElementHotkeyOptions",
+              "to": "framework/ember/reference/type-aliases/ElementHotkeyOptions"
+            },
+            {
+              "label": "useHotkey",
+              "to": "framework/ember/reference/classes/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/ember/reference/classes/useHotkeys"
+            },
+            {
+              "label": "useHotkeyRegistrations",
+              "to": "framework/ember/reference/functions/useHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/ember/reference/interfaces/HotkeyRegistrationsResult"
+            },
+            {
+              "label": "createHotkeysScope",
+              "to": "framework/ember/reference/functions/createHotkeysScope"
+            },
+            {
+              "label": "EmberHotkeysScope",
+              "to": "framework/ember/reference/interfaces/EmberHotkeysScope"
+            },
+            {
+              "label": "DefaultHotkeysOptions",
+              "to": "framework/ember/reference/interfaces/DefaultHotkeysOptions"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "useHotkey",
+              "to": "framework/octane/reference/functions/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/octane/reference/functions/useHotkeys"
+            },
+            {
+              "label": "useHotkeyRegistrations",
+              "to": "framework/octane/reference/functions/useHotkeyRegistrations"
+            },
+            {
+              "label": "HotkeyRegistrationsResult",
+              "to": "framework/octane/reference/interfaces/HotkeyRegistrationsResult"
+            },
+            {
+              "label": "HotkeysProvider",
+              "to": "framework/octane/reference/functions/HotkeysProvider"
+            },
+            {
+              "label": "DefaultHotkeysOptions",
+              "to": "framework/octane/reference/interfaces/DefaultHotkeysOptions"
+            },
+            {
+              "label": "useDefaultHotkeysOptions",
+              "to": "framework/octane/reference/functions/useDefaultHotkeysOptions"
+            },
+            {
+              "label": "useHotkeysContext",
+              "to": "framework/octane/reference/functions/useHotkeysContext"
+            },
+            {
+              "label": "HotkeysProviderProps",
+              "to": "framework/octane/reference/interfaces/HotkeysProviderProps"
+            },
+            {
+              "label": "HotkeysProviderOptions",
+              "to": "framework/octane/reference/type-aliases/HotkeysProviderOptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "label": "Hotkey Sequence API Reference",
+      "children": [
+        {
+          "label": "SequenceManager",
+          "to": "reference/classes/SequenceManager"
+        },
+        {
+          "label": "getSequenceManager",
+          "to": "reference/functions/getSequenceManager"
+        },
+        {
+          "label": "SequenceOptions",
+          "to": "reference/interfaces/SequenceOptions"
+        },
+        {
+          "label": "createSequenceMatcher",
+          "to": "reference/functions/createSequenceMatcher"
+        },
+        {
+          "label": "HotkeySequence",
+          "to": "reference/type-aliases/HotkeySequence"
+        },
+        {
+          "label": "SequenceRegistrationHandle",
+          "to": "reference/interfaces/SequenceRegistrationHandle"
+        },
+        {
+          "label": "SequenceRegistrationView",
+          "to": "reference/interfaces/SequenceRegistrationView"
+        },
+        {
+          "label": "HotkeySequenceDefinition",
+          "to": "reference/adapter/interfaces/HotkeySequenceDefinition"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/react/reference/functions/useHotkeySequence"
+            },
+            {
+              "label": "UseHotkeySequenceOptions",
+              "to": "framework/react/reference/interfaces/UseHotkeySequenceOptions"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/react/reference/functions/useHotkeySequences"
+            },
+            {
+              "label": "UseHotkeySequenceDefinition",
+              "to": "framework/react/reference/interfaces/UseHotkeySequenceDefinition"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/preact/reference/functions/useHotkeySequence"
+            },
+            {
+              "label": "UseHotkeySequenceOptions",
+              "to": "framework/preact/reference/interfaces/UseHotkeySequenceOptions"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/preact/reference/functions/useHotkeySequences"
+            },
+            {
+              "label": "UseHotkeySequenceDefinition",
+              "to": "framework/preact/reference/interfaces/UseHotkeySequenceDefinition"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "createHotkeySequence",
+              "to": "framework/solid/reference/functions/createHotkeySequence"
+            },
+            {
+              "label": "CreateHotkeySequenceOptions",
+              "to": "framework/solid/reference/interfaces/CreateHotkeySequenceOptions"
+            },
+            {
+              "label": "createHotkeySequences",
+              "to": "framework/solid/reference/functions/createHotkeySequences"
+            },
+            {
+              "label": "CreateHotkeySequenceDefinition",
+              "to": "framework/solid/reference/interfaces/CreateHotkeySequenceDefinition"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "injectHotkeySequence",
+              "to": "framework/angular/reference/functions/injectHotkeySequence"
+            },
+            {
+              "label": "InjectHotkeySequenceOptions",
+              "to": "framework/angular/reference/interfaces/InjectHotkeySequenceOptions"
+            },
+            {
+              "label": "injectHotkeySequences",
+              "to": "framework/angular/reference/functions/injectHotkeySequences"
+            },
+            {
+              "label": "InjectHotkeySequenceDefinition",
+              "to": "framework/angular/reference/interfaces/InjectHotkeySequenceDefinition"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/vue/reference/functions/useHotkeySequence"
+            },
+            {
+              "label": "UseHotkeySequenceOptions",
+              "to": "framework/vue/reference/interfaces/UseHotkeySequenceOptions"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/vue/reference/functions/useHotkeySequences"
+            },
+            {
+              "label": "UseHotkeySequenceDefinition",
+              "to": "framework/vue/reference/interfaces/UseHotkeySequenceDefinition"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "hotkeySequence",
+              "to": "framework/lit/reference/functions/hotkeySequence"
+            },
+            {
+              "label": "HotkeySequenceController",
+              "to": "framework/lit/reference/classes/HotkeySequenceController"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "createHotkeySequence",
+              "to": "framework/svelte/reference/functions/createHotkeySequence"
+            },
+            {
+              "label": "createHotkeySequenceAttachment",
+              "to": "framework/svelte/reference/functions/createHotkeySequenceAttachment"
+            },
+            {
+              "label": "CreateHotkeySequenceOptions",
+              "to": "framework/svelte/reference/interfaces/CreateHotkeySequenceOptions"
+            },
+            {
+              "label": "createHotkeySequences",
+              "to": "framework/svelte/reference/functions/createHotkeySequences"
+            },
+            {
+              "label": "createHotkeySequencesAttachment",
+              "to": "framework/svelte/reference/functions/createHotkeySequencesAttachment"
+            },
+            {
+              "label": "CreateHotkeySequenceDefinition",
+              "to": "framework/svelte/reference/interfaces/CreateHotkeySequenceDefinition"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "createHotkeySequence",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeysequence"
+            },
+            {
+              "label": "createHotkeySequences",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeysequences"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/ember/reference/classes/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/ember/reference/classes/useHotkeySequences"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/octane/reference/functions/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/octane/reference/functions/useHotkeySequences"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "label": "Key hold & held keys API Reference",
+      "children": [
+        {
+          "label": "KeyStateTracker",
+          "to": "reference/classes/KeyStateTracker"
+        },
+        {
+          "label": "getKeyStateTracker",
+          "to": "reference/functions/getKeyStateTracker"
+        },
+        {
+          "label": "KeyStateTrackerState",
+          "to": "reference/interfaces/KeyStateTrackerState"
+        },
+        {
+          "label": "IndividualKey",
+          "to": "reference/type-aliases/IndividualKey"
+        },
+        {
+          "label": "matchesHeldModifiers",
+          "to": "reference/functions/matchesHeldModifiers"
+        },
+        {
+          "label": "HeldModifierOptions",
+          "to": "reference/interfaces/HeldModifierOptions"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useKeyHold",
+              "to": "framework/react/reference/functions/useKeyHold"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/react/reference/functions/useHeldKeys"
+            },
+            {
+              "label": "useHeldKeyCodes",
+              "to": "framework/react/reference/functions/useHeldKeyCodes"
+            },
+            {
+              "label": "useHotkeyHint",
+              "to": "framework/react/reference/functions/useHotkeyHint"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "useKeyHold",
+              "to": "framework/preact/reference/functions/useKeyHold"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/preact/reference/functions/useHeldKeys"
+            },
+            {
+              "label": "useHeldKeyCodes",
+              "to": "framework/preact/reference/functions/useHeldKeyCodes"
+            },
+            {
+              "label": "useHotkeyHint",
+              "to": "framework/preact/reference/functions/useHotkeyHint"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "createKeyHold",
+              "to": "framework/solid/reference/functions/createKeyHold"
+            },
+            {
+              "label": "createHeldKeys",
+              "to": "framework/solid/reference/functions/createHeldKeys"
+            },
+            {
+              "label": "createHeldKeyCodes",
+              "to": "framework/solid/reference/functions/createHeldKeyCodes"
+            },
+            {
+              "label": "createHotkeyHint",
+              "to": "framework/solid/reference/functions/createHotkeyHint"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "injectKeyHold",
+              "to": "framework/angular/reference/functions/injectKeyHold"
+            },
+            {
+              "label": "injectHeldKeys",
+              "to": "framework/angular/reference/functions/injectHeldKeys"
+            },
+            {
+              "label": "injectHeldKeyCodes",
+              "to": "framework/angular/reference/functions/injectHeldKeyCodes"
+            },
+            {
+              "label": "injectHotkeyHint",
+              "to": "framework/angular/reference/functions/injectHotkeyHint"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "useKeyHold",
+              "to": "framework/vue/reference/functions/useKeyHold"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/vue/reference/functions/useHeldKeys"
+            },
+            {
+              "label": "useHeldKeyCodes",
+              "to": "framework/vue/reference/functions/useHeldKeyCodes"
+            },
+            {
+              "label": "useHotkeyHint",
+              "to": "framework/vue/reference/functions/useHotkeyHint"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "KeyHoldController",
+              "to": "framework/lit/reference/classes/KeyHoldController"
+            },
+            {
+              "label": "HeldKeysController",
+              "to": "framework/lit/reference/classes/HeldKeysController"
+            },
+            {
+              "label": "HeldKeyCodesController",
+              "to": "framework/lit/reference/classes/HeldKeyCodesController"
+            },
+            {
+              "label": "HotkeyHintController",
+              "to": "framework/lit/reference/classes/HotkeyHintController"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "getIsKeyHeld",
+              "to": "framework/svelte/reference/functions/getIsKeyHeld"
+            },
+            {
+              "label": "SvelteHeldKeyState",
+              "to": "framework/svelte/reference/interfaces/SvelteHeldKeyState"
+            },
+            {
+              "label": "getHeldKeys",
+              "to": "framework/svelte/reference/functions/getHeldKeys"
+            },
+            {
+              "label": "SvelteHeldKeys",
+              "to": "framework/svelte/reference/interfaces/SvelteHeldKeys"
+            },
+            {
+              "label": "getHeldKeyCodesMap",
+              "to": "framework/svelte/reference/functions/getHeldKeyCodesMap"
+            },
+            {
+              "label": "SvelteHeldKeyCodesMap",
+              "to": "framework/svelte/reference/interfaces/SvelteHeldKeyCodesMap"
+            },
+            {
+              "label": "getHotkeyHint",
+              "to": "framework/svelte/reference/functions/getHotkeyHint"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "createKeyHold",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createkeyhold"
+            },
+            {
+              "label": "createHeldKeys",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createheldkeys"
+            },
+            {
+              "label": "createHeldKeyCodes",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createheldkeycodes"
+            },
+            {
+              "label": "createHotkeyHint",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeyhint"
+            },
+            {
+              "label": "AlpineHotkeyState",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeyState"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "useKeyHold",
+              "to": "framework/ember/reference/functions/useKeyHold"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/ember/reference/functions/useHeldKeys"
+            },
+            {
+              "label": "useHeldKeyCodes",
+              "to": "framework/ember/reference/functions/useHeldKeyCodes"
+            },
+            {
+              "label": "useHotkeyHint",
+              "to": "framework/ember/reference/functions/useHotkeyHint"
+            },
+            {
+              "label": "EmberHotkeyState",
+              "to": "framework/ember/reference/interfaces/EmberHotkeyState"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "useKeyHold",
+              "to": "framework/octane/reference/functions/useKeyHold"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/octane/reference/functions/useHeldKeys"
+            },
+            {
+              "label": "useHeldKeyCodes",
+              "to": "framework/octane/reference/functions/useHeldKeyCodes"
+            },
+            {
+              "label": "useHotkeyHint",
+              "to": "framework/octane/reference/functions/useHotkeyHint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "label": "Hotkey Recorder API Reference",
+      "children": [
+        {
+          "label": "HotkeyRecorder",
+          "to": "reference/classes/HotkeyRecorder"
+        },
+        {
+          "label": "HotkeyRecorderOptions",
+          "to": "reference/interfaces/HotkeyRecorderOptions"
+        },
+        {
+          "label": "HotkeyRecorderState",
+          "to": "reference/interfaces/HotkeyRecorderState"
+        },
+        {
+          "label": "findHotkeyConflicts",
+          "to": "reference/functions/findHotkeyConflicts"
+        },
+        {
+          "label": "HotkeyConflictOptions",
+          "to": "reference/interfaces/HotkeyConflictOptions"
+        },
+        {
+          "label": "HotkeyConflict",
+          "to": "reference/type-aliases/HotkeyConflict"
+        },
+        {
+          "label": "RecorderRejection",
+          "to": "reference/interfaces/RecorderRejection"
+        },
+        {
+          "label": "RecorderKeyMode",
+          "to": "reference/type-aliases/RecorderKeyMode"
+        },
+        {
+          "label": "RecorderOptions",
+          "to": "reference/interfaces/RecorderOptions"
+        },
+        {
+          "label": "HotkeyRecorderValidationContext",
+          "to": "reference/interfaces/HotkeyRecorderValidationContext"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/react/reference/functions/useHotkeyRecorder"
+            },
+            {
+              "label": "ReactHotkeyRecorder",
+              "to": "framework/react/reference/interfaces/ReactHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/preact/reference/functions/useHotkeyRecorder"
+            },
+            {
+              "label": "PreactHotkeyRecorder",
+              "to": "framework/preact/reference/interfaces/PreactHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "createHotkeyRecorder",
+              "to": "framework/solid/reference/functions/createHotkeyRecorder"
+            },
+            {
+              "label": "SolidHotkeyRecorder",
+              "to": "framework/solid/reference/interfaces/SolidHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "injectHotkeyRecorder",
+              "to": "framework/angular/reference/functions/injectHotkeyRecorder"
+            },
+            {
+              "label": "AngularHotkeyRecorder",
+              "to": "framework/angular/reference/interfaces/AngularHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/vue/reference/functions/useHotkeyRecorder"
+            },
+            {
+              "label": "VueHotkeyRecorder",
+              "to": "framework/vue/reference/interfaces/VueHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "HotkeyRecorderController",
+              "to": "framework/lit/reference/classes/HotkeyRecorderController"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "createHotkeyRecorder",
+              "to": "framework/svelte/reference/functions/createHotkeyRecorder"
+            },
+            {
+              "label": "SvelteHotkeyRecorder",
+              "to": "framework/svelte/reference/interfaces/SvelteHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "createHotkeyRecorder",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeyrecorder"
+            },
+            {
+              "label": "AlpineHotkeyRecorder",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/ember/reference/functions/useHotkeyRecorder"
+            },
+            {
+              "label": "EmberHotkeyRecorder",
+              "to": "framework/ember/reference/interfaces/EmberHotkeyRecorder"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/octane/reference/functions/useHotkeyRecorder"
+            },
+            {
+              "label": "OctaneHotkeyRecorder",
+              "to": "framework/octane/reference/interfaces/OctaneHotkeyRecorder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "label": "Hotkey Sequence Recorder API Reference",
+      "children": [
+        {
+          "label": "HotkeySequenceRecorder",
+          "to": "reference/classes/HotkeySequenceRecorder"
+        },
+        {
+          "label": "HotkeySequenceRecorderOptions",
+          "to": "reference/interfaces/HotkeySequenceRecorderOptions"
+        },
+        {
+          "label": "HotkeySequenceRecorderState",
+          "to": "reference/interfaces/HotkeySequenceRecorderState"
+        },
+        {
+          "label": "HotkeySequenceRecorderCommitKeys",
+          "to": "reference/type-aliases/HotkeySequenceRecorderCommitKeys"
+        },
+        {
+          "label": "HotkeySequenceRecorderValidationContext",
+          "to": "reference/interfaces/HotkeySequenceRecorderValidationContext"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/react/reference/functions/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "ReactHotkeySequenceRecorder",
+              "to": "framework/react/reference/interfaces/ReactHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/preact/reference/functions/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "PreactHotkeySequenceRecorder",
+              "to": "framework/preact/reference/interfaces/PreactHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "createHotkeySequenceRecorder",
+              "to": "framework/solid/reference/functions/createHotkeySequenceRecorder"
+            },
+            {
+              "label": "SolidHotkeySequenceRecorder",
+              "to": "framework/solid/reference/interfaces/SolidHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "injectHotkeySequenceRecorder",
+              "to": "framework/angular/reference/functions/injectHotkeySequenceRecorder"
+            },
+            {
+              "label": "AngularHotkeySequenceRecorder",
+              "to": "framework/angular/reference/interfaces/AngularHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/vue/reference/functions/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "VueHotkeySequenceRecorder",
+              "to": "framework/vue/reference/interfaces/VueHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "HotkeySequenceRecorderController",
+              "to": "framework/lit/reference/classes/HotkeySequenceRecorderController"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "createHotkeySequenceRecorder",
+              "to": "framework/svelte/reference/functions/createHotkeySequenceRecorder"
+            },
+            {
+              "label": "SvelteHotkeySequenceRecorder",
+              "to": "framework/svelte/reference/interfaces/SvelteHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "createHotkeySequenceRecorder",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeys#createhotkeysequencerecorder"
+            },
+            {
+              "label": "AlpineHotkeySequenceRecorder",
+              "to": "framework/alpine/reference/interfaces/AlpineHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/ember/reference/functions/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "EmberHotkeySequenceRecorder",
+              "to": "framework/ember/reference/interfaces/EmberHotkeySequenceRecorder"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/octane/reference/functions/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "OctaneHotkeySequenceRecorder",
+              "to": "framework/octane/reference/interfaces/OctaneHotkeySequenceRecorder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "label": "Normalization & format API Reference",
+      "children": [
+        {
+          "label": "normalizeHotkey",
+          "to": "reference/functions/normalizeHotkey"
+        },
+        {
+          "label": "normalizeHotkeyFromParsed",
+          "to": "reference/functions/normalizeHotkeyFromParsed"
+        },
+        {
+          "label": "normalizeHotkeyFromEvent",
+          "to": "reference/functions/normalizeHotkeyFromEvent"
+        },
+        {
+          "label": "normalizeRegisterableHotkey",
+          "to": "reference/functions/normalizeRegisterableHotkey"
+        },
+        {
+          "label": "formatForDisplay",
+          "to": "reference/functions/formatForDisplay"
+        },
+        {
+          "label": "formatHotkey",
+          "to": "reference/functions/formatHotkey"
+        },
+        {
+          "label": "formatWithLabels",
+          "to": "reference/functions/formatWithLabels"
+        },
+        {
+          "label": "FormatDisplayOptions",
+          "to": "reference/interfaces/FormatDisplayOptions"
+        },
+        {
+          "label": "KEY_DISPLAY_SYMBOLS",
+          "to": "reference/variables/KEY_DISPLAY_SYMBOLS"
+        },
+        {
+          "label": "PUNCTUATION_KEY_DISPLAY_LABELS",
+          "to": "reference/variables/PUNCTUATION_KEY_DISPLAY_LABELS"
+        },
+        {
+          "label": "MAC_MODIFIER_SYMBOLS",
+          "to": "reference/variables/MAC_MODIFIER_SYMBOLS"
+        },
+        {
+          "label": "MAC_MODIFIER_LABELS",
+          "to": "reference/variables/MAC_MODIFIER_LABELS"
+        },
+        {
+          "label": "WINDOWS_MODIFIER_LABELS",
+          "to": "reference/variables/WINDOWS_MODIFIER_LABELS"
+        },
+        {
+          "label": "LINUX_MODIFIER_LABELS",
+          "to": "reference/variables/LINUX_MODIFIER_LABELS"
+        },
+        {
+          "label": "MODIFIER_ALIASES",
+          "to": "reference/variables/MODIFIER_ALIASES"
+        },
+        {
+          "label": "MODIFIER_ORDER",
+          "to": "reference/variables/MODIFIER_ORDER"
+        },
+        {
+          "label": "MODIFIER_KEYS",
+          "to": "reference/variables/MODIFIER_KEYS"
+        },
+        {
+          "label": "parseRegisterableHotkey",
+          "to": "reference/functions/parseRegisterableHotkey"
+        },
+        {
+          "label": "areHotkeysEqual",
+          "to": "reference/functions/areHotkeysEqual"
+        },
+        {
+          "label": "PhysicalKey",
+          "to": "reference/type-aliases/PhysicalKey"
+        },
+        {
+          "label": "Hotkey",
+          "to": "reference/type-aliases/Hotkey"
+        },
+        {
+          "label": "RegisterableHotkey",
+          "to": "reference/type-aliases/RegisterableHotkey"
+        },
+        {
+          "label": "RawHotkey",
+          "to": "reference/type-aliases/RawHotkey"
+        },
+        {
+          "label": "ParsedHotkey",
+          "to": "reference/type-aliases/ParsedHotkey"
+        },
+        {
+          "label": "LogicalKey",
+          "to": "reference/type-aliases/LogicalKey"
+        },
+        {
+          "label": "PhysicalKeyCode",
+          "to": "reference/type-aliases/PhysicalKeyCode"
+        },
+        {
+          "label": "DisplayHotkey",
+          "to": "reference/type-aliases/DisplayHotkey"
+        },
+        {
+          "label": "formatHotkeySequence",
+          "to": "reference/functions/formatHotkeySequence"
+        },
+        {
+          "label": "parseHotkey",
+          "to": "reference/functions/parseHotkey"
+        },
+        {
+          "label": "rawHotkeyToParsedHotkey",
+          "to": "reference/functions/rawHotkeyToParsedHotkey"
+        },
+        {
+          "label": "parseKeyboardEvent",
+          "to": "reference/functions/parseKeyboardEvent"
+        },
+        {
+          "label": "matchesKeyboardEvent",
+          "to": "reference/functions/matchesKeyboardEvent"
+        },
+        {
+          "label": "validateHotkey",
+          "to": "reference/functions/validateHotkey"
+        },
+        {
+          "label": "checkHotkey",
+          "to": "reference/functions/checkHotkey"
+        },
+        {
+          "label": "assertValidHotkey",
+          "to": "reference/functions/assertValidHotkey"
+        },
+        {
+          "label": "ValidationResult",
+          "to": "reference/interfaces/ValidationResult"
+        }
+      ]
+    },
+    {
+      "label": "Examples",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "vanilla",
+          "children": [
+            {
+              "label": "formatForDisplay",
+              "to": "framework/vanilla/examples/formatForDisplay"
+            }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/react/examples/kitchen-sink"
+            },
+            {
+              "label": "useHotkey",
+              "to": "framework/react/examples/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/react/examples/useHotkeys"
+            },
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/react/examples/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/react/examples/useHotkeySequences"
+            },
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/react/examples/useHotkeyRecorder"
+            },
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/react/examples/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/react/examples/useHeldKeys"
+            },
+            {
+              "label": "useKeyHold",
+              "to": "framework/react/examples/useKeyhold"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/preact/examples/kitchen-sink"
+            },
+            {
+              "label": "useHotkey",
+              "to": "framework/preact/examples/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/preact/examples/useHotkeys"
+            },
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/preact/examples/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/preact/examples/useHotkeySequences"
+            },
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/preact/examples/useHotkeyRecorder"
+            },
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/preact/examples/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/preact/examples/useHeldKeys"
+            },
+            {
+              "label": "useKeyHold",
+              "to": "framework/preact/examples/useKeyhold"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/solid/examples/kitchen-sink"
+            },
+            {
+              "label": "createHotkey",
+              "to": "framework/solid/examples/createHotkey"
+            },
+            {
+              "label": "createHotkeys",
+              "to": "framework/solid/examples/createHotkeys"
+            },
+            {
+              "label": "createHotkeySequence",
+              "to": "framework/solid/examples/createHotkeySequence"
+            },
+            {
+              "label": "createHotkeySequences",
+              "to": "framework/solid/examples/createHotkeySequences"
+            },
+            {
+              "label": "createHotkeyRecorder",
+              "to": "framework/solid/examples/createHotkeyRecorder"
+            },
+            {
+              "label": "createHotkeySequenceRecorder",
+              "to": "framework/solid/examples/createHotkeySequenceRecorder"
+            },
+            {
+              "label": "createHeldKeys",
+              "to": "framework/solid/examples/createHeldKeys"
+            },
+            {
+              "label": "createKeyHold",
+              "to": "framework/solid/examples/createKeyHold"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/angular/examples/kitchen-sink"
+            },
+            {
+              "label": "injectHotkey",
+              "to": "framework/angular/examples/injectHotkey"
+            },
+            {
+              "label": "injectHotkeys",
+              "to": "framework/angular/examples/injectHotkeys"
+            },
+            {
+              "label": "injectHotkeySequence",
+              "to": "framework/angular/examples/injectHotkeySequence"
+            },
+            {
+              "label": "injectHotkeySequences",
+              "to": "framework/angular/examples/injectHotkeySequences"
+            },
+            {
+              "label": "injectHotkeyRecorder",
+              "to": "framework/angular/examples/injectHotkeyRecorder"
+            },
+            {
+              "label": "injectHotkeySequenceRecorder",
+              "to": "framework/angular/examples/injectHotkeySequenceRecorder"
+            },
+            {
+              "label": "injectHeldKeys",
+              "to": "framework/angular/examples/injectHeldKeys"
+            },
+            {
+              "label": "injectKeyHold",
+              "to": "framework/angular/examples/injectKeyHold"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/vue/examples/kitchen-sink"
+            },
+            {
+              "label": "useHotkey",
+              "to": "framework/vue/examples/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/vue/examples/useHotkeys"
+            },
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/vue/examples/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/vue/examples/useHotkeySequences"
+            },
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/vue/examples/useHotkeyRecorder"
+            },
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/vue/examples/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/vue/examples/useHeldKeys"
+            },
+            {
+              "label": "useKeyHold",
+              "to": "framework/vue/examples/useKeyhold"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/lit/examples/kitchen-sink"
+            },
+            {
+              "label": "hotkey",
+              "to": "framework/lit/examples/hotkey"
+            },
+            {
+              "label": "hotkey-sequence",
+              "to": "framework/lit/examples/hotkey-sequence"
+            },
+            {
+              "label": "hotkey-recorder",
+              "to": "framework/lit/examples/hotkey-recorder"
+            },
+            {
+              "label": "hotkey-sequence-recorder",
+              "to": "framework/lit/examples/hotkey-sequence-recorder"
+            },
+            {
+              "label": "held-keys",
+              "to": "framework/lit/examples/held-keys"
+            },
+            {
+              "label": "key-hold",
+              "to": "framework/lit/examples/key-hold"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/svelte/examples/kitchen-sink"
+            },
+            {
+              "label": "createHotkey",
+              "to": "framework/svelte/examples/create-hotkey"
+            },
+            {
+              "label": "createHotkeys",
+              "to": "framework/svelte/examples/create-hotkeys"
+            },
+            {
+              "label": "createHotkeySequence",
+              "to": "framework/svelte/examples/create-hotkey-sequence"
+            },
+            {
+              "label": "createHotkeySequences",
+              "to": "framework/svelte/examples/create-hotkey-sequences"
+            },
+            {
+              "label": "createHotkeyRecorder",
+              "to": "framework/svelte/examples/create-hotkey-recorder"
+            },
+            {
+              "label": "create-hotkey-sequence-recorder",
+              "to": "framework/svelte/examples/create-hotkey-sequence-recorder"
+            },
+            {
+              "label": "getHeldKeys",
+              "to": "framework/svelte/examples/get-held-keys"
+            },
+            {
+              "label": "getIsKeyHeld",
+              "to": "framework/svelte/examples/get-is-key-held"
+            }
+          ]
+        },
+        {
+          "label": "alpine",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/alpine/examples/kitchen-sink"
+            },
+            {
+              "label": "createHotkey",
+              "to": "framework/alpine/examples/createHotkey"
+            },
+            {
+              "label": "createHotkeys",
+              "to": "framework/alpine/examples/createHotkeys"
+            },
+            {
+              "label": "createHotkeySequence",
+              "to": "framework/alpine/examples/createHotkeySequence"
+            },
+            {
+              "label": "createHotkeySequences",
+              "to": "framework/alpine/examples/createHotkeySequences"
+            },
+            {
+              "label": "createHotkeyRecorder",
+              "to": "framework/alpine/examples/createHotkeyRecorder"
+            },
+            {
+              "label": "createHotkeySequenceRecorder",
+              "to": "framework/alpine/examples/createHotkeySequenceRecorder"
+            },
+            {
+              "label": "createHeldKeys",
+              "to": "framework/alpine/examples/createHeldKeys"
+            },
+            {
+              "label": "createKeyHold",
+              "to": "framework/alpine/examples/createKeyHold"
+            }
+          ]
+        },
+        {
+          "label": "ember",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/ember/examples/kitchen-sink"
+            },
+            {
+              "label": "useHotkey",
+              "to": "framework/ember/examples/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/ember/examples/useHotkeys"
+            },
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/ember/examples/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/ember/examples/useHotkeySequences"
+            },
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/ember/examples/useHotkeyRecorder"
+            },
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/ember/examples/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/ember/examples/useHeldKeys"
+            },
+            {
+              "label": "useKeyHold",
+              "to": "framework/ember/examples/useKeyHold"
+            }
+          ]
+        },
+        {
+          "label": "octane",
+          "children": [
+            {
+              "label": "Kitchen Sink",
+              "to": "framework/octane/examples/kitchen-sink"
+            },
+            {
+              "label": "useHotkey",
+              "to": "framework/octane/examples/useHotkey"
+            },
+            {
+              "label": "useHotkeys",
+              "to": "framework/octane/examples/useHotkeys"
+            },
+            {
+              "label": "useHotkeySequence",
+              "to": "framework/octane/examples/useHotkeySequence"
+            },
+            {
+              "label": "useHotkeySequences",
+              "to": "framework/octane/examples/useHotkeySequences"
+            },
+            {
+              "label": "useHotkeyRecorder",
+              "to": "framework/octane/examples/useHotkeyRecorder"
+            },
+            {
+              "label": "useHotkeySequenceRecorder",
+              "to": "framework/octane/examples/useHotkeySequenceRecorder"
+            },
+            {
+              "label": "useHeldKeys",
+              "to": "framework/octane/examples/useHeldKeys"
+            },
+            {
+              "label": "useKeyHold",
+              "to": "framework/octane/examples/useKeyHold"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

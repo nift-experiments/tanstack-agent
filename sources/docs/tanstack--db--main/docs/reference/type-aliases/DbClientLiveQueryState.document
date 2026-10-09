@@ -1,0 +1,6 @@
+---
+id: DbClientLiveQueryState
+title: DbClientLiveQueryState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DbClientLiveQueryState = \"pending\" | \"success\" | \"error\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L135","children":[{"type":"text","value":"packages/db/src/client.ts:135"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DbClientLiveQueryState = \"pending\" | \"success\" | \"error\";\n```\n\nDefined in: [packages/db/src/client.ts:135](https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L135)\n","originalRawMarkdown":"---\nid: DbClientLiveQueryState\ntitle: DbClientLiveQueryState\n---\n\n```ts\ntype DbClientLiveQueryState = \"pending\" | \"success\" | \"error\";\n```\n\nDefined in: [packages/db/src/client.ts:135](https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L135)\n"}

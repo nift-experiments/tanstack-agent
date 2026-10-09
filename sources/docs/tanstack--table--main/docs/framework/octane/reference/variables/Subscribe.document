@@ -1,0 +1,6 @@
+---
+id: Subscribe
+title: Subscribe
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"variable-subscribe","children":[{"type":"text","value":"Variable: Subscribe"}]},{"type":"code","value":"const Subscribe: SubscribeComponent;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/octane-table/src/Subscribe.tsrx.d.ts#L8","children":[{"type":"text","value":"Subscribe.tsrx.d.ts:8"}]}]}],"headings":[{"id":"variable-subscribe","text":"Variable: Subscribe","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Variable: Subscribe\n\n```ts\nconst Subscribe: SubscribeComponent;\n```\n\nDefined in: [Subscribe.tsrx.d.ts:8](https://github.com/TanStack/table/blob/main/packages/octane-table/src/Subscribe.tsrx.d.ts#L8)\n","originalRawMarkdown":"---\nid: Subscribe\ntitle: Subscribe\n---\n\n# Variable: Subscribe\n\n```ts\nconst Subscribe: SubscribeComponent;\n```\n\nDefined in: [Subscribe.tsrx.d.ts:8](https://github.com/TanStack/table/blob/main/packages/octane-table/src/Subscribe.tsrx.d.ts#L8)\n"}

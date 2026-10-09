@@ -1,0 +1,6 @@
+---
+id: AppFormComponent
+title: AppFormComponent
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AppFormComponent = FunctionComponent<{\n  children: Exclude<ReactNode, Promise<any>>;\n}>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/react-form/src/AppForm/ReactAppFormApi.public.tsx#L6","children":[{"type":"text","value":"packages/react-form/src/AppForm/ReactAppFormApi.public.tsx:6"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AppFormComponent = FunctionComponent<{\n  children: Exclude<ReactNode, Promise<any>>;\n}>;\n```\n\nDefined in: [packages/react-form/src/AppForm/ReactAppFormApi.public.tsx:6](https://github.com/TanStack/form/blob/main/packages/react-form/src/AppForm/ReactAppFormApi.public.tsx#L6)\n","originalRawMarkdown":"---\nid: AppFormComponent\ntitle: AppFormComponent\n---\n\n```ts\ntype AppFormComponent = FunctionComponent<{\n  children: Exclude<ReactNode, Promise<any>>;\n}>;\n```\n\nDefined in: [packages/react-form/src/AppForm/ReactAppFormApi.public.tsx:6](https://github.com/TanStack/form/blob/main/packages/react-form/src/AppForm/ReactAppFormApi.public.tsx#L6)\n"}

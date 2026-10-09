@@ -1,0 +1,6 @@
+---
+id: AsyncRouteComponentType
+title: AsyncRouteComponent type
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"The "},{"type":"inlineCode","value":"AsyncRouteComponent"},{"type":"text","value":" type is used to describe a code-split route component that can be preloaded using a "},{"type":"inlineCode","value":"component.preload()"},{"type":"text","value":" method."}]},{"type":"code","value":"type AsyncRouteComponent<TProps> = SyncRouteComponent<TProps> & {\n  preload?: () => Promise<void>\n}","lang":"tsx"}],"headings":[]},"frameworks":[],"downloadMarkdown":"\nThe `AsyncRouteComponent` type is used to describe a code-split route component that can be preloaded using a `component.preload()` method.\n\n```tsx\ntype AsyncRouteComponent<TProps> = SyncRouteComponent<TProps> & {\n  preload?: () => Promise<void>\n}\n```\n","originalRawMarkdown":"---\nid: AsyncRouteComponentType\ntitle: AsyncRouteComponent type\n---\n\nThe `AsyncRouteComponent` type is used to describe a code-split route component that can be preloaded using a `component.preload()` method.\n\n```tsx\ntype AsyncRouteComponent<TProps> = SyncRouteComponent<TProps> & {\n  preload?: () => Promise<void>\n}\n```\n"}

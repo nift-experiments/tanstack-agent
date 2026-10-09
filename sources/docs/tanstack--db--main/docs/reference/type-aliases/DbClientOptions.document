@@ -1,0 +1,6 @@
+---
+id: DbClientOptions
+title: DbClientOptions
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DbClientOptions = Record<string, unknown>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L178","children":[{"type":"text","value":"packages/db/src/client.ts:178"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DbClientOptions = Record<string, unknown>;\n```\n\nDefined in: [packages/db/src/client.ts:178](https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L178)\n","originalRawMarkdown":"---\nid: DbClientOptions\ntitle: DbClientOptions\n---\n\n```ts\ntype DbClientOptions = Record<string, unknown>;\n```\n\nDefined in: [packages/db/src/client.ts:178](https://github.com/TanStack/db/blob/main/packages/db/src/client.ts#L178)\n"}

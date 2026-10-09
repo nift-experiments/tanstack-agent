@@ -16,6 +16,7 @@ const result = frontmatter + documentProjectionPrefix + JSON.stringify({
   document: parseSiteMarkdown(body),
   frameworks: extractFrameworksFromMarkdown(body),
   downloadMarkdown: body,
+  ...(input.rawSource ? {originalRawMarkdown: fs.readFileSync(input.rawSource, 'utf8')} : {}),
 }) + '\n'
 fs.mkdirSync(new URL('.', 'file://' + input.output).pathname, {recursive: true})
 if (!fs.existsSync(input.output) || fs.readFileSync(input.output, 'utf8') !== result) fs.writeFileSync(input.output, result)

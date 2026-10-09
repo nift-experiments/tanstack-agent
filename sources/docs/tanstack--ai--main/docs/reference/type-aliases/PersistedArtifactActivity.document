@@ -1,0 +1,6 @@
+---
+id: PersistedArtifactActivity
+title: PersistedArtifactActivity
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type PersistedArtifactActivity = \"image\" | \"audio\" | \"tts\" | \"video\" | \"transcription\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2203","children":[{"type":"text","value":"packages/ai/src/types.ts:2203"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype PersistedArtifactActivity = \"image\" | \"audio\" | \"tts\" | \"video\" | \"transcription\";\n```\n\nDefined in: [packages/ai/src/types.ts:2203](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2203)\n","originalRawMarkdown":"---\nid: PersistedArtifactActivity\ntitle: PersistedArtifactActivity\n---\n\n```ts\ntype PersistedArtifactActivity = \"image\" | \"audio\" | \"tts\" | \"video\" | \"transcription\";\n```\n\nDefined in: [packages/ai/src/types.ts:2203](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2203)\n"}

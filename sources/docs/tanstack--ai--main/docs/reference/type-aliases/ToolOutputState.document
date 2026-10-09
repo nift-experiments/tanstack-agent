@@ -1,0 +1,6 @@
+---
+id: ToolOutputState
+title: ToolOutputState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ToolOutputState = \"output-available\" | \"output-error\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L107","children":[{"type":"text","value":"packages/ai/src/types.ts:107"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ToolOutputState = \"output-available\" | \"output-error\";\n```\n\nDefined in: [packages/ai/src/types.ts:107](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L107)\n","originalRawMarkdown":"---\nid: ToolOutputState\ntitle: ToolOutputState\n---\n\n```ts\ntype ToolOutputState = \"output-available\" | \"output-error\";\n```\n\nDefined in: [packages/ai/src/types.ts:107](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L107)\n"}

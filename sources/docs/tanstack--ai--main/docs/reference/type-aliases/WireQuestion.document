@@ -1,0 +1,6 @@
+---
+id: WireQuestion
+title: WireQuestion
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type WireQuestion = WireChoiceQuestion | WireScoreQuestion | WireNoulQuestion;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/evaluate/adapter.ts#L71","children":[{"type":"text","value":"packages/ai/src/activities/evaluate/adapter.ts:71"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Question payload adapters send to the provider."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype WireQuestion = WireChoiceQuestion | WireScoreQuestion | WireNoulQuestion;\n```\n\nDefined in: [packages/ai/src/activities/evaluate/adapter.ts:71](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/evaluate/adapter.ts#L71)\n\nQuestion payload adapters send to the provider.\n","originalRawMarkdown":"---\nid: WireQuestion\ntitle: WireQuestion\n---\n\n```ts\ntype WireQuestion = WireChoiceQuestion | WireScoreQuestion | WireNoulQuestion;\n```\n\nDefined in: [packages/ai/src/activities/evaluate/adapter.ts:71](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/evaluate/adapter.ts#L71)\n\nQuestion payload adapters send to the provider.\n"}

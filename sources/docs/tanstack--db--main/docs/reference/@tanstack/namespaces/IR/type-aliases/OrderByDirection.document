@@ -1,0 +1,6 @@
+---
+id: OrderByDirection
+title: OrderByDirection
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type OrderByDirection = \"asc\" | \"desc\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L65","children":[{"type":"text","value":"packages/db/src/query/ir.ts:65"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype OrderByDirection = \"asc\" | \"desc\";\n```\n\nDefined in: [packages/db/src/query/ir.ts:65](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L65)\n","originalRawMarkdown":"---\nid: OrderByDirection\ntitle: OrderByDirection\n---\n\n```ts\ntype OrderByDirection = \"asc\" | \"desc\";\n```\n\nDefined in: [packages/db/src/query/ir.ts:65](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L65)\n"}

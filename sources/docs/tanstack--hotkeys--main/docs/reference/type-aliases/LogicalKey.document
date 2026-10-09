@@ -1,0 +1,6 @@
+---
+id: LogicalKey
+title: LogicalKey
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type LogicalKey = \n  | NonPunctuationKey\n  | PunctuationKey;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L227","children":[{"type":"text","value":"key.types.ts:227"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Supported logical key names, excluding bracketed physical-code syntax."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype LogicalKey = \n  | NonPunctuationKey\n  | PunctuationKey;\n```\n\nDefined in: [key.types.ts:227](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L227)\n\nSupported logical key names, excluding bracketed physical-code syntax.\n","originalRawMarkdown":"---\nid: LogicalKey\ntitle: LogicalKey\n---\n\n```ts\ntype LogicalKey = \n  | NonPunctuationKey\n  | PunctuationKey;\n```\n\nDefined in: [key.types.ts:227](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L227)\n\nSupported logical key names, excluding bracketed physical-code syntax.\n"}

@@ -1,0 +1,6 @@
+---
+id: HOTKEYS_INJECTION_TOKEN
+title: HOTKEYS_INJECTION_TOKEN
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const HOTKEYS_INJECTION_TOKEN: InjectionToken<HotkeysContextValue>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/angular-hotkeys/src/hotkeys-provider.ts#L21","children":[{"type":"text","value":"hotkeys-provider.ts:21"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst HOTKEYS_INJECTION_TOKEN: InjectionToken<HotkeysContextValue>;\n```\n\nDefined in: [hotkeys-provider.ts:21](https://github.com/TanStack/hotkeys/blob/main/packages/angular-hotkeys/src/hotkeys-provider.ts#L21)\n","originalRawMarkdown":"---\nid: HOTKEYS_INJECTION_TOKEN\ntitle: HOTKEYS_INJECTION_TOKEN\n---\n\n```ts\nconst HOTKEYS_INJECTION_TOKEN: InjectionToken<HotkeysContextValue>;\n```\n\nDefined in: [hotkeys-provider.ts:21](https://github.com/TanStack/hotkeys/blob/main/packages/angular-hotkeys/src/hotkeys-provider.ts#L21)\n"}

@@ -1,0 +1,5 @@
+---
+title: React Ranger
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"You can install TanStack Ranger with any "},{"type":"link","href":"https://npmjs.com","children":[{"type":"text","value":"NPM"}]},{"type":"text","value":" package manager."}]},{"type":"code","value":"npm install @tanstack/react-ranger","lang":"sh"}],"headings":[]},"frameworks":[],"downloadMarkdown":"\nYou can install TanStack Ranger with any [NPM](https://npmjs.com) package manager.\n\n```sh\nnpm install @tanstack/react-ranger\n```\n","originalRawMarkdown":"---\ntitle: React Ranger\n---\n\nYou can install TanStack Ranger with any [NPM](https://npmjs.com) package manager.\n\n```sh\nnpm install @tanstack/react-ranger\n```\n"}

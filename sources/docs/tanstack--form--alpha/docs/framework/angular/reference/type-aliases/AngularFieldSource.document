@@ -1,0 +1,6 @@
+---
+id: AngularFieldSource
+title: AngularFieldSource
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AngularFieldSource = \n  | AnyInternalFormApi\n| InternalFormGroupApi<any, any, any, any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/angular-form/src/tanstack-field.ts#L30","children":[{"type":"text","value":"tanstack-field.ts:30"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AngularFieldSource = \n  | AnyInternalFormApi\n| InternalFormGroupApi<any, any, any, any, any>;\n```\n\nDefined in: [tanstack-field.ts:30](https://github.com/TanStack/form/blob/main/packages/angular-form/src/tanstack-field.ts#L30)\n","originalRawMarkdown":"---\nid: AngularFieldSource\ntitle: AngularFieldSource\n---\n\n```ts\ntype AngularFieldSource = \n  | AnyInternalFormApi\n| InternalFormGroupApi<any, any, any, any, any>;\n```\n\nDefined in: [tanstack-field.ts:30](https://github.com/TanStack/form/blob/main/packages/angular-form/src/tanstack-field.ts#L30)\n"}

@@ -1,0 +1,988 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "sections": [
+    {
+      "label": "Community Resources",
+      "children": [],
+      "frameworks": []
+    },
+    {
+      "label": "Getting Started",
+      "children": [
+        {
+          "label": "Overview",
+          "to": "overview"
+        },
+        {
+          "label": "Installation",
+          "to": "installation"
+        },
+        {
+          "label": "Migrating from v1",
+          "to": "migrate-from-v1"
+        },
+        {
+          "label": "Philosophy",
+          "to": "philosophy"
+        },
+        {
+          "label": "Comparison",
+          "to": "comparison"
+        },
+        {
+          "label": "TypeScript",
+          "to": "typescript"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/react/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/preact/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/vue/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/angular/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/solid/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/lit/quick-start"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Quick Start",
+              "to": "framework/svelte/quick-start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Guides",
+      "children": [
+        {
+          "label": "Splitting Forms",
+          "to": "splitting-forms"
+        },
+        {
+          "label": "Arrays",
+          "to": "arrays"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Form Validation",
+              "to": "framework/react/guides/validation"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/react/guides/field-groups"
+            },
+            {
+              "label": "Async Initial Values",
+              "to": "framework/react/guides/async-initial-values"
+            },
+            {
+              "label": "UI Libraries",
+              "to": "framework/react/guides/ui-libraries"
+            },
+            {
+              "label": "React Native",
+              "to": "framework/react/guides/react-native"
+            },
+            {
+              "label": "Debugging",
+              "to": "framework/react/guides/debugging"
+            },
+            {
+              "label": "Devtools",
+              "to": "framework/react/guides/devtools"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Form Validation",
+              "to": "framework/preact/guides/validation"
+            },
+            {
+              "label": "Async Initial Values",
+              "to": "framework/preact/guides/async-initial-values"
+            },
+            {
+              "label": "UI Libraries",
+              "to": "framework/preact/guides/ui-libraries"
+            },
+            {
+              "label": "Debugging",
+              "to": "framework/preact/guides/debugging"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Form Validation",
+              "to": "framework/vue/guides/validation"
+            },
+            {
+              "label": "Async Initial Values",
+              "to": "framework/vue/guides/async-initial-values"
+            },
+            {
+              "label": "UI Libraries",
+              "to": "framework/vue/guides/ui-libraries"
+            },
+            {
+              "label": "Debugging",
+              "to": "framework/vue/guides/debugging"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Form Validation",
+              "to": "framework/solid/guides/validation"
+            },
+            {
+              "label": "Async Initial Values",
+              "to": "framework/solid/guides/async-initial-values"
+            },
+            {
+              "label": "UI Libraries",
+              "to": "framework/solid/guides/ui-libraries"
+            },
+            {
+              "label": "Debugging",
+              "to": "framework/solid/guides/debugging"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Form Validation",
+              "to": "framework/lit/guides/validation"
+            },
+            {
+              "label": "Async Initial Values",
+              "to": "framework/lit/guides/async-initial-values"
+            },
+            {
+              "label": "UI Libraries",
+              "to": "framework/lit/guides/ui-libraries"
+            },
+            {
+              "label": "Debugging",
+              "to": "framework/lit/guides/debugging"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Form Validation",
+              "to": "framework/svelte/guides/validation"
+            },
+            {
+              "label": "Async Initial Values",
+              "to": "framework/svelte/guides/async-initial-values"
+            },
+            {
+              "label": "UI Libraries",
+              "to": "framework/svelte/guides/ui-libraries"
+            },
+            {
+              "label": "Debugging",
+              "to": "framework/svelte/guides/debugging"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Recommended Types",
+      "collapsible": true,
+      "defaultCollapsed": false,
+      "children": [
+        {
+          "label": "AnyFieldApi",
+          "to": "reference/type-aliases/AnyFieldApi"
+        },
+        {
+          "label": "FieldWithValue<TFieldValue>",
+          "to": "reference/type-aliases/FieldWithValue"
+        },
+        {
+          "label": "AnyFormApi",
+          "to": "reference/type-aliases/AnyFormApi"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "AnyReactFormApi",
+              "to": "framework/react/reference/type-aliases/AnyReactFormApi"
+            },
+            {
+              "label": "ReactFormType<TOptions>",
+              "to": "framework/react/reference/type-aliases/ReactFormType"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "AnyPreactFormApi",
+              "to": "framework/preact/reference/type-aliases/AnyPreactFormApi"
+            },
+            {
+              "label": "PreactFormType<TOptions>",
+              "to": "framework/preact/reference/type-aliases/PreactFormType"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "AnyVueFormApi",
+              "to": "framework/vue/reference/type-aliases/AnyVueFormApi"
+            },
+            {
+              "label": "VueFormType<TOptions>",
+              "to": "framework/vue/reference/type-aliases/VueFormType"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "AnyAngularFormApi",
+              "to": "framework/angular/reference/type-aliases/AnyAngularFormApi"
+            },
+            {
+              "label": "AngularFormType<TOptions>",
+              "to": "framework/angular/reference/type-aliases/AngularFormType"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "AnySolidFormApi",
+              "to": "framework/solid/reference/type-aliases/AnySolidFormApi"
+            },
+            {
+              "label": "SolidFormType<TOptions>",
+              "to": "framework/solid/reference/type-aliases/SolidFormType"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "AnyLitFormApi",
+              "to": "framework/lit/reference/type-aliases/AnyLitFormApi"
+            },
+            {
+              "label": "LitFormType<TOptions>",
+              "to": "framework/lit/reference/type-aliases/LitFormType"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "AnySvelteFormApi",
+              "to": "framework/svelte/reference/type-aliases/AnySvelteFormApi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Form creation",
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "children": [
+        {
+          "label": "formOptions()",
+          "to": "reference/variables/formOptions"
+        },
+        {
+          "label": "formOptions.strictSchema()",
+          "to": "reference/type-aliases/FormOptionsStrictSchemaFn"
+        },
+        {
+          "label": "formOptions.looseSchema()",
+          "to": "reference/type-aliases/FormOptionsLooseSchemaFn"
+        },
+        {
+          "label": "FormOptions",
+          "to": "reference/interfaces/FormOptions"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useForm()",
+              "to": "framework/react/reference/variables/useForm"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "useForm()",
+              "to": "framework/preact/reference/variables/useForm"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "useForm()",
+              "to": "framework/vue/reference/variables/useForm"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "injectForm()",
+              "to": "framework/angular/reference/functions/injectForm"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "createForm()",
+              "to": "framework/solid/reference/variables/createForm"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "TanStackFormController",
+              "to": "framework/lit/reference/classes/TanStackFormController"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "createForm()",
+              "to": "framework/svelte/reference/variables/createForm"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "label": "Form Composition API Reference",
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "createFormHook()",
+              "to": "framework/react/reference/functions/createFormHook"
+            },
+            {
+              "label": "CreateFormHookOptions",
+              "to": "framework/react/reference/interfaces/CreateFormHookOptions"
+            },
+            {
+              "label": "AppFormHookResult",
+              "to": "framework/react/reference/interfaces/AppFormHookResult"
+            },
+            {
+              "label": "FormHookHelpers",
+              "to": "framework/react/reference/interfaces/FormHookHelpers"
+            },
+            {
+              "label": "FieldBrandHelper",
+              "to": "framework/react/reference/interfaces/FieldBrandHelper"
+            },
+            {
+              "label": "FieldComponentHelper",
+              "to": "framework/react/reference/interfaces/FieldComponentHelper"
+            },
+            {
+              "label": "defineFieldGroup()",
+              "to": "framework/react/reference/variables/defineFieldGroup"
+            },
+            {
+              "label": "FieldGroupApi",
+              "to": "framework/react/reference/interfaces/FieldGroupApi"
+            },
+            {
+              "label": "FieldGroupDefinition",
+              "to": "framework/react/reference/interfaces/FieldGroupDefinition"
+            },
+            {
+              "label": "FieldGroupHelper",
+              "to": "reference/interfaces/FieldGroupHelper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "FormApi Reference",
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "children": [
+        {
+          "label": "form.setFieldValue()",
+          "to": "reference/type-aliases/SetFieldValueFn"
+        },
+        {
+          "label": "form.getFieldValue()",
+          "to": "reference/type-aliases/GetFieldValueFn"
+        },
+        {
+          "label": "form.resetField()",
+          "to": "reference/type-aliases/ResetFieldFn"
+        },
+        {
+          "label": "form.swapFieldValues()",
+          "to": "reference/type-aliases/SwapFieldValuesFn"
+        },
+        {
+          "label": "form.moveFieldValue()",
+          "to": "reference/type-aliases/MoveFieldValueFn"
+        },
+        {
+          "label": "form.pushFieldValue()",
+          "to": "reference/type-aliases/PushFieldValueFn"
+        },
+        {
+          "label": "form.insertFieldValue()",
+          "to": "reference/type-aliases/InsertFieldValueFn"
+        },
+        {
+          "label": "form.clearFieldValues()",
+          "to": "reference/type-aliases/ClearFieldValuesFn"
+        },
+        {
+          "label": "form.removeFieldValue()",
+          "to": "reference/type-aliases/RemoveFieldValueFn"
+        },
+        {
+          "label": "form.filterFieldValues()",
+          "to": "reference/type-aliases/FilterFieldValuesFn"
+        },
+        {
+          "label": "form.handleSubmit()",
+          "to": "reference/type-aliases/HandleSubmitFn"
+        },
+        {
+          "label": "form.reset()",
+          "to": "reference/type-aliases/ResetFn"
+        },
+        {
+          "label": "FormApi",
+          "to": "reference/interfaces/FormApi"
+        },
+        {
+          "label": "FormOptions",
+          "to": "reference/interfaces/FormOptions"
+        },
+        {
+          "label": "FormState",
+          "to": "reference/interfaces/FormState"
+        },
+        {
+          "label": "FormResetOptions",
+          "to": "reference/interfaces/FormResetOptions"
+        },
+        {
+          "label": "FormSubmitContext",
+          "to": "reference/interfaces/FormSubmitContext"
+        },
+        {
+          "label": "FormSubmitInvalidContext",
+          "to": "reference/interfaces/FormSubmitInvalidContext"
+        }
+      ]
+    },
+    {
+      "label": "Form Listener API Reference",
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "children": [
+        {
+          "label": "FormListener",
+          "to": "reference/interfaces/FormListener"
+        },
+        {
+          "label": "FormListenerTriggers",
+          "to": "reference/type-aliases/FormListenerTriggers"
+        },
+        {
+          "label": "FormListenerFn",
+          "to": "reference/type-aliases/FormListenerFn"
+        },
+        {
+          "label": "FormListenerContext",
+          "to": "reference/interfaces/FormListenerContext"
+        }
+      ]
+    },
+    {
+      "label": "Field Listener API Reference",
+      "collapsible": true,
+      "defaultCollapsed": true,
+      "children": [
+        {
+          "label": "FieldListener",
+          "to": "reference/interfaces/FieldListener"
+        },
+        {
+          "label": "FieldListenerTriggers",
+          "to": "reference/type-aliases/FieldListenerTriggers"
+        },
+        {
+          "label": "FieldListenerFn",
+          "to": "reference/type-aliases/FieldListenerFn"
+        },
+        {
+          "label": "FieldListenerContext",
+          "to": "reference/interfaces/FieldListenerContext"
+        }
+      ]
+    },
+    {
+      "label": "Examples",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/react/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/react/examples/basic"
+            },
+            {
+              "label": "Form Splitting",
+              "to": "framework/react/examples/basic-splitting-form"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/react/examples/array"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/react/examples/field-groups"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/react/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/react/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/react/examples/standard-schema"
+            },
+            {
+              "label": "React Compiler",
+              "to": "framework/react/examples/compiler"
+            },
+            {
+              "label": "Expo",
+              "to": "framework/react/examples/expo"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/preact/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/preact/examples/basic"
+            },
+            {
+              "label": "Form Splitting",
+              "to": "framework/preact/examples/basic-splitting-form"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/preact/examples/array"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/preact/examples/field-groups"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/preact/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/preact/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/preact/examples/standard-schema"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/vue/examples/simple"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/vue/examples/array"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/vue/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/vue/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/vue/examples/standard-schema"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/angular/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/angular/examples/basic"
+            },
+            {
+              "label": "Form Splitting",
+              "to": "framework/angular/examples/basic-splitting-form"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/angular/examples/array"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/angular/examples/field-groups"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/angular/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/angular/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/angular/examples/standard-schema"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/solid/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/solid/examples/basic"
+            },
+            {
+              "label": "Form Splitting",
+              "to": "framework/solid/examples/basic-splitting-form"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/solid/examples/array"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/solid/examples/field-groups"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/solid/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/solid/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/solid/examples/standard-schema"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/lit/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/lit/examples/basic"
+            },
+            {
+              "label": "Form Splitting",
+              "to": "framework/lit/examples/basic-splitting-form"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/lit/examples/array"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/lit/examples/field-groups"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/lit/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/lit/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/lit/examples/standard-schema"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/svelte/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/svelte/examples/basic"
+            },
+            {
+              "label": "Form Splitting",
+              "to": "framework/svelte/examples/basic-splitting-form"
+            },
+            {
+              "label": "Arrays",
+              "to": "framework/svelte/examples/array"
+            },
+            {
+              "label": "Field Groups",
+              "to": "framework/svelte/examples/field-groups"
+            },
+            {
+              "label": "Form Composition",
+              "to": "framework/svelte/examples/large-form"
+            },
+            {
+              "label": "Multi-Step Wizard",
+              "to": "framework/svelte/examples/multi-step-wizard"
+            },
+            {
+              "label": "Standard Schema",
+              "to": "framework/svelte/examples/standard-schema"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Framework & Library Integrations",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "TanStack Query",
+              "to": "framework/react/examples/query-integration"
+            },
+            {
+              "label": "Next.js",
+              "to": "framework/react/examples/nextjs"
+            },
+            {
+              "label": "Next Server Actions",
+              "to": "framework/react/examples/next-server-actions"
+            },
+            {
+              "label": "Next Server Actions with Zod",
+              "to": "framework/react/examples/next-server-actions-zod"
+            },
+            {
+              "label": "TanStack Start",
+              "to": "framework/react/examples/tanstack-start"
+            }
+          ]
+        },
+        {
+          "label": "preact",
+          "children": [
+            {
+              "label": "TanStack Query",
+              "to": "framework/preact/examples/query-integration"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "TanStack Query",
+              "to": "framework/angular/examples/query-integration"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "TanStack Query",
+              "to": "framework/solid/examples/query-integration"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "label": "TanStack Query",
+              "to": "framework/lit/examples/query-integration"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "TanStack Query",
+              "to": "framework/svelte/examples/query-integration"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "UI Integrations",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "DnD Kit",
+              "to": "framework/react/examples/ui-integration-dnd-kit"
+            },
+            {
+              "label": "shadcn/ui",
+              "to": "framework/react/examples/ui-integration-shadcn"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

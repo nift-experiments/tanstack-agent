@@ -1,0 +1,423 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "ZFKQRGRQA8",
+    "apiKey": "93e0b83eb0b5af4549b6bf47f90af3f7",
+    "indexName": "tanstack-query"
+  },
+  "sections": [
+    {
+      "label": "Getting Started",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Overview",
+              "to": "framework/react/overview"
+            },
+            {
+              "label": "Installation",
+              "to": "framework/react/installation"
+            },
+            {
+              "label": "Quick Start",
+              "to": "framework/react/quick-start"
+            },
+            {
+              "label": "Devtools",
+              "to": "framework/react/devtools"
+            },
+            {
+              "label": "Videos & Talks",
+              "to": "framework/react/videos"
+            },
+            {
+              "label": "Comparison",
+              "to": "framework/react/comparison"
+            },
+            {
+              "label": "TypeScript",
+              "to": "framework/react/typescript"
+            },
+            {
+              "label": "GraphQL",
+              "to": "framework/react/graphql"
+            },
+            {
+              "label": "React Native",
+              "to": "framework/react/react-native"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Guides & Concepts",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Important Defaults",
+              "to": "framework/react/guides/important-defaults"
+            },
+            {
+              "label": "Queries",
+              "to": "framework/react/guides/queries"
+            },
+            {
+              "label": "Query Keys",
+              "to": "framework/react/guides/query-keys"
+            },
+            {
+              "label": "Query Functions",
+              "to": "framework/react/guides/query-functions"
+            },
+            {
+              "label": "Parallel Queries",
+              "to": "framework/react/guides/parallel-queries"
+            },
+            {
+              "label": "Dependent Queries",
+              "to": "framework/react/guides/dependent-queries"
+            },
+            {
+              "label": "Background Fetching Indicators",
+              "to": "framework/react/guides/background-fetching-indicators"
+            },
+            {
+              "label": "Window Focus Refetching",
+              "to": "framework/react/guides/window-focus-refetching"
+            },
+            {
+              "label": "Disabling/Pausing Queries",
+              "to": "framework/react/guides/disabling-queries"
+            },
+            {
+              "label": "Query Retries",
+              "to": "framework/react/guides/query-retries"
+            },
+            {
+              "label": "Paginated Queries",
+              "to": "framework/react/guides/paginated-queries"
+            },
+            {
+              "label": "Infinite Queries",
+              "to": "framework/react/guides/infinite-queries"
+            },
+            {
+              "label": "Initial Query Data",
+              "to": "framework/react/guides/initial-query-data"
+            },
+            {
+              "label": "Placeholder Query Data",
+              "to": "framework/react/guides/placeholder-query-data"
+            },
+            {
+              "label": "Prefetching",
+              "to": "framework/react/guides/prefetching"
+            },
+            {
+              "label": "Mutations",
+              "to": "framework/react/guides/mutations"
+            },
+            {
+              "label": "Query Invalidation",
+              "to": "framework/react/guides/query-invalidation"
+            },
+            {
+              "label": "Invalidation from Mutations",
+              "to": "framework/react/guides/invalidations-from-mutations"
+            },
+            {
+              "label": "Updates from Mutation Responses",
+              "to": "framework/react/guides/updates-from-mutation-responses"
+            },
+            {
+              "label": "Optimistic Updates",
+              "to": "framework/react/guides/optimistic-updates"
+            },
+            {
+              "label": "Query Cancellation",
+              "to": "framework/react/guides/query-cancellation"
+            },
+            {
+              "label": "Scroll Restoration",
+              "to": "framework/react/guides/scroll-restoration"
+            },
+            {
+              "label": "Filters",
+              "to": "framework/react/guides/filters"
+            },
+            {
+              "label": "SSR & Next.js",
+              "to": "framework/react/guides/ssr"
+            },
+            {
+              "label": "Caching",
+              "to": "framework/react/guides/caching"
+            },
+            {
+              "label": "Default Query Fn",
+              "to": "framework/react/guides/default-query-function"
+            },
+            {
+              "label": "Suspense",
+              "to": "framework/react/guides/suspense"
+            },
+            {
+              "label": "Testing",
+              "to": "framework/react/guides/testing"
+            },
+            {
+              "label": "Does this replace [Redux, MobX, etc]?",
+              "to": "framework/react/guides/does-this-replace-client-state"
+            },
+            {
+              "label": "Migrating to React Query 3",
+              "to": "framework/react/guides/migrating-to-react-query-3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Community Resources",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "TkDodo's Blog",
+              "to": "framework/react/community/tkdodos-blog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Examples",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "Simple",
+              "to": "framework/react/examples/simple"
+            },
+            {
+              "label": "Basic",
+              "to": "framework/react/examples/basic"
+            },
+            {
+              "label": "Basic w/ GraphQL-Request",
+              "to": "framework/react/examples/basic-graphql-request"
+            },
+            {
+              "label": "Auto Refetching / Polling / Realtime",
+              "to": "framework/react/examples/auto-refetching"
+            },
+            {
+              "label": "Optimistic Updates in TypeScript",
+              "to": "framework/react/examples/optimistic-updates-typescript"
+            },
+            {
+              "label": "Pagination",
+              "to": "framework/react/examples/pagination"
+            },
+            {
+              "label": "Load-More & Infinite Scroll",
+              "to": "framework/react/examples/load-more-infinite-scroll"
+            },
+            {
+              "label": "Suspense",
+              "to": "framework/react/examples/suspense"
+            },
+            {
+              "label": "Default Query Function",
+              "to": "framework/react/examples/default-query-function"
+            },
+            {
+              "label": "Playground",
+              "to": "framework/react/examples/playground"
+            },
+            {
+              "label": "Prefetching",
+              "to": "framework/react/examples/prefetching"
+            },
+            {
+              "label": "Star Wars",
+              "to": "framework/react/examples/star-wars"
+            },
+            {
+              "label": "Rick And Morty",
+              "to": "framework/react/examples/rick-morty"
+            },
+            {
+              "label": "Next.js",
+              "to": "framework/react/examples/nextjs"
+            },
+            {
+              "label": "React Native",
+              "to": "framework/react/examples/react-native"
+            },
+            {
+              "label": "React Router",
+              "to": "framework/react/examples/react-router"
+            },
+            {
+              "label": "Offline Queries and Mutations",
+              "to": "framework/react/examples/offline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Plugins",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "persistQueryClient (Experimental)",
+              "to": "framework/react/plugins/persistQueryClient"
+            },
+            {
+              "label": "createWebStoragePersistor (Experimental)",
+              "to": "framework/react/plugins/createWebStoragePersistor"
+            },
+            {
+              "label": "createAsyncStoragePersistor (Experimental)",
+              "to": "framework/react/plugins/createAsyncStoragePersistor"
+            },
+            {
+              "label": "broadcastQueryClient (Experimental)",
+              "to": "framework/react/plugins/broadcastQueryClient"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "API Reference",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "useQuery",
+              "to": "framework/react/reference/useQuery"
+            },
+            {
+              "label": "useQueries",
+              "to": "framework/react/reference/useQueries"
+            },
+            {
+              "label": "useInfiniteQuery",
+              "to": "framework/react/reference/useInfiniteQuery"
+            },
+            {
+              "label": "useMutation",
+              "to": "framework/react/reference/useMutation"
+            },
+            {
+              "label": "useIsFetching",
+              "to": "framework/react/reference/useIsFetching"
+            },
+            {
+              "label": "useIsMutating",
+              "to": "framework/react/reference/useIsMutating"
+            },
+            {
+              "label": "QueryClient",
+              "to": "framework/react/reference/QueryClient"
+            },
+            {
+              "label": "QueryClientProvider",
+              "to": "framework/react/reference/QueryClientProvider"
+            },
+            {
+              "label": "useQueryClient",
+              "to": "framework/react/reference/useQueryClient"
+            },
+            {
+              "label": "QueryCache",
+              "to": "framework/react/reference/QueryCache"
+            },
+            {
+              "label": "MutationCache",
+              "to": "framework/react/reference/MutationCache"
+            },
+            {
+              "label": "QueryObserver",
+              "to": "framework/react/reference/QueryObserver"
+            },
+            {
+              "label": "InfiniteQueryObserver",
+              "to": "framework/react/reference/InfiniteQueryObserver"
+            },
+            {
+              "label": "QueriesObserver",
+              "to": "framework/react/reference/QueriesObserver"
+            },
+            {
+              "label": "QueryErrorResetBoundary",
+              "to": "framework/react/reference/QueryErrorResetBoundary"
+            },
+            {
+              "label": "useQueryErrorResetBoundary",
+              "to": "framework/react/reference/useQueryErrorResetBoundary"
+            },
+            {
+              "label": "focusManager",
+              "to": "framework/react/reference/focusManager"
+            },
+            {
+              "label": "onlineManager",
+              "to": "framework/react/reference/onlineManager"
+            },
+            {
+              "label": "setLogger",
+              "to": "framework/react/reference/setLogger"
+            },
+            {
+              "label": "hydration",
+              "to": "framework/react/reference/hydration"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "users": [
+    "Google",
+    "Walmart",
+    "Facebook",
+    "PayPal",
+    "Amazon",
+    "American Express",
+    "Microsoft",
+    "Target",
+    "Ebay",
+    "Autodesk",
+    "CarFAX",
+    "Docusign",
+    "HP",
+    "MLB",
+    "Volvo",
+    "Ocado",
+    "UPC.ch",
+    "EFI.com",
+    "ReactBricks",
+    "Nozzle.io",
+    "Uber"
+  ]
+}

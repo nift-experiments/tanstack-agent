@@ -1,0 +1,6 @@
+---
+id: AppTableProps
+title: AppTableProps
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"interface-apptableprops","children":[{"type":"text","value":"Interface: AppTableProps"}]},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/vue-table/src/createTableHook.ts#L193","children":[{"type":"text","value":"packages/vue-table/src/createTableHook.ts:193"}]}]}],"headings":[{"id":"interface-apptableprops","text":"Interface: AppTableProps","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Interface: AppTableProps\n\nDefined in: [packages/vue-table/src/createTableHook.ts:193](https://github.com/TanStack/table/blob/main/packages/vue-table/src/createTableHook.ts#L193)\n","originalRawMarkdown":"---\nid: AppTableProps\ntitle: AppTableProps\n---\n\n# Interface: AppTableProps\n\nDefined in: [packages/vue-table/src/createTableHook.ts:193](https://github.com/TanStack/table/blob/main/packages/vue-table/src/createTableHook.ts#L193)\n"}

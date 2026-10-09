@@ -1,0 +1,6 @@
+---
+id: AnyMiddleware
+title: AnyMiddleware
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-anymiddleware","children":[{"type":"text","value":"Type Alias: AnyMiddleware"}]},{"type":"code","value":"type AnyMiddleware = Middleware<any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L409","children":[{"type":"text","value":"packages/workflow-core/src/types.ts:409"}]}]}],"headings":[{"id":"type-alias-anymiddleware","text":"Type Alias: AnyMiddleware","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: AnyMiddleware\n\n```ts\ntype AnyMiddleware = Middleware<any, any>;\n```\n\nDefined in: [packages/workflow-core/src/types.ts:409](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L409)\n","originalRawMarkdown":"---\nid: AnyMiddleware\ntitle: AnyMiddleware\n---\n\n# Type Alias: AnyMiddleware\n\n```ts\ntype AnyMiddleware = Middleware<any, any>;\n```\n\nDefined in: [packages/workflow-core/src/types.ts:409](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L409)\n"}

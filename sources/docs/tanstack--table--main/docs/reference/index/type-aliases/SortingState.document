@@ -1,0 +1,6 @@
+---
+id: SortingState
+title: SortingState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-sortingstate","children":[{"type":"text","value":"Type Alias: SortingState"}]},{"type":"code","value":"type SortingState = ColumnSort[];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/rowSortingFeature.types.ts#L19","children":[{"type":"text","value":"features/row-sorting/rowSortingFeature.types.ts:19"}]}]}],"headings":[{"id":"type-alias-sortingstate","text":"Type Alias: SortingState","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: SortingState\n\n```ts\ntype SortingState = ColumnSort[];\n```\n\nDefined in: [features/row-sorting/rowSortingFeature.types.ts:19](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/rowSortingFeature.types.ts#L19)\n","originalRawMarkdown":"---\nid: SortingState\ntitle: SortingState\n---\n\n# Type Alias: SortingState\n\n```ts\ntype SortingState = ColumnSort[];\n```\n\nDefined in: [features/row-sorting/rowSortingFeature.types.ts:19](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/rowSortingFeature.types.ts#L19)\n"}

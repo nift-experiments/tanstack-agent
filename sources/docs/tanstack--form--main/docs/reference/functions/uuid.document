@@ -1,0 +1,6 @@
+---
+id: uuid
+title: uuid
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"function uuid(): string;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/utils.ts#L653","children":[{"type":"text","value":"packages/form-core/src/utils.ts:653"}]}]},{"type":"heading","depth":2,"id":"returns","children":[{"type":"text","value":"Returns"}]},{"type":"paragraph","children":[{"type":"inlineCode","value":"string"}]}],"headings":[{"id":"returns","text":"Returns","level":2}]},"frameworks":[],"downloadMarkdown":"\n```ts\nfunction uuid(): string;\n```\n\nDefined in: [packages/form-core/src/utils.ts:653](https://github.com/TanStack/form/blob/main/packages/form-core/src/utils.ts#L653)\n\n## Returns\n\n`string`\n","originalRawMarkdown":"---\nid: uuid\ntitle: uuid\n---\n\n```ts\nfunction uuid(): string;\n```\n\nDefined in: [packages/form-core/src/utils.ts:653](https://github.com/TanStack/form/blob/main/packages/form-core/src/utils.ts#L653)\n\n## Returns\n\n`string`\n"}

@@ -1,0 +1,6 @@
+---
+id: NoSchema
+title: NoSchema
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type NoSchema = typeof noSchema;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/tools/tool-definition.ts#L55","children":[{"type":"text","value":"packages/ai/src/activities/chat/tools/tool-definition.ts:55"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype NoSchema = typeof noSchema;\n```\n\nDefined in: [packages/ai/src/activities/chat/tools/tool-definition.ts:55](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/tools/tool-definition.ts#L55)\n","originalRawMarkdown":"---\nid: NoSchema\ntitle: NoSchema\n---\n\n```ts\ntype NoSchema = typeof noSchema;\n```\n\nDefined in: [packages/ai/src/activities/chat/tools/tool-definition.ts:55](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/chat/tools/tool-definition.ts#L55)\n"}

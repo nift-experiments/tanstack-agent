@@ -1,0 +1,6 @@
+---
+id: RecorderKeyMode
+title: RecorderKeyMode
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type RecorderKeyMode = \"code\" | \"key\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/recorder-options.ts#L5","children":[{"type":"text","value":"recorder-options.ts:5"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Event property used to record a binding. Physical codes are the default."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype RecorderKeyMode = \"code\" | \"key\";\n```\n\nDefined in: [recorder-options.ts:5](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/recorder-options.ts#L5)\n\nEvent property used to record a binding. Physical codes are the default.\n","originalRawMarkdown":"---\nid: RecorderKeyMode\ntitle: RecorderKeyMode\n---\n\n```ts\ntype RecorderKeyMode = \"code\" | \"key\";\n```\n\nDefined in: [recorder-options.ts:5](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/recorder-options.ts#L5)\n\nEvent property used to record a binding. Physical codes are the default.\n"}

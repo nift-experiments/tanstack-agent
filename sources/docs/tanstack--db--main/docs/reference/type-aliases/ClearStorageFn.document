@@ -1,0 +1,6 @@
+---
+id: ClearStorageFn
+title: ClearStorageFn
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ClearStorageFn = () => void;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/local-storage.ts#L92","children":[{"type":"text","value":"packages/db/src/local-storage.ts:92"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Type for the clear utility function"}]},{"type":"heading","depth":2,"id":"returns","children":[{"type":"text","value":"Returns"}]},{"type":"paragraph","children":[{"type":"inlineCode","value":"void"}]}],"headings":[{"id":"returns","text":"Returns","level":2}]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ClearStorageFn = () => void;\n```\n\nDefined in: [packages/db/src/local-storage.ts:92](https://github.com/TanStack/db/blob/main/packages/db/src/local-storage.ts#L92)\n\nType for the clear utility function\n\n## Returns\n\n`void`\n","originalRawMarkdown":"---\nid: ClearStorageFn\ntitle: ClearStorageFn\n---\n\n```ts\ntype ClearStorageFn = () => void;\n```\n\nDefined in: [packages/db/src/local-storage.ts:92](https://github.com/TanStack/db/blob/main/packages/db/src/local-storage.ts#L92)\n\nType for the clear utility function\n\n## Returns\n\n`void`\n"}

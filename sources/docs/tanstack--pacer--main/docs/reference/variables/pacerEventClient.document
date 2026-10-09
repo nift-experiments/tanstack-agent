@@ -1,0 +1,6 @@
+---
+id: pacerEventClient
+title: pacerEventClient
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const pacerEventClient: PacerEventClient;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/pacer/blob/main/packages/pacer/src/event-client.ts#L129","children":[{"type":"text","value":"event-client.ts:129"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst pacerEventClient: PacerEventClient;\n```\n\nDefined in: [event-client.ts:129](https://github.com/TanStack/pacer/blob/main/packages/pacer/src/event-client.ts#L129)\n","originalRawMarkdown":"---\nid: pacerEventClient\ntitle: pacerEventClient\n---\n\n```ts\nconst pacerEventClient: PacerEventClient;\n```\n\nDefined in: [event-client.ts:129](https://github.com/TanStack/pacer/blob/main/packages/pacer/src/event-client.ts#L129)\n"}

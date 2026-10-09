@@ -1,0 +1,6 @@
+---
+id: MutationStatus
+title: MutationStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type MutationStatus = \"idle\" | \"pending\" | \"success\" | \"error\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L1819","children":[{"type":"text","value":"packages/query-core/src/types.ts:1819"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype MutationStatus = \"idle\" | \"pending\" | \"success\" | \"error\";\n```\n\nDefined in: [packages/query-core/src/types.ts:1819](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L1819)\n","originalRawMarkdown":"---\nid: MutationStatus\ntitle: MutationStatus\n---\n\n```ts\ntype MutationStatus = \"idle\" | \"pending\" | \"success\" | \"error\";\n```\n\nDefined in: [packages/query-core/src/types.ts:1819](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L1819)\n"}

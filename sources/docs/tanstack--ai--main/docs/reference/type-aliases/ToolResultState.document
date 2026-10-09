@@ -1,0 +1,6 @@
+---
+id: ToolResultState
+title: ToolResultState
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ToolResultState = \"streaming\" | \"complete\" | \"error\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L99","children":[{"type":"text","value":"packages/ai/src/types.ts:99"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Tool result states - track the lifecycle of a tool result"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ToolResultState = \"streaming\" | \"complete\" | \"error\";\n```\n\nDefined in: [packages/ai/src/types.ts:99](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L99)\n\nTool result states - track the lifecycle of a tool result\n","originalRawMarkdown":"---\nid: ToolResultState\ntitle: ToolResultState\n---\n\n```ts\ntype ToolResultState = \"streaming\" | \"complete\" | \"error\";\n```\n\nDefined in: [packages/ai/src/types.ts:99](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L99)\n\nTool result states - track the lifecycle of a tool result\n"}

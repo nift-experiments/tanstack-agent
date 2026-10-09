@@ -1,0 +1,6 @@
+---
+id: RunStatus
+title: RunStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-runstatus","children":[{"type":"text","value":"Type Alias: RunStatus"}]},{"type":"code","value":"type RunStatus = \"running\" | \"paused\" | \"finished\" | \"errored\" | \"aborted\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L483","children":[{"type":"text","value":"packages/workflow-core/src/types.ts:483"}]}]}],"headings":[{"id":"type-alias-runstatus","text":"Type Alias: RunStatus","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: RunStatus\n\n```ts\ntype RunStatus = \"running\" | \"paused\" | \"finished\" | \"errored\" | \"aborted\";\n```\n\nDefined in: [packages/workflow-core/src/types.ts:483](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L483)\n","originalRawMarkdown":"---\nid: RunStatus\ntitle: RunStatus\n---\n\n# Type Alias: RunStatus\n\n```ts\ntype RunStatus = \"running\" | \"paused\" | \"finished\" | \"errored\" | \"aborted\";\n```\n\nDefined in: [packages/workflow-core/src/types.ts:483](https://github.com/TanStack/workflow/blob/main/packages/workflow-core/src/types.ts#L483)\n"}

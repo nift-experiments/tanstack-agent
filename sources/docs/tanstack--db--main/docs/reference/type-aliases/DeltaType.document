@@ -1,0 +1,6 @@
+---
+id: DeltaType
+title: DeltaType
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DeltaType = \"enter\" | \"exit\" | \"update\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/effect.ts#L49","children":[{"type":"text","value":"packages/db/src/query/effect.ts:49"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Event types for query result deltas"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DeltaType = \"enter\" | \"exit\" | \"update\";\n```\n\nDefined in: [packages/db/src/query/effect.ts:49](https://github.com/TanStack/db/blob/main/packages/db/src/query/effect.ts#L49)\n\nEvent types for query result deltas\n","originalRawMarkdown":"---\nid: DeltaType\ntitle: DeltaType\n---\n\n```ts\ntype DeltaType = \"enter\" | \"exit\" | \"update\";\n```\n\nDefined in: [packages/db/src/query/effect.ts:49](https://github.com/TanStack/db/blob/main/packages/db/src/query/effect.ts#L49)\n\nEvent types for query result deltas\n"}

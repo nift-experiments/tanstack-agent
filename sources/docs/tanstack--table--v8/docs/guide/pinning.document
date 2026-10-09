@@ -1,0 +1,5 @@
+---
+title: Pinning Guide
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"html","value":"<!-- Deprecated  -->"},{"type":"paragraph","children":[{"type":"text","value":"Pinning is split into 2 different feature guides:"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"./column-pinning.md","children":[{"type":"text","value":"Column Pinning"}]}]}]},{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"./row-pinning.md","children":[{"type":"text","value":"Row Pinning"}]}]}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n<!-- Deprecated  -->\n\nPinning is split into 2 different feature guides:\n\n- [Column Pinning](./column-pinning.md)\n- [Row Pinning](./row-pinning.md)","originalRawMarkdown":"---\ntitle: Pinning Guide\n---\n\n<!-- Deprecated  -->\n\nPinning is split into 2 different feature guides:\n\n- [Column Pinning](./column-pinning.md)\n- [Row Pinning](./row-pinning.md)"}

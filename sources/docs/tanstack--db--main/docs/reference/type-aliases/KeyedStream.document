@@ -1,0 +1,6 @@
+---
+id: KeyedStream
+title: KeyedStream
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type KeyedStream = IStreamBuilder<InputRow>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L1038","children":[{"type":"text","value":"packages/db/src/types.ts:1038"}]}]},{"type":"paragraph","children":[{"type":"text","value":"A keyed stream is a stream of rows\nThis is used as the inputs from a collection to a query"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype KeyedStream = IStreamBuilder<InputRow>;\n```\n\nDefined in: [packages/db/src/types.ts:1038](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L1038)\n\nA keyed stream is a stream of rows\nThis is used as the inputs from a collection to a query\n","originalRawMarkdown":"---\nid: KeyedStream\ntitle: KeyedStream\n---\n\n```ts\ntype KeyedStream = IStreamBuilder<InputRow>;\n```\n\nDefined in: [packages/db/src/types.ts:1038](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L1038)\n\nA keyed stream is a stream of rows\nThis is used as the inputs from a collection to a query\n"}

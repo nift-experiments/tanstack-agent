@@ -1,0 +1,6 @@
+---
+id: HotkeysProvider
+title: HotkeysProvider
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const HotkeysProvider: ParentComponent<HotkeysProviderProps>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/solid-hotkeys/src/HotkeysProvider.tsx#L30","children":[{"type":"text","value":"HotkeysProvider.tsx:30"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst HotkeysProvider: ParentComponent<HotkeysProviderProps>;\n```\n\nDefined in: [HotkeysProvider.tsx:30](https://github.com/TanStack/hotkeys/blob/main/packages/solid-hotkeys/src/HotkeysProvider.tsx#L30)\n","originalRawMarkdown":"---\nid: HotkeysProvider\ntitle: HotkeysProvider\n---\n\n```ts\nconst HotkeysProvider: ParentComponent<HotkeysProviderProps>;\n```\n\nDefined in: [HotkeysProvider.tsx:30](https://github.com/TanStack/hotkeys/blob/main/packages/solid-hotkeys/src/HotkeysProvider.tsx#L30)\n"}

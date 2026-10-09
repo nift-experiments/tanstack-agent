@@ -1,0 +1,6 @@
+---
+id: Txid
+title: Txid
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Txid = number;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/electric-db-collection/src/electric.ts#L95","children":[{"type":"text","value":"packages/electric-db-collection/src/electric.ts:95"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Type representing a transaction ID in ElectricSQL"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Txid = number;\n```\n\nDefined in: [packages/electric-db-collection/src/electric.ts:95](https://github.com/TanStack/db/blob/main/packages/electric-db-collection/src/electric.ts#L95)\n\nType representing a transaction ID in ElectricSQL\n","originalRawMarkdown":"---\nid: Txid\ntitle: Txid\n---\n\n```ts\ntype Txid = number;\n```\n\nDefined in: [packages/electric-db-collection/src/electric.ts:95](https://github.com/TanStack/db/blob/main/packages/electric-db-collection/src/electric.ts#L95)\n\nType representing a transaction ID in ElectricSQL\n"}

@@ -1,0 +1,6 @@
+---
+id: ServerValidationTrigger
+title: ServerValidationTrigger
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ServerValidationTrigger = \"server\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L181","children":[{"type":"text","value":"validation.public.ts:181"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ServerValidationTrigger = \"server\";\n```\n\nDefined in: [validation.public.ts:181](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L181)\n","originalRawMarkdown":"---\nid: ServerValidationTrigger\ntitle: ServerValidationTrigger\n---\n\n```ts\ntype ServerValidationTrigger = \"server\";\n```\n\nDefined in: [validation.public.ts:181](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L181)\n"}

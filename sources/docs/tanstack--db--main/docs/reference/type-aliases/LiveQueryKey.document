@@ -1,0 +1,6 @@
+---
+id: LiveQueryKey
+title: LiveQueryKey
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type LiveQueryKey = ReadonlyArray<unknown>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/live-query-options.ts#L23","children":[{"type":"text","value":"packages/db/src/live-query-options.ts:23"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype LiveQueryKey = ReadonlyArray<unknown>;\n```\n\nDefined in: [packages/db/src/live-query-options.ts:23](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-options.ts#L23)\n","originalRawMarkdown":"---\nid: LiveQueryKey\ntitle: LiveQueryKey\n---\n\n```ts\ntype LiveQueryKey = ReadonlyArray<unknown>;\n```\n\nDefined in: [packages/db/src/live-query-options.ts:23](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-options.ts#L23)\n"}

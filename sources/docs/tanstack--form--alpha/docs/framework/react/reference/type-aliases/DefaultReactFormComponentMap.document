@@ -1,0 +1,6 @@
+---
+id: DefaultReactFormComponentMap
+title: DefaultReactFormComponentMap
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DefaultReactFormComponentMap = ReactFormComponentMap<Record<never, never>, Record<never, never>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/react-form/src/AppForm/componentMap.public.ts#L39","children":[{"type":"text","value":"packages/react-form/src/AppForm/componentMap.public.ts:39"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DefaultReactFormComponentMap = ReactFormComponentMap<Record<never, never>, Record<never, never>>;\n```\n\nDefined in: [packages/react-form/src/AppForm/componentMap.public.ts:39](https://github.com/TanStack/form/blob/main/packages/react-form/src/AppForm/componentMap.public.ts#L39)\n","originalRawMarkdown":"---\nid: DefaultReactFormComponentMap\ntitle: DefaultReactFormComponentMap\n---\n\n```ts\ntype DefaultReactFormComponentMap = ReactFormComponentMap<Record<never, never>, Record<never, never>>;\n```\n\nDefined in: [packages/react-form/src/AppForm/componentMap.public.ts:39](https://github.com/TanStack/form/blob/main/packages/react-form/src/AppForm/componentMap.public.ts#L39)\n"}

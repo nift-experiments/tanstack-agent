@@ -1,0 +1,6 @@
+---
+id: StoreActionMap
+title: StoreActionMap
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type StoreActionMap = Record<string, StoreAction>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: node_modules/.pnpm/@tanstack+store@0.11.0/node_modules/@tanstack/store/dist/store.d.ts:5"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype StoreActionMap = Record<string, StoreAction>;\n```\n\nDefined in: node\\_modules/.pnpm/@tanstack+store@0.11.0/node\\_modules/@tanstack/store/dist/store.d.ts:5\n","originalRawMarkdown":"---\nid: StoreActionMap\ntitle: StoreActionMap\n---\n\n```ts\ntype StoreActionMap = Record<string, StoreAction>;\n```\n\nDefined in: node\\_modules/.pnpm/@tanstack+store@0.11.0/node\\_modules/@tanstack/store/dist/store.d.ts:5\n"}

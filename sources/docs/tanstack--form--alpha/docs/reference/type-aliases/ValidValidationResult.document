@@ -1,0 +1,6 @@
+---
+id: ValidValidationResult
+title: ValidValidationResult
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ValidValidationResult = null | undefined | false;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L432","children":[{"type":"text","value":"validation.public.ts:432"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ValidValidationResult = null | undefined | false;\n```\n\nDefined in: [validation.public.ts:432](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L432)\n","originalRawMarkdown":"---\nid: ValidValidationResult\ntitle: ValidValidationResult\n---\n\n```ts\ntype ValidValidationResult = null | undefined | false;\n```\n\nDefined in: [validation.public.ts:432](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L432)\n"}

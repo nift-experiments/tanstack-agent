@@ -1,0 +1,6 @@
+---
+id: IndividualKey
+title: IndividualKey
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type IndividualKey = CanonicalModifier | Key;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L235","children":[{"type":"text","value":"key.types.ts:235"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Includes both modifier keys and regular keys."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype IndividualKey = CanonicalModifier | Key;\n```\n\nDefined in: [key.types.ts:235](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L235)\n\nIncludes both modifier keys and regular keys.\n","originalRawMarkdown":"---\nid: IndividualKey\ntitle: IndividualKey\n---\n\n```ts\ntype IndividualKey = CanonicalModifier | Key;\n```\n\nDefined in: [key.types.ts:235](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L235)\n\nIncludes both modifier keys and regular keys.\n"}

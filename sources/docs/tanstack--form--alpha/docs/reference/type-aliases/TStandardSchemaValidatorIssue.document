@@ -1,0 +1,6 @@
+---
+id: TStandardSchemaValidatorIssue
+title: TStandardSchemaValidatorIssue
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type TStandardSchemaValidatorIssue = StandardSchemaV1Issue[];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/standardSchema.public.ts#L5","children":[{"type":"text","value":"standardSchema.public.ts:5"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype TStandardSchemaValidatorIssue = StandardSchemaV1Issue[];\n```\n\nDefined in: [standardSchema.public.ts:5](https://github.com/TanStack/form/blob/main/packages/form-core/src/standardSchema.public.ts#L5)\n","originalRawMarkdown":"---\nid: TStandardSchemaValidatorIssue\ntitle: TStandardSchemaValidatorIssue\n---\n\n```ts\ntype TStandardSchemaValidatorIssue = StandardSchemaV1Issue[];\n```\n\nDefined in: [standardSchema.public.ts:5](https://github.com/TanStack/form/blob/main/packages/form-core/src/standardSchema.public.ts#L5)\n"}

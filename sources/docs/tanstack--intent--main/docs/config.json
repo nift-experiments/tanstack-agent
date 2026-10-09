@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "apiKey": "",
+    "indexName": "tanstack-agents"
+  },
+  "sections": [
+    {
+      "label": "Getting Started",
+      "children": [
+        {
+          "label": "Overview",
+          "to": "overview"
+        },
+        {
+          "label": "Quick Start (Consumers)",
+          "to": "getting-started/quick-start-consumers"
+        },
+        {
+          "label": "Quick Start (Maintainers)",
+          "to": "getting-started/quick-start-maintainers"
+        },
+        {
+          "label": "Get Listed on the Registry",
+          "to": "registry"
+        }
+      ]
+    },
+    {
+      "label": "Concepts",
+      "children": [
+        {
+          "label": "Trust Model",
+          "to": "concepts/trust-model"
+        },
+        {
+          "label": "Configuration",
+          "to": "concepts/configuration"
+        }
+      ]
+    },
+    {
+      "label": "CLI Reference",
+      "children": [
+        {
+          "label": "intent install",
+          "to": "cli/intent-install"
+        },
+        {
+          "label": "intent hooks",
+          "to": "cli/intent-hooks"
+        },
+        {
+          "label": "intent exclude",
+          "to": "cli/intent-exclude"
+        },
+        {
+          "label": "intent list",
+          "to": "cli/intent-list"
+        },
+        {
+          "label": "intent load",
+          "to": "cli/intent-load"
+        },
+        {
+          "label": "intent meta",
+          "to": "cli/intent-meta"
+        },
+        {
+          "label": "intent maintainer",
+          "to": "cli/intent-maintainer"
+        },
+        {
+          "label": "intent validate",
+          "to": "cli/intent-validate"
+        },
+        {
+          "label": "intent repair",
+          "to": "cli/intent-repair"
+        },
+        {
+          "label": "intent setup",
+          "to": "cli/intent-setup"
+        },
+        {
+          "label": "intent stale",
+          "to": "cli/intent-stale"
+        },
+        {
+          "label": "intent review",
+          "to": "cli/intent-review"
+        }
+      ]
+    }
+  ]
+}

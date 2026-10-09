@@ -1,0 +1,6 @@
+---
+id: Join
+title: Join
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Join = JoinClause[];","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L42","children":[{"type":"text","value":"packages/db/src/query/ir.ts:42"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Join = JoinClause[];\n```\n\nDefined in: [packages/db/src/query/ir.ts:42](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L42)\n","originalRawMarkdown":"---\nid: Join\ntitle: Join\n---\n\n```ts\ntype Join = JoinClause[];\n```\n\nDefined in: [packages/db/src/query/ir.ts:42](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L42)\n"}

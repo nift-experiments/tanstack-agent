@@ -1,0 +1,6 @@
+---
+id: INCLUDES_SCALAR_FIELD
+title: INCLUDES_SCALAR_FIELD
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const INCLUDES_SCALAR_FIELD: \"__includes_scalar__\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L33","children":[{"type":"text","value":"packages/db/src/query/ir.ts:33"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst INCLUDES_SCALAR_FIELD: \"__includes_scalar__\";\n```\n\nDefined in: [packages/db/src/query/ir.ts:33](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L33)\n","originalRawMarkdown":"---\nid: INCLUDES_SCALAR_FIELD\ntitle: INCLUDES_SCALAR_FIELD\n---\n\n```ts\nconst INCLUDES_SCALAR_FIELD: \"__includes_scalar__\";\n```\n\nDefined in: [packages/db/src/query/ir.ts:33](https://github.com/TanStack/db/blob/main/packages/db/src/query/ir.ts#L33)\n"}

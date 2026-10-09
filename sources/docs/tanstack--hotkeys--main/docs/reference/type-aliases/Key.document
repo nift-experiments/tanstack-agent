@@ -1,0 +1,6 @@
+---
+id: Key
+title: Key
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Key = LogicalKey | PhysicalKey;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L230","children":[{"type":"text","value":"key.types.ts:230"}]}]},{"type":"paragraph","children":[{"type":"text","value":"All supported logical keys and bracketed physical key tokens."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Key = LogicalKey | PhysicalKey;\n```\n\nDefined in: [key.types.ts:230](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L230)\n\nAll supported logical keys and bracketed physical key tokens.\n","originalRawMarkdown":"---\nid: Key\ntitle: Key\n---\n\n```ts\ntype Key = LogicalKey | PhysicalKey;\n```\n\nDefined in: [key.types.ts:230](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L230)\n\nAll supported logical keys and bracketed physical key tokens.\n"}

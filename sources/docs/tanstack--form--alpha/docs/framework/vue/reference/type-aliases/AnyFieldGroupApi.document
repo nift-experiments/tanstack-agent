@@ -1,0 +1,6 @@
+---
+id: AnyFieldGroupApi
+title: AnyFieldGroupApi
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyFieldGroupApi = FieldGroupApi<any, Record<string, Component>>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts#L147","children":[{"type":"text","value":"packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts:147"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, Record<string, Component>>;\n```\n\nDefined in: [packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts:147](https://github.com/TanStack/form/blob/main/packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts#L147)\n","originalRawMarkdown":"---\nid: AnyFieldGroupApi\ntitle: AnyFieldGroupApi\n---\n\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, Record<string, Component>>;\n```\n\nDefined in: [packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts:147](https://github.com/TanStack/form/blob/main/packages/vue-form/src/FieldGroup/FieldGroupApi.public.ts#L147)\n"}

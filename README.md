@@ -16,7 +16,7 @@ migrated content in parity or benchmark claims.
 
 ## TanStack.com hybrid experiment
 
-This is Nift **alongside TanStack**, with rendered maintained source. Nift may own publication/composition; React/TanStack and services retain application/runtime responsibilities where appropriate. Current checkpoint: T0 complete, T1 in progress. Starter checks: `nift build --all`, `nift build`, `nift status`. Complete publication and parity commands will be recorded after upstream investigation.
+This is Nift **alongside TanStack**, with rendered maintained source. Nift may own publication/composition; React/TanStack and services retain application/runtime responsibilities where appropriate. Current checkpoint: T4 corpus validation. Starter checks: `nift build --all`, `nift build`, `nift status`. Complete publication and parity commands will be recorded after upstream investigation.
 
 ## T3 production boundary
 
@@ -24,7 +24,7 @@ The shared TanStack shell remains request-rendered because its root loader gener
 
 For the authored repository, Markdown/frontmatter remain maintained source and the normal publication derives the TanStack document projection. For the agent repository, rich docs maintain that projection directly; their Markdown download text is an explicit maintained projection, not a renderer input during ordinary publication. Marketing/app React code remains useful and is retained. This is a hybrid/pre-derived model rather than a claim that every page is maintained HTML.
 
-Representative commands (pinned toolchain/dependencies provisioned in sibling baseline):
+Historical T3 representative commands (reproduce at the T3 checkpoint; current publication uses the T4 command below):
 
 ```sh
 python3 scripts/run-runtime.py pnpm install --frozen-lockfile
@@ -34,3 +34,16 @@ python3 scripts/run-runtime.py node ../scripts/proof-server.mjs 4022
 ```
 
 Browser publication: `publication/client`; retained Worker: `publication/server`. Raw evidence is outside this source repository. T3 source edits, tabs/code copy, client navigation, themes/mobile controls, Query view switching, search fixtures, Markdown downloads and fresh partner seeds are checked before corpus scaling. No live database/auth/AI integration is claimed.
+
+## Complete corpus publication
+
+See `investigation/T4-CORPUS.md` for the three content contracts, bounded ownership, retained dynamic exceptions and current validation scope. With the pinned toolchain provisioned, run:
+
+```sh
+python3 scripts/run-runtime.py node ../scripts/publish.mjs --full
+python3 scripts/run-runtime.py node ../scripts/publish.mjs
+python3 scripts/run-runtime.py node --import tsx ../scripts/corpus-contract.mts
+python3 scripts/run-runtime.py node ../scripts/lifecycle-contract.mjs
+```
+
+The first command forces the complete retained build; the second publishes changed inputs and reuses an unchanged runtime bundle. Neither deploys to an external account.

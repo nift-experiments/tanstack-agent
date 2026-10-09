@@ -101,6 +101,9 @@ export function scheduleHostRuntimeTask(createTask: () => Promise<unknown>) {
 }
 
 async function getStaticAssetService() {
+  const scopedEnv = getCurrentHostRuntimeEnv()
+  if (scopedEnv && isStaticAssetService(scopedEnv.ASSETS))
+    return scopedEnv.ASSETS
   if (!isIsolateRuntime()) return
 
   const hostRuntimeSpecifier = 'cloudflare' + ':workers'

@@ -1,0 +1,6 @@
+---
+id: DisplayHotkey
+title: DisplayHotkey
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type DisplayHotkey = \n  | RegisterableHotkey\n  | ParsedHotkey\n  | string & object;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/format.ts#L71","children":[{"type":"text","value":"format.ts:71"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype DisplayHotkey = \n  | RegisterableHotkey\n  | ParsedHotkey\n  | string & object;\n```\n\nDefined in: [format.ts:71](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/format.ts#L71)\n","originalRawMarkdown":"---\nid: DisplayHotkey\ntitle: DisplayHotkey\n---\n\n```ts\ntype DisplayHotkey = \n  | RegisterableHotkey\n  | ParsedHotkey\n  | string & object;\n```\n\nDefined in: [format.ts:71](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/format.ts#L71)\n"}

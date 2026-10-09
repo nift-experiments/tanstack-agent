@@ -1,0 +1,27 @@
+{
+  "checkpoint": "T4",
+  "accepted": true,
+  "input_files": 7601,
+  "markdown_inputs": 7530,
+  "mdx_inputs": 18,
+  "other_inputs": 53,
+  "frontmatter_ref_files": 199,
+  "nonempty_projections": 7527,
+  "dynamic_hosting_guides": 2,
+  "owned_docs_roots": 25,
+  "client_publication_files": 23694,
+  "browser_states": 84,
+  "original_sha256_receipts_verified": 7601,
+  "core_changes": false,
+  "live_backend_integration": false,
+  "evidence_sha256": {
+    "corpus_contract": "ba4ede3ecab162eda63faf9eb685fb3eb4c6e45c10b800940bab53777597d9a8",
+    "full_test_suite": "81ff814be914310d52fea65845377fe00034edc5a1f8a98aaf338da94bb0b1a3",
+    "browser_parity": "b581a44e4feba43570cc8d6058bda10afaa3b0efbd96c9eb0d9d3c875dcca7c3",
+    "lifecycle": "d3380499f5fd0a56cdf8d5c35d4b3560ed20f8509ae774f17ab3293451fc576f",
+    "router_overview_browser": "185336c973332b0aa1a3007fe77b985d50abde39eb759ace99d8a2ba10877fac"
+  },
+  "normalizations": [
+    "Official Partner headings on the dynamic hosting guide are compared as a sorted subgroup because placement rotates per session; all other heading order is preserved."
+  ]
+}

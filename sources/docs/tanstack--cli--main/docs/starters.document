@@ -1,0 +1,6 @@
+---
+id: starters
+title: Starters (Legacy)
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"This page has moved to "},{"type":"link","href":"./templates.md","children":[{"type":"text","value":"Templates"}]},{"type":"text","value":"."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\nThis page has moved to [Templates](./templates.md).\n","originalRawMarkdown":"---\nid: starters\ntitle: Starters (Legacy)\n---\n\nThis page has moved to [Templates](./templates.md).\n"}

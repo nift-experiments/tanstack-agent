@@ -1,0 +1,6 @@
+---
+id: DEFAULT_OPTIONS
+title: DEFAULT_OPTIONS
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const DEFAULT_OPTIONS: HotkeysProviderOptions = {};","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/svelte-hotkeys/src/HotkeysCtx.ts#L22","children":[{"type":"text","value":"packages/svelte-hotkeys/src/HotkeysCtx.ts:22"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst DEFAULT_OPTIONS: HotkeysProviderOptions = {};\n```\n\nDefined in: [packages/svelte-hotkeys/src/HotkeysCtx.ts:22](https://github.com/TanStack/hotkeys/blob/main/packages/svelte-hotkeys/src/HotkeysCtx.ts#L22)\n","originalRawMarkdown":"---\nid: DEFAULT_OPTIONS\ntitle: DEFAULT_OPTIONS\n---\n\n```ts\nconst DEFAULT_OPTIONS: HotkeysProviderOptions = {};\n```\n\nDefined in: [packages/svelte-hotkeys/src/HotkeysCtx.ts:22](https://github.com/TanStack/hotkeys/blob/main/packages/svelte-hotkeys/src/HotkeysCtx.ts#L22)\n"}

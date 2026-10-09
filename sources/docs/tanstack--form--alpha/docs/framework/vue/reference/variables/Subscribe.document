@@ -1,0 +1,6 @@
+---
+id: Subscribe
+title: Subscribe
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const Subscribe: SubscribeComponent;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/vue-form/src/Subscribe.public.ts#L46","children":[{"type":"text","value":"packages/vue-form/src/Subscribe.public.ts:46"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst Subscribe: SubscribeComponent;\n```\n\nDefined in: [packages/vue-form/src/Subscribe.public.ts:46](https://github.com/TanStack/form/blob/main/packages/vue-form/src/Subscribe.public.ts#L46)\n","originalRawMarkdown":"---\nid: Subscribe\ntitle: Subscribe\n---\n\n```ts\nconst Subscribe: SubscribeComponent;\n```\n\nDefined in: [packages/vue-form/src/Subscribe.public.ts:46](https://github.com/TanStack/form/blob/main/packages/vue-form/src/Subscribe.public.ts#L46)\n"}

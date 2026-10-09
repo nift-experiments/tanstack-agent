@@ -1,0 +1,6 @@
+---
+id: AnyFieldGroupApi
+title: AnyFieldGroupApi
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyFieldGroupApi = FieldGroupApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldGroupApi.ts#L24","children":[{"type":"text","value":"packages/form-core/src/FieldGroupApi.ts:24"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n\nDefined in: [packages/form-core/src/FieldGroupApi.ts:24](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldGroupApi.ts#L24)\n","originalRawMarkdown":"---\nid: AnyFieldGroupApi\ntitle: AnyFieldGroupApi\n---\n\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n\nDefined in: [packages/form-core/src/FieldGroupApi.ts:24](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldGroupApi.ts#L24)\n"}

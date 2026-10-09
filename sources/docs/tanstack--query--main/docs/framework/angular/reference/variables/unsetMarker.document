@@ -1,0 +1,6 @@
+---
+id: unsetMarker
+title: unsetMarker
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const unsetMarker: typeof unsetMarker;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L112","children":[{"type":"text","value":"packages/query-core/src/types.ts:112"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst unsetMarker: typeof unsetMarker;\n```\n\nDefined in: [packages/query-core/src/types.ts:112](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L112)\n","originalRawMarkdown":"---\nid: unsetMarker\ntitle: unsetMarker\n---\n\n```ts\nconst unsetMarker: typeof unsetMarker;\n```\n\nDefined in: [packages/query-core/src/types.ts:112](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L112)\n"}

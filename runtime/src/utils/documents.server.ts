@@ -1,4 +1,8 @@
-import { fetchPublishedRepoFile } from './published-documents.server'
+import {
+  fetchPublishedRepoFile,
+  fetchPublishedRawFile,
+  fetchPublishedDocsTree,
+} from './published-documents.server'
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import os from 'node:os'
@@ -523,10 +527,11 @@ function replaceProjectImageBranch(
   return text
 }
 
-async function fetchRepoFileFromOrigin(
+export async function fetchRepoFileFromOrigin(
   repoPair: string,
   ref: string,
   filepath: string,
+  readMaintainedFile?: (path: string) => Promise<string | null>,
 ) {
   const [owner, repo] = repoPair.split('/')
   const maxDepth = 4
@@ -536,7 +541,9 @@ async function fetchRepoFileFromOrigin(
   while (maxDepth > currentDepth) {
     let text: string | null
 
-    if (shouldUseLocalDocsFiles()) {
+    if (readMaintainedFile) {
+      text = await readMaintainedFile(filepath)
+    } else if (shouldUseLocalDocsFiles()) {
       text =
         (await fetchFs(repo, filepath)) ??
         (await fetchRemote(owner, repo, ref, filepath))
@@ -590,6 +597,8 @@ export async function fetchRepoRawFile(
   ref: string,
   filepath: string,
 ) {
+  const published = await fetchPublishedRawFile(repoPair, ref, filepath)
+  if (published !== undefined) return published
   assertValidGitHubRepoPair(repoPair)
   assertValidGitHubRef(ref)
   if (!filepath || !isValidRepoPath(filepath)) {
@@ -1322,7 +1331,7 @@ export async function fetchGitHubRecursiveTree(repo: string, branch: string) {
   return data?.tree ?? null
 }
 
-function buildFileTreeFromRecursiveTree(
+export function buildFileTreeFromRecursiveTree(
   tree: Array<GitHubTreeEntry>,
   startingPath: string,
 ): Array<GitHubFileNode> | null {
@@ -1404,11 +1413,17 @@ function encodeGitHubContentsPath(path: string) {
     .join('/')
 }
 
-export function fetchApiContents(
+export async function fetchApiContents(
   repoPair: string,
   branch: string,
   startingPath: string,
 ) {
+  const published = await fetchPublishedDocsTree(repoPair, branch, startingPath)
+  if (published !== undefined) {
+    if (!Array.isArray(published) || !published.every(isGitHubTreeEntry))
+      throw new Error('Invalid owned docs tree')
+    return buildFileTreeFromRecursiveTree(published, startingPath)
+  }
   if (shouldUseLocalDocsFiles()) {
     return fetchCached({
       key: `${repoPair}:${branch}:${startingPath}`,

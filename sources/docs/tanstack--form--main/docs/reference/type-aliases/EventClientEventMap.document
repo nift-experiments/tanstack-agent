@@ -1,0 +1,6 @@
+---
+id: EventClientEventMap
+title: EventClientEventMap
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type EventClientEventMap = keyof EventMap;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L57","children":[{"type":"text","value":"packages/form-core/src/EventClient.ts:57"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype EventClientEventMap = keyof EventMap;\n```\n\nDefined in: [packages/form-core/src/EventClient.ts:57](https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L57)\n","originalRawMarkdown":"---\nid: EventClientEventMap\ntitle: EventClientEventMap\n---\n\n```ts\ntype EventClientEventMap = keyof EventMap;\n```\n\nDefined in: [packages/form-core/src/EventClient.ts:57](https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L57)\n"}

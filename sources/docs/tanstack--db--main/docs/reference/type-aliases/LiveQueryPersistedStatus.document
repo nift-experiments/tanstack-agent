@@ -1,0 +1,6 @@
+---
+id: LiveQueryPersistedStatus
+title: LiveQueryPersistedStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type LiveQueryPersistedStatus = \"unavailable\" | \"loading\" | \"ready\" | \"error\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/live-query-observer.ts#L14","children":[{"type":"text","value":"packages/db/src/live-query-observer.ts:14"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype LiveQueryPersistedStatus = \"unavailable\" | \"loading\" | \"ready\" | \"error\";\n```\n\nDefined in: [packages/db/src/live-query-observer.ts:14](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-observer.ts#L14)\n","originalRawMarkdown":"---\nid: LiveQueryPersistedStatus\ntitle: LiveQueryPersistedStatus\n---\n\n```ts\ntype LiveQueryPersistedStatus = \"unavailable\" | \"loading\" | \"ready\" | \"error\";\n```\n\nDefined in: [packages/db/src/live-query-observer.ts:14](https://github.com/TanStack/db/blob/main/packages/db/src/live-query-observer.ts#L14)\n"}

@@ -1,0 +1,6 @@
+---
+id: ClientValidationTrigger
+title: ClientValidationTrigger
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ClientValidationTrigger = ValidationTrigger;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L182","children":[{"type":"text","value":"validation.public.ts:182"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ClientValidationTrigger = ValidationTrigger;\n```\n\nDefined in: [validation.public.ts:182](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L182)\n","originalRawMarkdown":"---\nid: ClientValidationTrigger\ntitle: ClientValidationTrigger\n---\n\n```ts\ntype ClientValidationTrigger = ValidationTrigger;\n```\n\nDefined in: [validation.public.ts:182](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L182)\n"}

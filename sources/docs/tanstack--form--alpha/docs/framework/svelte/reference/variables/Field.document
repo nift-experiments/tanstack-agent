@@ -1,0 +1,6 @@
+---
+id: Field
+title: Field
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const Field: LegacyComponentType;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: node_modules/.pnpm/svelte@5.56.8_@typescript-eslint+types@8.66.0/node_modules/svelte/types/index.d.ts:3212"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst Field: LegacyComponentType;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.56.8\\_@typescript-eslint+types@8.66.0/node\\_modules/svelte/types/index.d.ts:3212\n","originalRawMarkdown":"---\nid: Field\ntitle: Field\n---\n\n```ts\nconst Field: LegacyComponentType;\n```\n\nDefined in: node\\_modules/.pnpm/svelte@5.56.8\\_@typescript-eslint+types@8.66.0/node\\_modules/svelte/types/index.d.ts:3212\n"}

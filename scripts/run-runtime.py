@@ -6,6 +6,8 @@ env={k:os.environ[k] for k in ['PATH','HOME','TMPDIR','LANG','LC_ALL','TERM'] if
 env['PATH']=str(toolchain/'node-v25.9.0-linux-x64/bin')+':'+str(toolchain/'pnpm/node_modules/.bin')+':'+env.get('PATH','')
 env['NPM_CONFIG_USERCONFIG']=str(toolchain/'empty-npmrc')
 env['WRANGLER_SEND_METRICS']='false'
+env['XDG_CONFIG_HOME']=str(toolchain/'isolated-config')
+Path(env['XDG_CONFIG_HOME']).mkdir(parents=True,exist_ok=True)
 for key in ['TANSTACK_BASELINE_DIR','TANSTACK_TOOLCHAIN']:
  if key in os.environ:env[key]=os.environ[key]
 raise SystemExit(subprocess.run(sys.argv[1:],cwd=project/'runtime',env=env).returncode)

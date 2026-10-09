@@ -1,0 +1,6 @@
+---
+id: BuiltInSortFn
+title: BuiltInSortFn
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"type-alias-builtinsortfn","children":[{"type":"text","value":"Type Alias: BuiltInSortFn"}]},{"type":"code","value":"type BuiltInSortFn = keyof typeof sortFns;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/sortFns.ts#L366","children":[{"type":"text","value":"features/row-sorting/sortFns.ts:366"}]}]}],"headings":[{"id":"type-alias-builtinsortfn","text":"Type Alias: BuiltInSortFn","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Type Alias: BuiltInSortFn\n\n```ts\ntype BuiltInSortFn = keyof typeof sortFns;\n```\n\nDefined in: [features/row-sorting/sortFns.ts:366](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/sortFns.ts#L366)\n","originalRawMarkdown":"---\nid: BuiltInSortFn\ntitle: BuiltInSortFn\n---\n\n# Type Alias: BuiltInSortFn\n\n```ts\ntype BuiltInSortFn = keyof typeof sortFns;\n```\n\nDefined in: [features/row-sorting/sortFns.ts:366](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/sortFns.ts#L366)\n"}

@@ -1,0 +1,6 @@
+---
+id: RowModelFns_Core
+title: RowModelFns_Core
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"interface-rowmodelfns-core","children":[{"type":"text","value":"Interface: RowModelFns_Core"}]},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/types/RowModelFns.ts#L7","children":[{"type":"text","value":"types/RowModelFns.ts:7"}]}]}],"headings":[{"id":"interface-rowmodelfns-core","text":"Interface: RowModelFns_Core","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Interface: RowModelFns\\_Core\n\nDefined in: [types/RowModelFns.ts:7](https://github.com/TanStack/table/blob/main/packages/table-core/src/types/RowModelFns.ts#L7)\n","originalRawMarkdown":"---\nid: RowModelFns_Core\ntitle: RowModelFns_Core\n---\n\n# Interface: RowModelFns\\_Core\n\nDefined in: [types/RowModelFns.ts:7](https://github.com/TanStack/table/blob/main/packages/table-core/src/types/RowModelFns.ts#L7)\n"}

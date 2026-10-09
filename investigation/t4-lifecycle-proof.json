@@ -1,0 +1,17 @@
+{
+  "authored": false,
+  "results": [
+    {
+      "action": "add",
+      "path_present": true
+    },
+    {
+      "action": "rename",
+      "old_assets_removed": true
+    },
+    {
+      "action": "delete",
+      "assets_and_path_removed": true
+    }
+  ]
+}

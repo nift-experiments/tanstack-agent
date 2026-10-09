@@ -1,0 +1,6 @@
+---
+id: ValidationErrorInput
+title: ValidationErrorInput
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type ValidationErrorInput = OneOrMany<ValidationErrorValue>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L375","children":[{"type":"text","value":"validation.public.ts:375"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype ValidationErrorInput = OneOrMany<ValidationErrorValue>;\n```\n\nDefined in: [validation.public.ts:375](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L375)\n","originalRawMarkdown":"---\nid: ValidationErrorInput\ntitle: ValidationErrorInput\n---\n\n```ts\ntype ValidationErrorInput = OneOrMany<ValidationErrorValue>;\n```\n\nDefined in: [validation.public.ts:375](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L375)\n"}

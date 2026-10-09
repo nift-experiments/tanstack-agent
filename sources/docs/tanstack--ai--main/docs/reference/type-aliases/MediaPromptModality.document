@@ -1,0 +1,6 @@
+---
+id: MediaPromptModality
+title: MediaPromptModality
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type MediaPromptModality = \"image\" | \"video\" | \"audio\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2114","children":[{"type":"text","value":"packages/ai/src/types.ts:2114"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Non-text modalities a media-generation model can accept in its prompt."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype MediaPromptModality = \"image\" | \"video\" | \"audio\";\n```\n\nDefined in: [packages/ai/src/types.ts:2114](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2114)\n\nNon-text modalities a media-generation model can accept in its prompt.\n","originalRawMarkdown":"---\nid: MediaPromptModality\ntitle: MediaPromptModality\n---\n\n```ts\ntype MediaPromptModality = \"image\" | \"video\" | \"audio\";\n```\n\nDefined in: [packages/ai/src/types.ts:2114](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L2114)\n\nNon-text modalities a media-generation model can accept in its prompt.\n"}

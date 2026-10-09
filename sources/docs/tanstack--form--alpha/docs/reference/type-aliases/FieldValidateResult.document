@@ -1,0 +1,6 @@
+---
+id: FieldValidateResult
+title: FieldValidateResult
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type FieldValidateResult = ValidationResult;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L516","children":[{"type":"text","value":"validation.public.ts:516"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype FieldValidateResult = ValidationResult;\n```\n\nDefined in: [validation.public.ts:516](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L516)\n","originalRawMarkdown":"---\nid: FieldValidateResult\ntitle: FieldValidateResult\n---\n\n```ts\ntype FieldValidateResult = ValidationResult;\n```\n\nDefined in: [validation.public.ts:516](https://github.com/TanStack/form/blob/main/packages/form-core/src/validation.public.ts#L516)\n"}

@@ -1,0 +1,6 @@
+---
+id: CanonicalModifier
+title: CanonicalModifier
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type CanonicalModifier = \"Control\" | \"Shift\" | \"Alt\" | \"Meta\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L25","children":[{"type":"text","value":"key.types.ts:25"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Canonical modifier names that map to KeyboardEvent properties."}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype CanonicalModifier = \"Control\" | \"Shift\" | \"Alt\" | \"Meta\";\n```\n\nDefined in: [key.types.ts:25](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L25)\n\nCanonical modifier names that map to KeyboardEvent properties.\n","originalRawMarkdown":"---\nid: CanonicalModifier\ntitle: CanonicalModifier\n---\n\n```ts\ntype CanonicalModifier = \"Control\" | \"Shift\" | \"Alt\" | \"Meta\";\n```\n\nDefined in: [key.types.ts:25](https://github.com/TanStack/hotkeys/blob/main/packages/hotkeys/src/key.types.ts#L25)\n\nCanonical modifier names that map to KeyboardEvent properties.\n"}

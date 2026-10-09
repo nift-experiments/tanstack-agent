@@ -1,0 +1,6 @@
+---
+id: SubscriptionStatus
+title: SubscriptionStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type SubscriptionStatus = \"ready\" | \"loadingSubset\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L231","children":[{"type":"text","value":"packages/db/src/types.ts:231"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Subscription status values"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype SubscriptionStatus = \"ready\" | \"loadingSubset\";\n```\n\nDefined in: [packages/db/src/types.ts:231](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L231)\n\nSubscription status values\n","originalRawMarkdown":"---\nid: SubscriptionStatus\ntitle: SubscriptionStatus\n---\n\n```ts\ntype SubscriptionStatus = \"ready\" | \"loadingSubset\";\n```\n\nDefined in: [packages/db/src/types.ts:231](https://github.com/TanStack/db/blob/main/packages/db/src/types.ts#L231)\n\nSubscription status values\n"}

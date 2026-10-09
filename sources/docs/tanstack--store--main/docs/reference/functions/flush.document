@@ -1,0 +1,6 @@
+---
+id: flush
+title: flush
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"function flush(): void;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/store/blob/main/packages/store/src/atom.ts#L89","children":[{"type":"text","value":"atom.ts:89"}]}]},{"type":"heading","depth":2,"id":"returns","children":[{"type":"text","value":"Returns"}]},{"type":"paragraph","children":[{"type":"inlineCode","value":"void"}]}],"headings":[{"id":"returns","text":"Returns","level":2}]},"frameworks":[],"downloadMarkdown":"\n```ts\nfunction flush(): void;\n```\n\nDefined in: [atom.ts:89](https://github.com/TanStack/store/blob/main/packages/store/src/atom.ts#L89)\n\n## Returns\n\n`void`\n","originalRawMarkdown":"---\nid: flush\ntitle: flush\n---\n\n```ts\nfunction flush(): void;\n```\n\nDefined in: [atom.ts:89](https://github.com/TanStack/store/blob/main/packages/store/src/atom.ts#L89)\n\n## Returns\n\n`void`\n"}

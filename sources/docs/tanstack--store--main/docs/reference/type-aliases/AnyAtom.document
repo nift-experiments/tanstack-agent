@@ -1,0 +1,6 @@
+---
+id: AnyAtom
+title: AnyAtom
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyAtom = BaseAtom<any>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/store/blob/main/packages/store/src/types.ts#L51","children":[{"type":"text","value":"types.ts:51"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyAtom = BaseAtom<any>;\n```\n\nDefined in: [types.ts:51](https://github.com/TanStack/store/blob/main/packages/store/src/types.ts#L51)\n","originalRawMarkdown":"---\nid: AnyAtom\ntitle: AnyAtom\n---\n\n```ts\ntype AnyAtom = BaseAtom<any>;\n```\n\nDefined in: [types.ts:51](https://github.com/TanStack/store/blob/main/packages/store/src/types.ts#L51)\n"}

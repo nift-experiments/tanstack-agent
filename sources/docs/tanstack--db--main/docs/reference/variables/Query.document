@@ -1,0 +1,6 @@
+---
+id: Query
+title: Query
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"const Query: InitialQueryBuilderConstructor = BaseQueryBuilder;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/index.ts#L1634","children":[{"type":"text","value":"packages/db/src/query/builder/index.ts:1634"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\nconst Query: InitialQueryBuilderConstructor = BaseQueryBuilder;\n```\n\nDefined in: [packages/db/src/query/builder/index.ts:1634](https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/index.ts#L1634)\n","originalRawMarkdown":"---\nid: Query\ntitle: Query\n---\n\n```ts\nconst Query: InitialQueryBuilderConstructor = BaseQueryBuilder;\n```\n\nDefined in: [packages/db/src/query/builder/index.ts:1634](https://github.com/TanStack/db/blob/main/packages/db/src/query/builder/index.ts#L1634)\n"}

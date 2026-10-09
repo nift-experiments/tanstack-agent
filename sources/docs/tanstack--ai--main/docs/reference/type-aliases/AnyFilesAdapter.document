@@ -1,0 +1,6 @@
+---
+id: AnyFilesAdapter
+title: AnyFilesAdapter
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type AnyFilesAdapter = FilesAdapter<string>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/files/adapter.ts#L83","children":[{"type":"text","value":"packages/ai/src/activities/files/adapter.ts:83"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype AnyFilesAdapter = FilesAdapter<string>;\n```\n\nDefined in: [packages/ai/src/activities/files/adapter.ts:83](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/files/adapter.ts#L83)\n","originalRawMarkdown":"---\nid: AnyFilesAdapter\ntitle: AnyFilesAdapter\n---\n\n```ts\ntype AnyFilesAdapter = FilesAdapter<string>;\n```\n\nDefined in: [packages/ai/src/activities/files/adapter.ts:83](https://github.com/TanStack/ai/blob/main/packages/ai/src/activities/files/adapter.ts#L83)\n"}

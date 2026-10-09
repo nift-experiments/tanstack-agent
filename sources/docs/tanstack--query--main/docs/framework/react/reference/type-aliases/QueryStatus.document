@@ -1,0 +1,6 @@
+---
+id: QueryStatus
+title: QueryStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type QueryStatus = \"pending\" | \"error\" | \"success\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L950","children":[{"type":"text","value":"packages/query-core/src/types.ts:950"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype QueryStatus = \"pending\" | \"error\" | \"success\";\n```\n\nDefined in: [packages/query-core/src/types.ts:950](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L950)\n","originalRawMarkdown":"---\nid: QueryStatus\ntitle: QueryStatus\n---\n\n```ts\ntype QueryStatus = \"pending\" | \"error\" | \"success\";\n```\n\nDefined in: [packages/query-core/src/types.ts:950](https://github.com/TanStack/query/blob/main/packages/query-core/src/types.ts#L950)\n"}

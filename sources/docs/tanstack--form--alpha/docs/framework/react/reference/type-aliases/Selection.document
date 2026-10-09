@@ -1,0 +1,6 @@
+---
+id: Selection
+title: Selection
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type Selection<TSelected> = Readable<TSelected>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: node_modules/.pnpm/@tanstack+store@0.11.0/node_modules/@tanstack/store/dist/types.d.ts:4"}]},{"type":"heading","depth":2,"id":"type-parameters","children":[{"type":"text","value":"Type Parameters"}]},{"type":"heading","depth":3,"id":"tselected","children":[{"type":"text","value":"TSelected"}]},{"type":"paragraph","children":[{"type":"inlineCode","value":"TSelected"}]}],"headings":[{"id":"type-parameters","text":"Type Parameters","level":2},{"id":"tselected","text":"TSelected","level":3}]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype Selection<TSelected> = Readable<TSelected>;\n```\n\nDefined in: node\\_modules/.pnpm/@tanstack+store@0.11.0/node\\_modules/@tanstack/store/dist/types.d.ts:4\n\n## Type Parameters\n\n### TSelected\n\n`TSelected`\n","originalRawMarkdown":"---\nid: Selection\ntitle: Selection\n---\n\n```ts\ntype Selection<TSelected> = Readable<TSelected>;\n```\n\nDefined in: node\\_modules/.pnpm/@tanstack+store@0.11.0/node\\_modules/@tanstack/store/dist/types.d.ts:4\n\n## Type Parameters\n\n### TSelected\n\n`TSelected`\n"}

@@ -1,0 +1,216 @@
+---
+title: Community Resources
+articles:
+  [
+    {
+      title: "TkDodo's Blog Posts",
+      url: 'https://tkdodo.eu/blog/practical-react-query',
+      description: 'TkDodo, a maintainer of TanStack Query, writes a series of blog posts about the library. These articles offer general best practices and often present opinionated perspectives on using TanStack Query.',
+    },
+  ]
+media:
+  [
+    {
+      title: 'React Query: It’s Time to Break up with your Global State! – Tanner Linsley',
+      url: 'https://www.youtube.com/watch?v=seU46c6Jz7E',
+      description: 'Get the lowdown on “global state” and how React Query can help you fetch, cache and manage your asynchronous data with a fraction of the effort and code that you’re used to',
+    },
+    {
+      title: 'All About React Query (with Tanner Linsley) — Learn With Jason',
+      url: 'https://www.youtube.com/watch?v=DocXo3gqGdI',
+      description: 'Learn all about React Query with its creator Tanner Linsley.',
+    },
+    {
+      title: 'Hooks for Fetching with ReactQuery Creator Tanner Linsley aka @tannerlinsley',
+      url: 'https://www.youtube.com/watch?v=PPvWXbSCtBU',
+      description: 'Learn how React Query simplifies asynchronous data fetching in React applications.',
+    },
+    {
+      title: 'React Query - Open Source Friday stream with Tanner Linsley from',
+      url: 'https://www.youtube.com/watch?v=B3cJDT3j19I',
+      description: 'An Open Source Friday stream featuring Tanner Linsley.',
+    },
+    {
+      title: 'React Query Presentation - Tanner Linsley',
+      url: 'https://www.youtube.com/watch?v=_ehibado6rU',
+      description: 'Tanner Linsley gives a talk to Lambda School students about the React Query.',
+    },
+    {
+      title: 'TanStack Query v4 (with Dominik Dorfmeister) — Learn With Jason',
+      url: 'https://www.youtube.com/watch?v=SPPQm0dvEes',
+      description: 'Dominik Dorfmeister covering TanStack Query v4.',
+    },
+    {
+      title: 'React Query Exposed by Its Maintainer',
+      url: 'https://www.youtube.com/watch?v=8-RTNnn9GR8',
+      description: 'Dominik Dorfmeister explores the less favorable aspects of React Query and situations where it may not be the best fit.',
+    },
+    {
+      title: 'React Query API Design: Lessons Learned - Dominik Dorfmeister',
+      url: 'https://www.youtube.com/watch?v=l3PxErcKeAI',
+      description: 'Dominik Dorfmeister walks through some of the API design choices that were made in React Query to get to the DX.',
+    },
+  ]
+utilities:
+  [
+    {
+      title: 'batshit',
+      url: 'https://github.com/yornaath/batshit',
+      description: 'A batch manager that will deduplicate and batch requests for a certain data type made within a window',
+    },
+    {
+      title: 'GraphQL Code Generator',
+      url: 'https://the-guild.dev/graphql/codegen',
+      description: 'Generate React Query hooks from your GraphQL schema',
+    },
+
+    {
+      title: 'Http-wizard',
+      url: 'https://http-wizard.com',
+      description: 'End-to-end type-safe Fastify API with typeScript magic ✨',
+    },
+
+    {
+      title: 'Normy',
+      url: 'https://github.com/klis87/normy',
+      description: 'Automatic normalization and data updates for data fetching libraries',
+    },
+
+    {
+      title: 'Orval',
+      url: 'https://orval.dev/',
+      description: 'Generate TypeScript client from OpenAPI specifications.',
+    },
+    {
+      title: 'Query Key Factory',
+      url: 'https://github.com/lukemorales/query-key-factory',
+      description: 'A library for creating typesafe standardized query keys, useful for cache management in @tanstack/query',
+    },
+
+    {
+      title: 'React Query Kit',
+      url: 'https://github.com/liaoliao666/react-query-kit',
+      description: '🕊️ A toolkit for ReactQuery that makes ReactQuery hooks reusable and typesafe',
+    },
+    {
+      title: 'React Query Rewind',
+      url: 'https://reactqueryrewind.com/',
+      description: 'Time travel and visualize state during development',
+    },
+    {
+      title: 'React Query Swagger',
+      url: 'https://github.com/Shaddix/react-query-swagger',
+      description: 'Generate React Query hooks based on Swagger API definitions',
+    },
+    {
+      title: 'Suspensive React Query',
+      url: 'https://suspensive.org/docs/react-query/motivation',
+      description: 'Enhances React Query with Suspense support, allowing for simpler and more declarative data fetching',
+    },
+    {
+      title: 'tRPC',
+      url: 'https://trpc.io/',
+      description: 'End-to-end typesafe APIs made easy',
+    },
+  ]
+others:
+  [
+    {
+      title: 'Atomic CRM',
+      url: 'https://marmelab.com/atomic-crm/',
+      description: 'A full-featured CRM built with React, react-admin, and Supabase.',
+    },
+    {
+      title: 'Blitz',
+      url: 'https://blitzjs.com/',
+      description: 'The Missing Fullstack Toolkit for Next.js',
+    },
+    {
+      title: 'Connect',
+      url: 'https://connectrpc.com/docs',
+      description: 'A family of libraries for building browser and gRPC-compatible HTTP APIs.',
+    },
+    {
+      title: 'Hey API',
+      url: 'https://heyapi.dev/openapi-ts/plugins/tanstack-query',
+      description: 'OpenAPI to TypeScript codegen. Production-ready SDKs, Zod schemas, TanStack Query hooks, and 20+ plugins. Used by Vercel, OpenCode, and PayPal.',
+    },
+    {
+      title: 'Kubb',
+      url: 'https://www.kubb.dev/',
+      description: 'Generate SDKs for all your APIs',
+    },
+    {
+      title: '@codewithagents/openapi-react-query',
+      url: 'https://github.com/codewithagents/openapi-zod-ts',
+      description: 'Generate fully typed TanStack/React Query v5 hooks from an OpenAPI 3.1 spec, with Zod v4 runtime validation and an end-to-end pipeline (client, mocks, server).',
+    },
+    {
+      title: 'OpenAPI codegen',
+      url: 'https://github.com/fabien0102/openapi-codegen',
+      description: 'A tool for generating code based on an OpenAPI schema.',
+    },
+    {
+      title: 'OpenAPI Qraft React',
+      url: 'https://github.com/OpenAPI-Qraft/openapi-qraft',
+      description: 'Generate type-safe API clients and Hooks for TanStack Query directly from OpenAPI Documents.Zero-runtime overhead, Proxy-based design, seamless SSR support, and full TanStack Query functionality.',
+    },
+    {
+      title: 'OpenAPI React Query codegen',
+      url: 'https://github.com/7nohe/openapi-react-query-codegen',
+      description: 'Generate TanStack Query hooks based on an OpenAPI specification file.',
+    },
+    {
+      title: 'OpenAPI zod client',
+      url: 'https://github.com/astahmer/openapi-zod-client',
+      description: 'Generate a zodios client from an OpenAPI specification',
+    },
+    {
+      title: 'openapi-fetch',
+      url: 'https://openapi-ts.dev/openapi-react-query/',
+      description: 'A 2KB min, typesafe fetch wrapper that uses static TypeScript type inference and no runtime checks.',
+    },
+    {
+      title: 'oRPC',
+      url: 'https://orpc.unnoq.com/docs/integrations/tanstack-query',
+      description: 'Easy to build APIs that are end-to-end type-safe and adhere to OpenAPI standards.',
+    },
+    {
+      title: 'Rapini',
+      url: 'https://github.com/rametta/rapini',
+      description: '🥬 OpenAPI to React Query (or SWR) & Axios',
+    },
+    {
+      title: 'React Query Visualizer',
+      url: 'https://marketplace.visualstudio.com/items?itemName=fe-dudu.react-query-visualizer',
+      description: 'VS Code extension for TanStack Query (React Query): visualize query keys, cache invalidation/refetch flows, and file impact graph',
+    },
+    {
+      title: 'StitchAPI',
+      url: 'https://stitchapi.dev',
+      description: 'Gives TanStack Query a typed, validated, streaming-first queryFn: stitchQueryOptions supplies the fetcher, so Query keeps owning caching and revalidation. Bindings for React, Vue, Svelte, Solid, and Angular.',
+    },
+    {
+      title: 'Tanstack Query Visualizer',
+      url: 'https://tanstack-query-visualizer.sofi.coop/',
+      description: 'An interactive sandbox that visualizes the relationship between mutations and query keys.',
+    },
+    {
+      title: 'ts-rest',
+      url: 'https://ts-rest.com/',
+      description: 'Incrementally adoptable type-safety for your new and existing APIs',
+    },
+    {
+      title: 'wagmi',
+      url: 'https://wagmi.sh/',
+      description: 'React Hooks for Ethereum based on @tanstack/react-query',
+    },
+    {
+      title: 'zodios',
+      url: 'https://www.zodios.org/',
+      description: 'End-to-end typesafe REST API toolbox',
+    },
+  ]
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[],"headings":[]},"frameworks":[],"downloadMarkdown":"","originalRawMarkdown":"---\ntitle: Community Resources\narticles:\n  [\n    {\n      title: \"TkDodo's Blog Posts\",\n      url: 'https://tkdodo.eu/blog/practical-react-query',\n      description: 'TkDodo, a maintainer of TanStack Query, writes a series of blog posts about the library. These articles offer general best practices and often present opinionated perspectives on using TanStack Query.',\n    },\n  ]\nmedia:\n  [\n    {\n      title: 'React Query: It’s Time to Break up with your Global State! – Tanner Linsley',\n      url: 'https://www.youtube.com/watch?v=seU46c6Jz7E',\n      description: 'Get the lowdown on “global state” and how React Query can help you fetch, cache and manage your asynchronous data with a fraction of the effort and code that you’re used to',\n    },\n    {\n      title: 'All About React Query (with Tanner Linsley) — Learn With Jason',\n      url: 'https://www.youtube.com/watch?v=DocXo3gqGdI',\n      description: 'Learn all about React Query with its creator Tanner Linsley.',\n    },\n    {\n      title: 'Hooks for Fetching with ReactQuery Creator Tanner Linsley aka @tannerlinsley',\n      url: 'https://www.youtube.com/watch?v=PPvWXbSCtBU',\n      description: 'Learn how React Query simplifies asynchronous data fetching in React applications.',\n    },\n    {\n      title: 'React Query - Open Source Friday stream with Tanner Linsley from',\n      url: 'https://www.youtube.com/watch?v=B3cJDT3j19I',\n      description: 'An Open Source Friday stream featuring Tanner Linsley.',\n    },\n    {\n      title: 'React Query Presentation - Tanner Linsley',\n      url: 'https://www.youtube.com/watch?v=_ehibado6rU',\n      description: 'Tanner Linsley gives a talk to Lambda School students about the React Query.',\n    },\n    {\n      title: 'TanStack Query v4 (with Dominik Dorfmeister) — Learn With Jason',\n      url: 'https://www.youtube.com/watch?v=SPPQm0dvEes',\n      description: 'Dominik Dorfmeister covering TanStack Query v4.',\n    },\n    {\n      title: 'React Query Exposed by Its Maintainer',\n      url: 'https://www.youtube.com/watch?v=8-RTNnn9GR8',\n      description: 'Dominik Dorfmeister explores the less favorable aspects of React Query and situations where it may not be the best fit.',\n    },\n    {\n      title: 'React Query API Design: Lessons Learned - Dominik Dorfmeister',\n      url: 'https://www.youtube.com/watch?v=l3PxErcKeAI',\n      description: 'Dominik Dorfmeister walks through some of the API design choices that were made in React Query to get to the DX.',\n    },\n  ]\nutilities:\n  [\n    {\n      title: 'batshit',\n      url: 'https://github.com/yornaath/batshit',\n      description: 'A batch manager that will deduplicate and batch requests for a certain data type made within a window',\n    },\n    {\n      title: 'GraphQL Code Generator',\n      url: 'https://the-guild.dev/graphql/codegen',\n      description: 'Generate React Query hooks from your GraphQL schema',\n    },\n\n    {\n      title: 'Http-wizard',\n      url: 'https://http-wizard.com',\n      description: 'End-to-end type-safe Fastify API with typeScript magic ✨',\n    },\n\n    {\n      title: 'Normy',\n      url: 'https://github.com/klis87/normy',\n      description: 'Automatic normalization and data updates for data fetching libraries',\n    },\n\n    {\n      title: 'Orval',\n      url: 'https://orval.dev/',\n      description: 'Generate TypeScript client from OpenAPI specifications.',\n    },\n    {\n      title: 'Query Key Factory',\n      url: 'https://github.com/lukemorales/query-key-factory',\n      description: 'A library for creating typesafe standardized query keys, useful for cache management in @tanstack/query',\n    },\n\n    {\n      title: 'React Query Kit',\n      url: 'https://github.com/liaoliao666/react-query-kit',\n      description: '🕊️ A toolkit for ReactQuery that makes ReactQuery hooks reusable and typesafe',\n    },\n    {\n      title: 'React Query Rewind',\n      url: 'https://reactqueryrewind.com/',\n      description: 'Time travel and visualize state during development',\n    },\n    {\n      title: 'React Query Swagger',\n      url: 'https://github.com/Shaddix/react-query-swagger',\n      description: 'Generate React Query hooks based on Swagger API definitions',\n    },\n    {\n      title: 'Suspensive React Query',\n      url: 'https://suspensive.org/docs/react-query/motivation',\n      description: 'Enhances React Query with Suspense support, allowing for simpler and more declarative data fetching',\n    },\n    {\n      title: 'tRPC',\n      url: 'https://trpc.io/',\n      description: 'End-to-end typesafe APIs made easy',\n    },\n  ]\nothers:\n  [\n    {\n      title: 'Atomic CRM',\n      url: 'https://marmelab.com/atomic-crm/',\n      description: 'A full-featured CRM built with React, react-admin, and Supabase.',\n    },\n    {\n      title: 'Blitz',\n      url: 'https://blitzjs.com/',\n      description: 'The Missing Fullstack Toolkit for Next.js',\n    },\n    {\n      title: 'Connect',\n      url: 'https://connectrpc.com/docs',\n      description: 'A family of libraries for building browser and gRPC-compatible HTTP APIs.',\n    },\n    {\n      title: 'Hey API',\n      url: 'https://heyapi.dev/openapi-ts/plugins/tanstack-query',\n      description: 'OpenAPI to TypeScript codegen. Production-ready SDKs, Zod schemas, TanStack Query hooks, and 20+ plugins. Used by Vercel, OpenCode, and PayPal.',\n    },\n    {\n      title: 'Kubb',\n      url: 'https://www.kubb.dev/',\n      description: 'Generate SDKs for all your APIs',\n    },\n    {\n      title: '@codewithagents/openapi-react-query',\n      url: 'https://github.com/codewithagents/openapi-zod-ts',\n      description: 'Generate fully typed TanStack/React Query v5 hooks from an OpenAPI 3.1 spec, with Zod v4 runtime validation and an end-to-end pipeline (client, mocks, server).',\n    },\n    {\n      title: 'OpenAPI codegen',\n      url: 'https://github.com/fabien0102/openapi-codegen',\n      description: 'A tool for generating code based on an OpenAPI schema.',\n    },\n    {\n      title: 'OpenAPI Qraft React',\n      url: 'https://github.com/OpenAPI-Qraft/openapi-qraft',\n      description: 'Generate type-safe API clients and Hooks for TanStack Query directly from OpenAPI Documents.Zero-runtime overhead, Proxy-based design, seamless SSR support, and full TanStack Query functionality.',\n    },\n    {\n      title: 'OpenAPI React Query codegen',\n      url: 'https://github.com/7nohe/openapi-react-query-codegen',\n      description: 'Generate TanStack Query hooks based on an OpenAPI specification file.',\n    },\n    {\n      title: 'OpenAPI zod client',\n      url: 'https://github.com/astahmer/openapi-zod-client',\n      description: 'Generate a zodios client from an OpenAPI specification',\n    },\n    {\n      title: 'openapi-fetch',\n      url: 'https://openapi-ts.dev/openapi-react-query/',\n      description: 'A 2KB min, typesafe fetch wrapper that uses static TypeScript type inference and no runtime checks.',\n    },\n    {\n      title: 'oRPC',\n      url: 'https://orpc.unnoq.com/docs/integrations/tanstack-query',\n      description: 'Easy to build APIs that are end-to-end type-safe and adhere to OpenAPI standards.',\n    },\n    {\n      title: 'Rapini',\n      url: 'https://github.com/rametta/rapini',\n      description: '🥬 OpenAPI to React Query (or SWR) & Axios',\n    },\n    {\n      title: 'React Query Visualizer',\n      url: 'https://marketplace.visualstudio.com/items?itemName=fe-dudu.react-query-visualizer',\n      description: 'VS Code extension for TanStack Query (React Query): visualize query keys, cache invalidation/refetch flows, and file impact graph',\n    },\n    {\n      title: 'StitchAPI',\n      url: 'https://stitchapi.dev',\n      description: 'Gives TanStack Query a typed, validated, streaming-first queryFn: stitchQueryOptions supplies the fetcher, so Query keeps owning caching and revalidation. Bindings for React, Vue, Svelte, Solid, and Angular.',\n    },\n    {\n      title: 'Tanstack Query Visualizer',\n      url: 'https://tanstack-query-visualizer.sofi.coop/',\n      description: 'An interactive sandbox that visualizes the relationship between mutations and query keys.',\n    },\n    {\n      title: 'ts-rest',\n      url: 'https://ts-rest.com/',\n      description: 'Incrementally adoptable type-safety for your new and existing APIs',\n    },\n    {\n      title: 'wagmi',\n      url: 'https://wagmi.sh/',\n      description: 'React Hooks for Ethereum based on @tanstack/react-query',\n    },\n    {\n      title: 'zodios',\n      url: 'https://www.zodios.org/',\n      description: 'End-to-end typesafe REST API toolbox',\n    },\n  ]\n---\n"}

@@ -1,0 +1,6 @@
+---
+title: Pinning APIs
+id: pinning
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"html","value":"<!-- Deprecated -->"},{"type":"paragraph","children":[{"type":"text","value":"The pinning apis are now split into multiple api pages:"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"../../guide/column-pinning.md","children":[{"type":"text","value":"Column Pinning"}]}]}]},{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"link","href":"../../guide/row-pinning.md","children":[{"type":"text","value":"Row Pinning"}]}]}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n<!-- Deprecated -->\n\nThe pinning apis are now split into multiple api pages:\n\n- [Column Pinning](../../guide/column-pinning.md)\n- [Row Pinning](../../guide/row-pinning.md)","originalRawMarkdown":"---\ntitle: Pinning APIs\nid: pinning\n---\n\n<!-- Deprecated -->\n\nThe pinning apis are now split into multiple api pages:\n\n- [Column Pinning](../../guide/column-pinning.md)\n- [Row Pinning](../../guide/row-pinning.md)"}

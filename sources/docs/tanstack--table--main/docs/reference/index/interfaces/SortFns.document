@@ -1,0 +1,6 @@
+---
+id: SortFns
+title: SortFns
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"heading","depth":1,"id":"interface-sortfns","children":[{"type":"text","value":"Interface: SortFns"}]},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/rowSortingFeature.types.ts#L32","children":[{"type":"text","value":"features/row-sorting/rowSortingFeature.types.ts:32"}]}]}],"headings":[{"id":"interface-sortfns","text":"Interface: SortFns","level":1}]},"frameworks":[],"downloadMarkdown":"\n# Interface: SortFns\n\nDefined in: [features/row-sorting/rowSortingFeature.types.ts:32](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/rowSortingFeature.types.ts#L32)\n","originalRawMarkdown":"---\nid: SortFns\ntitle: SortFns\n---\n\n# Interface: SortFns\n\nDefined in: [features/row-sorting/rowSortingFeature.types.ts:32](https://github.com/TanStack/table/blob/main/packages/table-core/src/features/row-sorting/rowSortingFeature.types.ts#L32)\n"}

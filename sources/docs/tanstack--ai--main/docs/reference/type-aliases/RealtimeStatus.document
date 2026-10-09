@@ -1,0 +1,6 @@
+---
+id: RealtimeStatus
+title: RealtimeStatus
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type RealtimeStatus = \"idle\" | \"connecting\" | \"connected\" | \"reconnecting\" | \"error\";","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/realtime/types.ts#L186","children":[{"type":"text","value":"packages/ai/src/realtime/types.ts:186"}]}]},{"type":"paragraph","children":[{"type":"text","value":"Connection status of the realtime client"}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype RealtimeStatus = \"idle\" | \"connecting\" | \"connected\" | \"reconnecting\" | \"error\";\n```\n\nDefined in: [packages/ai/src/realtime/types.ts:186](https://github.com/TanStack/ai/blob/main/packages/ai/src/realtime/types.ts#L186)\n\nConnection status of the realtime client\n","originalRawMarkdown":"---\nid: RealtimeStatus\ntitle: RealtimeStatus\n---\n\n```ts\ntype RealtimeStatus = \"idle\" | \"connecting\" | \"connected\" | \"reconnecting\" | \"error\";\n```\n\nDefined in: [packages/ai/src/realtime/types.ts:186](https://github.com/TanStack/ai/blob/main/packages/ai/src/realtime/types.ts#L186)\n\nConnection status of the realtime client\n"}

@@ -1,0 +1,6 @@
+---
+id: BuiltInType
+title: BuiltInType
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type BuiltInType = Primitive | Date | RegExp | Function;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/utils.public.ts#L7","children":[{"type":"text","value":"utils.public.ts:7"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype BuiltInType = Primitive | Date | RegExp | Function;\n```\n\nDefined in: [utils.public.ts:7](https://github.com/TanStack/form/blob/main/packages/form-core/src/utils.public.ts#L7)\n","originalRawMarkdown":"---\nid: BuiltInType\ntitle: BuiltInType\n---\n\n```ts\ntype BuiltInType = Primitive | Date | RegExp | Function;\n```\n\nDefined in: [utils.public.ts:7](https://github.com/TanStack/form/blob/main/packages/form-core/src/utils.public.ts#L7)\n"}

@@ -1,0 +1,6 @@
+---
+id: RawEvent
+title: RawEvent
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L1821","children":[{"type":"text","value":"packages/ai/src/types.ts:1821"}]}]},{"type":"paragraph","children":[{"type":"text","value":"AG-UI 1.0 RawEvent shape."}]},{"type":"heading","depth":2,"id":"extends","children":[{"type":"text","value":"Extends"}]},{"type":"list","ordered":false,"items":[{"type":"listItem","children":[{"type":"paragraph","children":[{"type":"inlineCode","value":"RawEvent"}]}]}]}],"headings":[{"id":"extends","text":"Extends","level":2}]},"frameworks":[],"downloadMarkdown":"\nDefined in: [packages/ai/src/types.ts:1821](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L1821)\n\nAG-UI 1.0 RawEvent shape.\n\n## Extends\n\n- `RawEvent`\n","originalRawMarkdown":"---\nid: RawEvent\ntitle: RawEvent\n---\n\nDefined in: [packages/ai/src/types.ts:1821](https://github.com/TanStack/ai/blob/main/packages/ai/src/types.ts#L1821)\n\nAG-UI 1.0 RawEvent shape.\n\n## Extends\n\n- `RawEvent`\n"}

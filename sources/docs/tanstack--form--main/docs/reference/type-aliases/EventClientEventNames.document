@@ -1,0 +1,6 @@
+---
+id: EventClientEventNames
+title: EventClientEventNames
+---
+NIFT_TANSTACK_DOCUMENT_V1
+{"document":{"type":"root","children":[{"type":"code","value":"type EventClientEventNames = ExtractEventNames<EventClientEventMap>;","lang":"ts"},{"type":"paragraph","children":[{"type":"text","value":"Defined in: "},{"type":"link","href":"https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L59","children":[{"type":"text","value":"packages/form-core/src/EventClient.ts:59"}]}]}],"headings":[]},"frameworks":[],"downloadMarkdown":"\n```ts\ntype EventClientEventNames = ExtractEventNames<EventClientEventMap>;\n```\n\nDefined in: [packages/form-core/src/EventClient.ts:59](https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L59)\n","originalRawMarkdown":"---\nid: EventClientEventNames\ntitle: EventClientEventNames\n---\n\n```ts\ntype EventClientEventNames = ExtractEventNames<EventClientEventMap>;\n```\n\nDefined in: [packages/form-core/src/EventClient.ts:59](https://github.com/TanStack/form/blob/main/packages/form-core/src/EventClient.ts#L59)\n"}

@@ -1,0 +1,16 @@
+{
+  "pinned_site_commit": "862ccc3d191818320c3e6d217542883f80cb907a",
+  "tracked_upstream_files": 2799,
+  "byte_identical_files": 2794,
+  "changed_files": [
+    "src/server/runtime/host.server.ts",
+    "src/utils/docs.functions.ts",
+    "src/utils/documents.server.ts",
+    "src/utils/markdown/filterFrameworkContent.ts",
+    "src/utils/markdown/processor.ts"
+  ],
+  "all_API_routes_byte_identical": true,
+  "Worker_entry_byte_identical": true,
+  "storage_database_auth_AI_workflow_implementations_byte_identical": true,
+  "production_replacement_stubs": false
+}

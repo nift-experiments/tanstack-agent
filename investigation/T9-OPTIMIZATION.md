@@ -1,0 +1,13 @@
+# T9 reasonable optimization and revalidation
+
+The maintained-file resolver now checks existing upstream frontmatter before creating excerpts; references still use the original replacement rules, and the production origin-fetch path is unchanged. Metadata publication reuses the original frontmatter parser and canonical/redirect normalizers directly, avoiding excerpts and thousands of dynamic server-module imports.
+
+Normal authored resolution caches actual reads, including transitive references and absent targets, with input hashes and implementation/lock fingerprints. Projection derivation caches source bytes and parser/lock fingerprints. Forced full bypasses both caches and uses Nift build --all. The agent source model remains maintained AST envelopes with explicit original/download projections; routine corpus derivation is absent, and its necessary retained Markdown/React inputs remain as documented.
+
+Every publication has an unambiguous source/registry/producer revision. The publisher writes it into generated Worker vars. Runtime manifest reuse validates that revision, keeps at most two versions, refreshes on version changes and recovers from failed reads. Missing revision preserves uncached behavior. These are migration adapter changes, not Nift core changes.
+
+Both required suites and the corpus, real reference invalidation, add/rename/delete and revision tests pass. The actual source mutation resolves/derives five framework documents and rebuilds those five projections plus the manifest; an unrelated Router projection is byte-identical. After optimization, the same 333 browser states, six real catalog/chart keyboard states, six hosted-search states, generated outputs/cache headers, dynamic PNG, local API contracts, fresh sessions and theme/mobile/Router controls pass. Earlier accepted evidence is preserved separately.
+
+Fresh application state clears owned .rendered/publication/Nift output caches and runtime dist/content-collection/TanStack/Wrangler state. Both projects reproduce all 24,648 publication files byte-for-byte. Dependencies, toolchains and OS page cache remain installed/warm. Final runtime helper and publication wrappers share isolated Wrangler configuration; no global credential configuration is used.
+
+The authored unchanged-command smoke is about 4.9s versus the initial 16.7s, under concurrent correctness work, not a final benchmark. Retained Vite still dominates full publication memory/time. Whole-corpus scanning, projection decoding, metadata preparation, asset synchronization, hosted-search infrastructure and request-time SSR remain costs or boundaries to report honestly. The final five-sample campaign determines the accepted numbers.

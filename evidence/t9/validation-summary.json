@@ -1,0 +1,110 @@
+{
+  "browser_states": 333,
+  "real_catalog_states": 6,
+  "hosted_search_states": 6,
+  "generated_HTTP_states": 30,
+  "local_API_states": 27,
+  "dynamic_OG": "successful byte-identical PNG",
+  "corpus": {
+    "semantic_documents": 7527,
+    "roots": 25,
+    "raw_render_contracts_distinct": true
+  },
+  "tests_per_project": {
+    "unit": {
+      "total": 544,
+      "passed": 540,
+      "skipped": 4,
+      "failed": 0
+    },
+    "chat": {
+      "passed": 2269,
+      "failed": 0
+    },
+    "desktop": {
+      "total": 21,
+      "passed": 20,
+      "skipped": 1,
+      "failed": 0
+    },
+    "typecheck": "pass",
+    "lint": "pass"
+  },
+  "transitive_reference_dependency": {
+    "resolved_and_derived": 5,
+    "unrelated_projection_byte_identical": true,
+    "literal_syntax_preserved": true
+  },
+  "fresh_publication": {
+    "files": 24648,
+    "byte_identical": true
+  },
+  "mutation_preflight": "all 36 implementation/workload mutation-restoration pairs pass",
+  "live_private_backend_integration": false,
+  "raw_evidence": {
+    "t9-authored-tests-final.log": {
+      "bytes": 141495,
+      "sha256": "f47fb39a6c47963c7fe07b5bee712aff9c2475e96286abecdb7f147b9e77425a"
+    },
+    "t9-agent-tests.log": {
+      "bytes": 141806,
+      "sha256": "240afd417d641d7ebeb0da87574681f650a3f5a1c60703b445fc8121c7b06e09"
+    },
+    "t9-authored-corpus.log": {
+      "bytes": 123,
+      "sha256": "ba4ede3ecab162eda63faf9eb685fb3eb4c6e45c10b800940bab53777597d9a8"
+    },
+    "t9-agent-corpus.log": {
+      "bytes": 123,
+      "sha256": "ba4ede3ecab162eda63faf9eb685fb3eb4c6e45c10b800940bab53777597d9a8"
+    },
+    "t9-ref-invalidation-final.log": {
+      "bytes": 74,
+      "sha256": "a42c930701bec17e31e9c3ccdf198e6717179b1b8aef0eea73e754e9dcbaada7"
+    },
+    "t9-authored-lifecycle.log": {
+      "bytes": 136,
+      "sha256": "44bd69dae088735eeb594db026f7ad57afcb95753318d78e00c71efbd5f37054"
+    },
+    "t9-agent-lifecycle.log": {
+      "bytes": 136,
+      "sha256": "44bd69dae088735eeb594db026f7ad57afcb95753318d78e00c71efbd5f37054"
+    },
+    "t9-fresh-equivalence.json": {
+      "bytes": 253,
+      "sha256": "f375afa185bae6f6634474bd737b9f297cec2cddac51a86866fce1bab17e962c"
+    },
+    "t9-mutation-preflight.log": {
+      "bytes": 1767,
+      "sha256": "706a5b6adae352d8c98696b787b1e57100b444b4f2991bbf602de2900ef5e055"
+    },
+    "t9-revalidation/t7-browser-parity.json": {
+      "bytes": 255014,
+      "sha256": "836b9437e208b0ec74019e3e1f3cf201abe7a13529f1338165974d2230cc6984"
+    },
+    "t9-revalidation/t7-catalog-runtime.json": {
+      "bytes": 1147,
+      "sha256": "0b3c624b92dbedfbb4b60d43397e8f289a722ace17fd1fd00ddd30405fa892c1"
+    },
+    "t9-revalidation/t6-search-contract.json": {
+      "bytes": 8827,
+      "sha256": "075b3d7e7222eca1721a6efadffd1e14d4012360345811224f27bf5a5c21b021"
+    },
+    "t9-revalidation/t6-generated-http.json": {
+      "bytes": 11744,
+      "sha256": "53c573d6d2b18e43df62bf0d7b362bd2f46959d9313a7643362f99a658685832"
+    },
+    "t9-revalidation/t6-dynamic-og.json": {
+      "bytes": 716,
+      "sha256": "d098c2fc6e7d8ced93ec363bf0540cd485757628c9a00d886b5576f234c6535d"
+    },
+    "t9-revalidation/t5-runtime-http.json": {
+      "bytes": 5708,
+      "sha256": "ff8c30e23d0e059b97677e4d1d367c1ffdef337e749db210bd15bf87b806b7e6"
+    },
+    "t9-revalidation/dynamic-shell-contract.json": {
+      "bytes": 581,
+      "sha256": "4f0870f8200239325195d6eb74653e44036c6c6427d103633b0f3aeba59a00cf"
+    }
+  }
+}

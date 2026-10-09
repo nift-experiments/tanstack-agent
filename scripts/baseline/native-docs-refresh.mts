@@ -12,7 +12,7 @@ const {fetchRepoFile,fetchApiContents}=await load('src/utils/documents.server.ts
 const {collectRedirectEntriesForFile,mapWithConcurrency}=await load('src/utils/docs.functions.ts')
 const {buildRedirectManifest}=await load('src/utils/redirects.ts')
 const {getCachedDocsArtifact,markGitHubContentStale,markDocsArtifactsStale}=await load('src/utils/github-content-cache.server.ts')
-const {fixtureOutbound}=await import(pathToFileURL(path.join(baseline,'fixture-provider.mjs')).href)
+const {fixtureOutbound,fixtureCalls}=await import(pathToFileURL(path.join(baseline,'fixture-provider.mjs')).href)
 globalThis.fetch=async(input,init)=>fixtureOutbound(new Request(input,init))
 const {Miniflare,convertV4MiniflareOptions}=await import(pathToFileURL(path.join(upstream,'node_modules/miniflare/dist/src/index.js')).href)
 const cache=process.argv[2];const mode=process.argv[3]||'refresh';const count=Number(process.argv[4]||1)
@@ -33,7 +33,7 @@ await runWithHostRuntimeEnv({GITHUB_CONTENT_CACHE:localBucket},async()=>{
  const config=await fetchRepoFile('tanstack/query','main','docs/config.json');assert.ok(config);JSON.parse(config)
  const manifest=await getCachedDocsArtifact(options);assert.ok(manifest.paths.length>0)
  if(process.argv[5]==='route-add'||process.argv[5]==='route-rename')assert.ok(manifest.paths.some(p=>p.includes('benchmark-added')))
- if(process.argv[5]==='route-delete')assert.ok(!manifest.paths.some(p=>p.includes('benchmark-added')))
- console.log(JSON.stringify({mode,requested_documents:selected.length,native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,live_edge_cache_purge:false,production_writes:false}))
+ if(process.argv[5]==='route-rename'||process.argv[5]==='route-delete'){let canonical;await collectRedirectEntriesForFile({path:process.argv[6]},{docsRoot:'docs',fetchFile:async()=>null,onCanonicalPath:p=>canonical=p});assert.ok(canonical);assert.ok(!manifest.paths.includes(canonical))}
+ console.log(JSON.stringify({mode,requested_documents:selected.length,native_refresh_seconds:(performance.now()-started)/1000,canonical_paths:manifest.paths.length,real_local_R2:true,live_edge_cache_purge:false,production_writes:false,captured_origin_GETs:fixtureCalls.length,raw_document_GETs:fixtureCalls.filter(r=>new URL(r.url).hostname==='raw.githubusercontent.com').length}))
 })
 }finally{await worker.dispose()}

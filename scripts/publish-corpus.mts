@@ -4,9 +4,10 @@ import { spawnSync } from 'node:child_process'
 import assert from 'node:assert/strict'
 import { performance } from 'node:perf_hooks'
 import { readDocumentProjection } from '../runtime/src/utils/document-projection'
-import { collectRedirectEntriesForFile } from '../runtime/src/utils/docs.functions'
-import { buildFileTreeFromRecursiveTree } from '../runtime/src/utils/documents.server'
-import { buildRedirectManifest } from '../runtime/src/utils/redirects'
+import { getCanonicalDocsPath, normalizeDocsRedirectPath } from '../runtime/src/utils/docs.functions'
+import { buildFileTreeFromRecursiveTree, parseFrontMatter } from '../runtime/src/utils/documents.server'
+import { buildRedirectManifest, normalizeRedirectFrom } from '../runtime/src/utils/redirects'
+import { createHash } from 'node:crypto'
 const project = path.resolve('..')
 const authored = JSON.parse(fs.readFileSync(path.join(project,'investigation/init-guidance.json'),'utf8')).source_model === 'authored'
 const inventory = JSON.parse(fs.readFileSync(path.join(project,'sources/docs-inputs.json'),'utf8'))
@@ -17,13 +18,14 @@ function command(args: string[]) {
  assert.equal(result.status,0,'Publication child process failed')
 }
 if(authored) {
- let time = performance.now();command(['../scripts/resolve-corpus.mts']);phases.compatibility=(performance.now()-time)/1000
- time=performance.now();command(['../scripts/derive-document-projection.mts','--manifest','../.rendered/derive-corpus.json']);phases.markdown_projection=(performance.now()-time)/1000
+ let time = performance.now();command(['../scripts/resolve-corpus.mts',...(process.argv.includes('--full')?['--full']:[])]);phases.compatibility=(performance.now()-time)/1000
+ time=performance.now();command(['../scripts/derive-document-projection.mts','--manifest','../.rendered/derive-corpus.json',...(process.argv.includes('--full')?['--full']:[])]);phases.markdown_projection=(performance.now()-time)/1000
 }
 const time = performance.now()
 const destination = path.join(project,'publication/client')
 fs.mkdirSync(destination,{recursive:true})
-const manifest = {version:2,rawFiles:{},files:{},projections:{},metadata:{},trees:{},roots:inventory.roots.map((r) => `${r.repo}@${r.ref}:${r.docsRoot}/`)}
+const revision=createHash('sha256');revision.update(JSON.stringify(inventory));revision.update(fs.readFileSync(new URL(import.meta.url)))
+const manifest = {version:2,revision:'',rawFiles:{},files:{},projections:{},metadata:{},trees:{},roots:inventory.roots.map((r) => `${r.repo}@${r.ref}:${r.docsRoot}/`)}
 const tracked = []
 function writeChanged(file: string, value: string | Buffer) {
  fs.mkdirSync(path.dirname(file),{recursive:true})
@@ -40,6 +42,7 @@ const wanted = new Set<string>()
 for(const entry of inventory.files) {
  const slug = entry.repo.replaceAll('/','--')+'--'+entry.ref
  const key = `${entry.repo}@${entry.ref}:${entry.file}`
+ const maintainedBytes=fs.readFileSync(path.join(project,entry.source));revision.update(entry.source+'\0'+maintainedBytes.length+'\0');revision.update(maintainedBytes)
  const source = authored?path.join(project,'.rendered/resolved',slug,entry.file):path.join(project,entry.source)
  let content = fs.readFileSync(source,'utf8')
  const binary = !entry.file.endsWith('.md') && !entry.file.endsWith('.mdx')
@@ -87,7 +90,16 @@ for(const root of inventory.roots) {
  const paths: string[]=[];const redirects=[]
  const flatten = (nodes) => nodes.flatMap((node)=>[node,...flatten(node.children??[])])
  for(const entry of flatten(buildFileTreeFromRecursiveTree(tree,root.docsRoot)??[]).filter((node)=>node.path.endsWith('.md')).map((node)=>({file:node.path}))) {
-  redirects.push(...await collectRedirectEntriesForFile({path:entry.file},{docsRoot:root.docsRoot,fetchFile:async(file)=>metadataSources.get(`${root.repo}@${root.ref}:${file}`)??null,onCanonicalPath:(canonical)=>paths.push(canonical)}))
+  const canonical=getCanonicalDocsPath(entry.file,root.docsRoot)
+  if(canonical===null)continue
+  paths.push(canonical)
+  const file=metadataSources.get(`${root.repo}@${root.ref}:${entry.file}`)
+  if(!file)continue
+  const frontmatter=parseFrontMatter(file)
+  for(const redirectFrom of normalizeRedirectFrom(frontmatter.data.redirect_from)??[]) {
+   const from=normalizeDocsRedirectPath(redirectFrom,root.docsRoot)
+   if(from&&from!==canonical)redirects.push({from,to:canonical,source:entry.file})
+  }
  }
  const value={paths,redirects:buildRedirectManifest(redirects,{label:key})}
  const slug=root.repo.replaceAll('/','--')+'--'+root.ref
@@ -96,6 +108,7 @@ for(const root of inventory.roots) {
  writeChanged(path.join(project,source),JSON.stringify(value));compose(name,source)
  manifest.metadata[key]='/'+name+'.txt';wanted.add(name+'.txt')
 }
+manifest.revision=revision.digest('hex')
 const manifestPath='.rendered/docs-manifest.json'
 writeChanged(path.join(project,manifestPath),JSON.stringify(manifest));compose('_nift/docs-manifest',manifestPath)
 writeChanged(path.join(project,'.nift/tracked.json'),JSON.stringify({tracked},null,2))

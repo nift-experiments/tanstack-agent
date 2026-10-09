@@ -2,27 +2,44 @@
 No cloud deployment, OS cache flushing, private calls or dev-server benchmark.
 """
 from pathlib import Path
-import os,sys,json,subprocess,time,hashlib,statistics,threading
+import os,sys,json,subprocess,time,hashlib,statistics,base64
 base=Path(os.environ.get('TANSTACK_BASELINE_DIR',str(Path(__file__).resolve().parents[3]/'tanstack-baseline'))).resolve()
 out=base/'t10-final';out.mkdir(exist_ok=True)
 workloads=['full','fresh','unchanged','body-1','body-10','body-100','navigation','metadata','shared-shell','island','collection','docs-sync','route-add','route-rename','route-delete']
 if len(sys.argv)>1:workloads=sys.argv[1:]
 rows=json.loads((out/'samples.json').read_text()) if (out/'samples.json').exists() else []
 # Reproducible mutation definitions are committed; raw backups stay outside source repos.
+journal=out/'current-mutation-backup.json'
+if journal.exists():
+ for row in json.loads(journal.read_text()):
+  p=Path(row['path']);current=hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None
+  if current not in [row['written_sha256'],row['original_sha256']]:raise RuntimeError('Concurrent source change; preserve journal and inspect '+str(p))
+  if row['original_base64'] is None:p.unlink(missing_ok=True)
+  else:p.write_bytes(base64.b64decode(row['original_base64']))
+ journal.unlink()
 class Changes:
- def __init__(self):self.old={}
+ def __init__(self):self.old={};self.written={}
+ def save(self):
+  journal.write_text(json.dumps([{'path':str(p),'original_base64':None if b is None else base64.b64encode(b).decode(),'original_sha256':None if b is None else hashlib.sha256(b).hexdigest(),'written_sha256':self.written.get(p)} for p,b in self.old.items()],indent=2)+'\n')
  def write(self,p,b):
   p=Path(p)
   if p not in self.old:self.old[p]=p.read_bytes() if p.exists() else None
-  p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b if isinstance(b,bytes) else b.encode())
+  b=b if isinstance(b,bytes) else b.encode();self.written[p]=hashlib.sha256(b).hexdigest();self.save();p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
  def remove(self,p):
   p=Path(p)
   if p not in self.old:self.old[p]=p.read_bytes()
-  p.unlink()
+  self.written[p]=None;self.save();p.unlink()
  def restore(self):
   for p,b in self.old.items():
+   current=hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None
+   original=None if b is None else hashlib.sha256(b).hexdigest()
+   if current not in [self.written.get(p),original]:raise RuntimeError('Concurrent source change; preserve journal and inspect '+str(p))
    if b is None:p.unlink(missing_ok=True)
    else:p.write_bytes(b)
+  journal.unlink(missing_ok=True)
+def tree_hash(root):
+ if not root.exists():return {}
+ return {str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file()}
 def proc(pid):
  try:
   text=Path(f'/proc/{pid}/status').read_text();rss=int(next(x.split()[1] for x in text.splitlines() if x.startswith('VmRSS:')))
@@ -80,6 +97,12 @@ def mutate(name,workload,sample):
    if name=='upstream':
     p=base/'external-inputs/docs'/('tanstack--query--main')/entry['file'];text=p.read_text();changes.write(p,text.replace('title: ',f'title: {marker} ',1) if workload=='metadata' else text+'\n\n'+marker+'\n')
    else:edit_document(changes,project,inv,entry,marker,workload=='metadata')
+  if workload=='docs-sync' and name!='upstream':
+   row=next(e for e in inv['files'] if e['repo']==entries[0]['repo'] and e['ref']==entries[0]['ref'] and e['file']==entries[0]['file'])
+   maintained=(project/row['source']).read_text()
+   raw=json.loads(maintained.split('NIFT_TANSTACK_DOCUMENT_V1\n',1)[1])['originalRawMarkdown'].encode() if name=='tanstack-agent' else maintained.encode()
+   row['original_sha256']=hashlib.sha256(raw).hexdigest();row['original_git_blob']=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+   changes.write(project/'sources/docs-inputs.json',json.dumps(inv,indent=2)+'\n')
  elif workload=='navigation':
   p=(base/'external-inputs/docs/tanstack--query--main/docs/config.json') if name=='upstream' else project/'sources/docs/tanstack--query--main/docs/config.json'
   obj=json.loads(p.read_text());obj['sections'][0]['label']=marker;changes.write(p,json.dumps(obj,indent=2)+'\n')
@@ -107,6 +130,11 @@ def mutate(name,workload,sample):
    if workload in {'route-rename','route-delete'}:changes.remove(project/row['source']);inv['files'].remove(row)
    changes.write(project/'sources/docs-inputs.json',json.dumps(inv,indent=2)+'\n')
  return changes,count
+if '--dry-mutations' in sys.argv:
+ for workload in ['body-1','body-10','body-100','navigation','metadata','shared-shell','island','collection','docs-sync','route-add','route-rename','route-delete']:
+  for name in ['upstream','tanstack','tanstack-agent']:
+   changes,count=mutate(name,workload,1);changes.restore();print(name,workload,'mutation/restoration passed',flush=True)
+ sys.exit(0)
 subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/baseline/compile-native-refresh.mjs'],cwd=auth,check=True)
 for workload in workloads:
  for name in ['upstream','tanstack','tanstack-agent']:
@@ -116,6 +144,8 @@ for workload in workloads:
    with (out/(workload+'-prime.log')).open('w') as log:subprocess.run(command,cwd=base,stdout=log,stderr=subprocess.STDOUT,check=True)
   for sample in range(1,6):
    if any(r['workload']==workload and r['implementation']==name and r['sample']==sample for r in rows):continue
+   publication_root=base/'build-work/dist' if name=='upstream' else base.parent/name/'publication'
+   before=tree_hash(publication_root) if not(name=='upstream' and workload in native_cases) else None
    changes,count=mutate(name,workload,sample)
    try:
     if name=='upstream':
@@ -123,13 +153,16 @@ for workload in workloads:
      command=['python3','run-isolated.py','pnpm','build']
      scope='complete retained Vite production build'
      if workload in native_cases:
-      command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'refresh',str(count),workload];scope='native local R2 invalidation, changed-document reads and Query docs manifest refresh, including helper startup; no Vite rebuild or live edge purge'
+      command=['python3','run-isolated.py','node','.native-benchmark/native-docs-refresh.mjs',str(cache),'refresh',str(count),workload,selected[0]['file']];scope='native local R2 invalidation, changed-document reads and Query docs manifest refresh, including helper startup; no Vite rebuild or live edge purge'
      if workload=='fresh':
       for rel in ['dist','.content-collections','.tanstack','.wrangler']:
        import shutil;shutil.rmtree(base/'build-work'/rel,ignore_errors=True)
     else:
      cwd=base.parent/name;command=['python3','scripts/run-runtime.py','node','../scripts/publish.mjs']+(['--full'] if workload=='full' else ['--fresh'] if workload=='fresh' else []);scope='complete Nift documents/assets publication and required retained Vite build'
-    key=f'{name}-{workload}-{sample}';row=measure(key,command,cwd);row.update(implementation=name,workload=workload,sample=sample,scope=scope)
+    key=f'{name}-{workload}-{sample}';row=measure(key,command,cwd)
+    if before is not None:
+     after=tree_hash(publication_root);row['publication_byte_fanout']={'added':len(after.keys()-before.keys()),'deleted':len(before.keys()-after.keys()),'changed':sum(before[k]!=after[k] for k in before.keys()&after.keys())}
+    row.update(implementation=name,workload=workload,sample=sample,scope=scope)
     if name!='upstream':row['phases']=json.loads((cwd/'.rendered/pipeline-phases.json').read_text())
     rows.append(row);(out/'samples.json').write_text(json.dumps(rows,indent=2)+'\n');print(key,round(row['wall_seconds'],3),flush=True)
    finally:changes.restore()
@@ -137,6 +170,11 @@ for workload in workloads:
   if name!='upstream':
    with (out/f'{name}-{workload}-restore.log').open('w') as log:subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/publish.mjs'],cwd=base.parent/name,stdout=log,stderr=subprocess.STDOUT,check=True)
 summary=[]
+if '--dry-mutations' in sys.argv:
+ for workload in ['body-1','body-10','body-100','navigation','metadata','shared-shell','island','collection','docs-sync','route-add','route-rename','route-delete']:
+  for name in ['upstream','tanstack','tanstack-agent']:
+   changes,count=mutate(name,workload,1);changes.restore();print(name,workload,'mutation/restoration passed',flush=True)
+ sys.exit(0)
 subprocess.run(['python3','scripts/run-runtime.py','node','../scripts/baseline/compile-native-refresh.mjs'],cwd=auth,check=True)
 for workload in workloads:
  for name in ['upstream','tanstack','tanstack-agent']:

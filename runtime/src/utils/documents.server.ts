@@ -556,6 +556,15 @@ export async function fetchRepoFileFromOrigin(
     }
 
     try {
+      // Maintained publication resolution does not consume Markdown excerpts.
+      // Keep the original origin-fetch path and reference replacement behavior.
+      if (readMaintainedFile && !parseFrontMatter(text).data.ref) {
+        if (originFrontmatter) {
+          text = replaceContent(text, originFrontmatter)
+          text = replaceSections(text, originFrontmatter)
+        }
+        return replaceProjectImageBranch(text, repoPair, ref)
+      }
       const frontmatter = extractFrontMatter(text)
 
       if (!frontmatter.data.ref) {
@@ -880,7 +889,7 @@ export function extractFrontMatter(content: string) {
   }
 }
 
-function parseFrontMatter(content: string) {
+export function parseFrontMatter(content: string) {
   const normalizedContent = content.replace(/^\uFEFF/, '')
 
   if (!normalizedContent.startsWith('---')) {

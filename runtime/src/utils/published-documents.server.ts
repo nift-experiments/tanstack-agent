@@ -3,6 +3,52 @@ import {
   getCurrentHostRuntimeEnv,
 } from '~/server/runtime/host.server'
 
+// A deployment revision identifies an immutable published corpus. Without one,
+// preserve uncached reads so legacy/manual asset updates cannot become stale.
+const manifestCache = new Map<string, Promise<unknown>>()
+async function readPublishedManifest(): Promise<unknown> {
+  const env = getCurrentHostRuntimeEnv()
+  const revision = env?.NIFT_PUBLICATION_REVISION
+  const versioned =
+    typeof revision === 'string' && /^[a-f0-9]{64}$/.test(revision)
+  if (versioned && manifestCache.has(revision))
+    return manifestCache.get(revision)
+  const read = async () => {
+    const response = await fetchStaticAsset(
+      'https://nift-publication.invalid/_nift/docs-manifest.txt',
+    )
+    if (!response.ok) return undefined
+    const value: unknown = await response.json()
+    if (
+      versioned &&
+      (typeof value !== 'object' ||
+        value === null ||
+        Reflect.get(value, 'revision') !== revision)
+    )
+      throw new Error('Published docs revision does not match Worker binding')
+    return value
+  }
+  const pending = read()
+  if (versioned) {
+    if (manifestCache.size >= 2) {
+      const oldest = manifestCache.keys().next().value
+      if (oldest !== undefined) manifestCache.delete(oldest)
+    }
+    manifestCache.set(revision, pending)
+    void pending.then(
+      (value) => {
+        if (value === undefined && manifestCache.get(revision) === pending)
+          manifestCache.delete(revision)
+      },
+      () => {
+        if (manifestCache.get(revision) === pending)
+          manifestCache.delete(revision)
+      },
+    )
+  }
+  return pending
+}
+
 async function readPublishedFile(
   repo: string,
   ref: string,
@@ -11,11 +57,7 @@ async function readPublishedFile(
 ): Promise<string | null | undefined> {
   const env = getCurrentHostRuntimeEnv()
   if (!env || !('ASSETS' in env)) return undefined
-  const response = await fetchStaticAsset(
-    'https://nift-publication.invalid/_nift/docs-manifest.txt',
-  )
-  if (!response.ok) return undefined
-  const manifest: unknown = await response.json()
+  const manifest: unknown = await readPublishedManifest()
   if (typeof manifest !== 'object' || manifest === null) return undefined
   const key = `${repo.toLowerCase()}@${ref}:${filePath}`
   const entries: unknown = Reflect.get(manifest, category)
@@ -68,11 +110,7 @@ export async function fetchPublishedDocsMetadata(
 ) {
   const env = getCurrentHostRuntimeEnv()
   if (!env || !('ASSETS' in env)) return undefined
-  const response = await fetchStaticAsset(
-    'https://nift-publication.invalid/_nift/docs-manifest.txt',
-  )
-  if (!response.ok) return undefined
-  const manifest: unknown = await response.json()
+  const manifest: unknown = await readPublishedManifest()
   if (typeof manifest !== 'object' || manifest === null) return undefined
   const metadata: unknown = Reflect.get(manifest, 'metadata')
   if (typeof metadata !== 'object' || metadata === null) return undefined
@@ -98,11 +136,7 @@ export async function fetchPublishedDocsTree(
 ) {
   const env = getCurrentHostRuntimeEnv()
   if (!env || !('ASSETS' in env)) return undefined
-  const response = await fetchStaticAsset(
-    'https://nift-publication.invalid/_nift/docs-manifest.txt',
-  )
-  if (!response.ok) return undefined
-  const manifest: unknown = await response.json()
+  const manifest: unknown = await readPublishedManifest()
   if (typeof manifest !== 'object' || manifest === null) return undefined
   const trees: unknown = Reflect.get(manifest, 'trees')
   if (typeof trees !== 'object' || trees === null) return undefined

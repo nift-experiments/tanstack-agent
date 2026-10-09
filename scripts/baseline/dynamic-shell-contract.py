@@ -1,6 +1,6 @@
 from pathlib import Path
-import urllib.request,urllib.error,re,json,hashlib
-B=Path(__file__).resolve().parents[3]/"tanstack-baseline"
+import urllib.request,urllib.error,re,json,hashlib,os
+B=Path(os.environ.get("TANSTACK_BASELINE_DIR",str(Path(__file__).resolve().parents[3]/"tanstack-baseline")))
 class Manual(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args,**kwargs):return None
 opener=urllib.request.build_opener(Manual);records=[];reference=None

@@ -348,3 +348,5 @@ See `investigation/t5-runtime-summary.json` and the confirmed retention map. Eve
 ## T6 accepted
 
 Generated robot/sitemap/LLM responses match bytes and cache headers across 30 states. All 244 maintained public assets match upstream. Search fixture hits preserve filters, deduplication and client Router navigation in six states. The retained dynamic OG endpoint produces byte-identical PNGs after the local harness registers the emitted Wasm module. Real catalog data (188 cases) is supplied from the pinned public archive. No live index/provider integration is claimed. Next: expanded T7 parity before the initial performance/profile campaign.
+
+T7 accepted: 333 browser states across 37 real routes, three viewports and all three implementations match semantic output with no page errors. Six additional real Charts catalog states render matching plots and respond to keyboard navigation. Public ESM inputs are frozen and hashed outside the website repositories; private transports remain blocked. This proves retained browser behavior, not live private backend integration. See investigation/t7-parity-summary.json. Next: T8 initial profiling before optimization.

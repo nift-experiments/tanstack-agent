@@ -1,0 +1,29 @@
+{
+  "browser_states": 333,
+  "real_catalog_states": 6,
+  "viewports": [
+    1440,
+    768,
+    390
+  ],
+  "catalog_keyboard_readout": true,
+  "private_services": "not exercised; retained source/local transport evidence only",
+  "evidence": {
+    "t7-browser-parity.json": {
+      "bytes": 255014,
+      "sha256": "321ca3502309238805a0289ced97577048f99768e939e86baa49b363bf95c191"
+    },
+    "t7-catalog-runtime.json": {
+      "bytes": 1147,
+      "sha256": "0b3c624b92dbedfbb4b60d43397e8f289a722ace17fd1fd00ddd30405fa892c1"
+    },
+    "t7-route-plan.json": {
+      "bytes": 1521,
+      "sha256": "c79db75fb68f9e5e7a4ce9c85ab084a1e3e6b0f7178ca879497f5ebd390cdfa2"
+    },
+    "catalog-runtime-extra-inputs.json": {
+      "bytes": 15570,
+      "sha256": "cc769f08caf129d21bc5a47b0c105ed6ff75e0bc6bd5c4465d36d1f414568da5"
+    }
+  }
+}

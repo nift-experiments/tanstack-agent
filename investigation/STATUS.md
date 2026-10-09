@@ -55,7 +55,8 @@ after the campaign precedes final benchmarking.
 | T4 main static/content corpus | done | 7,601 inputs; 7,527 nonempty document projections; 25 owned docs roots; raw byte/AST/lifecycle/full-test/84-state browser gates pass. |
 | T5 retained runtime/services | done | All API/Worker/backend source preserved; 27 local HTTP states and real local R2 cache/invalidation contracts pass. |
 | T6 generated outputs/search | done | 244 assets byte-equal; 30 generated HTTP states, six search-hit states and successful dynamic PNG parity; 188 real catalog cases available. |
-| T7 expanded parity | in progress | Expand cross-library/version/browser/image/island/header coverage before performance claims. |
-| T8–T10 profile/optimize/final campaign | not started | Follow explicit user benchmark contract. |
+| T7 expanded parity | done | 333 cross-library/version/viewport states plus six real catalog rendering and keyboard states pass; T3–T6 contracts retained. |
+| T8 initial profiling | in progress | Serialized complete-pipeline samples; native upstream docs refresh measured separately. |
+| T9–T10 optimization/final campaign | not started | Revalidate parity after reasonable optimization; five final samples per workload. |
 
 This experiment finds the best Nift + TanStack boundary. React, Router, Query, Start and backend services remain where useful. No Nift core changes are authorized.
